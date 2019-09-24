@@ -166,413 +166,413 @@ linktitle: "rds"
 
 <h2 id="InstanceTypes" data-link-title="InstanceTypes">namespace <strong>InstanceTypes</strong></h2>
 <h3 class="pdoc-module-header" id="M1_Large" data-link-title="M1_Large">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L38">
         const <strong>M1_Large</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M1_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m1.large&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M1_Medium" data-link-title="M1_Medium">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L37">
         const <strong>M1_Medium</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M1_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m1.medium&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M1_Small" data-link-title="M1_Small">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L36">
         const <strong>M1_Small</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M1_Small: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m1.small&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M1_XLarge" data-link-title="M1_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L39">
         const <strong>M1_XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M1_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m1.xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M2_2XLarge" data-link-title="M2_2XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L41">
         const <strong>M2_2XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M2_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m2.2xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M2_4XLarge" data-link-title="M2_4XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L42">
         const <strong>M2_4XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M2_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m2.4xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M2_XLarge" data-link-title="M2_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L40">
         const <strong>M2_XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M2_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m2.xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M3_2XLarge" data-link-title="M3_2XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L46">
         const <strong>M3_2XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m3.2xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M3_Large" data-link-title="M3_Large">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L44">
         const <strong>M3_Large</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M3_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m3.large&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M3_Medium" data-link-title="M3_Medium">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L43">
         const <strong>M3_Medium</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M3_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m3.medium&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M3_XLarge" data-link-title="M3_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L45">
         const <strong>M3_XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M3_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m3.xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M4_10XLarge" data-link-title="M4_10XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L51">
         const <strong>M4_10XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M4_10XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.10xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M4_16XLarge" data-link-title="M4_16XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L52">
         const <strong>M4_16XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M4_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.10xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M4_2XLarge" data-link-title="M4_2XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L49">
         const <strong>M4_2XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M4_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.2xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M4_4XLarge" data-link-title="M4_4XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L50">
         const <strong>M4_4XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M4_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.4xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M4_Large" data-link-title="M4_Large">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L47">
         const <strong>M4_Large</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M4_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.large&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M4_XLarge" data-link-title="M4_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L48">
         const <strong>M4_XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M4_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m4.xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M5_12XLarge" data-link-title="M5_12XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L57">
         const <strong>M5_12XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M5_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.12xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M5_24XLarge" data-link-title="M5_24XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L58">
         const <strong>M5_24XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M5_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.24xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M5_2XLarge" data-link-title="M5_2XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L55">
         const <strong>M5_2XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M5_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.2xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M5_4XLarge" data-link-title="M5_4XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L56">
         const <strong>M5_4XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M5_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.4xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M5_Large" data-link-title="M5_Large">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L53">
         const <strong>M5_Large</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M5_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.large&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="M5_XLarge" data-link-title="M5_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L54">
         const <strong>M5_XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> M5_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.m5.xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R3_2XLarge" data-link-title="R3_2XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L61">
         const <strong>R3_2XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r3.2xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R3_4XLarge" data-link-title="R3_4XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L62">
         const <strong>R3_4XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R3_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r3.4xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R3_8XLarge" data-link-title="R3_8XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L63">
         const <strong>R3_8XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R3_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r3.8xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R3_Large" data-link-title="R3_Large">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L59">
         const <strong>R3_Large</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R3_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r3.large&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R3_XLarge" data-link-title="R3_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L60">
         const <strong>R3_XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R3_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r3.xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R4_16XLarge" data-link-title="R4_16XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L69">
         const <strong>R4_16XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R4_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.16xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R4_2XLarge" data-link-title="R4_2XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L66">
         const <strong>R4_2XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R4_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.2xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R4_4XLarge" data-link-title="R4_4XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L67">
         const <strong>R4_4XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R4_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.4xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R4_8XLarge" data-link-title="R4_8XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L68">
         const <strong>R4_8XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R4_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.8xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R4_Large" data-link-title="R4_Large">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L64">
         const <strong>R4_Large</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R4_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.large&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R4_XLarge" data-link-title="R4_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L65">
         const <strong>R4_XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R4_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r4.xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R5_12XLarge" data-link-title="R5_12XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L74">
         const <strong>R5_12XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R5_12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.12xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R5_24XLarge" data-link-title="R5_24XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L75">
         const <strong>R5_24XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R5_24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.24xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R5_2XLarge" data-link-title="R5_2XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L72">
         const <strong>R5_2XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R5_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.2xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R5_4XLarge" data-link-title="R5_4XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L73">
         const <strong>R5_4XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R5_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.4xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R5_Large" data-link-title="R5_Large">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L70">
         const <strong>R5_Large</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R5_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.large&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="R5_XLarge" data-link-title="R5_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L71">
         const <strong>R5_XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> R5_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.r5.xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T2_2XLarge" data-link-title="T2_2XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L35">
         const <strong>T2_2XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T2_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.2xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T2_Large" data-link-title="T2_Large">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L33">
         const <strong>T2_Large</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T2_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.large&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T2_Medium" data-link-title="T2_Medium">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L32">
         const <strong>T2_Medium</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T2_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.medium&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T2_Micro" data-link-title="T2_Micro">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L30">
         const <strong>T2_Micro</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T2_Micro: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.micro&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T2_Small" data-link-title="T2_Small">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L31">
         const <strong>T2_Small</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T2_Small: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.small&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T2_XLarge" data-link-title="T2_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L34">
         const <strong>T2_XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T2_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t2.xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T3_2XLarge" data-link-title="T3_2XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L29">
         const <strong>T3_2XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T3_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t3.2xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T3_Large" data-link-title="T3_Large">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L27">
         const <strong>T3_Large</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T3_Large: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t3.large&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T3_Medium" data-link-title="T3_Medium">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L26">
         const <strong>T3_Medium</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T3_Medium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t3.medium&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T3_Micro" data-link-title="T3_Micro">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L24">
         const <strong>T3_Micro</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T3_Micro: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t3.micro&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T3_Small" data-link-title="T3_Small">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L25">
         const <strong>T3_Small</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T3_Small: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t3.small&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="T3_XLarge" data-link-title="T3_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L28">
         const <strong>T3_XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> T3_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.t3.xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="X1_16XLarge" data-link-title="X1_16XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L76">
         const <strong>X1_16XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> X1_16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1.16xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="X1_32XLarge" data-link-title="X1_32XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L77">
         const <strong>X1_32XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> X1_32XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1.32xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="X1E_2XLarge" data-link-title="X1E_2XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L79">
         const <strong>X1E_2XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> X1E_2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1e.2xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="X1E_32XLarge" data-link-title="X1E_32XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L82">
         const <strong>X1E_32XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> X1E_32XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1e.32xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="X1E_4XLarge" data-link-title="X1E_4XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L80">
         const <strong>X1E_4XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> X1E_4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1e.4xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="X1E_8XLarge" data-link-title="X1E_8XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L81">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L81">
         const <strong>X1E_8XLarge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> X1E_8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1e.8xlarge&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="X1E_XLarge" data-link-title="X1E_XLarge">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L78">
         const <strong>X1E_XLarge</strong>
     </a>
 </h3>
@@ -580,21 +580,21 @@ linktitle: "rds"
 <pre class="highlight"><code><span class='kd'>const</span> X1E_XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;db.x1e.xlarge&#34;</span>;</code></pre>
 <h2 id="StorageTypes" data-link-title="StorageTypes">namespace <strong>StorageTypes</strong></h2>
 <h3 class="pdoc-module-header" id="GP2" data-link-title="GP2">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/storageType.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/storageType.ts#L25">
         const <strong>GP2</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> GP2: <a href='#StorageType'>StorageType</a> = <span class='s2'>&#34;gp2&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Io1" data-link-title="Io1">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/storageType.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/storageType.ts#L26">
         const <strong>Io1</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> Io1: <a href='#StorageType'>StorageType</a> = <span class='s2'>&#34;io1&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="Standard" data-link-title="Standard">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/storageType.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/storageType.ts#L24">
         const <strong>Standard</strong>
     </a>
 </h3>
@@ -603,7 +603,7 @@ linktitle: "rds"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L121">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -719,7 +719,7 @@ const example = new aws.rds.Cluster("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster.html.markdown.
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L313"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L313"> <b>constructor</b></a>
 </h4>
 
 
@@ -733,7 +733,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L130">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L130">method <b>get</b></a>
 </h4>
 
 
@@ -744,14 +744,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L121">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L121">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L141">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L141">method <b>isInstance</b></a>
 </h4>
 
 
@@ -762,7 +762,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L153">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L153">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applyImmediately: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -772,7 +772,7 @@ are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 
 <h4 class="pdoc-member-header" id="Cluster-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L157">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L157">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -780,7 +780,7 @@ are applied immediately, or during the next maintenance window. Default is
 Amazon Resource Name (ARN) of cluster
 
 <h4 class="pdoc-member-header" id="Cluster-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L161">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L161">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -788,7 +788,7 @@ Amazon Resource Name (ARN) of cluster
 A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignoreChanges` if necessary.
 
 <h4 class="pdoc-member-header" id="Cluster-backtrackWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L165">property <b>backtrackWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L165">property <b>backtrackWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backtrackWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -796,7 +796,7 @@ A list of EC2 Availability Zones for the DB cluster storage where DB cluster ins
 The target backtrack window, in seconds. Only available for `aurora` engine currently. To disable backtracking, set this value to `0`. Defaults to `0`. Must be between `0` and `259200` (72 hours)
 
 <h4 class="pdoc-member-header" id="Cluster-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L169">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L169">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupRetentionPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -804,7 +804,7 @@ The target backtrack window, in seconds. Only available for `aurora` engine curr
 The days to retain backups for. Default `1`
 
 <h4 class="pdoc-member-header" id="Cluster-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L173">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L173">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ The days to retain backups for. Default `1`
 The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterIdentifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L177">property <b>clusterIdentifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L177">property <b>clusterIdentifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterIdentifierPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -820,7 +820,7 @@ The cluster identifier. If omitted, this provider will assign a random, unique i
 Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `clusterIdentifier`.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L181">property <b>clusterMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L181">property <b>clusterMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterMembers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -828,7 +828,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
 List of RDS Instances that are a part of this cluster
 
 <h4 class="pdoc-member-header" id="Cluster-clusterResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L185">property <b>clusterResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L185">property <b>clusterResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -836,7 +836,7 @@ List of RDS Instances that are a part of this cluster
 The RDS Cluster Resource ID
 
 <h4 class="pdoc-member-header" id="Cluster-copyTagsToSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L189">property <b>copyTagsToSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L189">property <b>copyTagsToSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>copyTagsToSnapshot: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -844,7 +844,7 @@ The RDS Cluster Resource ID
 Copy all Cluster `tags` to snapshots. Default is `false`.
 
 <h4 class="pdoc-member-header" id="Cluster-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L193">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L193">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -852,7 +852,7 @@ Copy all Cluster `tags` to snapshots. Default is `false`.
 Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints][5]
 
 <h4 class="pdoc-member-header" id="Cluster-dbClusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L197">property <b>dbClusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L197">property <b>dbClusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbClusterParameterGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -860,7 +860,7 @@ Name for an automatically created database on cluster creation. There are differ
 A cluster parameter group to associate with the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-dbSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L201">property <b>dbSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L201">property <b>dbSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbSubnetGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -868,7 +868,7 @@ A cluster parameter group to associate with the cluster.
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `dbSubnetGroupName` specified on every [`aws.rds.ClusterInstance`](https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html) in the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L205">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L205">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -876,7 +876,7 @@ A DB subnet group to associate with this DB instance. **NOTE:** This must match 
 If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
 
 <h4 class="pdoc-member-header" id="Cluster-enabledCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L210">property <b>enabledCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L210">property <b>enabledCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabledCloudwatchLogsExports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -885,7 +885,7 @@ List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 
 <h4 class="pdoc-member-header" id="Cluster-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L214">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L214">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -893,7 +893,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
 The DNS address of the RDS instance
 
 <h4 class="pdoc-member-header" id="Cluster-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L218">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L218">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EngineType'>EngineType</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -901,7 +901,7 @@ The DNS address of the RDS instance
 The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
 
 <h4 class="pdoc-member-header" id="Cluster-engineMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L222">property <b>engineMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L222">property <b>engineMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EngineMode'>EngineMode</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -909,7 +909,7 @@ The name of the database engine to be used for this DB cluster. Defaults to `aur
 The database engine mode. Valid values: `global`, `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
 
 <h4 class="pdoc-member-header" id="Cluster-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L226">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L226">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -917,7 +917,7 @@ The database engine mode. Valid values: `global`, `multimaster`, `parallelquery`
 The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
 
 <h4 class="pdoc-member-header" id="Cluster-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L232">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L232">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>finalSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -927,7 +927,7 @@ when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
 
 <h4 class="pdoc-member-header" id="Cluster-globalClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L236">property <b>globalClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L236">property <b>globalClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>globalClusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ made.
 The global cluster identifier specified on [`aws.rds.GlobalCluster`](https://www.terraform.io/docs/providers/aws/r/rds_global_cluster.html).
 
 <h4 class="pdoc-member-header" id="Cluster-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L240">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L240">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostedZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -943,7 +943,7 @@ The global cluster identifier specified on [`aws.rds.GlobalCluster`](https://www
 The Route53 Hosted Zone ID of the endpoint
 
 <h4 class="pdoc-member-header" id="Cluster-iamDatabaseAuthenticationEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L244">property <b>iamDatabaseAuthenticationEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L244">property <b>iamDatabaseAuthenticationEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamDatabaseAuthenticationEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ The Route53 Hosted Zone ID of the endpoint
 Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) for availability and limitations.
 
 <h4 class="pdoc-member-header" id="Cluster-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L248">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L248">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
 A List of ARNs for the IAM roles to associate to the RDS Cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L121">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L121">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -968,7 +968,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L252">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L252">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -976,7 +976,7 @@ deployments and may be missing (undefined) during planning phases.
 The ARN for the KMS encryption key. When specifying `kmsKeyId`, `storageEncrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="Cluster-masterPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L257">property <b>masterPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L257">property <b>masterPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -985,7 +985,7 @@ Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints][5]
 
 <h4 class="pdoc-member-header" id="Cluster-masterUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L261">property <b>masterUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L261">property <b>masterUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -993,7 +993,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
 Username for the master DB user. Please refer to the [RDS Naming Constraints][5]. This argument does not support in-place updates and cannot be changed during a restore from snapshot.
 
 <h4 class="pdoc-member-header" id="Cluster-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L265">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L265">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1001,7 +1001,7 @@ Username for the master DB user. Please refer to the [RDS Naming Constraints][5]
 The port on which the DB accepts connections
 
 <h4 class="pdoc-member-header" id="Cluster-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L270">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L270">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredBackupWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1010,7 +1010,7 @@ The daily time range during which automated backups are created if automated bac
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 
 <h4 class="pdoc-member-header" id="Cluster-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L274">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L274">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredMaintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1018,7 +1018,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
 The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
 
 <h4 class="pdoc-member-header" id="Cluster-readerEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L279">property <b>readerEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L279">property <b>readerEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readerEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1027,7 +1027,7 @@ A read-only endpoint for the Aurora cluster, automatically
 load-balanced across replicas
 
 <h4 class="pdoc-member-header" id="Cluster-replicationSourceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L283">property <b>replicationSourceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L283">property <b>replicationSourceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationSourceIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1035,12 +1035,12 @@ load-balanced across replicas
 ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
 
 <h4 class="pdoc-member-header" id="Cluster-s3Import">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L284">property <b>s3Import</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L284">property <b>s3Import</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterS3Import'>outputs.rds.ClusterS3Import</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-scalingConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L288">property <b>scalingConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L288">property <b>scalingConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterScalingConfiguration'>outputs.rds.ClusterScalingConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
 Nested attribute with scaling properties. Only valid when `engineMode` is set to `serverless`. More details below.
 
 <h4 class="pdoc-member-header" id="Cluster-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L292">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L292">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skipFinalSnapshot: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1056,7 +1056,7 @@ Nested attribute with scaling properties. Only valid when `engineMode` is set to
 Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `finalSnapshotIdentifier`. Default is `false`.
 
 <h4 class="pdoc-member-header" id="Cluster-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L296">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L296">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1064,7 +1064,7 @@ Determines whether a final DB snapshot is created before the DB cluster is delet
 Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 
 <h4 class="pdoc-member-header" id="Cluster-sourceRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L300">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L300">property <b>sourceRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ Specifies whether or not to create this cluster from a snapshot. You can use eit
 The source region for an encrypted replica DB cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L304">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L304">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1080,7 +1080,7 @@ The source region for an encrypted replica DB cluster.
 Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engineMode` and `true` for `serverless` `engineMode`.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L308">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L308">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1088,7 +1088,7 @@ Specifies whether the DB cluster is encrypted. The default is `false` for `provi
 A mapping of tags to assign to the DB cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L121">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L121">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L313">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L313">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcSecurityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1106,7 +1106,7 @@ List of VPC security groups to associate
 with the Cluster
 
 <h3 class="pdoc-module-header" id="ClusterEndpoint" data-link-title="ClusterEndpoint">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L73">
         Resource <strong>ClusterEndpoint</strong>
     </a>
 </h3>
@@ -1176,7 +1176,7 @@ const static = new aws.rds.ClusterEndpoint("static", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_endpoint.html.markdown.
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L127"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L127"> <b>constructor</b></a>
 </h4>
 
 
@@ -1190,7 +1190,7 @@ Create a ClusterEndpoint resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L82">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L82">method <b>get</b></a>
 </h4>
 
 
@@ -1201,14 +1201,14 @@ Get an existing ClusterEndpoint resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L73">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L73">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L93">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L93">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1219,7 +1219,7 @@ Returns true if the given object is an instance of ClusterEndpoint.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L103">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L103">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1227,7 +1227,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of cluster
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-clusterEndpointIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L107">property <b>clusterEndpointIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L107">property <b>clusterEndpointIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterEndpointIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1235,7 +1235,7 @@ Amazon Resource Name (ARN) of cluster
 The identifier to use for the new endpoint. This parameter is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L111">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L111">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1243,7 +1243,7 @@ The identifier to use for the new endpoint. This parameter is stored as a lowerc
 The cluster identifier.
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-customEndpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L115">property <b>customEndpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L115">property <b>customEndpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customEndpointType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1251,7 +1251,7 @@ The cluster identifier.
 The type of the endpoint. One of: READER , ANY .
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L119">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L119">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1259,7 +1259,7 @@ The type of the endpoint. One of: READER , ANY .
 A custom endpoint for the Aurora cluster
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-excludedMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L123">property <b>excludedMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L123">property <b>excludedMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludedMembers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1267,7 +1267,7 @@ A custom endpoint for the Aurora cluster
 List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `staticMembers`.
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1276,7 +1276,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-staticMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L127">property <b>staticMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L127">property <b>staticMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>staticMembers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1284,7 +1284,7 @@ deployments and may be missing (undefined) during planning phases.
 List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excludedMembers`.
 
 <h4 class="pdoc-member-header" id="ClusterEndpoint-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L73">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L73">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1293,7 +1293,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClusterInstance" data-link-title="ClusterInstance">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L15">
         Resource <strong>ClusterInstance</strong>
     </a>
 </h3>
@@ -1303,7 +1303,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_instance.html.markdown.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L164"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L164"> <b>constructor</b></a>
 </h4>
 
 
@@ -1317,7 +1317,7 @@ Create a ClusterInstance resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L24">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L24">method <b>get</b></a>
 </h4>
 
 
@@ -1328,14 +1328,14 @@ Get an existing ClusterInstance resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L15">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L15">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L35">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L35">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1346,7 +1346,7 @@ Returns true if the given object is an instance of ClusterInstance.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L46">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L46">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applyImmediately: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1355,7 +1355,7 @@ Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L50">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L50">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1363,7 +1363,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 Amazon Resource Name (ARN) of cluster instance
 
 <h4 class="pdoc-member-header" id="ClusterInstance-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L54">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L54">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoMinorVersionUpgrade: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1371,7 +1371,7 @@ Amazon Resource Name (ARN) of cluster instance
 Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L58">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L58">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1379,7 +1379,7 @@ Indicates that minor engine upgrades will be applied automatically to the DB ins
 The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L62">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L62">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1387,7 +1387,7 @@ The EC2 Availability Zone that the DB instance is created in. See [docs](https:/
 The identifier of the [`aws.rds.Cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html) in which to launch this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-copyTagsToSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L66">property <b>copyTagsToSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L66">property <b>copyTagsToSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>copyTagsToSnapshot: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1395,7 +1395,7 @@ The identifier of the [`aws.rds.Cluster`](https://www.terraform.io/docs/provider
 Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-dbParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L70">property <b>dbParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L70">property <b>dbParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbParameterGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1403,7 +1403,7 @@ Indicates whether to copy all of the user-defined tags from the DB instance to s
 The name of the DB parameter group to associate with this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-dbSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L74">property <b>dbSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L74">property <b>dbSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbSubnetGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1411,7 +1411,7 @@ The name of the DB parameter group to associate with this instance.
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `dbSubnetGroupName` of the attached [`aws.rds.Cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html).
 
 <h4 class="pdoc-member-header" id="ClusterInstance-dbiResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L78">property <b>dbiResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L78">property <b>dbiResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbiResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1419,7 +1419,7 @@ A DB subnet group to associate with this DB instance. **NOTE:** This must match 
 The region-unique, immutable identifier for the DB instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L82">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L82">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1427,7 +1427,7 @@ The region-unique, immutable identifier for the DB instance.
 The DNS address for this instance. May not be writable
 
 <h4 class="pdoc-member-header" id="ClusterInstance-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L89">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L89">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EngineType'>EngineType</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1438,7 +1438,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L93">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L93">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1446,7 +1446,7 @@ in the Amazon RDS User Guide.
 The database engine version.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L15">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L15">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1455,7 +1455,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L97">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L97">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1463,7 +1463,7 @@ deployments and may be missing (undefined) during planning phases.
 The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L101">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L101">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifierPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1471,7 +1471,7 @@ The indentifier for the RDS instance, if omitted, this provider will assign a ra
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L106">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L106">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1480,7 +1480,7 @@ The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L110">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L110">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1488,7 +1488,7 @@ and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance cl
 The ARN for the KMS encryption key if one is set to the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-monitoringInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L114">property <b>monitoringInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L114">property <b>monitoringInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1496,7 +1496,7 @@ The ARN for the KMS encryption key if one is set to the cluster.
 The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-monitoringRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L120">property <b>monitoringRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L120">property <b>monitoringRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1506,7 +1506,7 @@ enhanced monitoring metrics to CloudWatch Logs. You can find more information on
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-performanceInsightsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L124">property <b>performanceInsightsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L124">property <b>performanceInsightsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>performanceInsightsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1514,7 +1514,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 Specifies whether Performance Insights is enabled or not.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-performanceInsightsKmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L128">property <b>performanceInsightsKmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L128">property <b>performanceInsightsKmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>performanceInsightsKmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1522,7 +1522,7 @@ Specifies whether Performance Insights is enabled or not.
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performanceInsightsKmsKeyId`, `performanceInsightsEnabled` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L132">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L132">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1530,7 +1530,7 @@ The ARN for the KMS key to encrypt Performance Insights data. When specifying `p
 The database port
 
 <h4 class="pdoc-member-header" id="ClusterInstance-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L137">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L137">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredBackupWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1539,7 +1539,7 @@ The daily time range during which automated backups are created if automated bac
 Eg: "04:00-09:00"
 
 <h4 class="pdoc-member-header" id="ClusterInstance-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L142">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L142">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredMaintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1548,7 +1548,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h4 class="pdoc-member-header" id="ClusterInstance-promotionTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L146">property <b>promotionTier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L146">property <b>promotionTier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>promotionTier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1556,7 +1556,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L152">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L152">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publiclyAccessible: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1566,7 +1566,7 @@ Default `false`. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L156">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L156">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1574,7 +1574,7 @@ details on controlling this property.
 Specifies whether the DB cluster is encrypted.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L160">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L160">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1582,7 +1582,7 @@ Specifies whether the DB cluster is encrypted.
 A mapping of tags to assign to the instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L15">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L15">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1591,7 +1591,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-writer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L164">property <b>writer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L164">property <b>writer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>writer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1599,7 +1599,7 @@ deployments.
 Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
 
 <h3 class="pdoc-module-header" id="ClusterParameterGroup" data-link-title="ClusterParameterGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L39">
         Resource <strong>ClusterParameterGroup</strong>
     </a>
 </h3>
@@ -1636,7 +1636,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_parameter_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -1650,7 +1650,7 @@ Create a ClusterParameterGroup resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -1661,14 +1661,14 @@ Get an existing ClusterParameterGroup resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1679,7 +1679,7 @@ Returns true if the given object is an instance of ClusterParameterGroup.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L69">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L69">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1687,7 +1687,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the db cluster parameter group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L73">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L73">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1695,7 +1695,7 @@ The ARN of the db cluster parameter group.
 The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L77">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L77">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1703,7 +1703,7 @@ The description of the DB cluster parameter group. Defaults to "Managed by Pulum
 The family of the DB cluster parameter group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1712,7 +1712,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1720,7 +1720,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DB parameter.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L85">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L85">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1728,7 +1728,7 @@ The name of the DB parameter.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L89">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L89">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterParameterGroupParameter'>outputs.rds.ClusterParameterGroupParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1736,7 +1736,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L93">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L93">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1744,7 +1744,7 @@ A list of DB parameters to apply. Note that parameters may differ from a family 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1753,7 +1753,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClusterSnapshot" data-link-title="ClusterSnapshot">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L24">
         Resource <strong>ClusterSnapshot</strong>
     </a>
 </h3>
@@ -1777,7 +1777,7 @@ const example = new aws.rds.ClusterSnapshot("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_cluster_snapshot.html.markdown.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -1791,7 +1791,7 @@ Create a ClusterSnapshot resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -1802,14 +1802,14 @@ Get an existing ClusterSnapshot resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1820,7 +1820,7 @@ Returns true if the given object is an instance of ClusterSnapshot.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L54">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L54">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allocatedStorage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1828,7 +1828,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the allocated storage size in gigabytes (GB).
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L58">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L58">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1836,7 +1836,7 @@ Specifies the allocated storage size in gigabytes (GB).
 List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-dbClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L62">property <b>dbClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L62">property <b>dbClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbClusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1844,7 +1844,7 @@ List of EC2 Availability Zones that instances in the DB cluster snapshot can be 
 The DB Cluster Identifier from which to take the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-dbClusterSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L66">property <b>dbClusterSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L66">property <b>dbClusterSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbClusterSnapshotArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1852,7 +1852,7 @@ The DB Cluster Identifier from which to take the snapshot.
 The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-dbClusterSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L70">property <b>dbClusterSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L70">property <b>dbClusterSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbClusterSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1860,7 +1860,7 @@ The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 The Identifier for the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L74">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L74">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1868,7 +1868,7 @@ The Identifier for the snapshot.
 Specifies the name of the database engine.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L78">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L78">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1876,7 +1876,7 @@ Specifies the name of the database engine.
 Version of the database engine for this DB cluster snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1885,7 +1885,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L82">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L82">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1893,7 +1893,7 @@ deployments and may be missing (undefined) during planning phases.
 If storageEncrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L86">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L86">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseModel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1901,7 +1901,7 @@ If storageEncrypted is true, the AWS KMS key identifier for the encrypted DB clu
 License model information for the restored DB cluster.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L90">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L90">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1909,17 +1909,17 @@ License model information for the restored DB cluster.
 Port that the DB cluster was listening on at the time of the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L91">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L91">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshot-sourceDbClusterSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L92">property <b>sourceDbClusterSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L92">property <b>sourceDbClusterSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceDbClusterSnapshotArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshot-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L96">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L96">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1927,7 +1927,7 @@ Port that the DB cluster was listening on at the time of the snapshot.
 The status of this DB Cluster Snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L100">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L100">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1935,7 +1935,7 @@ The status of this DB Cluster Snapshot.
 Specifies whether the DB cluster snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1944,7 +1944,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L104">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L104">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1952,7 +1952,7 @@ deployments.
 The VPC ID associated with the DB cluster snapshot.
 
 <h3 class="pdoc-module-header" id="EventSubscription" data-link-title="EventSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L57">
         Resource <strong>EventSubscription</strong>
     </a>
 </h3>
@@ -2009,7 +2009,7 @@ The following additional atttributes are provided:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_event_subscription.html.markdown.
 
 <h4 class="pdoc-member-header" id="EventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -2023,7 +2023,7 @@ Create a EventSubscription resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventSubscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -2034,14 +2034,14 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L57">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2052,17 +2052,17 @@ Returns true if the given object is an instance of EventSubscription.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventSubscription-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L84">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L84">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-customerAwsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L85">property <b>customerAwsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L85">property <b>customerAwsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customerAwsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L89">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L89">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2070,7 +2070,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A boolean flag to enable/disable the subscription. Defaults to true.
 
 <h4 class="pdoc-member-header" id="EventSubscription-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L93">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L93">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventCategories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2078,7 +2078,7 @@ A boolean flag to enable/disable the subscription. Defaults to true.
 A list of event categories for a SourceType that you want to subscribe to. See http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html or run `aws rds describe-event-categories`.
 
 <h4 class="pdoc-member-header" id="EventSubscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2087,7 +2087,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventSubscription-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L97">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L97">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2095,7 +2095,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DB event subscription. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="EventSubscription-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L101">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L101">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2103,7 +2103,7 @@ The name of the DB event subscription. By default generated by this provider.
 The name of the DB event subscription. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="EventSubscription-snsTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L105">property <b>snsTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L105">property <b>snsTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snsTopic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2111,7 +2111,7 @@ The name of the DB event subscription. Conflicts with `name`.
 The SNS topic to send events to.
 
 <h4 class="pdoc-member-header" id="EventSubscription-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L109">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L109">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2119,7 +2119,7 @@ The SNS topic to send events to.
 A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a sourceType must also be specified.
 
 <h4 class="pdoc-member-header" id="EventSubscription-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L113">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L113">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2127,7 +2127,7 @@ A list of identifiers of the event sources for which events will be returned. If
 The type of source that will be generating the events. Valid options are `db-instance`, `db-security-group`, `db-parameter-group`, `db-snapshot`, `db-cluster` or `db-cluster-snapshot`. If not set, all sources will be subscribed to.
 
 <h4 class="pdoc-member-header" id="EventSubscription-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L117">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L117">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2135,7 +2135,7 @@ The type of source that will be generating the events. Valid options are `db-ins
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="EventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L57">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2144,7 +2144,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GlobalCluster" data-link-title="GlobalCluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L18">
         Resource <strong>GlobalCluster</strong>
     </a>
 </h3>
@@ -2160,7 +2160,7 @@ More information about Aurora global databases can be found in the [Aurora User 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_global_cluster.html.markdown.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -2174,7 +2174,7 @@ Create a GlobalCluster resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -2185,14 +2185,14 @@ Get an existing GlobalCluster resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L18">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GlobalCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2203,7 +2203,7 @@ Returns true if the given object is an instance of GlobalCluster.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L48">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L48">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2211,7 +2211,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 RDS Global Cluster Amazon Resource Name (ARN)
 
 <h4 class="pdoc-member-header" id="GlobalCluster-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L52">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L52">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2219,7 +2219,7 @@ RDS Global Cluster Amazon Resource Name (ARN)
 Name for an automatically created database on cluster creation.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L56">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L56">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2227,7 +2227,7 @@ Name for an automatically created database on cluster creation.
 If the Global Cluster should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L60">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L60">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2235,7 +2235,7 @@ If the Global Cluster should have deletion protection enabled. The database can'
 Name of the database engine to be used for this DB cluster. Valid values: `aurora`. Defaults to `aurora`.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L64">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L64">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2243,7 +2243,7 @@ Name of the database engine to be used for this DB cluster. Valid values: `auror
 Engine version of the Aurora global database.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-globalClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L68">property <b>globalClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L68">property <b>globalClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>globalClusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2251,7 +2251,7 @@ Engine version of the Aurora global database.
 The global cluster identifier.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-globalClusterResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L72">property <b>globalClusterResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L72">property <b>globalClusterResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>globalClusterResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2259,7 +2259,7 @@ The global cluster identifier.
 AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
 
 <h4 class="pdoc-member-header" id="GlobalCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L18">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2268,7 +2268,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L76">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L76">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2276,7 +2276,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies whether the DB cluster is encrypted. The default is `false`.
 
 <h4 class="pdoc-member-header" id="GlobalCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L18">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2285,7 +2285,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L77">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -2357,7 +2357,7 @@ const example = new aws.rds.Instance("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown.
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L408"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L408"> <b>constructor</b></a>
 </h4>
 
 
@@ -2371,7 +2371,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L86">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L86">method <b>get</b></a>
 </h4>
 
 
@@ -2382,14 +2382,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L77">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L77">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L97">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L97">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2400,7 +2400,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L107">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L107">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2408,7 +2408,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The hostname of the RDS instance. See also `endpoint` and `port`.
 
 <h4 class="pdoc-member-header" id="Instance-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L111">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L111">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allocatedStorage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2416,7 +2416,7 @@ The hostname of the RDS instance. See also `endpoint` and `port`.
 The allocated storage in gibibytes. If `maxAllocatedStorage` is configured, this argument represents the initial storage allocation and differences from the configuration will be ignored automatically when Storage Autoscaling occurs.
 
 <h4 class="pdoc-member-header" id="Instance-allowMajorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L117">property <b>allowMajorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L117">property <b>allowMajorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowMajorVersionUpgrade: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2426,7 +2426,7 @@ upgrades are allowed. Changing this parameter does not result in an outage and
 the change is asynchronously applied as soon as possible.
 
 <h4 class="pdoc-member-header" id="Instance-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L124">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L124">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applyImmediately: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2437,7 +2437,7 @@ are applied immediately, or during the next maintenance window. Default is
 information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 
 <h4 class="pdoc-member-header" id="Instance-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L128">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L128">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2445,7 +2445,7 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 The ARN of the RDS instance.
 
 <h4 class="pdoc-member-header" id="Instance-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L134">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L134">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoMinorVersionUpgrade: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2455,7 +2455,7 @@ will be applied automatically to the DB instance during the maintenance window.
 Defaults to true.
 
 <h4 class="pdoc-member-header" id="Instance-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L138">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L138">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2463,7 +2463,7 @@ Defaults to true.
 The AZ for the RDS instance.
 
 <h4 class="pdoc-member-header" id="Instance-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L143">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L143">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupRetentionPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2472,7 +2472,7 @@ The days to retain backups for. Must be
 between `0` and `35`. Must be greater than `0` if the database is used as a source for a Read Replica. [See Read Replica][1].
 
 <h4 class="pdoc-member-header" id="Instance-backupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L149">property <b>backupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L149">property <b>backupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2482,7 +2482,7 @@ automated backups are created if they are enabled. Example: "09:46-10:16". Must
 not overlap with `maintenanceWindow`.
 
 <h4 class="pdoc-member-header" id="Instance-caCertIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L154">property <b>caCertIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L154">property <b>caCertIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>caCertIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2491,7 +2491,7 @@ Specifies the identifier of the CA certificate for the
 DB instance.
 
 <h4 class="pdoc-member-header" id="Instance-characterSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L162">property <b>characterSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L162">property <b>characterSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>characterSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2503,7 +2503,7 @@ RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleChara
 for more information.
 
 <h4 class="pdoc-member-header" id="Instance-copyTagsToSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L166">property <b>copyTagsToSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L166">property <b>copyTagsToSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>copyTagsToSnapshot: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2511,7 +2511,7 @@ for more information.
 Copy all Instance `tags` to snapshots. Default is `false`.
 
 <h4 class="pdoc-member-header" id="Instance-dbSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L176">property <b>dbSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L176">property <b>dbSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbSubnetGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2525,7 +2525,7 @@ action CreateDBInstanceReadReplica](https://docs.aws.amazon.com/AmazonRDS/latest
 for additional read replica contraints.
 
 <h4 class="pdoc-member-header" id="Instance-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L180">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L180">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2533,7 +2533,7 @@ for additional read replica contraints.
 If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
 
 <h4 class="pdoc-member-header" id="Instance-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L184">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L184">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2541,7 +2541,7 @@ If the DB instance should have deletion protection enabled. The database can't b
 The ID of the Directory Service Active Directory domain to create the instance in.
 
 <h4 class="pdoc-member-header" id="Instance-domainIamRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L188">property <b>domainIamRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L188">property <b>domainIamRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainIamRoleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2549,7 +2549,7 @@ The ID of the Directory Service Active Directory domain to create the instance i
 The name of the IAM role to be used when making API calls to the Directory Service.
 
 <h4 class="pdoc-member-header" id="Instance-enabledCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L192">property <b>enabledCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L192">property <b>enabledCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabledCloudwatchLogsExports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2557,7 +2557,7 @@ The name of the IAM role to be used when making API calls to the Directory Servi
 List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
 
 <h4 class="pdoc-member-header" id="Instance-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L196">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L196">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2565,7 +2565,7 @@ List of log types to enable for exporting to CloudWatch logs. If omitted, no log
 The connection endpoint in `address:port` format.
 
 <h4 class="pdoc-member-header" id="Instance-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L205">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L205">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2578,7 +2578,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h4 class="pdoc-member-header" id="Instance-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L213">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L213">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2590,7 +2590,7 @@ For supported values, see the EngineVersion parameter in [API action CreateDBIns
 Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
 
 <h4 class="pdoc-member-header" id="Instance-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L219">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L219">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>finalSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2600,7 +2600,7 @@ when this DB instance is deleted. Must be provided if `skipFinalSnapshot` is
 set to `false`.
 
 <h4 class="pdoc-member-header" id="Instance-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L224">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L224">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostedZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2609,7 +2609,7 @@ The canonical hosted zone ID of the DB instance (to be used
 in a Route 53 Alias record).
 
 <h4 class="pdoc-member-header" id="Instance-iamDatabaseAuthenticationEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L230">property <b>iamDatabaseAuthenticationEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L230">property <b>iamDatabaseAuthenticationEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamDatabaseAuthenticationEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2619,7 +2619,7 @@ mappings of AWS Identity and Access Management (IAM) accounts to database
 accounts is enabled.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2628,7 +2628,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L235">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L235">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2637,7 +2637,7 @@ The name of the RDS instance,
 if omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="Instance-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L240">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L240">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifierPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2646,7 +2646,7 @@ Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="Instance-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L244">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L244">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2654,7 +2654,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 The instance type of the RDS instance.
 
 <h4 class="pdoc-member-header" id="Instance-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L249">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L249">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iops: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2663,7 +2663,7 @@ The amount of provisioned IOPS. Setting this implies a
 storageType of "io1".
 
 <h4 class="pdoc-member-header" id="Instance-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L254">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L254">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2672,7 +2672,7 @@ The ARN for the KMS encryption key. If creating an
 encrypted replica, set this to the destination KMS ARN.
 
 <h4 class="pdoc-member-header" id="Instance-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L259">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L259">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseModel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2681,7 +2681,7 @@ encrypted replica, set this to the destination KMS ARN.
 SE1) License model information for this DB instance.
 
 <h4 class="pdoc-member-header" id="Instance-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L267">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L267">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2693,7 +2693,7 @@ docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstan
 for more information.
 
 <h4 class="pdoc-member-header" id="Instance-maxAllocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L271">property <b>maxAllocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L271">property <b>maxAllocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxAllocatedStorage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2701,7 +2701,7 @@ for more information.
 When configured, the upper limit to which Amazon RDS can automatically scale the storage of the DB instance. Configuring this will automatically ignore differences to `allocatedStorage`. Must be greater than or equal to `allocatedStorage` or `0` to disable Storage Autoscaling.
 
 <h4 class="pdoc-member-header" id="Instance-monitoringInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L278">property <b>monitoringInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L278">property <b>monitoringInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2712,7 +2712,7 @@ collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid
 Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h4 class="pdoc-member-header" id="Instance-monitoringRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L286">property <b>monitoringRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L286">property <b>monitoringRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoringRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2724,7 +2724,7 @@ Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monit
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h4 class="pdoc-member-header" id="Instance-multiAz">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L290">property <b>multiAz</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L290">property <b>multiAz</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>multiAz: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2732,7 +2732,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 Specifies if the RDS instance is multi-AZ
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L294">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L294">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2740,7 +2740,7 @@ Specifies if the RDS instance is multi-AZ
 The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines.
 
 <h4 class="pdoc-member-header" id="Instance-optionGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L298">property <b>optionGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L298">property <b>optionGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2748,7 +2748,7 @@ The name of the database to create when the DB instance is created. If this para
 Name of the DB option group to associate.
 
 <h4 class="pdoc-member-header" id="Instance-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L303">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L303">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameterGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2757,7 +2757,7 @@ Name of the DB parameter group to
 associate.
 
 <h4 class="pdoc-member-header" id="Instance-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L309">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L309">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2767,7 +2767,7 @@ is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.
 
 <h4 class="pdoc-member-header" id="Instance-performanceInsightsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L313">property <b>performanceInsightsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L313">property <b>performanceInsightsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>performanceInsightsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2775,7 +2775,7 @@ logs, and it will be stored in the state file.
 Specifies whether Performance Insights are enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Instance-performanceInsightsKmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L317">property <b>performanceInsightsKmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L317">property <b>performanceInsightsKmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>performanceInsightsKmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2783,7 +2783,7 @@ Specifies whether Performance Insights are enabled. Defaults to false.
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performanceInsightsKmsKeyId`, `performanceInsightsEnabled` needs to be set to true. Once KMS key is set, it can never be changed.
 
 <h4 class="pdoc-member-header" id="Instance-performanceInsightsRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L321">property <b>performanceInsightsRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L321">property <b>performanceInsightsRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>performanceInsightsRetentionPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2791,7 +2791,7 @@ The ARN for the KMS key to encrypt Performance Insights data. When specifying `p
 The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performanceInsightsRetentionPeriod`, `performanceInsightsEnabled` needs to be set to true. Defaults to '7'.
 
 <h4 class="pdoc-member-header" id="Instance-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L325">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L325">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2799,7 +2799,7 @@ The amount of time in days to retain Performance Insights data. Either 7 (7 days
 The port on which the DB accepts connections.
 
 <h4 class="pdoc-member-header" id="Instance-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L330">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L330">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publiclyAccessible: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2808,12 +2808,12 @@ Bool to control if instance is publicly
 accessible. Default is `false`.
 
 <h4 class="pdoc-member-header" id="Instance-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L331">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L331">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-replicateSourceDb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L341">property <b>replicateSourceDb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L341">property <b>replicateSourceDb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicateSourceDb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2827,7 +2827,7 @@ PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest
 for more information on using Replication.
 
 <h4 class="pdoc-member-header" id="Instance-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L345">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L345">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2835,7 +2835,7 @@ for more information on using Replication.
 The RDS Resource ID of this instance.
 
 <h4 class="pdoc-member-header" id="Instance-s3Import">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L349">property <b>s3Import</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L349">property <b>s3Import</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceS3Import'>outputs.rds.InstanceS3Import</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2843,7 +2843,7 @@ The RDS Resource ID of this instance.
 Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
 
 <h4 class="pdoc-member-header" id="Instance-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L355">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L355">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2853,7 +2853,7 @@ associate. Only used for [DB Instances on the _EC2-Classic_
 Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC).
 
 <h4 class="pdoc-member-header" id="Instance-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L363">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L363">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skipFinalSnapshot: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2865,7 +2865,7 @@ instance is deleted, using the value from `finalSnapshotIdentifier`. Default
 is `false`.
 
 <h4 class="pdoc-member-header" id="Instance-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L369">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L369">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2875,7 +2875,7 @@ database from a snapshot. This correlates to the snapshot ID you'd find in the
 RDS console, e.g: rds:production-2015-06-26-06-05.
 
 <h4 class="pdoc-member-header" id="Instance-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L373">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L373">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2883,7 +2883,7 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 The RDS instance status.
 
 <h4 class="pdoc-member-header" id="Instance-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L380">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L380">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2894,7 +2894,7 @@ is ignored and you should instead declare `kmsKeyId` with a valid ARN. The
 default is `false` if not specified.
 
 <h4 class="pdoc-member-header" id="Instance-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L386">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L386">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2904,7 +2904,7 @@ purpose SSD), or "io1" (provisioned IOPS SSD). The default is "io1" if `iops` is
 specified, "gp2" if not.
 
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L390">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L390">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2912,7 +2912,7 @@ specified, "gp2" if not.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Instance-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L398">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L398">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2924,7 +2924,7 @@ Guide](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html
 for more information.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L77">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L77">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2933,7 +2933,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L403">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L403">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2942,7 +2942,7 @@ deployments.
 is provided) Username for the master DB user.
 
 <h4 class="pdoc-member-header" id="Instance-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L408">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L408">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcSecurityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2951,7 +2951,7 @@ List of VPC security groups to
 associate.
 
 <h3 class="pdoc-module-header" id="OptionGroup" data-link-title="OptionGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L52">
         Resource <strong>OptionGroup</strong>
     </a>
 </h3>
@@ -3001,7 +3001,7 @@ const example = new aws.rds.OptionGroup("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_option_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="OptionGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -3015,7 +3015,7 @@ Create a OptionGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OptionGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -3026,14 +3026,14 @@ Get an existing OptionGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OptionGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OptionGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3044,7 +3044,7 @@ Returns true if the given object is an instance of OptionGroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OptionGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L82">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L82">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3052,7 +3052,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the db option group.
 
 <h4 class="pdoc-member-header" id="OptionGroup-engineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L86">property <b>engineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L86">property <b>engineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3060,7 +3060,7 @@ The ARN of the db option group.
 Specifies the name of the engine that this option group should be associated with.
 
 <h4 class="pdoc-member-header" id="OptionGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3069,7 +3069,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OptionGroup-majorEngineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L90">property <b>majorEngineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L90">property <b>majorEngineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>majorEngineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3077,7 +3077,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the major version of the engine that this option group should be associated with.
 
 <h4 class="pdoc-member-header" id="OptionGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L94">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3085,7 +3085,7 @@ Specifies the major version of the engine that this option group should be assoc
 The Name of the setting.
 
 <h4 class="pdoc-member-header" id="OptionGroup-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L98">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L98">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3093,7 +3093,7 @@ The Name of the setting.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`. Must be lowercase, to match as it is stored in AWS.
 
 <h4 class="pdoc-member-header" id="OptionGroup-optionGroupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L106">property <b>optionGroupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L106">property <b>optionGroupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionGroupDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3101,7 +3101,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 The description of the option group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="OptionGroup-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L102">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L102">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#OptionGroupOption'>outputs.rds.OptionGroupOption</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3109,7 +3109,7 @@ The description of the option group. Defaults to "Managed by Pulumi".
 A list of Options to apply.
 
 <h4 class="pdoc-member-header" id="OptionGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L110">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L110">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3117,7 +3117,7 @@ A list of Options to apply.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="OptionGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3126,7 +3126,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ParameterGroup" data-link-title="ParameterGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L40">
         Resource <strong>ParameterGroup</strong>
     </a>
 </h3>
@@ -3164,7 +3164,7 @@ const defaultParameterGroup = new aws.rds.ParameterGroup("default", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_parameter_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -3178,7 +3178,7 @@ Create a ParameterGroup resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -3189,14 +3189,14 @@ Get an existing ParameterGroup resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ParameterGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3207,7 +3207,7 @@ Returns true if the given object is an instance of ParameterGroup.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L70">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L70">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3215,7 +3215,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the db parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L74">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L74">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3223,7 +3223,7 @@ The ARN of the db parameter group.
 The description of the DB parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroup-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L78">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L78">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3231,7 +3231,7 @@ The description of the DB parameter group. Defaults to "Managed by Pulumi".
 The family of the DB parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3240,7 +3240,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3248,7 +3248,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DB parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L86">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L86">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3256,7 +3256,7 @@ The name of the DB parameter.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L90">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L90">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ParameterGroupParameter'>outputs.rds.ParameterGroupParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3264,7 +3264,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html) after initial creation of the group.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3272,7 +3272,7 @@ A list of DB parameters to apply. Note that parameters may differ from a family 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3281,7 +3281,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RoleAssociation" data-link-title="RoleAssociation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L32">
         Resource <strong>RoleAssociation</strong>
     </a>
 </h3>
@@ -3311,7 +3311,7 @@ const example = new aws.rds.RoleAssociation("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance_role_association.html.markdown.
 
 <h4 class="pdoc-member-header" id="RoleAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -3325,7 +3325,7 @@ Create a RoleAssociation resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RoleAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -3336,14 +3336,14 @@ Get an existing RoleAssociation resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RoleAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RoleAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3354,7 +3354,7 @@ Returns true if the given object is an instance of RoleAssociation.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RoleAssociation-dbInstanceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L62">property <b>dbInstanceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L62">property <b>dbInstanceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbInstanceIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3362,7 +3362,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 DB Instance Identifier to associate with the IAM Role.
 
 <h4 class="pdoc-member-header" id="RoleAssociation-featureName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L66">property <b>featureName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L66">property <b>featureName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>featureName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3370,7 +3370,7 @@ DB Instance Identifier to associate with the IAM Role.
 Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the `SupportedFeatureNames` list returned by [AWS CLI rds describe-db-engine-versions](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html).
 
 <h4 class="pdoc-member-header" id="RoleAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3379,7 +3379,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RoleAssociation-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L70">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L70">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3387,7 +3387,7 @@ deployments and may be missing (undefined) during planning phases.
 Amazon Resource Name (ARN) of the IAM Role to associate with the DB Instance.
 
 <h4 class="pdoc-member-header" id="RoleAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3396,7 +3396,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecurityGroup" data-link-title="SecurityGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L30">
         Resource <strong>SecurityGroup</strong>
     </a>
 </h3>
@@ -3424,7 +3424,7 @@ const defaultSecurityGroup = new aws.rds.SecurityGroup("default", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_security_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -3438,7 +3438,7 @@ Create a SecurityGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -3449,14 +3449,14 @@ Get an existing SecurityGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3467,7 +3467,7 @@ Returns true if the given object is an instance of SecurityGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L60">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L60">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3475,7 +3475,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The arn of the DB security group.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L64">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3483,7 +3483,7 @@ The arn of the DB security group.
 The description of the DB security group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SecurityGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3492,7 +3492,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-ingress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L68">property <b>ingress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L68">property <b>ingress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityGroupIngress'>outputs.rds.SecurityGroupIngress</a>[]&gt;;</code></pre>
@@ -3500,7 +3500,7 @@ deployments and may be missing (undefined) during planning phases.
 A list of ingress rules.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3508,7 +3508,7 @@ A list of ingress rules.
 The name of the DB security group.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L76">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L76">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3516,7 +3516,7 @@ The name of the DB security group.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3525,7 +3525,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Snapshot" data-link-title="Snapshot">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L38">
         Resource <strong>Snapshot</strong>
     </a>
 </h3>
@@ -3561,7 +3561,7 @@ const test = new aws.rds.Snapshot("test", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_snapshot.html.markdown.
 
 <h4 class="pdoc-member-header" id="Snapshot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L138"> <b>constructor</b></a>
 </h4>
 
 
@@ -3575,7 +3575,7 @@ Create a Snapshot resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Snapshot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -3586,14 +3586,14 @@ Get an existing Snapshot resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Snapshot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Snapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3604,7 +3604,7 @@ Returns true if the given object is an instance of Snapshot.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Snapshot-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L68">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L68">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allocatedStorage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3612,7 +3612,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the allocated storage size in gigabytes (GB).
 
 <h4 class="pdoc-member-header" id="Snapshot-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L72">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L72">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3620,7 +3620,7 @@ Specifies the allocated storage size in gigabytes (GB).
 Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-dbInstanceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L76">property <b>dbInstanceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L76">property <b>dbInstanceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbInstanceIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3628,7 +3628,7 @@ Specifies the name of the Availability Zone the DB instance was located in at th
 The DB Instance Identifier from which to take the snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-dbSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L80">property <b>dbSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L80">property <b>dbSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbSnapshotArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3636,7 +3636,7 @@ The DB Instance Identifier from which to take the snapshot.
 The Amazon Resource Name (ARN) for the DB snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-dbSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L84">property <b>dbSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L84">property <b>dbSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3644,7 +3644,7 @@ The Amazon Resource Name (ARN) for the DB snapshot.
 The Identifier for the snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L88">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L88">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3652,7 +3652,7 @@ The Identifier for the snapshot.
 Specifies whether the DB snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="Snapshot-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L92">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L92">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3660,7 +3660,7 @@ Specifies whether the DB snapshot is encrypted.
 Specifies the name of the database engine.
 
 <h4 class="pdoc-member-header" id="Snapshot-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L96">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L96">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3668,7 +3668,7 @@ Specifies the name of the database engine.
 Specifies the version of the database engine.
 
 <h4 class="pdoc-member-header" id="Snapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3677,7 +3677,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Snapshot-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L100">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L100">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iops: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3685,7 +3685,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L104">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L104">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3693,7 +3693,7 @@ Specifies the Provisioned IOPS (I/O operations per second) value of the DB insta
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="Snapshot-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L108">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L108">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseModel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3701,7 +3701,7 @@ The ARN for the KMS encryption key.
 License model information for the restored DB instance.
 
 <h4 class="pdoc-member-header" id="Snapshot-optionGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L112">property <b>optionGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L112">property <b>optionGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3709,17 +3709,17 @@ License model information for the restored DB instance.
 Provides the option group name for the DB snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L113">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L113">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Snapshot-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L114">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L114">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Snapshot-sourceDbSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L118">property <b>sourceDbSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L118">property <b>sourceDbSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceDbSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3727,7 +3727,7 @@ Provides the option group name for the DB snapshot.
 The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
 
 <h4 class="pdoc-member-header" id="Snapshot-sourceRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L122">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L122">property <b>sourceRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3735,7 +3735,7 @@ The DB snapshot Arn that the DB snapshot was copied from. It only has value in c
 The region that the DB snapshot was created in or copied from.
 
 <h4 class="pdoc-member-header" id="Snapshot-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L126">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L126">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3743,7 +3743,7 @@ The region that the DB snapshot was created in or copied from.
 Specifies the status of this DB snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L130">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L130">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3751,7 +3751,7 @@ Specifies the status of this DB snapshot.
 Specifies the storage type associated with DB snapshot.
 
 <h4 class="pdoc-member-header" id="Snapshot-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L134">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L134">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3759,7 +3759,7 @@ Specifies the storage type associated with DB snapshot.
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="Snapshot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3768,7 +3768,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Snapshot-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L138">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L138">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3776,7 +3776,7 @@ deployments.
 Specifies the storage type associated with DB snapshot.
 
 <h3 class="pdoc-module-header" id="SubnetGroup" data-link-title="SubnetGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L31">
         Resource <strong>SubnetGroup</strong>
     </a>
 </h3>
@@ -3805,7 +3805,7 @@ const defaultSubnetGroup = new aws.rds.SubnetGroup("default", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_subnet_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -3819,7 +3819,7 @@ Create a SubnetGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -3830,14 +3830,14 @@ Get an existing SubnetGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SubnetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3848,7 +3848,7 @@ Returns true if the given object is an instance of SubnetGroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L61">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L61">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3856,7 +3856,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the db subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L65">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L65">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3864,7 +3864,7 @@ The ARN of the db subnet group.
 The description of the DB subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3873,7 +3873,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3881,7 +3881,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DB subnet group. If omitted, this provider will assign a random, unique name.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L73">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L73">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3889,7 +3889,7 @@ The name of the DB subnet group. If omitted, this provider will assign a random,
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L77">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L77">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -3897,7 +3897,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of VPC subnet IDs.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L81">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L81">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3905,7 +3905,7 @@ A list of VPC subnet IDs.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3916,7 +3916,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getCluster" data-link-title="getCluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L25">
         Data Source <strong>getCluster</strong>
     </a>
 </h3>
@@ -3941,7 +3941,7 @@ const clusterName = aws.rds.getCluster({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/rds_cluster.html.markdown.
 
 <h3 class="pdoc-module-header" id="getClusterSnapshot" data-link-title="getClusterSnapshot">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L41">
         Data Source <strong>getClusterSnapshot</strong>
     </a>
 </h3>
@@ -3982,7 +3982,7 @@ const auroraClusterInstance = new aws.rds.ClusterInstance("aurora", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_cluster_snapshot.html.markdown.
 
 <h3 class="pdoc-module-header" id="getEventCategories" data-link-title="getEventCategories">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getEventCategories.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getEventCategories.ts#L38">
         Data Source <strong>getEventCategories</strong>
     </a>
 </h3>
@@ -4020,7 +4020,7 @@ export const example = exampleEventCategories.eventCategories;
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_event_categories.html.markdown.
 
 <h3 class="pdoc-module-header" id="getInstance" data-link-title="getInstance">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L25">
         Data Source <strong>getInstance</strong>
     </a>
 </h3>
@@ -4045,7 +4045,7 @@ const database = aws.rds.getInstance({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_instance.html.markdown.
 
 <h3 class="pdoc-module-header" id="getSnapshot" data-link-title="getSnapshot">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L46">
         Data Source <strong>getSnapshot</strong>
     </a>
 </h3>
@@ -4093,28 +4093,28 @@ const dev = new aws.rds.Instance("dev", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AuroraEngine" data-link-title="AuroraEngine">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/engineType.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/engineType.ts#L15">
         let <strong>AuroraEngine</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> AuroraEngine: <a href='#EngineType'>EngineType</a> = <span class='s2'>&#34;aurora&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AuroraMysqlEngine" data-link-title="AuroraMysqlEngine">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/engineType.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/engineType.ts#L16">
         let <strong>AuroraMysqlEngine</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> AuroraMysqlEngine: <a href='#EngineType'>EngineType</a> = <span class='s2'>&#34;aurora-mysql&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AuroraPostgresqlEngine" data-link-title="AuroraPostgresqlEngine">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/engineType.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/engineType.ts#L17">
         let <strong>AuroraPostgresqlEngine</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> AuroraPostgresqlEngine: <a href='#EngineType'>EngineType</a> = <span class='s2'>&#34;aurora-postgresql&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L596">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L596">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -4124,7 +4124,7 @@ const dev = new aws.rds.Instance("dev", {
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L602">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L602">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4134,7 +4134,7 @@ are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 
 <h4 class="pdoc-member-header" id="ClusterArgs-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L606">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L606">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4142,7 +4142,7 @@ are applied immediately, or during the next maintenance window. Default is
 A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignoreChanges` if necessary.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-backtrackWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L610">property <b>backtrackWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L610">property <b>backtrackWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backtrackWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4150,7 +4150,7 @@ A list of EC2 Availability Zones for the DB cluster storage where DB cluster ins
 The target backtrack window, in seconds. Only available for `aurora` engine currently. To disable backtracking, set this value to `0`. Defaults to `0`. Must be between `0` and `259200` (72 hours)
 
 <h4 class="pdoc-member-header" id="ClusterArgs-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L614">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L614">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4158,7 +4158,7 @@ The target backtrack window, in seconds. Only available for `aurora` engine curr
 The days to retain backups for. Default `1`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L618">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L618">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4166,7 +4166,7 @@ The days to retain backups for. Default `1`
 The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterIdentifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L622">property <b>clusterIdentifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L622">property <b>clusterIdentifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4174,7 +4174,7 @@ The cluster identifier. If omitted, this provider will assign a random, unique i
 Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `clusterIdentifier`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L626">property <b>clusterMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L626">property <b>clusterMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterMembers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4182,7 +4182,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
 List of RDS Instances that are a part of this cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-copyTagsToSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L630">property <b>copyTagsToSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L630">property <b>copyTagsToSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>copyTagsToSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4190,7 +4190,7 @@ List of RDS Instances that are a part of this cluster
 Copy all Cluster `tags` to snapshots. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L634">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L634">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4198,7 +4198,7 @@ Copy all Cluster `tags` to snapshots. Default is `false`.
 Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints][5]
 
 <h4 class="pdoc-member-header" id="ClusterArgs-dbClusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L638">property <b>dbClusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L638">property <b>dbClusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterParameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4206,7 +4206,7 @@ Name for an automatically created database on cluster creation. There are differ
 A cluster parameter group to associate with the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-dbSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L642">property <b>dbSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L642">property <b>dbSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4214,7 +4214,7 @@ A cluster parameter group to associate with the cluster.
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `dbSubnetGroupName` specified on every [`aws.rds.ClusterInstance`](https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html) in the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L646">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L646">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4222,7 +4222,7 @@ A DB subnet group to associate with this DB instance. **NOTE:** This must match 
 If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enabledCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L651">property <b>enabledCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L651">property <b>enabledCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledCloudwatchLogsExports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4231,7 +4231,7 @@ List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L655">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L655">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EngineType'>EngineType</a>&gt;;</code></pre>
@@ -4239,7 +4239,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
 The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-engineMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L659">property <b>engineMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L659">property <b>engineMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EngineMode'>EngineMode</a>&gt;;</code></pre>
@@ -4247,7 +4247,7 @@ The name of the database engine to be used for this DB cluster. Defaults to `aur
 The database engine mode. Valid values: `global`, `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L663">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L663">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4255,7 +4255,7 @@ The database engine mode. Valid values: `global`, `multimaster`, `parallelquery`
 The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L669">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L669">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>finalSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4265,7 +4265,7 @@ when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-globalClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L673">property <b>globalClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L673">property <b>globalClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalClusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4273,7 +4273,7 @@ made.
 The global cluster identifier specified on [`aws.rds.GlobalCluster`](https://www.terraform.io/docs/providers/aws/r/rds_global_cluster.html).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-iamDatabaseAuthenticationEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L677">property <b>iamDatabaseAuthenticationEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L677">property <b>iamDatabaseAuthenticationEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamDatabaseAuthenticationEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4281,7 +4281,7 @@ The global cluster identifier specified on [`aws.rds.GlobalCluster`](https://www
 Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) for availability and limitations.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L681">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L681">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4289,7 +4289,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
 A List of ARNs for the IAM roles to associate to the RDS Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L685">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L685">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4297,7 +4297,7 @@ A List of ARNs for the IAM roles to associate to the RDS Cluster.
 The ARN for the KMS encryption key. When specifying `kmsKeyId`, `storageEncrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-masterPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L690">property <b>masterPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L690">property <b>masterPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4306,7 +4306,7 @@ Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints][5]
 
 <h4 class="pdoc-member-header" id="ClusterArgs-masterUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L694">property <b>masterUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L694">property <b>masterUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4314,7 +4314,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
 Username for the master DB user. Please refer to the [RDS Naming Constraints][5]. This argument does not support in-place updates and cannot be changed during a restore from snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L698">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L698">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4322,7 +4322,7 @@ Username for the master DB user. Please refer to the [RDS Naming Constraints][5]
 The port on which the DB accepts connections
 
 <h4 class="pdoc-member-header" id="ClusterArgs-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L703">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L703">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredBackupWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4331,7 +4331,7 @@ The daily time range during which automated backups are created if automated bac
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 
 <h4 class="pdoc-member-header" id="ClusterArgs-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L707">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L707">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4339,7 +4339,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
 The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
 
 <h4 class="pdoc-member-header" id="ClusterArgs-replicationSourceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L711">property <b>replicationSourceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L711">property <b>replicationSourceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSourceIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4347,12 +4347,12 @@ The weekly time range during which system maintenance can occur, in (UTC) e.g. w
 ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-s3Import">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L712">property <b>s3Import</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L712">property <b>s3Import</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterS3Import'>inputs.rds.ClusterS3Import</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-scalingConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L716">property <b>scalingConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L716">property <b>scalingConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterScalingConfiguration'>inputs.rds.ClusterScalingConfiguration</a>&gt;;</code></pre>
@@ -4360,7 +4360,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
 Nested attribute with scaling properties. Only valid when `engineMode` is set to `serverless`. More details below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L720">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L720">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipFinalSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4368,7 +4368,7 @@ Nested attribute with scaling properties. Only valid when `engineMode` is set to
 Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `finalSnapshotIdentifier`. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L724">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L724">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4376,7 +4376,7 @@ Determines whether a final DB snapshot is created before the DB cluster is delet
 Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-sourceRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L728">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L728">property <b>sourceRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4384,7 +4384,7 @@ Specifies whether or not to create this cluster from a snapshot. You can use eit
 The source region for an encrypted replica DB cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L732">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L732">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4392,7 +4392,7 @@ The source region for an encrypted replica DB cluster.
 Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engineMode` and `true` for `serverless` `engineMode`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L736">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L736">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -4400,7 +4400,7 @@ Specifies whether the DB cluster is encrypted. The default is `false` for `provi
 A mapping of tags to assign to the DB cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L741">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L741">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4409,7 +4409,7 @@ List of VPC security groups to associate
 with the Cluster
 
 <h3 class="pdoc-module-header" id="ClusterEndpointArgs" data-link-title="ClusterEndpointArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L215">
         interface <strong>ClusterEndpointArgs</strong>
     </a>
 </h3>
@@ -4419,7 +4419,7 @@ with the Cluster
 The set of arguments for constructing a ClusterEndpoint resource.
 
 <h4 class="pdoc-member-header" id="ClusterEndpointArgs-clusterEndpointIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L219">property <b>clusterEndpointIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L219">property <b>clusterEndpointIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterEndpointIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4427,7 +4427,7 @@ The set of arguments for constructing a ClusterEndpoint resource.
 The identifier to use for the new endpoint. This parameter is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ClusterEndpointArgs-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L223">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L223">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4435,7 +4435,7 @@ The identifier to use for the new endpoint. This parameter is stored as a lowerc
 The cluster identifier.
 
 <h4 class="pdoc-member-header" id="ClusterEndpointArgs-customEndpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L227">property <b>customEndpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L227">property <b>customEndpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customEndpointType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4443,7 +4443,7 @@ The cluster identifier.
 The type of the endpoint. One of: READER , ANY .
 
 <h4 class="pdoc-member-header" id="ClusterEndpointArgs-excludedMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L231">property <b>excludedMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L231">property <b>excludedMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludedMembers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4451,7 +4451,7 @@ The type of the endpoint. One of: READER , ANY .
 List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `staticMembers`.
 
 <h4 class="pdoc-member-header" id="ClusterEndpointArgs-staticMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L235">property <b>staticMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L235">property <b>staticMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>staticMembers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4459,7 +4459,7 @@ List of DB instance identifiers that aren't part of the custom endpoint group. A
 List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excludedMembers`.
 
 <h3 class="pdoc-module-header" id="ClusterEndpointState" data-link-title="ClusterEndpointState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L181">
         interface <strong>ClusterEndpointState</strong>
     </a>
 </h3>
@@ -4469,7 +4469,7 @@ List of DB instance identifiers that are part of the custom endpoint group. Conf
 Input properties used for looking up and filtering ClusterEndpoint resources.
 
 <h4 class="pdoc-member-header" id="ClusterEndpointState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L185">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L185">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4477,7 +4477,7 @@ Input properties used for looking up and filtering ClusterEndpoint resources.
 Amazon Resource Name (ARN) of cluster
 
 <h4 class="pdoc-member-header" id="ClusterEndpointState-clusterEndpointIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L189">property <b>clusterEndpointIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L189">property <b>clusterEndpointIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterEndpointIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4485,7 +4485,7 @@ Amazon Resource Name (ARN) of cluster
 The identifier to use for the new endpoint. This parameter is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ClusterEndpointState-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L193">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L193">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4493,7 +4493,7 @@ The identifier to use for the new endpoint. This parameter is stored as a lowerc
 The cluster identifier.
 
 <h4 class="pdoc-member-header" id="ClusterEndpointState-customEndpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L197">property <b>customEndpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L197">property <b>customEndpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customEndpointType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4501,7 +4501,7 @@ The cluster identifier.
 The type of the endpoint. One of: READER , ANY .
 
 <h4 class="pdoc-member-header" id="ClusterEndpointState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L201">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L201">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4509,7 +4509,7 @@ The type of the endpoint. One of: READER , ANY .
 A custom endpoint for the Aurora cluster
 
 <h4 class="pdoc-member-header" id="ClusterEndpointState-excludedMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L205">property <b>excludedMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L205">property <b>excludedMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludedMembers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4517,7 +4517,7 @@ A custom endpoint for the Aurora cluster
 List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `staticMembers`.
 
 <h4 class="pdoc-member-header" id="ClusterEndpointState-staticMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterEndpoint.ts#L209">property <b>staticMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterEndpoint.ts#L209">property <b>staticMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>staticMembers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4525,7 +4525,7 @@ List of DB instance identifiers that aren't part of the custom endpoint group. A
 List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excludedMembers`.
 
 <h3 class="pdoc-module-header" id="ClusterInstanceArgs" data-link-title="ClusterInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L386">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L386">
         interface <strong>ClusterInstanceArgs</strong>
     </a>
 </h3>
@@ -4535,7 +4535,7 @@ List of DB instance identifiers that are part of the custom endpoint group. Conf
 The set of arguments for constructing a ClusterInstance resource.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L391">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L391">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4544,7 +4544,7 @@ Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L395">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L395">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4552,7 +4552,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L399">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L399">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4560,7 +4560,7 @@ Indicates that minor engine upgrades will be applied automatically to the DB ins
 The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L403">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L403">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4568,7 +4568,7 @@ The EC2 Availability Zone that the DB instance is created in. See [docs](https:/
 The identifier of the [`aws.rds.Cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html) in which to launch this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-copyTagsToSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L407">property <b>copyTagsToSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L407">property <b>copyTagsToSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>copyTagsToSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4576,7 +4576,7 @@ The identifier of the [`aws.rds.Cluster`](https://www.terraform.io/docs/provider
 Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-dbParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L411">property <b>dbParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L411">property <b>dbParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbParameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4584,7 +4584,7 @@ Indicates whether to copy all of the user-defined tags from the DB instance to s
 The name of the DB parameter group to associate with this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-dbSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L415">property <b>dbSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L415">property <b>dbSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4592,7 +4592,7 @@ The name of the DB parameter group to associate with this instance.
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `dbSubnetGroupName` of the attached [`aws.rds.Cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html).
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L422">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L422">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EngineType'>EngineType</a>&gt;;</code></pre>
@@ -4603,7 +4603,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L426">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L426">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4611,7 +4611,7 @@ in the Amazon RDS User Guide.
 The database engine version.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L430">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L430">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4619,7 +4619,7 @@ The database engine version.
 The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L434">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L434">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4627,7 +4627,7 @@ The indentifier for the RDS instance, if omitted, this provider will assign a ra
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L439">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L439">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#InstanceType'>InstanceType</a>&gt;;</code></pre>
@@ -4636,7 +4636,7 @@ The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-monitoringInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L443">property <b>monitoringInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L443">property <b>monitoringInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4644,7 +4644,7 @@ and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance cl
 The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-monitoringRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L449">property <b>monitoringRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L449">property <b>monitoringRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4654,7 +4654,7 @@ enhanced monitoring metrics to CloudWatch Logs. You can find more information on
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-performanceInsightsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L453">property <b>performanceInsightsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L453">property <b>performanceInsightsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performanceInsightsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4662,7 +4662,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 Specifies whether Performance Insights is enabled or not.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-performanceInsightsKmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L457">property <b>performanceInsightsKmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L457">property <b>performanceInsightsKmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performanceInsightsKmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4670,7 +4670,7 @@ Specifies whether Performance Insights is enabled or not.
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performanceInsightsKmsKeyId`, `performanceInsightsEnabled` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L462">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L462">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredBackupWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4679,7 +4679,7 @@ The daily time range during which automated backups are created if automated bac
 Eg: "04:00-09:00"
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L467">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L467">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4688,7 +4688,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-promotionTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L471">property <b>promotionTier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L471">property <b>promotionTier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>promotionTier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4696,7 +4696,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L477">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L477">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4706,7 +4706,7 @@ Default `false`. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L481">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L481">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -4714,7 +4714,7 @@ details on controlling this property.
 A mapping of tags to assign to the instance.
 
 <h3 class="pdoc-module-header" id="ClusterInstanceState" data-link-title="ClusterInstanceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L257">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L257">
         interface <strong>ClusterInstanceState</strong>
     </a>
 </h3>
@@ -4724,7 +4724,7 @@ A mapping of tags to assign to the instance.
 Input properties used for looking up and filtering ClusterInstance resources.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L262">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L262">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4733,7 +4733,7 @@ Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L266">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L266">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4741,7 +4741,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 Amazon Resource Name (ARN) of cluster instance
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L270">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L270">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4749,7 +4749,7 @@ Amazon Resource Name (ARN) of cluster instance
 Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L274">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L274">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4757,7 +4757,7 @@ Indicates that minor engine upgrades will be applied automatically to the DB ins
 The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L278">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L278">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4765,7 +4765,7 @@ The EC2 Availability Zone that the DB instance is created in. See [docs](https:/
 The identifier of the [`aws.rds.Cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html) in which to launch this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-copyTagsToSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L282">property <b>copyTagsToSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L282">property <b>copyTagsToSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>copyTagsToSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4773,7 +4773,7 @@ The identifier of the [`aws.rds.Cluster`](https://www.terraform.io/docs/provider
 Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-dbParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L286">property <b>dbParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L286">property <b>dbParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbParameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4781,7 +4781,7 @@ Indicates whether to copy all of the user-defined tags from the DB instance to s
 The name of the DB parameter group to associate with this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-dbSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L290">property <b>dbSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L290">property <b>dbSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4789,7 +4789,7 @@ The name of the DB parameter group to associate with this instance.
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `dbSubnetGroupName` of the attached [`aws.rds.Cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html).
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-dbiResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L294">property <b>dbiResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L294">property <b>dbiResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbiResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4797,7 +4797,7 @@ A DB subnet group to associate with this DB instance. **NOTE:** This must match 
 The region-unique, immutable identifier for the DB instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L298">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L298">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4805,7 +4805,7 @@ The region-unique, immutable identifier for the DB instance.
 The DNS address for this instance. May not be writable
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L305">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L305">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EngineType'>EngineType</a>&gt;;</code></pre>
@@ -4816,7 +4816,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L309">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L309">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4824,7 +4824,7 @@ in the Amazon RDS User Guide.
 The database engine version.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L313">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L313">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4832,7 +4832,7 @@ The database engine version.
 The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L317">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L317">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4840,7 +4840,7 @@ The indentifier for the RDS instance, if omitted, this provider will assign a ra
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L322">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L322">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#InstanceType'>InstanceType</a>&gt;;</code></pre>
@@ -4849,7 +4849,7 @@ The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L326">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L326">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4857,7 +4857,7 @@ and memory, see [Scaling Aurora DB Instances][4]. Aurora uses `db.*` instance cl
 The ARN for the KMS encryption key if one is set to the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-monitoringInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L330">property <b>monitoringInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L330">property <b>monitoringInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4865,7 +4865,7 @@ The ARN for the KMS encryption key if one is set to the cluster.
 The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-monitoringRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L336">property <b>monitoringRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L336">property <b>monitoringRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4875,7 +4875,7 @@ enhanced monitoring metrics to CloudWatch Logs. You can find more information on
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-performanceInsightsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L340">property <b>performanceInsightsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L340">property <b>performanceInsightsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performanceInsightsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4883,7 +4883,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 Specifies whether Performance Insights is enabled or not.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-performanceInsightsKmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L344">property <b>performanceInsightsKmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L344">property <b>performanceInsightsKmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performanceInsightsKmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4891,7 +4891,7 @@ Specifies whether Performance Insights is enabled or not.
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performanceInsightsKmsKeyId`, `performanceInsightsEnabled` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L348">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L348">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4899,7 +4899,7 @@ The ARN for the KMS key to encrypt Performance Insights data. When specifying `p
 The database port
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L353">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L353">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredBackupWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4908,7 +4908,7 @@ The daily time range during which automated backups are created if automated bac
 Eg: "04:00-09:00"
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L358">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L358">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4917,7 +4917,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-promotionTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L362">property <b>promotionTier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L362">property <b>promotionTier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>promotionTier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4925,7 +4925,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L368">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L368">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4935,7 +4935,7 @@ Default `false`. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L372">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L372">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4943,7 +4943,7 @@ details on controlling this property.
 Specifies whether the DB cluster is encrypted.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L376">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L376">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -4951,7 +4951,7 @@ Specifies whether the DB cluster is encrypted.
 A mapping of tags to assign to the instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-writer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterInstance.ts#L380">property <b>writer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterInstance.ts#L380">property <b>writer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4959,7 +4959,7 @@ A mapping of tags to assign to the instance.
 Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
 
 <h3 class="pdoc-module-header" id="ClusterParameterGroupArgs" data-link-title="ClusterParameterGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L175">
         interface <strong>ClusterParameterGroupArgs</strong>
     </a>
 </h3>
@@ -4969,7 +4969,7 @@ Boolean indicating if this instance is writable. `False` indicates this instance
 The set of arguments for constructing a ClusterParameterGroup resource.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L179">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L179">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4977,7 +4977,7 @@ The set of arguments for constructing a ClusterParameterGroup resource.
 The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L183">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L183">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4985,7 +4985,7 @@ The description of the DB cluster parameter group. Defaults to "Managed by Pulum
 The family of the DB cluster parameter group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L187">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4993,7 +4993,7 @@ The family of the DB cluster parameter group.
 The name of the DB parameter.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L191">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L191">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5001,7 +5001,7 @@ The name of the DB parameter.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L195">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L195">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterParameterGroupParameter'>inputs.rds.ClusterParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -5009,7 +5009,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L199">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -5017,7 +5017,7 @@ A list of DB parameters to apply. Note that parameters may differ from a family 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ClusterParameterGroupState" data-link-title="ClusterParameterGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L141">
         interface <strong>ClusterParameterGroupState</strong>
     </a>
 </h3>
@@ -5027,7 +5027,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering ClusterParameterGroup resources.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L145">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L145">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5035,7 +5035,7 @@ Input properties used for looking up and filtering ClusterParameterGroup resourc
 The ARN of the db cluster parameter group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L149">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L149">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5043,7 +5043,7 @@ The ARN of the db cluster parameter group.
 The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L153">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L153">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5051,7 +5051,7 @@ The description of the DB cluster parameter group. Defaults to "Managed by Pulum
 The family of the DB cluster parameter group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L157">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5059,7 +5059,7 @@ The family of the DB cluster parameter group.
 The name of the DB parameter.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L161">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L161">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5067,7 +5067,7 @@ The name of the DB parameter.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L165">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L165">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterParameterGroupParameter'>inputs.rds.ClusterParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -5075,7 +5075,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterParameterGroup.ts#L169">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterParameterGroup.ts#L169">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -5083,7 +5083,7 @@ A list of DB parameters to apply. Note that parameters may differ from a family 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ClusterSnapshotArgs" data-link-title="ClusterSnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L231">
         interface <strong>ClusterSnapshotArgs</strong>
     </a>
 </h3>
@@ -5093,7 +5093,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a ClusterSnapshot resource.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotArgs-dbClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L235">property <b>dbClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L235">property <b>dbClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5101,7 +5101,7 @@ The set of arguments for constructing a ClusterSnapshot resource.
 The DB Cluster Identifier from which to take the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotArgs-dbClusterSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L239">property <b>dbClusterSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L239">property <b>dbClusterSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5109,7 +5109,7 @@ The DB Cluster Identifier from which to take the snapshot.
 The Identifier for the snapshot.
 
 <h3 class="pdoc-module-header" id="ClusterSnapshotState" data-link-title="ClusterSnapshotState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L171">
         interface <strong>ClusterSnapshotState</strong>
     </a>
 </h3>
@@ -5119,7 +5119,7 @@ The Identifier for the snapshot.
 Input properties used for looking up and filtering ClusterSnapshot resources.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L175">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L175">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allocatedStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5127,7 +5127,7 @@ Input properties used for looking up and filtering ClusterSnapshot resources.
 Specifies the allocated storage size in gigabytes (GB).
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L179">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L179">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5135,7 +5135,7 @@ Specifies the allocated storage size in gigabytes (GB).
 List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-dbClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L183">property <b>dbClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L183">property <b>dbClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5143,7 +5143,7 @@ List of EC2 Availability Zones that instances in the DB cluster snapshot can be 
 The DB Cluster Identifier from which to take the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-dbClusterSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L187">property <b>dbClusterSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L187">property <b>dbClusterSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterSnapshotArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5151,7 +5151,7 @@ The DB Cluster Identifier from which to take the snapshot.
 The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-dbClusterSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L191">property <b>dbClusterSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L191">property <b>dbClusterSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5159,7 +5159,7 @@ The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 The Identifier for the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L195">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L195">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5167,7 +5167,7 @@ The Identifier for the snapshot.
 Specifies the name of the database engine.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L199">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L199">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5175,7 +5175,7 @@ Specifies the name of the database engine.
 Version of the database engine for this DB cluster snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L203">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L203">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5183,7 +5183,7 @@ Version of the database engine for this DB cluster snapshot.
 If storageEncrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L207">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L207">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseModel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5191,7 +5191,7 @@ If storageEncrypted is true, the AWS KMS key identifier for the encrypted DB clu
 License model information for the restored DB cluster.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L211">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L211">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5199,17 +5199,17 @@ License model information for the restored DB cluster.
 Port that the DB cluster was listening on at the time of the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L212">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L212">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-sourceDbClusterSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L213">property <b>sourceDbClusterSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L213">property <b>sourceDbClusterSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceDbClusterSnapshotArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L217">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L217">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5217,7 +5217,7 @@ Port that the DB cluster was listening on at the time of the snapshot.
 The status of this DB Cluster Snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L221">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L221">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5225,7 +5225,7 @@ The status of this DB Cluster Snapshot.
 Specifies whether the DB cluster snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/clusterSnapshot.ts#L225">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/clusterSnapshot.ts#L225">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5233,7 +5233,7 @@ Specifies whether the DB cluster snapshot is encrypted.
 The VPC ID associated with the DB cluster snapshot.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L424">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L424">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -5243,7 +5243,7 @@ The VPC ID associated with the DB cluster snapshot.
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L430">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L430">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5253,7 +5253,7 @@ are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 
 <h4 class="pdoc-member-header" id="ClusterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L434">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L434">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5261,7 +5261,7 @@ are applied immediately, or during the next maintenance window. Default is
 Amazon Resource Name (ARN) of cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L438">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L438">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5269,7 +5269,7 @@ Amazon Resource Name (ARN) of cluster
 A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use `ignoreChanges` if necessary.
 
 <h4 class="pdoc-member-header" id="ClusterState-backtrackWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L442">property <b>backtrackWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L442">property <b>backtrackWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backtrackWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5277,7 +5277,7 @@ A list of EC2 Availability Zones for the DB cluster storage where DB cluster ins
 The target backtrack window, in seconds. Only available for `aurora` engine currently. To disable backtracking, set this value to `0`. Defaults to `0`. Must be between `0` and `259200` (72 hours)
 
 <h4 class="pdoc-member-header" id="ClusterState-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L446">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L446">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5285,7 +5285,7 @@ The target backtrack window, in seconds. Only available for `aurora` engine curr
 The days to retain backups for. Default `1`
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L450">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L450">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5293,7 +5293,7 @@ The days to retain backups for. Default `1`
 The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterIdentifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L454">property <b>clusterIdentifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L454">property <b>clusterIdentifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5301,7 +5301,7 @@ The cluster identifier. If omitted, this provider will assign a random, unique i
 Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `clusterIdentifier`.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L458">property <b>clusterMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L458">property <b>clusterMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterMembers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5309,7 +5309,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
 List of RDS Instances that are a part of this cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L462">property <b>clusterResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L462">property <b>clusterResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5317,7 +5317,7 @@ List of RDS Instances that are a part of this cluster
 The RDS Cluster Resource ID
 
 <h4 class="pdoc-member-header" id="ClusterState-copyTagsToSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L466">property <b>copyTagsToSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L466">property <b>copyTagsToSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>copyTagsToSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5325,7 +5325,7 @@ The RDS Cluster Resource ID
 Copy all Cluster `tags` to snapshots. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterState-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L470">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L470">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5333,7 +5333,7 @@ Copy all Cluster `tags` to snapshots. Default is `false`.
 Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints][5]
 
 <h4 class="pdoc-member-header" id="ClusterState-dbClusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L474">property <b>dbClusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L474">property <b>dbClusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterParameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5341,7 +5341,7 @@ Name for an automatically created database on cluster creation. There are differ
 A cluster parameter group to associate with the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-dbSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L478">property <b>dbSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L478">property <b>dbSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5349,7 +5349,7 @@ A cluster parameter group to associate with the cluster.
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `dbSubnetGroupName` specified on every [`aws.rds.ClusterInstance`](https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html) in the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L482">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L482">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5357,7 +5357,7 @@ A DB subnet group to associate with this DB instance. **NOTE:** This must match 
 If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterState-enabledCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L487">property <b>enabledCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L487">property <b>enabledCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledCloudwatchLogsExports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5366,7 +5366,7 @@ List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
 
 <h4 class="pdoc-member-header" id="ClusterState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L491">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L491">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5374,7 +5374,7 @@ The following log types are supported: `audit`, `error`, `general`, `slowquery`,
 The DNS address of the RDS instance
 
 <h4 class="pdoc-member-header" id="ClusterState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L495">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L495">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EngineType'>EngineType</a>&gt;;</code></pre>
@@ -5382,7 +5382,7 @@ The DNS address of the RDS instance
 The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
 
 <h4 class="pdoc-member-header" id="ClusterState-engineMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L499">property <b>engineMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L499">property <b>engineMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EngineMode'>EngineMode</a>&gt;;</code></pre>
@@ -5390,7 +5390,7 @@ The name of the database engine to be used for this DB cluster. Defaults to `aur
 The database engine mode. Valid values: `global`, `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
 
 <h4 class="pdoc-member-header" id="ClusterState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L503">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L503">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5398,7 +5398,7 @@ The database engine mode. Valid values: `global`, `multimaster`, `parallelquery`
 The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
 
 <h4 class="pdoc-member-header" id="ClusterState-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L509">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L509">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>finalSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5408,7 +5408,7 @@ when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
 
 <h4 class="pdoc-member-header" id="ClusterState-globalClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L513">property <b>globalClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L513">property <b>globalClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalClusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5416,7 +5416,7 @@ made.
 The global cluster identifier specified on [`aws.rds.GlobalCluster`](https://www.terraform.io/docs/providers/aws/r/rds_global_cluster.html).
 
 <h4 class="pdoc-member-header" id="ClusterState-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L517">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L517">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5424,7 +5424,7 @@ The global cluster identifier specified on [`aws.rds.GlobalCluster`](https://www
 The Route53 Hosted Zone ID of the endpoint
 
 <h4 class="pdoc-member-header" id="ClusterState-iamDatabaseAuthenticationEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L521">property <b>iamDatabaseAuthenticationEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L521">property <b>iamDatabaseAuthenticationEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamDatabaseAuthenticationEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5432,7 +5432,7 @@ The Route53 Hosted Zone ID of the endpoint
 Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) for availability and limitations.
 
 <h4 class="pdoc-member-header" id="ClusterState-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L525">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L525">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5440,7 +5440,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
 A List of ARNs for the IAM roles to associate to the RDS Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L529">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L529">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5448,7 +5448,7 @@ A List of ARNs for the IAM roles to associate to the RDS Cluster.
 The ARN for the KMS encryption key. When specifying `kmsKeyId`, `storageEncrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="ClusterState-masterPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L534">property <b>masterPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L534">property <b>masterPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5457,7 +5457,7 @@ Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints][5]
 
 <h4 class="pdoc-member-header" id="ClusterState-masterUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L538">property <b>masterUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L538">property <b>masterUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5465,7 +5465,7 @@ show up in logs, and it will be stored in the state file. Please refer to the [R
 Username for the master DB user. Please refer to the [RDS Naming Constraints][5]. This argument does not support in-place updates and cannot be changed during a restore from snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L542">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L542">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5473,7 +5473,7 @@ Username for the master DB user. Please refer to the [RDS Naming Constraints][5]
 The port on which the DB accepts connections
 
 <h4 class="pdoc-member-header" id="ClusterState-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L547">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L547">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredBackupWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5482,7 +5482,7 @@ The daily time range during which automated backups are created if automated bac
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 
 <h4 class="pdoc-member-header" id="ClusterState-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L551">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L551">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5490,7 +5490,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
 The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
 
 <h4 class="pdoc-member-header" id="ClusterState-readerEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L556">property <b>readerEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L556">property <b>readerEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readerEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5499,7 +5499,7 @@ A read-only endpoint for the Aurora cluster, automatically
 load-balanced across replicas
 
 <h4 class="pdoc-member-header" id="ClusterState-replicationSourceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L560">property <b>replicationSourceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L560">property <b>replicationSourceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSourceIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5507,12 +5507,12 @@ load-balanced across replicas
 ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
 
 <h4 class="pdoc-member-header" id="ClusterState-s3Import">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L561">property <b>s3Import</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L561">property <b>s3Import</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterS3Import'>inputs.rds.ClusterS3Import</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-scalingConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L565">property <b>scalingConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L565">property <b>scalingConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterScalingConfiguration'>inputs.rds.ClusterScalingConfiguration</a>&gt;;</code></pre>
@@ -5520,7 +5520,7 @@ ARN of a source DB cluster or DB instance if this DB cluster is to be created as
 Nested attribute with scaling properties. Only valid when `engineMode` is set to `serverless`. More details below.
 
 <h4 class="pdoc-member-header" id="ClusterState-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L569">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L569">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipFinalSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5528,7 +5528,7 @@ Nested attribute with scaling properties. Only valid when `engineMode` is set to
 Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `finalSnapshotIdentifier`. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterState-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L573">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L573">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5536,7 +5536,7 @@ Determines whether a final DB snapshot is created before the DB cluster is delet
 Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterState-sourceRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L577">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L577">property <b>sourceRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5544,7 +5544,7 @@ Specifies whether or not to create this cluster from a snapshot. You can use eit
 The source region for an encrypted replica DB cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L581">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L581">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5552,7 +5552,7 @@ The source region for an encrypted replica DB cluster.
 Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engineMode` and `true` for `serverless` `engineMode`.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L585">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L585">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -5560,7 +5560,7 @@ Specifies whether the DB cluster is encrypted. The default is `false` for `provi
 A mapping of tags to assign to the DB cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/cluster.ts#L590">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/cluster.ts#L590">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5569,21 +5569,21 @@ List of VPC security groups to associate
 with the Cluster
 
 <h3 class="pdoc-module-header" id="EngineMode" data-link-title="EngineMode">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/engineMode.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/engineMode.ts#L20">
         type <strong>EngineMode</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> EngineMode = <span class='s2'>"provisioned"</span> | <span class='s2'>"serverless"</span> | <span class='s2'>"parallelquery"</span> | <span class='s2'>"global"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="EngineType" data-link-title="EngineType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/engineType.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/engineType.ts#L19">
         type <strong>EngineType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> EngineType = <span class='s2'>"aurora"</span> | <span class='s2'>"aurora-mysql"</span> | <span class='s2'>"aurora-postgresql"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="EventSubscriptionArgs" data-link-title="EventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L211">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L211">
         interface <strong>EventSubscriptionArgs</strong>
     </a>
 </h3>
@@ -5593,7 +5593,7 @@ with the Cluster
 The set of arguments for constructing a EventSubscription resource.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L215">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L215">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5601,7 +5601,7 @@ The set of arguments for constructing a EventSubscription resource.
 A boolean flag to enable/disable the subscription. Defaults to true.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L219">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L219">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventCategories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5609,7 +5609,7 @@ A boolean flag to enable/disable the subscription. Defaults to true.
 A list of event categories for a SourceType that you want to subscribe to. See http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html or run `aws rds describe-event-categories`.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L223">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L223">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5617,7 +5617,7 @@ A list of event categories for a SourceType that you want to subscribe to. See h
 The name of the DB event subscription. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L227">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L227">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5625,7 +5625,7 @@ The name of the DB event subscription. By default generated by this provider.
 The name of the DB event subscription. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-snsTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L231">property <b>snsTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L231">property <b>snsTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5633,7 +5633,7 @@ The name of the DB event subscription. Conflicts with `name`.
 The SNS topic to send events to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L235">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L235">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5641,7 +5641,7 @@ The SNS topic to send events to.
 A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a sourceType must also be specified.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L239">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L239">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5649,7 +5649,7 @@ A list of identifiers of the event sources for which events will be returned. If
 The type of source that will be generating the events. Valid options are `db-instance`, `db-security-group`, `db-parameter-group`, `db-snapshot`, `db-cluster` or `db-cluster-snapshot`. If not set, all sources will be subscribed to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L243">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L243">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -5657,7 +5657,7 @@ The type of source that will be generating the events. Valid options are `db-ins
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="EventSubscriptionState" data-link-title="EventSubscriptionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L171">
         interface <strong>EventSubscriptionState</strong>
     </a>
 </h3>
@@ -5667,17 +5667,17 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering EventSubscription resources.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L172">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L172">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscriptionState-customerAwsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L173">property <b>customerAwsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L173">property <b>customerAwsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerAwsId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscriptionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L177">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L177">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5685,7 +5685,7 @@ Input properties used for looking up and filtering EventSubscription resources.
 A boolean flag to enable/disable the subscription. Defaults to true.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L181">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L181">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventCategories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5693,7 +5693,7 @@ A boolean flag to enable/disable the subscription. Defaults to true.
 A list of event categories for a SourceType that you want to subscribe to. See http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html or run `aws rds describe-event-categories`.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L185">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5701,7 +5701,7 @@ A list of event categories for a SourceType that you want to subscribe to. See h
 The name of the DB event subscription. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L189">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L189">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5709,7 +5709,7 @@ The name of the DB event subscription. By default generated by this provider.
 The name of the DB event subscription. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-snsTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L193">property <b>snsTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L193">property <b>snsTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5717,7 +5717,7 @@ The name of the DB event subscription. Conflicts with `name`.
 The SNS topic to send events to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L197">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L197">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5725,7 +5725,7 @@ The SNS topic to send events to.
 A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a sourceType must also be specified.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L201">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L201">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5733,7 +5733,7 @@ A list of identifiers of the event sources for which events will be returned. If
 The type of source that will be generating the events. Valid options are `db-instance`, `db-security-group`, `db-parameter-group`, `db-snapshot`, `db-cluster` or `db-cluster-snapshot`. If not set, all sources will be subscribed to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/eventSubscription.ts#L205">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/eventSubscription.ts#L205">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -5741,7 +5741,7 @@ The type of source that will be generating the events. Valid options are `db-ins
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetClusterArgs" data-link-title="GetClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L44">
         interface <strong>GetClusterArgs</strong>
     </a>
 </h3>
@@ -5751,7 +5751,7 @@ A mapping of tags to assign to the resource.
 A collection of arguments for invoking getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L48">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L48">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5759,12 +5759,12 @@ A collection of arguments for invoking getCluster.
 The cluster identifier of the RDS cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L49">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L49">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterResult" data-link-title="GetClusterResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L55">
         interface <strong>GetClusterResult</strong>
     </a>
 </h3>
@@ -5774,92 +5774,92 @@ The cluster identifier of the RDS cluster.
 A collection of values returned by getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L56">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L56">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L57">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L57">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L58">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L58">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L59">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L59">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L60">property <b>clusterMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L60">property <b>clusterMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterMembers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L61">property <b>clusterResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L61">property <b>clusterResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterResourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L62">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L62">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-dbClusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L63">property <b>dbClusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L63">property <b>dbClusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterParameterGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-dbSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L64">property <b>dbSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L64">property <b>dbSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSubnetGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-enabledCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L65">property <b>enabledCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L65">property <b>enabledCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledCloudwatchLogsExports: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L66">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L66">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L67">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L67">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L68">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L68">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L69">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L69">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>finalSnapshotIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L70">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L70">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-iamDatabaseAuthenticationEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L71">property <b>iamDatabaseAuthenticationEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L71">property <b>iamDatabaseAuthenticationEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamDatabaseAuthenticationEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L72">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L72">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoles: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5867,57 +5867,57 @@ A collection of values returned by getCluster.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L73">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L73">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-masterUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L74">property <b>masterUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L74">property <b>masterUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterUsername: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L75">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L75">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L76">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L76">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredBackupWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L77">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L77">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-readerEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L78">property <b>readerEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L78">property <b>readerEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readerEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-replicationSourceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L79">property <b>replicationSourceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L79">property <b>replicationSourceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSourceIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L80">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L80">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L81">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L81">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getCluster.ts#L82">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getCluster.ts#L82">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterSnapshotArgs" data-link-title="GetClusterSnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L65">
         interface <strong>GetClusterSnapshotArgs</strong>
     </a>
 </h3>
@@ -5927,7 +5927,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getClusterSnapshot.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotArgs-dbClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L69">property <b>dbClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L69">property <b>dbClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterIdentifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5935,7 +5935,7 @@ A collection of arguments for invoking getClusterSnapshot.
 Returns the list of snapshots created by the specific db_cluster
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotArgs-dbClusterSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L73">property <b>dbClusterSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L73">property <b>dbClusterSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterSnapshotIdentifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5943,7 +5943,7 @@ Returns the list of snapshots created by the specific db_cluster
 Returns information on a specific snapshot_id.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotArgs-includePublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L78">property <b>includePublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L78">property <b>includePublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includePublic?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -5952,7 +5952,7 @@ Set this value to true to include manual DB Cluster Snapshots that are public an
 copied or restored by any AWS account, otherwise set this value to false. The default is `false`.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotArgs-includeShared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L84">property <b>includeShared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L84">property <b>includeShared</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeShared?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -5962,7 +5962,7 @@ AWS accounts that this AWS account has been given permission to copy or restore,
 The default is `false`.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotArgs-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L88">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L88">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -5970,7 +5970,7 @@ The default is `false`.
 If more than one result is returned, use the most recent Snapshot.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotArgs-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L94">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L94">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5980,7 +5980,7 @@ value, then both automated and manual DB cluster snapshots are returned. Shared 
 included in the returned results by default. Possible values are, `automated`, `manual`, `shared` and `public`.
 
 <h3 class="pdoc-module-header" id="GetClusterSnapshotResult" data-link-title="GetClusterSnapshotResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L100">
         interface <strong>GetClusterSnapshotResult</strong>
     </a>
 </h3>
@@ -5990,7 +5990,7 @@ included in the returned results by default. Possible values are, `automated`, `
 A collection of values returned by getClusterSnapshot.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L104">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L104">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allocatedStorage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -5998,7 +5998,7 @@ A collection of values returned by getClusterSnapshot.
 Specifies the allocated storage size in gigabytes (GB).
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L108">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L108">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6006,7 +6006,7 @@ Specifies the allocated storage size in gigabytes (GB).
 List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-dbClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L112">property <b>dbClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L112">property <b>dbClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterIdentifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6014,7 +6014,7 @@ List of EC2 Availability Zones that instances in the DB cluster snapshot can be 
 Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-dbClusterSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L116">property <b>dbClusterSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L116">property <b>dbClusterSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterSnapshotArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6022,12 +6022,12 @@ Specifies the DB cluster identifier of the DB cluster that this DB cluster snaps
 The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-dbClusterSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L117">property <b>dbClusterSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L117">property <b>dbClusterSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterSnapshotIdentifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L121">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L121">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6035,7 +6035,7 @@ The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 Specifies the name of the database engine.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L125">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L125">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6043,7 +6043,7 @@ Specifies the name of the database engine.
 Version of the database engine for this DB cluster snapshot.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L162">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L162">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6051,17 +6051,17 @@ Version of the database engine for this DB cluster snapshot.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-includePublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L126">property <b>includePublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L126">property <b>includePublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includePublic?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-includeShared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L127">property <b>includeShared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L127">property <b>includeShared</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeShared?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L131">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L131">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6069,7 +6069,7 @@ id is the provider-assigned unique ID for this managed resource.
 If storageEncrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L135">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L135">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseModel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6077,12 +6077,12 @@ If storageEncrypted is true, the AWS KMS key identifier for the encrypted DB clu
 License model information for the restored DB cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L136">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L136">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L140">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L140">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6090,7 +6090,7 @@ License model information for the restored DB cluster.
 Port that the DB cluster was listening on at the time of the snapshot.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-snapshotCreateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L144">property <b>snapshotCreateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L144">property <b>snapshotCreateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotCreateTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6098,17 +6098,17 @@ Port that the DB cluster was listening on at the time of the snapshot.
 Time when the snapshot was taken, in Universal Coordinated Time (UTC).
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L145">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L145">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-sourceDbClusterSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L146">property <b>sourceDbClusterSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L146">property <b>sourceDbClusterSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceDbClusterSnapshotArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L150">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L150">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6116,7 +6116,7 @@ Time when the snapshot was taken, in Universal Coordinated Time (UTC).
 The status of this DB Cluster Snapshot.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L154">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L154">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6124,7 +6124,7 @@ The status of this DB Cluster Snapshot.
 Specifies whether the DB cluster snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="GetClusterSnapshotResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getClusterSnapshot.ts#L158">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getClusterSnapshot.ts#L158">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6132,7 +6132,7 @@ Specifies whether the DB cluster snapshot is encrypted.
 The VPC ID associated with the DB cluster snapshot.
 
 <h3 class="pdoc-module-header" id="GetEventCategoriesArgs" data-link-title="GetEventCategoriesArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getEventCategories.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getEventCategories.ts#L57">
         interface <strong>GetEventCategoriesArgs</strong>
     </a>
 </h3>
@@ -6142,7 +6142,7 @@ The VPC ID associated with the DB cluster snapshot.
 A collection of arguments for invoking getEventCategories.
 
 <h4 class="pdoc-member-header" id="GetEventCategoriesArgs-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getEventCategories.ts#L61">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getEventCategories.ts#L61">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6150,7 +6150,7 @@ A collection of arguments for invoking getEventCategories.
 The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot.
 
 <h3 class="pdoc-module-header" id="GetEventCategoriesResult" data-link-title="GetEventCategoriesResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getEventCategories.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getEventCategories.ts#L67">
         interface <strong>GetEventCategoriesResult</strong>
     </a>
 </h3>
@@ -6160,7 +6160,7 @@ The type of source that will be generating the events. Valid options are db-inst
 A collection of values returned by getEventCategories.
 
 <h4 class="pdoc-member-header" id="GetEventCategoriesResult-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getEventCategories.ts#L71">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getEventCategories.ts#L71">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventCategories: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6168,7 +6168,7 @@ A collection of values returned by getEventCategories.
 A list of the event categories.
 
 <h4 class="pdoc-member-header" id="GetEventCategoriesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getEventCategories.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getEventCategories.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6176,12 +6176,12 @@ A list of the event categories.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetEventCategoriesResult-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getEventCategories.ts#L72">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getEventCategories.ts#L72">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstanceArgs" data-link-title="GetInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L43">
         interface <strong>GetInstanceArgs</strong>
     </a>
 </h3>
@@ -6191,7 +6191,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getInstance.
 
 <h4 class="pdoc-member-header" id="GetInstanceArgs-dbInstanceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L47">property <b>dbInstanceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L47">property <b>dbInstanceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6199,7 +6199,7 @@ A collection of arguments for invoking getInstance.
 The name of the RDS instance
 
 <h3 class="pdoc-module-header" id="GetInstanceResult" data-link-title="GetInstanceResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L53">
         interface <strong>GetInstanceResult</strong>
     </a>
 </h3>
@@ -6209,7 +6209,7 @@ The name of the RDS instance
 A collection of values returned by getInstance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L57">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L57">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6217,7 +6217,7 @@ A collection of values returned by getInstance.
 The hostname of the RDS instance. See also `endpoint` and `port`.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L61">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L61">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allocatedStorage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6225,7 +6225,7 @@ The hostname of the RDS instance. See also `endpoint` and `port`.
 Specifies the allocated storage size specified in gigabytes.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L65">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L65">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6233,7 +6233,7 @@ Specifies the allocated storage size specified in gigabytes.
 Indicates that minor version patches are applied automatically.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L69">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L69">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6241,7 +6241,7 @@ Indicates that minor version patches are applied automatically.
 Specifies the name of the Availability Zone the DB instance is located in.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L73">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L73">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6249,7 +6249,7 @@ Specifies the name of the Availability Zone the DB instance is located in.
 Specifies the number of days for which automatic DB snapshots are retained.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-caCertIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L77">property <b>caCertIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L77">property <b>caCertIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caCertIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6257,7 +6257,7 @@ Specifies the number of days for which automatic DB snapshots are retained.
 Specifies the identifier of the CA certificate for the DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-dbClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L81">property <b>dbClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L81">property <b>dbClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6265,7 +6265,7 @@ Specifies the identifier of the CA certificate for the DB instance.
 If the DB instance is a member of a DB cluster, contains the name of the DB cluster that the DB instance is a member of.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-dbInstanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L85">property <b>dbInstanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L85">property <b>dbInstanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6273,7 +6273,7 @@ If the DB instance is a member of a DB cluster, contains the name of the DB clus
 The Amazon Resource Name (ARN) for the DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-dbInstanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L89">property <b>dbInstanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L89">property <b>dbInstanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceClass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6281,12 +6281,12 @@ The Amazon Resource Name (ARN) for the DB instance.
 Contains the name of the compute and memory capacity class of the DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-dbInstanceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L90">property <b>dbInstanceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L90">property <b>dbInstanceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-dbInstancePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L94">property <b>dbInstancePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L94">property <b>dbInstancePort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstancePort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6294,7 +6294,7 @@ Contains the name of the compute and memory capacity class of the DB instance.
 Specifies the port that the DB instance listens on.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-dbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L98">property <b>dbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L98">property <b>dbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6302,7 +6302,7 @@ Specifies the port that the DB instance listens on.
 Contains the name of the initial database of this instance that was provided at create time, if one was specified when the DB instance was created. This same name is returned for the life of the DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-dbParameterGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L102">property <b>dbParameterGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L102">property <b>dbParameterGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbParameterGroups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6310,7 +6310,7 @@ Contains the name of the initial database of this instance that was provided at 
 Provides the list of DB parameter groups applied to this DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-dbSecurityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L106">property <b>dbSecurityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L106">property <b>dbSecurityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSecurityGroups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6318,7 +6318,7 @@ Provides the list of DB parameter groups applied to this DB instance.
 Provides List of DB security groups associated to this DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-dbSubnetGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L110">property <b>dbSubnetGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L110">property <b>dbSubnetGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSubnetGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6326,7 +6326,7 @@ Provides List of DB security groups associated to this DB instance.
 Specifies the name of the subnet group associated with the DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-enabledCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L114">property <b>enabledCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L114">property <b>enabledCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledCloudwatchLogsExports: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6334,7 +6334,7 @@ Specifies the name of the subnet group associated with the DB instance.
 List of log types to export to cloudwatch.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L118">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L118">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6342,7 +6342,7 @@ List of log types to export to cloudwatch.
 The connection endpoint in `address:port` format.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L122">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L122">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6350,7 +6350,7 @@ The connection endpoint in `address:port` format.
 Provides the name of the database engine to be used for this DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L126">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L126">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6358,7 +6358,7 @@ Provides the name of the database engine to be used for this DB instance.
 Indicates the database engine version.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L130">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L130">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6366,7 +6366,7 @@ Indicates the database engine version.
 The canonical hosted zone ID of the DB instance (to be used in a Route 53 Alias record).
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L206">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L206">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6374,7 +6374,7 @@ The canonical hosted zone ID of the DB instance (to be used in a Route 53 Alias 
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L134">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L134">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6382,7 +6382,7 @@ id is the provider-assigned unique ID for this managed resource.
 Specifies the Provisioned IOPS (I/O operations per second) value.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L138">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L138">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6390,7 +6390,7 @@ Specifies the Provisioned IOPS (I/O operations per second) value.
 If StorageEncrypted is true, the KMS key identifier for the encrypted DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L142">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L142">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseModel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6398,7 +6398,7 @@ If StorageEncrypted is true, the KMS key identifier for the encrypted DB instanc
 License model information for this DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-masterUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L146">property <b>masterUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L146">property <b>masterUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterUsername: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6406,7 +6406,7 @@ License model information for this DB instance.
 Contains the master username for the DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-monitoringInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L150">property <b>monitoringInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L150">property <b>monitoringInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6414,7 +6414,7 @@ Contains the master username for the DB instance.
 The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-monitoringRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L154">property <b>monitoringRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L154">property <b>monitoringRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringRoleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6422,7 +6422,7 @@ The interval, in seconds, between points when Enhanced Monitoring metrics are co
 The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to CloudWatch Logs.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-multiAz">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L158">property <b>multiAz</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L158">property <b>multiAz</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAz: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6430,7 +6430,7 @@ The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to
 Specifies if the DB instance is a Multi-AZ deployment.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-optionGroupMemberships">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L162">property <b>optionGroupMemberships</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L162">property <b>optionGroupMemberships</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionGroupMemberships: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6438,7 +6438,7 @@ Specifies if the DB instance is a Multi-AZ deployment.
 Provides the list of option group memberships for this DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L166">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L166">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6446,7 +6446,7 @@ Provides the list of option group memberships for this DB instance.
 The database port.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L170">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L170">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredBackupWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6454,7 +6454,7 @@ The database port.
 Specifies the daily time range during which automated backups are created.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L174">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L174">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6462,7 +6462,7 @@ Specifies the daily time range during which automated backups are created.
 Specifies the weekly time range during which system maintenance can occur in UTC.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L178">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L178">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6470,7 +6470,7 @@ Specifies the weekly time range during which system maintenance can occur in UTC
 Specifies the accessibility options for the DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-replicateSourceDb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L182">property <b>replicateSourceDb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L182">property <b>replicateSourceDb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicateSourceDb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6478,7 +6478,7 @@ Specifies the accessibility options for the DB instance.
 The identifier of the source DB that this is a replica of.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L186">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L186">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6486,7 +6486,7 @@ The identifier of the source DB that this is a replica of.
 The RDS Resource ID of this instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L190">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L190">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6494,7 +6494,7 @@ The RDS Resource ID of this instance.
 Specifies whether the DB instance is encrypted.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L194">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L194">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6502,7 +6502,7 @@ Specifies whether the DB instance is encrypted.
 Specifies the storage type associated with DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L198">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L198">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6510,7 +6510,7 @@ Specifies the storage type associated with DB instance.
 The time zone of the DB instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-vpcSecurityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getInstance.ts#L202">property <b>vpcSecurityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getInstance.ts#L202">property <b>vpcSecurityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6518,7 +6518,7 @@ The time zone of the DB instance.
 Provides a list of VPC security group elements that the DB instance belongs to.
 
 <h3 class="pdoc-module-header" id="GetSnapshotArgs" data-link-title="GetSnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L70">
         interface <strong>GetSnapshotArgs</strong>
     </a>
 </h3>
@@ -6528,7 +6528,7 @@ Provides a list of VPC security group elements that the DB instance belongs to.
 A collection of arguments for invoking getSnapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-dbInstanceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L74">property <b>dbInstanceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L74">property <b>dbInstanceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceIdentifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6536,7 +6536,7 @@ A collection of arguments for invoking getSnapshot.
 Returns the list of snapshots created by the specific db_instance
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-dbSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L78">property <b>dbSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L78">property <b>dbSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSnapshotIdentifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6544,7 +6544,7 @@ Returns the list of snapshots created by the specific db_instance
 Returns information on a specific snapshot_id.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-includePublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L83">property <b>includePublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L83">property <b>includePublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includePublic?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -6553,7 +6553,7 @@ Set this value to true to include manual DB snapshots that are public and can be
 copied or restored by any AWS account, otherwise set this value to false. The default is `false`.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-includeShared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L89">property <b>includeShared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L89">property <b>includeShared</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeShared?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -6563,7 +6563,7 @@ AWS accounts that this AWS account has been given permission to copy or restore,
 The default is `false`.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L94">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L94">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -6572,7 +6572,7 @@ If more than one result is returned, use the most
 recent Snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotArgs-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L100">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L100">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6582,7 +6582,7 @@ value, then both automated and manual snapshots are returned. Shared and public 
 included in the returned results by default. Possible values are, `automated`, `manual`, `shared` and `public`.
 
 <h3 class="pdoc-module-header" id="GetSnapshotResult" data-link-title="GetSnapshotResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L106">
         interface <strong>GetSnapshotResult</strong>
     </a>
 </h3>
@@ -6592,7 +6592,7 @@ included in the returned results by default. Possible values are, `automated`, `
 A collection of values returned by getSnapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L110">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L110">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allocatedStorage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6600,7 +6600,7 @@ A collection of values returned by getSnapshot.
 Specifies the allocated storage size in gigabytes (GB).
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L114">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L114">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6608,12 +6608,12 @@ Specifies the allocated storage size in gigabytes (GB).
 Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-dbInstanceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L115">property <b>dbInstanceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L115">property <b>dbInstanceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceIdentifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-dbSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L119">property <b>dbSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L119">property <b>dbSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSnapshotArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6621,12 +6621,12 @@ Specifies the name of the Availability Zone the DB instance was located in at th
 The Amazon Resource Name (ARN) for the DB snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-dbSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L120">property <b>dbSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L120">property <b>dbSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSnapshotIdentifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L124">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L124">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -6634,7 +6634,7 @@ The Amazon Resource Name (ARN) for the DB snapshot.
 Specifies whether the DB snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L128">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L128">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6642,7 +6642,7 @@ Specifies whether the DB snapshot is encrypted.
 Specifies the name of the database engine.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L132">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L132">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6650,7 +6650,7 @@ Specifies the name of the database engine.
 Specifies the version of the database engine.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L181">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L181">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6658,17 +6658,17 @@ Specifies the version of the database engine.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-includePublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L133">property <b>includePublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L133">property <b>includePublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includePublic?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-includeShared">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L134">property <b>includeShared</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L134">property <b>includeShared</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeShared?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L138">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L138">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -6676,7 +6676,7 @@ id is the provider-assigned unique ID for this managed resource.
 Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L142">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L142">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6684,7 +6684,7 @@ Specifies the Provisioned IOPS (I/O operations per second) value of the DB insta
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L146">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L146">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseModel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6692,12 +6692,12 @@ The ARN for the KMS encryption key.
 License model information for the restored DB instance.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L147">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L147">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-optionGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L151">property <b>optionGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L151">property <b>optionGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6705,12 +6705,12 @@ License model information for the restored DB instance.
 Provides the option group name for the DB snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L152">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L152">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-snapshotCreateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L156">property <b>snapshotCreateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L156">property <b>snapshotCreateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotCreateTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6718,12 +6718,12 @@ Provides the option group name for the DB snapshot.
 Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L157">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L157">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSnapshotResult-sourceDbSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L161">property <b>sourceDbSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L161">property <b>sourceDbSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceDbSnapshotIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6731,7 +6731,7 @@ Provides the time when the snapshot was taken, in Universal Coordinated Time (UT
 The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-sourceRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L165">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L165">property <b>sourceRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRegion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6739,7 +6739,7 @@ The DB snapshot Arn that the DB snapshot was copied from. It only has value in c
 The region that the DB snapshot was created in or copied from.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L169">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L169">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6747,7 +6747,7 @@ The region that the DB snapshot was created in or copied from.
 Specifies the status of this DB snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L173">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L173">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6755,7 +6755,7 @@ Specifies the status of this DB snapshot.
 Specifies the storage type associated with DB snapshot.
 
 <h4 class="pdoc-member-header" id="GetSnapshotResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/getSnapshot.ts#L177">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/getSnapshot.ts#L177">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6763,7 +6763,7 @@ Specifies the storage type associated with DB snapshot.
 Specifies the ID of the VPC associated with the DB snapshot.
 
 <h3 class="pdoc-module-header" id="GlobalClusterArgs" data-link-title="GlobalClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L164">
         interface <strong>GlobalClusterArgs</strong>
     </a>
 </h3>
@@ -6773,7 +6773,7 @@ Specifies the ID of the VPC associated with the DB snapshot.
 The set of arguments for constructing a GlobalCluster resource.
 
 <h4 class="pdoc-member-header" id="GlobalClusterArgs-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L168">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L168">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6781,7 +6781,7 @@ The set of arguments for constructing a GlobalCluster resource.
 Name for an automatically created database on cluster creation.
 
 <h4 class="pdoc-member-header" id="GlobalClusterArgs-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L172">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L172">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6789,7 +6789,7 @@ Name for an automatically created database on cluster creation.
 If the Global Cluster should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
 
 <h4 class="pdoc-member-header" id="GlobalClusterArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L176">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L176">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6797,7 +6797,7 @@ If the Global Cluster should have deletion protection enabled. The database can'
 Name of the database engine to be used for this DB cluster. Valid values: `aurora`. Defaults to `aurora`.
 
 <h4 class="pdoc-member-header" id="GlobalClusterArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L180">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L180">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6805,7 +6805,7 @@ Name of the database engine to be used for this DB cluster. Valid values: `auror
 Engine version of the Aurora global database.
 
 <h4 class="pdoc-member-header" id="GlobalClusterArgs-globalClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L184">property <b>globalClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L184">property <b>globalClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalClusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6813,7 +6813,7 @@ Engine version of the Aurora global database.
 The global cluster identifier.
 
 <h4 class="pdoc-member-header" id="GlobalClusterArgs-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L188">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L188">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6821,7 +6821,7 @@ The global cluster identifier.
 Specifies whether the DB cluster is encrypted. The default is `false`.
 
 <h3 class="pdoc-module-header" id="GlobalClusterState" data-link-title="GlobalClusterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L126">
         interface <strong>GlobalClusterState</strong>
     </a>
 </h3>
@@ -6831,7 +6831,7 @@ Specifies whether the DB cluster is encrypted. The default is `false`.
 Input properties used for looking up and filtering GlobalCluster resources.
 
 <h4 class="pdoc-member-header" id="GlobalClusterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L130">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L130">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6839,7 +6839,7 @@ Input properties used for looking up and filtering GlobalCluster resources.
 RDS Global Cluster Amazon Resource Name (ARN)
 
 <h4 class="pdoc-member-header" id="GlobalClusterState-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L134">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L134">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6847,7 +6847,7 @@ RDS Global Cluster Amazon Resource Name (ARN)
 Name for an automatically created database on cluster creation.
 
 <h4 class="pdoc-member-header" id="GlobalClusterState-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L138">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L138">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6855,7 +6855,7 @@ Name for an automatically created database on cluster creation.
 If the Global Cluster should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
 
 <h4 class="pdoc-member-header" id="GlobalClusterState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L142">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L142">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6863,7 +6863,7 @@ If the Global Cluster should have deletion protection enabled. The database can'
 Name of the database engine to be used for this DB cluster. Valid values: `aurora`. Defaults to `aurora`.
 
 <h4 class="pdoc-member-header" id="GlobalClusterState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L146">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L146">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6871,7 +6871,7 @@ Name of the database engine to be used for this DB cluster. Valid values: `auror
 Engine version of the Aurora global database.
 
 <h4 class="pdoc-member-header" id="GlobalClusterState-globalClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L150">property <b>globalClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L150">property <b>globalClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalClusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6879,7 +6879,7 @@ Engine version of the Aurora global database.
 The global cluster identifier.
 
 <h4 class="pdoc-member-header" id="GlobalClusterState-globalClusterResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L154">property <b>globalClusterResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L154">property <b>globalClusterResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalClusterResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6887,7 +6887,7 @@ The global cluster identifier.
 AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
 
 <h4 class="pdoc-member-header" id="GlobalClusterState-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/globalCluster.ts#L158">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/globalCluster.ts#L158">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6895,14 +6895,14 @@ AWS Region-unique, immutable identifier for the global database cluster. This id
 Specifies whether the DB cluster is encrypted. The default is `false`.
 
 <h3 class="pdoc-module-header" id="GlobalEngine" data-link-title="GlobalEngine">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/engineMode.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/engineMode.ts#L18">
         let <strong>GlobalEngine</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> GlobalEngine: <a href='#EngineMode'>EngineMode</a> = <span class='s2'>&#34;global&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L867">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L867">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -6912,7 +6912,7 @@ Specifies whether the DB cluster is encrypted. The default is `false`.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L871">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L871">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allocatedStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6920,7 +6920,7 @@ The set of arguments for constructing a Instance resource.
 The allocated storage in gibibytes. If `maxAllocatedStorage` is configured, this argument represents the initial storage allocation and differences from the configuration will be ignored automatically when Storage Autoscaling occurs.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-allowMajorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L877">property <b>allowMajorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L877">property <b>allowMajorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowMajorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6930,7 +6930,7 @@ upgrades are allowed. Changing this parameter does not result in an outage and
 the change is asynchronously applied as soon as possible.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L884">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L884">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6941,7 +6941,7 @@ are applied immediately, or during the next maintenance window. Default is
 information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 
 <h4 class="pdoc-member-header" id="InstanceArgs-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L890">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L890">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6951,7 +6951,7 @@ will be applied automatically to the DB instance during the maintenance window.
 Defaults to true.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L894">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L894">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6959,7 +6959,7 @@ Defaults to true.
 The AZ for the RDS instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L899">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L899">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6968,7 +6968,7 @@ The days to retain backups for. Must be
 between `0` and `35`. Must be greater than `0` if the database is used as a source for a Read Replica. [See Read Replica][1].
 
 <h4 class="pdoc-member-header" id="InstanceArgs-backupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L905">property <b>backupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L905">property <b>backupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6978,7 +6978,7 @@ automated backups are created if they are enabled. Example: "09:46-10:16". Must
 not overlap with `maintenanceWindow`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-characterSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L913">property <b>characterSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L913">property <b>characterSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>characterSetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6990,7 +6990,7 @@ RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleChara
 for more information.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-copyTagsToSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L917">property <b>copyTagsToSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L917">property <b>copyTagsToSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>copyTagsToSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6998,7 +6998,7 @@ for more information.
 Copy all Instance `tags` to snapshots. Default is `false`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-dbSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L927">property <b>dbSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L927">property <b>dbSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7012,7 +7012,7 @@ action CreateDBInstanceReadReplica](https://docs.aws.amazon.com/AmazonRDS/latest
 for additional read replica contraints.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L931">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L931">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7020,7 +7020,7 @@ for additional read replica contraints.
 If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L935">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L935">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7028,7 +7028,7 @@ If the DB instance should have deletion protection enabled. The database can't b
 The ID of the Directory Service Active Directory domain to create the instance in.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-domainIamRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L939">property <b>domainIamRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L939">property <b>domainIamRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainIamRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7036,7 +7036,7 @@ The ID of the Directory Service Active Directory domain to create the instance i
 The name of the IAM role to be used when making API calls to the Directory Service.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-enabledCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L943">property <b>enabledCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L943">property <b>enabledCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledCloudwatchLogsExports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7044,7 +7044,7 @@ The name of the IAM role to be used when making API calls to the Directory Servi
 List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L952">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L952">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7057,7 +7057,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L960">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L960">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7069,7 +7069,7 @@ For supported values, see the EngineVersion parameter in [API action CreateDBIns
 Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L966">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L966">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>finalSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7079,7 +7079,7 @@ when this DB instance is deleted. Must be provided if `skipFinalSnapshot` is
 set to `false`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-iamDatabaseAuthenticationEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L972">property <b>iamDatabaseAuthenticationEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L972">property <b>iamDatabaseAuthenticationEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamDatabaseAuthenticationEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7089,7 +7089,7 @@ mappings of AWS Identity and Access Management (IAM) accounts to database
 accounts is enabled.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L977">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L977">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7098,7 +7098,7 @@ The name of the RDS instance,
 if omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L982">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L982">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7107,7 +7107,7 @@ Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L986">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L986">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#InstanceType'>InstanceType</a>&gt;;</code></pre>
@@ -7115,7 +7115,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 The instance type of the RDS instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L991">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L991">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7124,7 +7124,7 @@ The amount of provisioned IOPS. Setting this implies a
 storageType of "io1".
 
 <h4 class="pdoc-member-header" id="InstanceArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L996">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L996">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7133,7 +7133,7 @@ The ARN for the KMS encryption key. If creating an
 encrypted replica, set this to the destination KMS ARN.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1001">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1001">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseModel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7142,7 +7142,7 @@ encrypted replica, set this to the destination KMS ARN.
 SE1) License model information for this DB instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1009">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1009">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7154,7 +7154,7 @@ docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstan
 for more information.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-maxAllocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1013">property <b>maxAllocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1013">property <b>maxAllocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxAllocatedStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7162,7 +7162,7 @@ for more information.
 When configured, the upper limit to which Amazon RDS can automatically scale the storage of the DB instance. Configuring this will automatically ignore differences to `allocatedStorage`. Must be greater than or equal to `allocatedStorage` or `0` to disable Storage Autoscaling.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-monitoringInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1020">property <b>monitoringInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1020">property <b>monitoringInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7173,7 +7173,7 @@ collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid
 Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-monitoringRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1028">property <b>monitoringRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1028">property <b>monitoringRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7185,7 +7185,7 @@ Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monit
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-multiAz">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1032">property <b>multiAz</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1032">property <b>multiAz</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAz?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7193,7 +7193,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 Specifies if the RDS instance is multi-AZ
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1036">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1036">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7201,7 +7201,7 @@ Specifies if the RDS instance is multi-AZ
 The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-optionGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1040">property <b>optionGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1040">property <b>optionGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7209,7 +7209,7 @@ The name of the database to create when the DB instance is created. If this para
 Name of the DB option group to associate.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1045">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1045">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7218,7 +7218,7 @@ Name of the DB parameter group to
 associate.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1051">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1051">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7228,7 +7228,7 @@ is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-performanceInsightsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1055">property <b>performanceInsightsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1055">property <b>performanceInsightsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performanceInsightsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7236,7 +7236,7 @@ logs, and it will be stored in the state file.
 Specifies whether Performance Insights are enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-performanceInsightsKmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1059">property <b>performanceInsightsKmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1059">property <b>performanceInsightsKmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performanceInsightsKmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7244,7 +7244,7 @@ Specifies whether Performance Insights are enabled. Defaults to false.
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performanceInsightsKmsKeyId`, `performanceInsightsEnabled` needs to be set to true. Once KMS key is set, it can never be changed.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-performanceInsightsRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1063">property <b>performanceInsightsRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1063">property <b>performanceInsightsRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performanceInsightsRetentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7252,7 +7252,7 @@ The ARN for the KMS key to encrypt Performance Insights data. When specifying `p
 The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performanceInsightsRetentionPeriod`, `performanceInsightsEnabled` needs to be set to true. Defaults to '7'.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1067">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1067">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7260,7 +7260,7 @@ The amount of time in days to retain Performance Insights data. Either 7 (7 days
 The port on which the DB accepts connections.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1072">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1072">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7269,7 +7269,7 @@ Bool to control if instance is publicly
 accessible. Default is `false`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-replicateSourceDb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1082">property <b>replicateSourceDb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1082">property <b>replicateSourceDb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicateSourceDb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7283,7 +7283,7 @@ PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest
 for more information on using Replication.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-s3Import">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1086">property <b>s3Import</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1086">property <b>s3Import</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceS3Import'>inputs.rds.InstanceS3Import</a>&gt;;</code></pre>
@@ -7291,7 +7291,7 @@ for more information on using Replication.
 Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
 
 <h4 class="pdoc-member-header" id="InstanceArgs-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1092">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1092">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7301,7 +7301,7 @@ associate. Only used for [DB Instances on the _EC2-Classic_
 Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1100">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1100">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipFinalSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7313,7 +7313,7 @@ instance is deleted, using the value from `finalSnapshotIdentifier`. Default
 is `false`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1106">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1106">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7323,7 +7323,7 @@ database from a snapshot. This correlates to the snapshot ID you'd find in the
 RDS console, e.g: rds:production-2015-06-26-06-05.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1113">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1113">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7334,7 +7334,7 @@ is ignored and you should instead declare `kmsKeyId` with a valid ARN. The
 default is `false` if not specified.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1119">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1119">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#StorageType'>StorageType</a>&gt;;</code></pre>
@@ -7344,7 +7344,7 @@ purpose SSD), or "io1" (provisioned IOPS SSD). The default is "io1" if `iops` is
 specified, "gp2" if not.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1123">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1123">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -7352,7 +7352,7 @@ specified, "gp2" if not.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1131">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1131">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7364,7 +7364,7 @@ Guide](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html
 for more information.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1136">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1136">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7373,7 +7373,7 @@ for more information.
 is provided) Username for the master DB user.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L1141">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L1141">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7382,7 +7382,7 @@ List of VPC security groups to
 associate.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L556">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L556">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -7392,7 +7392,7 @@ associate.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L560">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L560">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7400,7 +7400,7 @@ Input properties used for looking up and filtering Instance resources.
 The hostname of the RDS instance. See also `endpoint` and `port`.
 
 <h4 class="pdoc-member-header" id="InstanceState-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L564">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L564">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allocatedStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7408,7 +7408,7 @@ The hostname of the RDS instance. See also `endpoint` and `port`.
 The allocated storage in gibibytes. If `maxAllocatedStorage` is configured, this argument represents the initial storage allocation and differences from the configuration will be ignored automatically when Storage Autoscaling occurs.
 
 <h4 class="pdoc-member-header" id="InstanceState-allowMajorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L570">property <b>allowMajorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L570">property <b>allowMajorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowMajorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7418,7 +7418,7 @@ upgrades are allowed. Changing this parameter does not result in an outage and
 the change is asynchronously applied as soon as possible.
 
 <h4 class="pdoc-member-header" id="InstanceState-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L577">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L577">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7429,7 +7429,7 @@ are applied immediately, or during the next maintenance window. Default is
 information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 
 <h4 class="pdoc-member-header" id="InstanceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L581">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L581">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7437,7 +7437,7 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 The ARN of the RDS instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L587">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L587">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7447,7 +7447,7 @@ will be applied automatically to the DB instance during the maintenance window.
 Defaults to true.
 
 <h4 class="pdoc-member-header" id="InstanceState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L591">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L591">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7455,7 +7455,7 @@ Defaults to true.
 The AZ for the RDS instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L596">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L596">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7464,7 +7464,7 @@ The days to retain backups for. Must be
 between `0` and `35`. Must be greater than `0` if the database is used as a source for a Read Replica. [See Read Replica][1].
 
 <h4 class="pdoc-member-header" id="InstanceState-backupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L602">property <b>backupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L602">property <b>backupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7474,7 +7474,7 @@ automated backups are created if they are enabled. Example: "09:46-10:16". Must
 not overlap with `maintenanceWindow`.
 
 <h4 class="pdoc-member-header" id="InstanceState-caCertIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L607">property <b>caCertIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L607">property <b>caCertIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caCertIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7483,7 +7483,7 @@ Specifies the identifier of the CA certificate for the
 DB instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-characterSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L615">property <b>characterSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L615">property <b>characterSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>characterSetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7495,7 +7495,7 @@ RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleChara
 for more information.
 
 <h4 class="pdoc-member-header" id="InstanceState-copyTagsToSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L619">property <b>copyTagsToSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L619">property <b>copyTagsToSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>copyTagsToSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7503,7 +7503,7 @@ for more information.
 Copy all Instance `tags` to snapshots. Default is `false`.
 
 <h4 class="pdoc-member-header" id="InstanceState-dbSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L629">property <b>dbSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L629">property <b>dbSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7517,7 +7517,7 @@ action CreateDBInstanceReadReplica](https://docs.aws.amazon.com/AmazonRDS/latest
 for additional read replica contraints.
 
 <h4 class="pdoc-member-header" id="InstanceState-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L633">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L633">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7525,7 +7525,7 @@ for additional read replica contraints.
 If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
 
 <h4 class="pdoc-member-header" id="InstanceState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L637">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L637">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7533,7 +7533,7 @@ If the DB instance should have deletion protection enabled. The database can't b
 The ID of the Directory Service Active Directory domain to create the instance in.
 
 <h4 class="pdoc-member-header" id="InstanceState-domainIamRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L641">property <b>domainIamRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L641">property <b>domainIamRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainIamRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7541,7 +7541,7 @@ The ID of the Directory Service Active Directory domain to create the instance i
 The name of the IAM role to be used when making API calls to the Directory Service.
 
 <h4 class="pdoc-member-header" id="InstanceState-enabledCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L645">property <b>enabledCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L645">property <b>enabledCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledCloudwatchLogsExports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7549,7 +7549,7 @@ The name of the IAM role to be used when making API calls to the Directory Servi
 List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
 
 <h4 class="pdoc-member-header" id="InstanceState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L649">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L649">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7557,7 +7557,7 @@ List of log types to enable for exporting to CloudWatch logs. If omitted, no log
 The connection endpoint in `address:port` format.
 
 <h4 class="pdoc-member-header" id="InstanceState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L658">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L658">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7570,7 +7570,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h4 class="pdoc-member-header" id="InstanceState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L666">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L666">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7582,7 +7582,7 @@ For supported values, see the EngineVersion parameter in [API action CreateDBIns
 Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
 
 <h4 class="pdoc-member-header" id="InstanceState-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L672">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L672">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>finalSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7592,7 +7592,7 @@ when this DB instance is deleted. Must be provided if `skipFinalSnapshot` is
 set to `false`.
 
 <h4 class="pdoc-member-header" id="InstanceState-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L677">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L677">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7601,7 +7601,7 @@ The canonical hosted zone ID of the DB instance (to be used
 in a Route 53 Alias record).
 
 <h4 class="pdoc-member-header" id="InstanceState-iamDatabaseAuthenticationEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L683">property <b>iamDatabaseAuthenticationEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L683">property <b>iamDatabaseAuthenticationEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamDatabaseAuthenticationEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7611,7 +7611,7 @@ mappings of AWS Identity and Access Management (IAM) accounts to database
 accounts is enabled.
 
 <h4 class="pdoc-member-header" id="InstanceState-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L688">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L688">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7620,7 +7620,7 @@ The name of the RDS instance,
 if omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="InstanceState-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L693">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L693">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7629,7 +7629,7 @@ Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="InstanceState-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L697">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L697">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#InstanceType'>InstanceType</a>&gt;;</code></pre>
@@ -7637,7 +7637,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 The instance type of the RDS instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L702">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L702">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7646,7 +7646,7 @@ The amount of provisioned IOPS. Setting this implies a
 storageType of "io1".
 
 <h4 class="pdoc-member-header" id="InstanceState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L707">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L707">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7655,7 +7655,7 @@ The ARN for the KMS encryption key. If creating an
 encrypted replica, set this to the destination KMS ARN.
 
 <h4 class="pdoc-member-header" id="InstanceState-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L712">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L712">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseModel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7664,7 +7664,7 @@ encrypted replica, set this to the destination KMS ARN.
 SE1) License model information for this DB instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L720">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L720">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7676,7 +7676,7 @@ docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstan
 for more information.
 
 <h4 class="pdoc-member-header" id="InstanceState-maxAllocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L724">property <b>maxAllocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L724">property <b>maxAllocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxAllocatedStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7684,7 +7684,7 @@ for more information.
 When configured, the upper limit to which Amazon RDS can automatically scale the storage of the DB instance. Configuring this will automatically ignore differences to `allocatedStorage`. Must be greater than or equal to `allocatedStorage` or `0` to disable Storage Autoscaling.
 
 <h4 class="pdoc-member-header" id="InstanceState-monitoringInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L731">property <b>monitoringInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L731">property <b>monitoringInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7695,7 +7695,7 @@ collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid
 Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h4 class="pdoc-member-header" id="InstanceState-monitoringRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L739">property <b>monitoringRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L739">property <b>monitoringRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoringRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7707,7 +7707,7 @@ Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monit
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h4 class="pdoc-member-header" id="InstanceState-multiAz">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L743">property <b>multiAz</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L743">property <b>multiAz</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAz?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7715,7 +7715,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 Specifies if the RDS instance is multi-AZ
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L747">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L747">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7723,7 +7723,7 @@ Specifies if the RDS instance is multi-AZ
 The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines.
 
 <h4 class="pdoc-member-header" id="InstanceState-optionGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L751">property <b>optionGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L751">property <b>optionGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7731,7 +7731,7 @@ The name of the database to create when the DB instance is created. If this para
 Name of the DB option group to associate.
 
 <h4 class="pdoc-member-header" id="InstanceState-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L756">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L756">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7740,7 +7740,7 @@ Name of the DB parameter group to
 associate.
 
 <h4 class="pdoc-member-header" id="InstanceState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L762">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L762">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7750,7 +7750,7 @@ is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.
 
 <h4 class="pdoc-member-header" id="InstanceState-performanceInsightsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L766">property <b>performanceInsightsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L766">property <b>performanceInsightsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performanceInsightsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7758,7 +7758,7 @@ logs, and it will be stored in the state file.
 Specifies whether Performance Insights are enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="InstanceState-performanceInsightsKmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L770">property <b>performanceInsightsKmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L770">property <b>performanceInsightsKmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performanceInsightsKmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7766,7 +7766,7 @@ Specifies whether Performance Insights are enabled. Defaults to false.
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performanceInsightsKmsKeyId`, `performanceInsightsEnabled` needs to be set to true. Once KMS key is set, it can never be changed.
 
 <h4 class="pdoc-member-header" id="InstanceState-performanceInsightsRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L774">property <b>performanceInsightsRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L774">property <b>performanceInsightsRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>performanceInsightsRetentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7774,7 +7774,7 @@ The ARN for the KMS key to encrypt Performance Insights data. When specifying `p
 The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performanceInsightsRetentionPeriod`, `performanceInsightsEnabled` needs to be set to true. Defaults to '7'.
 
 <h4 class="pdoc-member-header" id="InstanceState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L778">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L778">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7782,7 +7782,7 @@ The amount of time in days to retain Performance Insights data. Either 7 (7 days
 The port on which the DB accepts connections.
 
 <h4 class="pdoc-member-header" id="InstanceState-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L783">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L783">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7791,12 +7791,12 @@ Bool to control if instance is publicly
 accessible. Default is `false`.
 
 <h4 class="pdoc-member-header" id="InstanceState-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L784">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L784">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-replicateSourceDb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L794">property <b>replicateSourceDb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L794">property <b>replicateSourceDb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicateSourceDb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7810,7 +7810,7 @@ PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest
 for more information on using Replication.
 
 <h4 class="pdoc-member-header" id="InstanceState-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L798">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L798">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7818,7 +7818,7 @@ for more information on using Replication.
 The RDS Resource ID of this instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-s3Import">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L802">property <b>s3Import</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L802">property <b>s3Import</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceS3Import'>inputs.rds.InstanceS3Import</a>&gt;;</code></pre>
@@ -7826,7 +7826,7 @@ The RDS Resource ID of this instance.
 Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
 
 <h4 class="pdoc-member-header" id="InstanceState-securityGroupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L808">property <b>securityGroupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L808">property <b>securityGroupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7836,7 +7836,7 @@ associate. Only used for [DB Instances on the _EC2-Classic_
 Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC).
 
 <h4 class="pdoc-member-header" id="InstanceState-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L816">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L816">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipFinalSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7848,7 +7848,7 @@ instance is deleted, using the value from `finalSnapshotIdentifier`. Default
 is `false`.
 
 <h4 class="pdoc-member-header" id="InstanceState-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L822">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L822">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7858,7 +7858,7 @@ database from a snapshot. This correlates to the snapshot ID you'd find in the
 RDS console, e.g: rds:production-2015-06-26-06-05.
 
 <h4 class="pdoc-member-header" id="InstanceState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L826">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L826">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7866,7 +7866,7 @@ RDS console, e.g: rds:production-2015-06-26-06-05.
 The RDS instance status.
 
 <h4 class="pdoc-member-header" id="InstanceState-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L833">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L833">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7877,7 +7877,7 @@ is ignored and you should instead declare `kmsKeyId` with a valid ARN. The
 default is `false` if not specified.
 
 <h4 class="pdoc-member-header" id="InstanceState-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L839">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L839">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#StorageType'>StorageType</a>&gt;;</code></pre>
@@ -7887,7 +7887,7 @@ purpose SSD), or "io1" (provisioned IOPS SSD). The default is "io1" if `iops` is
 specified, "gp2" if not.
 
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L843">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L843">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -7895,7 +7895,7 @@ specified, "gp2" if not.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="InstanceState-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L851">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L851">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7907,7 +7907,7 @@ Guide](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html
 for more information.
 
 <h4 class="pdoc-member-header" id="InstanceState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L856">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L856">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7916,7 +7916,7 @@ for more information.
 is provided) Username for the master DB user.
 
 <h4 class="pdoc-member-header" id="InstanceState-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instance.ts#L861">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instance.ts#L861">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7925,14 +7925,14 @@ List of VPC security groups to
 associate.
 
 <h3 class="pdoc-module-header" id="InstanceType" data-link-title="InstanceType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/instanceType.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/instanceType.ts#L85">
         type <strong>InstanceType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> InstanceType = <span class='s2'>"db.t3.micro"</span> | <span class='s2'>"db.t3.small"</span> | <span class='s2'>"db.t3.medium"</span> | <span class='s2'>"db.t3.large"</span> | <span class='s2'>"db.t3.xlarge"</span> | <span class='s2'>"db.t3.2xlarge"</span> | <span class='s2'>"db.t2.micro"</span> | <span class='s2'>"db.t2.small"</span> | <span class='s2'>"db.t2.medium"</span> | <span class='s2'>"db.t2.large"</span> | <span class='s2'>"db.t2.xlarge"</span> | <span class='s2'>"db.t2.2xlarge"</span> | <span class='s2'>"db.m1.small"</span> | <span class='s2'>"db.m1.medium"</span> | <span class='s2'>"db.m1.large"</span> | <span class='s2'>"db.m1.xlarge"</span> | <span class='s2'>"db.m2.xlarge"</span> | <span class='s2'>"db.m2.2xlarge"</span> | <span class='s2'>"db.m2.4xlarge"</span> | <span class='s2'>"db.m3.medium"</span> | <span class='s2'>"db.m3.large"</span> | <span class='s2'>"db.m3.xlarge"</span> | <span class='s2'>"db.m3.2xlarge"</span> | <span class='s2'>"db.m4.large"</span> | <span class='s2'>"db.m4.xlarge"</span> | <span class='s2'>"db.m4.2xlarge"</span> | <span class='s2'>"db.m4.4xlarge"</span> | <span class='s2'>"db.m4.10xlarge"</span> | <span class='s2'>"db.m4.16xlarge"</span> | <span class='s2'>"db.m5.large"</span> | <span class='s2'>"db.m5.xlarge"</span> | <span class='s2'>"db.m5.2xlarge"</span> | <span class='s2'>"db.m5.4xlarge"</span> | <span class='s2'>"db.m5.12xlarge"</span> | <span class='s2'>"db.m5.24xlarge"</span> | <span class='s2'>"db.r3.large"</span> | <span class='s2'>"db.r3.xlarge"</span> | <span class='s2'>"db.r3.2xlarge"</span> | <span class='s2'>"db.r3.4xlarge"</span> | <span class='s2'>"db.r3.8xlarge"</span> | <span class='s2'>"db.r4.large"</span> | <span class='s2'>"db.r4.xlarge"</span> | <span class='s2'>"db.r4.2xlarge"</span> | <span class='s2'>"db.r4.4xlarge"</span> | <span class='s2'>"db.r4.8xlarge"</span> | <span class='s2'>"db.r4.16xlarge"</span> | <span class='s2'>"db.r5.large"</span> | <span class='s2'>"db.r5.xlarge"</span> | <span class='s2'>"db.r5.2xlarge"</span> | <span class='s2'>"db.r5.4xlarge"</span> | <span class='s2'>"db.r5.12xlarge"</span> | <span class='s2'>"db.r5.24xlarge"</span> | <span class='s2'>"db.x1.16xlarge"</span> | <span class='s2'>"db.x1.32xlarge"</span> | <span class='s2'>"db.x1e.xlarge"</span> | <span class='s2'>"db.x1e.2xlarge"</span> | <span class='s2'>"db.x1e.4xlarge"</span> | <span class='s2'>"db.x1e.8xlarge"</span> | <span class='s2'>"db.x1e.32xlarge"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="OptionGroupArgs" data-link-title="OptionGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L201">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L201">
         interface <strong>OptionGroupArgs</strong>
     </a>
 </h3>
@@ -7942,7 +7942,7 @@ associate.
 The set of arguments for constructing a OptionGroup resource.
 
 <h4 class="pdoc-member-header" id="OptionGroupArgs-engineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L205">property <b>engineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L205">property <b>engineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7950,7 +7950,7 @@ The set of arguments for constructing a OptionGroup resource.
 Specifies the name of the engine that this option group should be associated with.
 
 <h4 class="pdoc-member-header" id="OptionGroupArgs-majorEngineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L209">property <b>majorEngineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L209">property <b>majorEngineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>majorEngineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7958,7 +7958,7 @@ Specifies the name of the engine that this option group should be associated wit
 Specifies the major version of the engine that this option group should be associated with.
 
 <h4 class="pdoc-member-header" id="OptionGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L213">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L213">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7966,7 +7966,7 @@ Specifies the major version of the engine that this option group should be assoc
 The Name of the setting.
 
 <h4 class="pdoc-member-header" id="OptionGroupArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L217">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L217">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7974,7 +7974,7 @@ The Name of the setting.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`. Must be lowercase, to match as it is stored in AWS.
 
 <h4 class="pdoc-member-header" id="OptionGroupArgs-optionGroupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L225">property <b>optionGroupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L225">property <b>optionGroupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionGroupDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7982,7 +7982,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 The description of the option group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="OptionGroupArgs-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L221">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L221">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OptionGroupOption'>inputs.rds.OptionGroupOption</a>&gt;[]&gt;;</code></pre>
@@ -7990,7 +7990,7 @@ The description of the option group. Defaults to "Managed by Pulumi".
 A list of Options to apply.
 
 <h4 class="pdoc-member-header" id="OptionGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L229">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L229">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -7998,7 +7998,7 @@ A list of Options to apply.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="OptionGroupState" data-link-title="OptionGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L163">
         interface <strong>OptionGroupState</strong>
     </a>
 </h3>
@@ -8008,7 +8008,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering OptionGroup resources.
 
 <h4 class="pdoc-member-header" id="OptionGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L167">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L167">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8016,7 +8016,7 @@ Input properties used for looking up and filtering OptionGroup resources.
 The ARN of the db option group.
 
 <h4 class="pdoc-member-header" id="OptionGroupState-engineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L171">property <b>engineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L171">property <b>engineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8024,7 +8024,7 @@ The ARN of the db option group.
 Specifies the name of the engine that this option group should be associated with.
 
 <h4 class="pdoc-member-header" id="OptionGroupState-majorEngineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L175">property <b>majorEngineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L175">property <b>majorEngineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>majorEngineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8032,7 +8032,7 @@ Specifies the name of the engine that this option group should be associated wit
 Specifies the major version of the engine that this option group should be associated with.
 
 <h4 class="pdoc-member-header" id="OptionGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8040,7 +8040,7 @@ Specifies the major version of the engine that this option group should be assoc
 The Name of the setting.
 
 <h4 class="pdoc-member-header" id="OptionGroupState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L183">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L183">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8048,7 +8048,7 @@ The Name of the setting.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`. Must be lowercase, to match as it is stored in AWS.
 
 <h4 class="pdoc-member-header" id="OptionGroupState-optionGroupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L191">property <b>optionGroupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L191">property <b>optionGroupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionGroupDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8056,7 +8056,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 The description of the option group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="OptionGroupState-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L187">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L187">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#OptionGroupOption'>inputs.rds.OptionGroupOption</a>&gt;[]&gt;;</code></pre>
@@ -8064,7 +8064,7 @@ The description of the option group. Defaults to "Managed by Pulumi".
 A list of Options to apply.
 
 <h4 class="pdoc-member-header" id="OptionGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/optionGroup.ts#L195">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/optionGroup.ts#L195">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8072,14 +8072,14 @@ A list of Options to apply.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ParallelQueryEngine" data-link-title="ParallelQueryEngine">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/engineMode.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/engineMode.ts#L17">
         let <strong>ParallelQueryEngine</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> ParallelQueryEngine: <a href='#EngineMode'>EngineMode</a> = <span class='s2'>&#34;parallelquery&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ParameterGroupArgs" data-link-title="ParameterGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L176">
         interface <strong>ParameterGroupArgs</strong>
     </a>
 </h3>
@@ -8089,7 +8089,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a ParameterGroup resource.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L180">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L180">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8097,7 +8097,7 @@ The set of arguments for constructing a ParameterGroup resource.
 The description of the DB parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L184">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L184">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8105,7 +8105,7 @@ The description of the DB parameter group. Defaults to "Managed by Pulumi".
 The family of the DB parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8113,7 +8113,7 @@ The family of the DB parameter group.
 The name of the DB parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L192">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L192">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8121,7 +8121,7 @@ The name of the DB parameter.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L196">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L196">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>inputs.rds.ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -8129,7 +8129,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html) after initial creation of the group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8137,7 +8137,7 @@ A list of DB parameters to apply. Note that parameters may differ from a family 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ParameterGroupState" data-link-title="ParameterGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L142">
         interface <strong>ParameterGroupState</strong>
     </a>
 </h3>
@@ -8147,7 +8147,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering ParameterGroup resources.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L146">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L146">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8155,7 +8155,7 @@ Input properties used for looking up and filtering ParameterGroup resources.
 The ARN of the db parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L150">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L150">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8163,7 +8163,7 @@ The ARN of the db parameter group.
 The description of the DB parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L154">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L154">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8171,7 +8171,7 @@ The description of the DB parameter group. Defaults to "Managed by Pulumi".
 The family of the DB parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L158">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8179,7 +8179,7 @@ The family of the DB parameter group.
 The name of the DB parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L162">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L162">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8187,7 +8187,7 @@ The name of the DB parameter.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L166">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L166">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>inputs.rds.ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -8195,7 +8195,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html) after initial creation of the group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/parameterGroup.ts#L170">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/parameterGroup.ts#L170">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8203,14 +8203,14 @@ A list of DB parameters to apply. Note that parameters may differ from a family 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ProvisionedEngine" data-link-title="ProvisionedEngine">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/engineMode.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/engineMode.ts#L15">
         let <strong>ProvisionedEngine</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> ProvisionedEngine: <a href='#EngineMode'>EngineMode</a> = <span class='s2'>&#34;provisioned&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="RoleAssociationArgs" data-link-title="RoleAssociationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L134">
         interface <strong>RoleAssociationArgs</strong>
     </a>
 </h3>
@@ -8220,7 +8220,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a RoleAssociation resource.
 
 <h4 class="pdoc-member-header" id="RoleAssociationArgs-dbInstanceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L138">property <b>dbInstanceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L138">property <b>dbInstanceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8228,7 +8228,7 @@ The set of arguments for constructing a RoleAssociation resource.
 DB Instance Identifier to associate with the IAM Role.
 
 <h4 class="pdoc-member-header" id="RoleAssociationArgs-featureName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L142">property <b>featureName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L142">property <b>featureName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>featureName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8236,7 +8236,7 @@ DB Instance Identifier to associate with the IAM Role.
 Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the `SupportedFeatureNames` list returned by [AWS CLI rds describe-db-engine-versions](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html).
 
 <h4 class="pdoc-member-header" id="RoleAssociationArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L146">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L146">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8244,7 +8244,7 @@ Name of the feature for association. This can be found in the AWS documentation 
 Amazon Resource Name (ARN) of the IAM Role to associate with the DB Instance.
 
 <h3 class="pdoc-module-header" id="RoleAssociationState" data-link-title="RoleAssociationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L116">
         interface <strong>RoleAssociationState</strong>
     </a>
 </h3>
@@ -8254,7 +8254,7 @@ Amazon Resource Name (ARN) of the IAM Role to associate with the DB Instance.
 Input properties used for looking up and filtering RoleAssociation resources.
 
 <h4 class="pdoc-member-header" id="RoleAssociationState-dbInstanceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L120">property <b>dbInstanceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L120">property <b>dbInstanceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8262,7 +8262,7 @@ Input properties used for looking up and filtering RoleAssociation resources.
 DB Instance Identifier to associate with the IAM Role.
 
 <h4 class="pdoc-member-header" id="RoleAssociationState-featureName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L124">property <b>featureName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L124">property <b>featureName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>featureName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8270,7 +8270,7 @@ DB Instance Identifier to associate with the IAM Role.
 Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the `SupportedFeatureNames` list returned by [AWS CLI rds describe-db-engine-versions](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html).
 
 <h4 class="pdoc-member-header" id="RoleAssociationState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/roleAssociation.ts#L128">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/roleAssociation.ts#L128">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8278,7 +8278,7 @@ Name of the feature for association. This can be found in the AWS documentation 
 Amazon Resource Name (ARN) of the IAM Role to associate with the DB Instance.
 
 <h3 class="pdoc-module-header" id="SecurityGroupArgs" data-link-title="SecurityGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L146">
         interface <strong>SecurityGroupArgs</strong>
     </a>
 </h3>
@@ -8288,7 +8288,7 @@ Amazon Resource Name (ARN) of the IAM Role to associate with the DB Instance.
 The set of arguments for constructing a SecurityGroup resource.
 
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L150">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L150">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8296,7 +8296,7 @@ The set of arguments for constructing a SecurityGroup resource.
 The description of the DB security group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-ingress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L154">property <b>ingress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L154">property <b>ingress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupIngress'>inputs.rds.SecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
@@ -8304,7 +8304,7 @@ The description of the DB security group. Defaults to "Managed by Pulumi".
 A list of ingress rules.
 
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L158">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8312,7 +8312,7 @@ A list of ingress rules.
 The name of the DB security group.
 
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L162">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L162">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8320,7 +8320,7 @@ The name of the DB security group.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="SecurityGroupState" data-link-title="SecurityGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L120">
         interface <strong>SecurityGroupState</strong>
     </a>
 </h3>
@@ -8330,7 +8330,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering SecurityGroup resources.
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L124">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L124">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8338,7 +8338,7 @@ Input properties used for looking up and filtering SecurityGroup resources.
 The arn of the DB security group.
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L128">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L128">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8346,7 +8346,7 @@ The arn of the DB security group.
 The description of the DB security group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-ingress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L132">property <b>ingress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L132">property <b>ingress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupIngress'>inputs.rds.SecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
@@ -8354,7 +8354,7 @@ The description of the DB security group. Defaults to "Managed by Pulumi".
 A list of ingress rules.
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8362,7 +8362,7 @@ A list of ingress rules.
 The name of the DB security group.
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/securityGroup.ts#L140">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/securityGroup.ts#L140">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8370,14 +8370,14 @@ The name of the DB security group.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ServerlessEngine" data-link-title="ServerlessEngine">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/engineMode.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/engineMode.ts#L16">
         let <strong>ServerlessEngine</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> ServerlessEngine: <a href='#EngineMode'>EngineMode</a> = <span class='s2'>&#34;serverless&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SnapshotArgs" data-link-title="SnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L295">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L295">
         interface <strong>SnapshotArgs</strong>
     </a>
 </h3>
@@ -8387,7 +8387,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a Snapshot resource.
 
 <h4 class="pdoc-member-header" id="SnapshotArgs-dbInstanceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L299">property <b>dbInstanceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L299">property <b>dbInstanceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8395,7 +8395,7 @@ The set of arguments for constructing a Snapshot resource.
 The DB Instance Identifier from which to take the snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotArgs-dbSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L303">property <b>dbSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L303">property <b>dbSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8403,7 +8403,7 @@ The DB Instance Identifier from which to take the snapshot.
 The Identifier for the snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L307">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L307">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8411,7 +8411,7 @@ The Identifier for the snapshot.
 Key-value mapping of resource tags
 
 <h3 class="pdoc-module-header" id="SnapshotState" data-link-title="SnapshotState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L215">
         interface <strong>SnapshotState</strong>
     </a>
 </h3>
@@ -8421,7 +8421,7 @@ Key-value mapping of resource tags
 Input properties used for looking up and filtering Snapshot resources.
 
 <h4 class="pdoc-member-header" id="SnapshotState-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L219">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L219">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allocatedStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8429,7 +8429,7 @@ Input properties used for looking up and filtering Snapshot resources.
 Specifies the allocated storage size in gigabytes (GB).
 
 <h4 class="pdoc-member-header" id="SnapshotState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L223">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L223">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8437,7 +8437,7 @@ Specifies the allocated storage size in gigabytes (GB).
 Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-dbInstanceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L227">property <b>dbInstanceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L227">property <b>dbInstanceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8445,7 +8445,7 @@ Specifies the name of the Availability Zone the DB instance was located in at th
 The DB Instance Identifier from which to take the snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-dbSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L231">property <b>dbSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L231">property <b>dbSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSnapshotArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8453,7 +8453,7 @@ The DB Instance Identifier from which to take the snapshot.
 The Amazon Resource Name (ARN) for the DB snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-dbSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L235">property <b>dbSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L235">property <b>dbSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8461,7 +8461,7 @@ The Amazon Resource Name (ARN) for the DB snapshot.
 The Identifier for the snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L239">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L239">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8469,7 +8469,7 @@ The Identifier for the snapshot.
 Specifies whether the DB snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="SnapshotState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L243">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L243">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8477,7 +8477,7 @@ Specifies whether the DB snapshot is encrypted.
 Specifies the name of the database engine.
 
 <h4 class="pdoc-member-header" id="SnapshotState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L247">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L247">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8485,7 +8485,7 @@ Specifies the name of the database engine.
 Specifies the version of the database engine.
 
 <h4 class="pdoc-member-header" id="SnapshotState-iops">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L251">property <b>iops</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L251">property <b>iops</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iops?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8493,7 +8493,7 @@ Specifies the version of the database engine.
 Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L255">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L255">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8501,7 +8501,7 @@ Specifies the Provisioned IOPS (I/O operations per second) value of the DB insta
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="SnapshotState-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L259">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L259">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseModel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8509,7 +8509,7 @@ The ARN for the KMS encryption key.
 License model information for the restored DB instance.
 
 <h4 class="pdoc-member-header" id="SnapshotState-optionGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L263">property <b>optionGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L263">property <b>optionGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8517,17 +8517,17 @@ License model information for the restored DB instance.
 Provides the option group name for the DB snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L264">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L264">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SnapshotState-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L265">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L265">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SnapshotState-sourceDbSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L269">property <b>sourceDbSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L269">property <b>sourceDbSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceDbSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8535,7 +8535,7 @@ Provides the option group name for the DB snapshot.
 The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
 
 <h4 class="pdoc-member-header" id="SnapshotState-sourceRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L273">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L273">property <b>sourceRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8543,7 +8543,7 @@ The DB snapshot Arn that the DB snapshot was copied from. It only has value in c
 The region that the DB snapshot was created in or copied from.
 
 <h4 class="pdoc-member-header" id="SnapshotState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L277">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L277">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8551,7 +8551,7 @@ The region that the DB snapshot was created in or copied from.
 Specifies the status of this DB snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L281">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L281">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8559,7 +8559,7 @@ Specifies the status of this DB snapshot.
 Specifies the storage type associated with DB snapshot.
 
 <h4 class="pdoc-member-header" id="SnapshotState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L285">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L285">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8567,7 +8567,7 @@ Specifies the storage type associated with DB snapshot.
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="SnapshotState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/snapshot.ts#L289">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/snapshot.ts#L289">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8575,14 +8575,14 @@ Key-value mapping of resource tags
 Specifies the storage type associated with DB snapshot.
 
 <h3 class="pdoc-module-header" id="StorageType" data-link-title="StorageType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/storageType.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/storageType.ts#L29">
         type <strong>StorageType</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> StorageType = <span class='s2'>"standard"</span> | <span class='s2'>"gp2"</span> | <span class='s2'>"io1"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SubnetGroupArgs" data-link-title="SubnetGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L157">
         interface <strong>SubnetGroupArgs</strong>
     </a>
 </h3>
@@ -8592,7 +8592,7 @@ Specifies the storage type associated with DB snapshot.
 The set of arguments for constructing a SubnetGroup resource.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L161">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L161">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8600,7 +8600,7 @@ The set of arguments for constructing a SubnetGroup resource.
 The description of the DB subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L165">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L165">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8608,7 +8608,7 @@ The description of the DB subnet group. Defaults to "Managed by Pulumi".
 The name of the DB subnet group. If omitted, this provider will assign a random, unique name.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L169">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L169">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8616,7 +8616,7 @@ The name of the DB subnet group. If omitted, this provider will assign a random,
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L173">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L173">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8624,7 +8624,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of VPC subnet IDs.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L177">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L177">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8632,7 +8632,7 @@ A list of VPC subnet IDs.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="SubnetGroupState" data-link-title="SubnetGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L127">
         interface <strong>SubnetGroupState</strong>
     </a>
 </h3>
@@ -8642,7 +8642,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering SubnetGroup resources.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L131">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L131">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8650,7 +8650,7 @@ Input properties used for looking up and filtering SubnetGroup resources.
 The ARN of the db subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L135">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L135">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8658,7 +8658,7 @@ The ARN of the db subnet group.
 The description of the DB subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L139">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L139">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8666,7 +8666,7 @@ The description of the DB subnet group. Defaults to "Managed by Pulumi".
 The name of the DB subnet group. If omitted, this provider will assign a random, unique name.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L143">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L143">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8674,7 +8674,7 @@ The name of the DB subnet group. If omitted, this provider will assign a random,
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L147">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L147">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8682,7 +8682,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of VPC subnet IDs.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c862636920097286c440147fa28a28e15bdc0871/sdk/nodejs/rds/subnetGroup.ts#L151">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/rds/subnetGroup.ts#L151">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>

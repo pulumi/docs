@@ -386,7 +386,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.Listener">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">Listener</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">default_pool_id=None</em>, <em class="sig-param">default_tls_container_ref=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">protocol_port=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">sni_container_refs=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">Listener</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">default_pool_id=None</em>, <em class="sig-param">default_tls_container_ref=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">protocol_port=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">sni_container_refs=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">timeout_client_data=None</em>, <em class="sig-param">timeout_member_connect=None</em>, <em class="sig-param">timeout_member_data=None</em>, <em class="sig-param">timeout_tcp_inspect=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 listener resource within OpenStack.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -425,6 +425,11 @@ for more information.</p>
 <li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.</p></li>
+<li><p><strong>timeout_client_data</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The client inactivity timeout in milliseconds.</p></li>
+<li><p><strong>timeout_member_connect</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The member connection timeout in milliseconds.</p></li>
+<li><p><strong>timeout_member_data</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The member inactivity timeout in milliseconds.</p></li>
+<li><p><strong>timeout_tcp_inspect</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in milliseconds, to wait for additional
+TCP packets for content inspection.</p></li>
 </ul>
 </dd>
 </dl>
@@ -522,9 +527,34 @@ the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_openstack.loadbalancer.Listener.timeout_client_data">
+<code class="sig-name descname">timeout_client_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener.timeout_client_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client inactivity timeout in milliseconds.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.loadbalancer.Listener.timeout_member_connect">
+<code class="sig-name descname">timeout_member_connect</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener.timeout_member_connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>The member connection timeout in milliseconds.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.loadbalancer.Listener.timeout_member_data">
+<code class="sig-name descname">timeout_member_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener.timeout_member_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The member inactivity timeout in milliseconds.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.loadbalancer.Listener.timeout_tcp_inspect">
+<code class="sig-name descname">timeout_tcp_inspect</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener.timeout_tcp_inspect" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time in milliseconds, to wait for additional
+TCP packets for content inspection.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.Listener.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">default_pool_id=None</em>, <em class="sig-param">default_tls_container_ref=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">protocol_port=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">sni_container_refs=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">default_pool_id=None</em>, <em class="sig-param">default_tls_container_ref=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">loadbalancer_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">protocol_port=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">sni_container_refs=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">timeout_client_data=None</em>, <em class="sig-param">timeout_member_connect=None</em>, <em class="sig-param">timeout_member_data=None</em>, <em class="sig-param">timeout_tcp_inspect=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Listener resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -566,6 +596,11 @@ for more information.</p>
 <li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.</p></li>
+<li><p><strong>timeout_client_data</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The client inactivity timeout in milliseconds.</p></li>
+<li><p><strong>timeout_member_connect</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The member connection timeout in milliseconds.</p></li>
+<li><p><strong>timeout_member_data</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The member inactivity timeout in milliseconds.</p></li>
+<li><p><strong>timeout_tcp_inspect</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in milliseconds, to wait for additional
+TCP packets for content inspection.</p></li>
 </ul>
 </dd>
 </dl>
