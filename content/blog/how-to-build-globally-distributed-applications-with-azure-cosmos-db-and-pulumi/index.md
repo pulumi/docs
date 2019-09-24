@@ -289,7 +289,7 @@ Shopping Cart workload expects both reads and writes from the end-users, so the 
 
 ## Cosmos App with Virtual Machine Scale Sets
 
-The Pricing Engine team has to go through the same steps but employ IaaS-based infrastructure to run application code. The factory function creates a dozen of resources related to virtual machines, load balancing, networking, and auto-scaling. You may define as many resources as needed in the code, as long as it returns a pointer to the proper resource to link the endpoint.
+The Pricing Engine team has to go through the same steps but employ IaaS-based infrastructure to run application code. The factory function creates a dozen resources related to virtual machines, load balancing, networking, and auto-scaling. You may define as many resources as needed in the code, as long as it returns a pointer to the proper resource to link the endpoint.
 
 ```ts
 function buildVMScaleSetApp({ cosmosAccount, database }: GlobalContext) {
