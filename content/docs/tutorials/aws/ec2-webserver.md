@@ -389,26 +389,16 @@ $ curl $(pulumi stack output publicHostName)
 Hello, World!
 ```
 
-## Clean up
+## Clean Up
 
-Before moving on, tear down the resources that are part of your stack to avoid incurring any charges.
-
-1.  Run `pulumi destroy` to tear down all resources. You'll be prompted to make sure you really want to delete these
-   resources. This takes about 60 seconds; Pulumi waits for the EC2 instance to finish shutting down before
-   it considers the destroy operation to be complete.
-
-1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
+{{< cleanup >}}
 
 ## Summary
 
-In this tutorial, we showed you how to use Pulumi programs to create and manage cloud resources in AWS, using TypeScript, JavaScript, or Python (and its corresponding package manager). You also learned how to work with the Pulumi CLI. To recap:
+{{< summary >}}
+In this tutorial, we showed you how to use Pulumi programs to create and manage cloud resources in AWS, using TypeScript, JavaScript, or Python (and its corresponding package manager).
+{{< /summary >}}
 
-- Run `pulumi new <cloud>-<language> --name myproject` to create a new project from a language and cloud template.
-- Run `pulumi up` to preview and update your infrastructure.
-- Run `pulumi destroy` to clean up your resources.
-- Run `pulumi stack rm` to delete your stack.
-
-For a similar example in other languages and clouds, see the [Pulumi examples repo](https://github.com/pulumi/examples).
 
 <!-- Common links -->
 [EC2 Instance]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#Instance" >}}
