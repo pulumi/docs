@@ -63,7 +63,8 @@ test:
 		--exclude "https://www.googleapis.com/" \
 		--exclude "https://us-central1-/" \
 		--exclude "https://www.mysql.com/" \
-		--exclude "https://ksonnet.io/"
+		--exclude "https://ksonnet.io/" \
+		--exclude "https://www.latlong.net/"
 
 .PHONY: validate
 validate:
