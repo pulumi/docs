@@ -17,7 +17,7 @@ Today, I want to show how the same approach can be generalized for any cloud com
 
 Let’s consider an example of an e-commerce website which targets a worldwide audience. The architecture of such a website should address several challenges.
 
-### Multiple teams
+### Multiple Teams
 
 A large e-commerce website is a sophisticated software application and consists of many subcomponents. Many engineers in multiple teams work on it simultaneously.
 
@@ -29,7 +29,7 @@ Here is an example of such a breakdown:
 
 {{% figcaption %}}Multiple components on a single web page{{% /figcaption %}}
 
-### Diversity of technology options and choices
+### Diversity of Technology Decisions
 
 One of the guiding principles of microservices architecture is that each team makes decisions regarding which tools and technologies to use. They are free to choose programming languages, databases, or cloud services that are the best fit for the service. In practice, some restrictions do apply---for instance, the teams might need to share the same cloud provider.
 
@@ -39,7 +39,7 @@ In our hypothetical example, the whole product is hosted on Azure cloud, however
 - Shopping Cart team uses C# and .NET Core, packages the code in a Docker container, and uses event sourcing to store every action ever made by users while shopping
 - Pricing Engine team has a mix of Java and C++ code with a bunch of third-party libraries and deploys the services to Ubuntu VMs that use MongoDB drivers for storage
 
-### Global presence
+### Global Presence
 
 Regardless of the tech, the user-facing services must serve customers across the globe and serve them fast. This requirement demands a geo-distributed infrastructure so that user requests could be handled by the nearest data center to minimize the latency and ensure excellent user experience.
 
@@ -53,7 +53,7 @@ Let's consider these goals and possible solutions.
 
 ## Azure Cosmos DB
 
-Distributing the data across many data centers while keeping them consistent and available is one of the hardest problems in computer science and engineering. Delegating this challenge to a specialized service or product is usually a sensible idea.
+Distributing data across many data centers while keeping them consistent and available is one of the hardest problems in computer science and engineering. Delegating this challenge to a specialized service or product is usually a sensible idea.
 
 Azure Cosmos DB is the database of choice for global applications running in the Azure cloud. Cosmos DB provides a turn-key global distribution to any number of regions worldwide. Regions can be added or removed along the way while running production workloads and without having any impact on high availability. The accounts can be provisioned with a single write region or in multi-master mode with every region being writable, thus enabling writes that are local to each region.
 
@@ -128,7 +128,7 @@ For this blog post, I created a custom Pulumi component called CosmosApp which i
 
 Let's look at an example of how the component can be used. Creating a globally-distributed application requires three steps:
 
-### List the regions
+### List the Regions
 
 We define a configuration value to contain a comma-separated list of Azure regions that we’ll deploy the application to.
 
@@ -142,13 +142,13 @@ This value can be loaded and parsed into a JavaScript array:
 const locations = new pulumi.Config().require("locations").split(",");
 ```
 
-### Build a region template
+### Build a Region Template
 
 We define a factory function to create the infrastructure in each location. Its signature is a bit unusual in that we return a function from another function. I'll explain the motivation in the next example. For now, it's important to understand the following:
 
-- We get a Cosmos account and a location as input arguments.
-- We create a Function App in the specified location with connection settings pointing to the local Cosmos DB replica.
-- We return the identifier of the Function App so that a Traffic Manager endpoint could point to it.
+- We get a Cosmos account and a location as input arguments
+- We create a Function App in the specified location with connection settings pointing to the local Cosmos DB replica
+- We return the identifier of the Function App so that a Traffic Manager endpoint could point to it
 
 Here is the function:
 
@@ -222,7 +222,7 @@ function buildShoppingCartApp({ cosmosAccount, database, container }: GlobalCont
 }
 ```
 
-Now, the factory function that builds per-region infrastructure can directly reference the Registry and the image to deploy an Azure Container Instances group. Note how registry and dockerImage are used as any other TypeScript variable inside the closure factory function:
+Now, the factory function that builds per-region infrastructure can directly reference the Registry and the image to deploy an Azure Container Instances group. Note how `registry` and `dockerImage` are used as any other TypeScript variable inside the closure factory function:
 
 ```ts
 function buildShoppingCartApp({ cosmosAccount, database, container }: GlobalContext) {
