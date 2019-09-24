@@ -308,7 +308,7 @@ continue to boot via iPXE on reboots.</p></li>
 <li><p><strong>billing_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – monthly or hourly</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string for the device</p></li>
 <li><p><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p></li>
-<li><p><strong>hardware_reservation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</p></li>
+<li><p><strong>hardware_reservation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">full</span> <span class="pre">ID</span></code> of the hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name</p></li>
 <li><p><strong>ip_address_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing one or more of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]. It specifies which IP address types a new device should obtain. If omitted, a created device will obtain all 3 addresses. If you only want private IPv4 address for the new device, pass [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>].</p></li>
 <li><p><strong>ipxe_script_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL pointing to a hosted iPXE script. More
@@ -317,7 +317,7 @@ information is in the
 doc.</p></li>
 <li><p><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project in which to create the device</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the device</p></li>
 <li><p><strong>project_ssh_key_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the [.ProjectSshKey][packet_project_ssh_key.html] resource.</p></li>
 <li><p><strong>public_ipv4_subnet_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of allocated subnet, more
 information is in the
@@ -390,7 +390,7 @@ continue to boot via iPXE on reboots.</p>
 <dl class="attribute">
 <dt id="pulumi_packet.Device.hardware_reservation_id">
 <code class="sig-name descname">hardware_reservation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.hardware_reservation_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</p>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">full</span> <span class="pre">ID</span></code> of the hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -473,7 +473,7 @@ The fields of the network attributes are:</p>
 <dl class="attribute">
 <dt id="pulumi_packet.Device.project_id">
 <code class="sig-name descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.project_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the project in which to create the device</p>
+<dd><p>The ID of the project in which to create the device</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -560,7 +560,7 @@ continue to boot via iPXE on reboots.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string for the device</p></li>
 <li><p><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
 </p></li>
-<li><p><strong>hardware_reservation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</p></li>
+<li><p><strong>hardware_reservation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">full</span> <span class="pre">ID</span></code> of the hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name</p></li>
 <li><p><strong>ip_address_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing one or more of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]. It specifies which IP address types a new device should obtain. If omitted, a created device will obtain all 3 addresses. If you only want private IPv4 address for the new device, pass [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>].</p></li>
 <li><p><strong>ipxe_script_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>URL pointing to a hosted iPXE script. More
@@ -588,7 +588,7 @@ The fields of the network attributes are:
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p>
 </p></li>
 <li><p><strong>ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ports assigned to the device</p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project in which to create the device</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the device</p></li>
 <li><p><strong>project_ssh_key_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the [.ProjectSshKey][packet_project_ssh_key.html] resource.</p></li>
 <li><p><strong>public_ipv4_subnet_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>Size of allocated subnet, more
 information is in the
@@ -1560,7 +1560,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.ReservedIpBlock">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">ReservedIpBlock</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ReservedIpBlock" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">ReservedIpBlock</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ReservedIpBlock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create and manage blocks of reserved IP addresses in a project.</p>
 <p>When a user provisions first device in a facility, Packet API automatically allocates IPv6/56 and private IPv4/25 blocks.
 The new device then gets IPv6 and private IPv4 addresses from those block. It also gets a public IPv4/31 address.
@@ -1574,6 +1574,7 @@ The IPv6 and private IPv4 blocks can’t be created, only imported. With this re
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Arbitrary description</p></li>
 <li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The packet project ID where to allocate the address block</p></li>
 <li><p><strong>quantity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of allocated /32 addresses, a power of 2</p></li>
@@ -1600,6 +1601,12 @@ The IPv6 and private IPv4 blocks can’t be created, only imported. With this re
 <dt id="pulumi_packet.ReservedIpBlock.cidr_notation">
 <code class="sig-name descname">cidr_notation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.ReservedIpBlock.cidr_notation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Address and mask in CIDR notation, e.g. “147.229.15.30/31”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.ReservedIpBlock.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.ReservedIpBlock.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arbitrary description</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1652,7 +1659,7 @@ The IPv6 and private IPv4 blocks can’t be created, only imported. With this re
 
 <dl class="method">
 <dt id="pulumi_packet.ReservedIpBlock.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">address_family=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">cidr_notation=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">global_=None</em>, <em class="sig-param">manageable=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">netmask=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ReservedIpBlock.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">address_family=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">cidr_notation=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">global_=None</em>, <em class="sig-param">manageable=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">netmask=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ReservedIpBlock.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReservedIpBlock resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1664,6 +1671,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Address family as integer (4 or 6)</p></li>
 <li><p><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – length of CIDR prefix of the block as integer</p></li>
 <li><p><strong>cidr_notation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Address and mask in CIDR notation, e.g. “147.229.15.30/31”</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Arbitrary description</p></li>
 <li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global<a href="#id17"><span class="problematic" id="id18">*</span></a>ipv4</p></li>
 </ul>
 </dd>

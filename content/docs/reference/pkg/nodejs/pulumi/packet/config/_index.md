@@ -28,7 +28,7 @@ linktitle: "config"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="authToken" data-link-title="authToken">
-    <a href="https://github.com/pulumi/pulumi-packet/blob/6a1102c5b8ff047d5dfcb1078b00d5e67f15b83e/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-packet/blob/4dedd8a21ea46d192ba6e6f9791b159d0c8df1ad/sdk/nodejs/config/vars.ts#L12">
         let <strong>authToken</strong>
     </a>
 </h3>

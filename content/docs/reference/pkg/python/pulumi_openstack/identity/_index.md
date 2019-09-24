@@ -207,7 +207,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.AwaitableGetAuthScopeResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">AwaitableGetAuthScopeResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project_domain_id=None</em>, <em class="sig-param">project_domain_name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">user_domain_id=None</em>, <em class="sig-param">user_domain_name=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.AwaitableGetAuthScopeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">AwaitableGetAuthScopeResult</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_domain_id=None</em>, <em class="sig-param">project_domain_name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">user_domain_id=None</em>, <em class="sig-param">user_domain_name=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.AwaitableGetAuthScopeResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -217,7 +217,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.AwaitableGetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -237,7 +237,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.AwaitableGetUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">default_project_id=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_expires_at=None</em>, <em class="sig-param">protocol_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_expires_at=None</em>, <em class="sig-param">protocol_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -388,8 +388,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.GetAuthScopeResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">GetAuthScopeResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project_domain_id=None</em>, <em class="sig-param">project_domain_name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">user_domain_id=None</em>, <em class="sig-param">user_domain_name=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.GetAuthScopeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">GetAuthScopeResult</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_domain_id=None</em>, <em class="sig-param">project_domain_name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">user_domain_id=None</em>, <em class="sig-param">user_domain_name=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.GetAuthScopeResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAuthScope.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.GetAuthScopeResult.domain_id">
+<code class="sig-name descname">domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetAuthScopeResult.domain_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain ID of the scope.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.GetAuthScopeResult.domain_name">
+<code class="sig-name descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetAuthScopeResult.domain_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain name of the scope.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.GetAuthScopeResult.project_domain_id">
 <code class="sig-name descname">project_domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetAuthScopeResult.project_domain_id" title="Permalink to this definition">¶</a></dt>
@@ -514,8 +526,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.GetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.GetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.GetGroupResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetGroupResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of the group.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.GetGroupResult.domain_id">
 <code class="sig-name descname">domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetGroupResult.domain_id" title="Permalink to this definition">¶</a></dt>
@@ -670,12 +688,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.GetUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param">default_project_id=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_expires_at=None</em>, <em class="sig-param">protocol_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.GetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_expires_at=None</em>, <em class="sig-param">protocol_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.GetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUser.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.GetUserResult.default_project_id">
 <code class="sig-name descname">default_project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetUserResult.default_project_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.GetUserResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetUserResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of the user.</p>
 </dd></dl>
 
 <dl class="attribute">
