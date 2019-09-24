@@ -78,8 +78,9 @@ That's it! Send us a new [PR](https://github.com/pulumi/pulumi/pulls) in the [`p
 
 ## Using A Fallback
 
-If the CI system you are using is not currently detected by Pulumi, you can set the following env vars, as a fallback manually in the environment in which the Pulumi CLI is running. The CI detection code will assume a "Generic CI" system name.
+If the CI system you are using is not currently detected by Pulumi, you can set the `PULUMI_CI_SYSTEM` environment variable. Then the following environment variables can be used to surface CI system metadata for an update.
 
+* `PULUMI_CI_SYSTEM`
 * `PULUMI_CI_BUILD_ID`
 * `PULUMI_CI_BUILD_TYPE`
 * `PULUMI_CI_BUILD_URL`
