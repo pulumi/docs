@@ -37,7 +37,7 @@ linktitle: "objectstorage"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Container" data-link-title="Container">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L33">
         Resource <strong>Container</strong>
     </a>
 </h3>
@@ -68,7 +68,7 @@ const container1 = new openstack.objectstorage.Container("container1", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_container_v1.html.markdown.
 
 <h4 class="pdoc-member-header" id="Container-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -82,7 +82,7 @@ Create a Container resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Container-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -93,14 +93,14 @@ Get an existing Container resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Container-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Container-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -111,7 +111,7 @@ Returns true if the given object is an instance of Container.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Container-containerRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L66">property <b>containerRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L66">property <b>containerRead</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerRead: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -122,7 +122,7 @@ can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
 
 <h4 class="pdoc-member-header" id="Container-containerSyncKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L71">property <b>containerSyncKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L71">property <b>containerSyncKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerSyncKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -131,7 +131,7 @@ The secret key for container synchronization.
 Changing this updates container synchronization.
 
 <h4 class="pdoc-member-header" id="Container-containerSyncTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L76">property <b>containerSyncTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L76">property <b>containerSyncTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerSyncTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ The destination for container synchronization.
 Changing this updates container synchronization.
 
 <h4 class="pdoc-member-header" id="Container-containerWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L81">property <b>containerWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L81">property <b>containerWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerWrite: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -149,7 +149,7 @@ Sets an ACL that grants write access.
 Changing this updates the access control list write access.
 
 <h4 class="pdoc-member-header" id="Container-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L86">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L86">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ The MIME type for the container. Changing this
 updates the MIME type.
 
 <h4 class="pdoc-member-header" id="Container-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L90">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L90">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ updates the MIME type.
 A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
 
 <h4 class="pdoc-member-header" id="Container-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -175,7 +175,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Container-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L95">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L95">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
 
 <h4 class="pdoc-member-header" id="Container-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ A unique name for the container. Changing this creates a
 new container.
 
 <h4 class="pdoc-member-header" id="Container-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L106">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L106">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
 
 <h4 class="pdoc-member-header" id="Container-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -212,7 +212,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Container-versioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L110">property <b>versioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L110">property <b>versioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ContainerVersioning'>outputs.objectstorage.ContainerVersioning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -220,7 +220,7 @@ deployments.
 Enable object versioning. The structure is described below.
 
 <h3 class="pdoc-module-header" id="ContainerObject" data-link-title="ContainerObject">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L67">
         Resource <strong>ContainerObject</strong>
     </a>
 </h3>
@@ -285,7 +285,7 @@ const doc1 = new openstack.objectstorage.ContainerObject("doc1", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_object_v1.html.markdown.
 
 <h4 class="pdoc-member-header" id="ContainerObject-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L200"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L200"> <b>constructor</b></a>
 </h4>
 
 
@@ -299,7 +299,7 @@ Create a ContainerObject resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ContainerObject-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L76">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L76">method <b>get</b></a>
 </h4>
 
 
@@ -310,14 +310,14 @@ Get an existing ContainerObject resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ContainerObject-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L67">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L67">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ContainerObject-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L87">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L87">method <b>isInstance</b></a>
 </h4>
 
 
@@ -328,7 +328,7 @@ Returns true if the given object is an instance of ContainerObject.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ContainerObject-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L102">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L102">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
 
 <h4 class="pdoc-member-header" id="ContainerObject-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L107">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L107">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ A string representing the content of the object. Conflicts with
 `source` and `copyFrom`.
 
 <h4 class="pdoc-member-header" id="ContainerObject-contentDisposition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L113">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L113">property <b>contentDisposition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentDisposition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -360,7 +360,7 @@ the browser. For example, this header might specify that the browser use a downl
 program to save this file rather than show the file, which is the default.
 
 <h4 class="pdoc-member-header" id="ContainerObject-contentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L118">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L118">property <b>contentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentEncoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -369,7 +369,7 @@ A string representing the value of the Content-Encoding
 metadata.
 
 <h4 class="pdoc-member-header" id="ContainerObject-contentLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L123">property <b>contentLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L123">property <b>contentLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -378,7 +378,7 @@ If the operation succeeds, this value is zero (0) or the
 length of informational or error text in the response body.
 
 <h4 class="pdoc-member-header" id="ContainerObject-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L127">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L127">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ length of informational or error text in the response body.
 A string which sets the MIME type for the object.
 
 <h4 class="pdoc-member-header" id="ContainerObject-copyFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L135">property <b>copyFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L135">property <b>copyFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>copyFrom: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -398,7 +398,7 @@ container and object before you include them in the header. Conflicts with `sour
 `content`.
 
 <h4 class="pdoc-member-header" id="ContainerObject-date">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L141">property <b>date</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L141">property <b>date</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>date: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -408,7 +408,7 @@ format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
 
 <h4 class="pdoc-member-header" id="ContainerObject-deleteAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L147">property <b>deleteAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L147">property <b>deleteAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deleteAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -418,7 +418,7 @@ system removes the object. Internally, the Object Storage system stores this val
 the X-Delete-At metadata item.
 
 <h4 class="pdoc-member-header" id="ContainerObject-deleteAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L152">property <b>deleteAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L152">property <b>deleteAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deleteAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -427,7 +427,7 @@ An string representing the date when the system removes the object.
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
 <h4 class="pdoc-member-header" id="ContainerObject-detectContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L158">property <b>detectContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L158">property <b>detectContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectContentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -437,7 +437,7 @@ type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
 
 <h4 class="pdoc-member-header" id="ContainerObject-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L162">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L162">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -445,7 +445,7 @@ header, if present.
 Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
 
 <h4 class="pdoc-member-header" id="ContainerObject-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -454,7 +454,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ContainerObject-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L171">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L171">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModified: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -467,12 +467,12 @@ The ±hh:mm value, if included, is the time zone as an offset from UTC. In the p
 example, the offset value is -05:00.
 
 <h4 class="pdoc-member-header" id="ContainerObject-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L172">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L172">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerObject-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L176">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +480,7 @@ example, the offset value is -05:00.
 A unique name for the object.
 
 <h4 class="pdoc-member-header" id="ContainerObject-objectManifest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L184">property <b>objectManifest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L184">property <b>objectManifest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>objectManifest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ URL-encode the names of the container and prefix before you include them in this
 header.
 
 <h4 class="pdoc-member-header" id="ContainerObject-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L190">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L190">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
 
 <h4 class="pdoc-member-header" id="ContainerObject-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L195">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L195">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -511,7 +511,7 @@ A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copyFrom`.
 
 <h4 class="pdoc-member-header" id="ContainerObject-transId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L200">property <b>transId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L200">property <b>transId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -520,7 +520,7 @@ A unique transaction ID for this request. Your service provider might
 need this value if you report a problem.
 
 <h4 class="pdoc-member-header" id="ContainerObject-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L67">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L67">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -529,7 +529,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TempUrl" data-link-title="TempUrl">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L34">
         Resource <strong>TempUrl</strong>
     </a>
 </h3>
@@ -561,7 +561,7 @@ const objTempurl = new openstack.objectstorage.TempUrl("objTempurl", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_tempurl_v1.html.markdown.
 
 <h4 class="pdoc-member-header" id="TempUrl-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -575,7 +575,7 @@ Create a TempUrl resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TempUrl-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -586,14 +586,14 @@ Get an existing TempUrl resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TempUrl-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TempUrl-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -604,7 +604,7 @@ Returns true if the given object is an instance of TempUrl.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TempUrl-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L64">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L64">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>container: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -612,7 +612,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The container name the object belongs to.
 
 <h4 class="pdoc-member-header" id="TempUrl-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -621,7 +621,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TempUrl-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L69">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L69">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>method: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -630,7 +630,7 @@ The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
 
 <h4 class="pdoc-member-header" id="TempUrl-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L73">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L73">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>object: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -638,7 +638,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 The object name the tempurl is for.
 
 <h4 class="pdoc-member-header" id="TempUrl-regenerate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L79">property <b>regenerate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L79">property <b>regenerate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regenerate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
 
 <h4 class="pdoc-member-header" id="TempUrl-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L83">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L83">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -656,12 +656,12 @@ ID and new URL. Defaults to false.
 The region the tempurl is located in.
 
 <h4 class="pdoc-member-header" id="TempUrl-split">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L84">property <b>split</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L84">property <b>split</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>split: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TempUrl-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L89">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L89">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -670,7 +670,7 @@ The TTL, in seconds, for the URL. For how long it should
 be valid.
 
 <h4 class="pdoc-member-header" id="TempUrl-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L93">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L93">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -678,7 +678,7 @@ be valid.
 The URL
 
 <h4 class="pdoc-member-header" id="TempUrl-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -690,7 +690,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ContainerArgs" data-link-title="ContainerArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L218">
         interface <strong>ContainerArgs</strong>
     </a>
 </h3>
@@ -700,7 +700,7 @@ deployments.
 The set of arguments for constructing a Container resource.
 
 <h4 class="pdoc-member-header" id="ContainerArgs-containerRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L225">property <b>containerRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L225">property <b>containerRead</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerRead?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -711,7 +711,7 @@ can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
 
 <h4 class="pdoc-member-header" id="ContainerArgs-containerSyncKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L230">property <b>containerSyncKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L230">property <b>containerSyncKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerSyncKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -720,7 +720,7 @@ The secret key for container synchronization.
 Changing this updates container synchronization.
 
 <h4 class="pdoc-member-header" id="ContainerArgs-containerSyncTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L235">property <b>containerSyncTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L235">property <b>containerSyncTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerSyncTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -729,7 +729,7 @@ The destination for container synchronization.
 Changing this updates container synchronization.
 
 <h4 class="pdoc-member-header" id="ContainerArgs-containerWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L240">property <b>containerWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L240">property <b>containerWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -738,7 +738,7 @@ Sets an ACL that grants write access.
 Changing this updates the access control list write access.
 
 <h4 class="pdoc-member-header" id="ContainerArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L245">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L245">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -747,7 +747,7 @@ The MIME type for the container. Changing this
 updates the MIME type.
 
 <h4 class="pdoc-member-header" id="ContainerArgs-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L249">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L249">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -755,7 +755,7 @@ updates the MIME type.
 A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
 
 <h4 class="pdoc-member-header" id="ContainerArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L254">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L254">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -764,7 +764,7 @@ Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
 
 <h4 class="pdoc-member-header" id="ContainerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L259">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L259">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ A unique name for the container. Changing this creates a
 new container.
 
 <h4 class="pdoc-member-header" id="ContainerArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L265">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L265">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -783,7 +783,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
 
 <h4 class="pdoc-member-header" id="ContainerArgs-versioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L269">property <b>versioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L269">property <b>versioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerVersioning'>inputs.objectstorage.ContainerVersioning</a>&gt;;</code></pre>
@@ -791,7 +791,7 @@ creates a new container.
 Enable object versioning. The structure is described below.
 
 <h3 class="pdoc-module-header" id="ContainerObjectArgs" data-link-title="ContainerObjectArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L385">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L385">
         interface <strong>ContainerObjectArgs</strong>
     </a>
 </h3>
@@ -801,7 +801,7 @@ Enable object versioning. The structure is described below.
 The set of arguments for constructing a ContainerObject resource.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L394">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L394">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -814,7 +814,7 @@ character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L399">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L399">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -823,7 +823,7 @@ A string representing the content of the object. Conflicts with
 `source` and `copyFrom`.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-contentDisposition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L405">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L405">property <b>contentDisposition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentDisposition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -833,7 +833,7 @@ the browser. For example, this header might specify that the browser use a downl
 program to save this file rather than show the file, which is the default.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-contentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L410">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L410">property <b>contentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentEncoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -842,7 +842,7 @@ A string representing the value of the Content-Encoding
 metadata.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L414">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L414">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -850,7 +850,7 @@ metadata.
 A string which sets the MIME type for the object.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-copyFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L422">property <b>copyFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L422">property <b>copyFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>copyFrom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -862,7 +862,7 @@ container and object before you include them in the header. Conflicts with `sour
 `content`.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-deleteAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L428">property <b>deleteAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L428">property <b>deleteAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -872,7 +872,7 @@ system removes the object. Internally, the Object Storage system stores this val
 the X-Delete-At metadata item.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-deleteAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L433">property <b>deleteAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L433">property <b>deleteAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -881,7 +881,7 @@ An string representing the date when the system removes the object.
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-detectContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L439">property <b>detectContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L439">property <b>detectContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectContentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -891,7 +891,7 @@ type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L443">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L443">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -899,12 +899,12 @@ header, if present.
 Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L444">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L444">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L448">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L448">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -912,7 +912,7 @@ Used to trigger updates. The only meaningful value is ${md5(file("path/to/file")
 A unique name for the object.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-objectManifest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L456">property <b>objectManifest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L456">property <b>objectManifest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectManifest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -924,7 +924,7 @@ URL-encode the names of the container and prefix before you include them in this
 header.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L462">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L462">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -934,7 +934,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
 
 <h4 class="pdoc-member-header" id="ContainerObjectArgs-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L467">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L467">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -943,7 +943,7 @@ A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copyFrom`.
 
 <h3 class="pdoc-module-header" id="ContainerObjectState" data-link-title="ContainerObjectState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L272">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L272">
         interface <strong>ContainerObjectState</strong>
     </a>
 </h3>
@@ -953,7 +953,7 @@ as the object's content. Conflicts with `source` and `copyFrom`.
 Input properties used for looking up and filtering ContainerObject resources.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L281">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L281">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -966,7 +966,7 @@ character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L286">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L286">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -975,7 +975,7 @@ A string representing the content of the object. Conflicts with
 `source` and `copyFrom`.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-contentDisposition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L292">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L292">property <b>contentDisposition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentDisposition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -985,7 +985,7 @@ the browser. For example, this header might specify that the browser use a downl
 program to save this file rather than show the file, which is the default.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-contentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L297">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L297">property <b>contentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentEncoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -994,7 +994,7 @@ A string representing the value of the Content-Encoding
 metadata.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-contentLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L302">property <b>contentLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L302">property <b>contentLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1003,7 +1003,7 @@ If the operation succeeds, this value is zero (0) or the
 length of informational or error text in the response body.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L306">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L306">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1011,7 +1011,7 @@ length of informational or error text in the response body.
 A string which sets the MIME type for the object.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-copyFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L314">property <b>copyFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L314">property <b>copyFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>copyFrom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1023,7 +1023,7 @@ container and object before you include them in the header. Conflicts with `sour
 `content`.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-date">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L320">property <b>date</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L320">property <b>date</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>date?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +1033,7 @@ format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-deleteAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L326">property <b>deleteAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L326">property <b>deleteAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1043,7 +1043,7 @@ system removes the object. Internally, the Object Storage system stores this val
 the X-Delete-At metadata item.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-deleteAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L331">property <b>deleteAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L331">property <b>deleteAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1052,7 +1052,7 @@ An string representing the date when the system removes the object.
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-detectContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L337">property <b>detectContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L337">property <b>detectContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectContentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1062,7 +1062,7 @@ type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L341">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L341">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1070,7 +1070,7 @@ header, if present.
 Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L350">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L350">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModified?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1083,12 +1083,12 @@ The ±hh:mm value, if included, is the time zone as an offset from UTC. In the p
 example, the offset value is -05:00.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L351">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L351">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerObjectState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L355">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L355">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1096,7 +1096,7 @@ example, the offset value is -05:00.
 A unique name for the object.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-objectManifest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L363">property <b>objectManifest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L363">property <b>objectManifest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectManifest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1108,7 +1108,7 @@ URL-encode the names of the container and prefix before you include them in this
 header.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L369">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L369">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1118,7 +1118,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L374">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L374">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1127,7 +1127,7 @@ A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copyFrom`.
 
 <h4 class="pdoc-member-header" id="ContainerObjectState-transId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/containerObject.ts#L379">property <b>transId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/containerObject.ts#L379">property <b>transId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1136,7 +1136,7 @@ A unique transaction ID for this request. Your service provider might
 need this value if you report a problem.
 
 <h3 class="pdoc-module-header" id="ContainerState" data-link-title="ContainerState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L161">
         interface <strong>ContainerState</strong>
     </a>
 </h3>
@@ -1146,7 +1146,7 @@ need this value if you report a problem.
 Input properties used for looking up and filtering Container resources.
 
 <h4 class="pdoc-member-header" id="ContainerState-containerRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L168">property <b>containerRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L168">property <b>containerRead</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerRead?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1157,7 +1157,7 @@ can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
 
 <h4 class="pdoc-member-header" id="ContainerState-containerSyncKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L173">property <b>containerSyncKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L173">property <b>containerSyncKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerSyncKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1166,7 +1166,7 @@ The secret key for container synchronization.
 Changing this updates container synchronization.
 
 <h4 class="pdoc-member-header" id="ContainerState-containerSyncTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L178">property <b>containerSyncTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L178">property <b>containerSyncTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerSyncTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1175,7 +1175,7 @@ The destination for container synchronization.
 Changing this updates container synchronization.
 
 <h4 class="pdoc-member-header" id="ContainerState-containerWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L183">property <b>containerWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L183">property <b>containerWrite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerWrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1184,7 +1184,7 @@ Sets an ACL that grants write access.
 Changing this updates the access control list write access.
 
 <h4 class="pdoc-member-header" id="ContainerState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L188">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L188">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1193,7 +1193,7 @@ The MIME type for the container. Changing this
 updates the MIME type.
 
 <h4 class="pdoc-member-header" id="ContainerState-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L192">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L192">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1201,7 +1201,7 @@ updates the MIME type.
 A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
 
 <h4 class="pdoc-member-header" id="ContainerState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L197">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L197">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1210,7 +1210,7 @@ Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
 
 <h4 class="pdoc-member-header" id="ContainerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L202">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L202">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1219,7 +1219,7 @@ A unique name for the container. Changing this creates a
 new container.
 
 <h4 class="pdoc-member-header" id="ContainerState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L208">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L208">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
 
 <h4 class="pdoc-member-header" id="ContainerState-versioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/container.ts#L212">property <b>versioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/container.ts#L212">property <b>versioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerVersioning'>inputs.objectstorage.ContainerVersioning</a>&gt;;</code></pre>
@@ -1237,7 +1237,7 @@ creates a new container.
 Enable object versioning. The structure is described below.
 
 <h3 class="pdoc-module-header" id="TempUrlArgs" data-link-title="TempUrlArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L188">
         interface <strong>TempUrlArgs</strong>
     </a>
 </h3>
@@ -1247,7 +1247,7 @@ Enable object versioning. The structure is described below.
 The set of arguments for constructing a TempUrl resource.
 
 <h4 class="pdoc-member-header" id="TempUrlArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L192">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L192">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1255,7 +1255,7 @@ The set of arguments for constructing a TempUrl resource.
 The container name the object belongs to.
 
 <h4 class="pdoc-member-header" id="TempUrlArgs-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L197">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L197">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1264,7 +1264,7 @@ The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
 
 <h4 class="pdoc-member-header" id="TempUrlArgs-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L201">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L201">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>object: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1272,7 +1272,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 The object name the tempurl is for.
 
 <h4 class="pdoc-member-header" id="TempUrlArgs-regenerate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L207">property <b>regenerate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L207">property <b>regenerate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regenerate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1282,7 +1282,7 @@ it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
 
 <h4 class="pdoc-member-header" id="TempUrlArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L211">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L211">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1290,12 +1290,12 @@ ID and new URL. Defaults to false.
 The region the tempurl is located in.
 
 <h4 class="pdoc-member-header" id="TempUrlArgs-split">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L212">property <b>split</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L212">property <b>split</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>split?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TempUrlArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L217">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L217">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1304,7 +1304,7 @@ The TTL, in seconds, for the URL. For how long it should
 be valid.
 
 <h3 class="pdoc-module-header" id="TempUrlState" data-link-title="TempUrlState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L149">
         interface <strong>TempUrlState</strong>
     </a>
 </h3>
@@ -1314,7 +1314,7 @@ be valid.
 Input properties used for looking up and filtering TempUrl resources.
 
 <h4 class="pdoc-member-header" id="TempUrlState-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L153">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L153">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1322,7 +1322,7 @@ Input properties used for looking up and filtering TempUrl resources.
 The container name the object belongs to.
 
 <h4 class="pdoc-member-header" id="TempUrlState-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L158">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L158">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1331,7 +1331,7 @@ The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
 
 <h4 class="pdoc-member-header" id="TempUrlState-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L162">property <b>object</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L162">property <b>object</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>object?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1339,7 +1339,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
 The object name the tempurl is for.
 
 <h4 class="pdoc-member-header" id="TempUrlState-regenerate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L168">property <b>regenerate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L168">property <b>regenerate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regenerate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1349,7 +1349,7 @@ it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
 
 <h4 class="pdoc-member-header" id="TempUrlState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L172">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L172">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1357,12 +1357,12 @@ ID and new URL. Defaults to false.
 The region the tempurl is located in.
 
 <h4 class="pdoc-member-header" id="TempUrlState-split">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L173">property <b>split</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L173">property <b>split</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>split?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TempUrlState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L178">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L178">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1371,7 +1371,7 @@ The TTL, in seconds, for the URL. For how long it should
 be valid.
 
 <h4 class="pdoc-member-header" id="TempUrlState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/objectstorage/tempUrl.ts#L182">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/7597f40d79a90ca039c917c59c0136f02e4da7b5/sdk/nodejs/objectstorage/tempUrl.ts#L182">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
