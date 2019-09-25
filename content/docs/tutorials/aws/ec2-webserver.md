@@ -26,8 +26,6 @@ In this tutorial, we will show you how to use JavaScript or Python to deploy a s
 
 Create a project directory, `webserver`, and change into it. Run [`pulumi new aws-<language> --name myproject`]({{< relref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the AWS template for your chosen language. Replace `myproject` with your desired project name.
 
-
-
 {{< langchoose nogo >}}
 
 <div class="language-prologue-javascript"></div>
