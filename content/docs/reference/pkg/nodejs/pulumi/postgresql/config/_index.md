@@ -28,8 +28,8 @@ linktitle: "config"
     <li><a href="#maxConnections"><span class="symbol api"></span>maxConnections</a></li>
     <li><a href="#password"><span class="symbol api"></span>password</a></li>
     <li><a href="#port"><span class="symbol api"></span>port</a></li>
-    <li><a href="#sslMode"><span class="symbol api"></span>sslMode</a></li>
     <li><a href="#sslmode"><span class="symbol api"></span>sslmode</a></li>
+    <li><a href="#sslMode"><span class="symbol api"></span>sslMode</a></li>
     <li><a href="#superuser"><span class="symbol api"></span>superuser</a></li>
     <li><a href="#username"><span class="symbol api"></span>username</a></li>
 </ul>
@@ -118,13 +118,6 @@ Password to be used if the PostgreSQL server demands password authentication
 
 The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
 
-<h3 class="pdoc-module-header" id="sslMode" data-link-title="sslMode">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/47c3ab12353d6f0ac1a10418d6488aab3372b989/sdk/nodejs/config/vars.ts#L41">
-        let <strong>sslMode</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kd'>let</span> sslMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sslMode&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="sslmode" data-link-title="sslmode">
     <a href="https://github.com/pulumi/pulumi-postgresql/blob/47c3ab12353d6f0ac1a10418d6488aab3372b989/sdk/nodejs/config/vars.ts#L46">
         let <strong>sslmode</strong>
@@ -136,6 +129,13 @@ The PostgreSQL port number to connect to at the server host, or socket file name
 This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
 PostgreSQL server
 
+<h3 class="pdoc-module-header" id="sslMode" data-link-title="sslMode">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/47c3ab12353d6f0ac1a10418d6488aab3372b989/sdk/nodejs/config/vars.ts#L41">
+        let <strong>sslMode</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kd'>let</span> sslMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sslMode&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="superuser" data-link-title="superuser">
     <a href="https://github.com/pulumi/pulumi-postgresql/blob/47c3ab12353d6f0ac1a10418d6488aab3372b989/sdk/nodejs/config/vars.ts#L51">
         let <strong>superuser</strong>

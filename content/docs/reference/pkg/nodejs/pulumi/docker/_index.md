@@ -53,6 +53,7 @@ import * as docker from "@pulumi/docker";
 <h3>Others</h3>
 <ul class="api">
     <li><a href="#buildAndPushImage"><span class="symbol api"></span>buildAndPushImage</a></li>
+    <li><a href="#buildAndPushImageAsync"><span class="symbol api"></span>buildAndPushImageAsync</a></li>
     <li><a href="#CacheFrom"><span class="symbol api"></span>CacheFrom</a></li>
     <li><a href="#ConfigArgs"><span class="symbol api"></span>ConfigArgs</a></li>
     <li><a href="#ConfigState"><span class="symbol api"></span>ConfigState</a></li>
@@ -764,6 +765,26 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 The base image name that was built and pushed.  This does not include the id annotation, so
 is not pinned to the specific build performed by this docker.Image.
 
+<h4 class="pdoc-member-header" id="Image-digest">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/a404051a365811737e26a2b256d309ec34849988/sdk/nodejs/image.ts#L101">property <b>digest</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This will have the same value as [imageName], but will be removed in the future.
+It can be used to get a unique name for this specific image, but is not the actual repository
+digest value.
+</div>
+<pre class="highlight"><code><span class='kd'>public </span>digest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="Image-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/a404051a365811737e26a2b256d309ec34849988/sdk/nodejs/image.ts#L94">property <b>id</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This will have the same value as [imageName], but will be removed in the future.
+</div>
+<pre class="highlight"><code><span class='kd'>public </span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Image-imageName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/a404051a365811737e26a2b256d309ec34849988/sdk/nodejs/image.ts#L87">property <b>imageName</b></a>
 </h4>
@@ -1623,6 +1644,21 @@ requested docker repo [repositoryUrl].  It returns the unique target image name 
 the docker repository.  During preview this will build the image, and return the target image
 name, without pushing. During a normal update, it will do the same, as well as tag and push the
 image.
+
+<h3 class="pdoc-module-header" id="buildAndPushImageAsync" data-link-title="buildAndPushImageAsync">
+    <a href="https://github.com/pulumi/pulumi-docker/blob/a404051a365811737e26a2b256d309ec34849988/sdk/nodejs/docker.ts#L130">
+        function <strong>buildAndPushImageAsync</strong>
+    </a>
+</h3>
+
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Use [buildAndPushImage] instead.  This function loses the Output resource tracking
+information from [pathOrBuild] and [repositoryUrl].  [buildAndPushImage] properly keeps track of
+this in the result.
+</div>
+<pre class="highlight"><code><span class='kd'></span>buildAndPushImageAsync(baseImageName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, pathOrBuild: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#DockerBuild'>DockerBuild</a>&gt;, repositoryUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, logResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>, connectToRegistry?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | () => <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Registry'>Registry</a>&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="CacheFrom" data-link-title="CacheFrom">
     <a href="https://github.com/pulumi/pulumi-docker/blob/a404051a365811737e26a2b256d309ec34849988/sdk/nodejs/docker.ts#L33">

@@ -9,6 +9,7 @@ linktitle: "admissionregistration"
 
 <h3>Modules</h3>
 <ul class="api">
+    <li><a href="v1/"><span class="symbol module"></span>admissionregistration/v1</a></li>
     <li><a href="v1beta1/"><span class="symbol module"></span>admissionregistration/v1beta1</a></li>
 </ul>
 

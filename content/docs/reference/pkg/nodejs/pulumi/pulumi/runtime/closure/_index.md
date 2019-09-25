@@ -37,6 +37,7 @@ linktitle: "closure"
     <li><a href="#SerializedFunction"><span class="symbol api"></span>SerializedFunction</a></li>
     <li><a href="#serializeFunction"><span class="symbol api"></span>serializeFunction</a></li>
     <li><a href="#SerializeFunctionArgs"><span class="symbol api"></span>SerializeFunctionArgs</a></li>
+    <li><a href="#serializeFunctionAsync"><span class="symbol api"></span>serializeFunctionAsync</a></li>
 </ul>
 
 
@@ -173,6 +174,13 @@ Note: this functionality is specifically intended for use by downstream library 
 determining what is needed for a cloud-lambda.  i.e. the aws.serverless.Function or
 azure.serverless.FunctionApp libraries.  In general, other clients should not need to use this
 helper.
+
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Use the [computeCodePaths] overload that takes a [CodePathOptions] instead.
+</div>
+<pre class="highlight"><code><span class='kd'></span>computeCodePaths(extraIncludePaths?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[], extraIncludePackages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[], extraExcludePackages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, asset.Asset | asset.Archive&gt;&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="createFunctionInfoAsync" data-link-title="createFunctionInfoAsync">
     <a href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/runtime/closure/createClosure.ts#L219">
@@ -696,4 +704,17 @@ The resource to log any errors we encounter against.
 
 A function to prevent serialization of certain objects captured during the serialization.  Primarily used to
 prevent potential cycles.
+
+<h3 class="pdoc-module-header" id="serializeFunctionAsync" data-link-title="serializeFunctionAsync">
+    <a href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/runtime/closure/serializeClosure.ts#L100">
+        function <strong>serializeFunctionAsync</strong>
+    </a>
+</h3>
+
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Please use &#39;serializeFunction&#39; instead.
+</div>
+<pre class="highlight"><code><span class='kd'></span>serializeFunctionAsync(func: Function, serialize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</code></pre>
 
