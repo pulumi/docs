@@ -376,5 +376,3 @@ After the upload completes, we'll see that our function comes alive:
 ```bash
  2019-03-10T11:10:48.617-07:00[docsBucket] Hello from Lambda -- got an S3 Object: docsBucket-96458ef/doc1.txt
 ```
-
-## Additional Lambda Resources
