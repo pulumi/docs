@@ -191,6 +191,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_aws.ssm.Association.association_id">
+<code class="sig-name descname">association_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.association_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the SSM association.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ssm.Association.association_name">
 <code class="sig-name descname">association_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.association_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The descriptive name for the association.</p>
@@ -275,6 +281,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>association_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the SSM association.</p></li>
 <li><p><strong>association_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for the association.</p></li>
 <li><p><strong>compliance_severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compliance severity for the association. Can be one of the following: <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> or <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></p></li>
 <li><p><strong>document_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The document version you want to associate with the target(s). Can be a specific version or the default version.</p></li>

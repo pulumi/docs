@@ -193,7 +193,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.AwaitableGetBucketObjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AwaitableGetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">sse_kms_key_id=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect_location=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AwaitableGetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AwaitableGetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">object_lock_legal_hold_status=None</em>, <em class="sig-param">object_lock_mode=None</em>, <em class="sig-param">object_lock_retain_until_date=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">sse_kms_key_id=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect_location=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AwaitableGetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -221,7 +221,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.</p></li>
 <li><p><strong>bucket_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique bucket name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">bucket</span></code>.</p></li>
 <li><p><strong>cors_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A rule of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">Cross-Origin Resource Sharing</a> (documented below).</p></li>
-<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are <em>not</em> recoverable.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean that indicates all objects (including any <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html">locked objects</a>) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are <em>not</em> recoverable.</p></li>
 <li><p><strong>hosted_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints">Route 53 Hosted Zone ID</a> for this bucket’s region.</p></li>
 <li><p><strong>lifecycle_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">object lifecycle management</a> (documented below).</p></li>
 <li><p><strong>loggings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A settings of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html">bucket logging</a> (documented below).</p></li>
@@ -435,7 +435,7 @@ describing redirect behavior and when redirects are applied.</p></li>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Bucket.force_destroy">
 <code class="sig-name descname">force_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Bucket.force_destroy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are <em>not</em> recoverable.</p>
+<dd><p>A boolean that indicates all objects (including any <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html">locked objects</a>) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are <em>not</em> recoverable.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -664,7 +664,8 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>cors_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A rule of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">Cross-Origin Resource Sharing</a> (documented below).</p>
 </p></li>
-<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are <em>not</em> recoverable.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>A boolean that indicates all objects (including any <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html">locked objects</a>) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are <em>not</em> recoverable.</p>
+</p></li>
 <li><p><strong>hosted_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints">Route 53 Hosted Zone ID</a> for this bucket’s region.</p>
 </p></li>
 <li><p><strong>lifecycle_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">object lifecycle management</a> (documented below).</p>
@@ -1158,7 +1159,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.BucketObject">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketObject</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_base64=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">website_redirect=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketObject</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_base64=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">object_lock_legal_hold_status=None</em>, <em class="sig-param">object_lock_mode=None</em>, <em class="sig-param">object_lock_retain_until_date=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">website_redirect=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket object resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1177,12 +1178,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. The only meaningful value is <code class="docutils literal notranslate"><span class="pre">${filemd5(&quot;path/to/file&quot;)}</span></code> (this provider 0.11.12 or later) or <code class="docutils literal notranslate"><span class="pre">${md5(file(&quot;path/to/file&quot;))}</span></code> (this provider 0.11.11 or earlier).
 This attribute is not compatible with KMS encryption, <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> or <code class="docutils literal notranslate"><span class="pre">server_side_encryption</span> <span class="pre">=</span> <span class="pre">&quot;aws:kms&quot;</span></code>.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the object to be deleted by removing any legal hold on any object version.
+Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This value should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> only if the bucket has S3 object lock enabled.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object once it is in the bucket.</p></li>
 <li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the AWS KMS Key ARN to use for object encryption.
 This value is a fully qualified <strong>ARN</strong> of the KMS Key. If using <code class="docutils literal notranslate"><span class="pre">kms.Key</span></code>,
 use the exported <code class="docutils literal notranslate"><span class="pre">arn</span></code> attribute:
 <code class="docutils literal notranslate"><span class="pre">kms_key_id</span> <span class="pre">=</span> <span class="pre">&quot;${aws_kms_key.foo.arn}&quot;</span></code></p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p></li>
+<li><p><strong>object_lock_legal_hold_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds">legal hold</a> status that you want to apply to the specified object. Valid values are <code class="docutils literal notranslate"><span class="pre">ON</span></code> and <code class="docutils literal notranslate"><span class="pre">OFF</span></code>.</p></li>
+<li><p><strong>object_lock_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object lock <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes">retention mode</a> that you want to apply to this object. Valid values are <code class="docutils literal notranslate"><span class="pre">GOVERNANCE</span></code> and <code class="docutils literal notranslate"><span class="pre">COMPLIANCE</span></code>.</p></li>
+<li><p><strong>object_lock_retain_until_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time, in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a>, when this object’s object lock will <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods">expire</a>.</p></li>
 <li><p><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies server-side encryption of the object in S3. Valid values are “<code class="docutils literal notranslate"><span class="pre">AES256</span></code>” and “<code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>”.</p></li>
 <li><p><strong>pulumi.Archive</strong><strong>]</strong><strong>] </strong><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>Union</em><em>[</em><em>pulumi.Asset</em><em>,</em>) – The path to a file that will be read and uploaded as raw bytes for the object content.</p></li>
 <li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the desired <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage Class</a>
@@ -1257,6 +1263,13 @@ This attribute is not compatible with KMS encryption, <code class="docutils lite
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.s3.BucketObject.force_destroy">
+<code class="sig-name descname">force_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.force_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow the object to be deleted by removing any legal hold on any object version.
+Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This value should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> only if the bucket has S3 object lock enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.s3.BucketObject.key">
 <code class="sig-name descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the object once it is in the bucket.</p>
@@ -1275,6 +1288,24 @@ use the exported <code class="docutils literal notranslate"><span class="pre">ar
 <dt id="pulumi_aws.s3.BucketObject.metadata">
 <code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.BucketObject.object_lock_legal_hold_status">
+<code class="sig-name descname">object_lock_legal_hold_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.object_lock_legal_hold_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds">legal hold</a> status that you want to apply to the specified object. Valid values are <code class="docutils literal notranslate"><span class="pre">ON</span></code> and <code class="docutils literal notranslate"><span class="pre">OFF</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.BucketObject.object_lock_mode">
+<code class="sig-name descname">object_lock_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.object_lock_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The object lock <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes">retention mode</a> that you want to apply to this object. Valid values are <code class="docutils literal notranslate"><span class="pre">GOVERNANCE</span></code> and <code class="docutils literal notranslate"><span class="pre">COMPLIANCE</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.BucketObject.object_lock_retain_until_date">
+<code class="sig-name descname">object_lock_retain_until_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketObject.object_lock_retain_until_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time, in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a>, when this object’s object lock will <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods">expire</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1317,7 +1348,7 @@ is enabled.</p>
 
 <dl class="method">
 <dt id="pulumi_aws.s3.BucketObject.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_base64=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_base64=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">object_lock_legal_hold_status=None</em>, <em class="sig-param">object_lock_mode=None</em>, <em class="sig-param">object_lock_retain_until_date=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing BucketObject resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1341,12 +1372,20 @@ properties used to qualify the lookup.</p>
 <li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. The only meaningful value is <code class="docutils literal notranslate"><span class="pre">${filemd5(&quot;path/to/file&quot;)}</span></code> (this provider 0.11.12 or later) or <code class="docutils literal notranslate"><span class="pre">${md5(file(&quot;path/to/file&quot;))}</span></code> (this provider 0.11.11 or earlier).
 This attribute is not compatible with KMS encryption, <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> or <code class="docutils literal notranslate"><span class="pre">server_side_encryption</span> <span class="pre">=</span> <span class="pre">&quot;aws:kms&quot;</span></code>.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the object to be deleted by removing any legal hold on any object version.
+Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This value should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> only if the bucket has S3 object lock enabled.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object once it is in the bucket.</p></li>
 <li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the AWS KMS Key ARN to use for object encryption.
 This value is a fully qualified <strong>ARN</strong> of the KMS Key. If using <code class="docutils literal notranslate"><span class="pre">kms.Key</span></code>,
 use the exported <code class="docutils literal notranslate"><span class="pre">arn</span></code> attribute:
 <code class="docutils literal notranslate"><span class="pre">kms_key_id</span> <span class="pre">=</span> <span class="pre">&quot;${aws_kms_key.foo.arn}&quot;</span></code></p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p></li>
+<li><p><strong>object_lock_legal_hold_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds">legal hold</a> status that you want to apply to the specified object. Valid values are <code class="docutils literal notranslate"><span class="pre">ON</span></code> and <code class="docutils literal notranslate"><span class="pre">OFF</span></code>.</p>
+</p></li>
+<li><p><strong>object_lock_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The object lock <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes">retention mode</a> that you want to apply to this object. Valid values are <code class="docutils literal notranslate"><span class="pre">GOVERNANCE</span></code> and <code class="docutils literal notranslate"><span class="pre">COMPLIANCE</span></code>.</p>
+</p></li>
+<li><p><strong>object_lock_retain_until_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The date and time, in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a>, when this object’s object lock will <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods">expire</a>.</p>
+</p></li>
 <li><p><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies server-side encryption of the object in S3. Valid values are “<code class="docutils literal notranslate"><span class="pre">AES256</span></code>” and “<code class="docutils literal notranslate"><span class="pre">aws:kms</span></code>”.</p></li>
 <li><p><strong>pulumi.Archive</strong><strong>]</strong><strong>] </strong><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>Union</em><em>[</em><em>pulumi.Asset</em><em>,</em>) – The path to a file that will be read and uploaded as raw bytes for the object content.</p></li>
 <li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the desired <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage Class</a>
@@ -1672,7 +1711,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.GetBucketObjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">GetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">sse_kms_key_id=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect_location=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">GetBucketObjectResult</code><span class="sig-paren">(</span><em class="sig-param">body=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">object_lock_legal_hold_status=None</em>, <em class="sig-param">object_lock_mode=None</em>, <em class="sig-param">object_lock_retain_until_date=None</em>, <em class="sig-param">range=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">sse_kms_key_id=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect_location=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBucketObject.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.GetBucketObjectResult.body">
@@ -1744,6 +1783,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.GetBucketObjectResult.metadata">
 <code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of metadata stored with the object in S3</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.GetBucketObjectResult.object_lock_legal_hold_status">
+<code class="sig-name descname">object_lock_legal_hold_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult.object_lock_legal_hold_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether this object has an active <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds">legal hold</a>. This field is only returned if you have permission to view an object’s legal hold status.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.GetBucketObjectResult.object_lock_mode">
+<code class="sig-name descname">object_lock_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult.object_lock_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The object lock <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes">retention mode</a> currently in place for this object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.GetBucketObjectResult.object_lock_retain_until_date">
+<code class="sig-name descname">object_lock_retain_until_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketObjectResult.object_lock_retain_until_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time when this object’s object lock will expire.</p>
 </dd></dl>
 
 <dl class="attribute">

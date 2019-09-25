@@ -1024,6 +1024,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>command</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Python version being used to execute a Python shell job. Allowed values are 2 or 3.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptLocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the S3 path to a script that executes a job.</p></li>
 </ul>
 <p>The <strong>execution_property</strong> object supports the following:</p>
@@ -1045,6 +1046,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The command of the job. Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Python version being used to execute a Python shell job. Allowed values are 2 or 3.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptLocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the S3 path to a script that executes a job.</p></li>
 </ul>
 </dd></dl>
@@ -1142,6 +1144,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>command</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Python version being used to execute a Python shell job. Allowed values are 2 or 3.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scriptLocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the S3 path to a script that executes a job.</p></li>
 </ul>
 <p>The <strong>execution_property</strong> object supports the following:</p>
