@@ -433,6 +433,285 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_openstack.images.ImageAccess">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">ImageAccess</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">member_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages members for the shared OpenStack Glance V2 Image within the source
+project, which owns the Image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The image ID.</p></li>
+<li><p><strong>member_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The member ID, e.g. the target project ID.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Glance client.
+A Glance client is needed to manage Image members. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code>
+argument of the provider is used. Changing this creates a new resource.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The member proposal status. Optional if admin wants to
+force the member proposal acceptance. Can either be <code class="docutils literal notranslate"><span class="pre">accepted</span></code>, <code class="docutils literal notranslate"><span class="pre">rejected</span></code> or
+<code class="docutils literal notranslate"><span class="pre">pending</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">pending</span></code>. Foridden for non-admin users.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccess.created_at">
+<code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the image access was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccess.image_id">
+<code class="sig-name descname">image_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.image_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The image ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccess.member_id">
+<code class="sig-name descname">member_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.member_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The member ID, e.g. the target project ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccess.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to obtain the V2 Glance client.
+A Glance client is needed to manage Image members. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code>
+argument of the provider is used. Changing this creates a new resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccess.schema">
+<code class="sig-name descname">schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>The member schema.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccess.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The member proposal status. Optional if admin wants to
+force the member proposal acceptance. Can either be <code class="docutils literal notranslate"><span class="pre">accepted</span></code>, <code class="docutils literal notranslate"><span class="pre">rejected</span></code> or
+<code class="docutils literal notranslate"><span class="pre">pending</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">pending</span></code>. Foridden for non-admin users.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccess.updated_at">
+<code class="sig-name descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the image access was last updated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.images.ImageAccess.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">member_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ImageAccess resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the image access was created.</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The image ID.</p></li>
+<li><p><strong>member_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The member ID, e.g. the target project ID.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Glance client.
+A Glance client is needed to manage Image members. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code>
+argument of the provider is used. Changing this creates a new resource.</p></li>
+<li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The member schema.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The member proposal status. Optional if admin wants to
+force the member proposal acceptance. Can either be <code class="docutils literal notranslate"><span class="pre">accepted</span></code>, <code class="docutils literal notranslate"><span class="pre">rejected</span></code> or
+<code class="docutils literal notranslate"><span class="pre">pending</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">pending</span></code>. Foridden for non-admin users.</p></li>
+<li><p><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the image access was last updated.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.images.ImageAccess.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.images.ImageAccess.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccess.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.images.ImageAccessAccept">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">ImageAccessAccept</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">member_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages memberships status for the shared OpenStack Glance V2 Image within the
+destination project, which has a member proposal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The proposed image ID.</p></li>
+<li><p><strong>member_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The member ID, e.g. the target project ID. Optional
+for admin accounts. Defaults to the current scope project ID.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Glance client.
+A Glance client is needed to manage Image memberships. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+membership.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The membership proposal status. Can either be
+<code class="docutils literal notranslate"><span class="pre">accepted</span></code>, <code class="docutils literal notranslate"><span class="pre">rejected</span></code> or <code class="docutils literal notranslate"><span class="pre">pending</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_accept_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_accept_v2.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccessAccept.created_at">
+<code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the image membership was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccessAccept.image_id">
+<code class="sig-name descname">image_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.image_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The proposed image ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccessAccept.member_id">
+<code class="sig-name descname">member_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.member_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The member ID, e.g. the target project ID. Optional
+for admin accounts. Defaults to the current scope project ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccessAccept.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to obtain the V2 Glance client.
+A Glance client is needed to manage Image memberships. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+membership.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccessAccept.schema">
+<code class="sig-name descname">schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>The membership schema.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccessAccept.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The membership proposal status. Can either be
+<code class="docutils literal notranslate"><span class="pre">accepted</span></code>, <code class="docutils literal notranslate"><span class="pre">rejected</span></code> or <code class="docutils literal notranslate"><span class="pre">pending</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.ImageAccessAccept.updated_at">
+<code class="sig-name descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the image membership was last updated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.images.ImageAccessAccept.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">member_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">updated_at=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ImageAccessAccept resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the image membership was created.</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The proposed image ID.</p></li>
+<li><p><strong>member_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The member ID, e.g. the target project ID. Optional
+for admin accounts. Defaults to the current scope project ID.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Glance client.
+A Glance client is needed to manage Image memberships. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+membership.</p></li>
+<li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The membership schema.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The membership proposal status. Can either be
+<code class="docutils literal notranslate"><span class="pre">accepted</span></code>, <code class="docutils literal notranslate"><span class="pre">rejected</span></code> or <code class="docutils literal notranslate"><span class="pre">pending</span></code>.</p></li>
+<li><p><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the image membership was last updated.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_accept_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_accept_v2.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.images.ImageAccessAccept.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.images.ImageAccessAccept.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.ImageAccessAccept.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pulumi_openstack.images.get_image">
 <code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param">member_status=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size_max=None</em>, <em class="sig-param">size_min=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">visibility=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.get_image" title="Permalink to this definition">¶</a></dt>
