@@ -46,6 +46,7 @@ linktitle: "lambda"
     <li><a href="#createFunctionFromEventHandler"><span class="symbol api"></span>createFunctionFromEventHandler</a></li>
     <li><a href="#CustomRuntime"><span class="symbol api"></span>CustomRuntime</a></li>
     <li><a href="#DotnetCore1d0Runtime"><span class="symbol api"></span>DotnetCore1d0Runtime</a></li>
+    <li><a href="#DotnetCore2d0Runtime"><span class="symbol api"></span>DotnetCore2d0Runtime</a></li>
     <li><a href="#DotnetCore2d1Runtime"><span class="symbol api"></span>DotnetCore2d1Runtime</a></li>
     <li><a href="#EventHandler"><span class="symbol api"></span>EventHandler</a></li>
     <li><a href="#EventSourceMappingArgs"><span class="symbol api"></span>EventSourceMappingArgs</a></li>
@@ -64,7 +65,11 @@ linktitle: "lambda"
     <li><a href="#LayerVersionArgs"><span class="symbol api"></span>LayerVersionArgs</a></li>
     <li><a href="#LayerVersionState"><span class="symbol api"></span>LayerVersionState</a></li>
     <li><a href="#NodeJS10dXRuntime"><span class="symbol api"></span>NodeJS10dXRuntime</a></li>
+    <li><a href="#NodeJS4d3EdgeRuntime"><span class="symbol api"></span>NodeJS4d3EdgeRuntime</a></li>
+    <li><a href="#NodeJS4d3Runtime"><span class="symbol api"></span>NodeJS4d3Runtime</a></li>
+    <li><a href="#NodeJS6d10Runtime"><span class="symbol api"></span>NodeJS6d10Runtime</a></li>
     <li><a href="#NodeJS8d10Runtime"><span class="symbol api"></span>NodeJS8d10Runtime</a></li>
+    <li><a href="#NodeJSRuntime"><span class="symbol api"></span>NodeJSRuntime</a></li>
     <li><a href="#PermissionArgs"><span class="symbol api"></span>PermissionArgs</a></li>
     <li><a href="#PermissionState"><span class="symbol api"></span>PermissionState</a></li>
     <li><a href="#Python2d7Runtime"><span class="symbol api"></span>Python2d7Runtime</a></li>
@@ -2122,6 +2127,17 @@ time you create a Lambda function and you can change it later.
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> DotnetCore1d0Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;dotnetcore1.0&#34;</span>;</code></pre>
+<h3 class="pdoc-module-header" id="DotnetCore2d0Runtime" data-link-title="DotnetCore2d0Runtime">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/lambda/runtimes.ts#L52">
+        let <strong>DotnetCore2d0Runtime</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+No longer supported
+</div>
+<pre class="highlight"><code><span class='kd'>let</span> DotnetCore2d0Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;dotnetcore2.0&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DotnetCore2d1Runtime" data-link-title="DotnetCore2d1Runtime">
     <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/lambda/runtimes.ts#L37">
         let <strong>DotnetCore2d1Runtime</strong>
@@ -3382,6 +3398,39 @@ This Lamba Layer version.
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> NodeJS10dXRuntime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs10.x&#34;</span>;</code></pre>
+<h3 class="pdoc-module-header" id="NodeJS4d3EdgeRuntime" data-link-title="NodeJS4d3EdgeRuntime">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/lambda/runtimes.ts#L49">
+        let <strong>NodeJS4d3EdgeRuntime</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+No longer supported
+</div>
+<pre class="highlight"><code><span class='kd'>let</span> NodeJS4d3EdgeRuntime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs4.3-edge&#34;</span>;</code></pre>
+<h3 class="pdoc-module-header" id="NodeJS4d3Runtime" data-link-title="NodeJS4d3Runtime">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/lambda/runtimes.ts#L50">
+        let <strong>NodeJS4d3Runtime</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+No longer supported
+</div>
+<pre class="highlight"><code><span class='kd'>let</span> NodeJS4d3Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs4.3&#34;</span>;</code></pre>
+<h3 class="pdoc-module-header" id="NodeJS6d10Runtime" data-link-title="NodeJS6d10Runtime">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/lambda/runtimes.ts#L51">
+        let <strong>NodeJS6d10Runtime</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+No longer supported
+</div>
+<pre class="highlight"><code><span class='kd'>let</span> NodeJS6d10Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs6.10&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NodeJS8d10Runtime" data-link-title="NodeJS8d10Runtime">
     <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/lambda/runtimes.ts#L41">
         let <strong>NodeJS8d10Runtime</strong>
@@ -3389,6 +3438,17 @@ This Lamba Layer version.
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> NodeJS8d10Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs8.10&#34;</span>;</code></pre>
+<h3 class="pdoc-module-header" id="NodeJSRuntime" data-link-title="NodeJSRuntime">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/lambda/runtimes.ts#L48">
+        let <strong>NodeJSRuntime</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+No longer supported
+</div>
+<pre class="highlight"><code><span class='kd'>let</span> NodeJSRuntime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="PermissionArgs" data-link-title="PermissionArgs">
     <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/lambda/permission.ts#L298">
         interface <strong>PermissionArgs</strong>

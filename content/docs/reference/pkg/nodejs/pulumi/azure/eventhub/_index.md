@@ -15,6 +15,12 @@ linktitle: "eventhub"
 
 
 
+<h3>namespace <strong>events</strong></h3>
+<ul class="api">
+<li><a href="#onGridBlobCreated"><span class="symbol api"></span>onGridBlobCreated</a></li>
+<li><a href="#onGridBlobDeleted"><span class="symbol api"></span>onGridBlobDeleted</a></li>
+<li><a href="#onResourceGroupEvent"><span class="symbol api"></span>onResourceGroupEvent</a></li>
+</ul>
 
 <h3>Resources</h3>
 <ul class="api">
@@ -54,6 +60,11 @@ linktitle: "eventhub"
     <li><a href="#DefaultConsumerGroup"><span class="symbol api"></span>DefaultConsumerGroup</a></li>
     <li><a href="#DomainArgs"><span class="symbol api"></span>DomainArgs</a></li>
     <li><a href="#DomainState"><span class="symbol api"></span>DomainState</a></li>
+    <li><a href="#EventGridCallbackSubscriptionArgs"><span class="symbol api"></span>EventGridCallbackSubscriptionArgs</a></li>
+    <li><a href="#EventGridContext"><span class="symbol api"></span>EventGridContext</a></li>
+    <li><a href="#EventGridEvent"><span class="symbol api"></span>EventGridEvent</a></li>
+    <li><a href="#EventGridFunctionArgs"><span class="symbol api"></span>EventGridFunctionArgs</a></li>
+    <li><a href="#EventGridScope"><span class="symbol api"></span>EventGridScope</a></li>
     <li><a href="#EventGridTopicArgs"><span class="symbol api"></span>EventGridTopicArgs</a></li>
     <li><a href="#EventGridTopicState"><span class="symbol api"></span>EventGridTopicState</a></li>
     <li><a href="#EventHubArgs"><span class="symbol api"></span>EventHubArgs</a></li>
@@ -82,6 +93,7 @@ linktitle: "eventhub"
     <li><a href="#GetNamespaceResult"><span class="symbol api"></span>GetNamespaceResult</a></li>
     <li><a href="#GetServiceBusNamespaceArgs"><span class="symbol api"></span>GetServiceBusNamespaceArgs</a></li>
     <li><a href="#GetServiceBusNamespaceResult"><span class="symbol api"></span>GetServiceBusNamespaceResult</a></li>
+    <li><a href="#GetTopicFunctionArgs"><span class="symbol api"></span>GetTopicFunctionArgs</a></li>
     <li><a href="#NamespaceArgs"><span class="symbol api"></span>NamespaceArgs</a></li>
     <li><a href="#NamespaceAuthorizationRuleArgs"><span class="symbol api"></span>NamespaceAuthorizationRuleArgs</a></li>
     <li><a href="#NamespaceAuthorizationRuleState"><span class="symbol api"></span>NamespaceAuthorizationRuleState</a></li>
@@ -89,7 +101,15 @@ linktitle: "eventhub"
     <li><a href="#QueueArgs"><span class="symbol api"></span>QueueArgs</a></li>
     <li><a href="#QueueAuthorizationRuleArgs"><span class="symbol api"></span>QueueAuthorizationRuleArgs</a></li>
     <li><a href="#QueueAuthorizationRuleState"><span class="symbol api"></span>QueueAuthorizationRuleState</a></li>
+    <li><a href="#QueueEventSubscriptionArgs"><span class="symbol api"></span>QueueEventSubscriptionArgs</a></li>
     <li><a href="#QueueState"><span class="symbol api"></span>QueueState</a></li>
+    <li><a href="#ResourceGroupEventGridCallbackSubscriptionArgs"><span class="symbol api"></span>ResourceGroupEventGridCallbackSubscriptionArgs</a></li>
+    <li><a href="#ServiceBusCallback"><span class="symbol api"></span>ServiceBusCallback</a></li>
+    <li><a href="#ServiceBusContext"><span class="symbol api"></span>ServiceBusContext</a></li>
+    <li><a href="#ServiceBusFunctionArgs"><span class="symbol api"></span>ServiceBusFunctionArgs</a></li>
+    <li><a href="#ServiceBusHostExtensions"><span class="symbol api"></span>ServiceBusHostExtensions</a></li>
+    <li><a href="#ServiceBusHostSettings"><span class="symbol api"></span>ServiceBusHostSettings</a></li>
+    <li><a href="#StorageAccountEventGridCallbackSubscriptionArgs"><span class="symbol api"></span>StorageAccountEventGridCallbackSubscriptionArgs</a></li>
     <li><a href="#SubscriptionArgs"><span class="symbol api"></span>SubscriptionArgs</a></li>
     <li><a href="#SubscriptionRuleArgs"><span class="symbol api"></span>SubscriptionRuleArgs</a></li>
     <li><a href="#SubscriptionRuleState"><span class="symbol api"></span>SubscriptionRuleState</a></li>
@@ -97,9 +117,44 @@ linktitle: "eventhub"
     <li><a href="#TopicArgs"><span class="symbol api"></span>TopicArgs</a></li>
     <li><a href="#TopicAuthorizationRuleArgs"><span class="symbol api"></span>TopicAuthorizationRuleArgs</a></li>
     <li><a href="#TopicAuthorizationRuleState"><span class="symbol api"></span>TopicAuthorizationRuleState</a></li>
+    <li><a href="#TopicEventSubscriptionArgs"><span class="symbol api"></span>TopicEventSubscriptionArgs</a></li>
     <li><a href="#TopicState"><span class="symbol api"></span>TopicState</a></li>
 </ul>
 
+<h2 id="events" data-link-title="events">namespace <strong>events</strong></h2>
+<h3 class="pdoc-module-header" id="onGridBlobCreated" data-link-title="onGridBlobCreated">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L359">
+        const <strong>onGridBlobCreated</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This function has moved to the [eventgrid] module.
+</div>
+<pre class="highlight"><code><span class='kd'>const</span> onGridBlobCreated: <a href='#onGridBlobCreated'>onGridBlobCreated</a> = <span class='s2'> eventgrid.events.onGridBlobCreated</span>;</code></pre>
+<h3 class="pdoc-module-header" id="onGridBlobDeleted" data-link-title="onGridBlobDeleted">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L364">
+        const <strong>onGridBlobDeleted</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This function has moved to the [eventgrid] module.
+</div>
+<pre class="highlight"><code><span class='kd'>const</span> onGridBlobDeleted: <a href='#onGridBlobDeleted'>onGridBlobDeleted</a> = <span class='s2'> eventgrid.events.onGridBlobDeleted</span>;</code></pre>
+<h3 class="pdoc-module-header" id="onResourceGroupEvent" data-link-title="onResourceGroupEvent">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L369">
+        const <strong>onResourceGroupEvent</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This function has moved to the [eventgrid] module.
+</div>
+<pre class="highlight"><code><span class='kd'>const</span> onResourceGroupEvent: <a href='#onResourceGroupEvent'>onResourceGroupEvent</a> = <span class='s2'> eventgrid.events.onResourceGroupEvent</span>;</code></pre>
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AuthorizationRule" data-link-title="AuthorizationRule">
@@ -2340,6 +2395,17 @@ Create a Queue resource with the given unique name, arguments, and options.
 Get an existing Queue resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
+<h4 class="pdoc-member-header" id="Queue-getEventFunction">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L278">method <b>getEventFunction</b></a>
+</h4>
+
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+The [Queue] type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | appservice.CallbackFunctionArgs&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#ServiceBusFunction'>ServiceBusFunction</a></code></pre>
+
 <h4 class="pdoc-member-header" id="Queue-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/queue.ts#L41">method <b>getProvider</b></a>
 </h4>
@@ -2357,6 +2423,17 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of Queue.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="Queue-onEvent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L272">method <b>onEvent</b></a>
+</h4>
+
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+The [Queue] type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#QueueEventSubscription'>QueueEventSubscription</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Queue-autoDeleteOnIdle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/queue.ts#L72">property <b>autoDeleteOnIdle</b></a>
@@ -3255,6 +3332,17 @@ Create a Topic resource with the given unique name, arguments, and options.
 Get an existing Topic resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
+<h4 class="pdoc-member-header" id="Topic-getEventFunction">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L307">method <b>getEventFunction</b></a>
+</h4>
+
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+The [Topic] type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GetTopicFunctionArgs'>GetTopicFunctionArgs</a>): <a href='#ServiceBusFunction'>ServiceBusFunction</a></code></pre>
+
 <h4 class="pdoc-member-header" id="Topic-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/topic.ts#L43">method <b>getProvider</b></a>
 </h4>
@@ -3272,6 +3360,17 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of Topic.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="Topic-onEvent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L301">method <b>onEvent</b></a>
+</h4>
+
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+The [Topic] type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#TopicEventSubscription'>TopicEventSubscription</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Topic-autoDeleteOnIdle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/topic.ts#L74">property <b>autoDeleteOnIdle</b></a>
@@ -4140,6 +4239,61 @@ The name of the resource group in which the EventGrid Domain exists. Changing th
 
 A mapping of tags to assign to the resource.
 
+<h3 class="pdoc-module-header" id="EventGridCallbackSubscriptionArgs" data-link-title="EventGridCallbackSubscriptionArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L335">
+        type <strong>EventGridCallbackSubscriptionArgs</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [eventgrid] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> EventGridCallbackSubscriptionArgs = eventgrid.EventGridCallbackSubscriptionArgs&lt;T&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="EventGridContext" data-link-title="EventGridContext">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L323">
+        type <strong>EventGridContext</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [eventgrid] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> EventGridContext = eventgrid.EventGridContext&lt;T&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="EventGridEvent" data-link-title="EventGridEvent">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L318">
+        type <strong>EventGridEvent</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [eventgrid] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> EventGridEvent = eventgrid.EventGridEvent&lt;T&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="EventGridFunctionArgs" data-link-title="EventGridFunctionArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L328">
+        type <strong>EventGridFunctionArgs</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [eventgrid] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> EventGridFunctionArgs = eventgrid.EventGridFunctionArgs&lt;T&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="EventGridScope" data-link-title="EventGridScope">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L340">
+        type <strong>EventGridScope</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [eventgrid] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> EventGridScope = eventgrid.EventGridScope;</code></pre>
 <h3 class="pdoc-module-header" id="EventGridTopicArgs" data-link-title="EventGridTopicArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/eventGridTopic.ts#L172">
         interface <strong>EventGridTopicArgs</strong>
@@ -6326,6 +6480,17 @@ The Tier used for the ServiceBus Namespace.
 
 A mapping of tags assigned to the resource.
 
+<h3 class="pdoc-module-header" id="GetTopicFunctionArgs" data-link-title="GetTopicFunctionArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L289">
+        type <strong>GetTopicFunctionArgs</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> GetTopicFunctionArgs = servicebus.GetTopicFunctionArgs;</code></pre>
 <h3 class="pdoc-module-header" id="NamespaceArgs" data-link-title="NamespaceArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/namespace.ts#L212">
         interface <strong>NamespaceArgs</strong>
@@ -6952,6 +7117,17 @@ The Secondary Key for the Authorization Rule.
 
 Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
 
+<h3 class="pdoc-module-header" id="QueueEventSubscriptionArgs" data-link-title="QueueEventSubscriptionArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L265">
+        type <strong>QueueEventSubscriptionArgs</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> QueueEventSubscriptionArgs = servicebus.QueueEventSubscriptionArgs;</code></pre>
 <h3 class="pdoc-module-header" id="QueueState" data-link-title="QueueState">
     <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/queue.ts#L220">
         interface <strong>QueueState</strong>
@@ -7112,6 +7288,83 @@ create the namespace. Changing this forces a new resource to be created.
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportOrdering?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="ResourceGroupEventGridCallbackSubscriptionArgs" data-link-title="ResourceGroupEventGridCallbackSubscriptionArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L350">
+        type <strong>ResourceGroupEventGridCallbackSubscriptionArgs</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [eventgrid] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> ResourceGroupEventGridCallbackSubscriptionArgs = eventgrid.ResourceGroupEventGridCallbackSubscriptionArgs;</code></pre>
+<h3 class="pdoc-module-header" id="ServiceBusCallback" data-link-title="ServiceBusCallback">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L255">
+        type <strong>ServiceBusCallback</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> ServiceBusCallback = servicebus.ServiceBusCallback;</code></pre>
+<h3 class="pdoc-module-header" id="ServiceBusContext" data-link-title="ServiceBusContext">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L240">
+        type <strong>ServiceBusContext</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> ServiceBusContext = servicebus.ServiceBusContext;</code></pre>
+<h3 class="pdoc-module-header" id="ServiceBusFunctionArgs" data-link-title="ServiceBusFunctionArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L260">
+        type <strong>ServiceBusFunctionArgs</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> ServiceBusFunctionArgs = servicebus.ServiceBusFunctionArgs;</code></pre>
+<h3 class="pdoc-module-header" id="ServiceBusHostExtensions" data-link-title="ServiceBusHostExtensions">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L245">
+        type <strong>ServiceBusHostExtensions</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> ServiceBusHostExtensions = servicebus.ServiceBusHostExtensions;</code></pre>
+<h3 class="pdoc-module-header" id="ServiceBusHostSettings" data-link-title="ServiceBusHostSettings">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L250">
+        type <strong>ServiceBusHostSettings</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> ServiceBusHostSettings = servicebus.ServiceBusHostSettings;</code></pre>
+<h3 class="pdoc-module-header" id="StorageAccountEventGridCallbackSubscriptionArgs" data-link-title="StorageAccountEventGridCallbackSubscriptionArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L345">
+        type <strong>StorageAccountEventGridCallbackSubscriptionArgs</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [eventgrid] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> StorageAccountEventGridCallbackSubscriptionArgs = eventgrid.StorageAccountEventGridCallbackSubscriptionArgs&lt;T&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SubscriptionArgs" data-link-title="SubscriptionArgs">
     <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/subscription.ts#L289">
         interface <strong>SubscriptionArgs</strong>
@@ -7854,6 +8107,17 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 
 Specifies the name of the ServiceBus Topic. Changing this forces a new resource to be created.
 
+<h3 class="pdoc-module-header" id="TopicEventSubscriptionArgs" data-link-title="TopicEventSubscriptionArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/zMixins.ts#L294">
+        type <strong>TopicEventSubscriptionArgs</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+This type has moved to the [servicebus] module.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> TopicEventSubscriptionArgs = servicebus.TopicAuthorizationRuleArgs;</code></pre>
 <h3 class="pdoc-module-header" id="TopicState" data-link-title="TopicState">
     <a href="https://github.com/pulumi/pulumi-azure/blob/18ca42dc2b387b1266e070d028c8c5387e463b92/sdk/nodejs/eventhub/topic.ts#L210">
         interface <strong>TopicState</strong>

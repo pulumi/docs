@@ -16,9 +16,161 @@ linktitle: "serverless"
 
 
 
+<h3>Resources</h3>
+<ul class="api">
+    <li><a href="#Function"><span class="symbol resource"></span>Function</a></li>
+</ul>
+
+
+<h3>Others</h3>
+<ul class="api">
+    <li><a href="#Context"><span class="symbol api"></span>Context</a></li>
+    <li><a href="#FunctionOptions"><span class="symbol api"></span>FunctionOptions</a></li>
+    <li><a href="#Handler"><span class="symbol api"></span>Handler</a></li>
+    <li><a href="#HandlerFactory"><span class="symbol api"></span>HandlerFactory</a></li>
+</ul>
+
+
+<h2 id="resources">Resources</h2>
+<h3 class="pdoc-module-header" id="Function" data-link-title="Function">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L94">
+        Resource <strong>Function</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Use [lambda.CallbackFunction] instead.
+</div>
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Function</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
+
+Function is a higher-level API for creating and managing AWS Lambda Function resources
+implemented by a Pulumi lambda expression and with a set of attached policies.
+
+<h4 class="pdoc-member-header" id="Function-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L97"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Function(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, options: <a href='#FunctionOptions'>FunctionOptions</a>, func?: <a href='#Handler'>Handler</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a>)</code></pre>
+
+* `func` Deprecated.  Pass the function as [options.func] or [options.factoryFunc] instead.
+
+<h4 class="pdoc-member-header" id="Function-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L94">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="Function-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L94">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="Function-registerOutputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L94">method <b>registerOutputs</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="Function-lambda">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L96">property <b>lambda</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>lambda: lambda.Function;</code></pre>
+<h4 class="pdoc-member-header" id="Function-options">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L95">property <b>options</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>options: <a href='#FunctionOptions'>FunctionOptions</a>;</code></pre>
+<h4 class="pdoc-member-header" id="Function-role">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L97">property <b>role</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>role: <a href='#Role'>Role</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="Function-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L94">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 
 
+<h2 id="apis">Others</h2>
+<h3 class="pdoc-module-header" id="Context" data-link-title="Context">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L23">
+        type <strong>Context</strong>
+    </a>
+</h3>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Use [aws.lambda.Context] instead.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> Context = lambda.Context;</code></pre>
+<h3 class="pdoc-module-header" id="FunctionOptions" data-link-title="FunctionOptions">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L51">
+        type <strong>FunctionOptions</strong>
+    </a>
+</h3>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Use [aws.lambda.FunctionOptions] instead.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> FunctionOptions = utils.Overwrite&lt;lambda.CallbackFunctionArgs&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;, {
+    excludePackages: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
+    factoryFunc: <a href='#HandlerFactory'>HandlerFactory</a>;
+    func: <a href='#Handler'>Handler</a>;
+    includePackages: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
+    includePaths: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
+}&gt;;</code></pre>
+
+FunctionOptions provides configuration options for the serverless Function.  It is effectively
+equivalent to [aws.lambda.FunctionArgs] except with a few important differences documented at the
+property level.  For example, [role] is an actual iam.Role instance, and not an ARN. Properties
+like [runtime] are now optional.  And some properties (like [code]) are entirely disallowed.
+
+<h3 class="pdoc-module-header" id="Handler" data-link-title="Handler">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L31">
+        type <strong>Handler</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Use [aws.lambda.Callback] instead.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> Handler = lambda.Callback&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</code></pre>
+
+[Handler] is the signature for a serverless function that will be invoked each time the AWS
+Lambda is invoked.
+
+<h3 class="pdoc-module-header" id="HandlerFactory" data-link-title="HandlerFactory">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/serverless/function.ts#L41">
+        type <strong>HandlerFactory</strong>
+    </a>
+</h3>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Use [aws.lambda.CallbackFactory] instead.
+</div>
+<pre class="highlight"><code><span class='kd'>type</span> HandlerFactory = () => <a href='#Handler'>Handler</a>;</code></pre>
+
+HandlerFactory is the signature for a function that will be called once to produce the serverless
+function that AWS Lambda will invoke.  It can be used to initialize expensive state once that can
+then be used across all invocations of the Lambda (as long as the Lambda is using the same warm
+node instance).
 
