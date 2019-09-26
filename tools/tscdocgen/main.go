@@ -487,10 +487,47 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		}
 	}
 
+	hasModules := len(modules) > 0
+	hasMembers := len(members) > 0
+	hasNamespaces := len(namespaces) > 0
+	hasResources := len(resources) > 0
+	hasDataSources := len(dataSources) > 0
+
+	metaDescription := "Explore "
+	components := make([]string, 0, 0)
+	if hasModules {
+		components = append(components, "modules")
+	}
+	if hasMembers {
+		components = append(components, "members")
+	}
+	if hasNamespaces {
+		components = append(components, "namespaces")
+	}
+	if hasResources {
+		components = append(components, "resources")
+	}
+	if hasDataSources {
+		components = append(components, "data sources")
+	}
+
+	if !hasModules && !hasMembers && !hasNamespaces && !hasResources && !hasDataSources {
+		metaDescription = linktitle
+	} else {
+		metaDescription += strings.Join(components, ", ")
+	}
+
+	if root {
+		metaDescription += " for " + linktitle + "."
+	} else {
+		metaDescription += " for " + linktitle + " in the " + e.pkgname + " package."
+	}
+
 	// To generate the code, simply render the source Mustache template, using the right set of arguments.
 	if err = indexTemplate.FRender(f, map[string]interface{}{
 		"Title":                     title,
 		"LinkTitle":                 linktitle,
+		"MetaDescription":           metaDescription,
 		"RepoURL":                   e.repoURL,
 		"Package":                   pkg,
 		"PackageName":               e.pkgname,
@@ -498,16 +535,16 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		"PackageVar":                pkgvar,
 		"Files":                     files,
 		"Modules":                   modules,
-		"HasModules":                len(modules) > 0,
+		"HasModules":                hasModules,
 		"Members":                   members,
-		"HasMembers":                len(members) > 0,
+		"HasMembers":                hasMembers,
 		"Namespaces":                namespaces,
-		"HasNamespaces":             len(namespaces) > 0,
+		"HasNamespaces":             hasNamespaces,
 		"Resources":                 resources,
-		"HasResources":              len(resources) > 0,
+		"HasResources":              hasResources,
 		"DataSources":               dataSources,
-		"HasDataSources":            len(dataSources) > 0,
-		"HasResourcesOrDataSources": len(resources) > 0 || len(dataSources) > 0,
+		"HasDataSources":            hasDataSources,
+		"HasResourcesOrDataSources": hasResources || hasDataSources,
 		"Others":                    others,
 		"HasOthers":                 len(others) > 0,
 	}); err != nil {
