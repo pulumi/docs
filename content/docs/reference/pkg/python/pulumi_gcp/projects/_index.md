@@ -55,12 +55,27 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMAuditConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.projects.</code><code class="sig-name descname">IAMAuditConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audit_log_configs=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMAuditConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IAMAuditConfig resource with the given unique name, props, and options.</p>
+<dd><p>Four different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code>: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the project are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the project are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>: Authoritative for a given service. Updates the IAM policy to enable audit logging for the given service.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>audit_log_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
+Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
+will not be inferred from the provider.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_project_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p></li>
 </ul>
 </dd>
 </dl>
@@ -69,6 +84,39 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_audit_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_audit_config.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.projects.IAMAuditConfig.audit_log_configs">
+<code class="sig-name descname">audit_log_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMAuditConfig.audit_log_configs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.projects.IAMAuditConfig.etag">
+<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMAuditConfig.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The etag of the project’s IAM policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.projects.IAMAuditConfig.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMAuditConfig.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
+Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
+will not be inferred from the provider.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.projects.IAMAuditConfig.service">
+<code class="sig-name descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMAuditConfig.service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_project_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.projects.IAMAuditConfig.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audit_log_configs=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMAuditConfig.get" title="Permalink to this definition">¶</a></dt>
@@ -80,6 +128,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>audit_log_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the project’s IAM policy.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
+Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
+will not be inferred from the provider.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service which will be enabled for audit logging.  The special value <code class="docutils literal notranslate"><span class="pre">allServices</span></code> covers all services.  Note that if there are google_project_iam_audit_config resources covering both <code class="docutils literal notranslate"><span class="pre">allServices</span></code> and a specific service then the union of the two AuditConfigs is used for that service: the <code class="docutils literal notranslate"><span class="pre">log_types</span></code> specified in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are enabled, and the <code class="docutils literal notranslate"><span class="pre">exempted_members</span></code> in each <code class="docutils literal notranslate"><span class="pre">audit_log_config</span></code> are exempted.</p></li>
 </ul>
 </dd>
 </dl>
@@ -88,6 +142,9 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">exemptedMembers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_audit_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/project_iam_audit_config.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -131,14 +188,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.projects.</code><code class="sig-name descname">IAMBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
+<dd><p>Four different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code>: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the project are preserved.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the project are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>: Authoritative for a given service. Updates the IAM policy to enable audit logging for the given service.</p></li>
 </ul>
 <blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> or they will fight over what your policy should be.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
 <dl class="field-list simple">
@@ -146,8 +204,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>
-or <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, uses the ID of the project configured with the provider.
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
 Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
 will not be inferred from the provider.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -168,8 +225,7 @@ will not be inferred from the provider.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMBinding.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMBinding.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>
-or <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, uses the ID of the project configured with the provider.
+<dd><p>The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
 Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
 will not be inferred from the provider.</p>
 </dd></dl>
@@ -194,8 +250,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the project’s IAM policy.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>
-or <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, uses the ID of the project configured with the provider.
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
 Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
 will not be inferred from the provider.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -400,14 +455,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.projects.</code><code class="sig-name descname">IAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
+<dd><p>Four different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code>: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the project are preserved.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the project are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>: Authoritative for a given service. Updates the IAM policy to enable audit logging for the given service.</p></li>
 </ul>
 <blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> or they will fight over what your policy should be.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
 <dl class="field-list simple">
@@ -415,8 +471,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>
-or <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, uses the ID of the project configured with the provider.
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
 Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
 will not be inferred from the provider.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -437,8 +492,7 @@ will not be inferred from the provider.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMMember.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMMember.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>
-or <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, uses the ID of the project configured with the provider.
+<dd><p>The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
 Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
 will not be inferred from the provider.</p>
 </dd></dl>
@@ -463,8 +517,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the project’s IAM policy.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>
-or <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, uses the ID of the project configured with the provider.
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
 Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
 will not be inferred from the provider.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -519,14 +572,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.projects.</code><code class="sig-name descname">IAMPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
+<dd><p>Four different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code>: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the project are preserved.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the project are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>: Authoritative for a given service. Updates the IAM policy to enable audit logging for the given service.</p></li>
 </ul>
 <blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> or they will fight over what your policy should be.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
 </div></blockquote>
 <dl class="field-list simple">
@@ -537,8 +591,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source that represents
 the IAM policy that will be applied to the project. The policy will be
 merged with any existing policy applied to the project.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>
-or <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, uses the ID of the project configured with the provider.
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
 Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
 will not be inferred from the provider.</p></li>
 </ul>
@@ -564,8 +617,7 @@ merged with any existing policy applied to the project.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMPolicy.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>
-or <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, uses the ID of the project configured with the provider.
+<dd><p>The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
 Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
 will not be inferred from the provider.</p>
 </dd></dl>
@@ -585,8 +637,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source that represents
 the IAM policy that will be applied to the project. The policy will be
 merged with any existing policy applied to the project.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>
-or <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, uses the ID of the project configured with the provider.
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code>, uses the ID of the project configured with the provider.
 Required for <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> - you must explicitly set the project, and it
 will not be inferred from the provider.</p></li>
 </ul>

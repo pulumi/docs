@@ -21,7 +21,7 @@ linktitle: "dynamic-provider"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="main" data-link-title="main">
-    <a href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/cmd/dynamic-provider/index.ts#L304">
+    <a href="https://github.com/pulumi/pulumi/blob/dd8155ae20f482d6980cc9c2c1407a72bcc40a99/sdk/nodejs/cmd/dynamic-provider/index.ts#L304">
         function <strong>main</strong>
     </a>
 </h3>

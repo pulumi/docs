@@ -1142,7 +1142,7 @@ this provider. Only newly added projects are affected.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_create_network</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create the ‘default’ network automatically.  Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.
 If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the default network will be deleted.  Note that, for quota purposes, you
-will still need to have 1 network slot available to create the project succesfully, even if
+will still need to have 1 network slot available to create the project successfully, even if
 you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</p></li>
 <li><p><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with this provider
@@ -1176,7 +1176,7 @@ without deleting the Project via the Google API.</p></li>
 <code class="sig-name descname">auto_create_network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.organizations.Project.auto_create_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create the ‘default’ network automatically.  Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.
 If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the default network will be deleted.  Note that, for quota purposes, you
-will still need to have 1 network slot available to create the project succesfully, even if
+will still need to have 1 network slot available to create the project successfully, even if
 you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</p>
 </dd></dl>
 
@@ -1255,7 +1255,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_create_network</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create the ‘default’ network automatically.  Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.
 If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the default network will be deleted.  Note that, for quota purposes, you
-will still need to have 1 network slot available to create the project succesfully, even if
+will still need to have 1 network slot available to create the project successfully, even if
 you set <code class="docutils literal notranslate"><span class="pre">auto_create_network</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, since the network will exist momentarily.</p></li>
 <li><p><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with this provider
@@ -1438,7 +1438,7 @@ defining a binding to be included in the policy document. Multiple
 </ul>
 <p>The <strong>bindings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An array of identites that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An array of identities that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a>
 Each entry can have one of the following values:</p>
 <ul>
 <li><p><strong>allUsers</strong>: A special identifier that represents anyone who is on the internet; with or without a Google account. It <strong>can’t</strong> be used with the <code class="docutils literal notranslate"><span class="pre">organizations.Project</span></code> resource.</p></li>

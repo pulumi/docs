@@ -15,16 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.spanner"></span><dl class="class">
 <dt id="pulumi_gcp.spanner.Database">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.spanner.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ddls=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.spanner.Database" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Cloud Spanner Database which is hosted on a Spanner instance.</p>
-<p>To get more information about Database, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/spanner/">Official Documentation</a></p></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Database resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -506,17 +497,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.spanner.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.spanner.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">num_nodes=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.spanner.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>An isolated set of Cloud Spanner resources on which databases can be
-hosted.</p>
-<p>To get more information about Instance, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/spanner/">Official Documentation</a></p></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Instance resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

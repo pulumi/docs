@@ -50,7 +50,7 @@ your existing members are preserved.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.</p></li>
-<li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of identites that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.
+<li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of identities that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.
 Each entry can have one of the following values:</p></li>
 </ul>
 </dd>
@@ -87,7 +87,7 @@ Each entry can have one of the following values:</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.folder.IAMBinding.members">
 <code class="sig-name descname">members</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.folder.IAMBinding.members" title="Permalink to this definition">¶</a></dt>
-<dd><p>An array of identites that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.
+<dd><p>An array of identities that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.
 Each entry can have one of the following values:</p>
 <ul class="simple">
 <li><p><strong>user:{emailid}</strong>: An email address that is associated with a specific Google account. For example, <a class="reference external" href="mailto:alice&#37;&#52;&#48;gmail&#46;com">alice<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p></li>
@@ -119,7 +119,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the folder’s IAM policy.</p></li>
 <li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.</p></li>
-<li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of identites that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.
+<li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of identities that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.
 Each entry can have one of the following values:</p></li>
 </ul>
 </dd>

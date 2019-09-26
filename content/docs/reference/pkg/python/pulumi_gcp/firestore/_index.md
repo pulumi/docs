@@ -15,20 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.firestore"></span><dl class="class">
 <dt id="pulumi_gcp.firestore.Index">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.firestore.</code><code class="sig-name descname">Index</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">collection=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">fields=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">query_scope=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firestore.Index" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Cloud Firestore indexes enable simple and complex queries against documents in a database.</dt><dd><p>This resource manages composite indexes and not single</p>
-</dd>
-</dl>
-<p>field indexes.</p>
-<p>To get more information about Index, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.collectionGroups.indexes">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/firestore/docs/query-data/indexing">Official Documentation</a></p></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Index resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

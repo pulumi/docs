@@ -15,18 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.filestore"></span><dl class="class">
 <dt id="pulumi_gcp.filestore.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.filestore.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">file_shares=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.filestore.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Google Cloud Filestore instance.</p>
-<p>To get more information about Instance, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/filestore/docs/reference/rest/v1beta1/projects.locations.instances/create">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/filestore/docs/creating-instances">Official Documentation</a></p></li>
-<li><p><a class="reference external" href="https://cloud.google.com/filestore/docs/accessing-fileshares">Use with Kubernetes</a></p></li>
-<li><p><a class="reference external" href="https://cloud.google.com/filestore/docs/copying-data">Copying Data In/Out</a></p></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Instance resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

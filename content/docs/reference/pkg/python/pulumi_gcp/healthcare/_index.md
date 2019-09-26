@@ -15,16 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.healthcare"></span><dl class="class">
 <dt id="pulumi_gcp.healthcare.Dataset">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.healthcare.</code><code class="sig-name descname">Dataset</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">time_zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.healthcare.Dataset" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Healthcare <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> is a toplevel logical grouping of <code class="docutils literal notranslate"><span class="pre">dicomStores</span></code>, <code class="docutils literal notranslate"><span class="pre">fhirStores</span></code> and <code class="docutils literal notranslate"><span class="pre">hl7V2Stores</span></code>.</p>
-<p>To get more information about Dataset, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/healthcare/docs/how-tos/datasets">Creating a dataset</a></p></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Dataset resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
