@@ -22,7 +22,7 @@ linktitle: "run-policy-pack"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="run" data-link-title="run">
-    <a href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/cmd/run-policy-pack/run.ts#L151">
+    <a href="https://github.com/pulumi/pulumi/blob/dd8155ae20f482d6980cc9c2c1407a72bcc40a99/sdk/nodejs/cmd/run-policy-pack/run.ts#L151">
         function <strong>run</strong>
     </a>
 </h3>
@@ -31,34 +31,34 @@ linktitle: "run-policy-pack"
 <pre class="highlight"><code><span class='kd'></span>run(opts: <a href='#RunOpts'>RunOpts</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt; | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="RunOpts" data-link-title="RunOpts">
-    <a href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/cmd/run-policy-pack/run.ts#L141">
+    <a href="https://github.com/pulumi/pulumi/blob/dd8155ae20f482d6980cc9c2c1407a72bcc40a99/sdk/nodejs/cmd/run-policy-pack/run.ts#L141">
         interface <strong>RunOpts</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RunOpts</span></code></pre>
 <h4 class="pdoc-member-header" id="RunOpts-argv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/cmd/run-policy-pack/run.ts#L144">property <b>argv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/dd8155ae20f482d6980cc9c2c1407a72bcc40a99/sdk/nodejs/cmd/run-policy-pack/run.ts#L144">property <b>argv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>argv: ParsedArgs;</code></pre>
 <h4 class="pdoc-member-header" id="RunOpts-programStarted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/cmd/run-policy-pack/run.ts#L145">property <b>programStarted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/dd8155ae20f482d6980cc9c2c1407a72bcc40a99/sdk/nodejs/cmd/run-policy-pack/run.ts#L145">property <b>programStarted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>programStarted: () => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="RunOpts-reportLoggedError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/cmd/run-policy-pack/run.ts#L146">property <b>reportLoggedError</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/dd8155ae20f482d6980cc9c2c1407a72bcc40a99/sdk/nodejs/cmd/run-policy-pack/run.ts#L146">property <b>reportLoggedError</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reportLoggedError: (err: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="RunOpts-runInStack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/cmd/run-policy-pack/run.ts#L147">property <b>runInStack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/dd8155ae20f482d6980cc9c2c1407a72bcc40a99/sdk/nodejs/cmd/run-policy-pack/run.ts#L147">property <b>runInStack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runInStack: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="RunOpts-typeScript">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/cmd/run-policy-pack/run.ts#L148">property <b>typeScript</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/dd8155ae20f482d6980cc9c2c1407a72bcc40a99/sdk/nodejs/cmd/run-policy-pack/run.ts#L148">property <b>typeScript</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>typeScript: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>

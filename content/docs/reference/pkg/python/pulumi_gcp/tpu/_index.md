@@ -32,16 +32,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_gcp.tpu.Node">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.tpu.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accelerator_type=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">scheduling_config=None</em>, <em class="sig-param">tensorflow_version=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.tpu.Node" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Cloud TPU instance.</p>
-<p>To get more information about Node, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://cloud.google.com/tpu/docs/reference/rest/">API documentation</a></p></li>
-<li><p>How-to Guides</p>
-<ul>
-<li><p><a class="reference external" href="https://cloud.google.com/tpu/docs/">Official Documentation</a></p></li>
-</ul>
-</li>
-</ul>
+<dd><p>Create a Node resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

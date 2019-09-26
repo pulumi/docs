@@ -67,8 +67,12 @@ on the current needs of the cluster’s workload. See the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
 for more details. Structure is documented below.</p>
 </p></li>
-<li><p><strong>cluster_ipv4_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address range of the kubernetes pods in
-this cluster. Default is an automatically assigned CIDR.</p></li>
+<li><p><strong>cluster_ipv4_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address range of the Kubernetes pods
+in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one
+automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only
+work if your cluster is not VPC-native- when an <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> block is
+not defined, or <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.use_ip_aliases</span></code> is set to false. If your
+cluster is VPC-native, use <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.cluster_ipv4_cidr_block</span></code>.</p></li>
 <li><p><strong>database_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ).
 Structure is documented below.</p></li>
 <li><p><strong>default_max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – ) The default maximum number of pods per node in this cluster.
@@ -93,9 +97,10 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.</p>
 </p></li>
 <li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes to create in this
-cluster’s default node pool. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If
-you’re using <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool,
-you’ll need to set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
+cluster’s default node pool. In regional or multi-zonal clusters, this is the
+number of nodes per zone. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If you’re using
+<code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool, you’ll need to
+set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
 <code class="docutils literal notranslate"><span class="pre">remove_default_node_pool</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>ip_allocation_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for cluster IP allocation. As of now, only pre-allocated subnetworks (custom type with secondary ranges) are supported.
 This will activate IP aliases. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">official documentation</a>
@@ -152,11 +157,9 @@ Generally, this field should not be used at the same time as a
 manages the default node pool, which isn’t recommended to be used with
 this provider. Structure is documented below.</p></li>
 <li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of zones in which the cluster’s nodes
-should be located. These must be in the same region as the cluster zone for
-zonal clusters, or in the region of a regional cluster. In a multi-zonal cluster,
-the number of nodes specified in <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> is created in
-all specified zones as well as the primary zone. If specified for a regional
-cluster, nodes will be created in only these zones.</p></li>
+are located. Nodes must be in the region of their regional cluster or in the
+same region as their cluster’s zone for zonal clusters. If this is specified for
+a zonal cluster, omit the cluster’s zone.</p></li>
 <li><p><strong>node_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of node pools associated with this cluster.
 See container.NodePool for schema.
 <strong>Warning:</strong> node pools defined inside a cluster can’t be changed (or added/removed) after
@@ -194,7 +197,8 @@ Structure is documented below.</p>
 </p></li>
 <li><p><strong>workload_identity_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
 Workload Identity allows Kubernetes service accounts to act as a user-managed
-<a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.</p>
+<a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
+Structure is documented below.</p>
 </p></li>
 <li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone that the cluster master and nodes
 should be created in. If specified, this cluster will be a zonal cluster. <code class="docutils literal notranslate"><span class="pre">zone</span></code>
@@ -350,9 +354,10 @@ has been deprecated in favour of <code class="docutils literal notranslate"><spa
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes to create in this
-cluster’s default node pool. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If
-you’re using <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool,
-you’ll need to set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
+cluster’s default node pool. In regional or multi-zonal clusters, this is the
+number of nodes per zone. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If you’re using
+<code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool, you’ll need to
+set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
 <code class="docutils literal notranslate"><span class="pre">remove_default_node_pool</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_group_urls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of instance group URLs which have been assigned
 to the cluster.</p></li>
@@ -410,6 +415,10 @@ this provider. Structure is documented below.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_locations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of zones in which the cluster’s nodes
+are located. Nodes must be in the region of their regional cluster or in the
+same region as their cluster’s zone for zonal clusters. If this is specified for
+a zonal cluster, omit the cluster’s zone.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>pod_security_policy_config</strong> object supports the following:</p>
@@ -531,8 +540,12 @@ for more details. Structure is documented below.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.cluster_ipv4_cidr">
 <code class="sig-name descname">cluster_ipv4_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_ipv4_cidr" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IP address range of the kubernetes pods in
-this cluster. Default is an automatically assigned CIDR.</p>
+<dd><p>The IP address range of the Kubernetes pods
+in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one
+automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only
+work if your cluster is not VPC-native- when an <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> block is
+not defined, or <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.use_ip_aliases</span></code> is set to false. If your
+cluster is VPC-native, use <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.cluster_ipv4_cidr_block</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -610,9 +623,10 @@ See the <a class="reference external" href="https://cloud.google.com/tpu/docs/ku
 <dt id="pulumi_gcp.container.Cluster.initial_node_count">
 <code class="sig-name descname">initial_node_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.initial_node_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of nodes to create in this
-cluster’s default node pool. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If
-you’re using <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool,
-you’ll need to set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
+cluster’s default node pool. In regional or multi-zonal clusters, this is the
+number of nodes per zone. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If you’re using
+<code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool, you’ll need to
+set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
 <code class="docutils literal notranslate"><span class="pre">remove_default_node_pool</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
@@ -827,11 +841,9 @@ this provider. Structure is documented below.</p>
 <dt id="pulumi_gcp.container.Cluster.node_locations">
 <code class="sig-name descname">node_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.node_locations" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of zones in which the cluster’s nodes
-should be located. These must be in the same region as the cluster zone for
-zonal clusters, or in the region of a regional cluster. In a multi-zonal cluster,
-the number of nodes specified in <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> is created in
-all specified zones as well as the primary zone. If specified for a regional
-cluster, nodes will be created in only these zones.</p>
+are located. Nodes must be in the region of their regional cluster or in the
+same region as their cluster’s zone for zonal clusters. If this is specified for
+a zonal cluster, omit the cluster’s zone.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -851,9 +863,10 @@ container.NodePool resource instead of this property.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of nodes to create in this
-cluster’s default node pool. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If
-you’re using <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool,
-you’ll need to set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
+cluster’s default node pool. In regional or multi-zonal clusters, this is the
+number of nodes per zone. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If you’re using
+<code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool, you’ll need to
+set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
 <code class="docutils literal notranslate"><span class="pre">remove_default_node_pool</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_group_urls</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of instance group URLs which have been assigned
 to the cluster.</p></li>
@@ -911,6 +924,10 @@ this provider. Structure is documented below.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_locations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of zones in which the cluster’s nodes
+are located. Nodes must be in the region of their regional cluster or in the
+same region as their cluster’s zone for zonal clusters. If this is specified for
+a zonal cluster, omit the cluster’s zone.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -1023,7 +1040,8 @@ Structure is documented below.</p>
 <code class="sig-name descname">workload_identity_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.workload_identity_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>)
 Workload Identity allows Kubernetes service accounts to act as a user-managed
-<a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.</p>
+<a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
+Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">identityNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -1068,8 +1086,12 @@ on the current needs of the cluster’s workload. See the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide to using Node Auto-Provisioning</a>
 for more details. Structure is documented below.</p>
 </p></li>
-<li><p><strong>cluster_ipv4_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address range of the kubernetes pods in
-this cluster. Default is an automatically assigned CIDR.</p></li>
+<li><p><strong>cluster_ipv4_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address range of the Kubernetes pods
+in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one
+automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only
+work if your cluster is not VPC-native- when an <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> block is
+not defined, or <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.use_ip_aliases</span></code> is set to false. If your
+cluster is VPC-native, use <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy.cluster_ipv4_cidr_block</span></code>.</p></li>
 <li><p><strong>database_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ).
 Structure is documented below.</p></li>
 <li><p><strong>default_max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>) The default maximum number of pods per node in this cluster.
@@ -1096,9 +1118,10 @@ See the <a class="reference external" href="https://cloud.google.com/tpu/docs/ku
 </p></li>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of this cluster’s Kubernetes master.</p></li>
 <li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes to create in this
-cluster’s default node pool. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If
-you’re using <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool,
-you’ll need to set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
+cluster’s default node pool. In regional or multi-zonal clusters, this is the
+number of nodes per zone. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If you’re using
+<code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool, you’ll need to
+set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
 <code class="docutils literal notranslate"><span class="pre">remove_default_node_pool</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>instance_group_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of instance group URLs which have been assigned
 to the cluster.</p></li>
@@ -1162,11 +1185,9 @@ Generally, this field should not be used at the same time as a
 manages the default node pool, which isn’t recommended to be used with
 this provider. Structure is documented below.</p></li>
 <li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of zones in which the cluster’s nodes
-should be located. These must be in the same region as the cluster zone for
-zonal clusters, or in the region of a regional cluster. In a multi-zonal cluster,
-the number of nodes specified in <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> is created in
-all specified zones as well as the primary zone. If specified for a regional
-cluster, nodes will be created in only these zones.</p></li>
+are located. Nodes must be in the region of their regional cluster or in the
+same region as their cluster’s zone for zonal clusters. If this is specified for
+a zonal cluster, omit the cluster’s zone.</p></li>
 <li><p><strong>node_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of node pools associated with this cluster.
 See container.NodePool for schema.
 <strong>Warning:</strong> node pools defined inside a cluster can’t be changed (or added/removed) after
@@ -1211,7 +1232,8 @@ Structure is documented below.</p>
 </p></li>
 <li><p><strong>workload_identity_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
 Workload Identity allows Kubernetes service accounts to act as a user-managed
-<a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.</p>
+<a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts">Google IAM Service Account</a>.
+Structure is documented below.</p>
 </p></li>
 <li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone that the cluster master and nodes
 should be created in. If specified, this cluster will be a zonal cluster. <code class="docutils literal notranslate"><span class="pre">zone</span></code>
@@ -1367,9 +1389,10 @@ has been deprecated in favour of <code class="docutils literal notranslate"><spa
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes to create in this
-cluster’s default node pool. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If
-you’re using <code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool,
-you’ll need to set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
+cluster’s default node pool. In regional or multi-zonal clusters, this is the
+number of nodes per zone. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If you’re using
+<code class="docutils literal notranslate"><span class="pre">container.NodePool</span></code> objects with no default node pool, you’ll need to
+set this to a value of at least <code class="docutils literal notranslate"><span class="pre">1</span></code>, alongside setting
 <code class="docutils literal notranslate"><span class="pre">remove_default_node_pool</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_group_urls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of instance group URLs which have been assigned
 to the cluster.</p></li>
@@ -1427,6 +1450,10 @@ this provider. Structure is documented below.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_locations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of zones in which the cluster’s nodes
+are located. Nodes must be in the region of their regional cluster or in the
+same region as their cluster’s zone for zonal clusters. If this is specified for
+a zonal cluster, omit the cluster’s zone.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>pod_security_policy_config</strong> object supports the following:</p>
@@ -1581,7 +1608,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.container.NodePool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">max_pods_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.container.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">max_pods_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
 the cluster control plane. For more information see <a class="reference external" href="https://cloud.google.com/container-engine/docs/node-pools">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.nodePools">the API reference</a>.</p>
@@ -1592,11 +1619,11 @@ and <a class="reference external" href="https://cloud.google.com/container-engin
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.</p></li>
-<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for.  Cluster must be present in <code class="docutils literal notranslate"><span class="pre">zone</span></code> provided for zonal clusters.</p></li>
-<li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial node count for the pool. Changing this will force
-recreation of the resource.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location (region or zone) in which the cluster
-resides.</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">zone</span></code> provided for zonal clusters.</p></li>
+<li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location (region or zone) of the cluster.</p></li>
 <li><p><strong>management</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.</p></li>
 <li><p><strong>max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>) The maximum number of pods per node in this node pool.
@@ -1611,10 +1638,16 @@ auto-generate a unique name.</p></li>
 container.Cluster for schema.</p></li>
 <li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside <code class="docutils literal notranslate"><span class="pre">autoscaling</span></code>.</p></li>
+<li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>)
+The list of zones in which the node pool’s nodes should be located. Nodes must
+be in the region of their regional cluster or in the same region as their
+cluster’s zone for zonal clusters. If unspecified, the cluster-level
+<code class="docutils literal notranslate"><span class="pre">node_locations</span></code> will be used.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which the cluster resides (for
-regional clusters). <code class="docutils literal notranslate"><span class="pre">zone</span></code> has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p></li>
+regional clusters). <code class="docutils literal notranslate"><span class="pre">region</span></code> has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Kubernetes version for the nodes in this pool. Note that if this field
 and <code class="docutils literal notranslate"><span class="pre">auto_upgrade</span></code> are both specified, they will fight each other for what the node version should
 be, so setting both is highly discouraged. While a fuzzy version can be specified, it’s
@@ -1691,21 +1724,21 @@ the size of the node pool to the current cluster usage. Structure is documented 
 <dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.cluster">
 <code class="sig-name descname">cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>The cluster to create the node pool for.  Cluster must be present in <code class="docutils literal notranslate"><span class="pre">zone</span></code> provided for zonal clusters.</p>
+<dd><p>The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">zone</span></code> provided for zonal clusters.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.initial_node_count">
 <code class="sig-name descname">initial_node_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.initial_node_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>The initial node count for the pool. Changing this will force
-recreation of the resource.</p>
+<dd><p>The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>The location (region or zone) in which the cluster
-resides.</p>
+<dd><p>The location (region or zone) of the cluster.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1788,6 +1821,16 @@ update the number of nodes per instance group but should not be used alongside <
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.container.NodePool.node_locations">
+<code class="sig-name descname">node_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.node_locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>)
+The list of zones in which the node pool’s nodes should be located. Nodes must
+be in the region of their regional cluster or in the same region as their
+cluster’s zone for zonal clusters. If unspecified, the cluster-level
+<code class="docutils literal notranslate"><span class="pre">node_locations</span></code> will be used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which to create the node pool. If blank,
@@ -1798,7 +1841,7 @@ the provider-configured project will be used.</p>
 <dt id="pulumi_gcp.container.NodePool.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which the cluster resides (for
-regional clusters). <code class="docutils literal notranslate"><span class="pre">zone</span></code> has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p>
+regional clusters). <code class="docutils literal notranslate"><span class="pre">region</span></code> has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1821,7 +1864,7 @@ has been deprecated in favor of <code class="docutils literal notranslate"><span
 
 <dl class="method">
 <dt id="pulumi_gcp.container.NodePool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">max_pods_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">initial_node_count=None</em>, <em class="sig-param">instance_group_urls=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">max_pods_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">node_config=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">node_locations=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NodePool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1832,11 +1875,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.</p></li>
-<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for.  Cluster must be present in <code class="docutils literal notranslate"><span class="pre">zone</span></code> provided for zonal clusters.</p></li>
-<li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial node count for the pool. Changing this will force
-recreation of the resource.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location (region or zone) in which the cluster
-resides.</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for. Cluster must be present in <code class="docutils literal notranslate"><span class="pre">zone</span></code> provided for zonal clusters.</p></li>
+<li><p><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial number of nodes for the pool. In
+regional or multi-zonal clusters, this is the number of nodes per zone. Changing
+this will force recreation of the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location (region or zone) of the cluster.</p></li>
 <li><p><strong>management</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.</p></li>
 <li><p><strong>max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>) The maximum number of pods per node in this node pool.
@@ -1851,10 +1894,16 @@ auto-generate a unique name.</p></li>
 container.Cluster for schema.</p></li>
 <li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside <code class="docutils literal notranslate"><span class="pre">autoscaling</span></code>.</p></li>
+<li><p><strong>node_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>)
+The list of zones in which the node pool’s nodes should be located. Nodes must
+be in the region of their regional cluster or in the same region as their
+cluster’s zone for zonal clusters. If unspecified, the cluster-level
+<code class="docutils literal notranslate"><span class="pre">node_locations</span></code> will be used.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which the cluster resides (for
-regional clusters). <code class="docutils literal notranslate"><span class="pre">zone</span></code> has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p></li>
+regional clusters). <code class="docutils literal notranslate"><span class="pre">region</span></code> has been deprecated in favor of <code class="docutils literal notranslate"><span class="pre">location</span></code>.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Kubernetes version for the nodes in this pool. Note that if this field
 and <code class="docutils literal notranslate"><span class="pre">auto_upgrade</span></code> are both specified, they will fight each other for what the node version should
 be, so setting both is highly discouraged. While a fuzzy version can be specified, it’s

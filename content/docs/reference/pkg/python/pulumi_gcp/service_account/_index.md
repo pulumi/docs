@@ -798,7 +798,7 @@ Defaults to the provider project configuration.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>delegates</strong> (<em>list</em>) – Deegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. <code class="docutils literal notranslate"><span class="pre">[&quot;projects/-/serviceAccounts/delegate-svc-account&#64;project-id.iam.gserviceaccount.com&quot;]</span></code>)</p></li>
+<li><p><strong>delegates</strong> (<em>list</em>) – Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. <code class="docutils literal notranslate"><span class="pre">[&quot;projects/-/serviceAccounts/delegate-svc-account&#64;project-id.iam.gserviceaccount.com&quot;]</span></code>)</p></li>
 <li><p><strong>lifetime</strong> (<em>str</em>) – Lifetime of the impersonated token (defaults to its max: <code class="docutils literal notranslate"><span class="pre">3600s</span></code>).</p></li>
 <li><p><strong>scopes</strong> (<em>list</em>) – The scopes the new credential should have (e.g. <code class="docutils literal notranslate"><span class="pre">[&quot;storage-ro&quot;,</span> <span class="pre">&quot;cloud-platform&quot;]</span></code>)</p></li>
 <li><p><strong>target_service_account</strong> (<em>str</em>) – The service account <em>to</em> impersonate (e.g. <code class="docutils literal notranslate"><span class="pre">service_B&#64;your-project-id.iam.gserviceaccount.com</span></code>)</p></li>
