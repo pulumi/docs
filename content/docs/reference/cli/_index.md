@@ -30,6 +30,10 @@ The most common commands in the CLI that you'll be using are as follows:
 * [`pulumi preview`]({{< relref "pulumi_preview.md" >}}): preview your changes explicitly before deploying
 * [`pulumi destroy`]({{< relref "pulumi_destroy.md" >}}): destroy your program and its infrastructure when you're done
 
+## Environment Variables
+
+For a list of environment variables that you can use to work with the Pulumi CLI, see [Environment Variables]({{< relref "/docs/reference/cli/environment-variables" >}}).
+
 ## Complete Reference
 
 Below is the complete documentation for all available commands:
@@ -98,7 +102,7 @@ Make sure compinit is loaded or do it by adding in ~/.zshrc:
 autoload -Uz compinit && compinit -i
 ```
 
-Then reload your shell:
+Then reloads your shell:
 
 ```shell
 exec $SHELL -l

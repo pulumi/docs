@@ -57,7 +57,7 @@ pulumi stack init [<org-name>/]<stack-name> [flags]
       --show-secrets                 Display stack outputs which are marked as secret in plaintext
   -u, --show-urns                    Display each resource's Pulumi-assigned globally unique URN
   -s, --stack string                 The name of the stack to operate on. Defaults to the current stack
-      --tracing file:                Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
+      --tracing string               Emit tracing to a Zipkin-compatible tracing endpoint
   -v, --verbose int                  Enable verbose logging (e.g., v=3); anything >3 is very verbose
 ```
 
