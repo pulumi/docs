@@ -306,7 +306,7 @@ server = ec2.Instance('webserver-www',
 ...
 ```
 
-> Note that the `userData` script is defined inline in a string.  Because you are using a programming language to write your Pulumi program, you could also read this from a file, construct this string programmatically, or even build up a string that depends on other resources
+> Note that the `userData` script is defined inline in a string. In this example, `index.html` will be created in the root directory `/`. Because you are using a programming language to write your Pulumi program, you could also read this from a file, construct this string programmatically, or even build up a string that depends on other resources
 defined in your program.  You'll see in later sections how to deploy and version the application code of your
 program in a variety of different ways using Pulumi.
 
