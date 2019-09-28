@@ -526,7 +526,7 @@ in the application URL</p></li>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.all_settings">
 <code class="sig-name descname">all_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.all_settings" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of all option settings configured in the Environment. These
+<dd><p>List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from <code class="docutils literal notranslate"><span class="pre">setting</span></code> in
 the configuration.</p>
 <ul class="simple">
@@ -548,13 +548,13 @@ to be deployed</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.autoscaling_groups">
 <code class="sig-name descname">autoscaling_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.autoscaling_groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>The autoscaling groups used by this environment.</p>
+<dd><p>The autoscaling groups used by this Environment.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.cname">
 <code class="sig-name descname">cname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.cname" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fully qualified DNS name for the Environment.</p>
+<dd><p>Fully qualified DNS name for this Environment.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -571,21 +571,27 @@ the Environment.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.elasticbeanstalk.Environment.endpoint_url">
+<code class="sig-name descname">endpoint_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.endpoint_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL to the Load Balancer for this Environment</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.instances">
 <code class="sig-name descname">instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.instances" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instances used by this environment.</p>
+<dd><p>Instances used by this Environment.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.launch_configurations">
 <code class="sig-name descname">launch_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.launch_configurations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Launch configurations in use by this environment.</p>
+<dd><p>Launch configurations in use by this Environment.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.load_balancers">
 <code class="sig-name descname">load_balancers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.load_balancers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Elastic load balancers in use by this environment.</p>
+<dd><p>Elastic load balancers in use by this Environment.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -614,7 +620,7 @@ use the default behavior, which is an exponential backoff</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.queues">
 <code class="sig-name descname">queues</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.queues" title="Permalink to this definition">¶</a></dt>
-<dd><p>SQS queues in use by this environment.</p>
+<dd><p>SQS queues in use by this Environment.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -662,7 +668,7 @@ or <code class="docutils literal notranslate"><span class="pre">WebServer</span>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.triggers">
 <code class="sig-name descname">triggers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.triggers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Autoscaling triggers in use by this environment.</p>
+<dd><p>Autoscaling triggers in use by this Environment.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -683,7 +689,7 @@ out.</p>
 
 <dl class="method">
 <dt id="pulumi_aws.elasticbeanstalk.Environment.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">all_settings=None</em>, <em class="sig-param">application=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">autoscaling_groups=None</em>, <em class="sig-param">cname=None</em>, <em class="sig-param">cname_prefix=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">launch_configurations=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_arn=None</em>, <em class="sig-param">poll_interval=None</em>, <em class="sig-param">queues=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">solution_stack_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">triggers=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">wait_for_ready_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">all_settings=None</em>, <em class="sig-param">application=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">autoscaling_groups=None</em>, <em class="sig-param">cname=None</em>, <em class="sig-param">cname_prefix=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_url=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">launch_configurations=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_arn=None</em>, <em class="sig-param">poll_interval=None</em>, <em class="sig-param">queues=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">solution_stack_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_name=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">triggers=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">wait_for_ready_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Environment resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -692,19 +698,20 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>all_settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of all option settings configured in the Environment. These
+<li><p><strong>all_settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from <code class="docutils literal notranslate"><span class="pre">setting</span></code> in
 the configuration.</p></li>
 <li><p><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the application that contains the version
 to be deployed</p></li>
-<li><p><strong>autoscaling_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The autoscaling groups used by this environment.</p></li>
-<li><p><strong>cname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fully qualified DNS name for the Environment.</p></li>
+<li><p><strong>autoscaling_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The autoscaling groups used by this Environment.</p></li>
+<li><p><strong>cname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fully qualified DNS name for this Environment.</p></li>
 <li><p><strong>cname_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Prefix to use for the fully qualified DNS name of
 the Environment.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the Environment</p></li>
-<li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Instances used by this environment.</p></li>
-<li><p><strong>launch_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Launch configurations in use by this environment.</p></li>
-<li><p><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Elastic load balancers in use by this environment.</p></li>
+<li><p><strong>endpoint_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to the Load Balancer for this Environment</p></li>
+<li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Instances used by this Environment.</p></li>
+<li><p><strong>launch_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Launch configurations in use by this Environment.</p></li>
+<li><p><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Elastic load balancers in use by this Environment.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for this Environment. This name is used
 in the application URL</p></li>
 <li><p><strong>platform_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [ARN][2] of the Elastic Beanstalk [Platform][3]
@@ -713,7 +720,7 @@ to use in deployment</p></li>
 check if changes have been applied. Use this to adjust the rate of API calls
 for any <code class="docutils literal notranslate"><span class="pre">create</span></code> or <code class="docutils literal notranslate"><span class="pre">update</span></code> action. Minimum <code class="docutils literal notranslate"><span class="pre">10s</span></code>, maximum <code class="docutils literal notranslate"><span class="pre">180s</span></code>. Omit this to
 use the default behavior, which is an exponential backoff</p></li>
-<li><p><strong>queues</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – SQS queues in use by this environment.</p></li>
+<li><p><strong>queues</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – SQS queues in use by this Environment.</p></li>
 <li><p><strong>settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings</p></li>
@@ -724,7 +731,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]</p></li
 template to use in deployment</p></li>
 <li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Elastic Beanstalk Environment tier. Valid values are <code class="docutils literal notranslate"><span class="pre">Worker</span></code>
 or <code class="docutils literal notranslate"><span class="pre">WebServer</span></code>. If tier is left blank <code class="docutils literal notranslate"><span class="pre">WebServer</span></code> will be used.</p></li>
-<li><p><strong>triggers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Autoscaling triggers in use by this environment.</p></li>
+<li><p><strong>triggers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Autoscaling triggers in use by this Environment.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Elastic Beanstalk Application Version
 to use in deployment.</p></li>
 <li><p><strong>wait_for_ready_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The maximum

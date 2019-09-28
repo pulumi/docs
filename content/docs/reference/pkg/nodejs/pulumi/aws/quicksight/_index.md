@@ -31,7 +31,7 @@ linktitle: "quicksight"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L23">
         Resource <strong>Group</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ const example = new aws.quicksight.Group("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/quicksight_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -68,7 +68,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -79,14 +79,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -97,7 +97,7 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L53">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L53">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -105,7 +105,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of group
 
 <h4 class="pdoc-member-header" id="Group-awsAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L57">property <b>awsAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L57">property <b>awsAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>awsAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -113,7 +113,7 @@ Amazon Resource Name (ARN) of group
 The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
 
 <h4 class="pdoc-member-header" id="Group-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -121,7 +121,7 @@ The ID for the AWS account that the group is in. Currently, you use the ID for t
 A description for the group.
 
 <h4 class="pdoc-member-header" id="Group-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L65">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L65">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -129,7 +129,7 @@ A description for the group.
 A name for the group.
 
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -138,7 +138,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L69">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L69">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ deployments and may be missing (undefined) during planning phases.
 The namespace. Currently, you should set this to `default`.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -158,7 +158,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L139">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -168,7 +168,7 @@ deployments.
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-awsAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L143">property <b>awsAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L143">property <b>awsAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ The set of arguments for constructing a Group resource.
 The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
 
 <h4 class="pdoc-member-header" id="GroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L147">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L147">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ The ID for the AWS account that the group is in. Currently, you use the ID for t
 A description for the group.
 
 <h4 class="pdoc-member-header" id="GroupArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L151">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L151">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -192,7 +192,7 @@ A description for the group.
 A name for the group.
 
 <h4 class="pdoc-member-header" id="GroupArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L155">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L155">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +200,7 @@ A name for the group.
 The namespace. Currently, you should set this to `default`.
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L113">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -210,7 +210,7 @@ The namespace. Currently, you should set this to `default`.
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L117">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L117">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -218,7 +218,7 @@ Input properties used for looking up and filtering Group resources.
 Amazon Resource Name (ARN) of group
 
 <h4 class="pdoc-member-header" id="GroupState-awsAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L121">property <b>awsAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L121">property <b>awsAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ Amazon Resource Name (ARN) of group
 The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
 
 <h4 class="pdoc-member-header" id="GroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L125">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L125">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ The ID for the AWS account that the group is in. Currently, you use the ID for t
 A description for the group.
 
 <h4 class="pdoc-member-header" id="GroupState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L129">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L129">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -242,7 +242,7 @@ A description for the group.
 A name for the group.
 
 <h4 class="pdoc-member-header" id="GroupState-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/quicksight/group.ts#L133">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/quicksight/group.ts#L133">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

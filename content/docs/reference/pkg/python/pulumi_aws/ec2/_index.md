@@ -7684,7 +7684,7 @@ the separate resource.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">egress_only_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC Egress Only Internet Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC internet gateway or a virtual private gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Ipv6 CIDR block of the route</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Ipv6 CIDR block of the route.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nat_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC NAT gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 network interface.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
@@ -7696,7 +7696,7 @@ the separate resource.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.RouteTable.owner_id">
 <code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.RouteTable.owner_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the AWS account that owns the route table</p>
+<dd><p>The ID of the AWS account that owns the route table.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7714,7 +7714,7 @@ the separate resource.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">egress_only_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC Egress Only Internet Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC internet gateway or a virtual private gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of an EC2 instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Ipv6 CIDR block of the route</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Ipv6 CIDR block of the route.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nat_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC NAT gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of an EC2 network interface.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
@@ -7745,7 +7745,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the route table</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the route table.</p></li>
 <li><p><strong>propagating_vgws</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual gateways for propagation.</p></li>
 <li><p><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of route objects. Their keys are documented below. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </p></li>
@@ -7760,7 +7760,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">egress_only_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC Egress Only Internet Gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC internet gateway or a virtual private gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Ipv6 CIDR block of the route</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Ipv6 CIDR block of the route.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nat_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC NAT gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 network interface.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
@@ -8217,8 +8217,7 @@ a conflict of rule settings and will overwrite rules.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the rule.</p></li>
 <li><p><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The start port (or ICMP type number if protocol is “icmp”).</p></li>
 <li><p><strong>ipv6_cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv6 CIDR blocks.</p></li>
-<li><p><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</p></li>
+<li><p><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).</p></li>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. If not icmp, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group to apply this rule to.</p></li>
 <li><p><strong>self</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the security group itself will be added as
@@ -8261,8 +8260,7 @@ or <code class="docutils literal notranslate"><span class="pre">egress</span></c
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroupRule.prefix_list_ids">
 <code class="sig-name descname">prefix_list_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.prefix_list_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</p>
+<dd><p>List of prefix list IDs (for allowing access to VPC endpoints).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8319,8 +8317,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the rule.</p></li>
 <li><p><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The start port (or ICMP type number if protocol is “icmp”).</p></li>
 <li><p><strong>ipv6_cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv6 CIDR blocks.</p></li>
-<li><p><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</p></li>
+<li><p><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).</p></li>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The protocol. If not icmp, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p>
 </p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group to apply this rule to.</p></li>

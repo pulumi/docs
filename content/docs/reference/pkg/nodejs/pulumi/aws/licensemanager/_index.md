@@ -34,7 +34,7 @@ linktitle: "licensemanager"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Association" data-link-title="Association">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L41">
         Resource <strong>Association</strong>
     </a>
 </h3>
@@ -75,7 +75,7 @@ const exampleAssociation = new aws.licensemanager.Association("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_association.html.markdown.
 
 <h4 class="pdoc-member-header" id="Association-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -89,7 +89,7 @@ Create a Association resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Association-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -100,14 +100,14 @@ Get an existing Association resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Association-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Association-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -118,7 +118,7 @@ Returns true if the given object is an instance of Association.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Association-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -127,7 +127,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Association-licenseConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L71">property <b>licenseConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L71">property <b>licenseConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseConfigurationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ deployments and may be missing (undefined) during planning phases.
 ARN of the license configuration.
 
 <h4 class="pdoc-member-header" id="Association-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L75">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L75">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ ARN of the license configuration.
 ARN of the resource associated with the license configuration.
 
 <h4 class="pdoc-member-header" id="Association-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -152,7 +152,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LicenseConfiguration" data-link-title="LicenseConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L44">
         Resource <strong>LicenseConfiguration</strong>
     </a>
 </h3>
@@ -196,7 +196,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_license_configuration.html.markdown.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -210,7 +210,7 @@ Create a LicenseConfiguration resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -221,14 +221,14 @@ Get an existing LicenseConfiguration resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -239,7 +239,7 @@ Returns true if the given object is an instance of LicenseConfiguration.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L74">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L74">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -247,7 +247,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Description of the license configuration.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -256,7 +256,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-licenseCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L78">property <b>licenseCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L78">property <b>licenseCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -264,7 +264,7 @@ deployments and may be missing (undefined) during planning phases.
 Number of licenses managed by the license configuration.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-licenseCountHardLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L82">property <b>licenseCountHardLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L82">property <b>licenseCountHardLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseCountHardLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -272,7 +272,7 @@ Number of licenses managed by the license configuration.
 Sets the number of available licenses as a hard limit.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-licenseCountingType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L86">property <b>licenseCountingType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L86">property <b>licenseCountingType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseCountingType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ Sets the number of available licenses as a hard limit.
 Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-licenseRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L90">property <b>licenseRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L90">property <b>licenseRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -288,7 +288,7 @@ Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, 
 Array of configured License Manager rules.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L94">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ Array of configured License Manager rules.
 Name of the license configuration.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L98">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L98">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ Name of the license configuration.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="LicenseConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -316,7 +316,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AssociationArgs" data-link-title="AssociationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L130">
         interface <strong>AssociationArgs</strong>
     </a>
 </h3>
@@ -326,7 +326,7 @@ deployments.
 The set of arguments for constructing a Association resource.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-licenseConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L134">property <b>licenseConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L134">property <b>licenseConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseConfigurationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -334,7 +334,7 @@ The set of arguments for constructing a Association resource.
 ARN of the license configuration.
 
 <h4 class="pdoc-member-header" id="AssociationArgs-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L138">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L138">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -342,7 +342,7 @@ ARN of the license configuration.
 ARN of the resource associated with the license configuration.
 
 <h3 class="pdoc-module-header" id="AssociationState" data-link-title="AssociationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L116">
         interface <strong>AssociationState</strong>
     </a>
 </h3>
@@ -352,7 +352,7 @@ ARN of the resource associated with the license configuration.
 Input properties used for looking up and filtering Association resources.
 
 <h4 class="pdoc-member-header" id="AssociationState-licenseConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L120">property <b>licenseConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L120">property <b>licenseConfigurationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseConfigurationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -360,7 +360,7 @@ Input properties used for looking up and filtering Association resources.
 ARN of the license configuration.
 
 <h4 class="pdoc-member-header" id="AssociationState-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/association.ts#L124">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/association.ts#L124">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -368,7 +368,7 @@ ARN of the license configuration.
 ARN of the resource associated with the license configuration.
 
 <h3 class="pdoc-module-header" id="LicenseConfigurationArgs" data-link-title="LicenseConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L180">
         interface <strong>LicenseConfigurationArgs</strong>
     </a>
 </h3>
@@ -378,7 +378,7 @@ ARN of the resource associated with the license configuration.
 The set of arguments for constructing a LicenseConfiguration resource.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ The set of arguments for constructing a LicenseConfiguration resource.
 Description of the license configuration.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationArgs-licenseCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L188">property <b>licenseCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L188">property <b>licenseCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -394,7 +394,7 @@ Description of the license configuration.
 Number of licenses managed by the license configuration.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationArgs-licenseCountHardLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L192">property <b>licenseCountHardLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L192">property <b>licenseCountHardLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseCountHardLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -402,7 +402,7 @@ Number of licenses managed by the license configuration.
 Sets the number of available licenses as a hard limit.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationArgs-licenseCountingType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L196">property <b>licenseCountingType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L196">property <b>licenseCountingType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseCountingType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -410,7 +410,7 @@ Sets the number of available licenses as a hard limit.
 Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationArgs-licenseRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L200">property <b>licenseRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L200">property <b>licenseRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -418,7 +418,7 @@ Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, 
 Array of configured License Manager rules.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L204">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -426,7 +426,7 @@ Array of configured License Manager rules.
 Name of the license configuration.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L208">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L208">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -434,7 +434,7 @@ Name of the license configuration.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="LicenseConfigurationState" data-link-title="LicenseConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L146">
         interface <strong>LicenseConfigurationState</strong>
     </a>
 </h3>
@@ -444,7 +444,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering LicenseConfiguration resources.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L150">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L150">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -452,7 +452,7 @@ Input properties used for looking up and filtering LicenseConfiguration resource
 Description of the license configuration.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationState-licenseCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L154">property <b>licenseCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L154">property <b>licenseCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -460,7 +460,7 @@ Description of the license configuration.
 Number of licenses managed by the license configuration.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationState-licenseCountHardLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L158">property <b>licenseCountHardLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L158">property <b>licenseCountHardLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseCountHardLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ Number of licenses managed by the license configuration.
 Sets the number of available licenses as a hard limit.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationState-licenseCountingType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L162">property <b>licenseCountingType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L162">property <b>licenseCountingType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseCountingType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ Sets the number of available licenses as a hard limit.
 Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationState-licenseRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L166">property <b>licenseRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L166">property <b>licenseRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -484,7 +484,7 @@ Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, 
 Array of configured License Manager rules.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ Array of configured License Manager rules.
 Name of the license configuration.
 
 <h4 class="pdoc-member-header" id="LicenseConfigurationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/licensemanager/licenseConfiguration.ts#L174">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/licensemanager/licenseConfiguration.ts#L174">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
