@@ -497,7 +497,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	if root {
 		metaDescription += "members of the " + linktitle + " package."
 	} else {
-		metaDescription += "members of the " + linktitle + " module in the " + e.pkgname + " package."
+		metaDescription += "members of the " + linktitle + " module in the " + e.pkg + " package."
 	}
 
 	// To generate the code, simply render the source Mustache template, using the right set of arguments.
