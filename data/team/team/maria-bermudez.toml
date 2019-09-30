@@ -1,9 +1,8 @@
 id = "maria-bermudez"
 name = "Maria Bermudez"
 title = "Technical Content Manager"
-weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "bermudezmt"
