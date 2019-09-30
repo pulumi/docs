@@ -24,6 +24,7 @@ fi
 cd ./infrastructure
 
 # Sync dependencies.
+yarn cache clean
 yarn install
 
 pulumi login
