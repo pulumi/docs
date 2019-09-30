@@ -43,7 +43,7 @@ linktitle: "transfer"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Server" data-link-title="Server">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L61">
         Resource <strong>Server</strong>
     </a>
 </h3>
@@ -101,7 +101,7 @@ const fooServer = new aws.transfer.Server("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown.
 
 <h4 class="pdoc-member-header" id="Server-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L127"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L127"> <b>constructor</b></a>
 </h4>
 
 
@@ -115,7 +115,7 @@ Create a Server resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Server-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L70">method <b>get</b></a>
 </h4>
 
 
@@ -126,14 +126,14 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Server-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L61">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L61">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Server-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L81">method <b>isInstance</b></a>
 </h4>
 
 
@@ -144,7 +144,7 @@ Returns true if the given object is an instance of Server.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Server-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L91">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L91">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of Transfer Server
 
 <h4 class="pdoc-member-header" id="Server-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L95">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L95">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ Amazon Resource Name (ARN) of Transfer Server
 The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
 
 <h4 class="pdoc-member-header" id="Server-endpointDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L99">property <b>endpointDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L99">property <b>endpointDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServerEndpointDetails'>outputs.transfer.ServerEndpointDetails</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.ama
 The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 
 <h4 class="pdoc-member-header" id="Server-endpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L103">property <b>endpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L103">property <b>endpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ The virtual private cloud (VPC) endpoint settings that you want to configure for
 The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.
 
 <h4 class="pdoc-member-header" id="Server-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L107">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L107">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ The type of endpoint that you want your SFTP server connect to. If you connect t
 A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
 
 <h4 class="pdoc-member-header" id="Server-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -193,7 +193,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Server-identityProviderType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L111">property <b>identityProviderType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L111">property <b>identityProviderType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identityProviderType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ deployments and may be missing (undefined) during planning phases.
 The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
 
 <h4 class="pdoc-member-header" id="Server-invocationRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L115">property <b>invocationRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L115">property <b>invocationRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>invocationRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ The mode of authentication enabled for this service. The default value is `SERVI
 Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identityProviderType` of `API_GATEWAY`.
 
 <h4 class="pdoc-member-header" id="Server-loggingRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L119">property <b>loggingRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L119">property <b>loggingRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ Amazon Resource Name (ARN) of the IAM role used to authenticate the user account
 Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 
 <h4 class="pdoc-member-header" id="Server-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L123">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L123">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ Amazon Resource Name (ARN) of an IAM role that allows the service to write your 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Server-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L127">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L127">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ A mapping of tags to assign to the resource.
 - URL of the service endpoint used to authenticate users with an `identityProviderType` of `API_GATEWAY`.
 
 <h4 class="pdoc-member-header" id="Server-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L61">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L61">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -242,7 +242,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SshKey" data-link-title="SshKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L72">
         Resource <strong>SshKey</strong>
     </a>
 </h3>
@@ -311,7 +311,7 @@ const fooSshKey = new aws.transfer.SshKey("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_ssh_key.html.markdown.
 
 <h4 class="pdoc-member-header" id="SshKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -325,7 +325,7 @@ Create a SshKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SshKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L81">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -336,14 +336,14 @@ Get an existing SshKey resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SshKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L72">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L72">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SshKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L92">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -354,7 +354,7 @@ Returns true if the given object is an instance of SshKey.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SshKey-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L102">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L102">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>body: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -362,7 +362,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The public key portion of an SSH key pair.
 
 <h4 class="pdoc-member-header" id="SshKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -371,7 +371,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SshKey-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L106">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L106">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ deployments and may be missing (undefined) during planning phases.
 The Server ID of the Transfer Server (e.g. `s-12345678`)
 
 <h4 class="pdoc-member-header" id="SshKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L72">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L72">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -388,7 +388,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SshKey-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L110">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L110">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -396,7 +396,7 @@ deployments.
 The name of the user account that is assigned to one or more servers.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L64">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -457,7 +457,7 @@ const fooUser = new aws.transfer.User("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_user.html.markdown.
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -471,7 +471,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L73">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L73">method <b>get</b></a>
 </h4>
 
 
@@ -482,14 +482,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L64">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L64">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L84">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L84">method <b>isInstance</b></a>
 </h4>
 
 
@@ -500,7 +500,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L94">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L94">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -508,7 +508,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of Transfer User
 
 <h4 class="pdoc-member-header" id="User-homeDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L98">property <b>homeDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L98">property <b>homeDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>homeDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -516,7 +516,7 @@ Amazon Resource Name (ARN) of Transfer User
 The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -525,7 +525,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L102">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L102">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ deployments and may be missing (undefined) during planning phases.
 An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
 
 <h4 class="pdoc-member-header" id="User-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L106">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L106">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ An IAM JSON policy document that scopes down user access to portions of their Am
 Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
 
 <h4 class="pdoc-member-header" id="User-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L110">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L110">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -549,7 +549,7 @@ Amazon Resource Name (ARN) of an IAM role that allows the service to controls yo
 The Server ID of the Transfer Server (e.g. `s-12345678`)
 
 <h4 class="pdoc-member-header" id="User-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L114">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L114">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -557,7 +557,7 @@ The Server ID of the Transfer Server (e.g. `s-12345678`)
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L64">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L64">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -566,7 +566,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="User-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L118">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L118">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ The name used for log in to your SFTP server.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getServer" data-link-title="getServer">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L26">
         Data Source <strong>getServer</strong>
     </a>
 </h3>
@@ -604,7 +604,7 @@ const example = aws.transfer.getServer({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetServerArgs" data-link-title="GetServerArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L44">
         interface <strong>GetServerArgs</strong>
     </a>
 </h3>
@@ -614,7 +614,7 @@ const example = aws.transfer.getServer({
 A collection of arguments for invoking getServer.
 
 <h4 class="pdoc-member-header" id="GetServerArgs-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L48">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L48">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -622,7 +622,7 @@ A collection of arguments for invoking getServer.
 ID for an SFTP server.
 
 <h3 class="pdoc-module-header" id="GetServerResult" data-link-title="GetServerResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L54">
         interface <strong>GetServerResult</strong>
     </a>
 </h3>
@@ -632,7 +632,7 @@ ID for an SFTP server.
 A collection of values returned by getServer.
 
 <h4 class="pdoc-member-header" id="GetServerResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L58">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -640,7 +640,7 @@ A collection of values returned by getServer.
 Amazon Resource Name (ARN) of Transfer Server
 
 <h4 class="pdoc-member-header" id="GetServerResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L62">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L62">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -648,7 +648,7 @@ Amazon Resource Name (ARN) of Transfer Server
 The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
 
 <h4 class="pdoc-member-header" id="GetServerResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -656,7 +656,7 @@ The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.ama
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServerResult-identityProviderType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L66">property <b>identityProviderType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L66">property <b>identityProviderType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityProviderType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -664,7 +664,7 @@ id is the provider-assigned unique ID for this managed resource.
 The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
 
 <h4 class="pdoc-member-header" id="GetServerResult-invocationRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L70">property <b>invocationRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L70">property <b>invocationRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invocationRole: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -672,7 +672,7 @@ The mode of authentication enabled for this service. The default value is `SERVI
 Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identityProviderType` of `API_GATEWAY`.
 
 <h4 class="pdoc-member-header" id="GetServerResult-loggingRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L74">property <b>loggingRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L74">property <b>loggingRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingRole: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -680,12 +680,12 @@ Amazon Resource Name (ARN) of the IAM role used to authenticate the user account
 Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 
 <h4 class="pdoc-member-header" id="GetServerResult-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L75">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L75">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServerResult-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/getServer.ts#L79">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/getServer.ts#L79">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -693,7 +693,7 @@ Amazon Resource Name (ARN) of an IAM role that allows the service to write your 
 URL of the service endpoint used to authenticate users with an `identityProviderType` of `API_GATEWAY`.
 
 <h3 class="pdoc-module-header" id="ServerArgs" data-link-title="ServerArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L224">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L224">
         interface <strong>ServerArgs</strong>
     </a>
 </h3>
@@ -703,7 +703,7 @@ URL of the service endpoint used to authenticate users with an `identityProvider
 The set of arguments for constructing a Server resource.
 
 <h4 class="pdoc-member-header" id="ServerArgs-endpointDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L228">property <b>endpointDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L228">property <b>endpointDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServerEndpointDetails'>inputs.transfer.ServerEndpointDetails</a>&gt;;</code></pre>
@@ -711,7 +711,7 @@ The set of arguments for constructing a Server resource.
 The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 
 <h4 class="pdoc-member-header" id="ServerArgs-endpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L232">property <b>endpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L232">property <b>endpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -719,7 +719,7 @@ The virtual private cloud (VPC) endpoint settings that you want to configure for
 The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L236">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L236">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -727,7 +727,7 @@ The type of endpoint that you want your SFTP server connect to. If you connect t
 A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-identityProviderType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L240">property <b>identityProviderType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L240">property <b>identityProviderType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityProviderType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -735,7 +735,7 @@ A boolean that indicates all users associated with the server should be deleted 
 The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
 
 <h4 class="pdoc-member-header" id="ServerArgs-invocationRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L244">property <b>invocationRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L244">property <b>invocationRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invocationRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -743,7 +743,7 @@ The mode of authentication enabled for this service. The default value is `SERVI
 Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identityProviderType` of `API_GATEWAY`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-loggingRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L248">property <b>loggingRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L248">property <b>loggingRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -751,7 +751,7 @@ Amazon Resource Name (ARN) of the IAM role used to authenticate the user account
 Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 
 <h4 class="pdoc-member-header" id="ServerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L252">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L252">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -759,7 +759,7 @@ Amazon Resource Name (ARN) of an IAM role that allows the service to write your 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ServerArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L256">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L256">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -767,7 +767,7 @@ A mapping of tags to assign to the resource.
 - URL of the service endpoint used to authenticate users with an `identityProviderType` of `API_GATEWAY`.
 
 <h3 class="pdoc-module-header" id="ServerState" data-link-title="ServerState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L178">
         interface <strong>ServerState</strong>
     </a>
 </h3>
@@ -777,7 +777,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Server resources.
 
 <h4 class="pdoc-member-header" id="ServerState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L182">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L182">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -785,7 +785,7 @@ Input properties used for looking up and filtering Server resources.
 Amazon Resource Name (ARN) of Transfer Server
 
 <h4 class="pdoc-member-header" id="ServerState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L186">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L186">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -793,7 +793,7 @@ Amazon Resource Name (ARN) of Transfer Server
 The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
 
 <h4 class="pdoc-member-header" id="ServerState-endpointDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L190">property <b>endpointDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L190">property <b>endpointDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServerEndpointDetails'>inputs.transfer.ServerEndpointDetails</a>&gt;;</code></pre>
@@ -801,7 +801,7 @@ The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.ama
 The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 
 <h4 class="pdoc-member-header" id="ServerState-endpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L194">property <b>endpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L194">property <b>endpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -809,7 +809,7 @@ The virtual private cloud (VPC) endpoint settings that you want to configure for
 The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.
 
 <h4 class="pdoc-member-header" id="ServerState-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L198">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L198">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -817,7 +817,7 @@ The type of endpoint that you want your SFTP server connect to. If you connect t
 A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
 
 <h4 class="pdoc-member-header" id="ServerState-identityProviderType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L202">property <b>identityProviderType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L202">property <b>identityProviderType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityProviderType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +825,7 @@ A boolean that indicates all users associated with the server should be deleted 
 The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
 
 <h4 class="pdoc-member-header" id="ServerState-invocationRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L206">property <b>invocationRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L206">property <b>invocationRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invocationRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -833,7 +833,7 @@ The mode of authentication enabled for this service. The default value is `SERVI
 Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identityProviderType` of `API_GATEWAY`.
 
 <h4 class="pdoc-member-header" id="ServerState-loggingRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L210">property <b>loggingRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L210">property <b>loggingRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -841,7 +841,7 @@ Amazon Resource Name (ARN) of the IAM role used to authenticate the user account
 Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 
 <h4 class="pdoc-member-header" id="ServerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L214">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L214">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -849,7 +849,7 @@ Amazon Resource Name (ARN) of an IAM role that allows the service to write your 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ServerState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/server.ts#L218">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/server.ts#L218">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -857,7 +857,7 @@ A mapping of tags to assign to the resource.
 - URL of the service endpoint used to authenticate users with an `identityProviderType` of `API_GATEWAY`.
 
 <h3 class="pdoc-module-header" id="SshKeyArgs" data-link-title="SshKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L174">
         interface <strong>SshKeyArgs</strong>
     </a>
 </h3>
@@ -867,7 +867,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a SshKey resource.
 
 <h4 class="pdoc-member-header" id="SshKeyArgs-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L178">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L178">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -875,7 +875,7 @@ The set of arguments for constructing a SshKey resource.
 The public key portion of an SSH key pair.
 
 <h4 class="pdoc-member-header" id="SshKeyArgs-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L182">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L182">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -883,7 +883,7 @@ The public key portion of an SSH key pair.
 The Server ID of the Transfer Server (e.g. `s-12345678`)
 
 <h4 class="pdoc-member-header" id="SshKeyArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L186">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L186">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -891,7 +891,7 @@ The Server ID of the Transfer Server (e.g. `s-12345678`)
 The name of the user account that is assigned to one or more servers.
 
 <h3 class="pdoc-module-header" id="SshKeyState" data-link-title="SshKeyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L156">
         interface <strong>SshKeyState</strong>
     </a>
 </h3>
@@ -901,7 +901,7 @@ The name of the user account that is assigned to one or more servers.
 Input properties used for looking up and filtering SshKey resources.
 
 <h4 class="pdoc-member-header" id="SshKeyState-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L160">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L160">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -909,7 +909,7 @@ Input properties used for looking up and filtering SshKey resources.
 The public key portion of an SSH key pair.
 
 <h4 class="pdoc-member-header" id="SshKeyState-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L164">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L164">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -917,7 +917,7 @@ The public key portion of an SSH key pair.
 The Server ID of the Transfer Server (e.g. `s-12345678`)
 
 <h4 class="pdoc-member-header" id="SshKeyState-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/sshKey.ts#L168">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/sshKey.ts#L168">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -925,7 +925,7 @@ The Server ID of the Transfer Server (e.g. `s-12345678`)
 The name of the user account that is assigned to one or more servers.
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L206">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -935,7 +935,7 @@ The name of the user account that is assigned to one or more servers.
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-homeDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L210">property <b>homeDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L210">property <b>homeDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>homeDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -943,7 +943,7 @@ The set of arguments for constructing a User resource.
 The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
 
 <h4 class="pdoc-member-header" id="UserArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L214">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L214">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +951,7 @@ The landing directory (folder) for a user when they log in to the server using t
 An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
 
 <h4 class="pdoc-member-header" id="UserArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L218">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L218">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -959,7 +959,7 @@ An IAM JSON policy document that scopes down user access to portions of their Am
 Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
 
 <h4 class="pdoc-member-header" id="UserArgs-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L222">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L222">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -967,7 +967,7 @@ Amazon Resource Name (ARN) of an IAM role that allows the service to controls yo
 The Server ID of the Transfer Server (e.g. `s-12345678`)
 
 <h4 class="pdoc-member-header" id="UserArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L226">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L226">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -975,7 +975,7 @@ The Server ID of the Transfer Server (e.g. `s-12345678`)
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L230">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L230">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -983,7 +983,7 @@ A mapping of tags to assign to the resource.
 The name used for log in to your SFTP server.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L172">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -993,7 +993,7 @@ The name used for log in to your SFTP server.
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L176">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L176">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1001,7 +1001,7 @@ Input properties used for looking up and filtering User resources.
 Amazon Resource Name (ARN) of Transfer User
 
 <h4 class="pdoc-member-header" id="UserState-homeDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L180">property <b>homeDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L180">property <b>homeDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>homeDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1009,7 +1009,7 @@ Amazon Resource Name (ARN) of Transfer User
 The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
 
 <h4 class="pdoc-member-header" id="UserState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L184">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L184">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1017,7 +1017,7 @@ The landing directory (folder) for a user when they log in to the server using t
 An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
 
 <h4 class="pdoc-member-header" id="UserState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L188">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L188">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1025,7 +1025,7 @@ An IAM JSON policy document that scopes down user access to portions of their Am
 Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
 
 <h4 class="pdoc-member-header" id="UserState-serverId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L192">property <b>serverId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L192">property <b>serverId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +1033,7 @@ Amazon Resource Name (ARN) of an IAM role that allows the service to controls yo
 The Server ID of the Transfer Server (e.g. `s-12345678`)
 
 <h4 class="pdoc-member-header" id="UserState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L196">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L196">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1041,7 +1041,7 @@ The Server ID of the Transfer Server (e.g. `s-12345678`)
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="UserState-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/transfer/user.ts#L200">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/transfer/user.ts#L200">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

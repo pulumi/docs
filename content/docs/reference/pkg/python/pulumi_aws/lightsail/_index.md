@@ -635,6 +635,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.lightsail.StaticIpAttachment.ip_address">
+<code class="sig-name descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment.ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The allocated static IP address</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.lightsail.StaticIpAttachment.static_ip_name">
 <code class="sig-name descname">static_ip_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment.static_ip_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the allocated static IP</p>
@@ -642,7 +648,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.lightsail.StaticIpAttachment.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">static_ip_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">static_ip_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing StaticIpAttachment resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -652,6 +658,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail instance to attach the IP to</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocated static IP address</p></li>
 <li><p><strong>static_ip_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the allocated static IP</p></li>
 </ul>
 </dd>

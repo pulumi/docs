@@ -43,7 +43,7 @@ linktitle: "datasync"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Agent" data-link-title="Agent">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L25">
         Resource <strong>Agent</strong>
     </a>
 </h3>
@@ -68,7 +68,7 @@ const example = new aws.datasync.Agent("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown.
 
 <h4 class="pdoc-member-header" id="Agent-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -82,7 +82,7 @@ Create a Agent resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Agent-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -93,14 +93,14 @@ Get an existing Agent resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Agent-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Agent-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -111,7 +111,7 @@ Returns true if the given object is an instance of Agent.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Agent-activationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L55">property <b>activationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L55">property <b>activationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activationKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -119,7 +119,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 DataSync Agent activation key during resource creation. Conflicts with `ipAddress`. If an `ipAddress` is provided instead, the provider will retrieve the `activationKey` as part of the resource creation.
 
 <h4 class="pdoc-member-header" id="Agent-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L59">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L59">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -127,7 +127,7 @@ DataSync Agent activation key during resource creation. Conflicts with `ipAddres
 Amazon Resource Name (ARN) of the DataSync Agent.
 
 <h4 class="pdoc-member-header" id="Agent-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -136,7 +136,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Agent-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L63">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L63">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ deployments and may be missing (undefined) during planning phases.
 DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with `activationKey`. DataSync Agent must be accessible on port 80 from where the provider is running.
 
 <h4 class="pdoc-member-header" id="Agent-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ DataSync Agent IP address to retrieve activation key during resource creation. C
 Name of the DataSync Agent.
 
 <h4 class="pdoc-member-header" id="Agent-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L71">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L71">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ Name of the DataSync Agent.
 Key-value pairs of resource tags to assign to the DataSync Agent.
 
 <h4 class="pdoc-member-header" id="Agent-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -169,7 +169,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EfsLocation" data-link-title="EfsLocation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L35">
         Resource <strong>EfsLocation</strong>
     </a>
 </h3>
@@ -200,7 +200,7 @@ const example = new aws.datasync.EfsLocation("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown.
 
 <h4 class="pdoc-member-header" id="EfsLocation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -214,7 +214,7 @@ Create a EfsLocation resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EfsLocation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -225,14 +225,14 @@ Get an existing EfsLocation resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EfsLocation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EfsLocation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -243,7 +243,7 @@ Returns true if the given object is an instance of EfsLocation.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EfsLocation-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L65">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L65">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -251,7 +251,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the DataSync Location.
 
 <h4 class="pdoc-member-header" id="EfsLocation-ec2Config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L69">property <b>ec2Config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L69">property <b>ec2Config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ec2Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EfsLocationEc2Config'>outputs.datasync.EfsLocationEc2Config</a>&gt;;</code></pre>
@@ -259,7 +259,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
 Configuration block containing EC2 configurations for connecting to the EFS File System.
 
 <h4 class="pdoc-member-header" id="EfsLocation-efsFileSystemArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L73">property <b>efsFileSystemArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L73">property <b>efsFileSystemArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>efsFileSystemArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -267,7 +267,7 @@ Configuration block containing EC2 configurations for connecting to the EFS File
 Amazon Resource Name (ARN) of EFS File System.
 
 <h4 class="pdoc-member-header" id="EfsLocation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -276,7 +276,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EfsLocation-subdirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L77">property <b>subdirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L77">property <b>subdirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subdirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -284,7 +284,7 @@ deployments and may be missing (undefined) during planning phases.
 Subdirectory to perform actions as source or destination. Default `/`.
 
 <h4 class="pdoc-member-header" id="EfsLocation-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L81">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L81">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -292,12 +292,12 @@ Subdirectory to perform actions as source or destination. Default `/`.
 Key-value pairs of resource tags to assign to the DataSync Location.
 
 <h4 class="pdoc-member-header" id="EfsLocation-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L82">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L82">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EfsLocation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -306,7 +306,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NfsLocation" data-link-title="NfsLocation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L31">
         Resource <strong>NfsLocation</strong>
     </a>
 </h3>
@@ -335,7 +335,7 @@ const example = new aws.datasync.NfsLocation("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown.
 
 <h4 class="pdoc-member-header" id="NfsLocation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -349,7 +349,7 @@ Create a NfsLocation resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NfsLocation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -360,14 +360,14 @@ Get an existing NfsLocation resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NfsLocation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NfsLocation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -378,7 +378,7 @@ Returns true if the given object is an instance of NfsLocation.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NfsLocation-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L61">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L61">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the DataSync Location.
 
 <h4 class="pdoc-member-header" id="NfsLocation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -395,7 +395,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NfsLocation-onPremConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L65">property <b>onPremConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L65">property <b>onPremConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>onPremConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NfsLocationOnPremConfig'>outputs.datasync.NfsLocationOnPremConfig</a>&gt;;</code></pre>
@@ -403,7 +403,7 @@ deployments and may be missing (undefined) during planning phases.
 Configuration block containing information for connecting to the NFS File System.
 
 <h4 class="pdoc-member-header" id="NfsLocation-serverHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L69">property <b>serverHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L69">property <b>serverHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -411,7 +411,7 @@ Configuration block containing information for connecting to the NFS File System
 Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) use this to mount the NFS server.
 
 <h4 class="pdoc-member-header" id="NfsLocation-subdirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L73">property <b>subdirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L73">property <b>subdirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subdirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -419,7 +419,7 @@ Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) us
 Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 
 <h4 class="pdoc-member-header" id="NfsLocation-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L77">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L77">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -427,12 +427,12 @@ Subdirectory to perform actions as source or destination. Should be exported by 
 Key-value pairs of resource tags to assign to the DataSync Location.
 
 <h4 class="pdoc-member-header" id="NfsLocation-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L78">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L78">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NfsLocation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -441,7 +441,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="S3Location" data-link-title="S3Location">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L31">
         Resource <strong>S3Location</strong>
     </a>
 </h3>
@@ -468,7 +468,7 @@ const example = new aws.datasync.S3Location("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown.
 
 <h4 class="pdoc-member-header" id="S3Location-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -482,7 +482,7 @@ Create a S3Location resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="S3Location-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -493,14 +493,14 @@ Get an existing S3Location resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="S3Location-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="S3Location-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -511,7 +511,7 @@ Returns true if the given object is an instance of S3Location.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="S3Location-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L61">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L61">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -519,7 +519,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the DataSync Location.
 
 <h4 class="pdoc-member-header" id="S3Location-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -528,7 +528,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="S3Location-s3BucketArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L65">property <b>s3BucketArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L65">property <b>s3BucketArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3BucketArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -536,7 +536,7 @@ deployments and may be missing (undefined) during planning phases.
 Amazon Resource Name (ARN) of the S3 Bucket.
 
 <h4 class="pdoc-member-header" id="S3Location-s3Config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L69">property <b>s3Config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L69">property <b>s3Config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#S3LocationS3Config'>outputs.datasync.S3LocationS3Config</a>&gt;;</code></pre>
@@ -544,7 +544,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
 Configuration block containing information for connecting to S3.
 
 <h4 class="pdoc-member-header" id="S3Location-subdirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L73">property <b>subdirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L73">property <b>subdirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subdirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -552,7 +552,7 @@ Configuration block containing information for connecting to S3.
 Prefix to perform actions as source or destination.
 
 <h4 class="pdoc-member-header" id="S3Location-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L77">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L77">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -560,12 +560,12 @@ Prefix to perform actions as source or destination.
 Key-value pairs of resource tags to assign to the DataSync Location.
 
 <h4 class="pdoc-member-header" id="S3Location-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L78">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L78">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="S3Location-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -574,7 +574,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Task" data-link-title="Task">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L31">
         Resource <strong>Task</strong>
     </a>
 </h3>
@@ -601,7 +601,7 @@ const example = new aws.datasync.Task("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown.
 
 <h4 class="pdoc-member-header" id="Task-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -615,7 +615,7 @@ Create a Task resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Task-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -626,14 +626,14 @@ Get an existing Task resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Task-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Task-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -644,7 +644,7 @@ Returns true if the given object is an instance of Task.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Task-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L61">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L61">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -652,7 +652,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the DataSync Task.
 
 <h4 class="pdoc-member-header" id="Task-cloudwatchLogGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L65">property <b>cloudwatchLogGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L65">property <b>cloudwatchLogGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudwatchLogGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -660,7 +660,7 @@ Amazon Resource Name (ARN) of the DataSync Task.
 Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
 
 <h4 class="pdoc-member-header" id="Task-destinationLocationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L69">property <b>destinationLocationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L69">property <b>destinationLocationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -668,7 +668,7 @@ Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor a
 Amazon Resource Name (ARN) of destination DataSync Location.
 
 <h4 class="pdoc-member-header" id="Task-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -677,7 +677,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Task-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -685,7 +685,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the DataSync Task.
 
 <h4 class="pdoc-member-header" id="Task-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L77">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L77">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskOptions'>outputs.datasync.TaskOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -693,7 +693,7 @@ Name of the DataSync Task.
 Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
 
 <h4 class="pdoc-member-header" id="Task-sourceLocationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L81">property <b>sourceLocationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L81">property <b>sourceLocationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -701,7 +701,7 @@ Configuration block containing option that controls the default behavior when yo
 Amazon Resource Name (ARN) of source DataSync Location.
 
 <h4 class="pdoc-member-header" id="Task-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L85">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ Amazon Resource Name (ARN) of source DataSync Location.
 Key-value pairs of resource tags to assign to the DataSync Task.
 
 <h4 class="pdoc-member-header" id="Task-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -721,7 +721,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AgentArgs" data-link-title="AgentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L138">
         interface <strong>AgentArgs</strong>
     </a>
 </h3>
@@ -731,7 +731,7 @@ deployments.
 The set of arguments for constructing a Agent resource.
 
 <h4 class="pdoc-member-header" id="AgentArgs-activationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L142">property <b>activationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L142">property <b>activationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activationKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -739,7 +739,7 @@ The set of arguments for constructing a Agent resource.
 DataSync Agent activation key during resource creation. Conflicts with `ipAddress`. If an `ipAddress` is provided instead, the provider will retrieve the `activationKey` as part of the resource creation.
 
 <h4 class="pdoc-member-header" id="AgentArgs-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L146">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L146">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -747,7 +747,7 @@ DataSync Agent activation key during resource creation. Conflicts with `ipAddres
 DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with `activationKey`. DataSync Agent must be accessible on port 80 from where the provider is running.
 
 <h4 class="pdoc-member-header" id="AgentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -755,7 +755,7 @@ DataSync Agent IP address to retrieve activation key during resource creation. C
 Name of the DataSync Agent.
 
 <h4 class="pdoc-member-header" id="AgentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L154">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L154">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -763,7 +763,7 @@ Name of the DataSync Agent.
 Key-value pairs of resource tags to assign to the DataSync Agent.
 
 <h3 class="pdoc-module-header" id="AgentState" data-link-title="AgentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L112">
         interface <strong>AgentState</strong>
     </a>
 </h3>
@@ -773,7 +773,7 @@ Key-value pairs of resource tags to assign to the DataSync Agent.
 Input properties used for looking up and filtering Agent resources.
 
 <h4 class="pdoc-member-header" id="AgentState-activationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L116">property <b>activationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L116">property <b>activationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activationKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -781,7 +781,7 @@ Input properties used for looking up and filtering Agent resources.
 DataSync Agent activation key during resource creation. Conflicts with `ipAddress`. If an `ipAddress` is provided instead, the provider will retrieve the `activationKey` as part of the resource creation.
 
 <h4 class="pdoc-member-header" id="AgentState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L120">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L120">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -789,7 +789,7 @@ DataSync Agent activation key during resource creation. Conflicts with `ipAddres
 Amazon Resource Name (ARN) of the DataSync Agent.
 
 <h4 class="pdoc-member-header" id="AgentState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L124">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L124">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -797,7 +797,7 @@ Amazon Resource Name (ARN) of the DataSync Agent.
 DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with `activationKey`. DataSync Agent must be accessible on port 80 from where the provider is running.
 
 <h4 class="pdoc-member-header" id="AgentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -805,7 +805,7 @@ DataSync Agent IP address to retrieve activation key during resource creation. C
 Name of the DataSync Agent.
 
 <h4 class="pdoc-member-header" id="AgentState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/agent.ts#L132">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/agent.ts#L132">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -813,7 +813,7 @@ Name of the DataSync Agent.
 Key-value pairs of resource tags to assign to the DataSync Agent.
 
 <h3 class="pdoc-module-header" id="EfsLocationArgs" data-link-title="EfsLocationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L158">
         interface <strong>EfsLocationArgs</strong>
     </a>
 </h3>
@@ -823,7 +823,7 @@ Key-value pairs of resource tags to assign to the DataSync Agent.
 The set of arguments for constructing a EfsLocation resource.
 
 <h4 class="pdoc-member-header" id="EfsLocationArgs-ec2Config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L162">property <b>ec2Config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L162">property <b>ec2Config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ec2Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EfsLocationEc2Config'>inputs.datasync.EfsLocationEc2Config</a>&gt;;</code></pre>
@@ -831,7 +831,7 @@ The set of arguments for constructing a EfsLocation resource.
 Configuration block containing EC2 configurations for connecting to the EFS File System.
 
 <h4 class="pdoc-member-header" id="EfsLocationArgs-efsFileSystemArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L166">property <b>efsFileSystemArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L166">property <b>efsFileSystemArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>efsFileSystemArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -839,7 +839,7 @@ Configuration block containing EC2 configurations for connecting to the EFS File
 Amazon Resource Name (ARN) of EFS File System.
 
 <h4 class="pdoc-member-header" id="EfsLocationArgs-subdirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L170">property <b>subdirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L170">property <b>subdirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subdirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +847,7 @@ Amazon Resource Name (ARN) of EFS File System.
 Subdirectory to perform actions as source or destination. Default `/`.
 
 <h4 class="pdoc-member-header" id="EfsLocationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L174">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L174">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -855,7 +855,7 @@ Subdirectory to perform actions as source or destination. Default `/`.
 Key-value pairs of resource tags to assign to the DataSync Location.
 
 <h3 class="pdoc-module-header" id="EfsLocationState" data-link-title="EfsLocationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L131">
         interface <strong>EfsLocationState</strong>
     </a>
 </h3>
@@ -865,7 +865,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
 Input properties used for looking up and filtering EfsLocation resources.
 
 <h4 class="pdoc-member-header" id="EfsLocationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L135">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L135">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -873,7 +873,7 @@ Input properties used for looking up and filtering EfsLocation resources.
 Amazon Resource Name (ARN) of the DataSync Location.
 
 <h4 class="pdoc-member-header" id="EfsLocationState-ec2Config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L139">property <b>ec2Config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L139">property <b>ec2Config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ec2Config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EfsLocationEc2Config'>inputs.datasync.EfsLocationEc2Config</a>&gt;;</code></pre>
@@ -881,7 +881,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
 Configuration block containing EC2 configurations for connecting to the EFS File System.
 
 <h4 class="pdoc-member-header" id="EfsLocationState-efsFileSystemArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L143">property <b>efsFileSystemArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L143">property <b>efsFileSystemArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>efsFileSystemArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -889,7 +889,7 @@ Configuration block containing EC2 configurations for connecting to the EFS File
 Amazon Resource Name (ARN) of EFS File System.
 
 <h4 class="pdoc-member-header" id="EfsLocationState-subdirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L147">property <b>subdirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L147">property <b>subdirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subdirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -897,7 +897,7 @@ Amazon Resource Name (ARN) of EFS File System.
 Subdirectory to perform actions as source or destination. Default `/`.
 
 <h4 class="pdoc-member-header" id="EfsLocationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L151">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L151">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -905,12 +905,12 @@ Subdirectory to perform actions as source or destination. Default `/`.
 Key-value pairs of resource tags to assign to the DataSync Location.
 
 <h4 class="pdoc-member-header" id="EfsLocationState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/efsLocation.ts#L152">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/efsLocation.ts#L152">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="NfsLocationArgs" data-link-title="NfsLocationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L157">
         interface <strong>NfsLocationArgs</strong>
     </a>
 </h3>
@@ -920,7 +920,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
 The set of arguments for constructing a NfsLocation resource.
 
 <h4 class="pdoc-member-header" id="NfsLocationArgs-onPremConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L161">property <b>onPremConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L161">property <b>onPremConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onPremConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsLocationOnPremConfig'>inputs.datasync.NfsLocationOnPremConfig</a>&gt;;</code></pre>
@@ -928,7 +928,7 @@ The set of arguments for constructing a NfsLocation resource.
 Configuration block containing information for connecting to the NFS File System.
 
 <h4 class="pdoc-member-header" id="NfsLocationArgs-serverHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L165">property <b>serverHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L165">property <b>serverHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -936,7 +936,7 @@ Configuration block containing information for connecting to the NFS File System
 Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) use this to mount the NFS server.
 
 <h4 class="pdoc-member-header" id="NfsLocationArgs-subdirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L169">property <b>subdirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L169">property <b>subdirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subdirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -944,7 +944,7 @@ Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) us
 Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 
 <h4 class="pdoc-member-header" id="NfsLocationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L173">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L173">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -952,7 +952,7 @@ Subdirectory to perform actions as source or destination. Should be exported by 
 Key-value pairs of resource tags to assign to the DataSync Location.
 
 <h3 class="pdoc-module-header" id="NfsLocationState" data-link-title="NfsLocationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L130">
         interface <strong>NfsLocationState</strong>
     </a>
 </h3>
@@ -962,7 +962,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
 Input properties used for looking up and filtering NfsLocation resources.
 
 <h4 class="pdoc-member-header" id="NfsLocationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L134">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L134">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -970,7 +970,7 @@ Input properties used for looking up and filtering NfsLocation resources.
 Amazon Resource Name (ARN) of the DataSync Location.
 
 <h4 class="pdoc-member-header" id="NfsLocationState-onPremConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L138">property <b>onPremConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L138">property <b>onPremConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onPremConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NfsLocationOnPremConfig'>inputs.datasync.NfsLocationOnPremConfig</a>&gt;;</code></pre>
@@ -978,7 +978,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
 Configuration block containing information for connecting to the NFS File System.
 
 <h4 class="pdoc-member-header" id="NfsLocationState-serverHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L142">property <b>serverHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L142">property <b>serverHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -986,7 +986,7 @@ Configuration block containing information for connecting to the NFS File System
 Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) use this to mount the NFS server.
 
 <h4 class="pdoc-member-header" id="NfsLocationState-subdirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L146">property <b>subdirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L146">property <b>subdirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subdirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -994,7 +994,7 @@ Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) us
 Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 
 <h4 class="pdoc-member-header" id="NfsLocationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L150">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L150">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1002,12 +1002,12 @@ Subdirectory to perform actions as source or destination. Should be exported by 
 Key-value pairs of resource tags to assign to the DataSync Location.
 
 <h4 class="pdoc-member-header" id="NfsLocationState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/nfsLocation.ts#L151">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/nfsLocation.ts#L151">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="S3LocationArgs" data-link-title="S3LocationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L157">
         interface <strong>S3LocationArgs</strong>
     </a>
 </h3>
@@ -1017,7 +1017,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
 The set of arguments for constructing a S3Location resource.
 
 <h4 class="pdoc-member-header" id="S3LocationArgs-s3BucketArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L161">property <b>s3BucketArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L161">property <b>s3BucketArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3BucketArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -1025,7 +1025,7 @@ The set of arguments for constructing a S3Location resource.
 Amazon Resource Name (ARN) of the S3 Bucket.
 
 <h4 class="pdoc-member-header" id="S3LocationArgs-s3Config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L165">property <b>s3Config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L165">property <b>s3Config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#S3LocationS3Config'>inputs.datasync.S3LocationS3Config</a>&gt;;</code></pre>
@@ -1033,7 +1033,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
 Configuration block containing information for connecting to S3.
 
 <h4 class="pdoc-member-header" id="S3LocationArgs-subdirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L169">property <b>subdirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L169">property <b>subdirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subdirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1041,7 +1041,7 @@ Configuration block containing information for connecting to S3.
 Prefix to perform actions as source or destination.
 
 <h4 class="pdoc-member-header" id="S3LocationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L173">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L173">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1049,7 +1049,7 @@ Prefix to perform actions as source or destination.
 Key-value pairs of resource tags to assign to the DataSync Location.
 
 <h3 class="pdoc-module-header" id="S3LocationState" data-link-title="S3LocationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L130">
         interface <strong>S3LocationState</strong>
     </a>
 </h3>
@@ -1059,7 +1059,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
 Input properties used for looking up and filtering S3Location resources.
 
 <h4 class="pdoc-member-header" id="S3LocationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L134">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L134">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1067,7 +1067,7 @@ Input properties used for looking up and filtering S3Location resources.
 Amazon Resource Name (ARN) of the DataSync Location.
 
 <h4 class="pdoc-member-header" id="S3LocationState-s3BucketArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L138">property <b>s3BucketArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L138">property <b>s3BucketArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3BucketArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -1075,7 +1075,7 @@ Amazon Resource Name (ARN) of the DataSync Location.
 Amazon Resource Name (ARN) of the S3 Bucket.
 
 <h4 class="pdoc-member-header" id="S3LocationState-s3Config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L142">property <b>s3Config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L142">property <b>s3Config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#S3LocationS3Config'>inputs.datasync.S3LocationS3Config</a>&gt;;</code></pre>
@@ -1083,7 +1083,7 @@ Amazon Resource Name (ARN) of the S3 Bucket.
 Configuration block containing information for connecting to S3.
 
 <h4 class="pdoc-member-header" id="S3LocationState-subdirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L146">property <b>subdirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L146">property <b>subdirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subdirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1091,7 +1091,7 @@ Configuration block containing information for connecting to S3.
 Prefix to perform actions as source or destination.
 
 <h4 class="pdoc-member-header" id="S3LocationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L150">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L150">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1099,12 +1099,12 @@ Prefix to perform actions as source or destination.
 Key-value pairs of resource tags to assign to the DataSync Location.
 
 <h4 class="pdoc-member-header" id="S3LocationState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/s3Location.ts#L151">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/s3Location.ts#L151">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TaskArgs" data-link-title="TaskArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L170">
         interface <strong>TaskArgs</strong>
     </a>
 </h3>
@@ -1114,7 +1114,7 @@ Key-value pairs of resource tags to assign to the DataSync Location.
 The set of arguments for constructing a Task resource.
 
 <h4 class="pdoc-member-header" id="TaskArgs-cloudwatchLogGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L174">property <b>cloudwatchLogGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L174">property <b>cloudwatchLogGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudwatchLogGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -1122,7 +1122,7 @@ The set of arguments for constructing a Task resource.
 Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
 
 <h4 class="pdoc-member-header" id="TaskArgs-destinationLocationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L178">property <b>destinationLocationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L178">property <b>destinationLocationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -1130,7 +1130,7 @@ Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor a
 Amazon Resource Name (ARN) of destination DataSync Location.
 
 <h4 class="pdoc-member-header" id="TaskArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1138,7 +1138,7 @@ Amazon Resource Name (ARN) of destination DataSync Location.
 Name of the DataSync Task.
 
 <h4 class="pdoc-member-header" id="TaskArgs-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L186">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L186">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskOptions'>inputs.datasync.TaskOptions</a>&gt;;</code></pre>
@@ -1146,7 +1146,7 @@ Name of the DataSync Task.
 Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
 
 <h4 class="pdoc-member-header" id="TaskArgs-sourceLocationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L190">property <b>sourceLocationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L190">property <b>sourceLocationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceLocationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -1154,7 +1154,7 @@ Configuration block containing option that controls the default behavior when yo
 Amazon Resource Name (ARN) of source DataSync Location.
 
 <h4 class="pdoc-member-header" id="TaskArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L194">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L194">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1162,7 +1162,7 @@ Amazon Resource Name (ARN) of source DataSync Location.
 Key-value pairs of resource tags to assign to the DataSync Task.
 
 <h3 class="pdoc-module-header" id="TaskState" data-link-title="TaskState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L136">
         interface <strong>TaskState</strong>
     </a>
 </h3>
@@ -1172,7 +1172,7 @@ Key-value pairs of resource tags to assign to the DataSync Task.
 Input properties used for looking up and filtering Task resources.
 
 <h4 class="pdoc-member-header" id="TaskState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L140">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L140">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1180,7 +1180,7 @@ Input properties used for looking up and filtering Task resources.
 Amazon Resource Name (ARN) of the DataSync Task.
 
 <h4 class="pdoc-member-header" id="TaskState-cloudwatchLogGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L144">property <b>cloudwatchLogGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L144">property <b>cloudwatchLogGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudwatchLogGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -1188,7 +1188,7 @@ Amazon Resource Name (ARN) of the DataSync Task.
 Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
 
 <h4 class="pdoc-member-header" id="TaskState-destinationLocationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L148">property <b>destinationLocationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L148">property <b>destinationLocationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationLocationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -1196,7 +1196,7 @@ Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor a
 Amazon Resource Name (ARN) of destination DataSync Location.
 
 <h4 class="pdoc-member-header" id="TaskState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1204,7 +1204,7 @@ Amazon Resource Name (ARN) of destination DataSync Location.
 Name of the DataSync Task.
 
 <h4 class="pdoc-member-header" id="TaskState-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L156">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L156">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskOptions'>inputs.datasync.TaskOptions</a>&gt;;</code></pre>
@@ -1212,7 +1212,7 @@ Name of the DataSync Task.
 Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
 
 <h4 class="pdoc-member-header" id="TaskState-sourceLocationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L160">property <b>sourceLocationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L160">property <b>sourceLocationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceLocationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -1220,7 +1220,7 @@ Configuration block containing option that controls the default behavior when yo
 Amazon Resource Name (ARN) of source DataSync Location.
 
 <h4 class="pdoc-member-header" id="TaskState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/09758c126f17421c81562218aa84552a504a2071/sdk/nodejs/datasync/task.ts#L164">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8f20819d90623bcb71a1683a2a576358c7f4cb7f/sdk/nodejs/datasync/task.ts#L164">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
