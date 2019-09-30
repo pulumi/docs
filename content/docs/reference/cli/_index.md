@@ -96,13 +96,13 @@ You can also use an arbitrary directory like `~/.zsh/completion/` and then add i
 fpath=(~/.zsh/completion $fpath)
 ```
 
-Make sure compinit is loaded or do it by adding in ~/.zshrc:
+Make sure `compinit` is loaded or do it by adding in `~/.zshrc`:
 
 ```shell
 autoload -Uz compinit && compinit -i
 ```
 
-Then reloads your shell:
+Then reload your shell:
 
 ```shell
 exec $SHELL -l
