@@ -993,7 +993,7 @@ const pxe1 = new packet.Device("pxe1", {
     operatingSystem: "customIpxe",
     plan: "t1.small.x86",
     projectId: local_project_id,
-    userData: ignition_config_example.rendered.apply(rendered => rendered),
+    userData: ignition_config_example.rendered,
 });
 ```
 
@@ -1738,25 +1738,25 @@ const testVlan = new packet.Vlan("test", {
     facility: "ewr1",
     projectId: local_project_id,
 });
-const test1Vlan = new packet.Vlan("test1", {
-    description: "VLAN in New Jersey",
-    facility: "ewr1",
-    projectId: local_project_id,
-});
-const test2Vlan = new packet.Vlan("test2", {
-    description: "VLAN in New Jersey",
-    facility: "ewr1",
-    projectId: local_project_id,
-});
 const testPortVlanAttachment = new packet.PortVlanAttachment("test", {
     deviceId: testDevice.id,
     portName: "eth1",
     vlanVnid: testVlan.vxlan,
 });
+const test1Vlan = new packet.Vlan("test1", {
+    description: "VLAN in New Jersey",
+    facility: "ewr1",
+    projectId: local_project_id,
+});
 const test1PortVlanAttachment = new packet.PortVlanAttachment("test1", {
     deviceId: testDevice.id,
     portName: "eth1",
     vlanVnid: test1Vlan.vxlan,
+});
+const test2Vlan = new packet.Vlan("test2", {
+    description: "VLAN in New Jersey",
+    facility: "ewr1",
+    projectId: local_project_id,
 });
 const test2PortVlanAttachment = new packet.PortVlanAttachment("test2", {
     deviceId: testDevice.id,
@@ -3109,17 +3109,17 @@ Use this data source to get Packet Operating System image.
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
 
-const example = pulumi.output(packet.getOperatingSystem({
+const example = packet.getOperatingSystem({
     distro: "coreos",
     name: "Container Linux",
     provisionableOn: "c1.small.x86",
     version: "alpha",
-}));
+});
 const server = new packet.Device("server", {
     billingCycle: "hourly",
     facilities: ["ewr1"],
     hostname: "tf.coreos2",
-    operatingSystem: example.apply(example => example.id),
+    operatingSystem: example.id,
     plan: "c1.small.x86",
     projectId: local_project_id,
 });
@@ -3160,10 +3160,10 @@ Use this data source to get Packet Spot Market Price.
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
 
-const example = pulumi.output(packet.getSpotMarketPrice({
+const example = packet.getSpotMarketPrice({
     facility: "ewr1",
     plan: "c1.small.x86",
-}));
+});
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_price.html.markdown.
