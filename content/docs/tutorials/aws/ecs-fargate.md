@@ -6,9 +6,9 @@ aliases: ["/docs/reference/tutorials/aws/tutorial-service/"]
 
 <!--To-Do: Update github-buttons shortcode to check for existence of examples-->
 <p class="mb-4 flex">
-    <button class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white h-8" href="https://github.com/pulumi/examples/tree/master/aws-ts-containers" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white h-8" href="https://github.com/pulumi/examples/tree/master/aws-ts-containers" target="_blank">
       <span><i class="fab fa-github pr-2"></i> View TS Code</span>
-    </button>
+    </a>
 </p>
 
 In this tutorial, we'll build and publish a Docker container to a private Elastic Container Registry (ECR), and spin up a load-balanced Amazon Elastic Container Service (Amazon ECS) Fargate service, all in a handful of lines of code, using [Pulumi Crosswalk for AWS]({{< relref "/docs/guides/crosswalk/aws" >}}).
@@ -25,7 +25,7 @@ In this tutorial, we'll build and publish a Docker container to a private Elasti
 
 Create a project directory, `hello-fargate`, and change into it. Run [`pulumi new aws-typescript --name myproject`]({{< relref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the AWS template for TypeScript. Replace `myproject` with your desired project name.
 
-1.  Run `pulumi new` to create a new project:
+Run `pulumi new` to create a new project:
 
     ```bash
     $ mkdir hello-fargate && cd hello-fargate
