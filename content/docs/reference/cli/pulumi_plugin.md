@@ -38,7 +38,7 @@ The plugin family of commands provides a way of explicitly managing plugins.
       --logtostderr                  Log to stderr instead of to files
       --non-interactive              Disable interactive mode for all commands
       --profiling string             Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively
-      --tracing file:                Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
+      --tracing string               Emit tracing to a Zipkin-compatible tracing endpoint
   -v, --verbose int                  Enable verbose logging (e.g., v=3); anything >3 is very verbose
 ```
 

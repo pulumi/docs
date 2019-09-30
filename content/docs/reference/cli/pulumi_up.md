@@ -38,7 +38,6 @@ pulumi up [template|url] [flags]
   -r, --refresh                   Refresh the state of the stack's resources before this update
       --secrets-provider string   The type of the provider that should be used to encrypt and decrypt secrets (possible choices: default, passphrase, awskms, azurekeyvault, gcpkms, hashivault). Onlyused when creating a new stack from an existing template (default "default")
       --show-config               Show configuration keys and variables
-      --show-reads                Show resources that are being read in, alongside those being managed directly in the stack
       --show-replacement-steps    Show detailed resource replacement creates and deletes instead of a single step
       --show-sames                Show resources that don't need be updated because they haven't changed, alongside those that do
       --skip-preview              Do not perform a preview before performing the update
@@ -58,7 +57,7 @@ pulumi up [template|url] [flags]
       --logtostderr                  Log to stderr instead of to files
       --non-interactive              Disable interactive mode for all commands
       --profiling string             Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively
-      --tracing file:                Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
+      --tracing string               Emit tracing to a Zipkin-compatible tracing endpoint
   -v, --verbose int                  Enable verbose logging (e.g., v=3); anything >3 is very verbose
 ```
 

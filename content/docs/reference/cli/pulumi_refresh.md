@@ -37,7 +37,6 @@ pulumi refresh [flags]
       --skip-preview             Do not perform a preview before performing the refresh
   -s, --stack string             The name of the stack to operate on. Defaults to the current stack
       --suppress-outputs         Suppress display of stack outputs (in case they contain sensitive values)
-  -t, --target stringArray       Specify a single resource URN to refresh. Multiple resource can be specified using: --target urn1 --target urn2
   -y, --yes                      Automatically approve and perform the refresh after previewing it
 ```
 
@@ -52,7 +51,7 @@ pulumi refresh [flags]
       --logtostderr                  Log to stderr instead of to files
       --non-interactive              Disable interactive mode for all commands
       --profiling string             Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively
-      --tracing file:                Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
+      --tracing string               Emit tracing to a Zipkin-compatible tracing endpoint
   -v, --verbose int                  Enable verbose logging (e.g., v=3); anything >3 is very verbose
 ```
 
