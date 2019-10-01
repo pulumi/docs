@@ -487,10 +487,24 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		}
 	}
 
+	hasModules := len(modules) > 0
+	hasMembers := len(members) > 0
+	hasNamespaces := len(namespaces) > 0
+	hasResources := len(resources) > 0
+	hasDataSources := len(dataSources) > 0
+
+	metaDescription := "Explore "
+	if root {
+		metaDescription += "members of the " + linktitle + " package."
+	} else {
+		metaDescription += "members of the " + linktitle + " module in the " + e.pkg + " package."
+	}
+
 	// To generate the code, simply render the source Mustache template, using the right set of arguments.
 	if err = indexTemplate.FRender(f, map[string]interface{}{
 		"Title":                     title,
 		"LinkTitle":                 linktitle,
+		"MetaDescription":           metaDescription,
 		"RepoURL":                   e.repoURL,
 		"Package":                   pkg,
 		"PackageName":               e.pkgname,
@@ -498,16 +512,16 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		"PackageVar":                pkgvar,
 		"Files":                     files,
 		"Modules":                   modules,
-		"HasModules":                len(modules) > 0,
+		"HasModules":                hasModules,
 		"Members":                   members,
-		"HasMembers":                len(members) > 0,
+		"HasMembers":                hasMembers,
 		"Namespaces":                namespaces,
-		"HasNamespaces":             len(namespaces) > 0,
+		"HasNamespaces":             hasNamespaces,
 		"Resources":                 resources,
-		"HasResources":              len(resources) > 0,
+		"HasResources":              hasResources,
 		"DataSources":               dataSources,
-		"HasDataSources":            len(dataSources) > 0,
-		"HasResourcesOrDataSources": len(resources) > 0 || len(dataSources) > 0,
+		"HasDataSources":            hasDataSources,
+		"HasResourcesOrDataSources": hasResources || hasDataSources,
 		"Others":                    others,
 		"HasOthers":                 len(others) > 0,
 	}); err != nil {
@@ -987,9 +1001,8 @@ func (e *emitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
 	case typeDocVariableNode, typeDocObjectLiteral:
 		if node.Flags.IsConst {
 			return "const"
-		} else {
-			return "let"
 		}
+		return "let"
 
 	// For others, we will generate a full signature.
 	case typeDocCallSigNode, typeDocConstructorSigNode:
@@ -1165,69 +1178,69 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 			// If this is a reference type in this package, link to it.
 			// TODO: inter-module linking.
 			return fmt.Sprintf("#%s", t.Name)
-		} else {
-			// For certain well-known types, we'll hard-code links to them.
-			// TODO: it's unfortunate we need to do this, but TypeDoc doesn't encode inter-package references.
-			switch t.Name {
-			case "Array", "Error", "Map", "Promise", "Set":
-				return fmt.Sprintf(
-					"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/%s", t.Name)
-			case "Archive", "Asset", "AssetMap", "AssetArchive",
-				"FileArchive", "FileAsset", "RemoteArchive", "RemoteAsset", "StringAsset":
-				return fmt.Sprintf(
-					"/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#%s", t.Name)
-			case "ComponentResource", "ComponentResourceOptions", "CustomResource", "CustomResourceOptions",
-				"ID", "Input", "Inputs", "InvokeOptions", "Output", "OutputInstance", "Outputs", "Resource", "ResourceOptions", "URN",
-				"ProviderResource":
-				return fmt.Sprintf(
-					"/docs/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
-			}
+		}
 
-			if e.pkgname == "awsx" {
-				for prefix, module := range awsxImportModuleMap {
-					if strings.HasPrefix(t.Name, prefix) {
-						name := strings.TrimPrefix(t.Name, prefix)
-						return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/awsx/%s/#%s", module, name)
-					}
-				}
-			}
+		// For certain well-known types, we'll hard-code links to them.
+		// TODO: it's unfortunate we need to do this, but TypeDoc doesn't encode inter-package references.
+		switch t.Name {
+		case "Array", "Error", "Map", "Promise", "Set":
+			return fmt.Sprintf(
+				"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/%s", t.Name)
+		case "Archive", "Asset", "AssetMap", "AssetArchive",
+			"FileArchive", "FileAsset", "RemoteArchive", "RemoteAsset", "StringAsset":
+			return fmt.Sprintf(
+				"/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#%s", t.Name)
+		case "ComponentResource", "ComponentResourceOptions", "CustomResource", "CustomResourceOptions",
+			"ID", "Input", "Inputs", "InvokeOptions", "Output", "OutputInstance", "Outputs", "Resource", "ResourceOptions", "URN",
+			"ProviderResource":
+			return fmt.Sprintf(
+				"/docs/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
+		}
 
-			// If this is a qualified name, see if it refers to the Pulumi SDK. If so, generate a link.
-			elements := strings.Split(t.Name, ".")
-			var link string
-			if len(elements) > 1 {
-				if elements[0] == "pulumi" {
-					link = "/docs/reference/pkg/nodejs/pulumi/pulumi/"
-				} else if e.pkgname == "awsx" && elements[0] == "aws" {
-					link = "/docs/reference/pkg/nodejs/pulumi/aws/"
-				} else if e.pkgname == "awsx" && (elements[0] == "x" || elements[0] == "awsx") {
-					link = "/docs/reference/pkg/nodejs/pulumi/awsx/"
-				} else if elements[0] == "inputs" || elements[0] == "inputApi" {
-					link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/input/"
-					// Strip out everything except first and last element.  This is necessary given
-					// the current structure of docs, but leads to losing precision on which member
-					// we are really trying to link to, as there may be multiple instances of the
-					// label on this page.  Eventually, we need to improve the doc generator to
-					// separate out these individual sub-namespaces into their own pages or to
-					// enrichen the link format to that we can link more precisely.
-					elements = append(elements[:1], elements[len(elements)-1])
-				} else if elements[0] == "outputs" || elements[0] == "outputApi" {
-					link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/output/"
-					// Strip out everything except first and last element.  This is necessary given
-					// the current structure of docs, but leads to losing precision on which member
-					// we are really trying to link to, as there may be multiple instances of the
-					// label on this page.  Eventually, we need to improve the doc generator to
-					// separate out these individual sub-namespaces into their own pages or to
-					// enrichen the link format to that we can link more precisely.
-					elements = append(elements[:1], elements[len(elements)-1])
+		if e.pkgname == "awsx" {
+			for prefix, module := range awsxImportModuleMap {
+				if strings.HasPrefix(t.Name, prefix) {
+					name := strings.TrimPrefix(t.Name, prefix)
+					return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/awsx/%s/#%s", module, name)
 				}
 			}
-			if link != "" {
-				for i := 1; i < len(elements)-1; i++ {
-					link += fmt.Sprintf("%s/", elements[i])
-				}
-				return link + fmt.Sprintf("#%s", elements[len(elements)-1])
+		}
+
+		// If this is a qualified name, see if it refers to the Pulumi SDK. If so, generate a link.
+		elements := strings.Split(t.Name, ".")
+		var link string
+		if len(elements) > 1 {
+			if elements[0] == "pulumi" {
+				link = "/docs/reference/pkg/nodejs/pulumi/pulumi/"
+			} else if e.pkgname == "awsx" && elements[0] == "aws" {
+				link = "/docs/reference/pkg/nodejs/pulumi/aws/"
+			} else if e.pkgname == "awsx" && (elements[0] == "x" || elements[0] == "awsx") {
+				link = "/docs/reference/pkg/nodejs/pulumi/awsx/"
+			} else if elements[0] == "inputs" || elements[0] == "inputApi" {
+				link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/input/"
+				// Strip out everything except first and last element.  This is necessary given
+				// the current structure of docs, but leads to losing precision on which member
+				// we are really trying to link to, as there may be multiple instances of the
+				// label on this page.  Eventually, we need to improve the doc generator to
+				// separate out these individual sub-namespaces into their own pages or to
+				// enrichen the link format to that we can link more precisely.
+				elements = append(elements[:1], elements[len(elements)-1])
+			} else if elements[0] == "outputs" || elements[0] == "outputApi" {
+				link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/output/"
+				// Strip out everything except first and last element.  This is necessary given
+				// the current structure of docs, but leads to losing precision on which member
+				// we are really trying to link to, as there may be multiple instances of the
+				// label on this page.  Eventually, we need to improve the doc generator to
+				// separate out these individual sub-namespaces into their own pages or to
+				// enrichen the link format to that we can link more precisely.
+				elements = append(elements[:1], elements[len(elements)-1])
 			}
+		}
+		if link != "" {
+			for i := 1; i < len(elements)-1; i++ {
+				link += fmt.Sprintf("%s/", elements[i])
+			}
+			return link + fmt.Sprintf("#%s", elements[len(elements)-1])
 		}
 	}
 
