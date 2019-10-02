@@ -360,8 +360,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_random.RandomPassword">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomPassword</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">length=None</em>, <em class="sig-param">lower=None</em>, <em class="sig-param">min_lower=None</em>, <em class="sig-param">min_numeric=None</em>, <em class="sig-param">min_special=None</em>, <em class="sig-param">min_upper=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">override_special=None</em>, <em class="sig-param">special=None</em>, <em class="sig-param">upper=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPassword" title="Permalink to this definition">¶</a></dt>
-<dd><p>Identical to .RandomString with the exception that the
-result is treated as sensitive and, thus, not displayed in console output.</p>
+<dd><blockquote>
+<div><p><strong>Note:</strong> Requires random provider version &gt;= 2.2.0</p>
+</div></blockquote>
+<p>Identical to .RandomString with the exception that the
+result is treated as sensitive and, thus, <em>not</em> displayed in console output.</p>
+<blockquote>
+<div><p><strong>Note:</strong> All attributes including the generated password will be stored in
+the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in
+state</a>.</p>
+</div></blockquote>
 <p>This resource <em>does</em> use a cryptographic random number generator.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -676,7 +684,7 @@ characters and optionally special characters.</p>
 <p>This resource <em>does</em> use a cryptographic random number generator.</p>
 <p>Historically this resource’s intended usage has been ambiguous as the original example
 used it in a password. For backwards compatibility it will
-continue to exist. For unique ids please use random_id, for console and log safe
+continue to exist. For unique ids please use random_id, for sensitive
 random values please use random_password.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -700,12 +708,12 @@ characters in random string.</p></li>
 <li><p><strong>number</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include numeric characters in random
 string.</p></li>
 <li><p><strong>override*special</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Supply your own list of special characters to
-use for string generation.  This overrides characters list in the special
+use for string generation.  This overrides the default character list in the special
 argument.  The special argument must still be set to true for any overwritten
 characters to be used in generation.</p>
 </p></li>
 <li><p><strong>special</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include special characters in random
-string. These are ‘!&#64;#$%&amp;*()-<a href="#id7"><span class="problematic" id="id8">*</span></a>=+[]{}&lt;&gt;:?’</p></li>
+string. These are <cite>!&#64;#$%&amp;*()-*=+[]{}&lt;&gt;:?</cite></p></li>
 <li><p><strong>upper</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include uppercase alphabet characters
 in random string.</p></li>
 </ul>
@@ -774,7 +782,7 @@ string.</p>
 <dt id="pulumi_random.RandomString.override_special">
 <code class="sig-name descname">override_special</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomString.override_special" title="Permalink to this definition">¶</a></dt>
 <dd><p>Supply your own list of special characters to
-use for string generation.  This overrides characters list in the special
+use for string generation.  This overrides the default character list in the special
 argument.  The special argument must still be set to true for any overwritten
 characters to be used in generation.</p>
 </dd></dl>
@@ -789,7 +797,7 @@ characters to be used in generation.</p>
 <dt id="pulumi_random.RandomString.special">
 <code class="sig-name descname">special</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomString.special" title="Permalink to this definition">¶</a></dt>
 <dd><p>(default true) Include special characters in random
-string. These are ‘!&#64;#$%&amp;*()-_=+[]{}&lt;&gt;:?’</p>
+string. These are <code class="docutils literal notranslate"><span class="pre">!&#64;#$%&amp;*()-_=+[]{}&lt;&gt;:?</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -827,13 +835,13 @@ characters in random string.</p></li>
 <li><p><strong>number</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include numeric characters in random
 string.</p></li>
 <li><p><strong>override*special</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Supply your own list of special characters to
-use for string generation.  This overrides characters list in the special
+use for string generation.  This overrides the default character list in the special
 argument.  The special argument must still be set to true for any overwritten
 characters to be used in generation.</p>
 </p></li>
 <li><p><strong>result</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Random string generated.</p></li>
 <li><p><strong>special</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include special characters in random
-string. These are ‘!&#64;#$%&amp;*()-<a href="#id11"><span class="problematic" id="id12">*</span></a>=+[]{}&lt;&gt;:?’</p></li>
+string. These are <cite>!&#64;#$%&amp;*()-*=+[]{}&lt;&gt;:?</cite></p></li>
 <li><p><strong>upper</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include uppercase alphabet characters
 in random string.</p></li>
 </ul>
