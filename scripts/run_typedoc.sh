@@ -102,6 +102,7 @@ REPOS=(
     "azuread,pulumi-azuread,sdk/nodejs"
     "terraform,pulumi-terraform,sdk/nodejs"
     "tls,pulumi-tls,sdk/nodejs"
+    "vault,pulumi-vault,sdk/nodejs"
 )
 
 PIDS=()

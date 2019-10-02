@@ -29,6 +29,7 @@ TOOLS_REPOS=(
     "pulumi-random"
     "pulumi-terraform"
     "pulumi-tls"
+    "pulumi-vault"
     "pulumi-vsphere"
 )
 
