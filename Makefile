@@ -64,7 +64,8 @@ test:
 		--exclude "https://us-central1-/" \
 		--exclude "https://www.mysql.com/" \
 		--exclude "https://ksonnet.io/" \
-		--exclude "https://www.latlong.net/"
+		--exclude "https://www.latlong.net/" \
+		--exclude "https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_web_01.pdf"
 
 .PHONY: validate
 validate:
