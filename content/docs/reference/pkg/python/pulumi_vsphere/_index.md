@@ -4722,6 +4722,197 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_vsphere.Host">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Host</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">connected=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">license=None</em>, <em class="sig-param">lockdown=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">thumbprint=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a VMware vSphere host resource. This represents an ESXi host that
+can be used either as part of a Compute Cluster or Standalone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Compute Cluster this host should
+be added to. This should not be set if <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> is set.</p></li>
+<li><p><strong>connected</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to false then the host will be disconected.
+Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the datacenter this host should
+be added to. This should not be set if <code class="docutils literal notranslate"><span class="pre">cluster</span></code> is set.</p></li>
+<li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to true then it will force the host to be added, even
+if the host is already connected to a different vSphere instance. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – FQDN or IP address of the host to be added.</p></li>
+<li><p><strong>license</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The license key that will be applied to the host.
+The license key is expected to be present in vSphere.</p></li>
+<li><p><strong>lockdown</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set the lockdown state of the host. Valid options are
+<code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.</p></li>
+<li><p><strong>maintenance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set the management state of the host. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password that will be used by vSphere to authenticate
+to the host.</p></li>
+<li><p><strong>thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Host’s certificate SHA-1 thumbprint. If not set the the
+CA that signed the host’s certificate should be trusted. If the CA is not trusted
+and no thumbprint is set then the operation will fail.</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username that will be used by vSphere to authenticate
+to the host.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.cluster">
+<code class="sig-name descname">cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Compute Cluster this host should
+be added to. This should not be set if <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> is set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.connected">
+<code class="sig-name descname">connected</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.connected" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to false then the host will be disconected.
+Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.datacenter">
+<code class="sig-name descname">datacenter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.datacenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the datacenter this host should
+be added to. This should not be set if <code class="docutils literal notranslate"><span class="pre">cluster</span></code> is set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.force">
+<code class="sig-name descname">force</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.force" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to true then it will force the host to be added, even
+if the host is already connected to a different vSphere instance. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.hostname">
+<code class="sig-name descname">hostname</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.hostname" title="Permalink to this definition">¶</a></dt>
+<dd><p>FQDN or IP address of the host to be added.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.license">
+<code class="sig-name descname">license</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.license" title="Permalink to this definition">¶</a></dt>
+<dd><p>The license key that will be applied to the host.
+The license key is expected to be present in vSphere.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.lockdown">
+<code class="sig-name descname">lockdown</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.lockdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the lockdown state of the host. Valid options are
+<code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.maintenance">
+<code class="sig-name descname">maintenance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.maintenance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the management state of the host. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.password">
+<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password that will be used by vSphere to authenticate
+to the host.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.thumbprint">
+<code class="sig-name descname">thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.thumbprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Host’s certificate SHA-1 thumbprint. If not set the the
+CA that signed the host’s certificate should be trusted. If the CA is not trusted
+and no thumbprint is set then the operation will fail.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vsphere.Host.username">
+<code class="sig-name descname">username</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.Host.username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username that will be used by vSphere to authenticate
+to the host.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.Host.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">connected=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">license=None</em>, <em class="sig-param">lockdown=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">thumbprint=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Host resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Compute Cluster this host should
+be added to. This should not be set if <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> is set.</p></li>
+<li><p><strong>connected</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to false then the host will be disconected.
+Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the datacenter this host should
+be added to. This should not be set if <code class="docutils literal notranslate"><span class="pre">cluster</span></code> is set.</p></li>
+<li><p><strong>force</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to true then it will force the host to be added, even
+if the host is already connected to a different vSphere instance. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – FQDN or IP address of the host to be added.</p></li>
+<li><p><strong>license</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The license key that will be applied to the host.
+The license key is expected to be present in vSphere.</p></li>
+<li><p><strong>lockdown</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set the lockdown state of the host. Valid options are
+<code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.</p></li>
+<li><p><strong>maintenance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set the management state of the host. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password that will be used by vSphere to authenticate
+to the host.</p></li>
+<li><p><strong>thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Host’s certificate SHA-1 thumbprint. If not set the the
+CA that signed the host’s certificate should be trusted. If the CA is not trusted
+and no thumbprint is set then the operation will fail.</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username that will be used by vSphere to authenticate
+to the host.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.Host.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vsphere.Host.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_vsphere.HostPortGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">HostPortGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_nics=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">shaping_average_bandwidth=None</em>, <em class="sig-param">shaping_burst_size=None</em>, <em class="sig-param">shaping_enabled=None</em>, <em class="sig-param">shaping_peak_bandwidth=None</em>, <em class="sig-param">standby_nics=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">virtual_switch_name=None</em>, <em class="sig-param">vlan_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.HostPortGroup</span></code> resource can be used to manage vSphere standard
@@ -7062,11 +7253,12 @@ Default: <code class="docutils literal notranslate"><span class="pre">false</spa
 <li><p><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A specification for a virtual NIC on this
 virtual machine. See network interface options
 below.</p></li>
-<li><p><strong>num_cores_per_socket</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of cores to distribute among
-the CPUs in this virtual machine. If specified, the value supplied to
-<code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-<li><p><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of virtual processors to assign to this
-virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>num_cores_per_socket</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of cores per socket in this
+virtual machine. The number of vCPUs on the virtual machine will be
+<code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> divided by <code class="docutils literal notranslate"><span class="pre">num_cores_per_socket</span></code>. If specified, the value
+supplied to <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The total number of virtual processor cores to assign
+to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>resource_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
@@ -7130,7 +7322,7 @@ remote client device. Conflicts with <code class="docutils literal notranslate">
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Requried for using a datastore
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Required for using a datastore
 ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
 </ul>
 <p>The <strong>clone</strong> object supports the following:</p>
@@ -7219,9 +7411,9 @@ destroying the virtual machine. Default: <code class="docutils literal notransla
 <li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A label for the disk. Forces a new disk if changed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An alias for both <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>, the latter when
 using <code class="docutils literal notranslate"><span class="pre">attach</span></code>. Required if not using <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Requried for using a datastore
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Required for using a datastore
 ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the disk, in GiB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the disk, in GB.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thinProvisioned</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this disk is thin provisioned,
 with space for the file being allocated on an as-needed basis. Cannot be set
 to <code class="docutils literal notranslate"><span class="pre">true</span></code> when <code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. See the section on picking a disk
@@ -7317,7 +7509,7 @@ remote client device. Conflicts with <code class="docutils literal notranslate">
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ID of the device within the virtual machine.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the ISO file. Requried for using a datastore
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the ISO file. Required for using a datastore
 ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
 </ul>
 </dd></dl>
@@ -7504,9 +7696,9 @@ destroying the virtual machine. Default: <code class="docutils literal notransla
 <li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A label for the disk. Forces a new disk if changed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An alias for both <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>, the latter when
 using <code class="docutils literal notranslate"><span class="pre">attach</span></code>. Required if not using <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the ISO file. Requried for using a datastore
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the ISO file. Required for using a datastore
 ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the disk, in GiB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the disk, in GB.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thinProvisioned</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this disk is thin provisioned,
 with space for the file being allocated on an as-needed basis. Cannot be set
 to <code class="docutils literal notranslate"><span class="pre">true</span></code> when <code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. See the section on picking a disk
@@ -7751,16 +7943,17 @@ a static MAC address and set accordingly. Setting this to <code class="docutils 
 <dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.num_cores_per_socket">
 <code class="sig-name descname">num_cores_per_socket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.num_cores_per_socket" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of cores to distribute among
-the CPUs in this virtual machine. If specified, the value supplied to
-<code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<dd><p>The number of cores per socket in this
+virtual machine. The number of vCPUs on the virtual machine will be
+<code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> divided by <code class="docutils literal notranslate"><span class="pre">num_cores_per_socket</span></code>. If specified, the value
+supplied to <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.num_cpus">
 <code class="sig-name descname">num_cpus</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.num_cpus" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of virtual processors to assign to this
-virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<dd><p>The total number of virtual processor cores to assign
+to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8069,11 +8262,12 @@ Default: <code class="docutils literal notranslate"><span class="pre">false</spa
 <li><p><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A specification for a virtual NIC on this
 virtual machine. See network interface options
 below.</p></li>
-<li><p><strong>num_cores_per_socket</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of cores to distribute among
-the CPUs in this virtual machine. If specified, the value supplied to
-<code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-<li><p><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of virtual processors to assign to this
-virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>num_cores_per_socket</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of cores per socket in this
+virtual machine. The number of vCPUs on the virtual machine will be
+<code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> divided by <code class="docutils literal notranslate"><span class="pre">num_cores_per_socket</span></code>. If specified, the value
+supplied to <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The total number of virtual processor cores to assign
+to this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>resource_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
@@ -8146,7 +8340,7 @@ remote client device. Conflicts with <code class="docutils literal notranslate">
 Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Requried for using a datastore
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Required for using a datastore
 ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
 </ul>
 <p>The <strong>clone</strong> object supports the following:</p>
@@ -8235,9 +8429,9 @@ destroying the virtual machine. Default: <code class="docutils literal notransla
 <li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A label for the disk. Forces a new disk if changed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An alias for both <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>, the latter when
 using <code class="docutils literal notranslate"><span class="pre">attach</span></code>. Required if not using <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Requried for using a datastore
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Required for using a datastore
 ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the disk, in GiB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the disk, in GB.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thinProvisioned</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this disk is thin provisioned,
 with space for the file being allocated on an as-needed basis. Cannot be set
 to <code class="docutils literal notranslate"><span class="pre">true</span></code> when <code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. See the section on picking a disk
@@ -8734,7 +8928,7 @@ data source.</p></li>
 <code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_datacenter</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Datacenter</span></code> data source can be used to discover the ID of a
 vSphere datacenter. This can then be used with resources or data sources that
-require a datacenter, such as the <cite>`</cite>.getHost`` &lt;/docs/providers/vsphere/d/host.html&gt;`_
+require a datacenter, such as the <cite>`</cite>.Host`` &lt;/docs/providers/vsphere/d/host.html&gt;`_
 data source.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -8842,7 +9036,7 @@ datacenter.</p>
 <dl class="function">
 <dt id="pulumi_vsphere.get_host">
 <code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_host</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_host" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">.getHost</span></code> data source can be used to discover the ID of a vSphere
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">.Host</span></code> data source can be used to discover the ID of a vSphere
 host. This can then be used with resources or data sources that require a host
 managed object reference ID.</p>
 <dl class="field-list simple">
