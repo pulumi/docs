@@ -1720,8 +1720,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>request_models</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of the API models used for the request’s content type
 where key is the content type (e.g. <code class="docutils literal notranslate"><span class="pre">application/json</span></code>)
 and value is either <code class="docutils literal notranslate"><span class="pre">Error</span></code>, <code class="docutils literal notranslate"><span class="pre">Empty</span></code> (built-in models) or <code class="docutils literal notranslate"><span class="pre">apigateway.Model</span></code>’s <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>request_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of request query string parameters and headers that should be passed to the integration.
-For example: <code class="docutils literal notranslate"><span class="pre">request_parameters</span> <span class="pre">=</span> <span class="pre">{&quot;method.request.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">&quot;method.request.querystring.some-query-param&quot;</span> <span class="pre">=</span> <span class="pre">true}</span></code> would define that the header <code class="docutils literal notranslate"><span class="pre">X-Some-Header</span></code> and the query string <code class="docutils literal notranslate"><span class="pre">some-query-param</span></code> must be provided in the request</p></li>
+<li><p><strong>request_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (<code class="docutils literal notranslate"><span class="pre">true</span></code>) or optional (<code class="docutils literal notranslate"><span class="pre">false</span></code>).
+For example: <code class="docutils literal notranslate"><span class="pre">request_parameters</span> <span class="pre">=</span> <span class="pre">{&quot;method.request.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">&quot;method.request.querystring.some-query-param&quot;</span> <span class="pre">=</span> <span class="pre">true}</span></code> would define that the header <code class="docutils literal notranslate"><span class="pre">X-Some-Header</span></code> and the query string <code class="docutils literal notranslate"><span class="pre">some-query-param</span></code> must be provided in the request.</p></li>
 <li><p><strong>request_validator_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a <code class="docutils literal notranslate"><span class="pre">apigateway.RequestValidator</span></code></p></li>
 <li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API resource ID</p></li>
 <li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
@@ -1772,8 +1772,8 @@ and value is either <code class="docutils literal notranslate"><span class="pre"
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Method.request_parameters">
 <code class="sig-name descname">request_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Method.request_parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>A map of request query string parameters and headers that should be passed to the integration.
-For example: <code class="docutils literal notranslate"><span class="pre">request_parameters</span> <span class="pre">=</span> <span class="pre">{&quot;method.request.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">&quot;method.request.querystring.some-query-param&quot;</span> <span class="pre">=</span> <span class="pre">true}</span></code> would define that the header <code class="docutils literal notranslate"><span class="pre">X-Some-Header</span></code> and the query string <code class="docutils literal notranslate"><span class="pre">some-query-param</span></code> must be provided in the request</p>
+<dd><p>A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (<code class="docutils literal notranslate"><span class="pre">true</span></code>) or optional (<code class="docutils literal notranslate"><span class="pre">false</span></code>).
+For example: <code class="docutils literal notranslate"><span class="pre">request_parameters</span> <span class="pre">=</span> <span class="pre">{&quot;method.request.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">&quot;method.request.querystring.some-query-param&quot;</span> <span class="pre">=</span> <span class="pre">true}</span></code> would define that the header <code class="docutils literal notranslate"><span class="pre">X-Some-Header</span></code> and the query string <code class="docutils literal notranslate"><span class="pre">some-query-param</span></code> must be provided in the request.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1813,8 +1813,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>request_models</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of the API models used for the request’s content type
 where key is the content type (e.g. <code class="docutils literal notranslate"><span class="pre">application/json</span></code>)
 and value is either <code class="docutils literal notranslate"><span class="pre">Error</span></code>, <code class="docutils literal notranslate"><span class="pre">Empty</span></code> (built-in models) or <code class="docutils literal notranslate"><span class="pre">apigateway.Model</span></code>’s <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>request_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of request query string parameters and headers that should be passed to the integration.
-For example: <code class="docutils literal notranslate"><span class="pre">request_parameters</span> <span class="pre">=</span> <span class="pre">{&quot;method.request.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">&quot;method.request.querystring.some-query-param&quot;</span> <span class="pre">=</span> <span class="pre">true}</span></code> would define that the header <code class="docutils literal notranslate"><span class="pre">X-Some-Header</span></code> and the query string <code class="docutils literal notranslate"><span class="pre">some-query-param</span></code> must be provided in the request</p></li>
+<li><p><strong>request_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (<code class="docutils literal notranslate"><span class="pre">true</span></code>) or optional (<code class="docutils literal notranslate"><span class="pre">false</span></code>).
+For example: <code class="docutils literal notranslate"><span class="pre">request_parameters</span> <span class="pre">=</span> <span class="pre">{&quot;method.request.header.X-Some-Header&quot;</span> <span class="pre">=</span> <span class="pre">true</span> <span class="pre">&quot;method.request.querystring.some-query-param&quot;</span> <span class="pre">=</span> <span class="pre">true}</span></code> would define that the header <code class="docutils literal notranslate"><span class="pre">X-Some-Header</span></code> and the query string <code class="docutils literal notranslate"><span class="pre">some-query-param</span></code> must be provided in the request.</p></li>
 <li><p><strong>request_validator_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a <code class="docutils literal notranslate"><span class="pre">apigateway.RequestValidator</span></code></p></li>
 <li><p><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API resource ID</p></li>
 <li><p><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</p></li>
@@ -2460,8 +2460,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>response_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map specifying the templates used to transform the response body.</p></li>
-<li><p><strong>response_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map specifying the parameters (paths, query strings and headers) of the Gateway Response.</p></li>
+<li><p><strong>response_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map specifying the parameters (paths, query strings and headers) of the Gateway Response.</p></li>
+<li><p><strong>response_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map specifying the templates used to transform the response body.</p></li>
 <li><p><strong>response_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The response type of the associated GatewayResponse.</p></li>
 <li><p><strong>rest_api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The string identifier of the associated REST API.</p></li>
 <li><p><strong>status_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HTTP status code of the Gateway Response.</p></li>
@@ -2474,13 +2474,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Response.response_parameters">
 <code class="sig-name descname">response_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Response.response_parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>A map specifying the templates used to transform the response body.</p>
+<dd><p>A map specifying the parameters (paths, query strings and headers) of the Gateway Response.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Response.response_templates">
 <code class="sig-name descname">response_templates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Response.response_templates" title="Permalink to this definition">¶</a></dt>
-<dd><p>A map specifying the parameters (paths, query strings and headers) of the Gateway Response.</p>
+<dd><p>A map specifying the templates used to transform the response body.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2512,8 +2512,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>response_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map specifying the templates used to transform the response body.</p></li>
-<li><p><strong>response_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map specifying the parameters (paths, query strings and headers) of the Gateway Response.</p></li>
+<li><p><strong>response_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map specifying the parameters (paths, query strings and headers) of the Gateway Response.</p></li>
+<li><p><strong>response_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map specifying the templates used to transform the response body.</p></li>
 <li><p><strong>response_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The response type of the associated GatewayResponse.</p></li>
 <li><p><strong>rest_api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The string identifier of the associated REST API.</p></li>
 <li><p><strong>status_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HTTP status code of the Gateway Response.</p></li>
