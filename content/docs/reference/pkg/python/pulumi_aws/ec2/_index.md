@@ -7117,7 +7117,8 @@ resource with <code class="docutils literal notranslate"><span class="pre">accep
 connection in both a VPC Peering Connection resource and a VPC Peering Connection Options resource.
 Doing so will cause a conflict of options and will overwrite the options.
 Using a VPC Peering Connection Options resource decouples management of the connection options from
-management of the VPC Peering Connection and allows options to be set correctly in cross-account scenarios.</p>
+management of the VPC Peering Connection and allows options to be set correctly in cross-region and
+cross-account scenarios.</p>
 </div></blockquote>
 <p>Basic usage:</p>
 <p>Basic cross-account usage:</p>
@@ -7140,27 +7141,23 @@ the peering connection (a maximum of one).</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
-to the remote VPC.</p></li>
+to the remote VPC. This option is not supported for inter-region VPC peering.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
-inter-region VPC peering.</p></li>
+private IP addresses when queried from instances in the peer VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
-connection.</p></li>
+connection. This option is not supported for inter-region VPC peering.</p></li>
 </ul>
 <p>The <strong>requester</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
-to the remote VPC.</p></li>
+to the remote VPC. This option is not supported for inter-region VPC peering.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
-inter-region VPC peering.</p></li>
+private IP addresses when queried from instances in the peer VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
-connection.</p></li>
+connection. This option is not supported for inter-region VPC peering.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown</a>.</p>
@@ -7174,14 +7171,12 @@ the peering connection (a maximum of one).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
-to the remote VPC.</p></li>
+to the remote VPC. This option is not supported for inter-region VPC peering.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
-inter-region VPC peering.</p></li>
+private IP addresses when queried from instances in the peer VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
-connection.</p></li>
+connection. This option is not supported for inter-region VPC peering.</p></li>
 </ul>
 </dd></dl>
 
@@ -7194,14 +7189,12 @@ the peering connection (a maximum of one).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
-to the remote VPC.</p></li>
+to the remote VPC. This option is not supported for inter-region VPC peering.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
-inter-region VPC peering.</p></li>
+private IP addresses when queried from instances in the peer VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
-connection.</p></li>
+connection. This option is not supported for inter-region VPC peering.</p></li>
 </ul>
 </dd></dl>
 
@@ -7236,27 +7229,23 @@ the peering connection (a maximum of one).</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
-to the remote VPC.</p></li>
+to the remote VPC. This option is not supported for inter-region VPC peering.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
-inter-region VPC peering.</p></li>
+private IP addresses when queried from instances in the peer VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
-connection.</p></li>
+connection. This option is not supported for inter-region VPC peering.</p></li>
 </ul>
 <p>The <strong>requester</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
-to the remote VPC.</p></li>
+to the remote VPC. This option is not supported for inter-region VPC peering.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
-private IP addresses when queried from instances in the peer VPC. This is
-<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
-inter-region VPC peering.</p></li>
+private IP addresses when queried from instances in the peer VPC.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
-connection.</p></li>
+connection. This option is not supported for inter-region VPC peering.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown</a>.</p>
@@ -7900,16 +7889,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.SecurityGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">SecurityGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">egress=None</em>, <em class="sig-param">ingress=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">revoke_rules_on_delete=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a security group resource.</p>
-<blockquote>
-<div><p><strong>NOTE on Security Groups and Security Group Rules:</strong> This provider currently
-provides both a standalone Security Group Rule resource (a single <code class="docutils literal notranslate"><span class="pre">ingress</span></code> or
-<code class="docutils literal notranslate"><span class="pre">egress</span></code> rule), and a Security Group resource with <code class="docutils literal notranslate"><span class="pre">ingress</span></code> and <code class="docutils literal notranslate"><span class="pre">egress</span></code> rules
-defined in-line. At this time you cannot use a Security Group with in-line rules
-in conjunction with any Security Group Rule resources. Doing so will cause
-a conflict of rule settings and will overwrite rules.</p>
-<p><strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">VPC Peering User Guide</a>.</p>
-</div></blockquote>
+<dd><p>Create a SecurityGroup resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9697,7 +9677,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.Subnet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">assign_ipv6_address_on_creation=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">availability_zone_id=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">ipv6_cidr_block=None</em>, <em class="sig-param">map_public_ip_on_launch=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Subnet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an VPC subnet resource.</p>
+<dd><p>Create a Subnet resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
