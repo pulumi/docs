@@ -10,10 +10,19 @@ notitle: true
 <dt id="pulumi_kubernetes.batch.v1.Job">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.batch.v1.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.batch.v1.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Job represents the configuration of a single job.</p>
-<p>This resource currently does not wait until it is ready before registering
-success for create/update and populating output properties from the current
-state of the resource. Work to add readiness checks is in progress [1].</p>
-<p>[1] <a class="reference external" href="https://github.com/pulumi/pulumi-kubernetes/pull/633">https://github.com/pulumi/pulumi-kubernetes/pull/633</a></p>
+<ol class="arabic simple">
+<li><p>The Job’s ‘.status.startTime’ is set, which indicates that the Job has started running.</p></li>
+<li><p>The Job’s ‘.status.conditions’ has a status of type ‘Complete’, and a ‘status’ set
+to ‘True’.</p></li>
+<li><dl class="simple">
+<dt>The Job’s ‘.status.conditions’ do not have a status of type ‘Failed’, with a</dt><dd><p>‘status’ set to ‘True’. If this condition is set, we should fail the Job immediately.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>If the Job has not reached a Ready state after 10 minutes, it will
+time out and mark the resource update as Failed. You can override the default timeout value
+by setting the ‘customTimeouts’ option on the resource.</p>
 <p>Create a Job resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

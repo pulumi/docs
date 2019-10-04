@@ -3047,6 +3047,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.core.v1.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">string_data=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.core.v1.Secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Secret holds secret data of a certain type. The total bytes of the values in the Data field must
 be less than MaxSecretSize bytes.</p>
+<p>Note: While Pulumi automatically encrypts the ‘data’ and ‘stringData’
+fields, this encryption only applies to Pulumi’s context, including the state file, 
+the Service, the CLI, etc. Kubernetes does not encrypt Secret resources by default,
+and the contents are visible to users with access to the Secret in Kubernetes using
+tools like ‘kubectl’.</p>
+<p>For more information on securing Kubernetes Secrets, see the following links:
+<a class="reference external" href="https://kubernetes.io/docs/concepts/configuration/secret/#security-properties">https://kubernetes.io/docs/concepts/configuration/secret/#security-properties</a>
+<a class="reference external" href="https://kubernetes.io/docs/concepts/configuration/secret/#risks">https://kubernetes.io/docs/concepts/configuration/secret/#risks</a></p>
 <p>Create a Secret resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
