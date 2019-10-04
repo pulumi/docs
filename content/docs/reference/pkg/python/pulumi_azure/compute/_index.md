@@ -14,7 +14,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.compute"></span><dl class="class">
 <dt id="pulumi_azure.compute.AvailabilitySet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AvailabilitySet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">platform_update_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AvailabilitySet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">platform_update_domain_count=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an availability set for virtual machines.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -26,6 +26,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the availability set. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>platform_fault_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of fault domains that are used. Defaults to 3.</p></li>
 <li><p><strong>platform_update_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of update domains that are used. Defaults to 5.</p></li>
+<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the availability set. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
@@ -65,6 +66,12 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.compute.AvailabilitySet.proximity_placement_group_id">
+<code class="sig-name descname">proximity_placement_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet.proximity_placement_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.compute.AvailabilitySet.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the availability set. Changing this forces a new resource to be created.</p>
@@ -78,7 +85,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_azure.compute.AvailabilitySet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">platform_update_domain_count=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_fault_domain_count=None</em>, <em class="sig-param">platform_update_domain_count=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AvailabilitySet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -92,6 +99,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the availability set. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>platform_fault_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of fault domains that are used. Defaults to 3.</p></li>
 <li><p><strong>platform_update_domain_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of update domains that are used. Defaults to 5.</p></li>
+<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the availability set. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
@@ -152,7 +160,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.AwaitableGetManagedDiskResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetManagedDiskResult</code><span class="sig-paren">(</span><em class="sig-param">create_option=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetManagedDiskResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">AwaitableGetManagedDiskResult</code><span class="sig-paren">(</span><em class="sig-param">create_option=None</em>, <em class="sig-param">disk_iops_read_write=None</em>, <em class="sig-param">disk_mbps_read_write=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AwaitableGetManagedDiskResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -600,8 +608,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetManagedDiskResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetManagedDiskResult</code><span class="sig-paren">(</span><em class="sig-param">create_option=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">GetManagedDiskResult</code><span class="sig-paren">(</span><em class="sig-param">create_option=None</em>, <em class="sig-param">disk_iops_read_write=None</em>, <em class="sig-param">disk_mbps_read_write=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getManagedDisk.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetManagedDiskResult.disk_iops_read_write">
+<code class="sig-name descname">disk_iops_read_write</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult.disk_iops_read_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of IOPS allowed for this disk. One operation can transfer between 4k and 256k bytes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetManagedDiskResult.disk_mbps_read_write">
+<code class="sig-name descname">disk_mbps_read_write</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult.disk_mbps_read_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>The bandwidth allowed for this disk.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetManagedDiskResult.disk_size_gb">
 <code class="sig-name descname">disk_size_gb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult.disk_size_gb" title="Permalink to this definition">¶</a></dt>
@@ -859,7 +879,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.Image">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_virtual_machine_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_resilient=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a custom virtual machine image that can be used to create virtual machines.</p>
+<dd><p>Manages a custom virtual machine image that can be used to create virtual machines.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1052,14 +1072,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.ManagedDisk">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">ManagedDisk</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_option=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">image_reference_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a managed disk.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">ManagedDisk</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_option=None</em>, <em class="sig-param">disk_iops_read_write=None</em>, <em class="sig-param">disk_mbps_read_write=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">image_reference_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a managed disk.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>create_option</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The method to use when creating the managed disk. Possible values include:</p></li>
+<li><p><strong>disk_iops_read_write</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p></li>
+<li><p><strong>disk_mbps_read_write</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second.</p></li>
 <li><p><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the size of the managed disk to create in gigabytes.
 If <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code> or <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>, then the value must be equal to or greater than the source’s size.</p></li>
 <li><p><strong>encryption_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – an <code class="docutils literal notranslate"><span class="pre">encryption_settings</span></code> block as defined below.</p></li>
@@ -1105,6 +1127,18 @@ Allowable values are <code class="docutils literal notranslate"><span class="pre
 <dt id="pulumi_azure.compute.ManagedDisk.create_option">
 <code class="sig-name descname">create_option</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk.create_option" title="Permalink to this definition">¶</a></dt>
 <dd><p>The method to use when creating the managed disk. Possible values include:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.ManagedDisk.disk_iops_read_write">
+<code class="sig-name descname">disk_iops_read_write</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk.disk_iops_read_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.ManagedDisk.disk_mbps_read_write">
+<code class="sig-name descname">disk_mbps_read_write</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk.disk_mbps_read_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1203,7 +1237,7 @@ Allowable values are <code class="docutils literal notranslate"><span class="pre
 
 <dl class="method">
 <dt id="pulumi_azure.compute.ManagedDisk.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_option=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">image_reference_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_option=None</em>, <em class="sig-param">disk_iops_read_write=None</em>, <em class="sig-param">disk_mbps_read_write=None</em>, <em class="sig-param">disk_size_gb=None</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">image_reference_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_resource_id=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ManagedDisk resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1213,6 +1247,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>create_option</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The method to use when creating the managed disk. Possible values include:</p></li>
+<li><p><strong>disk_iops_read_write</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p></li>
+<li><p><strong>disk_mbps_read_write</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second.</p></li>
 <li><p><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the size of the managed disk to create in gigabytes.
 If <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code> or <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>, then the value must be equal to or greater than the source’s size.</p></li>
 <li><p><strong>encryption_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – an <code class="docutils literal notranslate"><span class="pre">encryption_settings</span></code> block as defined below.</p></li>
@@ -1296,8 +1332,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.ScaleSet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">ScaleSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automatic_os_upgrade=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">extensions=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profiles=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_profile_data_disks=None</em>, <em class="sig-param">storage_profile_image_reference=None</em>, <em class="sig-param">storage_profile_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_policy_mode=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ScaleSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a virtual machine scale set.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">ScaleSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automatic_os_upgrade=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">extensions=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profiles=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_profile_data_disks=None</em>, <em class="sig-param">storage_profile_image_reference=None</em>, <em class="sig-param">storage_profile_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_policy_mode=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ScaleSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a virtual machine scale set.</p>
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
@@ -1323,6 +1359,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>overprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the virtual machine scale set should be overprovisioned.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A plan block as documented below.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the priority for the Virtual Machines in the Scale Set. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Low</span></code> and <code class="docutils literal notranslate"><span class="pre">Regular</span></code>.</p></li>
+<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is only applicable when the <code class="docutils literal notranslate"><span class="pre">upgrade_policy_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
 <li><p><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See <a class="reference external" href="http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups">documentation</a> for more information.</p></li>
@@ -1674,6 +1711,12 @@ When setting this field <code class="docutils literal notranslate"><span class="
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.compute.ScaleSet.proximity_placement_group_id">
+<code class="sig-name descname">proximity_placement_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ScaleSet.proximity_placement_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.compute.ScaleSet.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ScaleSet.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.</p>
@@ -1772,7 +1815,7 @@ When setting this field <code class="docutils literal notranslate"><span class="
 
 <dl class="method">
 <dt id="pulumi_azure.compute.ScaleSet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automatic_os_upgrade=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">extensions=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profiles=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_profile_data_disks=None</em>, <em class="sig-param">storage_profile_image_reference=None</em>, <em class="sig-param">storage_profile_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_policy_mode=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ScaleSet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automatic_os_upgrade=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">extensions=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profiles=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_profile_data_disks=None</em>, <em class="sig-param">storage_profile_image_reference=None</em>, <em class="sig-param">storage_profile_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_policy_mode=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ScaleSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ScaleSet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1797,6 +1840,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>overprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the virtual machine scale set should be overprovisioned.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A plan block as documented below.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the priority for the Virtual Machines in the Scale Set. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Low</span></code> and <code class="docutils literal notranslate"><span class="pre">Regular</span></code>.</p></li>
+<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is only applicable when the <code class="docutils literal notranslate"><span class="pre">upgrade_policy_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
 <li><p><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See <a class="reference external" href="http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups">documentation</a> for more information.</p>
@@ -2642,7 +2686,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.VirtualMachine">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">VirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_set_id=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">delete_data_disks_on_termination=None</em>, <em class="sig-param">delete_os_disk_on_termination=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">primary_network_interface_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_data_disks=None</em>, <em class="sig-param">storage_image_reference=None</em>, <em class="sig-param">storage_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vm_size=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">VirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">availability_set_id=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">delete_data_disks_on_termination=None</em>, <em class="sig-param">delete_os_disk_on_termination=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">primary_network_interface_id=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_data_disks=None</em>, <em class="sig-param">storage_image_reference=None</em>, <em class="sig-param">storage_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vm_size=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Machine.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Data Disks can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">compute.DataDiskAttachment</span></code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
@@ -2652,6 +2696,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>additional_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block.</p></li>
 <li><p><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block.</p></li>
 <li><p><strong>delete_data_disks_on_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -2667,6 +2712,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>os_profile_windows_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">os_profile_windows_config</span></code> block.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block.</p></li>
 <li><p><strong>primary_network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.</p></li>
+<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>storage_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">storage_data_disk</span></code> blocks.</p></li>
 <li><p><strong>storage_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_image_reference</span></code> block.</p></li>
@@ -2677,6 +2723,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>additional_capabilities</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -2777,6 +2827,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.compute.VirtualMachine.additional_capabilities">
+<code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.additional_capabilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.compute.VirtualMachine.availability_set_id">
 <code class="sig-name descname">availability_set_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.availability_set_id" title="Permalink to this definition">¶</a></dt>
@@ -2925,6 +2984,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.compute.VirtualMachine.proximity_placement_group_id">
+<code class="sig-name descname">proximity_placement_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.proximity_placement_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.compute.VirtualMachine.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p>
@@ -2998,7 +3063,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.compute.VirtualMachine.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_set_id=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">delete_data_disks_on_termination=None</em>, <em class="sig-param">delete_os_disk_on_termination=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">primary_network_interface_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_data_disks=None</em>, <em class="sig-param">storage_image_reference=None</em>, <em class="sig-param">storage_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vm_size=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">availability_set_id=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">delete_data_disks_on_termination=None</em>, <em class="sig-param">delete_os_disk_on_termination=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">primary_network_interface_id=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_data_disks=None</em>, <em class="sig-param">storage_image_reference=None</em>, <em class="sig-param">storage_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vm_size=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualMachine resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3007,6 +3072,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>additional_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block.</p></li>
 <li><p><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block.</p></li>
 <li><p><strong>delete_data_disks_on_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -3022,6 +3088,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>os_profile_windows_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">os_profile_windows_config</span></code> block.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block.</p></li>
 <li><p><strong>primary_network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.</p></li>
+<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>storage_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">storage_data_disk</span></code> blocks.</p></li>
 <li><p><strong>storage_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_image_reference</span></code> block.</p></li>
@@ -3033,6 +3100,10 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>additional_capabilities</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>

@@ -231,6 +231,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">azureBlobStorage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sasUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fileSystem</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">retentionInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -258,6 +264,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetMask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">javaContainer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -429,6 +436,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">azureBlobStorage</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sasUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fileSystem</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">retentionInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -485,6 +498,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetMask</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">javaContainer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -670,6 +684,12 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">azureBlobStorage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sasUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fileSystem</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">retentionInDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -697,6 +717,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetMask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">javaContainer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -787,6 +808,175 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.AwaitableGetAppServiceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">AwaitableGetAppServiceResult</code><span class="sig-paren">(</span><em class="sig-param">app_service_plan_id=None</em>, <em class="sig-param">app_settings=None</em>, <em class="sig-param">client_affinity_enabled=None</em>, <em class="sig-param">client_cert_enabled=None</em>, <em class="sig-param">connection_strings=None</em>, <em class="sig-param">default_site_hostname=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">https_only=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">outbound_ip_addresses=None</em>, <em class="sig-param">possible_outbound_ip_addresses=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">site_configs=None</em>, <em class="sig-param">site_credentials=None</em>, <em class="sig-param">source_controls=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AwaitableGetAppServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.appservice.Certificate">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">Certificate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_vault_secret_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pfx_blob=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an App Service certificate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>key_vault_secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Key Vault secret. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to access the certificate’s private key. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>pfx_blob</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The base64-encoded contents of the certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_certificate.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.expiration_date">
+<code class="sig-name descname">expiration_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.expiration_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The expiration date for the certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.friendly_name">
+<code class="sig-name descname">friendly_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.friendly_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The friendly name of the certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.host_names">
+<code class="sig-name descname">host_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.host_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of host names the certificate applies to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.issue_date">
+<code class="sig-name descname">issue_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.issue_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The issue date for the certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.issuer">
+<code class="sig-name descname">issuer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.issuer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the certificate issuer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.key_vault_secret_id">
+<code class="sig-name descname">key_vault_secret_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.key_vault_secret_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Key Vault secret. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the certificate. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.password">
+<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>The password to access the certificate’s private key. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.pfx_blob">
+<code class="sig-name descname">pfx_blob</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.pfx_blob" title="Permalink to this definition">¶</a></dt>
+<dd><p>The base64-encoded contents of the certificate. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.subject_name">
+<code class="sig-name descname">subject_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.subject_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The subject name of the certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Certificate.thumbprint">
+<code class="sig-name descname">thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Certificate.thumbprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The thumbprint for the certificate.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.Certificate.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">expiration_date=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">host_names=None</em>, <em class="sig-param">issue_date=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">key_vault_secret_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">pfx_blob=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subject_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">thumbprint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Certificate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Certificate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>expiration_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expiration date for the certificate.</p></li>
+<li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name of the certificate.</p></li>
+<li><p><strong>host_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of host names the certificate applies to.</p></li>
+<li><p><strong>issue_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The issue date for the certificate.</p></li>
+<li><p><strong>issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the certificate issuer.</p></li>
+<li><p><strong>key_vault_secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Key Vault secret. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to access the certificate’s private key. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>pfx_blob</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The base64-encoded contents of the certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>subject_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subject name of the certificate.</p></li>
+<li><p><strong>thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The thumbprint for the certificate.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_certificate.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.Certificate.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Certificate.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.Certificate.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Certificate.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.CustomHostnameBinding">
@@ -1493,7 +1683,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.appservice.Plan">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">Plan</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_service_environment_id=None</em>, <em class="sig-param">is_xenon=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">maximum_elastic_worker_count=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">per_site_scaling=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">reserved=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage an App Service Plan component.</p>
+<dd><p>Manages an App Service Plan component.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1784,6 +1974,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetMask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">javaContainer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Java Container to use. If specified <code class="docutils literal notranslate"><span class="pre">java_version</span></code> and <code class="docutils literal notranslate"><span class="pre">java_container_version</span></code> must also be specified. Possible values are <code class="docutils literal notranslate"><span class="pre">JETTY</span></code> and <code class="docutils literal notranslate"><span class="pre">TOMCAT</span></code>.</p></li>
@@ -1961,6 +2152,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetMask</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">javaContainer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Java Container to use. If specified <code class="docutils literal notranslate"><span class="pre">java_version</span></code> and <code class="docutils literal notranslate"><span class="pre">java_container_version</span></code> must also be specified. Possible values are <code class="docutils literal notranslate"><span class="pre">JETTY</span></code> and <code class="docutils literal notranslate"><span class="pre">TOMCAT</span></code>.</p></li>
@@ -2105,6 +2297,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnetMask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">javaContainer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Java Container to use. If specified <code class="docutils literal notranslate"><span class="pre">java_version</span></code> and <code class="docutils literal notranslate"><span class="pre">java_container_version</span></code> must also be specified. Possible values are <code class="docutils literal notranslate"><span class="pre">JETTY</span></code> and <code class="docutils literal notranslate"><span class="pre">TOMCAT</span></code>.</p></li>
@@ -2155,6 +2348,105 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.appservice.Slot.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Slot.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.appservice.SourceCodeToken">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">SourceCodeToken</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">token_secret=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.SourceCodeToken" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an App Service source control token.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Source Control Token’s are configured at the subscription level, not on each App Service - as such this can only be configured Subscription-wide</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OAuth access token.</p></li>
+<li><p><strong>token_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OAuth access token secret.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source control type. Possible values are <code class="docutils literal notranslate"><span class="pre">BitBucket</span></code>, <code class="docutils literal notranslate"><span class="pre">Dropbox</span></code>, <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> and <code class="docutils literal notranslate"><span class="pre">OneDrive</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_source_control_token.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_source_control_token.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.SourceCodeToken.token">
+<code class="sig-name descname">token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.SourceCodeToken.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>The OAuth access token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.SourceCodeToken.token_secret">
+<code class="sig-name descname">token_secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.SourceCodeToken.token_secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>The OAuth access token secret.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.SourceCodeToken.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.SourceCodeToken.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The source control type. Possible values are <code class="docutils literal notranslate"><span class="pre">BitBucket</span></code>, <code class="docutils literal notranslate"><span class="pre">Dropbox</span></code>, <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> and <code class="docutils literal notranslate"><span class="pre">OneDrive</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.SourceCodeToken.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">token_secret=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.SourceCodeToken.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SourceCodeToken resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OAuth access token.</p></li>
+<li><p><strong>token_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OAuth access token secret.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source control type. Possible values are <code class="docutils literal notranslate"><span class="pre">BitBucket</span></code>, <code class="docutils literal notranslate"><span class="pre">Dropbox</span></code>, <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> and <code class="docutils literal notranslate"><span class="pre">OneDrive</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_source_control_token.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_source_control_token.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.SourceCodeToken.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.SourceCodeToken.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.SourceCodeToken.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.SourceCodeToken.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

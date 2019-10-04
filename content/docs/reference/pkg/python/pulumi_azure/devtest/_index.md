@@ -678,18 +678,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.devtest.Schedule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">Schedule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">daily_recurrence=None</em>, <em class="sig-param">hourly_recurrence=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_settings=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">time_zone_id=None</em>, <em class="sig-param">weekly_recurrence=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Schedule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Schedule resource with the given unique name, props, and options.</p>
+<dd><p>Manages automated startup and shutdown schedules for Azure Dev Test Lab.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>lab_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the dev test lab. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the schedule is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the dev test lab schedule. Valid value for name depends on the <code class="docutils literal notranslate"><span class="pre">task_type</span></code>. For instance for task_type <code class="docutils literal notranslate"><span class="pre">LabVmsStartupTask</span></code> the name needs to be <code class="docutils literal notranslate"><span class="pre">LabVmAutoStart</span></code>.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the notification. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code></p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>task_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The task type of the schedule. Possible values include <code class="docutils literal notranslate"><span class="pre">LabVmsShutdownTask</span></code> and <code class="docutils literal notranslate"><span class="pre">LabVmAutoStart</span></code>.</p></li>
+<li><p><strong>time_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time zone ID (e.g. Pacific Standard time).</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>daily_recurrence</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time each day when the schedule takes effect.</p></li>
 </ul>
 <p>The <strong>hourly_recurrence</strong> object supports the following:</p>
 <ul class="simple">
@@ -697,15 +705,66 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>notification_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhookUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The status of the notification. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Time in minutes before event at which notification will be sent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The webhook URL to which the notification will be sent.</p></li>
 </ul>
 <p>The <strong>weekly_recurrence</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">week_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time each day when the schedule takes effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">week_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of days that this schedule takes effect . Possible values include <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code> and <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_schedule.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.Schedule.lab_name">
+<code class="sig-name descname">lab_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Schedule.lab_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the dev test lab. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.Schedule.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Schedule.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location where the schedule is created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.Schedule.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Schedule.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the dev test lab schedule. Valid value for name depends on the <code class="docutils literal notranslate"><span class="pre">task_type</span></code>. For instance for task_type <code class="docutils literal notranslate"><span class="pre">LabVmsStartupTask</span></code> the name needs to be <code class="docutils literal notranslate"><span class="pre">LabVmAutoStart</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.Schedule.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Schedule.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.Schedule.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Schedule.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the notification. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.Schedule.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Schedule.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.Schedule.task_type">
+<code class="sig-name descname">task_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Schedule.task_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The task type of the schedule. Possible values include <code class="docutils literal notranslate"><span class="pre">LabVmsShutdownTask</span></code> and <code class="docutils literal notranslate"><span class="pre">LabVmAutoStart</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.Schedule.time_zone_id">
+<code class="sig-name descname">time_zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.Schedule.time_zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time zone ID (e.g. Pacific Standard time).</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.devtest.Schedule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">daily_recurrence=None</em>, <em class="sig-param">hourly_recurrence=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_settings=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">time_zone_id=None</em>, <em class="sig-param">weekly_recurrence=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Schedule.get" title="Permalink to this definition">¶</a></dt>
@@ -717,12 +776,20 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>lab_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the dev test lab. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the schedule is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the dev test lab schedule. Valid value for name depends on the <code class="docutils literal notranslate"><span class="pre">task_type</span></code>. For instance for task_type <code class="docutils literal notranslate"><span class="pre">LabVmsStartupTask</span></code> the name needs to be <code class="docutils literal notranslate"><span class="pre">LabVmAutoStart</span></code>.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the notification. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code></p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>task_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The task type of the schedule. Possible values include <code class="docutils literal notranslate"><span class="pre">LabVmsShutdownTask</span></code> and <code class="docutils literal notranslate"><span class="pre">LabVmAutoStart</span></code>.</p></li>
+<li><p><strong>time_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time zone ID (e.g. Pacific Standard time).</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>daily_recurrence</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time each day when the schedule takes effect.</p></li>
 </ul>
 <p>The <strong>hourly_recurrence</strong> object supports the following:</p>
 <ul class="simple">
@@ -730,15 +797,18 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>notification_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhookUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The status of the notification. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Disabled</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Time in minutes before event at which notification will be sent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The webhook URL to which the notification will be sent.</p></li>
 </ul>
 <p>The <strong>weekly_recurrence</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">week_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time each day when the schedule takes effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">week_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of days that this schedule takes effect . Possible values include <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code> and <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_schedule.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="method">

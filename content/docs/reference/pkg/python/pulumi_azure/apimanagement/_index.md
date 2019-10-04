@@ -3228,14 +3228,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.Service">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_location=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">hostname_configuration=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_sender_email=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">publisher_email=None</em>, <em class="sig-param">publisher_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">security=None</em>, <em class="sig-param">sign_in=None</em>, <em class="sig-param">sign_up=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_locations=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">hostname_configuration=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_sender_email=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">publisher_email=None</em>, <em class="sig-param">publisher_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">security=None</em>, <em class="sig-param">sign_in=None</em>, <em class="sig-param">sign_up=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>additional_location</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">additional_location</span></code> blocks as defined below.</p></li>
+<li><p><strong>additional_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">additional_location</span></code> blocks as defined below.</p></li>
 <li><p><strong>certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
 <li><p><strong>hostname_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">hostname_configuration</span></code> block as defined below.</p></li>
 <li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block is documented below.</p></li>
@@ -3254,7 +3254,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<p>The <strong>additional_location</strong> object supports the following:</p>
+<p>The <strong>additional_locations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway_regional_url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL of the Regional Gateway for the API Management Service in the specified region.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure location where the API Management Service exists. Changing this forces a new resource to be created.</p></li>
@@ -3352,8 +3352,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
-<dt id="pulumi_azure.apimanagement.Service.additional_location">
-<code class="sig-name descname">additional_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.additional_location" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_azure.apimanagement.Service.additional_locations">
+<code class="sig-name descname">additional_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.additional_locations" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">additional_location</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway_regional_url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL of the Regional Gateway for the API Management Service in the specified region.</p></li>
@@ -3570,7 +3570,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.Service.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_location=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">gateway_regional_url=None</em>, <em class="sig-param">gateway_url=None</em>, <em class="sig-param">hostname_configuration=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management_api_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_sender_email=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">portal_url=None</em>, <em class="sig-param">public_ip_addresses=None</em>, <em class="sig-param">publisher_email=None</em>, <em class="sig-param">publisher_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scm_url=None</em>, <em class="sig-param">security=None</em>, <em class="sig-param">sign_in=None</em>, <em class="sig-param">sign_up=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_locations=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">gateway_regional_url=None</em>, <em class="sig-param">gateway_url=None</em>, <em class="sig-param">hostname_configuration=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management_api_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_sender_email=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">portal_url=None</em>, <em class="sig-param">public_ip_addresses=None</em>, <em class="sig-param">publisher_email=None</em>, <em class="sig-param">publisher_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scm_url=None</em>, <em class="sig-param">security=None</em>, <em class="sig-param">sign_in=None</em>, <em class="sig-param">sign_up=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Service.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3579,7 +3579,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>additional_location</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">additional_location</span></code> blocks as defined below.</p></li>
+<li><p><strong>additional_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">additional_location</span></code> blocks as defined below.</p></li>
 <li><p><strong>certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
 <li><p><strong>gateway_regional_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the Regional Gateway for the API Management Service in the specified region.</p></li>
 <li><p><strong>gateway_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the Gateway for the API Management Service.</p></li>
@@ -3604,7 +3604,7 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<p>The <strong>additional_location</strong> object supports the following:</p>
+<p>The <strong>additional_locations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway_regional_url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL of the Regional Gateway for the API Management Service in the specified region.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure location where the API Management Service exists. Changing this forces a new resource to be created.</p></li>

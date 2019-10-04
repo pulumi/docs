@@ -125,6 +125,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.sql.AwaitableGetDatabaseResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">AwaitableGetDatabaseResult</code><span class="sig-paren">(</span><em class="sig-param">collation=None</em>, <em class="sig-param">default_secondary_location=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">elastic_pool_name=None</em>, <em class="sig-param">failover_group_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_scale=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.AwaitableGetDatabaseResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.sql.AwaitableGetServerResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">AwaitableGetServerResult</code><span class="sig-paren">(</span><em class="sig-param">administrator_login=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.AwaitableGetServerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -635,8 +640,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>partner_servers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the SQL server ID</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the location of a SQL server in <code class="docutils literal notranslate"><span class="pre">partner_servers</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the current role of the SQL server named in <code class="docutils literal notranslate"><span class="pre">server_name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the location of the failover group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - local replication role of the failover group instance.</p></li>
 </ul>
 <p>The <strong>read_write_endpoint_failover_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -659,7 +664,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.sql.FailoverGroup.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.FailoverGroup.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>the location of a SQL server in <code class="docutils literal notranslate"><span class="pre">partner_servers</span></code></p>
+<dd><p>the location of the failover group.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -674,8 +679,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A list of secondary servers as documented below</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - the SQL server ID</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - the location of a SQL server in <code class="docutils literal notranslate"><span class="pre">partner_servers</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - the current role of the SQL server named in <code class="docutils literal notranslate"><span class="pre">server_name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - the location of the failover group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - local replication role of the failover group instance.</p></li>
 </ul>
 </dd></dl>
 
@@ -707,7 +712,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.sql.FailoverGroup.role">
 <code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.FailoverGroup.role" title="Permalink to this definition">¶</a></dt>
-<dd><p>the current role of the SQL server named in <code class="docutils literal notranslate"><span class="pre">server_name</span></code></p>
+<dd><p>local replication role of the failover group instance.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -734,13 +739,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>databases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of database ids to add to the failover group</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the location of a SQL server in <code class="docutils literal notranslate"><span class="pre">partner_servers</span></code></p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the location of the failover group.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the failover group. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>partner_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of secondary servers as documented below</p></li>
 <li><p><strong>read_write_endpoint_failover_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A read/write policy as documented below</p></li>
 <li><p><strong>readonly_endpoint_failover_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – a read-only policy as documented below</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group containing the SQL server</p></li>
-<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the current role of the SQL server named in <code class="docutils literal notranslate"><span class="pre">server_name</span></code></p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – local replication role of the failover group instance.</p></li>
 <li><p><strong>server_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the primary SQL server. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
@@ -749,8 +754,8 @@ properties used to qualify the lookup.</p>
 <p>The <strong>partner_servers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the SQL server ID</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the location of a SQL server in <code class="docutils literal notranslate"><span class="pre">partner_servers</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the current role of the SQL server named in <code class="docutils literal notranslate"><span class="pre">server_name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the location of the failover group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - local replication role of the failover group instance.</p></li>
 </ul>
 <p>The <strong>read_write_endpoint_failover_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -915,6 +920,84 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.sql.GetDatabaseResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">GetDatabaseResult</code><span class="sig-paren">(</span><em class="sig-param">collation=None</em>, <em class="sig-param">default_secondary_location=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">elastic_pool_name=None</em>, <em class="sig-param">failover_group_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_scale=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDatabase.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.collation">
+<code class="sig-name descname">collation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.collation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the collation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.default_secondary_location">
+<code class="sig-name descname">default_secondary_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.default_secondary_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default secondary location of the SQL Database.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.edition">
+<code class="sig-name descname">edition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.edition" title="Permalink to this definition">¶</a></dt>
+<dd><p>The edition of the database.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.elastic_pool_name">
+<code class="sig-name descname">elastic_pool_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.elastic_pool_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the elastic database pool the database belongs to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.failover_group_id">
+<code class="sig-name descname">failover_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.failover_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the failover group the database belongs to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the Resource Group in which the SQL Server exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the database.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.read_scale">
+<code class="sig-name descname">read_scale</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.read_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate if read-only connections will be redirected to a high-available replica.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which the database resides. This will always be the same resource group as the Database Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.server_name">
+<code class="sig-name descname">server_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.server_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the SQL Server on which to create the database.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.GetDatabaseResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.GetDatabaseResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1211,6 +1294,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.sql.get_database">
+<code class="sig-prename descclassname">pulumi_azure.sql.</code><code class="sig-name descname">get_database</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.get_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing SQL Azure Database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the SQL Database.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the Resource Group where the Azure SQL Database exists.</p></li>
+<li><p><strong>server_name</strong> (<em>str</em>) – The name of the SQL Server.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_database.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">

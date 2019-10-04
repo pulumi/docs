@@ -880,12 +880,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.ReplicatedVm">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.recoveryservices.</code><code class="sig-name descname">ReplicatedVm</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">managed_disks=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recovery_replication_policy_id=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_recovery_fabric_name=None</em>, <em class="sig-param">source_recovery_protection_container_name=None</em>, <em class="sig-param">source_vm_id=None</em>, <em class="sig-param">target_availability_set_id=None</em>, <em class="sig-param">target_recovery_fabric_id=None</em>, <em class="sig-param">target_recovery_protection_container_id=None</em>, <em class="sig-param">target_resource_group_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ReplicatedVm resource with the given unique name, props, and options.</p>
+<dd><p>Manages a Azure recovery replicated vms (Azure to Azure). An replicated VM keeps a copiously updated image of the vm in another region in order to be able to start the VM in that region in case of a disaster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>managed_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">managed_disk</span></code> block.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the network mapping.</p></li>
+<li><p><strong>recovery_vault_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the vault that should be updated.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource group where the vault that should be updated is located.</p></li>
+<li><p><strong>source_recovery_fabric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of fabric that should contains this replication.</p></li>
+<li><p><strong>source_recovery_protection_container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the protection container to use.</p></li>
+<li><p><strong>source_vm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the VM to replicate</p></li>
+<li><p><strong>target_availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of availability set that the new VM should belong to when a failover is done.</p></li>
+<li><p><strong>target_recovery_fabric_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of fabric where the VM replication should be handled when a failover is done.</p></li>
+<li><p><strong>target_recovery_protection_container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of protection container where the VM replication should be created when a failover is done.</p></li>
+<li><p><strong>target_resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of resource group where the VM should be created when a failover is done.</p></li>
 </ul>
 </dd>
 </dl>
@@ -895,8 +906,84 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">stagingStorageAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Id of resource group where the VM should be created when a failover is done.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_replicated_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_replicated_vm.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.managed_disks">
+<code class="sig-name descname">managed_disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.managed_disks" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">managed_disk</span></code> block.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">diskId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stagingStorageAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Id of resource group where the VM should be created when a failover is done.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the network mapping.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.recovery_vault_name">
+<code class="sig-name descname">recovery_vault_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.recovery_vault_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the vault that should be updated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the resource group where the vault that should be updated is located.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.source_recovery_fabric_name">
+<code class="sig-name descname">source_recovery_fabric_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.source_recovery_fabric_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of fabric that should contains this replication.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.source_recovery_protection_container_name">
+<code class="sig-name descname">source_recovery_protection_container_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.source_recovery_protection_container_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the protection container to use.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.source_vm_id">
+<code class="sig-name descname">source_vm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.source_vm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Id of the VM to replicate</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.target_availability_set_id">
+<code class="sig-name descname">target_availability_set_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.target_availability_set_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Id of availability set that the new VM should belong to when a failover is done.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.target_recovery_fabric_id">
+<code class="sig-name descname">target_recovery_fabric_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.target_recovery_fabric_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Id of fabric where the VM replication should be handled when a failover is done.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.target_recovery_protection_container_id">
+<code class="sig-name descname">target_recovery_protection_container_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.target_recovery_protection_container_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Id of protection container where the VM replication should be created when a failover is done.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.ReplicatedVm.target_resource_group_id">
+<code class="sig-name descname">target_resource_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.target_resource_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Id of resource group where the VM should be created when a failover is done.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.recoveryservices.ReplicatedVm.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">managed_disks=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recovery_replication_policy_id=None</em>, <em class="sig-param">recovery_vault_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">source_recovery_fabric_name=None</em>, <em class="sig-param">source_recovery_protection_container_name=None</em>, <em class="sig-param">source_vm_id=None</em>, <em class="sig-param">target_availability_set_id=None</em>, <em class="sig-param">target_recovery_fabric_id=None</em>, <em class="sig-param">target_recovery_protection_container_id=None</em>, <em class="sig-param">target_resource_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ReplicatedVm.get" title="Permalink to this definition">¶</a></dt>
@@ -908,6 +995,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>managed_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">managed_disk</span></code> block.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the network mapping.</p></li>
+<li><p><strong>recovery_vault_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the vault that should be updated.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource group where the vault that should be updated is located.</p></li>
+<li><p><strong>source_recovery_fabric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of fabric that should contains this replication.</p></li>
+<li><p><strong>source_recovery_protection_container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the protection container to use.</p></li>
+<li><p><strong>source_vm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the VM to replicate</p></li>
+<li><p><strong>target_availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of availability set that the new VM should belong to when a failover is done.</p></li>
+<li><p><strong>target_recovery_fabric_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of fabric where the VM replication should be handled when a failover is done.</p></li>
+<li><p><strong>target_recovery_protection_container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of protection container where the VM replication should be created when a failover is done.</p></li>
+<li><p><strong>target_resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of resource group where the VM should be created when a failover is done.</p></li>
 </ul>
 </dd>
 </dl>
@@ -917,8 +1015,11 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">stagingStorageAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Id of resource group where the VM should be created when a failover is done.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_replicated_vm.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_replicated_vm.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1074,7 +1175,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.Vault">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.recoveryservices.</code><code class="sig-name descname">Vault</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.Vault" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage an Recovery Services Vault.</p>
+<dd><p>Manages an Recovery Services Vault.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_azure.storage"></span><dl class="class">
 <dt id="pulumi_azure.storage.Account">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">account_encryption_source=None</em>, <em class="sig-param">account_kind=None</em>, <em class="sig-param">account_replication_type=None</em>, <em class="sig-param">account_tier=None</em>, <em class="sig-param">account_type=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">enable_advanced_threat_protection=None</em>, <em class="sig-param">enable_blob_encryption=None</em>, <em class="sig-param">enable_file_encryption=None</em>, <em class="sig-param">enable_https_traffic_only=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">is_hns_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_rules=None</em>, <em class="sig-param">queue_properties=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage an Azure Storage Account.</p>
+<dd><p>Manages an Azure Storage Account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -625,6 +625,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.storage.AwaitableGetAccountBlobContainerSASResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AwaitableGetAccountBlobContainerSASResult</code><span class="sig-paren">(</span><em class="sig-param">cache_control=None</em>, <em class="sig-param">connection_string=None</em>, <em class="sig-param">container_name=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">expiry=None</em>, <em class="sig-param">https_only=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">sas=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetAccountBlobContainerSASResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.storage.AwaitableGetAccountResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AwaitableGetAccountResult</code><span class="sig-paren">(</span><em class="sig-param">access_tier=None</em>, <em class="sig-param">account_encryption_source=None</em>, <em class="sig-param">account_kind=None</em>, <em class="sig-param">account_replication_type=None</em>, <em class="sig-param">account_tier=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">enable_blob_encryption=None</em>, <em class="sig-param">enable_file_encryption=None</em>, <em class="sig-param">enable_https_traffic_only=None</em>, <em class="sig-param">is_hns_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_access_key=None</em>, <em class="sig-param">primary_blob_connection_string=None</em>, <em class="sig-param">primary_blob_endpoint=None</em>, <em class="sig-param">primary_blob_host=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_dfs_endpoint=None</em>, <em class="sig-param">primary_dfs_host=None</em>, <em class="sig-param">primary_file_endpoint=None</em>, <em class="sig-param">primary_file_host=None</em>, <em class="sig-param">primary_location=None</em>, <em class="sig-param">primary_queue_endpoint=None</em>, <em class="sig-param">primary_queue_host=None</em>, <em class="sig-param">primary_table_endpoint=None</em>, <em class="sig-param">primary_table_host=None</em>, <em class="sig-param">primary_web_endpoint=None</em>, <em class="sig-param">primary_web_host=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_access_key=None</em>, <em class="sig-param">secondary_blob_connection_string=None</em>, <em class="sig-param">secondary_blob_endpoint=None</em>, <em class="sig-param">secondary_blob_host=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_dfs_endpoint=None</em>, <em class="sig-param">secondary_dfs_host=None</em>, <em class="sig-param">secondary_file_endpoint=None</em>, <em class="sig-param">secondary_file_host=None</em>, <em class="sig-param">secondary_location=None</em>, <em class="sig-param">secondary_queue_endpoint=None</em>, <em class="sig-param">secondary_queue_host=None</em>, <em class="sig-param">secondary_table_endpoint=None</em>, <em class="sig-param">secondary_table_host=None</em>, <em class="sig-param">secondary_web_endpoint=None</em>, <em class="sig-param">secondary_web_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -636,35 +641,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Blob">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Blob</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attempts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parallelism=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage an Azure Storage Blob.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Blob</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">attempts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parallelism=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">source_content=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Blob within a Storage Container.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access tier of the storage blob. Possible values are <code class="docutils literal notranslate"><span class="pre">Archive</span></code>, <code class="docutils literal notranslate"><span class="pre">Cool</span></code> and <code class="docutils literal notranslate"><span class="pre">Hot</span></code>.</p></li>
 <li><p><strong>attempts</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of attempts to make per page or block when uploading. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content type of the storage blob. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined. Defaults to <code class="docutils literal notranslate"><span class="pre">application/octet-stream</span></code>.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of custom blob metadata.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage blob. Must be unique within the storage container the blob is located.</p></li>
 <li><p><strong>parallelism</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers per CPU core to run for concurrent uploads. Defaults to <code class="docutils literal notranslate"><span class="pre">8</span></code>.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the storage container. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the storage container.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Used only for <code class="docutils literal notranslate"><span class="pre">page</span></code> blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.</p></li>
-<li><p><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An absolute path to a file on the local system. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined.</p></li>
+<li><p><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An absolute path to a file on the local system. This field cannot be specified for Append blobs and annot be specified if <code class="docutils literal notranslate"><span class="pre">source_content</span></code> or <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is specified.</p></li>
+<li><p><strong>source_content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content for this blob which should be defined inline. This field can only be specified for Block blobs and cannot be specified if <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is specified.</p></li>
 <li><p><strong>source_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of an existing blob, or a file in the Azure File service, to use as the source contents
-for the blob to be created. Changing this forces a new resource to be created. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source</span></code> is defined.</p></li>
+for the blob to be created. Changing this forces a new resource to be created. This field cannot be specified for Append blobs and cannot be specified if <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_content</span></code> is specified.</p></li>
 <li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the storage container.
 Changing this forces a new resource to be created.</p></li>
 <li><p><strong>storage_container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage container in which this blob should be created.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the storage blob to be created. One of either <code class="docutils literal notranslate"><span class="pre">block</span></code> or <code class="docutils literal notranslate"><span class="pre">page</span></code>. When not copying from an existing blob,
-this becomes required.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the storage blob to be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Append</span></code>, <code class="docutils literal notranslate"><span class="pre">Block</span></code> or <code class="docutils literal notranslate"><span class="pre">Page</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_blob.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_blob.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Blob.access_tier">
+<code class="sig-name descname">access_tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Blob.access_tier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The access tier of the storage blob. Possible values are <code class="docutils literal notranslate"><span class="pre">Archive</span></code>, <code class="docutils literal notranslate"><span class="pre">Cool</span></code> and <code class="docutils literal notranslate"><span class="pre">Hot</span></code>.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Blob.attempts">
 <code class="sig-name descname">attempts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Blob.attempts" title="Permalink to this definition">¶</a></dt>
@@ -698,8 +709,7 @@ this becomes required.</p></li>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Blob.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Blob.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to
-create the storage container. Changing this forces a new resource to be created.</p>
+<dd><p>The name of the resource group in which to create the storage container.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -711,14 +721,20 @@ create the storage container. Changing this forces a new resource to be created.
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Blob.source">
 <code class="sig-name descname">source</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Blob.source" title="Permalink to this definition">¶</a></dt>
-<dd><p>An absolute path to a file on the local system. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined.</p>
+<dd><p>An absolute path to a file on the local system. This field cannot be specified for Append blobs and annot be specified if <code class="docutils literal notranslate"><span class="pre">source_content</span></code> or <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is specified.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Blob.source_content">
+<code class="sig-name descname">source_content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Blob.source_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>The content for this blob which should be defined inline. This field can only be specified for Block blobs and cannot be specified if <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is specified.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Blob.source_uri">
 <code class="sig-name descname">source_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Blob.source_uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URI of an existing blob, or a file in the Azure File service, to use as the source contents
-for the blob to be created. Changing this forces a new resource to be created. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source</span></code> is defined.</p>
+for the blob to be created. Changing this forces a new resource to be created. This field cannot be specified for Append blobs and cannot be specified if <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_content</span></code> is specified.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -737,8 +753,7 @@ Changing this forces a new resource to be created.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Blob.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Blob.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the storage blob to be created. One of either <code class="docutils literal notranslate"><span class="pre">block</span></code> or <code class="docutils literal notranslate"><span class="pre">page</span></code>. When not copying from an existing blob,
-this becomes required.</p>
+<dd><p>The type of the storage blob to be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Append</span></code>, <code class="docutils literal notranslate"><span class="pre">Block</span></code> or <code class="docutils literal notranslate"><span class="pre">Page</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -749,7 +764,7 @@ this becomes required.</p>
 
 <dl class="method">
 <dt id="pulumi_azure.storage.Blob.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attempts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parallelism=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">attempts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parallelism=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">source_content=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Blob resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -758,22 +773,22 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access tier of the storage blob. Possible values are <code class="docutils literal notranslate"><span class="pre">Archive</span></code>, <code class="docutils literal notranslate"><span class="pre">Cool</span></code> and <code class="docutils literal notranslate"><span class="pre">Hot</span></code>.</p></li>
 <li><p><strong>attempts</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of attempts to make per page or block when uploading. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 <li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content type of the storage blob. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined. Defaults to <code class="docutils literal notranslate"><span class="pre">application/octet-stream</span></code>.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of custom blob metadata.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage blob. Must be unique within the storage container the blob is located.</p></li>
 <li><p><strong>parallelism</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers per CPU core to run for concurrent uploads. Defaults to <code class="docutils literal notranslate"><span class="pre">8</span></code>.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the storage container. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the storage container.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Used only for <code class="docutils literal notranslate"><span class="pre">page</span></code> blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.</p></li>
-<li><p><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An absolute path to a file on the local system. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined.</p></li>
+<li><p><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An absolute path to a file on the local system. This field cannot be specified for Append blobs and annot be specified if <code class="docutils literal notranslate"><span class="pre">source_content</span></code> or <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is specified.</p></li>
+<li><p><strong>source_content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content for this blob which should be defined inline. This field can only be specified for Block blobs and cannot be specified if <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is specified.</p></li>
 <li><p><strong>source_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of an existing blob, or a file in the Azure File service, to use as the source contents
-for the blob to be created. Changing this forces a new resource to be created. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source</span></code> is defined.</p></li>
+for the blob to be created. Changing this forces a new resource to be created. This field cannot be specified for Append blobs and cannot be specified if <code class="docutils literal notranslate"><span class="pre">source</span></code> or <code class="docutils literal notranslate"><span class="pre">source_content</span></code> is specified.</p></li>
 <li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the storage container.
 Changing this forces a new resource to be created.</p></li>
 <li><p><strong>storage_container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage container in which this blob should be created.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the storage blob to be created. One of either <code class="docutils literal notranslate"><span class="pre">block</span></code> or <code class="docutils literal notranslate"><span class="pre">page</span></code>. When not copying from an existing blob,
-this becomes required.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the storage blob to be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Append</span></code>, <code class="docutils literal notranslate"><span class="pre">Block</span></code> or <code class="docutils literal notranslate"><span class="pre">Page</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the blob</p></li>
 </ul>
 </dd>
@@ -824,7 +839,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.storage.Container">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_access_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Container" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a Container within an Azure Storage Account.</p>
+<dd><p>Manages a Container within an Azure Storage Account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -950,6 +965,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.storage.GetAccountBlobContainerSASResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">GetAccountBlobContainerSASResult</code><span class="sig-paren">(</span><em class="sig-param">cache_control=None</em>, <em class="sig-param">connection_string=None</em>, <em class="sig-param">container_name=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">expiry=None</em>, <em class="sig-param">https_only=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">sas=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetAccountBlobContainerSASResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAccountBlobContainerSAS.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountBlobContainerSASResult.sas">
+<code class="sig-name descname">sas</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountBlobContainerSASResult.sas" title="Permalink to this definition">¶</a></dt>
+<dd><p>The computed Blob Container Shared Access Signature (SAS).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountBlobContainerSASResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountBlobContainerSASResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1529,7 +1562,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.storage.ShareDirectory">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">ShareDirectory</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">share_name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ShareDirectory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a Directory within an Azure Storage File Share.</p>
+<dd><p>Manages a Directory within an Azure Storage File Share.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1633,7 +1666,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.storage.Table">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acls=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Table" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a Table within an Azure Storage Account.</p>
+<dd><p>Manages a Table within an Azure Storage Account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1889,7 +1922,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.ZipBlob">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">ZipBlob</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attempts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parallelism=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">ZipBlob</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">attempts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parallelism=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">source_content=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ZipBlob resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1901,7 +1934,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <dl class="method">
 <dt id="pulumi_azure.storage.ZipBlob.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attempts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parallelism=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">attempts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parallelism=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">source_content=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ZipBlob resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1967,6 +2000,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_account.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.storage.get_account_blob_container_sas">
+<code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">get_account_blob_container_sas</code><span class="sig-paren">(</span><em class="sig-param">cache_control=None</em>, <em class="sig-param">connection_string=None</em>, <em class="sig-param">container_name=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">expiry=None</em>, <em class="sig-param">https_only=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.get_account_blob_container_sas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to obtain a Shared Access Signature (SAS Token) for an existing Storage Account Blob Container.</p>
+<p>Shared access signatures allow fine-grained, ephemeral access control to various aspects of an Azure Storage Account Blob Container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cache_control</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Cache-Control</span></code> response header that is sent when this SAS token is used.</p></li>
+<li><p><strong>container_name</strong> (<em>str</em>) – Name of the container.</p></li>
+<li><p><strong>content_disposition</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Content-Disposition</span></code> response header that is sent when this SAS token is used.</p></li>
+<li><p><strong>content_encoding</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Content-Encoding</span></code> response header that is sent when this SAS token is used.</p></li>
+<li><p><strong>content_language</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Content-Language</span></code> response header that is sent when this SAS token is used.</p></li>
+<li><p><strong>content_type</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> response header that is sent when this SAS token is used.</p></li>
+<li><p><strong>expiry</strong> (<em>str</em>) – The expiration time and date of this SAS. Must be a valid ISO-8601 format time/date string.</p></li>
+<li><p><strong>https_only</strong> (<em>bool</em>) – Only permit <code class="docutils literal notranslate"><span class="pre">https</span></code> access. If <code class="docutils literal notranslate"><span class="pre">false</span></code>, both <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">https</span></code> are permitted. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>ip_address</strong> (<em>str</em>) – Single ipv4 address or range (connected with a dash) of ipv4 addresses.</p></li>
+<li><p><strong>permissions</strong> (<em>dict</em>) – A <code class="docutils literal notranslate"><span class="pre">permissions</span></code> block as defined below.</p></li>
+<li><p><strong>start</strong> (<em>str</em>) – The starting time and date of validity of this SAS. Must be a valid ISO-8601 format time/date string.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>permissions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">add</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_account_blob_container_sas.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_account_blob_container_sas.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

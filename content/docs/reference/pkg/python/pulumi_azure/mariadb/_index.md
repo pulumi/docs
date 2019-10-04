@@ -371,7 +371,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>ssl_enforcement</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies if SSL should be enforced on connections. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 <li><p><strong>storage_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_profile</span></code> block as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of MariaDB to use. The valid value is <code class="docutils literal notranslate"><span class="pre">10.2</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of MariaDB to use. Possible values are <code class="docutils literal notranslate"><span class="pre">10.2</span></code> and <code class="docutils literal notranslate"><span class="pre">10.3</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -384,6 +384,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>storage_profile</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoGrow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupRetentionDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">geoRedundantBackup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storageMb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -450,6 +451,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">storage_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.Server.storage_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_profile</span></code> block as defined below.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoGrow</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupRetentionDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">geoRedundantBackup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storageMb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -465,7 +467,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.mariadb.Server.version">
 <code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mariadb.Server.version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the version of MariaDB to use. The valid value is <code class="docutils literal notranslate"><span class="pre">10.2</span></code>. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the version of MariaDB to use. Possible values are <code class="docutils literal notranslate"><span class="pre">10.2</span></code> and <code class="docutils literal notranslate"><span class="pre">10.3</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -489,7 +491,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>ssl_enforcement</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies if SSL should be enforced on connections. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 <li><p><strong>storage_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_profile</span></code> block as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of MariaDB to use. The valid value is <code class="docutils literal notranslate"><span class="pre">10.2</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of MariaDB to use. Possible values are <code class="docutils literal notranslate"><span class="pre">10.2</span></code> and <code class="docutils literal notranslate"><span class="pre">10.3</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -502,6 +504,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>storage_profile</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoGrow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupRetentionDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">geoRedundantBackup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storageMb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
