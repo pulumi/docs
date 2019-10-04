@@ -81,7 +81,7 @@ import * as kubernetes from "@pulumi/kubernetes";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L6">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L6">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -91,7 +91,7 @@ import * as kubernetes from "@pulumi/kubernetes";
 The provider type for the kubernetes package.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L6"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L6"> <b>constructor</b></a>
 </h4>
 
 
@@ -105,14 +105,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L6">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L6">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L6">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L6">method <b>isInstance</b></a>
 </h4>
 
 
@@ -123,7 +123,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L6">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L6">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -132,7 +132,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L6">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L6">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -144,7 +144,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/version.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/version.ts#L5">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -157,7 +157,7 @@ Returns the version of the package containing this file, obtained from the packa
 of this package.
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L30">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -167,7 +167,7 @@ of this package.
 The set of arguments for constructing a Provider.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L34">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L34">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -175,7 +175,7 @@ The set of arguments for constructing a Provider.
 If present, the name of the kubeconfig cluster to use.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L38">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L38">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>context?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -183,7 +183,7 @@ If present, the name of the kubeconfig cluster to use.
 If present, the name of the kubeconfig context to use.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-enableDryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L52">property <b>enableDryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L52">property <b>enableDryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -192,7 +192,7 @@ BETA FEATURE - If present and set to true, enable server-side diff calculations.
 This feature is in developer preview, and is disabled by default.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-kubeconfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L42">property <b>kubeconfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L42">property <b>kubeconfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeconfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +200,7 @@ This feature is in developer preview, and is disabled by default.
 The contents of a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L47">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L47">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ If present, the default namespace to use. This flag is ignored for cluster-scope
 Note: if .metadata.namespace is set on a resource, that value takes precedence over the provider default.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-suppressDeprecationWarnings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b15bd2a60b506234981065fbe6fe09cdc504f928/sdk/nodejs/provider.ts#L56">property <b>suppressDeprecationWarnings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/78cb1ad72e558997a9104847b21fa867696540cf/sdk/nodejs/provider.ts#L56">property <b>suppressDeprecationWarnings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suppressDeprecationWarnings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
