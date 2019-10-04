@@ -1046,7 +1046,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.eventhub.EventHubNamespace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">EventHubNamespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_inflate_enabled=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">kafka_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">maximum_throughput_units=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage an EventHub Namespace.</p>
+<dd><p>Manages an EventHub Namespace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1054,7 +1054,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_inflate_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Auto Inflate enabled for the EventHub Namespace?</p></li>
 <li><p><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the Capacity / Throughput Units for a <code class="docutils literal notranslate"><span class="pre">Standard</span></code> SKU namespace. Valid values range from 1 - 20.</p></li>
-<li><p><strong>kafka_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Kafka enabled for the EventHub Namespace? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>kafka_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Kafka enabled for the EventHub Namespace? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>maximum_throughput_units</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.</p></li>
@@ -1108,7 +1108,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventHubNamespace.kafka_enabled">
 <code class="sig-name descname">kafka_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace.kafka_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Is Kafka enabled for the EventHub Namespace? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<dd><p>Is Kafka enabled for the EventHub Namespace? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1166,7 +1166,7 @@ rule <code class="docutils literal notranslate"><span class="pre">RootManageShar
 <li><p><strong>default_secondary_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secondary connection string for the
 authorization rule <code class="docutils literal notranslate"><span class="pre">RootManageSharedAccessKey</span></code>.</p></li>
 <li><p><strong>default_secondary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secondary access key for the authorization rule <code class="docutils literal notranslate"><span class="pre">RootManageSharedAccessKey</span></code>.</p></li>
-<li><p><strong>kafka_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Kafka enabled for the EventHub Namespace? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>kafka_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Kafka enabled for the EventHub Namespace? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>maximum_throughput_units</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.</p></li>
@@ -1848,7 +1848,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 <dl class="class">
 <dt id="pulumi_azure.eventhub.Namespace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">Namespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Namespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a ServiceBus Namespace.</p>
+<dd><p>Manages a ServiceBus Namespace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2154,7 +2154,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.eventhub.Queue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_delete_on_idle=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">default_message_ttl=None</em>, <em class="sig-param">duplicate_detection_history_time_window=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">enable_express=None</em>, <em class="sig-param">enable_partitioning=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">lock_duration=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">max_size_in_megabytes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">requires_duplicate_detection=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">support_ordering=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Queue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a ServiceBus Queue.</p>
+<dd><p>Manages a ServiceBus Queue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2563,7 +2563,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.eventhub.Subscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_delete_on_idle=None</em>, <em class="sig-param">dead_lettering_on_filter_evaluation_exceptions=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">default_message_ttl=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">forward_to=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">lock_duration=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Subscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a ServiceBus Subscription.</p>
+<dd><p>Manages a ServiceBus Subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2787,7 +2787,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.eventhub.SubscriptionRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">SubscriptionRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">correlation_filter=None</em>, <em class="sig-param">filter_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sql_filter=None</em>, <em class="sig-param">subscription_name=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.SubscriptionRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a ServiceBus Subscription Rule.</p>
+<dd><p>Manages a ServiceBus Subscription Rule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2963,7 +2963,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.eventhub.Topic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_delete_on_idle=None</em>, <em class="sig-param">default_message_ttl=None</em>, <em class="sig-param">duplicate_detection_history_time_window=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">enable_express=None</em>, <em class="sig-param">enable_filtering_messages_before_publishing=None</em>, <em class="sig-param">enable_partitioning=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_size_in_megabytes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">requires_duplicate_detection=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">support_ordering=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Topic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a ServiceBus Topic.</p>
+<dd><p>Manages a ServiceBus Topic.</p>
 <p><strong>Note</strong> Topics can only be created in Namespaces with an SKU of <code class="docutils literal notranslate"><span class="pre">standard</span></code> or higher.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

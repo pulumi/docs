@@ -113,7 +113,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed)  The certificate expiration date.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pfx</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subjectName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate thumbprint.</p></li>
 </ul>
 </li>
@@ -150,7 +150,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed)  The certificate expiration date.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pfx</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subjectName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate thumbprint.</p></li>
 </ul>
 </li>
@@ -220,7 +220,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Computed)  The certificate expiration date.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pfx</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subjectName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Computed) The certificate thumbprint.</p></li>
 </ul>
 </li>
@@ -267,7 +267,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Computed)  The certificate expiration date.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pfx</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subjectName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - (Computed) The certificate thumbprint.</p></li>
 </ul>
 </li>
@@ -393,7 +393,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed)  The certificate expiration date.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pfx</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subjectName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate thumbprint.</p></li>
 </ul>
 </li>
@@ -430,7 +430,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed)  The certificate expiration date.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pfx</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subjectName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate’s certificate subject name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Computed) The certificate thumbprint.</p></li>
 </ul>
 </li>

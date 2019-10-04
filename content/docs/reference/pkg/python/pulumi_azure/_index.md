@@ -23,6 +23,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="automation/">automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="autoscale/">autoscale</a></li>
 <li class="toctree-l1"><a class="reference internal" href="batch/">batch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot/">bot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cdn/">cdn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cognitive/">cognitive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="compute/">compute</a></li>
@@ -38,9 +39,11 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eventgrid/">eventgrid</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eventhub/">eventhub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frontdoor/">frontdoor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hdinsight/">hdinsight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keyvault/">keyvault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kusto/">kusto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lb/">lb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loganalytics/">loganalytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logicapps/">logicapps</a></li>
@@ -49,6 +52,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="managementresource/">managementresource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="maps/">maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb/">mariadb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marketplace/">marketplace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mediaservices/">mediaservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monitoring/">monitoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="msi/">msi</a></li>
@@ -60,6 +64,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="policy/">policy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postgresql/">postgresql</a></li>
 <li class="toctree-l1"><a class="reference internal" href="privatedns/">privatedns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proximity/">proximity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recoveryservices/">recoveryservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="redis/">redis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relay/">relay</a></li>
@@ -74,6 +79,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="storage/">storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="streamanalytics/">streamanalytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trafficmanager/">trafficmanager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waf/">waf</a></li>
 </ul>
 </div>
 </div>

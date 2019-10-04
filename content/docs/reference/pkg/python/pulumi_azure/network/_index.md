@@ -14,7 +14,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.network"></span><dl class="class">
 <dt id="pulumi_azure.network.ApplicationGateway">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">ApplicationGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authentication_certificates=None</em>, <em class="sig-param">autoscale_configuration=None</em>, <em class="sig-param">backend_address_pools=None</em>, <em class="sig-param">backend_http_settings=None</em>, <em class="sig-param">custom_error_configurations=None</em>, <em class="sig-param">disabled_ssl_protocols=None</em>, <em class="sig-param">enable_http2=None</em>, <em class="sig-param">frontend_ip_configurations=None</em>, <em class="sig-param">frontend_ports=None</em>, <em class="sig-param">gateway_ip_configurations=None</em>, <em class="sig-param">http_listeners=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">probes=None</em>, <em class="sig-param">redirect_configurations=None</em>, <em class="sig-param">request_routing_rules=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rewrite_rule_sets=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">ssl_certificates=None</em>, <em class="sig-param">ssl_policies=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">url_path_maps=None</em>, <em class="sig-param">waf_configuration=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">ApplicationGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authentication_certificates=None</em>, <em class="sig-param">autoscale_configuration=None</em>, <em class="sig-param">backend_address_pools=None</em>, <em class="sig-param">backend_http_settings=None</em>, <em class="sig-param">custom_error_configurations=None</em>, <em class="sig-param">disabled_ssl_protocols=None</em>, <em class="sig-param">enable_http2=None</em>, <em class="sig-param">frontend_ip_configurations=None</em>, <em class="sig-param">frontend_ports=None</em>, <em class="sig-param">gateway_ip_configurations=None</em>, <em class="sig-param">http_listeners=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">probes=None</em>, <em class="sig-param">redirect_configurations=None</em>, <em class="sig-param">request_routing_rules=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rewrite_rule_sets=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">ssl_certificates=None</em>, <em class="sig-param">ssl_policies=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">trusted_root_certificates=None</em>, <em class="sig-param">url_path_maps=None</em>, <em class="sig-param">waf_configuration=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Gateway.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -53,6 +53,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>ssl_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">ssl_certificate</span></code> blocks as defined below.</p></li>
 <li><p><strong>ssl_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – a <code class="docutils literal notranslate"><span class="pre">ssl</span> <span class="pre">policy</span></code> block as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>trusted_root_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">trusted_root_certificate</span></code> blocks as defined below.</p></li>
 <li><p><strong>url_path_maps</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">url_path_map</span></code> blocks as defined below.</p></li>
 <li><p><strong>waf_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">waf_configuration</span></code> block as defined below.</p></li>
 <li><p><strong>zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of availability zones to spread the Application Gateway over.</p></li>
@@ -259,6 +260,12 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">minProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">policyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">policyType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>trusted_root_certificates</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>url_path_maps</strong> object supports the following:</p>
 <ul class="simple">
@@ -640,6 +647,17 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.trusted_root_certificates">
+<code class="sig-name descname">trusted_root_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.trusted_root_certificates" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">trusted_root_certificate</span></code> blocks as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.network.ApplicationGateway.url_path_maps">
 <code class="sig-name descname">url_path_maps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.url_path_maps" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">url_path_map</span></code> blocks as defined below.</p>
@@ -708,7 +726,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_azure.network.ApplicationGateway.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authentication_certificates=None</em>, <em class="sig-param">autoscale_configuration=None</em>, <em class="sig-param">backend_address_pools=None</em>, <em class="sig-param">backend_http_settings=None</em>, <em class="sig-param">custom_error_configurations=None</em>, <em class="sig-param">disabled_ssl_protocols=None</em>, <em class="sig-param">enable_http2=None</em>, <em class="sig-param">frontend_ip_configurations=None</em>, <em class="sig-param">frontend_ports=None</em>, <em class="sig-param">gateway_ip_configurations=None</em>, <em class="sig-param">http_listeners=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">probes=None</em>, <em class="sig-param">redirect_configurations=None</em>, <em class="sig-param">request_routing_rules=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rewrite_rule_sets=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">ssl_certificates=None</em>, <em class="sig-param">ssl_policies=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">url_path_maps=None</em>, <em class="sig-param">waf_configuration=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authentication_certificates=None</em>, <em class="sig-param">autoscale_configuration=None</em>, <em class="sig-param">backend_address_pools=None</em>, <em class="sig-param">backend_http_settings=None</em>, <em class="sig-param">custom_error_configurations=None</em>, <em class="sig-param">disabled_ssl_protocols=None</em>, <em class="sig-param">enable_http2=None</em>, <em class="sig-param">frontend_ip_configurations=None</em>, <em class="sig-param">frontend_ports=None</em>, <em class="sig-param">gateway_ip_configurations=None</em>, <em class="sig-param">http_listeners=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">probes=None</em>, <em class="sig-param">redirect_configurations=None</em>, <em class="sig-param">request_routing_rules=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rewrite_rule_sets=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">ssl_certificates=None</em>, <em class="sig-param">ssl_policies=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">trusted_root_certificates=None</em>, <em class="sig-param">url_path_maps=None</em>, <em class="sig-param">waf_configuration=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ApplicationGateway resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -749,6 +767,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>ssl_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">ssl_certificate</span></code> blocks as defined below.</p></li>
 <li><p><strong>ssl_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – a <code class="docutils literal notranslate"><span class="pre">ssl</span> <span class="pre">policy</span></code> block as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>trusted_root_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">trusted_root_certificate</span></code> blocks as defined below.</p></li>
 <li><p><strong>url_path_maps</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">url_path_map</span></code> blocks as defined below.</p></li>
 <li><p><strong>waf_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">waf_configuration</span></code> block as defined below.</p></li>
 <li><p><strong>zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of availability zones to spread the Application Gateway over.</p></li>
@@ -956,6 +975,12 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">policyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">policyType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
+<p>The <strong>trusted_root_certificates</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+</ul>
 <p>The <strong>url_path_maps</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendAddressPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Default Backend Address Pool.</p></li>
@@ -1053,7 +1078,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.network.ApplicationSecurityGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">ApplicationSecurityGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationSecurityGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage an Application Security Group.</p>
+<dd><p>Manages an Application Security Group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1175,6 +1200,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.network.AwaitableGetNetworkDdosProtectionPlanResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetNetworkDdosProtectionPlanResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_network_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetNetworkDdosProtectionPlanResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.network.AwaitableGetNetworkInterfaceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetNetworkInterfaceResult</code><span class="sig-paren">(</span><em class="sig-param">applied_dns_servers=None</em>, <em class="sig-param">dns_servers=None</em>, <em class="sig-param">enable_accelerated_networking=None</em>, <em class="sig-param">enable_ip_forwarding=None</em>, <em class="sig-param">internal_dns_name_label=None</em>, <em class="sig-param">internal_fqdn=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">private_ip_address=None</em>, <em class="sig-param">private_ip_addresses=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetNetworkInterfaceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1221,7 +1251,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.AwaitableGetVirtualNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetVirtualNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">address_spaces=None</em>, <em class="sig-param">address_spaces_collection=None</em>, <em class="sig-param">dns_servers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">vnet_peerings=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetVirtualNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">address_spaces=None</em>, <em class="sig-param">address_spaces_collection=None</em>, <em class="sig-param">dns_servers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">vnet_peerings=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1407,7 +1437,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">DdosProtectionPlan</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.DdosProtectionPlan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AzureNetwork DDoS Protection Plan.</p>
 <blockquote>
-<div><p><strong>NOTE</strong> Azure only allow <code class="docutils literal notranslate"><span class="pre">one</span></code> DDoS Protection Plan per region.</p>
+<div><p><strong>NOTE</strong> Azure only allows <code class="docutils literal notranslate"><span class="pre">one</span></code> DDoS Protection Plan per region.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2770,6 +2800,36 @@ in which the connection is created.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.network.GetNetworkDdosProtectionPlanResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetNetworkDdosProtectionPlanResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_network_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetNetworkDdosProtectionPlanResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getNetworkDdosProtectionPlan.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetNetworkDdosProtectionPlanResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetNetworkDdosProtectionPlanResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetNetworkDdosProtectionPlanResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetNetworkDdosProtectionPlanResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetNetworkDdosProtectionPlanResult.virtual_network_ids">
+<code class="sig-name descname">virtual_network_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetNetworkDdosProtectionPlanResult.virtual_network_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Resource ID list of the Virtual Networks associated with DDoS Protection Plan.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetNetworkDdosProtectionPlanResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetNetworkDdosProtectionPlanResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.network.GetNetworkInterfaceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetNetworkInterfaceResult</code><span class="sig-paren">(</span><em class="sig-param">applied_dns_servers=None</em>, <em class="sig-param">dns_servers=None</em>, <em class="sig-param">enable_accelerated_networking=None</em>, <em class="sig-param">enable_ip_forwarding=None</em>, <em class="sig-param">internal_dns_name_label=None</em>, <em class="sig-param">internal_fqdn=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">mac_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">private_ip_address=None</em>, <em class="sig-param">private_ip_addresses=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetNetworkInterfaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetworkInterface.</p>
@@ -3171,7 +3231,7 @@ for this Virtual Network Gateway.</p>
 
 <dl class="class">
 <dt id="pulumi_azure.network.GetVirtualNetworkResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetVirtualNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">address_spaces=None</em>, <em class="sig-param">address_spaces_collection=None</em>, <em class="sig-param">dns_servers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">vnet_peerings=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetVirtualNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">address_spaces=None</em>, <em class="sig-param">address_spaces_collection=None</em>, <em class="sig-param">dns_servers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">vnet_peerings=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVirtualNetwork.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetVirtualNetworkResult.address_spaces">
@@ -3183,6 +3243,12 @@ for this Virtual Network Gateway.</p>
 <dt id="pulumi_azure.network.GetVirtualNetworkResult.dns_servers">
 <code class="sig-name descname">dns_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkResult.dns_servers" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of DNS servers used by the virtual network.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetVirtualNetworkResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location of the virtual network.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5169,7 +5235,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.network.PublicIp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">PublicIp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_method=None</em>, <em class="sig-param">domain_name_label=None</em>, <em class="sig-param">idle_timeout_in_minutes=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">public_ip_address_allocation=None</em>, <em class="sig-param">public_ip_prefix_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">reverse_fqdn=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.PublicIp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a Public IP Address.</p>
+<dd><p>Manages a Public IP Address.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5357,7 +5423,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.network.PublicIpPrefix">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">PublicIpPrefix</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">prefix_length=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.PublicIpPrefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a Public IP Prefix.</p>
+<dd><p>Manages a Public IP Prefix.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> Public IP Prefix are currently in Public Preview. You can find more information about <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-network/public-ip-address-prefix">Public IP Preifx Preview here</a>.</p>
 </div></blockquote>
@@ -7876,6 +7942,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_network_gateway_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_network_gateway_connection.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.network.get_network_ddos_protection_plan">
+<code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">get_network_ddos_protection_plan</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_network_ddos_protection_plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Azure Network DDoS Protection Plan.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Network DDoS Protection Plan.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the resource group where the Network DDoS Protection Plan exists.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/network_ddos_protection_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/network_ddos_protection_plan.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

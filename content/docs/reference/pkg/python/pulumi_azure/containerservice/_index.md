@@ -234,7 +234,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_azure.containerservice.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">containers=None</em>, <em class="sig-param">diagnostics=None</em>, <em class="sig-param">dns_name_label=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">image_registry_credentials=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profile_id=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">restart_policy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage as an Azure Container Group instance.</p>
+<dd><p>Manages as an Azure Container Group instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -729,6 +729,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">httpApplicationRoutingZoneName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Zone Name of the HTTP Application Routing.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kubeDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">omsAgent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -949,6 +954,11 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpApplicationRoutingZoneName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Zone Name of the HTTP Application Routing.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kubeDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">omsAgent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
@@ -1110,6 +1120,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block from which requests will match the rule.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">virtual_network</span></code> blocks as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behaviour for requests matching this rule. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Allow</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet id from which requests will match the rule.</p></li>
+</ul>
+</li>
 </ul>
 <p>The <strong>storage_account</strong> object supports the following:</p>
 <ul class="simple">
@@ -1173,6 +1189,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRange</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block from which requests will match the rule.</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">virtual_network</span></code> blocks as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The behaviour for requests matching this rule. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Allow</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subnet id from which requests will match the rule.</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 
@@ -1233,6 +1255,12 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behaviour for requests matching this rule. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Allow</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipRange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block from which requests will match the rule.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">virtual_network</span></code> blocks as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behaviour for requests matching this rule. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Allow</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet id from which requests will match the rule.</p></li>
 </ul>
 </li>
 </ul>
