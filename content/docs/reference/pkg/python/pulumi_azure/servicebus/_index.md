@@ -13,9 +13,50 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.servicebus"></span><dl class="class">
+<dt id="pulumi_azure.servicebus.AwaitableGetNamespaceAuthorizationRuleResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">AwaitableGetNamespaceAuthorizationRuleResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_key=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.AwaitableGetNamespaceAuthorizationRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.servicebus.AwaitableGetNamespaceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">AwaitableGetNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.AwaitableGetNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">GetNamespaceAuthorizationRuleResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">primary_connection_string=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secondary_connection_string=None</em>, <em class="sig-param">secondary_key=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getNamespaceAuthorizationRule.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.primary_connection_string">
+<code class="sig-name descname">primary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.primary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary connection string for the authorization rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.primary_key">
+<code class="sig-name descname">primary_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.primary_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary access key for the authorization rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.secondary_connection_string">
+<code class="sig-name descname">secondary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.secondary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary connection string for the authorization rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.secondary_key">
+<code class="sig-name descname">secondary_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.secondary_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary access key for the authorization rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceAuthorizationRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azure.servicebus.GetNamespaceResult">
@@ -82,7 +123,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 <dl class="class">
 <dt id="pulumi_azure.servicebus.Namespace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">Namespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Namespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a ServiceBus Namespace.</p>
+<dd><p>Manages a ServiceBus Namespace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -388,7 +429,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.servicebus.Queue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_delete_on_idle=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">default_message_ttl=None</em>, <em class="sig-param">duplicate_detection_history_time_window=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">enable_express=None</em>, <em class="sig-param">enable_partitioning=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">lock_duration=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">max_size_in_megabytes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">requires_duplicate_detection=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">support_ordering=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Queue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a ServiceBus Queue.</p>
+<dd><p>Manages a ServiceBus Queue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -797,7 +838,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.servicebus.Subscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_delete_on_idle=None</em>, <em class="sig-param">dead_lettering_on_filter_evaluation_exceptions=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">default_message_ttl=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">forward_to=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">lock_duration=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Subscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a ServiceBus Subscription.</p>
+<dd><p>Manages a ServiceBus Subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1021,7 +1062,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.servicebus.SubscriptionRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">SubscriptionRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">correlation_filter=None</em>, <em class="sig-param">filter_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sql_filter=None</em>, <em class="sig-param">subscription_name=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.SubscriptionRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a ServiceBus Subscription Rule.</p>
+<dd><p>Manages a ServiceBus Subscription Rule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1197,7 +1238,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.servicebus.Topic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_delete_on_idle=None</em>, <em class="sig-param">default_message_ttl=None</em>, <em class="sig-param">duplicate_detection_history_time_window=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">enable_express=None</em>, <em class="sig-param">enable_filtering_messages_before_publishing=None</em>, <em class="sig-param">enable_partitioning=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_size_in_megabytes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">requires_duplicate_detection=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">support_ordering=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Topic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage a ServiceBus Topic.</p>
+<dd><p>Manages a ServiceBus Topic.</p>
 <p><strong>Note</strong> Topics can only be created in Namespaces with an SKU of <code class="docutils literal notranslate"><span class="pre">standard</span></code> or higher.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1602,6 +1643,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/servicebus_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/servicebus_namespace.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.servicebus.get_namespace_authorization_rule">
+<code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">get_namespace_authorization_rule</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.get_namespace_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing ServiceBus Namespace Authorization Rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the ServiceBus Namespace Authorization Rule.</p></li>
+<li><p><strong>namespace_name</strong> (<em>str</em>) – Specifies the name of the ServiceBus Namespace.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the Resource Group where the ServiceBus Namespace exists.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/servicebus_namespace_authorization_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/servicebus_namespace_authorization_rule.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
