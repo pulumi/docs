@@ -25,6 +25,7 @@ PACKAGES=(
   "pulumi_postgresql"
   "pulumi_random"
   "pulumi_tls"
+  "pulumi_vault"
   "pulumi_vsphere"
 )
 

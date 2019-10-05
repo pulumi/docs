@@ -132,6 +132,12 @@
       "package_name": "pulumi_tls",
       "pulumi_provider_name": "tls",
       "terraform_provider_name": "tls"
+    },
+    {
+      "name": "Pulumi Vault",
+      "package_name": "pulumi_vault",
+      "pulumi_provider_name": "vault",
+      "terraform_provider_name": "vault"
     }
   ]
 }
