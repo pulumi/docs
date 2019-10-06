@@ -22,9 +22,11 @@ provider and a stack created using the local or cloud object storage backend wil
 `--secrets-provider` flag.
 
 To use the `passphrase` secrets provider with the pulumi.com backend, use:
+
 * `pulumi stack init --secrets-provider=passphrase`
 
 To use a cloud secrets provider with any backend, use one of the following:
+
 * `pulumi stack init --secrets-provider="awskms://alias/ExampleAlias?region=us-east-1"`
 * `pulumi stack init --secrets-provider="awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1"`
 * `pulumi stack init --secrets-provider="azurekeyvault://mykeyvaultname.vault.azure.net/keys/mykeyname"`
