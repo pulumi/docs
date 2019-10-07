@@ -34,7 +34,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>email_receivers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
 </ul>
 <p>The <strong>sms_receivers</strong> object supports the following:</p>
@@ -56,7 +56,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">email_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.email_receivers" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">email_receiver</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email address of this receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email address of this receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
 </ul>
 </dd></dl>
@@ -136,7 +136,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>email_receivers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
 </ul>
 <p>The <strong>sms_receivers</strong> object supports the following:</p>

@@ -110,7 +110,7 @@ meta_desc: "Explore members of the apimanagement module in the @pulumi/azure pac
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Api" data-link-title="Api">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L47">
         Resource <strong>Api</strong>
     </a>
 </h3>
@@ -135,10 +135,7 @@ const testService = new azure.apimanagement.Service("test", {
     publisherEmail: "company@exmaple.com",
     publisherName: "My Company",
     resourceGroupName: testResourceGroup.name,
-    sku: {
-        capacity: 1,
-        name: "Developer",
-    },
+    skuName: "Developer_1",
 });
 const testApi = new azure.apimanagement.Api("test", {
     apiManagementName: testService.name,
@@ -158,7 +155,7 @@ const testApi = new azure.apimanagement.Api("test", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api.html.markdown.
 
 <h4 class="pdoc-member-header" id="Api-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L140"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L137"> <b>constructor</b></a>
 </h4>
 
 
@@ -172,7 +169,7 @@ Create a Api resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Api-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -183,14 +180,14 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Api-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L50">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Api-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -201,7 +198,7 @@ Returns true if the given object is an instance of Api.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Api-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L80">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L77">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -209,7 +206,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Api-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L84">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -217,7 +214,7 @@ The Name of the API Management Service where this API should be created. Changin
 A description of the API Management API, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="Api-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L88">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L85">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -225,7 +222,7 @@ A description of the API Management API, which may include HTML formatting tags.
 The display name of the API.
 
 <h4 class="pdoc-member-header" id="Api-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -234,7 +231,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Api-import">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L92">property <b>import</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L89">property <b>import</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiImport'>outputs.apimanagement.ApiImport</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -242,7 +239,7 @@ deployments and may be missing (undefined) during planning phases.
 A `import` block as documented below.
 
 <h4 class="pdoc-member-header" id="Api-isCurrent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L96">property <b>isCurrent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L93">property <b>isCurrent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isCurrent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -250,7 +247,7 @@ A `import` block as documented below.
 Is this the current API Revision?
 
 <h4 class="pdoc-member-header" id="Api-isOnline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L100">property <b>isOnline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L97">property <b>isOnline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isOnline: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -258,7 +255,7 @@ Is this the current API Revision?
 Is this API Revision online/accessible via the Gateway?
 
 <h4 class="pdoc-member-header" id="Api-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L101">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -266,7 +263,7 @@ Is this API Revision online/accessible via the Gateway?
 The name of the API Management API. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Api-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L108">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L105">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -274,7 +271,7 @@ The name of the API Management API. Changing this forces a new resource to be cr
 The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of it's resource paths within the API Management Service.
 
 <h4 class="pdoc-member-header" id="Api-protocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L112">property <b>protocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L109">property <b>protocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocols: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -282,7 +279,7 @@ The Path for this API Management API, which is a relative URL which uniquely ide
 A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
 
 <h4 class="pdoc-member-header" id="Api-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L116">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L113">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -290,7 +287,7 @@ A list of protocols the operations in this API can be invoked. Possible values a
 The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Api-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L120">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L117">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +295,7 @@ The Name of the Resource Group where the API Management API exists. Changing thi
 The Revision which used for this API.
 
 <h4 class="pdoc-member-header" id="Api-serviceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L124">property <b>serviceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L121">property <b>serviceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,7 +303,7 @@ The Revision which used for this API.
 Absolute URL of the backend service implementing this API.
 
 <h4 class="pdoc-member-header" id="Api-soapPassThrough">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L128">property <b>soapPassThrough</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L125">property <b>soapPassThrough</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>soapPassThrough: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -314,7 +311,7 @@ Absolute URL of the backend service implementing this API.
 Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Api-subscriptionKeyParameterNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L132">property <b>subscriptionKeyParameterNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L129">property <b>subscriptionKeyParameterNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subscriptionKeyParameterNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiSubscriptionKeyParameterNames'>outputs.apimanagement.ApiSubscriptionKeyParameterNames</a>&gt;;</code></pre>
@@ -322,7 +319,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to
 A `subscriptionKeyParameterNames` block as documented below.
 
 <h4 class="pdoc-member-header" id="Api-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L50">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -331,7 +328,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Api-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L136">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L133">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -339,7 +336,7 @@ deployments.
 The Version number of this API, if this API is versioned.
 
 <h4 class="pdoc-member-header" id="Api-versionSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L140">property <b>versionSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L137">property <b>versionSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionSetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -347,7 +344,7 @@ The Version number of this API, if this API is versioned.
 The ID of the Version Set which this API is associated with.
 
 <h3 class="pdoc-module-header" id="ApiOperation" data-link-title="ApiOperation">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L41">
         Resource <strong>ApiOperation</strong>
     </a>
 </h3>
@@ -386,7 +383,7 @@ const exampleApiOperation = new azure.apimanagement.ApiOperation("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_operation.html.markdown.
 
 <h4 class="pdoc-member-header" id="ApiOperation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -400,7 +397,7 @@ Create a ApiOperation resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApiOperation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -411,14 +408,14 @@ Get an existing ApiOperation resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApiOperation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApiOperation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -429,7 +426,7 @@ Returns true if the given object is an instance of ApiOperation.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApiOperation-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L71">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L71">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -437,7 +434,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperation-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L75">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L75">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -445,7 +442,7 @@ The Name of the API Management Service where the API exists. Changing this force
 The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperation-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L79">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -453,7 +450,7 @@ The name of the API within the API Management Service where this API Operation s
 A description for this API Operation, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="ApiOperation-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L83">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L83">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -461,7 +458,7 @@ A description for this API Operation, which may include HTML formatting tags.
 The Display Name for this API Management Operation.
 
 <h4 class="pdoc-member-header" id="ApiOperation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -470,7 +467,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApiOperation-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L87">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L87">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>method: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -478,7 +475,7 @@ deployments and may be missing (undefined) during planning phases.
 The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 
 <h4 class="pdoc-member-header" id="ApiOperation-operationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L91">property <b>operationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L91">property <b>operationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>operationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -486,7 +483,7 @@ The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `P
 A unique identifier for this API Operation. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperation-request">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L95">property <b>request</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L95">property <b>request</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequest'>outputs.apimanagement.ApiOperationRequest</a>&gt;;</code></pre>
@@ -494,7 +491,7 @@ A unique identifier for this API Operation. Changing this forces a new resource 
 A `request` block as defined below.
 
 <h4 class="pdoc-member-header" id="ApiOperation-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L99">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L99">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -502,7 +499,7 @@ A `request` block as defined below.
 The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperation-responses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L103">property <b>responses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L103">property <b>responses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponse'>outputs.apimanagement.ApiOperationResponse</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -510,7 +507,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 One or more `response` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ApiOperation-templateParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L107">property <b>templateParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L107">property <b>templateParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationTemplateParameter'>outputs.apimanagement.ApiOperationTemplateParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -518,7 +515,7 @@ One or more `response` blocks as defined below.
 One or more `templateParameter` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ApiOperation-urlTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L111">property <b>urlTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L111">property <b>urlTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urlTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +523,7 @@ One or more `templateParameter` blocks as defined below.
 The relative URL Template identifying the target resource for this operation, which may include parameters.
 
 <h4 class="pdoc-member-header" id="ApiOperation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -535,7 +532,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ApiOperationPolicy" data-link-title="ApiOperationPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L36">
         Resource <strong>ApiOperationPolicy</strong>
     </a>
 </h3>
@@ -568,7 +565,7 @@ const exampleApiOperationPolicy = new azure.apimanagement.ApiOperationPolicy("ex
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_operation_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -582,7 +579,7 @@ Create a ApiOperationPolicy resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -593,14 +590,14 @@ Get an existing ApiOperationPolicy resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -611,7 +608,7 @@ Returns true if the given object is an instance of ApiOperationPolicy.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L66">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L66">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -619,7 +616,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L70">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L70">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -627,7 +624,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The ID of the API Management API Operation within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -636,12 +633,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-operationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L71">property <b>operationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L71">property <b>operationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>operationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L75">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L75">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -649,7 +646,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -658,7 +655,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-xmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L79">property <b>xmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L79">property <b>xmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>xmlContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -666,7 +663,7 @@ deployments.
 The XML Content for this Policy.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicy-xmlLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L83">property <b>xmlLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L83">property <b>xmlLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>xmlLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -674,7 +671,7 @@ The XML Content for this Policy.
 A link to a Policy XML Document, which must be publicly available.
 
 <h3 class="pdoc-module-header" id="ApiPolicy" data-link-title="ApiPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L39">
         Resource <strong>ApiPolicy</strong>
     </a>
 </h3>
@@ -710,7 +707,7 @@ const exampleApiPolicy = new azure.apimanagement.ApiPolicy("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="ApiPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -724,7 +721,7 @@ Create a ApiPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApiPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -735,14 +732,14 @@ Get an existing ApiPolicy resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApiPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApiPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -753,7 +750,7 @@ Returns true if the given object is an instance of ApiPolicy.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApiPolicy-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L69">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L69">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -761,7 +758,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiPolicy-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L73">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L73">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -769,7 +766,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The ID of the API Management API within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -778,7 +775,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApiPolicy-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L77">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L77">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -786,7 +783,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -795,12 +792,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ApiPolicy-xmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L78">property <b>xmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L78">property <b>xmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>xmlContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ApiPolicy-xmlLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L82">property <b>xmlLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L82">property <b>xmlLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>xmlLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -808,7 +805,7 @@ deployments.
 A link to a Policy XML Document, which must be publicly available.
 
 <h3 class="pdoc-module-header" id="ApiSchema" data-link-title="ApiSchema">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L37">
         Resource <strong>ApiSchema</strong>
     </a>
 </h3>
@@ -843,7 +840,7 @@ const exampleApiSchema = new azure.apimanagement.ApiSchema("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_schema.html.markdown.
 
 <h4 class="pdoc-member-header" id="ApiSchema-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -857,7 +854,7 @@ Create a ApiSchema resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApiSchema-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -868,14 +865,14 @@ Get an existing ApiSchema resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApiSchema-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApiSchema-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -886,7 +883,7 @@ Returns true if the given object is an instance of ApiSchema.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApiSchema-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L67">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L67">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -894,7 +891,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchema-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L71">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L71">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -902,7 +899,7 @@ The Name of the API Management Service where the API exists. Changing this force
 The name of the API within the API Management Service where this API Schema should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchema-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L75">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L75">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -910,7 +907,7 @@ The name of the API within the API Management Service where this API Schema shou
 The content type of the API Schema.
 
 <h4 class="pdoc-member-header" id="ApiSchema-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -919,7 +916,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApiSchema-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L79">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L79">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -927,7 +924,7 @@ deployments and may be missing (undefined) during planning phases.
 The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchema-schemaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L83">property <b>schemaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L83">property <b>schemaId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schemaId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -935,7 +932,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 A unique identifier for this API Schema. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchema-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -944,7 +941,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ApiSchema-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L87">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L87">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -952,7 +949,7 @@ deployments.
 The JSON escaped string defining the document representing the Schema.
 
 <h3 class="pdoc-module-header" id="ApiVersionSet" data-link-title="ApiVersionSet">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L44">
         Resource <strong>ApiVersionSet</strong>
     </a>
 </h3>
@@ -994,7 +991,7 @@ const exampleApiManagementVersionSet = new azure.ApiManagementVersionSet("exampl
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_version_set.html.markdown.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -1008,7 +1005,7 @@ Create a ApiVersionSet resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -1019,14 +1016,14 @@ Get an existing ApiVersionSet resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1037,7 +1034,7 @@ Returns true if the given object is an instance of ApiVersionSet.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L74">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L74">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1045,7 +1042,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service in which the API Version Set should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L78">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L78">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1053,7 +1050,7 @@ The name of the API Management Service in which the API Version Set should exist
 The description of API Version Set.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L82">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L82">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1061,7 +1058,7 @@ The description of API Version Set.
 The display name of this API Version Set.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1070,7 +1067,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1078,7 +1075,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the API Version Set. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L90">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L90">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1086,7 +1083,7 @@ The name of the API Version Set. Changing this forces a new resource to be creat
 The name of the Resource Group in which the parent API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1095,7 +1092,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-versionHeaderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L94">property <b>versionHeaderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L94">property <b>versionHeaderName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionHeaderName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1103,7 +1100,7 @@ deployments.
 The name of the Header which should be read from Inbound Requests which defines the API Version.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-versionQueryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L98">property <b>versionQueryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L98">property <b>versionQueryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionQueryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1111,7 +1108,7 @@ The name of the Header which should be read from Inbound Requests which defines 
 The name of the Query String which should be read from Inbound Requests which defines the API Version.
 
 <h4 class="pdoc-member-header" id="ApiVersionSet-versioningScheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L102">property <b>versioningScheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L102">property <b>versioningScheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versioningScheme: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1119,7 +1116,7 @@ The name of the Query String which should be read from Inbound Requests which de
 Specifies where in an Inbound HTTP Request that the API Version should be read from. Possible values are `Header`, `Query` and `Segment`.
 
 <h3 class="pdoc-module-header" id="AuthorizationServer" data-link-title="AuthorizationServer">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L39">
         Resource <strong>AuthorizationServer</strong>
     </a>
 </h3>
@@ -1155,7 +1152,7 @@ const exampleAuthorizationServer = new azure.apimanagement.AuthorizationServer("
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_authorization_server.html.markdown.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L138"> <b>constructor</b></a>
 </h4>
 
 
@@ -1169,7 +1166,7 @@ Create a AuthorizationServer resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -1180,14 +1177,14 @@ Get an existing AuthorizationServer resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1198,7 +1195,7 @@ Returns true if the given object is an instance of AuthorizationServer.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L69">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L69">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1206,7 +1203,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service in which this Authorization Server should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-authorizationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L73">property <b>authorizationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L73">property <b>authorizationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1214,7 +1211,7 @@ The name of the API Management Service in which this Authorization Server should
 The OAUTH Authorization Endpoint.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-authorizationMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L77">property <b>authorizationMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L77">property <b>authorizationMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1222,7 +1219,7 @@ The OAUTH Authorization Endpoint.
 The HTTP Verbs supported by the Authorization Endpoint. Possible values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT` and `TRACE`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-bearerTokenSendingMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L81">property <b>bearerTokenSendingMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L81">property <b>bearerTokenSendingMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bearerTokenSendingMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1230,7 +1227,7 @@ The HTTP Verbs supported by the Authorization Endpoint. Possible values are `DEL
 The mechanism by which Access Tokens are passed to the API. Possible values are `authorizationHeader` and `query`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-clientAuthenticationMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L85">property <b>clientAuthenticationMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L85">property <b>clientAuthenticationMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientAuthenticationMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1238,7 +1235,7 @@ The mechanism by which Access Tokens are passed to the API. Possible values are 
 The Authentication Methods supported by the Token endpoint of this Authorization Server.. Possible values are `Basic` and `Body`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L89">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L89">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1246,7 +1243,7 @@ The Authentication Methods supported by the Token endpoint of this Authorization
 The Client/App ID registered with this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-clientRegistrationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L93">property <b>clientRegistrationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L93">property <b>clientRegistrationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientRegistrationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1254,7 +1251,7 @@ The Client/App ID registered with this Authorization Server.
 The URI of page where Client/App Registration is performed for this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L97">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L97">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1262,7 +1259,7 @@ The URI of page where Client/App Registration is performed for this Authorizatio
 The Client/App Secret registered with this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-defaultScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L101">property <b>defaultScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L101">property <b>defaultScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1270,7 +1267,7 @@ The Client/App Secret registered with this Authorization Server.
 The Default Scope used when requesting an Access Token, specified as a string containing space-delimited values.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L105">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L105">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1278,7 +1275,7 @@ The Default Scope used when requesting an Access Token, specified as a string co
 A description of the Authorization Server, which may contain HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L109">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L109">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1286,7 +1283,7 @@ A description of the Authorization Server, which may contain HTML formatting tag
 The user-friendly name of this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-grantTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L113">property <b>grantTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L113">property <b>grantTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>grantTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1294,7 +1291,7 @@ The user-friendly name of this Authorization Server.
 Form of Authorization Grants required when requesting an Access Token. Possible values are `authorizationCode`, `clientCredentials`, `implicit` and `resourceOwnerPassword`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1303,7 +1300,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1311,7 +1308,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of this Authorization Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L121">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L121">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1319,7 +1316,7 @@ The name of this Authorization Server. Changing this forces a new resource to be
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-resourceOwnerPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L125">property <b>resourceOwnerPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L125">property <b>resourceOwnerPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceOwnerPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1327,7 +1324,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The password associated with the Resource Owner.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-resourceOwnerUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L129">property <b>resourceOwnerUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L129">property <b>resourceOwnerUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceOwnerUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1335,7 +1332,7 @@ The password associated with the Resource Owner.
 The username associated with the Resource Owner.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-supportState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L133">property <b>supportState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L133">property <b>supportState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>supportState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1343,12 +1340,12 @@ The username associated with the Resource Owner.
 Does this Authorization Server support State? If this is set to `true` the client may use the state parameter to raise protocol security.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-tokenBodyParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L134">property <b>tokenBodyParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L134">property <b>tokenBodyParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenBodyParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AuthorizationServerTokenBodyParameter'>outputs.apimanagement.AuthorizationServerTokenBodyParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthorizationServer-tokenEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L138">property <b>tokenEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L138">property <b>tokenEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1356,7 +1353,7 @@ Does this Authorization Server support State? If this is set to `true` the clien
 The OAUTH Token Endpoint.
 
 <h4 class="pdoc-member-header" id="AuthorizationServer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1365,7 +1362,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Backend" data-link-title="Backend">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L14">
         Resource <strong>Backend</strong>
     </a>
 </h3>
@@ -1377,7 +1374,7 @@ Manages a backend within an API Management Service.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_backend.html.markdown.
 
 <h4 class="pdoc-member-header" id="Backend-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -1391,7 +1388,7 @@ Create a Backend resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Backend-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L23">method <b>get</b></a>
 </h4>
 
 
@@ -1402,14 +1399,14 @@ Get an existing Backend resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Backend-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Backend-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L34">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1420,7 +1417,7 @@ Returns true if the given object is an instance of Backend.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Backend-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L44">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L44">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1428,7 +1425,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Name of the API Management Service where this backend should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Backend-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L48">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L48">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendCredentials'>outputs.apimanagement.BackendCredentials</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1436,7 +1433,7 @@ The Name of the API Management Service where this backend should be created. Cha
 A `credentials` block as documented below.
 
 <h4 class="pdoc-member-header" id="Backend-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L52">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L52">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1444,7 +1441,7 @@ A `credentials` block as documented below.
 The description of the backend.
 
 <h4 class="pdoc-member-header" id="Backend-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1453,7 +1450,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Backend-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L56">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1461,7 +1458,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the API Management backend. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Backend-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L60">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L60">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1469,7 +1466,7 @@ The name of the API Management backend. Changing this forces a new resource to b
 The protocol used by the backend host. Possible values are `http` or `soap`.
 
 <h4 class="pdoc-member-header" id="Backend-proxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L64">property <b>proxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L64">property <b>proxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>proxy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendProxy'>outputs.apimanagement.BackendProxy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1477,7 +1474,7 @@ The protocol used by the backend host. Possible values are `http` or `soap`.
 A `proxy` block as documented below.
 
 <h4 class="pdoc-member-header" id="Backend-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L68">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L68">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1485,7 +1482,7 @@ A `proxy` block as documented below.
 The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Backend-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L72">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L72">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1493,7 +1490,7 @@ The Name of the Resource Group where the API Management Service exists. Changing
 The management URI of the backend host in an external system. This URI can be the ARM Resource ID of Logic Apps, Function Apps or API Apps, or the management endpoint of a Service Fabric cluster.
 
 <h4 class="pdoc-member-header" id="Backend-serviceFabricCluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L76">property <b>serviceFabricCluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L76">property <b>serviceFabricCluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceFabricCluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendServiceFabricCluster'>outputs.apimanagement.BackendServiceFabricCluster</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1501,7 +1498,7 @@ The management URI of the backend host in an external system. This URI can be th
 A `serviceFabricCluster` block as documented below.
 
 <h4 class="pdoc-member-header" id="Backend-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L80">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L80">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1509,7 +1506,7 @@ A `serviceFabricCluster` block as documented below.
 The title of the backend.
 
 <h4 class="pdoc-member-header" id="Backend-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L84">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L84">property <b>tls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendTls'>outputs.apimanagement.BackendTls</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1517,7 +1514,7 @@ The title of the backend.
 A `tls` block as documented below.
 
 <h4 class="pdoc-member-header" id="Backend-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L88">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L88">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1525,7 +1522,7 @@ A `tls` block as documented below.
 The URL of the backend host.
 
 <h4 class="pdoc-member-header" id="Backend-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1534,7 +1531,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Certificate" data-link-title="Certificate">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L14">
         Resource <strong>Certificate</strong>
     </a>
 </h3>
@@ -1546,7 +1543,7 @@ Manages an Certificate within an API Management Service.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_certificate.html.markdown.
 
 <h4 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -1560,7 +1557,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L23">method <b>get</b></a>
 </h4>
 
 
@@ -1571,14 +1568,14 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L34">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1589,7 +1586,7 @@ Returns true if the given object is an instance of Certificate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certificate-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L44">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L44">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1597,7 +1594,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Name of the API Management Service where this Service should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Certificate-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L48">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L48">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1605,7 +1602,7 @@ The Name of the API Management Service where this Service should be created. Cha
 The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Certificate-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L52">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L52">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1613,7 +1610,7 @@ The base-64 encoded certificate data, which must be a PFX file. Changing this fo
 The Expiration Date of this Certificate, formatted as an RFC3339 string.
 
 <h4 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1622,7 +1619,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certificate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L56">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1630,7 +1627,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the API Management Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Certificate-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L60">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L60">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1638,7 +1635,7 @@ The name of the API Management Certificate. Changing this forces a new resource 
 The password used for this certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Certificate-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L64">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L64">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1646,7 +1643,7 @@ The password used for this certificate. Changing this forces a new resource to b
 The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Certificate-subject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L68">property <b>subject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L68">property <b>subject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1654,7 +1651,7 @@ The Name of the Resource Group where the API Management Service exists. Changing
 The Subject of this Certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-thumbprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L72">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L72">property <b>thumbprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thumbprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1662,7 +1659,7 @@ The Subject of this Certificate.
 The Thumbprint of this Certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1671,7 +1668,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L42">
         Resource <strong>Group</strong>
     </a>
 </h3>
@@ -1696,10 +1693,7 @@ const exampleService = new azure.apimanagement.Service("example", {
     publisherEmail: "pub1@email.com",
     publisherName: "pub1",
     resourceGroupName: exampleResourceGroup.name,
-    sku: {
-        capacity: 1,
-        name: "Developer",
-    },
+    skuName: "Developer_1",
 });
 const exampleGroup = new azure.apimanagement.Group("example", {
     apiManagementName: exampleService.name,
@@ -1713,7 +1707,7 @@ const exampleGroup = new azure.apimanagement.Group("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -1727,7 +1721,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -1738,14 +1732,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1756,7 +1750,7 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L75">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L72">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1764,7 +1758,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service in which the API Management Group should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L76">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1772,7 +1766,7 @@ The name of the API Management Service in which the API Management Group should 
 The description of this API Management Group.
 
 <h4 class="pdoc-member-header" id="Group-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L83">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L80">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1780,7 +1774,7 @@ The description of this API Management Group.
 The display name of this API Management Group.
 
 <h4 class="pdoc-member-header" id="Group-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L87">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L84">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1788,7 +1782,7 @@ The display name of this API Management Group.
 The identifier of the external Group. For example, an Azure Active Directory group `aad://<tenant>.onmicrosoft.com/groups/<group object id>`.
 
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1797,7 +1791,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1805,7 +1799,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the API Management Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L95">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L92">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1813,7 +1807,7 @@ The name of the API Management Group. Changing this forces a new resource to be 
 The name of the Resource Group in which the API Management Group should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Group-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L99">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L96">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1821,7 +1815,7 @@ The name of the Resource Group in which the API Management Group should exist. C
 The type of this API Management Group. Possible values are `custom` and `external`. Default is `custom`.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1830,7 +1824,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GroupUser" data-link-title="GroupUser">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L34">
         Resource <strong>GroupUser</strong>
     </a>
 </h3>
@@ -1861,7 +1855,7 @@ const exampleGroupUser = new azure.apimanagement.GroupUser("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_group_user.html.markdown.
 
 <h4 class="pdoc-member-header" id="GroupUser-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -1875,7 +1869,7 @@ Create a GroupUser resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupUser-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -1886,14 +1880,14 @@ Get an existing GroupUser resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupUser-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupUser-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1904,7 +1898,7 @@ Returns true if the given object is an instance of GroupUser.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupUser-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L64">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L64">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1912,7 +1906,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupUser-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L68">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L68">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1920,7 +1914,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The Name of the API Management Group within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupUser-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1929,7 +1923,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupUser-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L72">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L72">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1937,7 +1931,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupUser-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1946,7 +1940,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="GroupUser-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L76">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L76">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1954,7 +1948,7 @@ deployments.
 The ID of the API Management User which should be assigned to this API Management Group. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="Logger" data-link-title="Logger">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L49">
         Resource <strong>Logger</strong>
     </a>
 </h3>
@@ -1985,10 +1979,7 @@ const exampleService = new azure.apimanagement.Service("example", {
     publisherEmail: "company@exmaple.com",
     publisherName: "My Company",
     resourceGroupName: exampleResourceGroup.name,
-    sku: {
-        capacity: 1,
-        name: "Developer",
-    },
+    skuName: "Developer_1",
 });
 const exampleLogger = new azure.apimanagement.Logger("example", {
     apiManagementName: exampleService.name,
@@ -2003,7 +1994,7 @@ const exampleLogger = new azure.apimanagement.Logger("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_logger.html.markdown.
 
 <h4 class="pdoc-member-header" id="Logger-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -2017,7 +2008,7 @@ Create a Logger resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Logger-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -2028,14 +2019,14 @@ Get an existing Logger resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Logger-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Logger-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2046,7 +2037,7 @@ Returns true if the given object is an instance of Logger.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Logger-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L82">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L79">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2054,7 +2045,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Logger-applicationInsights">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L86">property <b>applicationInsights</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L83">property <b>applicationInsights</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationInsights: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoggerApplicationInsights'>outputs.apimanagement.LoggerApplicationInsights</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2062,7 +2053,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 An `applicationInsights` block as documented below.
 
 <h4 class="pdoc-member-header" id="Logger-buffered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L90">property <b>buffered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L87">property <b>buffered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>buffered: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2070,7 +2061,7 @@ An `applicationInsights` block as documented below.
 Specifies whether records should be buffered in the Logger prior to publishing. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Logger-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L94">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L91">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2078,7 +2069,7 @@ Specifies whether records should be buffered in the Logger prior to publishing. 
 A description of this Logger.
 
 <h4 class="pdoc-member-header" id="Logger-eventhub">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L98">property <b>eventhub</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L95">property <b>eventhub</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhub: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoggerEventhub'>outputs.apimanagement.LoggerEventhub</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2086,7 +2077,7 @@ A description of this Logger.
 An `eventhub` block as documented below.
 
 <h4 class="pdoc-member-header" id="Logger-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2095,7 +2086,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Logger-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L99">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2103,7 +2094,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Logger-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L106">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L103">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2111,7 +2102,7 @@ The name of this Logger, which must be unique within the API Management Service.
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Logger-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2120,7 +2111,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OpenIdConnectProvider" data-link-title="OpenIdConnectProvider">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L45">
         Resource <strong>OpenIdConnectProvider</strong>
     </a>
 </h3>
@@ -2163,7 +2154,7 @@ const testOpenIdConnectProvider = new azure.apimanagement.OpenIdConnectProvider(
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_openid_connect_provider.html.markdown.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -2177,7 +2168,7 @@ Create a OpenIdConnectProvider resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -2188,14 +2179,14 @@ Get an existing OpenIdConnectProvider resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2206,7 +2197,7 @@ Returns true if the given object is an instance of OpenIdConnectProvider.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L75">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L75">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2214,7 +2205,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service in which this OpenID Connect Provider should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L79">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L79">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2222,7 +2213,7 @@ The name of the API Management Service in which this OpenID Connect Provider sho
 The Client ID used for the Client Application.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L83">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L83">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2230,7 +2221,7 @@ The Client ID used for the Client Application.
 The Client Secret used for the Client Application.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L87">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L87">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2238,7 +2229,7 @@ The Client Secret used for the Client Application.
 A description of this OpenID Connect Provider.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L91">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L91">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2246,7 +2237,7 @@ A description of this OpenID Connect Provider.
 A user-friendly name for this OpenID Connect Provider.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2255,7 +2246,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-metadataEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L95">property <b>metadataEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L95">property <b>metadataEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadataEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2263,7 +2254,7 @@ deployments and may be missing (undefined) during planning phases.
 The URI of the Metadata endpoint.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L99">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L99">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2271,7 +2262,7 @@ The URI of the Metadata endpoint.
 the Name of the OpenID Connect Provider which should be created within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L103">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L103">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2279,7 +2270,7 @@ the Name of the OpenID Connect Provider which should be created within the API M
 The name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProvider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2288,7 +2279,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Product" data-link-title="Product">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L43">
         Resource <strong>Product</strong>
     </a>
 </h3>
@@ -2313,10 +2304,7 @@ const testService = new azure.apimanagement.Service("test", {
     publisherEmail: "company@exmaple.com",
     publisherName: "My Company",
     resourceGroupName: testResourceGroup.name,
-    sku: {
-        capacity: 1,
-        name: "Developer",
-    },
+    skuName: "Developer_1",
 });
 const testProduct = new azure.apimanagement.Product("test", {
     apiManagementName: testService.name,
@@ -2332,7 +2320,7 @@ const testProduct = new azure.apimanagement.Product("test", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product.html.markdown.
 
 <h4 class="pdoc-member-header" id="Product-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -2346,7 +2334,7 @@ Create a Product resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Product-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -2357,14 +2345,14 @@ Get an existing Product resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Product-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Product-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2375,7 +2363,7 @@ Returns true if the given object is an instance of Product.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Product-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L76">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L73">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2383,7 +2371,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Product-approvalRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L80">property <b>approvalRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L77">property <b>approvalRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>approvalRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2391,7 +2379,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 Do subscribers need to be approved prior to being able to use the Product?
 
 <h4 class="pdoc-member-header" id="Product-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L84">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2399,7 +2387,7 @@ Do subscribers need to be approved prior to being able to use the Product?
 A description of this Product, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="Product-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L88">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L85">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2407,7 +2395,7 @@ A description of this Product, which may include HTML formatting tags.
 The Display Name for this API Management Product.
 
 <h4 class="pdoc-member-header" id="Product-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2416,7 +2404,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Product-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L92">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L89">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2424,7 +2412,7 @@ deployments and may be missing (undefined) during planning phases.
 The Identifier for this Product, which must be unique within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Product-published">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L96">property <b>published</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L93">property <b>published</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>published: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2432,7 +2420,7 @@ The Identifier for this Product, which must be unique within the API Management 
 Is this Product Published?
 
 <h4 class="pdoc-member-header" id="Product-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L100">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L97">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2440,7 +2428,7 @@ Is this Product Published?
 The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Product-subscriptionRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L104">property <b>subscriptionRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L101">property <b>subscriptionRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subscriptionRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2448,7 +2436,7 @@ The name of the Resource Group in which the API Management Service should be exi
 Is a Subscription required to access API's included in this Product?
 
 <h4 class="pdoc-member-header" id="Product-subscriptionsLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L108">property <b>subscriptionsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L105">property <b>subscriptionsLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subscriptionsLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2456,7 +2444,7 @@ Is a Subscription required to access API's included in this Product?
 The number of subscriptions a user can have to this Product at the same time.
 
 <h4 class="pdoc-member-header" id="Product-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L112">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L109">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2464,7 +2452,7 @@ The number of subscriptions a user can have to this Product at the same time.
 The Terms and Conditions for this Product, which must be accepted by Developers before they can begin the Subscription process.
 
 <h4 class="pdoc-member-header" id="Product-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2473,7 +2461,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProductApi" data-link-title="ProductApi">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L43">
         Resource <strong>ProductApi</strong>
     </a>
 </h3>
@@ -2514,7 +2502,7 @@ const exampleProductApi = new azure.apimanagement.ProductApi("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_api.html.markdown.
 
 <h4 class="pdoc-member-header" id="ProductApi-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -2528,7 +2516,7 @@ Create a ProductApi resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProductApi-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -2539,14 +2527,14 @@ Get an existing ProductApi resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProductApi-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProductApi-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2557,7 +2545,7 @@ Returns true if the given object is an instance of ProductApi.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProductApi-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L73">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L73">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2565,7 +2553,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductApi-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L77">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L77">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2573,7 +2561,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The Name of the API Management API within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductApi-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2582,7 +2570,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProductApi-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L81">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L81">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2590,7 +2578,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductApi-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2598,7 +2586,7 @@ The ID of the API Management Product within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductApi-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2607,7 +2595,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProductGroup" data-link-title="ProductGroup">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L42">
         Resource <strong>ProductGroup</strong>
     </a>
 </h3>
@@ -2639,7 +2627,7 @@ const exampleGroup = azure.apimanagement.getGroup({
 const exampleProductGroup = new azure.apimanagement.ProductGroup("example", {
     apiManagementName: exampleService.name,
     groupName: exampleGroup.name,
-    productId: azurerm_api_management_user_example.id,
+    productId: exampleProduct.productId,
     resourceGroupName: exampleService.resourceGroupName,
 });
 ```
@@ -2647,7 +2635,7 @@ const exampleProductGroup = new azure.apimanagement.ProductGroup("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="ProductGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -2661,7 +2649,7 @@ Create a ProductGroup resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProductGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -2672,14 +2660,14 @@ Get an existing ProductGroup resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProductGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProductGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2690,7 +2678,7 @@ Returns true if the given object is an instance of ProductGroup.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProductGroup-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L72">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L72">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2698,7 +2686,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductGroup-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L76">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L76">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2706,7 +2694,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The Name of the API Management Group within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2715,7 +2703,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProductGroup-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L80">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L80">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2723,7 +2711,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductGroup-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L84">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L84">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2731,7 +2719,7 @@ The ID of the API Management Product within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2740,7 +2728,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProductPolicy" data-link-title="ProductPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L39">
         Resource <strong>ProductPolicy</strong>
     </a>
 </h3>
@@ -2776,7 +2764,7 @@ const exampleProductPolicy = new azure.apimanagement.ProductPolicy("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_product_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="ProductPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -2790,7 +2778,7 @@ Create a ProductPolicy resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProductPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -2801,14 +2789,14 @@ Get an existing ProductPolicy resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProductPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProductPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2819,7 +2807,7 @@ Returns true if the given object is an instance of ProductPolicy.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProductPolicy-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L69">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L69">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2827,7 +2815,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2836,7 +2824,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProductPolicy-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L73">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L73">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2844,7 +2832,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductPolicy-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L77">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L77">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2852,7 +2840,7 @@ The ID of the API Management Product within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2861,7 +2849,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ProductPolicy-xmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L81">property <b>xmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L81">property <b>xmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>xmlContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2869,7 +2857,7 @@ deployments.
 The XML Content for this Policy.
 
 <h4 class="pdoc-member-header" id="ProductPolicy-xmlLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L85">property <b>xmlLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L85">property <b>xmlLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>xmlLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2877,7 +2865,7 @@ The XML Content for this Policy.
 A link to a Policy XML Document, which must be publicly available.
 
 <h3 class="pdoc-module-header" id="Property" data-link-title="Property">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L42">
         Resource <strong>Property</strong>
     </a>
 </h3>
@@ -2902,10 +2890,7 @@ const exampleService = new azure.apimanagement.Service("example", {
     publisherEmail: "pub1@email.com",
     publisherName: "pub1",
     resourceGroupName: exampleResourceGroup.name,
-    sku: {
-        capacity: 1,
-        name: "Developer",
-    },
+    skuName: "Developer_1",
 });
 const exampleProperty = new azure.apimanagement.Property("example", {
     apiManagementName: exampleService.name,
@@ -2919,7 +2904,7 @@ const exampleProperty = new azure.apimanagement.Property("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_property.html.markdown.
 
 <h4 class="pdoc-member-header" id="Property-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -2933,7 +2918,7 @@ Create a Property resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Property-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -2944,14 +2929,14 @@ Get an existing Property resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Property-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Property-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2962,7 +2947,7 @@ Returns true if the given object is an instance of Property.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Property-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L75">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L72">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2970,7 +2955,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service in which the API Management Property should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Property-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L79">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L76">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2978,7 +2963,7 @@ The name of the API Management Service in which the API Management Property shou
 The display name of this API Management Property.
 
 <h4 class="pdoc-member-header" id="Property-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2987,7 +2972,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Property-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2995,7 +2980,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the API Management Property. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Property-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L87">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L84">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3003,7 +2988,7 @@ The name of the API Management Property. Changing this forces a new resource to 
 The name of the Resource Group in which the API Management Property should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Property-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L91">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L88">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3011,7 +2996,7 @@ The name of the Resource Group in which the API Management Property should exist
 Specifies whether the API Management Property is secret. Valid values are `true` or `false`. The default value is `false`.
 
 <h4 class="pdoc-member-header" id="Property-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L92">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3019,7 +3004,7 @@ Specifies whether the API Management Property is secret. Valid values are `true`
 A list of tags to be applied to the API Management Property.
 
 <h4 class="pdoc-member-header" id="Property-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3028,7 +3013,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Property-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L99">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L96">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3036,7 +3021,7 @@ deployments.
 The value of this API Management Property.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L34">
         Resource <strong>Service</strong>
     </a>
 </h3>
@@ -3061,17 +3046,14 @@ const testService = new azure.apimanagement.Service("test", {
     publisherEmail: "company@exmaple.com",
     publisherName: "My Company",
     resourceGroupName: testResourceGroup.name,
-    sku: {
-        capacity: 1,
-        name: "Developer",
-    },
+    skuName: "Developer_1",
 });
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management.html.markdown.
 
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L151"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L152"> <b>constructor</b></a>
 </h4>
 
 
@@ -3085,7 +3067,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -3096,14 +3078,14 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3114,7 +3096,7 @@ Returns true if the given object is an instance of Service.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-additionalLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L67">property <b>additionalLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L64">property <b>additionalLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAdditionalLocation'>outputs.apimanagement.ServiceAdditionalLocation</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3122,7 +3104,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 One or more `additionalLocation` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="Service-certificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L71">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L68">property <b>certificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceCertificate'>outputs.apimanagement.ServiceCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3130,7 +3112,7 @@ One or more `additionalLocation` blocks as defined below.
 One or more (up to 10) `certificate` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="Service-gatewayRegionalUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L75">property <b>gatewayRegionalUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L72">property <b>gatewayRegionalUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gatewayRegionalUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3138,7 +3120,7 @@ One or more (up to 10) `certificate` blocks as defined below.
 The URL of the Regional Gateway for the API Management Service in the specified region.
 
 <h4 class="pdoc-member-header" id="Service-gatewayUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L79">property <b>gatewayUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L76">property <b>gatewayUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gatewayUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3146,7 +3128,7 @@ The URL of the Regional Gateway for the API Management Service in the specified 
 The URL of the Gateway for the API Management Service.
 
 <h4 class="pdoc-member-header" id="Service-hostnameConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L83">property <b>hostnameConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L80">property <b>hostnameConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostnameConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfiguration'>outputs.apimanagement.ServiceHostnameConfiguration</a>&gt;;</code></pre>
@@ -3154,7 +3136,7 @@ The URL of the Gateway for the API Management Service.
 A `hostnameConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3163,7 +3145,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L87">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L84">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceIdentity'>outputs.apimanagement.ServiceIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3171,7 +3153,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block is documented below.
 
 <h4 class="pdoc-member-header" id="Service-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L91">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L88">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3179,7 +3161,7 @@ An `identity` block is documented below.
 The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Service-managementApiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L95">property <b>managementApiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L92">property <b>managementApiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managementApiUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3187,7 +3169,7 @@ The Azure location where the API Management Service exists. Changing this forces
 The URL for the Management API associated with this API Management service.
 
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L99">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L96">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3195,7 +3177,7 @@ The URL for the Management API associated with this API Management service.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Service-notificationSenderEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L103">property <b>notificationSenderEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L100">property <b>notificationSenderEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationSenderEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3203,7 +3185,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 Email address from which the notification will be sent.
 
 <h4 class="pdoc-member-header" id="Service-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L107">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L104">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServicePolicy'>outputs.apimanagement.ServicePolicy</a>&gt;;</code></pre>
@@ -3211,7 +3193,7 @@ Email address from which the notification will be sent.
 A `policy` block as defined below.
 
 <h4 class="pdoc-member-header" id="Service-portalUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L111">property <b>portalUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L108">property <b>portalUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>portalUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3219,7 +3201,7 @@ A `policy` block as defined below.
 The URL for the Publisher Portal associated with this API Management service.
 
 <h4 class="pdoc-member-header" id="Service-publicIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L115">property <b>publicIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L112">property <b>publicIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -3227,7 +3209,7 @@ The URL for the Publisher Portal associated with this API Management service.
 Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 
 <h4 class="pdoc-member-header" id="Service-publisherEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L119">property <b>publisherEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L116">property <b>publisherEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publisherEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3235,7 +3217,7 @@ Public Static Load Balanced IP addresses of the API Management service in the ad
 The email of publisher/company.
 
 <h4 class="pdoc-member-header" id="Service-publisherName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L123">property <b>publisherName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L120">property <b>publisherName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publisherName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3243,7 +3225,7 @@ The email of publisher/company.
 The name of publisher/company.
 
 <h4 class="pdoc-member-header" id="Service-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L127">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L124">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3251,7 +3233,7 @@ The name of publisher/company.
 The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Service-scmUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L131">property <b>scmUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L128">property <b>scmUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scmUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3259,7 +3241,7 @@ The name of the Resource Group in which the API Management Service should be exi
 The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
 
 <h4 class="pdoc-member-header" id="Service-security">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L135">property <b>security</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L132">property <b>security</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>security: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSecurity'>outputs.apimanagement.ServiceSecurity</a>&gt;;</code></pre>
@@ -3267,7 +3249,7 @@ The URL for the SCM (Source Code Management) Endpoint associated with this API M
 A `security` block as defined below.
 
 <h4 class="pdoc-member-header" id="Service-signIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L139">property <b>signIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L136">property <b>signIn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signIn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignIn'>outputs.apimanagement.ServiceSignIn</a>&gt;;</code></pre>
@@ -3275,7 +3257,7 @@ A `security` block as defined below.
 A `signIn` block as defined below.
 
 <h4 class="pdoc-member-header" id="Service-signUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L143">property <b>signUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L140">property <b>signUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>signUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignUp'>outputs.apimanagement.ServiceSignUp</a>&gt;;</code></pre>
@@ -3283,15 +3265,23 @@ A `signIn` block as defined below.
 A `signUp` block as defined below.
 
 <h4 class="pdoc-member-header" id="Service-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L147">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L144">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSku'>outputs.apimanagement.ServiceSku</a>&gt;;</code></pre>
 
-A `sku` block as documented below.
+A `sku` block as documented below
+
+<h4 class="pdoc-member-header" id="Service-skuName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L148">property <b>skuName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+`skuName` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 
 <h4 class="pdoc-member-header" id="Service-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L151">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L152">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3299,7 +3289,7 @@ A `sku` block as documented below.
 A mapping of tags assigned to the resource.
 
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3308,7 +3298,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Subscription" data-link-title="Subscription">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L44">
         Resource <strong>Subscription</strong>
     </a>
 </h3>
@@ -3349,7 +3339,7 @@ const testSubscription = new azure.apimanagement.Subscription("test", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_subscription.html.markdown.
 
 <h4 class="pdoc-member-header" id="Subscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L100"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -3363,7 +3353,7 @@ Create a Subscription resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Subscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -3374,14 +3364,14 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Subscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Subscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3392,7 +3382,7 @@ Returns true if the given object is an instance of Subscription.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Subscription-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L74">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L74">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3400,7 +3390,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service where this Subscription should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Subscription-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L78">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L78">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3408,7 +3398,7 @@ The name of the API Management Service where this Subscription should be created
 The display name of this Subscription.
 
 <h4 class="pdoc-member-header" id="Subscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3417,12 +3407,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Subscription-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L79">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L79">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Subscription-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L83">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L83">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3430,7 +3420,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Product which should be assigned to this Subscription. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Subscription-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L87">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L87">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3438,12 +3428,12 @@ The ID of the Product which should be assigned to this Subscription. Changing th
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Subscription-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L88">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L88">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Subscription-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L92">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L92">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3451,7 +3441,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The state of this Subscription. Possible values are `Active`, `Cancelled`, `Expired`, `Rejected`, `Submitted` and `Suspended`. Defaults to `Submitted`.
 
 <h4 class="pdoc-member-header" id="Subscription-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L96">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L96">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3459,7 +3449,7 @@ The state of this Subscription. Possible values are `Active`, `Cancelled`, `Expi
 An Identifier which should used as the ID of this Subscription. If not specified a new Subscription ID will be generated. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Subscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3468,7 +3458,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Subscription-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L100">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L100">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3476,7 +3466,7 @@ deployments.
 The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L43">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -3501,10 +3491,7 @@ const testService = new azure.apimanagement.Service("test", {
     publisherEmail: "company@exmaple.com",
     publisherName: "My Company",
     resourceGroupName: testResourceGroup.name,
-    sku: {
-        capacity: 1,
-        name: "Developer",
-    },
+    skuName: "Developer_1",
 });
 const testUser = new azure.apimanagement.User("test", {
     apiManagementName: testService.name,
@@ -3520,7 +3507,7 @@ const testUser = new azure.apimanagement.User("test", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_user.html.markdown.
 
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L112"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -3534,7 +3521,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -3545,14 +3532,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3563,7 +3550,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L76">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L73">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3571,7 +3558,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the API Management Service in which the User should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="User-confirmation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L80">property <b>confirmation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L77">property <b>confirmation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>confirmation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3579,7 +3566,7 @@ The name of the API Management Service in which the User should be created. Chan
 The kind of confirmation email which will be sent to this user. Possible values are `invite` and `signup`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="User-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L84">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L81">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3587,7 +3574,7 @@ The kind of confirmation email which will be sent to this user. Possible values 
 The email address associated with this user.
 
 <h4 class="pdoc-member-header" id="User-firstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L88">property <b>firstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L85">property <b>firstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firstName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3595,7 +3582,7 @@ The email address associated with this user.
 The first name for this user.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3604,7 +3591,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-lastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L92">property <b>lastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L89">property <b>lastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3612,7 +3599,7 @@ deployments and may be missing (undefined) during planning phases.
 The last name for this user.
 
 <h4 class="pdoc-member-header" id="User-note">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L96">property <b>note</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L93">property <b>note</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>note: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3620,7 +3607,7 @@ The last name for this user.
 A note about this user.
 
 <h4 class="pdoc-member-header" id="User-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L100">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L97">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3628,7 +3615,7 @@ A note about this user.
 The password associated with this user.
 
 <h4 class="pdoc-member-header" id="User-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L104">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L101">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3636,7 +3623,7 @@ The password associated with this user.
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="User-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L108">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L105">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3644,7 +3631,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The state of this user. Possible values are `active`, `blocked` and `pending`.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3653,7 +3640,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="User-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L112">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L109">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3663,7 +3650,7 @@ The Identifier for this User, which must be unique within the API Management Ser
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getApi" data-link-title="getApi">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L30">
         Data Source <strong>getApi</strong>
     </a>
 </h3>
@@ -3693,7 +3680,7 @@ export const apiManagementApiId = test.id;
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/api_management_api.html.markdown.
 
 <h3 class="pdoc-module-header" id="getGroup" data-link-title="getGroup">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L29">
         Data Source <strong>getGroup</strong>
     </a>
 </h3>
@@ -3722,7 +3709,7 @@ export const groupType = test.type;
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/api_management_group.html.markdown.
 
 <h3 class="pdoc-module-header" id="getProduct" data-link-title="getProduct">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L29">
         Data Source <strong>getProduct</strong>
     </a>
 </h3>
@@ -3751,7 +3738,7 @@ export const productTerms = test.terms;
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/api_management_product.html.markdown.
 
 <h3 class="pdoc-module-header" id="getService" data-link-title="getService">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L28">
         Data Source <strong>getService</strong>
     </a>
 </h3>
@@ -3779,7 +3766,7 @@ export const apiManagementId = test.id;
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/api_management.html.markdown.
 
 <h3 class="pdoc-module-header" id="getUser" data-link-title="getUser">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L29">
         Data Source <strong>getUser</strong>
     </a>
 </h3>
@@ -3810,7 +3797,7 @@ export const notes = test.notes;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ApiArgs" data-link-title="ApiArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L291">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L288">
         interface <strong>ApiArgs</strong>
     </a>
 </h3>
@@ -3820,7 +3807,7 @@ export const notes = test.notes;
 The set of arguments for constructing a Api resource.
 
 <h4 class="pdoc-member-header" id="ApiArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L295">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L292">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3828,7 +3815,7 @@ The set of arguments for constructing a Api resource.
 The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L299">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L296">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3836,7 +3823,7 @@ The Name of the API Management Service where this API should be created. Changin
 A description of the API Management API, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="ApiArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L303">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L300">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3844,7 +3831,7 @@ A description of the API Management API, which may include HTML formatting tags.
 The display name of the API.
 
 <h4 class="pdoc-member-header" id="ApiArgs-import">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L307">property <b>import</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L304">property <b>import</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiImport'>inputs.apimanagement.ApiImport</a>&gt;;</code></pre>
@@ -3852,7 +3839,7 @@ The display name of the API.
 A `import` block as documented below.
 
 <h4 class="pdoc-member-header" id="ApiArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L311">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L308">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3860,7 +3847,7 @@ A `import` block as documented below.
 The name of the API Management API. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L315">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L312">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3868,7 +3855,7 @@ The name of the API Management API. Changing this forces a new resource to be cr
 The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of it's resource paths within the API Management Service.
 
 <h4 class="pdoc-member-header" id="ApiArgs-protocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L319">property <b>protocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L316">property <b>protocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocols: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3876,7 +3863,7 @@ The Path for this API Management API, which is a relative URL which uniquely ide
 A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
 
 <h4 class="pdoc-member-header" id="ApiArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L323">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L320">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3884,7 +3871,7 @@ A list of protocols the operations in this API can be invoked. Possible values a
 The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiArgs-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L327">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L324">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3892,7 +3879,7 @@ The Name of the Resource Group where the API Management API exists. Changing thi
 The Revision which used for this API.
 
 <h4 class="pdoc-member-header" id="ApiArgs-serviceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L331">property <b>serviceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L328">property <b>serviceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3900,7 +3887,7 @@ The Revision which used for this API.
 Absolute URL of the backend service implementing this API.
 
 <h4 class="pdoc-member-header" id="ApiArgs-soapPassThrough">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L335">property <b>soapPassThrough</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L332">property <b>soapPassThrough</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>soapPassThrough?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3908,7 +3895,7 @@ Absolute URL of the backend service implementing this API.
 Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ApiArgs-subscriptionKeyParameterNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L339">property <b>subscriptionKeyParameterNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L336">property <b>subscriptionKeyParameterNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionKeyParameterNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiSubscriptionKeyParameterNames'>inputs.apimanagement.ApiSubscriptionKeyParameterNames</a>&gt;;</code></pre>
@@ -3916,7 +3903,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to
 A `subscriptionKeyParameterNames` block as documented below.
 
 <h3 class="pdoc-module-header" id="ApiOperationArgs" data-link-title="ApiOperationArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L235">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L235">
         interface <strong>ApiOperationArgs</strong>
     </a>
 </h3>
@@ -3926,7 +3913,7 @@ A `subscriptionKeyParameterNames` block as documented below.
 The set of arguments for constructing a ApiOperation resource.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L239">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L239">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3934,7 +3921,7 @@ The set of arguments for constructing a ApiOperation resource.
 The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L243">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L243">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3942,7 +3929,7 @@ The Name of the API Management Service where the API exists. Changing this force
 The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L247">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L247">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3950,7 +3937,7 @@ The name of the API within the API Management Service where this API Operation s
 A description for this API Operation, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L251">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L251">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3958,7 +3945,7 @@ A description for this API Operation, which may include HTML formatting tags.
 The Display Name for this API Management Operation.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L255">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L255">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3966,7 +3953,7 @@ The Display Name for this API Management Operation.
 The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-operationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L259">property <b>operationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L259">property <b>operationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3974,7 +3961,7 @@ The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `P
 A unique identifier for this API Operation. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-request">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L263">property <b>request</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L263">property <b>request</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequest'>inputs.apimanagement.ApiOperationRequest</a>&gt;;</code></pre>
@@ -3982,7 +3969,7 @@ A unique identifier for this API Operation. Changing this forces a new resource 
 A `request` block as defined below.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L267">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L267">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3990,7 +3977,7 @@ A `request` block as defined below.
 The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-responses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L271">property <b>responses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L271">property <b>responses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponse'>inputs.apimanagement.ApiOperationResponse</a>&gt;[]&gt;;</code></pre>
@@ -3998,7 +3985,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 One or more `response` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-templateParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L275">property <b>templateParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L275">property <b>templateParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationTemplateParameter'>inputs.apimanagement.ApiOperationTemplateParameter</a>&gt;[]&gt;;</code></pre>
@@ -4006,7 +3993,7 @@ One or more `response` blocks as defined below.
 One or more `templateParameter` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ApiOperationArgs-urlTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L279">property <b>urlTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L279">property <b>urlTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urlTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4014,7 +4001,7 @@ One or more `templateParameter` blocks as defined below.
 The relative URL Template identifying the target resource for this operation, which may include parameters.
 
 <h3 class="pdoc-module-header" id="ApiOperationPolicyArgs" data-link-title="ApiOperationPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L165">
         interface <strong>ApiOperationPolicyArgs</strong>
     </a>
 </h3>
@@ -4024,7 +4011,7 @@ The relative URL Template identifying the target resource for this operation, wh
 The set of arguments for constructing a ApiOperationPolicy resource.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicyArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L169">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L169">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4032,7 +4019,7 @@ The set of arguments for constructing a ApiOperationPolicy resource.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicyArgs-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L173">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L173">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4040,12 +4027,12 @@ The name of the API Management Service. Changing this forces a new resource to b
 The ID of the API Management API Operation within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicyArgs-operationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L174">property <b>operationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L174">property <b>operationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ApiOperationPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L178">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L178">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4053,7 +4040,7 @@ The ID of the API Management API Operation within the API Management Service. Ch
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicyArgs-xmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L182">property <b>xmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L182">property <b>xmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4061,7 +4048,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The XML Content for this Policy.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicyArgs-xmlLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L186">property <b>xmlLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L186">property <b>xmlLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4069,7 +4056,7 @@ The XML Content for this Policy.
 A link to a Policy XML Document, which must be publicly available.
 
 <h3 class="pdoc-module-header" id="ApiOperationPolicyState" data-link-title="ApiOperationPolicyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L138">
         interface <strong>ApiOperationPolicyState</strong>
     </a>
 </h3>
@@ -4079,7 +4066,7 @@ A link to a Policy XML Document, which must be publicly available.
 Input properties used for looking up and filtering ApiOperationPolicy resources.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicyState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L142">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L142">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4087,7 +4074,7 @@ Input properties used for looking up and filtering ApiOperationPolicy resources.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicyState-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L146">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L146">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4095,12 +4082,12 @@ The name of the API Management Service. Changing this forces a new resource to b
 The ID of the API Management API Operation within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicyState-operationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L147">property <b>operationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L147">property <b>operationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ApiOperationPolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L151">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L151">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4108,7 +4095,7 @@ The ID of the API Management API Operation within the API Management Service. Ch
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicyState-xmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L155">property <b>xmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L155">property <b>xmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4116,7 +4103,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The XML Content for this Policy.
 
 <h4 class="pdoc-member-header" id="ApiOperationPolicyState-xmlLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L159">property <b>xmlLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L159">property <b>xmlLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4124,7 +4111,7 @@ The XML Content for this Policy.
 A link to a Policy XML Document, which must be publicly available.
 
 <h3 class="pdoc-module-header" id="ApiOperationState" data-link-title="ApiOperationState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L185">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L185">
         interface <strong>ApiOperationState</strong>
     </a>
 </h3>
@@ -4134,7 +4121,7 @@ A link to a Policy XML Document, which must be publicly available.
 Input properties used for looking up and filtering ApiOperation resources.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L189">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L189">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4142,7 +4129,7 @@ Input properties used for looking up and filtering ApiOperation resources.
 The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L193">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L193">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4150,7 +4137,7 @@ The Name of the API Management Service where the API exists. Changing this force
 The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L197">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L197">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4158,7 +4145,7 @@ The name of the API within the API Management Service where this API Operation s
 A description for this API Operation, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L201">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L201">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4166,7 +4153,7 @@ A description for this API Operation, which may include HTML formatting tags.
 The Display Name for this API Management Operation.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L205">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L205">property <b>method</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>method?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4174,7 +4161,7 @@ The Display Name for this API Management Operation.
 The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-operationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L209">property <b>operationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L209">property <b>operationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4182,7 +4169,7 @@ The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `P
 A unique identifier for this API Operation. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-request">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L213">property <b>request</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L213">property <b>request</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequest'>inputs.apimanagement.ApiOperationRequest</a>&gt;;</code></pre>
@@ -4190,7 +4177,7 @@ A unique identifier for this API Operation. Changing this forces a new resource 
 A `request` block as defined below.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L217">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L217">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4198,7 +4185,7 @@ A `request` block as defined below.
 The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-responses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L221">property <b>responses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L221">property <b>responses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponse'>inputs.apimanagement.ApiOperationResponse</a>&gt;[]&gt;;</code></pre>
@@ -4206,7 +4193,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 One or more `response` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-templateParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L225">property <b>templateParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L225">property <b>templateParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationTemplateParameter'>inputs.apimanagement.ApiOperationTemplateParameter</a>&gt;[]&gt;;</code></pre>
@@ -4214,7 +4201,7 @@ One or more `response` blocks as defined below.
 One or more `templateParameter` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ApiOperationState-urlTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiOperation.ts#L229">property <b>urlTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiOperation.ts#L229">property <b>urlTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urlTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4222,7 +4209,7 @@ One or more `templateParameter` blocks as defined below.
 The relative URL Template identifying the target resource for this operation, which may include parameters.
 
 <h3 class="pdoc-module-header" id="ApiPolicyArgs" data-link-title="ApiPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L155">
         interface <strong>ApiPolicyArgs</strong>
     </a>
 </h3>
@@ -4232,7 +4219,7 @@ The relative URL Template identifying the target resource for this operation, wh
 The set of arguments for constructing a ApiPolicy resource.
 
 <h4 class="pdoc-member-header" id="ApiPolicyArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L159">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L159">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4240,7 +4227,7 @@ The set of arguments for constructing a ApiPolicy resource.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiPolicyArgs-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L163">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L163">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4248,7 +4235,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The ID of the API Management API within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L167">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L167">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4256,12 +4243,12 @@ The ID of the API Management API within the API Management Service. Changing thi
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiPolicyArgs-xmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L168">property <b>xmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L168">property <b>xmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ApiPolicyArgs-xmlLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L172">property <b>xmlLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L172">property <b>xmlLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4269,7 +4256,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 A link to a Policy XML Document, which must be publicly available.
 
 <h3 class="pdoc-module-header" id="ApiPolicyState" data-link-title="ApiPolicyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L132">
         interface <strong>ApiPolicyState</strong>
     </a>
 </h3>
@@ -4279,7 +4266,7 @@ A link to a Policy XML Document, which must be publicly available.
 Input properties used for looking up and filtering ApiPolicy resources.
 
 <h4 class="pdoc-member-header" id="ApiPolicyState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L136">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L136">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4287,7 +4274,7 @@ Input properties used for looking up and filtering ApiPolicy resources.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiPolicyState-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L140">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L140">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4295,7 +4282,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The ID of the API Management API within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiPolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L144">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L144">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4303,12 +4290,12 @@ The ID of the API Management API within the API Management Service. Changing thi
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiPolicyState-xmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L145">property <b>xmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L145">property <b>xmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ApiPolicyState-xmlLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiPolicy.ts#L149">property <b>xmlLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiPolicy.ts#L149">property <b>xmlLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4316,7 +4303,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 A link to a Policy XML Document, which must be publicly available.
 
 <h3 class="pdoc-module-header" id="ApiSchemaArgs" data-link-title="ApiSchemaArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L178">
         interface <strong>ApiSchemaArgs</strong>
     </a>
 </h3>
@@ -4326,7 +4313,7 @@ A link to a Policy XML Document, which must be publicly available.
 The set of arguments for constructing a ApiSchema resource.
 
 <h4 class="pdoc-member-header" id="ApiSchemaArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L182">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L182">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4334,7 +4321,7 @@ The set of arguments for constructing a ApiSchema resource.
 The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchemaArgs-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L186">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L186">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4342,7 +4329,7 @@ The Name of the API Management Service where the API exists. Changing this force
 The name of the API within the API Management Service where this API Schema should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchemaArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L190">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L190">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4350,7 +4337,7 @@ The name of the API within the API Management Service where this API Schema shou
 The content type of the API Schema.
 
 <h4 class="pdoc-member-header" id="ApiSchemaArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L194">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L194">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4358,7 +4345,7 @@ The content type of the API Schema.
 The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchemaArgs-schemaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L198">property <b>schemaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L198">property <b>schemaId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4366,7 +4353,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 A unique identifier for this API Schema. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchemaArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L202">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L202">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4374,7 +4361,7 @@ A unique identifier for this API Schema. Changing this forces a new resource to 
 The JSON escaped string defining the document representing the Schema.
 
 <h3 class="pdoc-module-header" id="ApiSchemaState" data-link-title="ApiSchemaState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L148">
         interface <strong>ApiSchemaState</strong>
     </a>
 </h3>
@@ -4384,7 +4371,7 @@ The JSON escaped string defining the document representing the Schema.
 Input properties used for looking up and filtering ApiSchema resources.
 
 <h4 class="pdoc-member-header" id="ApiSchemaState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L152">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L152">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4392,7 +4379,7 @@ Input properties used for looking up and filtering ApiSchema resources.
 The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchemaState-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L156">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L156">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4400,7 +4387,7 @@ The Name of the API Management Service where the API exists. Changing this force
 The name of the API within the API Management Service where this API Schema should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchemaState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L160">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L160">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4408,7 +4395,7 @@ The name of the API within the API Management Service where this API Schema shou
 The content type of the API Schema.
 
 <h4 class="pdoc-member-header" id="ApiSchemaState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L164">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L164">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4416,7 +4403,7 @@ The content type of the API Schema.
 The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchemaState-schemaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L168">property <b>schemaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L168">property <b>schemaId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4424,7 +4411,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 A unique identifier for this API Schema. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiSchemaState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiSchema.ts#L172">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiSchema.ts#L172">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4432,7 +4419,7 @@ A unique identifier for this API Schema. Changing this forces a new resource to 
 The JSON escaped string defining the document representing the Schema.
 
 <h3 class="pdoc-module-header" id="ApiState" data-link-title="ApiState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L221">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L218">
         interface <strong>ApiState</strong>
     </a>
 </h3>
@@ -4442,7 +4429,7 @@ The JSON escaped string defining the document representing the Schema.
 Input properties used for looking up and filtering Api resources.
 
 <h4 class="pdoc-member-header" id="ApiState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L225">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L222">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4450,7 +4437,7 @@ Input properties used for looking up and filtering Api resources.
 The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L229">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L226">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4458,7 +4445,7 @@ The Name of the API Management Service where this API should be created. Changin
 A description of the API Management API, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="ApiState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L233">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L230">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4466,7 +4453,7 @@ A description of the API Management API, which may include HTML formatting tags.
 The display name of the API.
 
 <h4 class="pdoc-member-header" id="ApiState-import">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L237">property <b>import</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L234">property <b>import</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiImport'>inputs.apimanagement.ApiImport</a>&gt;;</code></pre>
@@ -4474,7 +4461,7 @@ The display name of the API.
 A `import` block as documented below.
 
 <h4 class="pdoc-member-header" id="ApiState-isCurrent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L241">property <b>isCurrent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L238">property <b>isCurrent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isCurrent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4482,7 +4469,7 @@ A `import` block as documented below.
 Is this the current API Revision?
 
 <h4 class="pdoc-member-header" id="ApiState-isOnline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L245">property <b>isOnline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L242">property <b>isOnline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOnline?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4490,7 +4477,7 @@ Is this the current API Revision?
 Is this API Revision online/accessible via the Gateway?
 
 <h4 class="pdoc-member-header" id="ApiState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L249">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L246">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4498,7 +4485,7 @@ Is this API Revision online/accessible via the Gateway?
 The name of the API Management API. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L253">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L250">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4506,7 +4493,7 @@ The name of the API Management API. Changing this forces a new resource to be cr
 The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of it's resource paths within the API Management Service.
 
 <h4 class="pdoc-member-header" id="ApiState-protocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L257">property <b>protocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L254">property <b>protocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocols?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4514,7 +4501,7 @@ The Path for this API Management API, which is a relative URL which uniquely ide
 A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
 
 <h4 class="pdoc-member-header" id="ApiState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L261">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L258">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4522,7 +4509,7 @@ A list of protocols the operations in this API can be invoked. Possible values a
 The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiState-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L265">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L262">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4530,7 +4517,7 @@ The Name of the Resource Group where the API Management API exists. Changing thi
 The Revision which used for this API.
 
 <h4 class="pdoc-member-header" id="ApiState-serviceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L269">property <b>serviceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L266">property <b>serviceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4538,7 +4525,7 @@ The Revision which used for this API.
 Absolute URL of the backend service implementing this API.
 
 <h4 class="pdoc-member-header" id="ApiState-soapPassThrough">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L273">property <b>soapPassThrough</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L270">property <b>soapPassThrough</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>soapPassThrough?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4546,7 +4533,7 @@ Absolute URL of the backend service implementing this API.
 Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ApiState-subscriptionKeyParameterNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L277">property <b>subscriptionKeyParameterNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L274">property <b>subscriptionKeyParameterNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionKeyParameterNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiSubscriptionKeyParameterNames'>inputs.apimanagement.ApiSubscriptionKeyParameterNames</a>&gt;;</code></pre>
@@ -4554,7 +4541,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to
 A `subscriptionKeyParameterNames` block as documented below.
 
 <h4 class="pdoc-member-header" id="ApiState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L281">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L278">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4562,7 +4549,7 @@ A `subscriptionKeyParameterNames` block as documented below.
 The Version number of this API, if this API is versioned.
 
 <h4 class="pdoc-member-header" id="ApiState-versionSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/api.ts#L285">property <b>versionSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/api.ts#L282">property <b>versionSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4570,7 +4557,7 @@ The Version number of this API, if this API is versioned.
 The ID of the Version Set which this API is associated with.
 
 <h3 class="pdoc-module-header" id="ApiVersionSetArgs" data-link-title="ApiVersionSetArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L199">
         interface <strong>ApiVersionSetArgs</strong>
     </a>
 </h3>
@@ -4580,7 +4567,7 @@ The ID of the Version Set which this API is associated with.
 The set of arguments for constructing a ApiVersionSet resource.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L203">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L203">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4588,7 +4575,7 @@ The set of arguments for constructing a ApiVersionSet resource.
 The name of the API Management Service in which the API Version Set should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L207">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L207">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4596,7 +4583,7 @@ The name of the API Management Service in which the API Version Set should exist
 The description of API Version Set.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L211">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L211">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4604,7 +4591,7 @@ The description of API Version Set.
 The display name of this API Version Set.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4612,7 +4599,7 @@ The display name of this API Version Set.
 The name of the API Version Set. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L219">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L219">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4620,7 +4607,7 @@ The name of the API Version Set. Changing this forces a new resource to be creat
 The name of the Resource Group in which the parent API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetArgs-versionHeaderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L223">property <b>versionHeaderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L223">property <b>versionHeaderName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionHeaderName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4628,7 +4615,7 @@ The name of the Resource Group in which the parent API Management Service exists
 The name of the Header which should be read from Inbound Requests which defines the API Version.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetArgs-versionQueryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L227">property <b>versionQueryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L227">property <b>versionQueryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionQueryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4636,7 +4623,7 @@ The name of the Header which should be read from Inbound Requests which defines 
 The name of the Query String which should be read from Inbound Requests which defines the API Version.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetArgs-versioningScheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L231">property <b>versioningScheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L231">property <b>versioningScheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versioningScheme: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4644,7 +4631,7 @@ The name of the Query String which should be read from Inbound Requests which de
 Specifies where in an Inbound HTTP Request that the API Version should be read from. Possible values are `Header`, `Query` and `Segment`.
 
 <h3 class="pdoc-module-header" id="ApiVersionSetState" data-link-title="ApiVersionSetState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L161">
         interface <strong>ApiVersionSetState</strong>
     </a>
 </h3>
@@ -4654,7 +4641,7 @@ Specifies where in an Inbound HTTP Request that the API Version should be read f
 Input properties used for looking up and filtering ApiVersionSet resources.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L165">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L165">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4662,7 +4649,7 @@ Input properties used for looking up and filtering ApiVersionSet resources.
 The name of the API Management Service in which the API Version Set should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L169">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L169">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4670,7 +4657,7 @@ The name of the API Management Service in which the API Version Set should exist
 The description of API Version Set.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L173">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L173">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4678,7 +4665,7 @@ The description of API Version Set.
 The display name of this API Version Set.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L177">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4686,7 +4673,7 @@ The display name of this API Version Set.
 The name of the API Version Set. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L181">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L181">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4694,7 +4681,7 @@ The name of the API Version Set. Changing this forces a new resource to be creat
 The name of the Resource Group in which the parent API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetState-versionHeaderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L185">property <b>versionHeaderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L185">property <b>versionHeaderName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionHeaderName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4702,7 +4689,7 @@ The name of the Resource Group in which the parent API Management Service exists
 The name of the Header which should be read from Inbound Requests which defines the API Version.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetState-versionQueryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L189">property <b>versionQueryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L189">property <b>versionQueryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionQueryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4710,7 +4697,7 @@ The name of the Header which should be read from Inbound Requests which defines 
 The name of the Query String which should be read from Inbound Requests which defines the API Version.
 
 <h4 class="pdoc-member-header" id="ApiVersionSetState-versioningScheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/apiVersionSet.ts#L193">property <b>versioningScheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/apiVersionSet.ts#L193">property <b>versioningScheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versioningScheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4718,7 +4705,7 @@ The name of the Query String which should be read from Inbound Requests which de
 Specifies where in an Inbound HTTP Request that the API Version should be read from. Possible values are `Header`, `Query` and `Segment`.
 
 <h3 class="pdoc-module-header" id="AuthorizationServerArgs" data-link-title="AuthorizationServerArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L310">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L310">
         interface <strong>AuthorizationServerArgs</strong>
     </a>
 </h3>
@@ -4728,7 +4715,7 @@ Specifies where in an Inbound HTTP Request that the API Version should be read f
 The set of arguments for constructing a AuthorizationServer resource.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L314">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L314">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4736,7 +4723,7 @@ The set of arguments for constructing a AuthorizationServer resource.
 The name of the API Management Service in which this Authorization Server should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-authorizationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L318">property <b>authorizationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L318">property <b>authorizationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4744,7 +4731,7 @@ The name of the API Management Service in which this Authorization Server should
 The OAUTH Authorization Endpoint.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-authorizationMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L322">property <b>authorizationMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L322">property <b>authorizationMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4752,7 +4739,7 @@ The OAUTH Authorization Endpoint.
 The HTTP Verbs supported by the Authorization Endpoint. Possible values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT` and `TRACE`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-bearerTokenSendingMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L326">property <b>bearerTokenSendingMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L326">property <b>bearerTokenSendingMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bearerTokenSendingMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4760,7 +4747,7 @@ The HTTP Verbs supported by the Authorization Endpoint. Possible values are `DEL
 The mechanism by which Access Tokens are passed to the API. Possible values are `authorizationHeader` and `query`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-clientAuthenticationMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L330">property <b>clientAuthenticationMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L330">property <b>clientAuthenticationMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAuthenticationMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4768,7 +4755,7 @@ The mechanism by which Access Tokens are passed to the API. Possible values are 
 The Authentication Methods supported by the Token endpoint of this Authorization Server.. Possible values are `Basic` and `Body`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L334">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L334">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4776,7 +4763,7 @@ The Authentication Methods supported by the Token endpoint of this Authorization
 The Client/App ID registered with this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-clientRegistrationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L338">property <b>clientRegistrationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L338">property <b>clientRegistrationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientRegistrationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4784,7 +4771,7 @@ The Client/App ID registered with this Authorization Server.
 The URI of page where Client/App Registration is performed for this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L342">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L342">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4792,7 +4779,7 @@ The URI of page where Client/App Registration is performed for this Authorizatio
 The Client/App Secret registered with this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-defaultScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L346">property <b>defaultScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L346">property <b>defaultScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4800,7 +4787,7 @@ The Client/App Secret registered with this Authorization Server.
 The Default Scope used when requesting an Access Token, specified as a string containing space-delimited values.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L350">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L350">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4808,7 +4795,7 @@ The Default Scope used when requesting an Access Token, specified as a string co
 A description of the Authorization Server, which may contain HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L354">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L354">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4816,7 +4803,7 @@ A description of the Authorization Server, which may contain HTML formatting tag
 The user-friendly name of this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-grantTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L358">property <b>grantTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L358">property <b>grantTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4824,7 +4811,7 @@ The user-friendly name of this Authorization Server.
 Form of Authorization Grants required when requesting an Access Token. Possible values are `authorizationCode`, `clientCredentials`, `implicit` and `resourceOwnerPassword`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L362">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L362">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4832,7 +4819,7 @@ Form of Authorization Grants required when requesting an Access Token. Possible 
 The name of this Authorization Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L366">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L366">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4840,7 +4827,7 @@ The name of this Authorization Server. Changing this forces a new resource to be
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-resourceOwnerPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L370">property <b>resourceOwnerPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L370">property <b>resourceOwnerPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceOwnerPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4848,7 +4835,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The password associated with the Resource Owner.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-resourceOwnerUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L374">property <b>resourceOwnerUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L374">property <b>resourceOwnerUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceOwnerUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4856,7 +4843,7 @@ The password associated with the Resource Owner.
 The username associated with the Resource Owner.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-supportState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L378">property <b>supportState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L378">property <b>supportState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4864,12 +4851,12 @@ The username associated with the Resource Owner.
 Does this Authorization Server support State? If this is set to `true` the client may use the state parameter to raise protocol security.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-tokenBodyParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L379">property <b>tokenBodyParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L379">property <b>tokenBodyParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBodyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AuthorizationServerTokenBodyParameter'>inputs.apimanagement.AuthorizationServerTokenBodyParameter</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthorizationServerArgs-tokenEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L383">property <b>tokenEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L383">property <b>tokenEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4877,7 +4864,7 @@ Does this Authorization Server support State? If this is set to `true` the clien
 The OAUTH Token Endpoint.
 
 <h3 class="pdoc-module-header" id="AuthorizationServerState" data-link-title="AuthorizationServerState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L231">
         interface <strong>AuthorizationServerState</strong>
     </a>
 </h3>
@@ -4887,7 +4874,7 @@ The OAUTH Token Endpoint.
 Input properties used for looking up and filtering AuthorizationServer resources.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L235">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L235">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4895,7 +4882,7 @@ Input properties used for looking up and filtering AuthorizationServer resources
 The name of the API Management Service in which this Authorization Server should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-authorizationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L239">property <b>authorizationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L239">property <b>authorizationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4903,7 +4890,7 @@ The name of the API Management Service in which this Authorization Server should
 The OAUTH Authorization Endpoint.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-authorizationMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L243">property <b>authorizationMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L243">property <b>authorizationMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4911,7 +4898,7 @@ The OAUTH Authorization Endpoint.
 The HTTP Verbs supported by the Authorization Endpoint. Possible values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT` and `TRACE`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-bearerTokenSendingMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L247">property <b>bearerTokenSendingMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L247">property <b>bearerTokenSendingMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bearerTokenSendingMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4919,7 +4906,7 @@ The HTTP Verbs supported by the Authorization Endpoint. Possible values are `DEL
 The mechanism by which Access Tokens are passed to the API. Possible values are `authorizationHeader` and `query`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-clientAuthenticationMethods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L251">property <b>clientAuthenticationMethods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L251">property <b>clientAuthenticationMethods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAuthenticationMethods?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4927,7 +4914,7 @@ The mechanism by which Access Tokens are passed to the API. Possible values are 
 The Authentication Methods supported by the Token endpoint of this Authorization Server.. Possible values are `Basic` and `Body`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L255">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L255">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4935,7 +4922,7 @@ The Authentication Methods supported by the Token endpoint of this Authorization
 The Client/App ID registered with this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-clientRegistrationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L259">property <b>clientRegistrationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L259">property <b>clientRegistrationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientRegistrationEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4943,7 +4930,7 @@ The Client/App ID registered with this Authorization Server.
 The URI of page where Client/App Registration is performed for this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L263">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L263">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4951,7 +4938,7 @@ The URI of page where Client/App Registration is performed for this Authorizatio
 The Client/App Secret registered with this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-defaultScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L267">property <b>defaultScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L267">property <b>defaultScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4959,7 +4946,7 @@ The Client/App Secret registered with this Authorization Server.
 The Default Scope used when requesting an Access Token, specified as a string containing space-delimited values.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L271">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L271">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4967,7 +4954,7 @@ The Default Scope used when requesting an Access Token, specified as a string co
 A description of the Authorization Server, which may contain HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L275">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L275">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4975,7 +4962,7 @@ A description of the Authorization Server, which may contain HTML formatting tag
 The user-friendly name of this Authorization Server.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-grantTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L279">property <b>grantTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L279">property <b>grantTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>grantTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4983,7 +4970,7 @@ The user-friendly name of this Authorization Server.
 Form of Authorization Grants required when requesting an Access Token. Possible values are `authorizationCode`, `clientCredentials`, `implicit` and `resourceOwnerPassword`.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L283">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L283">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4991,7 +4978,7 @@ Form of Authorization Grants required when requesting an Access Token. Possible 
 The name of this Authorization Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L287">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L287">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4999,7 +4986,7 @@ The name of this Authorization Server. Changing this forces a new resource to be
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-resourceOwnerPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L291">property <b>resourceOwnerPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L291">property <b>resourceOwnerPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceOwnerPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5007,7 +4994,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The password associated with the Resource Owner.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-resourceOwnerUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L295">property <b>resourceOwnerUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L295">property <b>resourceOwnerUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceOwnerUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5015,7 +5002,7 @@ The password associated with the Resource Owner.
 The username associated with the Resource Owner.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-supportState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L299">property <b>supportState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L299">property <b>supportState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5023,12 +5010,12 @@ The username associated with the Resource Owner.
 Does this Authorization Server support State? If this is set to `true` the client may use the state parameter to raise protocol security.
 
 <h4 class="pdoc-member-header" id="AuthorizationServerState-tokenBodyParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L300">property <b>tokenBodyParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L300">property <b>tokenBodyParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBodyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AuthorizationServerTokenBodyParameter'>inputs.apimanagement.AuthorizationServerTokenBodyParameter</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthorizationServerState-tokenEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/authorizationServer.ts#L304">property <b>tokenEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/authorizationServer.ts#L304">property <b>tokenEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5036,7 +5023,7 @@ Does this Authorization Server support State? If this is set to `true` the clien
 The OAUTH Token Endpoint.
 
 <h3 class="pdoc-module-header" id="BackendArgs" data-link-title="BackendArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L209">
         interface <strong>BackendArgs</strong>
     </a>
 </h3>
@@ -5046,7 +5033,7 @@ The OAUTH Token Endpoint.
 The set of arguments for constructing a Backend resource.
 
 <h4 class="pdoc-member-header" id="BackendArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L213">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L213">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5054,7 +5041,7 @@ The set of arguments for constructing a Backend resource.
 The Name of the API Management Service where this backend should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BackendArgs-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L217">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L217">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendCredentials'>inputs.apimanagement.BackendCredentials</a>&gt;;</code></pre>
@@ -5062,7 +5049,7 @@ The Name of the API Management Service where this backend should be created. Cha
 A `credentials` block as documented below.
 
 <h4 class="pdoc-member-header" id="BackendArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L221">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L221">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5070,7 +5057,7 @@ A `credentials` block as documented below.
 The description of the backend.
 
 <h4 class="pdoc-member-header" id="BackendArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L225">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L225">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5078,7 +5065,7 @@ The description of the backend.
 The name of the API Management backend. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BackendArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L229">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L229">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5086,7 +5073,7 @@ The name of the API Management backend. Changing this forces a new resource to b
 The protocol used by the backend host. Possible values are `http` or `soap`.
 
 <h4 class="pdoc-member-header" id="BackendArgs-proxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L233">property <b>proxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L233">property <b>proxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendProxy'>inputs.apimanagement.BackendProxy</a>&gt;;</code></pre>
@@ -5094,7 +5081,7 @@ The protocol used by the backend host. Possible values are `http` or `soap`.
 A `proxy` block as documented below.
 
 <h4 class="pdoc-member-header" id="BackendArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L237">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L237">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5102,7 +5089,7 @@ A `proxy` block as documented below.
 The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BackendArgs-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L241">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L241">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5110,7 +5097,7 @@ The Name of the Resource Group where the API Management Service exists. Changing
 The management URI of the backend host in an external system. This URI can be the ARM Resource ID of Logic Apps, Function Apps or API Apps, or the management endpoint of a Service Fabric cluster.
 
 <h4 class="pdoc-member-header" id="BackendArgs-serviceFabricCluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L245">property <b>serviceFabricCluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L245">property <b>serviceFabricCluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceFabricCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendServiceFabricCluster'>inputs.apimanagement.BackendServiceFabricCluster</a>&gt;;</code></pre>
@@ -5118,7 +5105,7 @@ The management URI of the backend host in an external system. This URI can be th
 A `serviceFabricCluster` block as documented below.
 
 <h4 class="pdoc-member-header" id="BackendArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L249">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L249">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5126,7 +5113,7 @@ A `serviceFabricCluster` block as documented below.
 The title of the backend.
 
 <h4 class="pdoc-member-header" id="BackendArgs-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L253">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L253">property <b>tls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendTls'>inputs.apimanagement.BackendTls</a>&gt;;</code></pre>
@@ -5134,7 +5121,7 @@ The title of the backend.
 A `tls` block as documented below.
 
 <h4 class="pdoc-member-header" id="BackendArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L257">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L257">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5142,7 +5129,7 @@ A `tls` block as documented below.
 The URL of the backend host.
 
 <h3 class="pdoc-module-header" id="BackendState" data-link-title="BackendState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L155">
         interface <strong>BackendState</strong>
     </a>
 </h3>
@@ -5152,7 +5139,7 @@ The URL of the backend host.
 Input properties used for looking up and filtering Backend resources.
 
 <h4 class="pdoc-member-header" id="BackendState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L159">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L159">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5160,7 +5147,7 @@ Input properties used for looking up and filtering Backend resources.
 The Name of the API Management Service where this backend should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BackendState-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L163">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L163">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendCredentials'>inputs.apimanagement.BackendCredentials</a>&gt;;</code></pre>
@@ -5168,7 +5155,7 @@ The Name of the API Management Service where this backend should be created. Cha
 A `credentials` block as documented below.
 
 <h4 class="pdoc-member-header" id="BackendState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L167">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L167">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5176,7 +5163,7 @@ A `credentials` block as documented below.
 The description of the backend.
 
 <h4 class="pdoc-member-header" id="BackendState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L171">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L171">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5184,7 +5171,7 @@ The description of the backend.
 The name of the API Management backend. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BackendState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L175">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L175">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5192,7 +5179,7 @@ The name of the API Management backend. Changing this forces a new resource to b
 The protocol used by the backend host. Possible values are `http` or `soap`.
 
 <h4 class="pdoc-member-header" id="BackendState-proxy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L179">property <b>proxy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L179">property <b>proxy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendProxy'>inputs.apimanagement.BackendProxy</a>&gt;;</code></pre>
@@ -5200,7 +5187,7 @@ The protocol used by the backend host. Possible values are `http` or `soap`.
 A `proxy` block as documented below.
 
 <h4 class="pdoc-member-header" id="BackendState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L183">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L183">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5208,7 +5195,7 @@ A `proxy` block as documented below.
 The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="BackendState-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L187">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L187">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5216,7 +5203,7 @@ The Name of the Resource Group where the API Management Service exists. Changing
 The management URI of the backend host in an external system. This URI can be the ARM Resource ID of Logic Apps, Function Apps or API Apps, or the management endpoint of a Service Fabric cluster.
 
 <h4 class="pdoc-member-header" id="BackendState-serviceFabricCluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L191">property <b>serviceFabricCluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L191">property <b>serviceFabricCluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceFabricCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendServiceFabricCluster'>inputs.apimanagement.BackendServiceFabricCluster</a>&gt;;</code></pre>
@@ -5224,7 +5211,7 @@ The management URI of the backend host in an external system. This URI can be th
 A `serviceFabricCluster` block as documented below.
 
 <h4 class="pdoc-member-header" id="BackendState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L195">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L195">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5232,7 +5219,7 @@ A `serviceFabricCluster` block as documented below.
 The title of the backend.
 
 <h4 class="pdoc-member-header" id="BackendState-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L199">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L199">property <b>tls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendTls'>inputs.apimanagement.BackendTls</a>&gt;;</code></pre>
@@ -5240,7 +5227,7 @@ The title of the backend.
 A `tls` block as documented below.
 
 <h4 class="pdoc-member-header" id="BackendState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/backend.ts#L203">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/backend.ts#L203">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5248,7 +5235,7 @@ A `tls` block as documented below.
 The URL of the backend host.
 
 <h3 class="pdoc-module-header" id="CertificateArgs" data-link-title="CertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L166">
         interface <strong>CertificateArgs</strong>
     </a>
 </h3>
@@ -5258,7 +5245,7 @@ The URL of the backend host.
 The set of arguments for constructing a Certificate resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L170">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L170">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5266,7 +5253,7 @@ The set of arguments for constructing a Certificate resource.
 The Name of the API Management Service where this Service should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L174">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L174">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5274,7 +5261,7 @@ The Name of the API Management Service where this Service should be created. Cha
 The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5282,7 +5269,7 @@ The base-64 encoded certificate data, which must be a PFX file. Changing this fo
 The name of the API Management Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L182">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L182">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5290,7 +5277,7 @@ The name of the API Management Certificate. Changing this forces a new resource 
 The password used for this certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L186">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L186">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5298,7 +5285,7 @@ The password used for this certificate. Changing this forces a new resource to b
 The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CertificateState" data-link-title="CertificateState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L128">
         interface <strong>CertificateState</strong>
     </a>
 </h3>
@@ -5308,7 +5295,7 @@ The Name of the Resource Group where the API Management Service exists. Changing
 Input properties used for looking up and filtering Certificate resources.
 
 <h4 class="pdoc-member-header" id="CertificateState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L132">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L132">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5316,7 +5303,7 @@ Input properties used for looking up and filtering Certificate resources.
 The Name of the API Management Service where this Service should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateState-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L136">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L136">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5324,7 +5311,7 @@ The Name of the API Management Service where this Service should be created. Cha
 The base-64 encoded certificate data, which must be a PFX file. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateState-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L140">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L140">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5332,7 +5319,7 @@ The base-64 encoded certificate data, which must be a PFX file. Changing this fo
 The Expiration Date of this Certificate, formatted as an RFC3339 string.
 
 <h4 class="pdoc-member-header" id="CertificateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5340,7 +5327,7 @@ The Expiration Date of this Certificate, formatted as an RFC3339 string.
 The name of the API Management Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L148">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L148">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5348,7 +5335,7 @@ The name of the API Management Certificate. Changing this forces a new resource 
 The password used for this certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L152">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L152">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5356,7 +5343,7 @@ The password used for this certificate. Changing this forces a new resource to b
 The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateState-subject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L156">property <b>subject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L156">property <b>subject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5364,7 +5351,7 @@ The Name of the Resource Group where the API Management Service exists. Changing
 The Subject of this Certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-thumbprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/certificate.ts#L160">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/certificate.ts#L160">property <b>thumbprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5372,7 +5359,7 @@ The Subject of this Certificate.
 The Thumbprint of this Certificate.
 
 <h3 class="pdoc-module-header" id="GetApiArgs" data-link-title="GetApiArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L51">
         interface <strong>GetApiArgs</strong>
     </a>
 </h3>
@@ -5382,7 +5369,7 @@ The Thumbprint of this Certificate.
 A collection of arguments for invoking getApi.
 
 <h4 class="pdoc-member-header" id="GetApiArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L55">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L55">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5390,7 +5377,7 @@ A collection of arguments for invoking getApi.
 The name of the API Management Service in which the API Management API exists.
 
 <h4 class="pdoc-member-header" id="GetApiArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5398,7 +5385,7 @@ The name of the API Management Service in which the API Management API exists.
 The name of the API Management API.
 
 <h4 class="pdoc-member-header" id="GetApiArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L63">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L63">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5406,7 +5393,7 @@ The name of the API Management API.
 The Name of the Resource Group in which the API Management Service exists.
 
 <h4 class="pdoc-member-header" id="GetApiArgs-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L67">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L67">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revision: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5414,7 +5401,7 @@ The Name of the Resource Group in which the API Management Service exists.
 The Revision of the API Management API.
 
 <h3 class="pdoc-module-header" id="GetApiResult" data-link-title="GetApiResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L73">
         interface <strong>GetApiResult</strong>
     </a>
 </h3>
@@ -5424,12 +5411,12 @@ The Revision of the API Management API.
 A collection of values returned by getApi.
 
 <h4 class="pdoc-member-header" id="GetApiResult-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L74">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L74">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetApiResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L78">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L78">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5437,7 +5424,7 @@ A collection of values returned by getApi.
 A description of the API Management API, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="GetApiResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L82">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L82">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5445,7 +5432,7 @@ A description of the API Management API, which may include HTML formatting tags.
 The display name of the API.
 
 <h4 class="pdoc-member-header" id="GetApiResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L125">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L125">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5453,7 +5440,7 @@ The display name of the API.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetApiResult-isCurrent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L86">property <b>isCurrent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L86">property <b>isCurrent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isCurrent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -5461,7 +5448,7 @@ id is the provider-assigned unique ID for this managed resource.
 Is this the current API Revision?
 
 <h4 class="pdoc-member-header" id="GetApiResult-isOnline">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L90">property <b>isOnline</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L90">property <b>isOnline</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOnline: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -5469,12 +5456,12 @@ Is this the current API Revision?
 Is this API Revision online/accessible via the Gateway?
 
 <h4 class="pdoc-member-header" id="GetApiResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetApiResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L95">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L95">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5482,7 +5469,7 @@ Is this API Revision online/accessible via the Gateway?
 The Path for this API Management API.
 
 <h4 class="pdoc-member-header" id="GetApiResult-protocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L99">property <b>protocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L99">property <b>protocols</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocols: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -5490,17 +5477,17 @@ The Path for this API Management API.
 A list of protocols the operations in this API can be invoked.
 
 <h4 class="pdoc-member-header" id="GetApiResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L100">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L100">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetApiResult-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L101">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L101">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revision: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetApiResult-serviceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L105">property <b>serviceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L105">property <b>serviceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5508,7 +5495,7 @@ A list of protocols the operations in this API can be invoked.
 Absolute URL of the backend service implementing this API.
 
 <h4 class="pdoc-member-header" id="GetApiResult-soapPassThrough">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L109">property <b>soapPassThrough</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L109">property <b>soapPassThrough</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>soapPassThrough: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -5516,7 +5503,7 @@ Absolute URL of the backend service implementing this API.
 Should this API expose a SOAP frontend, rather than a HTTP frontend?
 
 <h4 class="pdoc-member-header" id="GetApiResult-subscriptionKeyParameterNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L113">property <b>subscriptionKeyParameterNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L113">property <b>subscriptionKeyParameterNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionKeyParameterNames: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetApiSubscriptionKeyParameterName'>outputs.apimanagement.GetApiSubscriptionKeyParameterName</a>[];</code></pre>
@@ -5524,7 +5511,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend?
 A `subscriptionKeyParameterNames` block as documented below.
 
 <h4 class="pdoc-member-header" id="GetApiResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L117">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L117">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5532,7 +5519,7 @@ A `subscriptionKeyParameterNames` block as documented below.
 The Version number of this API, if this API is versioned.
 
 <h4 class="pdoc-member-header" id="GetApiResult-versionSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getApi.ts#L121">property <b>versionSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getApi.ts#L121">property <b>versionSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionSetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5540,7 +5527,7 @@ The Version number of this API, if this API is versioned.
 The ID of the Version Set which this API is associated with.
 
 <h3 class="pdoc-module-header" id="GetGroupArgs" data-link-title="GetGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L49">
         interface <strong>GetGroupArgs</strong>
     </a>
 </h3>
@@ -5550,7 +5537,7 @@ The ID of the Version Set which this API is associated with.
 A collection of arguments for invoking getGroup.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L53">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L53">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5558,7 +5545,7 @@ A collection of arguments for invoking getGroup.
 The Name of the API Management Service in which this Group exists.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5566,7 +5553,7 @@ The Name of the API Management Service in which this Group exists.
 The Name of the API Management Group.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L61">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L61">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5574,7 +5561,7 @@ The Name of the API Management Group.
 The Name of the Resource Group in which the API Management Service exists.
 
 <h3 class="pdoc-module-header" id="GetGroupResult" data-link-title="GetGroupResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L67">
         interface <strong>GetGroupResult</strong>
     </a>
 </h3>
@@ -5584,12 +5571,12 @@ The Name of the Resource Group in which the API Management Service exists.
 A collection of values returned by getGroup.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L68">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L68">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L72">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L72">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5597,7 +5584,7 @@ A collection of values returned by getGroup.
 The description of this API Management Group.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L76">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L76">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5605,7 +5592,7 @@ The description of this API Management Group.
 The display name of this API Management Group.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L80">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L80">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5613,7 +5600,7 @@ The display name of this API Management Group.
 The identifier of the external Group.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5621,17 +5608,17 @@ The identifier of the external Group.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L82">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L82">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getGroup.ts#L86">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getGroup.ts#L86">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5639,7 +5626,7 @@ id is the provider-assigned unique ID for this managed resource.
 The type of this API Management Group, such as `custom` or `external`.
 
 <h3 class="pdoc-module-header" id="GetProductArgs" data-link-title="GetProductArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L49">
         interface <strong>GetProductArgs</strong>
     </a>
 </h3>
@@ -5649,7 +5636,7 @@ The type of this API Management Group, such as `custom` or `external`.
 A collection of arguments for invoking getProduct.
 
 <h4 class="pdoc-member-header" id="GetProductArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L53">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L53">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5657,7 +5644,7 @@ A collection of arguments for invoking getProduct.
 The Name of the API Management Service in which this Product exists.
 
 <h4 class="pdoc-member-header" id="GetProductArgs-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L57">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L57">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5665,7 +5652,7 @@ The Name of the API Management Service in which this Product exists.
 The Identifier for the API Management Product.
 
 <h4 class="pdoc-member-header" id="GetProductArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L61">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L61">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5673,7 +5660,7 @@ The Identifier for the API Management Product.
 The Name of the Resource Group in which the API Management Service exists.
 
 <h3 class="pdoc-module-header" id="GetProductResult" data-link-title="GetProductResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L67">
         interface <strong>GetProductResult</strong>
     </a>
 </h3>
@@ -5683,12 +5670,12 @@ The Name of the Resource Group in which the API Management Service exists.
 A collection of values returned by getProduct.
 
 <h4 class="pdoc-member-header" id="GetProductResult-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L68">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L68">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductResult-approvalRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L72">property <b>approvalRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L72">property <b>approvalRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>approvalRequired: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -5696,7 +5683,7 @@ A collection of values returned by getProduct.
 Do subscribers need to be approved prior to being able to use the Product?
 
 <h4 class="pdoc-member-header" id="GetProductResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L76">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L76">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5704,7 +5691,7 @@ Do subscribers need to be approved prior to being able to use the Product?
 The description of this Product, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="GetProductResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L80">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L80">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5712,7 +5699,7 @@ The description of this Product, which may include HTML formatting tags.
 The Display Name for this API Management Product.
 
 <h4 class="pdoc-member-header" id="GetProductResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L102">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5720,12 +5707,12 @@ The Display Name for this API Management Product.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetProductResult-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L81">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L81">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductResult-published">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L85">property <b>published</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L85">property <b>published</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>published: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -5733,12 +5720,12 @@ id is the provider-assigned unique ID for this managed resource.
 Is this Product Published?
 
 <h4 class="pdoc-member-header" id="GetProductResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L86">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L86">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProductResult-subscriptionRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L90">property <b>subscriptionRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L90">property <b>subscriptionRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionRequired: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -5746,7 +5733,7 @@ Is this Product Published?
 Is a Subscription required to access API's included in this Product?
 
 <h4 class="pdoc-member-header" id="GetProductResult-subscriptionsLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L94">property <b>subscriptionsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L94">property <b>subscriptionsLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionsLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -5754,7 +5741,7 @@ Is a Subscription required to access API's included in this Product?
 The number of subscriptions a user can have to this Product at the same time.
 
 <h4 class="pdoc-member-header" id="GetProductResult-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getProduct.ts#L98">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getProduct.ts#L98">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5762,7 +5749,7 @@ The number of subscriptions a user can have to this Product at the same time.
 Any Terms and Conditions for this Product, which must be accepted by Developers before they can begin the Subscription process.
 
 <h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L47">
         interface <strong>GetServiceArgs</strong>
     </a>
 </h3>
@@ -5772,7 +5759,7 @@ Any Terms and Conditions for this Product, which must be accepted by Developers 
 A collection of arguments for invoking getService.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5780,7 +5767,7 @@ A collection of arguments for invoking getService.
 The name of the API Management service.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L55">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L55">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5788,7 +5775,7 @@ The name of the API Management service.
 The Name of the Resource Group in which the API Management Service exists.
 
 <h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L61">
         interface <strong>GetServiceResult</strong>
     </a>
 </h3>
@@ -5798,7 +5785,7 @@ The Name of the Resource Group in which the API Management Service exists.
 A collection of values returned by getService.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-additionalLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L65">property <b>additionalLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L65">property <b>additionalLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalLocations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceAdditionalLocation'>outputs.apimanagement.GetServiceAdditionalLocation</a>[];</code></pre>
@@ -5806,7 +5793,7 @@ A collection of values returned by getService.
 One or more `additionalLocation` blocks as defined below
 
 <h4 class="pdoc-member-header" id="GetServiceResult-gatewayRegionalUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L69">property <b>gatewayRegionalUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L69">property <b>gatewayRegionalUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gatewayRegionalUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5814,7 +5801,7 @@ One or more `additionalLocation` blocks as defined below
 Gateway URL of the API Management service in the Region.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-gatewayUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L73">property <b>gatewayUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L73">property <b>gatewayUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gatewayUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5822,7 +5809,7 @@ Gateway URL of the API Management service in the Region.
 The URL for the API Management Service's Gateway.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-hostnameConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L77">property <b>hostnameConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L77">property <b>hostnameConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostnameConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfiguration'>outputs.apimanagement.GetServiceHostnameConfiguration</a>[];</code></pre>
@@ -5830,7 +5817,7 @@ The URL for the API Management Service's Gateway.
 A `hostnameConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L126">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L127">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5838,7 +5825,7 @@ A `hostnameConfiguration` block as defined below.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L81">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L81">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5846,7 +5833,7 @@ id is the provider-assigned unique ID for this managed resource.
 The location name of the additional region among Azure Data center regions.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-managementApiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L85">property <b>managementApiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L85">property <b>managementApiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managementApiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5854,7 +5841,7 @@ The location name of the additional region among Azure Data center regions.
 The URL for the Management API.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5862,7 +5849,7 @@ The URL for the Management API.
 Specifies the plan's pricing tier.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-notificationSenderEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L93">property <b>notificationSenderEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L93">property <b>notificationSenderEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationSenderEmail: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5870,7 +5857,7 @@ Specifies the plan's pricing tier.
 The email address from which the notification will be sent.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-portalUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L97">property <b>portalUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L97">property <b>portalUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portalUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5878,7 +5865,7 @@ The email address from which the notification will be sent.
 The URL of the Publisher Portal.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-publicIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L101">property <b>publicIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L101">property <b>publicIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -5886,7 +5873,7 @@ The URL of the Publisher Portal.
 Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-publisherEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L105">property <b>publisherEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L105">property <b>publisherEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publisherEmail: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5894,7 +5881,7 @@ Public Static Load Balanced IP addresses of the API Management service in the ad
 The email of Publisher/Company of the API Management Service.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-publisherName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L109">property <b>publisherName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L109">property <b>publisherName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publisherName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5902,12 +5889,12 @@ The email of Publisher/Company of the API Management Service.
 The name of the Publisher/Company of the API Management Service.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L110">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L110">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-scmUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L114">property <b>scmUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L114">property <b>scmUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scmUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5915,15 +5902,20 @@ The name of the Publisher/Company of the API Management Service.
 The SCM (Source Code Management) endpoint.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L118">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L118">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceSku'>outputs.apimanagement.GetServiceSku</a>;</code></pre>
 
 A `sku` block as documented below.
 
+<h4 class="pdoc-member-header" id="GetServiceResult-skuName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L119">property <b>skuName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>skuName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getService.ts#L122">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getService.ts#L123">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -5931,7 +5923,7 @@ A `sku` block as documented below.
 A mapping of tags assigned to the resource.
 
 <h3 class="pdoc-module-header" id="GetUserArgs" data-link-title="GetUserArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L49">
         interface <strong>GetUserArgs</strong>
     </a>
 </h3>
@@ -5941,7 +5933,7 @@ A mapping of tags assigned to the resource.
 A collection of arguments for invoking getUser.
 
 <h4 class="pdoc-member-header" id="GetUserArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L53">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L53">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5949,7 +5941,7 @@ A collection of arguments for invoking getUser.
 The Name of the API Management Service in which this User exists.
 
 <h4 class="pdoc-member-header" id="GetUserArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L57">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L57">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5957,7 +5949,7 @@ The Name of the API Management Service in which this User exists.
 The Name of the Resource Group in which the API Management Service exists.
 
 <h4 class="pdoc-member-header" id="GetUserArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L61">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L61">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5965,7 +5957,7 @@ The Name of the Resource Group in which the API Management Service exists.
 The Identifier for the User.
 
 <h3 class="pdoc-module-header" id="GetUserResult" data-link-title="GetUserResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L67">
         interface <strong>GetUserResult</strong>
     </a>
 </h3>
@@ -5975,12 +5967,12 @@ The Identifier for the User.
 A collection of values returned by getUser.
 
 <h4 class="pdoc-member-header" id="GetUserResult-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L68">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L68">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L72">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L72">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5988,7 +5980,7 @@ A collection of values returned by getUser.
 The Email Address used for this User.
 
 <h4 class="pdoc-member-header" id="GetUserResult-firstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L76">property <b>firstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L76">property <b>firstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5996,7 +5988,7 @@ The Email Address used for this User.
 The First Name for the User.
 
 <h4 class="pdoc-member-header" id="GetUserResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L94">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L94">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6004,7 +5996,7 @@ The First Name for the User.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetUserResult-lastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L80">property <b>lastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L80">property <b>lastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6012,7 +6004,7 @@ id is the provider-assigned unique ID for this managed resource.
 The Last Name for the User.
 
 <h4 class="pdoc-member-header" id="GetUserResult-note">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L84">property <b>note</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L84">property <b>note</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>note: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6020,12 +6012,12 @@ The Last Name for the User.
 Any notes about this User.
 
 <h4 class="pdoc-member-header" id="GetUserResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L89">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L89">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6033,12 +6025,12 @@ Any notes about this User.
 The current state of this User, for example `active`, `blocked` or `pending`.
 
 <h4 class="pdoc-member-header" id="GetUserResult-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/getUser.ts#L90">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/getUser.ts#L90">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L184">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -6048,7 +6040,7 @@ The current state of this User, for example `active`, `blocked` or `pending`.
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L191">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L188">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6056,7 +6048,7 @@ The set of arguments for constructing a Group resource.
 The name of the API Management Service in which the API Management Group should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L195">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L192">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6064,7 +6056,7 @@ The name of the API Management Service in which the API Management Group should 
 The description of this API Management Group.
 
 <h4 class="pdoc-member-header" id="GroupArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L199">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L196">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6072,7 +6064,7 @@ The description of this API Management Group.
 The display name of this API Management Group.
 
 <h4 class="pdoc-member-header" id="GroupArgs-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L203">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L200">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6080,7 +6072,7 @@ The display name of this API Management Group.
 The identifier of the external Group. For example, an Azure Active Directory group `aad://<tenant>.onmicrosoft.com/groups/<group object id>`.
 
 <h4 class="pdoc-member-header" id="GroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L207">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6088,7 +6080,7 @@ The identifier of the external Group. For example, an Azure Active Directory gro
 The name of the API Management Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L211">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L208">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6096,7 +6088,7 @@ The name of the API Management Group. Changing this forces a new resource to be 
 The name of the Resource Group in which the API Management Group should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L215">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L212">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6104,7 +6096,7 @@ The name of the Resource Group in which the API Management Group should exist. C
 The type of this API Management Group. Possible values are `custom` and `external`. Default is `custom`.
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L150">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -6114,7 +6106,7 @@ The type of this API Management Group. Possible values are `custom` and `externa
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L157">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L154">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6122,7 +6114,7 @@ Input properties used for looking up and filtering Group resources.
 The name of the API Management Service in which the API Management Group should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L161">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L158">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6130,7 +6122,7 @@ The name of the API Management Service in which the API Management Group should 
 The description of this API Management Group.
 
 <h4 class="pdoc-member-header" id="GroupState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L165">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L162">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6138,7 +6130,7 @@ The description of this API Management Group.
 The display name of this API Management Group.
 
 <h4 class="pdoc-member-header" id="GroupState-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L169">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L166">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6146,7 +6138,7 @@ The display name of this API Management Group.
 The identifier of the external Group. For example, an Azure Active Directory group `aad://<tenant>.onmicrosoft.com/groups/<group object id>`.
 
 <h4 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L173">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6154,7 +6146,7 @@ The identifier of the external Group. For example, an Azure Active Directory gro
 The name of the API Management Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L177">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L174">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6162,7 +6154,7 @@ The name of the API Management Group. Changing this forces a new resource to be 
 The name of the Resource Group in which the API Management Group should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/group.ts#L181">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/group.ts#L178">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6170,7 +6162,7 @@ The name of the Resource Group in which the API Management Group should exist. C
 The type of this API Management Group. Possible values are `custom` and `external`. Default is `custom`.
 
 <h3 class="pdoc-module-header" id="GroupUserArgs" data-link-title="GroupUserArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L149">
         interface <strong>GroupUserArgs</strong>
     </a>
 </h3>
@@ -6180,7 +6172,7 @@ The type of this API Management Group. Possible values are `custom` and `externa
 The set of arguments for constructing a GroupUser resource.
 
 <h4 class="pdoc-member-header" id="GroupUserArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L153">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L153">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6188,7 +6180,7 @@ The set of arguments for constructing a GroupUser resource.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupUserArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L157">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L157">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6196,7 +6188,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The Name of the API Management Group within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupUserArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L161">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L161">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6204,7 +6196,7 @@ The Name of the API Management Group within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupUserArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L165">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L165">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6212,7 +6204,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The ID of the API Management User which should be assigned to this API Management Group. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GroupUserState" data-link-title="GroupUserState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L127">
         interface <strong>GroupUserState</strong>
     </a>
 </h3>
@@ -6222,7 +6214,7 @@ The ID of the API Management User which should be assigned to this API Managemen
 Input properties used for looking up and filtering GroupUser resources.
 
 <h4 class="pdoc-member-header" id="GroupUserState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L131">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L131">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6230,7 +6222,7 @@ Input properties used for looking up and filtering GroupUser resources.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupUserState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L135">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L135">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6238,7 +6230,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The Name of the API Management Group within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupUserState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L139">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L139">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6246,7 +6238,7 @@ The Name of the API Management Group within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="GroupUserState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/groupUser.ts#L143">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/groupUser.ts#L143">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6254,7 +6246,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The ID of the API Management User which should be assigned to this API Management Group. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="LoggerArgs" data-link-title="LoggerArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L188">
         interface <strong>LoggerArgs</strong>
     </a>
 </h3>
@@ -6264,7 +6256,7 @@ The ID of the API Management User which should be assigned to this API Managemen
 The set of arguments for constructing a Logger resource.
 
 <h4 class="pdoc-member-header" id="LoggerArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L195">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L192">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6272,7 +6264,7 @@ The set of arguments for constructing a Logger resource.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LoggerArgs-applicationInsights">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L199">property <b>applicationInsights</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L196">property <b>applicationInsights</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationInsights?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerApplicationInsights'>inputs.apimanagement.LoggerApplicationInsights</a>&gt;;</code></pre>
@@ -6280,7 +6272,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 An `applicationInsights` block as documented below.
 
 <h4 class="pdoc-member-header" id="LoggerArgs-buffered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L203">property <b>buffered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L200">property <b>buffered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buffered?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6288,7 +6280,7 @@ An `applicationInsights` block as documented below.
 Specifies whether records should be buffered in the Logger prior to publishing. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="LoggerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L207">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L204">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6296,7 +6288,7 @@ Specifies whether records should be buffered in the Logger prior to publishing. 
 A description of this Logger.
 
 <h4 class="pdoc-member-header" id="LoggerArgs-eventhub">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L211">property <b>eventhub</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L208">property <b>eventhub</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhub?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerEventhub'>inputs.apimanagement.LoggerEventhub</a>&gt;;</code></pre>
@@ -6304,7 +6296,7 @@ A description of this Logger.
 An `eventhub` block as documented below.
 
 <h4 class="pdoc-member-header" id="LoggerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L212">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6312,7 +6304,7 @@ An `eventhub` block as documented below.
 The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LoggerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L219">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L216">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6320,7 +6312,7 @@ The name of this Logger, which must be unique within the API Management Service.
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="LoggerState" data-link-title="LoggerState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L154">
         interface <strong>LoggerState</strong>
     </a>
 </h3>
@@ -6330,7 +6322,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 Input properties used for looking up and filtering Logger resources.
 
 <h4 class="pdoc-member-header" id="LoggerState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L161">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L158">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6338,7 +6330,7 @@ Input properties used for looking up and filtering Logger resources.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LoggerState-applicationInsights">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L165">property <b>applicationInsights</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L162">property <b>applicationInsights</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationInsights?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerApplicationInsights'>inputs.apimanagement.LoggerApplicationInsights</a>&gt;;</code></pre>
@@ -6346,7 +6338,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 An `applicationInsights` block as documented below.
 
 <h4 class="pdoc-member-header" id="LoggerState-buffered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L169">property <b>buffered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L166">property <b>buffered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buffered?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6354,7 +6346,7 @@ An `applicationInsights` block as documented below.
 Specifies whether records should be buffered in the Logger prior to publishing. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="LoggerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L173">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L170">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6362,7 +6354,7 @@ Specifies whether records should be buffered in the Logger prior to publishing. 
 A description of this Logger.
 
 <h4 class="pdoc-member-header" id="LoggerState-eventhub">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L177">property <b>eventhub</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L174">property <b>eventhub</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhub?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerEventhub'>inputs.apimanagement.LoggerEventhub</a>&gt;;</code></pre>
@@ -6370,7 +6362,7 @@ A description of this Logger.
 An `eventhub` block as documented below.
 
 <h4 class="pdoc-member-header" id="LoggerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6378,7 +6370,7 @@ An `eventhub` block as documented below.
 The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="LoggerState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/logger.ts#L185">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/logger.ts#L182">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6386,7 +6378,7 @@ The name of this Logger, which must be unique within the API Management Service.
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="OpenIdConnectProviderArgs" data-link-title="OpenIdConnectProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L206">
         interface <strong>OpenIdConnectProviderArgs</strong>
     </a>
 </h3>
@@ -6396,7 +6388,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The set of arguments for constructing a OpenIdConnectProvider resource.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L210">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L210">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6404,7 +6396,7 @@ The set of arguments for constructing a OpenIdConnectProvider resource.
 The name of the API Management Service in which this OpenID Connect Provider should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L214">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L214">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6412,7 +6404,7 @@ The name of the API Management Service in which this OpenID Connect Provider sho
 The Client ID used for the Client Application.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L218">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L218">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6420,7 +6412,7 @@ The Client ID used for the Client Application.
 The Client Secret used for the Client Application.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L222">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L222">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6428,7 +6420,7 @@ The Client Secret used for the Client Application.
 A description of this OpenID Connect Provider.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L226">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L226">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6436,7 +6428,7 @@ A description of this OpenID Connect Provider.
 A user-friendly name for this OpenID Connect Provider.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderArgs-metadataEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L230">property <b>metadataEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L230">property <b>metadataEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadataEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6444,7 +6436,7 @@ A user-friendly name for this OpenID Connect Provider.
 The URI of the Metadata endpoint.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L234">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L234">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6452,7 +6444,7 @@ The URI of the Metadata endpoint.
 the Name of the OpenID Connect Provider which should be created within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L238">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L238">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6460,7 +6452,7 @@ the Name of the OpenID Connect Provider which should be created within the API M
 The name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="OpenIdConnectProviderState" data-link-title="OpenIdConnectProviderState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L168">
         interface <strong>OpenIdConnectProviderState</strong>
     </a>
 </h3>
@@ -6470,7 +6462,7 @@ The name of the Resource Group where the API Management Service exists. Changing
 Input properties used for looking up and filtering OpenIdConnectProvider resources.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L172">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L172">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6478,7 +6470,7 @@ Input properties used for looking up and filtering OpenIdConnectProvider resourc
 The name of the API Management Service in which this OpenID Connect Provider should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L176">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L176">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6486,7 +6478,7 @@ The name of the API Management Service in which this OpenID Connect Provider sho
 The Client ID used for the Client Application.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L180">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L180">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6494,7 +6486,7 @@ The Client ID used for the Client Application.
 The Client Secret used for the Client Application.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6502,7 +6494,7 @@ The Client Secret used for the Client Application.
 A description of this OpenID Connect Provider.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L188">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L188">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6510,7 +6502,7 @@ A description of this OpenID Connect Provider.
 A user-friendly name for this OpenID Connect Provider.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderState-metadataEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L192">property <b>metadataEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L192">property <b>metadataEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadataEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6518,7 +6510,7 @@ A user-friendly name for this OpenID Connect Provider.
 The URI of the Metadata endpoint.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L196">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6526,7 +6518,7 @@ The URI of the Metadata endpoint.
 the Name of the OpenID Connect Provider which should be created within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="OpenIdConnectProviderState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L200">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L200">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6534,7 +6526,7 @@ the Name of the OpenID Connect Provider which should be created within the API M
 The name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ProductApiArgs" data-link-title="ProductApiArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L158">
         interface <strong>ProductApiArgs</strong>
     </a>
 </h3>
@@ -6544,7 +6536,7 @@ The name of the Resource Group where the API Management Service exists. Changing
 The set of arguments for constructing a ProductApi resource.
 
 <h4 class="pdoc-member-header" id="ProductApiArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L162">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L162">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6552,7 +6544,7 @@ The set of arguments for constructing a ProductApi resource.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductApiArgs-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L166">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L166">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6560,7 +6552,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The Name of the API Management API within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductApiArgs-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L170">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L170">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6568,7 +6560,7 @@ The Name of the API Management API within the API Management Service. Changing t
 The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductApiArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L174">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L174">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6576,7 +6568,7 @@ The ID of the API Management Product within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ProductApiState" data-link-title="ProductApiState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L136">
         interface <strong>ProductApiState</strong>
     </a>
 </h3>
@@ -6586,7 +6578,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 Input properties used for looking up and filtering ProductApi resources.
 
 <h4 class="pdoc-member-header" id="ProductApiState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L140">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L140">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6594,7 +6586,7 @@ Input properties used for looking up and filtering ProductApi resources.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductApiState-apiName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L144">property <b>apiName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L144">property <b>apiName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6602,7 +6594,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The Name of the API Management API within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductApiState-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L148">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L148">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6610,7 +6602,7 @@ The Name of the API Management API within the API Management Service. Changing t
 The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductApiState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productApi.ts#L152">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productApi.ts#L152">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6618,7 +6610,7 @@ The ID of the API Management Product within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ProductArgs" data-link-title="ProductArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L224">
         interface <strong>ProductArgs</strong>
     </a>
 </h3>
@@ -6628,7 +6620,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The set of arguments for constructing a Product resource.
 
 <h4 class="pdoc-member-header" id="ProductArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L231">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L228">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6636,7 +6628,7 @@ The set of arguments for constructing a Product resource.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductArgs-approvalRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L235">property <b>approvalRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L232">property <b>approvalRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>approvalRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6644,7 +6636,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 Do subscribers need to be approved prior to being able to use the Product?
 
 <h4 class="pdoc-member-header" id="ProductArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L239">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L236">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6652,7 +6644,7 @@ Do subscribers need to be approved prior to being able to use the Product?
 A description of this Product, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="ProductArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L243">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L240">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6660,7 +6652,7 @@ A description of this Product, which may include HTML formatting tags.
 The Display Name for this API Management Product.
 
 <h4 class="pdoc-member-header" id="ProductArgs-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L247">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L244">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6668,7 +6660,7 @@ The Display Name for this API Management Product.
 The Identifier for this Product, which must be unique within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductArgs-published">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L251">property <b>published</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L248">property <b>published</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>published: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6676,7 +6668,7 @@ The Identifier for this Product, which must be unique within the API Management 
 Is this Product Published?
 
 <h4 class="pdoc-member-header" id="ProductArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L255">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L252">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6684,7 +6676,7 @@ Is this Product Published?
 The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductArgs-subscriptionRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L259">property <b>subscriptionRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L256">property <b>subscriptionRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6692,7 +6684,7 @@ The name of the Resource Group in which the API Management Service should be exi
 Is a Subscription required to access API's included in this Product?
 
 <h4 class="pdoc-member-header" id="ProductArgs-subscriptionsLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L263">property <b>subscriptionsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L260">property <b>subscriptionsLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionsLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6700,7 +6692,7 @@ Is a Subscription required to access API's included in this Product?
 The number of subscriptions a user can have to this Product at the same time.
 
 <h4 class="pdoc-member-header" id="ProductArgs-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L267">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L264">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6708,7 +6700,7 @@ The number of subscriptions a user can have to this Product at the same time.
 The Terms and Conditions for this Product, which must be accepted by Developers before they can begin the Subscription process.
 
 <h3 class="pdoc-module-header" id="ProductGroupArgs" data-link-title="ProductGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L157">
         interface <strong>ProductGroupArgs</strong>
     </a>
 </h3>
@@ -6718,7 +6710,7 @@ The Terms and Conditions for this Product, which must be accepted by Developers 
 The set of arguments for constructing a ProductGroup resource.
 
 <h4 class="pdoc-member-header" id="ProductGroupArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L161">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L161">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6726,7 +6718,7 @@ The set of arguments for constructing a ProductGroup resource.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductGroupArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L165">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L165">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6734,7 +6726,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The Name of the API Management Group within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductGroupArgs-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L169">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L169">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6742,7 +6734,7 @@ The Name of the API Management Group within the API Management Service. Changing
 The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L173">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L173">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6750,7 +6742,7 @@ The ID of the API Management Product within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ProductGroupState" data-link-title="ProductGroupState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L135">
         interface <strong>ProductGroupState</strong>
     </a>
 </h3>
@@ -6760,7 +6752,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 Input properties used for looking up and filtering ProductGroup resources.
 
 <h4 class="pdoc-member-header" id="ProductGroupState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L139">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L139">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6768,7 +6760,7 @@ Input properties used for looking up and filtering ProductGroup resources.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductGroupState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L143">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L143">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6776,7 +6768,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The Name of the API Management Group within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductGroupState-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L147">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L147">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6784,7 +6776,7 @@ The Name of the API Management Group within the API Management Service. Changing
 The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductGroupState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productGroup.ts#L151">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productGroup.ts#L151">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6792,7 +6784,7 @@ The ID of the API Management Product within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ProductPolicyArgs" data-link-title="ProductPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L161">
         interface <strong>ProductPolicyArgs</strong>
     </a>
 </h3>
@@ -6802,7 +6794,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The set of arguments for constructing a ProductPolicy resource.
 
 <h4 class="pdoc-member-header" id="ProductPolicyArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L165">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L165">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6810,7 +6802,7 @@ The set of arguments for constructing a ProductPolicy resource.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductPolicyArgs-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L169">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L169">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6818,7 +6810,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L173">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L173">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6826,7 +6818,7 @@ The ID of the API Management Product within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductPolicyArgs-xmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L177">property <b>xmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L177">property <b>xmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6834,7 +6826,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The XML Content for this Policy.
 
 <h4 class="pdoc-member-header" id="ProductPolicyArgs-xmlLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L181">property <b>xmlLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L181">property <b>xmlLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6842,7 +6834,7 @@ The XML Content for this Policy.
 A link to a Policy XML Document, which must be publicly available.
 
 <h3 class="pdoc-module-header" id="ProductPolicyState" data-link-title="ProductPolicyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L135">
         interface <strong>ProductPolicyState</strong>
     </a>
 </h3>
@@ -6852,7 +6844,7 @@ A link to a Policy XML Document, which must be publicly available.
 Input properties used for looking up and filtering ProductPolicy resources.
 
 <h4 class="pdoc-member-header" id="ProductPolicyState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L139">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L139">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6860,7 +6852,7 @@ Input properties used for looking up and filtering ProductPolicy resources.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductPolicyState-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L143">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L143">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6868,7 +6860,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductPolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L147">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L147">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6876,7 +6868,7 @@ The ID of the API Management Product within the API Management Service. Changing
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductPolicyState-xmlContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L151">property <b>xmlContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L151">property <b>xmlContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6884,7 +6876,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The XML Content for this Policy.
 
 <h4 class="pdoc-member-header" id="ProductPolicyState-xmlLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/productPolicy.ts#L155">property <b>xmlLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/productPolicy.ts#L155">property <b>xmlLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xmlLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6892,7 +6884,7 @@ The XML Content for this Policy.
 A link to a Policy XML Document, which must be publicly available.
 
 <h3 class="pdoc-module-header" id="ProductState" data-link-title="ProductState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L178">
         interface <strong>ProductState</strong>
     </a>
 </h3>
@@ -6902,7 +6894,7 @@ A link to a Policy XML Document, which must be publicly available.
 Input properties used for looking up and filtering Product resources.
 
 <h4 class="pdoc-member-header" id="ProductState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L185">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L182">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6910,7 +6902,7 @@ Input properties used for looking up and filtering Product resources.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductState-approvalRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L189">property <b>approvalRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L186">property <b>approvalRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>approvalRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6918,7 +6910,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 Do subscribers need to be approved prior to being able to use the Product?
 
 <h4 class="pdoc-member-header" id="ProductState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L193">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L190">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6926,7 +6918,7 @@ Do subscribers need to be approved prior to being able to use the Product?
 A description of this Product, which may include HTML formatting tags.
 
 <h4 class="pdoc-member-header" id="ProductState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L197">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L194">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6934,7 +6926,7 @@ A description of this Product, which may include HTML formatting tags.
 The Display Name for this API Management Product.
 
 <h4 class="pdoc-member-header" id="ProductState-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L201">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L198">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6942,7 +6934,7 @@ The Display Name for this API Management Product.
 The Identifier for this Product, which must be unique within the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductState-published">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L205">property <b>published</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L202">property <b>published</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>published?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6950,7 +6942,7 @@ The Identifier for this Product, which must be unique within the API Management 
 Is this Product Published?
 
 <h4 class="pdoc-member-header" id="ProductState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L209">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L206">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6958,7 +6950,7 @@ Is this Product Published?
 The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProductState-subscriptionRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L213">property <b>subscriptionRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L210">property <b>subscriptionRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6966,7 +6958,7 @@ The name of the Resource Group in which the API Management Service should be exi
 Is a Subscription required to access API's included in this Product?
 
 <h4 class="pdoc-member-header" id="ProductState-subscriptionsLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L217">property <b>subscriptionsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L214">property <b>subscriptionsLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionsLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6974,7 +6966,7 @@ Is a Subscription required to access API's included in this Product?
 The number of subscriptions a user can have to this Product at the same time.
 
 <h4 class="pdoc-member-header" id="ProductState-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/product.ts#L221">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/product.ts#L218">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6982,7 +6974,7 @@ The number of subscriptions a user can have to this Product at the same time.
 The Terms and Conditions for this Product, which must be accepted by Developers before they can begin the Subscription process.
 
 <h3 class="pdoc-module-header" id="PropertyArgs" data-link-title="PropertyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L187">
         interface <strong>PropertyArgs</strong>
     </a>
 </h3>
@@ -6992,7 +6984,7 @@ The Terms and Conditions for this Product, which must be accepted by Developers 
 The set of arguments for constructing a Property resource.
 
 <h4 class="pdoc-member-header" id="PropertyArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L194">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L191">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7000,7 +6992,7 @@ The set of arguments for constructing a Property resource.
 The name of the API Management Service in which the API Management Property should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PropertyArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L198">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L195">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7008,7 +7000,7 @@ The name of the API Management Service in which the API Management Property shou
 The display name of this API Management Property.
 
 <h4 class="pdoc-member-header" id="PropertyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L202">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L199">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7016,7 +7008,7 @@ The display name of this API Management Property.
 The name of the API Management Property. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PropertyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L206">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L203">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7024,7 +7016,7 @@ The name of the API Management Property. Changing this forces a new resource to 
 The name of the Resource Group in which the API Management Property should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PropertyArgs-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L210">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L207">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7032,7 +7024,7 @@ The name of the Resource Group in which the API Management Property should exist
 Specifies whether the API Management Property is secret. Valid values are `true` or `false`. The default value is `false`.
 
 <h4 class="pdoc-member-header" id="PropertyArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L214">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L211">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7040,7 +7032,7 @@ Specifies whether the API Management Property is secret. Valid values are `true`
 A list of tags to be applied to the API Management Property.
 
 <h4 class="pdoc-member-header" id="PropertyArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L218">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L215">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7048,7 +7040,7 @@ A list of tags to be applied to the API Management Property.
 The value of this API Management Property.
 
 <h3 class="pdoc-module-header" id="PropertyState" data-link-title="PropertyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L153">
         interface <strong>PropertyState</strong>
     </a>
 </h3>
@@ -7058,7 +7050,7 @@ The value of this API Management Property.
 Input properties used for looking up and filtering Property resources.
 
 <h4 class="pdoc-member-header" id="PropertyState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L160">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L157">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7066,7 +7058,7 @@ Input properties used for looking up and filtering Property resources.
 The name of the API Management Service in which the API Management Property should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PropertyState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L164">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L161">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7074,7 +7066,7 @@ The name of the API Management Service in which the API Management Property shou
 The display name of this API Management Property.
 
 <h4 class="pdoc-member-header" id="PropertyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L165">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7082,7 +7074,7 @@ The display name of this API Management Property.
 The name of the API Management Property. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PropertyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L172">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L169">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7090,7 +7082,7 @@ The name of the API Management Property. Changing this forces a new resource to 
 The name of the Resource Group in which the API Management Property should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PropertyState-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L176">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L173">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7098,7 +7090,7 @@ The name of the Resource Group in which the API Management Property should exist
 Specifies whether the API Management Property is secret. Valid values are `true` or `false`. The default value is `false`.
 
 <h4 class="pdoc-member-header" id="PropertyState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L180">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L177">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7106,7 +7098,7 @@ Specifies whether the API Management Property is secret. Valid values are `true`
 A list of tags to be applied to the API Management Property.
 
 <h4 class="pdoc-member-header" id="PropertyState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/property.ts#L184">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/property.ts#L181">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7114,7 +7106,7 @@ A list of tags to be applied to the API Management Property.
 The value of this API Management Property.
 
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L332">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L336">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
@@ -7124,7 +7116,7 @@ The value of this API Management Property.
 The set of arguments for constructing a Service resource.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-additionalLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L336">property <b>additionalLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L340">property <b>additionalLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAdditionalLocation'>inputs.apimanagement.ServiceAdditionalLocation</a>&gt;[]&gt;;</code></pre>
@@ -7132,7 +7124,7 @@ The set of arguments for constructing a Service resource.
 One or more `additionalLocation` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-certificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L340">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L344">property <b>certificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCertificate'>inputs.apimanagement.ServiceCertificate</a>&gt;[]&gt;;</code></pre>
@@ -7140,7 +7132,7 @@ One or more `additionalLocation` blocks as defined below.
 One or more (up to 10) `certificate` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-hostnameConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L344">property <b>hostnameConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L348">property <b>hostnameConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostnameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfiguration'>inputs.apimanagement.ServiceHostnameConfiguration</a>&gt;;</code></pre>
@@ -7148,7 +7140,7 @@ One or more (up to 10) `certificate` blocks as defined below.
 A `hostnameConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L348">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L352">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceIdentity'>inputs.apimanagement.ServiceIdentity</a>&gt;;</code></pre>
@@ -7156,7 +7148,7 @@ A `hostnameConfiguration` block as defined below.
 An `identity` block is documented below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L352">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L356">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7164,7 +7156,7 @@ An `identity` block is documented below.
 The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L356">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L360">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7172,7 +7164,7 @@ The Azure location where the API Management Service exists. Changing this forces
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-notificationSenderEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L360">property <b>notificationSenderEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L364">property <b>notificationSenderEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationSenderEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7180,7 +7172,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 Email address from which the notification will be sent.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L364">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L368">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServicePolicy'>inputs.apimanagement.ServicePolicy</a>&gt;;</code></pre>
@@ -7188,7 +7180,7 @@ Email address from which the notification will be sent.
 A `policy` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-publisherEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L368">property <b>publisherEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L372">property <b>publisherEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publisherEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7196,7 +7188,7 @@ A `policy` block as defined below.
 The email of publisher/company.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-publisherName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L372">property <b>publisherName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L376">property <b>publisherName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publisherName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7204,7 +7196,7 @@ The email of publisher/company.
 The name of publisher/company.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L376">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L380">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7212,7 +7204,7 @@ The name of publisher/company.
 The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-security">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L380">property <b>security</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L384">property <b>security</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>security?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSecurity'>inputs.apimanagement.ServiceSecurity</a>&gt;;</code></pre>
@@ -7220,7 +7212,7 @@ The name of the Resource Group in which the API Management Service should be exi
 A `security` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-signIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L384">property <b>signIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L388">property <b>signIn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignIn'>inputs.apimanagement.ServiceSignIn</a>&gt;;</code></pre>
@@ -7228,7 +7220,7 @@ A `security` block as defined below.
 A `signIn` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-signUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L388">property <b>signUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L392">property <b>signUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignUp'>inputs.apimanagement.ServiceSignUp</a>&gt;;</code></pre>
@@ -7236,15 +7228,23 @@ A `signIn` block as defined below.
 A `signUp` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L392">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L396">property <b>sku</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>inputs.apimanagement.ServiceSku</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>inputs.apimanagement.ServiceSku</a>&gt;;</code></pre>
 
-A `sku` block as documented below.
+A `sku` block as documented below
+
+<h4 class="pdoc-member-header" id="ServiceArgs-skuName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L400">property <b>skuName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+`skuName` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 
 <h4 class="pdoc-member-header" id="ServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L396">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L404">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -7252,7 +7252,7 @@ A `sku` block as documented below.
 A mapping of tags assigned to the resource.
 
 <h3 class="pdoc-module-header" id="ServiceState" data-link-title="ServiceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L238">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L238">
         interface <strong>ServiceState</strong>
     </a>
 </h3>
@@ -7262,7 +7262,7 @@ A mapping of tags assigned to the resource.
 Input properties used for looking up and filtering Service resources.
 
 <h4 class="pdoc-member-header" id="ServiceState-additionalLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L242">property <b>additionalLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L242">property <b>additionalLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAdditionalLocation'>inputs.apimanagement.ServiceAdditionalLocation</a>&gt;[]&gt;;</code></pre>
@@ -7270,7 +7270,7 @@ Input properties used for looking up and filtering Service resources.
 One or more `additionalLocation` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-certificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L246">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L246">property <b>certificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCertificate'>inputs.apimanagement.ServiceCertificate</a>&gt;[]&gt;;</code></pre>
@@ -7278,7 +7278,7 @@ One or more `additionalLocation` blocks as defined below.
 One or more (up to 10) `certificate` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-gatewayRegionalUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L250">property <b>gatewayRegionalUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L250">property <b>gatewayRegionalUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gatewayRegionalUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7286,7 +7286,7 @@ One or more (up to 10) `certificate` blocks as defined below.
 The URL of the Regional Gateway for the API Management Service in the specified region.
 
 <h4 class="pdoc-member-header" id="ServiceState-gatewayUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L254">property <b>gatewayUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L254">property <b>gatewayUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gatewayUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7294,7 +7294,7 @@ The URL of the Regional Gateway for the API Management Service in the specified 
 The URL of the Gateway for the API Management Service.
 
 <h4 class="pdoc-member-header" id="ServiceState-hostnameConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L258">property <b>hostnameConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L258">property <b>hostnameConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostnameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfiguration'>inputs.apimanagement.ServiceHostnameConfiguration</a>&gt;;</code></pre>
@@ -7302,7 +7302,7 @@ The URL of the Gateway for the API Management Service.
 A `hostnameConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L262">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L262">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceIdentity'>inputs.apimanagement.ServiceIdentity</a>&gt;;</code></pre>
@@ -7310,7 +7310,7 @@ A `hostnameConfiguration` block as defined below.
 An `identity` block is documented below.
 
 <h4 class="pdoc-member-header" id="ServiceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L266">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L266">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7318,7 +7318,7 @@ An `identity` block is documented below.
 The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-managementApiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L270">property <b>managementApiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L270">property <b>managementApiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managementApiUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7326,7 +7326,7 @@ The Azure location where the API Management Service exists. Changing this forces
 The URL for the Management API associated with this API Management service.
 
 <h4 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L274">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L274">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7334,7 +7334,7 @@ The URL for the Management API associated with this API Management service.
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-notificationSenderEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L278">property <b>notificationSenderEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L278">property <b>notificationSenderEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationSenderEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7342,7 +7342,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 Email address from which the notification will be sent.
 
 <h4 class="pdoc-member-header" id="ServiceState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L282">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L282">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServicePolicy'>inputs.apimanagement.ServicePolicy</a>&gt;;</code></pre>
@@ -7350,7 +7350,7 @@ Email address from which the notification will be sent.
 A `policy` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-portalUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L286">property <b>portalUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L286">property <b>portalUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portalUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7358,7 +7358,7 @@ A `policy` block as defined below.
 The URL for the Publisher Portal associated with this API Management service.
 
 <h4 class="pdoc-member-header" id="ServiceState-publicIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L290">property <b>publicIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L290">property <b>publicIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7366,7 +7366,7 @@ The URL for the Publisher Portal associated with this API Management service.
 Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 
 <h4 class="pdoc-member-header" id="ServiceState-publisherEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L294">property <b>publisherEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L294">property <b>publisherEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publisherEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7374,7 +7374,7 @@ Public Static Load Balanced IP addresses of the API Management service in the ad
 The email of publisher/company.
 
 <h4 class="pdoc-member-header" id="ServiceState-publisherName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L298">property <b>publisherName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L298">property <b>publisherName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publisherName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7382,7 +7382,7 @@ The email of publisher/company.
 The name of publisher/company.
 
 <h4 class="pdoc-member-header" id="ServiceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L302">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L302">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7390,7 +7390,7 @@ The name of publisher/company.
 The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-scmUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L306">property <b>scmUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L306">property <b>scmUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scmUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7398,7 +7398,7 @@ The name of the Resource Group in which the API Management Service should be exi
 The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
 
 <h4 class="pdoc-member-header" id="ServiceState-security">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L310">property <b>security</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L310">property <b>security</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>security?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSecurity'>inputs.apimanagement.ServiceSecurity</a>&gt;;</code></pre>
@@ -7406,7 +7406,7 @@ The URL for the SCM (Source Code Management) Endpoint associated with this API M
 A `security` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-signIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L314">property <b>signIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L314">property <b>signIn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignIn'>inputs.apimanagement.ServiceSignIn</a>&gt;;</code></pre>
@@ -7414,7 +7414,7 @@ A `security` block as defined below.
 A `signIn` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-signUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L318">property <b>signUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L318">property <b>signUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignUp'>inputs.apimanagement.ServiceSignUp</a>&gt;;</code></pre>
@@ -7422,15 +7422,23 @@ A `signIn` block as defined below.
 A `signUp` block as defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L322">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L322">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>inputs.apimanagement.ServiceSku</a>&gt;;</code></pre>
 
-A `sku` block as documented below.
+A `sku` block as documented below
+
+<h4 class="pdoc-member-header" id="ServiceState-skuName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L326">property <b>skuName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+`skuName` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 
 <h4 class="pdoc-member-header" id="ServiceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/service.ts#L326">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/service.ts#L330">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -7438,7 +7446,7 @@ A `sku` block as documented below.
 A mapping of tags assigned to the resource.
 
 <h3 class="pdoc-module-header" id="SubscriptionArgs" data-link-title="SubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L200">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L200">
         interface <strong>SubscriptionArgs</strong>
     </a>
 </h3>
@@ -7448,7 +7456,7 @@ A mapping of tags assigned to the resource.
 The set of arguments for constructing a Subscription resource.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L204">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L204">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7456,7 +7464,7 @@ The set of arguments for constructing a Subscription resource.
 The name of the API Management Service where this Subscription should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L208">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L208">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7464,12 +7472,12 @@ The name of the API Management Service where this Subscription should be created
 The display name of this Subscription.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L209">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L209">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubscriptionArgs-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L213">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L213">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7477,7 +7485,7 @@ The display name of this Subscription.
 The ID of the Product which should be assigned to this Subscription. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L217">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L217">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7485,12 +7493,12 @@ The ID of the Product which should be assigned to this Subscription. Changing th
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L218">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L218">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubscriptionArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L222">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L222">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7498,7 +7506,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The state of this Subscription. Possible values are `Active`, `Cancelled`, `Expired`, `Rejected`, `Submitted` and `Suspended`. Defaults to `Submitted`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L226">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L226">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7506,7 +7514,7 @@ The state of this Subscription. Possible values are `Active`, `Cancelled`, `Expi
 An Identifier which should used as the ID of this Subscription. If not specified a new Subscription ID will be generated. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L230">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L230">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7514,7 +7522,7 @@ An Identifier which should used as the ID of this Subscription. If not specified
 The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SubscriptionState" data-link-title="SubscriptionState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L164">
         interface <strong>SubscriptionState</strong>
     </a>
 </h3>
@@ -7524,7 +7532,7 @@ The ID of the User which should be assigned to this Subscription. Changing this 
 Input properties used for looking up and filtering Subscription resources.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L168">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L168">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7532,7 +7540,7 @@ Input properties used for looking up and filtering Subscription resources.
 The name of the API Management Service where this Subscription should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L172">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L172">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7540,12 +7548,12 @@ The name of the API Management Service where this Subscription should be created
 The display name of this Subscription.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L173">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L173">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubscriptionState-productId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L177">property <b>productId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L177">property <b>productId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7553,7 +7561,7 @@ The display name of this Subscription.
 The ID of the Product which should be assigned to this Subscription. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L181">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L181">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7561,12 +7569,12 @@ The ID of the Product which should be assigned to this Subscription. Changing th
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L182">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L182">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SubscriptionState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L186">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L186">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7574,7 +7582,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The state of this Subscription. Possible values are `Active`, `Cancelled`, `Expired`, `Rejected`, `Submitted` and `Suspended`. Defaults to `Submitted`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L190">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L190">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7582,7 +7590,7 @@ The state of this Subscription. Possible values are `Active`, `Cancelled`, `Expi
 An Identifier which should used as the ID of this Subscription. If not specified a new Subscription ID will be generated. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/subscription.ts#L194">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/subscription.ts#L194">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7590,7 +7598,7 @@ An Identifier which should used as the ID of this Subscription. If not specified
 The ID of the User which should be assigned to this Subscription. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L224">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -7600,7 +7608,7 @@ The ID of the User which should be assigned to this Subscription. Changing this 
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L231">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L228">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7608,7 +7616,7 @@ The set of arguments for constructing a User resource.
 The name of the API Management Service in which the User should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="UserArgs-confirmation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L235">property <b>confirmation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L232">property <b>confirmation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>confirmation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7616,7 +7624,7 @@ The name of the API Management Service in which the User should be created. Chan
 The kind of confirmation email which will be sent to this user. Possible values are `invite` and `signup`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="UserArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L239">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L236">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7624,7 +7632,7 @@ The kind of confirmation email which will be sent to this user. Possible values 
 The email address associated with this user.
 
 <h4 class="pdoc-member-header" id="UserArgs-firstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L243">property <b>firstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L240">property <b>firstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7632,7 +7640,7 @@ The email address associated with this user.
 The first name for this user.
 
 <h4 class="pdoc-member-header" id="UserArgs-lastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L247">property <b>lastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L244">property <b>lastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7640,7 +7648,7 @@ The first name for this user.
 The last name for this user.
 
 <h4 class="pdoc-member-header" id="UserArgs-note">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L251">property <b>note</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L248">property <b>note</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>note?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7648,7 +7656,7 @@ The last name for this user.
 A note about this user.
 
 <h4 class="pdoc-member-header" id="UserArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L255">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L252">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7656,7 +7664,7 @@ A note about this user.
 The password associated with this user.
 
 <h4 class="pdoc-member-header" id="UserArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L259">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L256">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7664,7 +7672,7 @@ The password associated with this user.
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="UserArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L263">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L260">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7672,7 +7680,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The state of this user. Possible values are `active`, `blocked` and `pending`.
 
 <h4 class="pdoc-member-header" id="UserArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L267">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L264">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7680,7 +7688,7 @@ The state of this user. Possible values are `active`, `blocked` and `pending`.
 The Identifier for this User, which must be unique within the API Management Service. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L178">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -7690,7 +7698,7 @@ The Identifier for this User, which must be unique within the API Management Ser
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-apiManagementName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L185">property <b>apiManagementName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L182">property <b>apiManagementName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiManagementName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7698,7 +7706,7 @@ Input properties used for looking up and filtering User resources.
 The name of the API Management Service in which the User should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="UserState-confirmation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L189">property <b>confirmation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L186">property <b>confirmation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>confirmation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7706,7 +7714,7 @@ The name of the API Management Service in which the User should be created. Chan
 The kind of confirmation email which will be sent to this user. Possible values are `invite` and `signup`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="UserState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L193">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L190">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7714,7 +7722,7 @@ The kind of confirmation email which will be sent to this user. Possible values 
 The email address associated with this user.
 
 <h4 class="pdoc-member-header" id="UserState-firstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L197">property <b>firstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L194">property <b>firstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7722,7 +7730,7 @@ The email address associated with this user.
 The first name for this user.
 
 <h4 class="pdoc-member-header" id="UserState-lastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L201">property <b>lastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L198">property <b>lastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7730,7 +7738,7 @@ The first name for this user.
 The last name for this user.
 
 <h4 class="pdoc-member-header" id="UserState-note">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L205">property <b>note</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L202">property <b>note</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>note?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7738,7 +7746,7 @@ The last name for this user.
 A note about this user.
 
 <h4 class="pdoc-member-header" id="UserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L209">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L206">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7746,7 +7754,7 @@ A note about this user.
 The password associated with this user.
 
 <h4 class="pdoc-member-header" id="UserState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L213">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L210">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7754,7 +7762,7 @@ The password associated with this user.
 The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="UserState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L217">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L214">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7762,7 +7770,7 @@ The name of the Resource Group in which the API Management Service exists. Chang
 The state of this user. Possible values are `active`, `blocked` and `pending`.
 
 <h4 class="pdoc-member-header" id="UserState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/apimanagement/user.ts#L221">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/apimanagement/user.ts#L218">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

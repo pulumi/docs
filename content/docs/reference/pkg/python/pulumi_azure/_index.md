@@ -30,6 +30,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="containerservice/">containerservice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="core/">core</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmosdb/">cosmosdb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dashboard/">dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="databricks/">databricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datafactory/">datafactory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datalake/">datalake</a></li>

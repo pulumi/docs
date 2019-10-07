@@ -1115,7 +1115,7 @@ Allowable values are <code class="docutils literal notranslate"><span class="pre
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is Encryption enabled on this Managed Disk? Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">keyEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_encryption_key</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL to the Key Vault Key used as the Key Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Secret</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL to the Key Vault Key used as the Key Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Key</span></code> resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL of the Key Vault. This can be found as <code class="docutils literal notranslate"><span class="pre">vault_uri</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.KeyVault</span></code> resource.</p></li>
 </ul>
 </li>
@@ -1162,7 +1162,7 @@ If <code class="docutils literal notranslate"><span class="pre">create_option</s
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is Encryption enabled on this Managed Disk? Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">keyEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_encryption_key</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL to the Key Vault Key used as the Key Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Secret</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL to the Key Vault Key used as the Key Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Key</span></code> resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL of the Key Vault. This can be found as <code class="docutils literal notranslate"><span class="pre">vault_uri</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.KeyVault</span></code> resource.</p></li>
 </ul>
 </li>
@@ -1282,7 +1282,7 @@ Allowable values are <code class="docutils literal notranslate"><span class="pre
 <li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is Encryption enabled on this Managed Disk? Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">keyEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_encryption_key</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL to the Key Vault Key used as the Key Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Secret</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL to the Key Vault Key used as the Key Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Key</span></code> resource.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL of the Key Vault. This can be found as <code class="docutils literal notranslate"><span class="pre">vault_uri</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.KeyVault</span></code> resource.</p></li>
 </ul>
 </li>
@@ -2735,7 +2735,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>os_profile</strong> object supports the following:</p>
@@ -2870,7 +2870,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -3112,7 +3112,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>os_profile</strong> object supports the following:</p>

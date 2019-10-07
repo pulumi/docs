@@ -19,7 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_azure.servicebus.AwaitableGetNamespaceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">AwaitableGetNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.AwaitableGetNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">AwaitableGetNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_redundant=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.AwaitableGetNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -60,7 +60,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_azure.servicebus.GetNamespaceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">GetNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">GetNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_redundant=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNamespace.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.servicebus.GetNamespaceResult.capacity">
@@ -113,6 +113,12 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.servicebus.GetNamespaceResult.zone_redundant">
+<code class="sig-name descname">zone_redundant</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceResult.zone_redundant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not this ServiceBus Namespace is zone redundant.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.servicebus.GetNamespaceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.GetNamespaceResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -122,7 +128,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="class">
 <dt id="pulumi_azure.servicebus.Namespace">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">Namespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Namespace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">Namespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_redundant=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a ServiceBus Namespace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -137,6 +143,7 @@ new resource to be created.</p></li>
 create the namespace.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines which tier to use. Options are basic, standard or premium.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>zone_redundant</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not this resource is zone redundant. <code class="docutils literal notranslate"><span class="pre">sku</span></code> needs to be <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -207,9 +214,15 @@ create the namespace.</p>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_azure.servicebus.Namespace.zone_redundant">
+<code class="sig-name descname">zone_redundant</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.Namespace.zone_redundant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not this resource is zone redundant. <code class="docutils literal notranslate"><span class="pre">sku</span></code> needs to be <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.servicebus.Namespace.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Namespace.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_redundant=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Namespace.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Namespace resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -232,6 +245,7 @@ new resource to be created.</p></li>
 create the namespace.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines which tier to use. Options are basic, standard or premium.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>zone_redundant</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not this resource is zone redundant. <code class="docutils literal notranslate"><span class="pre">sku</span></code> needs to be <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd>
 </dl>

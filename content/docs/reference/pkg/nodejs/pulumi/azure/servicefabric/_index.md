@@ -32,7 +32,7 @@ meta_desc: "Explore members of the servicefabric module in the @pulumi/azure pac
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L43">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -73,7 +73,7 @@ const testCluster = new azure.servicefabric.Cluster("test", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/service_fabric_cluster.html.markdown.
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L145"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L145"> <b>constructor</b></a>
 </h4>
 
 
@@ -87,7 +87,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -98,14 +98,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -116,7 +116,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-addOnFeatures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L73">property <b>addOnFeatures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L73">property <b>addOnFeatures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addOnFeatures: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A List of one or more features which should be enabled, such as `DnsService`.
 
 <h4 class="pdoc-member-header" id="Cluster-azureActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L77">property <b>azureActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L77">property <b>azureActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azureActiveDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterAzureActiveDirectory'>outputs.servicefabric.ClusterAzureActiveDirectory</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -132,7 +132,7 @@ A List of one or more features which should be enabled, such as `DnsService`.
 An `azureActiveDirectory` block as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L81">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L81">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificate'>outputs.servicefabric.ClusterCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ An `azureActiveDirectory` block as defined below.
 A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 
 <h4 class="pdoc-member-header" id="Cluster-certificateCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L85">property <b>certificateCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L85">property <b>certificateCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateCommonNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificateCommonNames'>outputs.servicefabric.ClusterCertificateCommonNames</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -148,7 +148,7 @@ A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 
 <h4 class="pdoc-member-header" id="Cluster-clientCertificateThumbprints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L89">property <b>clientCertificateThumbprints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L89">property <b>clientCertificateThumbprints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientCertificateThumbprints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterClientCertificateThumbprint'>outputs.servicefabric.ClusterClientCertificateThumbprint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -156,7 +156,7 @@ A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 One or two `clientCertificateThumbprint` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterCodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L93">property <b>clusterCodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L93">property <b>clusterCodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterCodeVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ One or two `clientCertificateThumbprint` blocks as defined below.
 Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster Code of the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L97">property <b>clusterEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L97">property <b>clusterEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster C
 The Cluster Endpoint for this Service Fabric Cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-diagnosticsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L101">property <b>diagnosticsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L101">property <b>diagnosticsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diagnosticsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterDiagnosticsConfig'>outputs.servicefabric.ClusterDiagnosticsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ The Cluster Endpoint for this Service Fabric Cluster.
 A `diagnosticsConfig` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-fabricSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L105">property <b>fabricSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L105">property <b>fabricSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fabricSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterFabricSetting'>outputs.servicefabric.ClusterFabricSetting</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ A `diagnosticsConfig` block as defined below. Changing this forces a new resourc
 One or more `fabricSettings` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -197,7 +197,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L109">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L109">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-managementEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L113">property <b>managementEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L113">property <b>managementEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managementEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ Specifies the Azure Region where the Service Fabric Cluster should exist. Changi
 Specifies the Management Endpoint of the cluster such as `http://example.com`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ Specifies the Management Endpoint of the cluster such as `http://example.com`. C
 The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-nodeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L121">property <b>nodeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L121">property <b>nodeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterNodeType'>outputs.servicefabric.ClusterNodeType</a>[]&gt;;</code></pre>
@@ -229,7 +229,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 One or more `nodeType` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-reliabilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L125">property <b>reliabilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L125">property <b>reliabilityLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reliabilityLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ One or more `nodeType` blocks as defined below.
 Specifies the Reliability Level of the Cluster. Possible values include `None`, `Bronze`, `Silver`, `Gold` and `Platinum`.
 
 <h4 class="pdoc-member-header" id="Cluster-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L129">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L129">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ Specifies the Reliability Level of the Cluster. Possible values include `None`, 
 The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-reverseProxyCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L133">property <b>reverseProxyCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L133">property <b>reverseProxyCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reverseProxyCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterReverseProxyCertificate'>outputs.servicefabric.ClusterReverseProxyCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ The name of the Resource Group in which the Service Fabric Cluster exists. Chang
 A `reverseProxyCertificate` block as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L137">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L137">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -261,7 +261,7 @@ A `reverseProxyCertificate` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Cluster-upgradeMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L141">property <b>upgradeMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L141">property <b>upgradeMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>upgradeMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ A mapping of tags to assign to the resource.
 Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `Manual`.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -278,7 +278,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vmImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L145">property <b>vmImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L145">property <b>vmImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vmImage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. 
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L314">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L314">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -299,7 +299,7 @@ Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. 
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-addOnFeatures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L318">property <b>addOnFeatures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L318">property <b>addOnFeatures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addOnFeatures?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -307,7 +307,7 @@ The set of arguments for constructing a Cluster resource.
 A List of one or more features which should be enabled, such as `DnsService`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-azureActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L322">property <b>azureActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L322">property <b>azureActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterAzureActiveDirectory'>inputs.servicefabric.ClusterAzureActiveDirectory</a>&gt;;</code></pre>
@@ -315,7 +315,7 @@ A List of one or more features which should be enabled, such as `DnsService`.
 An `azureActiveDirectory` block as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L326">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L326">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificate'>inputs.servicefabric.ClusterCertificate</a>&gt;;</code></pre>
@@ -323,7 +323,7 @@ An `azureActiveDirectory` block as defined below.
 A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-certificateCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L330">property <b>certificateCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L330">property <b>certificateCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificateCommonNames'>inputs.servicefabric.ClusterCertificateCommonNames</a>&gt;;</code></pre>
@@ -331,7 +331,7 @@ A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clientCertificateThumbprints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L334">property <b>clientCertificateThumbprints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L334">property <b>clientCertificateThumbprints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificateThumbprints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateThumbprint'>inputs.servicefabric.ClusterClientCertificateThumbprint</a>&gt;[]&gt;;</code></pre>
@@ -339,7 +339,7 @@ A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 One or two `clientCertificateThumbprint` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterCodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L338">property <b>clusterCodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L338">property <b>clusterCodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -347,7 +347,7 @@ One or two `clientCertificateThumbprint` blocks as defined below.
 Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster Code of the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-diagnosticsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L342">property <b>diagnosticsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L342">property <b>diagnosticsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diagnosticsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterDiagnosticsConfig'>inputs.servicefabric.ClusterDiagnosticsConfig</a>&gt;;</code></pre>
@@ -355,7 +355,7 @@ Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster C
 A `diagnosticsConfig` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-fabricSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L346">property <b>fabricSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L346">property <b>fabricSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fabricSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterFabricSetting'>inputs.servicefabric.ClusterFabricSetting</a>&gt;[]&gt;;</code></pre>
@@ -363,7 +363,7 @@ A `diagnosticsConfig` block as defined below. Changing this forces a new resourc
 One or more `fabricSettings` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L350">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L350">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ One or more `fabricSettings` blocks as defined below.
 Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-managementEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L354">property <b>managementEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L354">property <b>managementEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managementEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ Specifies the Azure Region where the Service Fabric Cluster should exist. Changi
 Specifies the Management Endpoint of the cluster such as `http://example.com`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L358">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L358">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ Specifies the Management Endpoint of the cluster such as `http://example.com`. C
 The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L362">property <b>nodeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L362">property <b>nodeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeType'>inputs.servicefabric.ClusterNodeType</a>&gt;[]&gt;;</code></pre>
@@ -395,7 +395,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 One or more `nodeType` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-reliabilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L366">property <b>reliabilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L366">property <b>reliabilityLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reliabilityLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -403,7 +403,7 @@ One or more `nodeType` blocks as defined below.
 Specifies the Reliability Level of the Cluster. Possible values include `None`, `Bronze`, `Silver`, `Gold` and `Platinum`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L370">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L370">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -411,7 +411,7 @@ Specifies the Reliability Level of the Cluster. Possible values include `None`, 
 The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-reverseProxyCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L374">property <b>reverseProxyCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L374">property <b>reverseProxyCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reverseProxyCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificate'>inputs.servicefabric.ClusterReverseProxyCertificate</a>&gt;;</code></pre>
@@ -419,7 +419,7 @@ The name of the Resource Group in which the Service Fabric Cluster exists. Chang
 A `reverseProxyCertificate` block as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L378">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L378">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -427,7 +427,7 @@ A `reverseProxyCertificate` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-upgradeMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L382">property <b>upgradeMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L382">property <b>upgradeMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upgradeMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -435,7 +435,7 @@ A mapping of tags to assign to the resource.
 Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `Manual`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vmImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L386">property <b>vmImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L386">property <b>vmImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vmImage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -443,7 +443,7 @@ Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `M
 Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L232">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L232">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -453,7 +453,7 @@ Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. 
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-addOnFeatures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L236">property <b>addOnFeatures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L236">property <b>addOnFeatures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addOnFeatures?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -461,7 +461,7 @@ Input properties used for looking up and filtering Cluster resources.
 A List of one or more features which should be enabled, such as `DnsService`.
 
 <h4 class="pdoc-member-header" id="ClusterState-azureActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L240">property <b>azureActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L240">property <b>azureActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterAzureActiveDirectory'>inputs.servicefabric.ClusterAzureActiveDirectory</a>&gt;;</code></pre>
@@ -469,7 +469,7 @@ A List of one or more features which should be enabled, such as `DnsService`.
 An `azureActiveDirectory` block as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L244">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L244">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificate'>inputs.servicefabric.ClusterCertificate</a>&gt;;</code></pre>
@@ -477,7 +477,7 @@ An `azureActiveDirectory` block as defined below.
 A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 
 <h4 class="pdoc-member-header" id="ClusterState-certificateCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L248">property <b>certificateCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L248">property <b>certificateCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificateCommonNames'>inputs.servicefabric.ClusterCertificateCommonNames</a>&gt;;</code></pre>
@@ -485,7 +485,7 @@ A `certificate` block as defined below. Conflicts with `certificateCommonNames`.
 A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 
 <h4 class="pdoc-member-header" id="ClusterState-clientCertificateThumbprints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L252">property <b>clientCertificateThumbprints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L252">property <b>clientCertificateThumbprints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificateThumbprints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateThumbprint'>inputs.servicefabric.ClusterClientCertificateThumbprint</a>&gt;[]&gt;;</code></pre>
@@ -493,7 +493,7 @@ A `certificateCommonNames` block as defined below. Conflicts with `certificate`.
 One or two `clientCertificateThumbprint` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterCodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L256">property <b>clusterCodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L256">property <b>clusterCodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ One or two `clientCertificateThumbprint` blocks as defined below.
 Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster Code of the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L260">property <b>clusterEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L260">property <b>clusterEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ Required if Upgrade Mode set to `Manual`, Specifies the Version of the Cluster C
 The Cluster Endpoint for this Service Fabric Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-diagnosticsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L264">property <b>diagnosticsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L264">property <b>diagnosticsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diagnosticsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterDiagnosticsConfig'>inputs.servicefabric.ClusterDiagnosticsConfig</a>&gt;;</code></pre>
@@ -517,7 +517,7 @@ The Cluster Endpoint for this Service Fabric Cluster.
 A `diagnosticsConfig` block as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-fabricSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L268">property <b>fabricSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L268">property <b>fabricSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fabricSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterFabricSetting'>inputs.servicefabric.ClusterFabricSetting</a>&gt;[]&gt;;</code></pre>
@@ -525,7 +525,7 @@ A `diagnosticsConfig` block as defined below. Changing this forces a new resourc
 One or more `fabricSettings` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L272">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L272">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ One or more `fabricSettings` blocks as defined below.
 Specifies the Azure Region where the Service Fabric Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-managementEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L276">property <b>managementEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L276">property <b>managementEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managementEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ Specifies the Azure Region where the Service Fabric Cluster should exist. Changi
 Specifies the Management Endpoint of the cluster such as `http://example.com`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L280">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L280">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -549,7 +549,7 @@ Specifies the Management Endpoint of the cluster such as `http://example.com`. C
 The name of the Service Fabric Cluster. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-nodeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L284">property <b>nodeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L284">property <b>nodeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeType'>inputs.servicefabric.ClusterNodeType</a>&gt;[]&gt;;</code></pre>
@@ -557,7 +557,7 @@ The name of the Service Fabric Cluster. Changing this forces a new resource to b
 One or more `nodeType` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-reliabilityLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L288">property <b>reliabilityLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L288">property <b>reliabilityLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reliabilityLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -565,7 +565,7 @@ One or more `nodeType` blocks as defined below.
 Specifies the Reliability Level of the Cluster. Possible values include `None`, `Bronze`, `Silver`, `Gold` and `Platinum`.
 
 <h4 class="pdoc-member-header" id="ClusterState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L292">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L292">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -573,7 +573,7 @@ Specifies the Reliability Level of the Cluster. Possible values include `None`, 
 The name of the Resource Group in which the Service Fabric Cluster exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-reverseProxyCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L296">property <b>reverseProxyCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L296">property <b>reverseProxyCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reverseProxyCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificate'>inputs.servicefabric.ClusterReverseProxyCertificate</a>&gt;;</code></pre>
@@ -581,7 +581,7 @@ The name of the Resource Group in which the Service Fabric Cluster exists. Chang
 A `reverseProxyCertificate` block as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L300">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L300">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -589,7 +589,7 @@ A `reverseProxyCertificate` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterState-upgradeMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L304">property <b>upgradeMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L304">property <b>upgradeMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upgradeMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -597,7 +597,7 @@ A mapping of tags to assign to the resource.
 Specifies the Upgrade Mode of the cluster. Possible values are `Automatic` or `Manual`.
 
 <h4 class="pdoc-member-header" id="ClusterState-vmImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/6a05c6de2b86d12e39ec146ad23c69c503ab3cf8/sdk/nodejs/servicefabric/cluster.ts#L308">property <b>vmImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/servicefabric/cluster.ts#L308">property <b>vmImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vmImage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

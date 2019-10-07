@@ -180,7 +180,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.AwaitableGetServiceBusNamespaceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">AwaitableGetServiceBusNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.AwaitableGetServiceBusNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">AwaitableGetServiceBusNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_redundant=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.AwaitableGetServiceBusNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1045,7 +1045,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.EventHubNamespace">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">EventHubNamespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_inflate_enabled=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">kafka_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">maximum_throughput_units=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">EventHubNamespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_inflate_enabled=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">kafka_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">maximum_throughput_units=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_rulesets=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EventHub Namespace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1053,17 +1053,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_inflate_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Auto Inflate enabled for the EventHub Namespace?</p></li>
-<li><p><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the Capacity / Throughput Units for a <code class="docutils literal notranslate"><span class="pre">Standard</span></code> SKU namespace. Valid values range from 1 - 20.</p></li>
+<li><p><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the Capacity / Throughput Units for a <code class="docutils literal notranslate"><span class="pre">Standard</span></code> SKU namespace. Valid values range from <code class="docutils literal notranslate"><span class="pre">1</span></code> - <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p></li>
 <li><p><strong>kafka_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Kafka enabled for the EventHub Namespace? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>maximum_throughput_units</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.</p></li>
+<li><p><strong>maximum_throughput_units</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from <code class="docutils literal notranslate"><span class="pre">1</span></code> - <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>network_rulesets</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">network_rulesets</span></code> block as defined below.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines which tier to use. Valid options are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>network_rulesets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipRule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipMask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace.html.markdown</a>.</p>
 </div></blockquote>
@@ -1076,7 +1093,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventHubNamespace.capacity">
 <code class="sig-name descname">capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace.capacity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the Capacity / Throughput Units for a <code class="docutils literal notranslate"><span class="pre">Standard</span></code> SKU namespace. Valid values range from 1 - 20.</p>
+<dd><p>Specifies the Capacity / Throughput Units for a <code class="docutils literal notranslate"><span class="pre">Standard</span></code> SKU namespace. Valid values range from <code class="docutils literal notranslate"><span class="pre">1</span></code> - <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1120,13 +1137,34 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventHubNamespace.maximum_throughput_units">
 <code class="sig-name descname">maximum_throughput_units</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace.maximum_throughput_units" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.</p>
+<dd><p>Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from <code class="docutils literal notranslate"><span class="pre">1</span></code> - <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventHubNamespace.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.EventHubNamespace.network_rulesets">
+<code class="sig-name descname">network_rulesets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace.network_rulesets" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">network_rulesets</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipRule</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipMask</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1149,7 +1187,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="method">
 <dt id="pulumi_azure.eventhub.EventHubNamespace.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_inflate_enabled=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">kafka_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">maximum_throughput_units=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_inflate_enabled=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">kafka_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">maximum_throughput_units=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_rulesets=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventHubNamespace resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1159,7 +1197,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_inflate_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Auto Inflate enabled for the EventHub Namespace?</p></li>
-<li><p><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the Capacity / Throughput Units for a <code class="docutils literal notranslate"><span class="pre">Standard</span></code> SKU namespace. Valid values range from 1 - 20.</p></li>
+<li><p><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the Capacity / Throughput Units for a <code class="docutils literal notranslate"><span class="pre">Standard</span></code> SKU namespace. Valid values range from <code class="docutils literal notranslate"><span class="pre">1</span></code> - <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p></li>
 <li><p><strong>default_primary_connection_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary connection string for the authorization
 rule <code class="docutils literal notranslate"><span class="pre">RootManageSharedAccessKey</span></code>.</p></li>
 <li><p><strong>default_primary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary access key for the authorization rule <code class="docutils literal notranslate"><span class="pre">RootManageSharedAccessKey</span></code>.</p></li>
@@ -1168,14 +1206,31 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 <li><p><strong>default_secondary_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secondary access key for the authorization rule <code class="docutils literal notranslate"><span class="pre">RootManageSharedAccessKey</span></code>.</p></li>
 <li><p><strong>kafka_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Kafka enabled for the EventHub Namespace? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>maximum_throughput_units</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.</p></li>
+<li><p><strong>maximum_throughput_units</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from <code class="docutils literal notranslate"><span class="pre">1</span></code> - <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>network_rulesets</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">network_rulesets</span></code> block as defined below.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines which tier to use. Valid options are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>network_rulesets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipRule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipMask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace.html.markdown</a>.</p>
 </div></blockquote>
@@ -1636,6 +1691,118 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">EventhubNamespaceDisasterRecoveryConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternate_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">partner_namespace_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Disaster Recovery Config for an Event Hub Namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>alternate_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An alternate name to use when the Disaster Recovery Config’s name is the same as the replicated namespace’s name.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Disaster Recovery Config. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the primary EventHub Namespace to replicate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>partner_namespace_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the EventHub Namespace to replicate to.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Disaster Recovery Config exists. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace_disaster_recovery_config.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace_disaster_recovery_config.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.alternate_name">
+<code class="sig-name descname">alternate_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.alternate_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>An alternate name to use when the Disaster Recovery Config’s name is the same as the replicated namespace’s name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Disaster Recovery Config. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.namespace_name">
+<code class="sig-name descname">namespace_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.namespace_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the primary EventHub Namespace to replicate. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.partner_namespace_id">
+<code class="sig-name descname">partner_namespace_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.partner_namespace_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the EventHub Namespace to replicate to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which the Disaster Recovery Config exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternate_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">partner_namespace_id=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing EventhubNamespaceDisasterRecoveryConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>alternate_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An alternate name to use when the Disaster Recovery Config’s name is the same as the replicated namespace’s name.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Disaster Recovery Config. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the primary EventHub Namespace to replicate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>partner_namespace_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the EventHub Namespace to replicate to.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Disaster Recovery Config exists. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace_disaster_recovery_config.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_namespace_disaster_recovery_config.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventhubNamespaceDisasterRecoveryConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.eventhub.GetEventhubNamespaceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">GetEventhubNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">auto_inflate_enabled=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">kafka_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">maximum_throughput_units=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.GetEventhubNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEventhubNamespace.</p>
@@ -1785,7 +1952,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">GetServiceBusNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">GetServiceBusNamespaceResult</code><span class="sig-paren">(</span><em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_redundant=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServiceBusNamespace.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.capacity">
@@ -1838,6 +2005,12 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.zone_redundant">
+<code class="sig-name descname">zone_redundant</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.zone_redundant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not this ServiceBus Namespace is zone redundant.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -1847,7 +2020,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.Namespace">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">Namespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Namespace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventhub.</code><code class="sig-name descname">Namespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_redundant=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a ServiceBus Namespace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1862,6 +2035,7 @@ new resource to be created.</p></li>
 create the namespace.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines which tier to use. Options are basic, standard or premium.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>zone_redundant</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not this resource is zone redundant. <code class="docutils literal notranslate"><span class="pre">sku</span></code> needs to be <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1932,9 +2106,15 @@ create the namespace.</p>
 <dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.Namespace.zone_redundant">
+<code class="sig-name descname">zone_redundant</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Namespace.zone_redundant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not this resource is zone redundant. <code class="docutils literal notranslate"><span class="pre">sku</span></code> needs to be <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.eventhub.Namespace.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Namespace.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">default_primary_connection_string=None</em>, <em class="sig-param">default_primary_key=None</em>, <em class="sig-param">default_secondary_connection_string=None</em>, <em class="sig-param">default_secondary_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_redundant=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Namespace.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Namespace resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1957,6 +2137,7 @@ new resource to be created.</p></li>
 create the namespace.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines which tier to use. Options are basic, standard or premium.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>zone_redundant</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not this resource is zone redundant. <code class="docutils literal notranslate"><span class="pre">sku</span></code> needs to be <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd>
 </dl>

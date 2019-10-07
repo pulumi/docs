@@ -290,7 +290,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.frontdoor.Frontdoor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.frontdoor.</code><code class="sig-name descname">Frontdoor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_pools=None</em>, <em class="sig-param">backend_pool_health_probes=None</em>, <em class="sig-param">backend_pool_load_balancings=None</em>, <em class="sig-param">enforce_backend_pools_certificate_name_check=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">frontend_endpoints=None</em>, <em class="sig-param">load_balancer_enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">routing_rules=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage an Azure Front Door instance.</p>
+<dd><p>Manages an Azure Front Door instance.</p>
 <p>Azure Front Door Service is Microsoft’s highly available and scalable web application acceleration platform and global HTTP(s) load balancer. It provides built-in DDoS protection and application layer security and caching. Front Door enables you to build applications that maximize and automate high-availability and performance for your end-users. Use Front Door with Azure services including Web/Mobile Apps, Cloud Services and Virtual Machines – or combine it with on-premises services for hybrid deployments and smooth cloud migration.</p>
 <p>Below are some of the key scenarios that Azure Front Door Service addresses:</p>
 <ul class="simple">
@@ -306,11 +306,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>backend_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool</span></code> block as defined below.</p></li>
 <li><p><strong>backend_pool_health_probes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool_health_probe</span></code> block as defined below.</p></li>
 <li><p><strong>backend_pool_load_balancings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool_load_balancing</span></code> block as defined below.</p></li>
+<li><p><strong>enforce_backend_pools_certificate_name_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests. Permitted values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for the Front Door service.</p></li>
 <li><p><strong>frontend_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">frontend_endpoint</span></code> block as defined below.</p></li>
 <li><p><strong>load_balancer_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Operational status of the Front Door load balancer. Permitted values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource location. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Front Door which is globally unique. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Resource group within the Azure subscription. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>routing_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">routing_rule</span></code> block as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource tags.</p></li>
 </ul>
@@ -457,6 +459,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.frontdoor.Frontdoor.enforce_backend_pools_certificate_name_check">
+<code class="sig-name descname">enforce_backend_pools_certificate_name_check</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.enforce_backend_pools_certificate_name_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests. Permitted values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.frontdoor.Frontdoor.friendly_name">
 <code class="sig-name descname">friendly_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.friendly_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A friendly name for the Front Door service.</p>
@@ -503,6 +511,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.frontdoor.Frontdoor.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the Front Door which is globally unique. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.frontdoor.Frontdoor.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.frontdoor.Frontdoor.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the Resource group within the Azure subscription. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -559,11 +573,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>backend_pool_health_probes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool_health_probe</span></code> block as defined below.</p></li>
 <li><p><strong>backend_pool_load_balancings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">backend_pool_load_balancing</span></code> block as defined below.</p></li>
 <li><p><strong>cname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host that each frontendEndpoint must CNAME to.</p></li>
+<li><p><strong>enforce_backend_pools_certificate_name_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests. Permitted values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>friendly_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for the Front Door service.</p></li>
 <li><p><strong>frontend_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">frontend_endpoint</span></code> block as defined below.</p></li>
 <li><p><strong>load_balancer_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Operational status of the Front Door load balancer. Permitted values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Resource location. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Front Door which is globally unique. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Resource group within the Azure subscription. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>routing_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">routing_rule</span></code> block as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource tags.</p></li>
 </ul>

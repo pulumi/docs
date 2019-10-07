@@ -23,7 +23,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS A Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv4 Addresses.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
 </ul>
@@ -47,7 +47,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.dns.ARecord.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.ARecord.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -75,7 +75,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS A Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv4 Addresses.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
 </ul>
@@ -135,7 +135,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS AAAA Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv6 Addresses.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
 </ul>
@@ -159,7 +159,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.dns.AaaaRecord.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.AaaaRecord.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -187,7 +187,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS AAAA Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv6 Addresses.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
 </ul>
@@ -252,7 +252,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS CNAME Record.</p></li>
 <li><p><strong>record</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target of the CNAME.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
 </ul>
@@ -276,7 +276,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.dns.CNameRecord.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.CNameRecord.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -304,7 +304,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS CNAME Record.</p></li>
 <li><p><strong>record</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target of the CNAME.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
 </ul>
@@ -364,7 +364,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS CAA Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the CAA record. Each <code class="docutils literal notranslate"><span class="pre">record</span></code> block supports fields documented below.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
 <li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
@@ -400,7 +400,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.dns.CaaRecord.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.CaaRecord.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -434,7 +434,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DNS CAA Record.</p></li>
 <li><p><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of values that make up the CAA record. Each <code class="docutils literal notranslate"><span class="pre">record</span></code> block supports fields documented below.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
 <li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
@@ -558,7 +558,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
-<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -607,7 +607,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.dns.MxRecord.zone_name">
 <code class="sig-name descname">zone_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.MxRecord.zone_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -626,7 +626,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
-<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -693,7 +693,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
-<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -746,7 +746,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.dns.NsRecord.zone_name">
 <code class="sig-name descname">zone_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.NsRecord.zone_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -766,7 +766,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
-<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -831,7 +831,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
-<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -871,7 +871,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.dns.PtrRecord.zone_name">
 <code class="sig-name descname">zone_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.PtrRecord.zone_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -890,7 +890,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
-<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -951,7 +951,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
-<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1004,7 +1004,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.dns.SrvRecord.zone_name">
 <code class="sig-name descname">zone_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.SrvRecord.zone_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1023,7 +1023,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
-<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1091,7 +1091,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
-<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1138,7 +1138,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.dns.TxtRecord.zone_name">
 <code class="sig-name descname">zone_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.dns.TxtRecord.zone_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1157,7 +1157,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Time To Live (TTL) of the DNS record in seconds.</p></li>
-<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zone_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
