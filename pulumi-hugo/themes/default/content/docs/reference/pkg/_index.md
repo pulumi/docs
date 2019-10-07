@@ -66,7 +66,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**PostgreSQL** (`@pulumi/postgresql`)]({{< relref "nodejs/pulumi/postgresql" >}})
 * [**Terraform** (`@pulumi/terraform`)]({{< relref "nodejs/pulumi/terraform" >}})
 * [**TLS** (`@pulumi/tls`)]({{< relref "nodejs/pulumi/tls" >}})
-* [**Hashicorp Vault** (`@pulumi/vsphere`)]({{< relref "nodejs/pulumi/vault" >}})
+* [**Hashicorp Vault** (`@pulumi/vault`)]({{< relref "nodejs/pulumi/vault" >}})
 * [**vSphere** (`@pulumi/vsphere`)]({{< relref "nodejs/pulumi/vsphere" >}})
 {{% /lang %}}
 
@@ -90,7 +90,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**Packet** (`pulumi_packet`)]({{< relref "python/pulumi_packet" >}})
 * [**PostgreSQL** (`pulumi_postgresql`)]({{< relref "python/pulumi_postgresql" >}})
 * [**TLS** (`pulumi_tls`)]({{< relref "python/pulumi_tls" >}})
-* [**Hashicorp Vault** (`pulumi_vsphere`)]({{< relref "python/pulumi_vault" >}})
+* [**Hashicorp Vault** (`pulumi_vault`)]({{< relref "python/pulumi_vault" >}})
 * [**vSphere** (`pulumi_vsphere`)]({{< relref "python/pulumi_vsphere" >}})
 {{% /lang %}}
 
