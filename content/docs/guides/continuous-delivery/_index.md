@@ -55,7 +55,7 @@ within a [generic CI/CD system]({{< relref "other.md" >}}).
         <h4 class="no-anchor">Jenkins</h4>
     </a>
     <a href="{{< relref octopus-deploy >}}">
-        <img src="/logos/tech/ci-cd/octopus-deploy.svg" alt="Jenkins">
+        <img src="/logos/tech/ci-cd/octopus-deploy.svg" alt="Octopus Deploy">
         <h4 class="no-anchor">Octopus Deploy</h4>
     </a>
     <a href="{{< relref travis >}}">

@@ -7,7 +7,7 @@ menu:
         weight: 1
 ---
 
-[Octopus Deploy](https://octopus.com) is a deployment automation server, designed to make it easy to orchestrate releases and deploy applications, whether on-premises or in the cloud. Octopus is unlike a traditional CI system. In fact, Octopus is not a CI system. However, it can integrate with your existing build pipeline and integrate with several of your existing CI systems, like Jenkins, TeamCity, Azure DevOps etc.
+[Octopus Deploy](https://octopus.com) is a deployment automation server, designed to make it easy to orchestrate releases and deploy applications, whether on-premises or in the cloud. It can integrate with your existing build pipeline such as Jenkins, TeamCity, Azure DevOps etc.
 
 ## Prerequisites
 
@@ -16,38 +16,31 @@ menu:
 - The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
 - Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our [Get Started]({{< relref "/docs/get-started" >}}) guides or simply by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new.md" >}})
 and choosing one of the many templates that are available.
-- A bare repo and set the remote URL to be your GitHub project.
+- Optionally, also create a CI pipeline from a source control repository of your choice to be the source of packages. You will learn more about packages and how to create them later in this guide.
 
 ## Sample Project
 
 For the sake of this walkthrough, we will try to deploy the simple AWS example located [here](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate). The example deploys a containerized Python Flask app on [AWS Fargate](https://aws.amazon.com/fargate/). This example also shows a pattern that is common with Pulumi -- keeping your infrastructure app (Pulumi) with your actual application code, but certainly not necessary. Regardless of how you decide to structure your project, you will need to provide the package to Octopus somehow.
 
-Alternatively, you can also run `pulumi new [template]` to create a template project.
-Learn more [here]({{< ref "/docs/reference/cli/pulumi_new.md" >}}).
-
 ## Stack and Branch Mappings
 
-The scripts below act on a hypothetical stack: `homer/acme-org/python-app`.
-You can create a new stack by running [`pulumi stack init`]({{< relref "/docs/reference/cli/pulumi_stack_init.md" >}}) if you have already created a project.
+The steps below act on a hypothetical stack: `my-org/my-project/aws-ts-hello-fargate`.
+You can create a new stack by running [`pulumi stack init`]({{< relref "/docs/reference/cli/pulumi_stack_init.md" >}}) from the folder containing the `Pulumi.yaml` file.
 
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.
-
-## PULUMI_ACCESS_TOKEN
-
-To login non-interactively in to the CLI, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a [project variable](https://octopus.com/docs/deployment-process/variables). To create a new access token, go the [Access Tokens](https://app.pulumi.com/account/tokens) page on the Pulumi Console.
 
 ## Octopus Setup
 
 ### Infrastructure
 
-Infrastructure in Octopus is represented as deployment targets and workers (tentacles or SSH machines). Additionally, you can also have environments which is a logical grouping of deployment targets and workers that represents each of your environments.
+Infrastructure in Octopus is represented as environments, deployment targets and workers (tentacles or SSH machines). You could think of each environment as representing one of your Pulumi stacks. For example, if you are creating cloud infrastructure that represents your dev, staging and prod environments, each of those would typically map to a [Pulumi stack](https://www.pulumi.com/docs/intro/concepts/stack/), and hence you could create an Octopus environment for each of those.
 
 In a typical scenario where Pulumi is creating your cloud infrastructure, you will only need to a worker that can run the Pulumi CLI commands against your code package.
 
 ### Project
 
-A project represents the application being deployed. A project uses versioned packages (which you will read about in the following section) and uses variables during the deployment process.
+A project represents the application being deployed. A project uses versioned packages (which you will read about in the following section) and uses variables during the deployment process. A project also contains a deployment process which is a series of steps that are associated with "deploying" your project. A project can contain the actual runtime application (a Go service, or a Python Flask app etc.), as well as the infrastructure it requires.
 
 ### Packages
 
@@ -57,12 +50,9 @@ In order to create a package, Octopus offers several ways that you can integrate
 
 For Pulumi apps, you can simply package the entire Pulumi app and extract the bundled package onto a worker where the Pulumi CLI can access them.
 
-## Create and configure a project
+## Deployment Process
 
-A [deployment process](https://octopus.com/docs/deployment-process) is comprised of the following steps:
-
-- Configure Project Variables
-- Create the Process
+In order to create an [Octopus deployment process](https://octopus.com/docs/deployment-process), project variables need to be configured for each of the environments which
 
 ### Configure Project Variables
 You can configure your AWS Account and Azure Subscription credentials as project variables using the built-in `AWS Account` and `Azure Subscription` variable types. Before you can do that, though, you will need to add them to the **Accounts** section under **Infrastructure** in your Octopus instance.
@@ -70,6 +60,9 @@ You can configure your AWS Account and Azure Subscription credentials as project
 For other cloud providers, you will need to add the account credentials directly as a project variable using the appropriate built-in variable type.
 
 Variables can be scoped right down to the environment that can access them. For sensitive strings, be sure to set the right scopes so that the account credentials are not accidentally used by the wrong environments.
+
+#### PULUMI_ACCESS_TOKEN
+To run Pulumi commands non-interactively, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a [project variable](https://octopus.com/docs/deployment-process/variables). To create a new access token, go the [Access Tokens](https://app.pulumi.com/account/tokens) page on the Pulumi Console.
 
 ### Create the Process
 
@@ -100,14 +93,12 @@ A process consists of the steps to execute in a project. The following sections 
 
 - Click on **Add Step** again and search for `Pulumi` from the **Community Library Steps**.
 - Fill out the configuration as appropriate for your stack.
-  - For example, in the following screenshot the stack configuration is overridden using a
-file that is created in a separate **Run a script** step.
-  - It is not required that you override stack configuration. It was done here purely for demonstrating
-  the options you have with the Pulumi Step Template.
+  - In the following screenshot the stack configuration is overridden using a file that is created in a separate **Run a script** step.
+  - Overriding the stack configuration is not required. It was done here for demonstrating the use of the `--config-file` flag.
 ![Add Package Reference](/images/docs/guides/continuous-delivery/octopus-deploy/run-pulumi.png)
 
-The next steps are to simply create a release from the latest package from the package feed and deploy it.
-Click on **Releases** under the **Projects** tab and click on **Create Release**, and follow on-screen instructions.
+To deploy a package, create a release from the latest package using the appropriate package feed and deploy it to an environment.
+To do that, click on **Releases** under the **Projects** tab and click on **Create Release**, and follow the on-screen instructions.
 
 ## Additional Information
 
