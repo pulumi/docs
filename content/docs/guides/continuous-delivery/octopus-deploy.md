@@ -7,7 +7,7 @@ menu:
         weight: 1
 ---
 
-[Octopus](https://octopus.com) is a deployment automation server, designed to make it easy to orchestrate releases and deploy applications, whether on-premises or in the cloud. Octopus is unlike a traditional CI system. In fact, Octopus is not a CI system. However, it can integrate with your existing build pipeline and integrate with several of your existing CI systems, like Jenkins, TeamCity, Azure DevOps etc.
+[Octopus Deploy](https://octopus.com) is a deployment automation server, designed to make it easy to orchestrate releases and deploy applications, whether on-premises or in the cloud. Octopus is unlike a traditional CI system. In fact, Octopus is not a CI system. However, it can integrate with your existing build pipeline and integrate with several of your existing CI systems, like Jenkins, TeamCity, Azure DevOps etc.
 
 ## Prerequisites
 
