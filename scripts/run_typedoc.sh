@@ -93,6 +93,7 @@ REPOS=(
     "linode,pulumi-linode,sdk/nodejs"
     "mysql,pulumi-mysql,sdk/nodejs"
     "newrelic,pulumi-newrelic,sdk/nodejs"
+    "okta,pulumi-okta,sdk/nodejs"
     "openstack,pulumi-openstack,sdk/nodejs"
     "packet,pulumi-packet,sdk/nodejs"
     "postgresql,pulumi-postgresql,sdk/nodejs"

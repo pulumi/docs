@@ -23,6 +23,7 @@ TOOLS_REPOS=(
     "pulumi-linode"
     "pulumi-mysql"
     "pulumi-newrelic"
+    "pulumi-okta"
     "pulumi-openstack"
     "pulumi-packet"
     "pulumi-postgresql"

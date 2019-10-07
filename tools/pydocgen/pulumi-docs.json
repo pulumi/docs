@@ -86,6 +86,12 @@
       "terraform_provider_name": "openstack"
     },
     {
+      "name": "Pulumi Okta",
+      "package_name": "pulumi_okta",
+      "pulumi_provider_name": "okta",
+      "terraform_provider_name": "okta"
+    },
+    {
       "name": "Pulumi Linode",
       "package_name": "pulumi_linode",
       "pulumi_provider_name": "linode",
