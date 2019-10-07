@@ -75,6 +75,7 @@ A process consists of the steps to execute in a project. The following sections 
   - **Package feed**: Choose the appropriate source for your package.
   - **Package ID**: This is usually derived from your package, but enter a name of your choice. This ID will be used later.
   - **Package Name**: Enter any name.
+  
   ![Add Package Reference](/images/docs/guides/continuous-delivery/octopus-deploy/package-reference.png)
 - Select the **Run a Script**, fill out the following fields as follows:
   - **Script Source**: Inline source code
