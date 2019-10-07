@@ -316,7 +316,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.Certifiate.certificate_data">
 <code class="sig-name descname">certificate_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certifiate.certificate_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The raw Key Vault Certificate.</p>
+<dd><p>The raw Key Vault Certificate data represented as a hexadecimal string.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -402,7 +402,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.Certifiate.thumbprint">
 <code class="sig-name descname">thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certifiate.thumbprint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The X509 Thumbprint of the Key Vault Certificate returned as hex string.</p>
+<dd><p>The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -423,13 +423,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below, used to Import an existing certificate.</p></li>
-<li><p><strong>certificate_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The raw Key Vault Certificate.</p></li>
+<li><p><strong>certificate_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The raw Key Vault Certificate data represented as a hexadecimal string.</p></li>
 <li><p><strong>certificate_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate_policy</span></code> block as defined below.</p></li>
 <li><p><strong>key_vault_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Key Vault where the Certificate should be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated Key Vault Secret.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The X509 Thumbprint of the Key Vault Certificate returned as hex string.</p></li>
+<li><p><strong>thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current version of the Key Vault Certificate.</p></li>
 </ul>
 </dd>
@@ -622,7 +622,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.Certificate.certificate_data">
 <code class="sig-name descname">certificate_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.certificate_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The raw Key Vault Certificate.</p>
+<dd><p>The raw Key Vault Certificate data represented as a hexadecimal string.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -708,7 +708,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.Certificate.thumbprint">
 <code class="sig-name descname">thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.thumbprint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The X509 Thumbprint of the Key Vault Certificate returned as hex string.</p>
+<dd><p>The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -729,13 +729,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below, used to Import an existing certificate.</p></li>
-<li><p><strong>certificate_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The raw Key Vault Certificate.</p></li>
+<li><p><strong>certificate_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The raw Key Vault Certificate data represented as a hexadecimal string.</p></li>
 <li><p><strong>certificate_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate_policy</span></code> block as defined below.</p></li>
 <li><p><strong>key_vault_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Key Vault where the Certificate should be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated Key Vault Secret.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
-<li><p><strong>thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The X509 Thumbprint of the Key Vault Certificate returned as hex string.</p></li>
+<li><p><strong>thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current version of the Key Vault Certificate.</p></li>
 </ul>
 </dd>
@@ -1621,7 +1621,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>key_vault_id</strong> (<em>str</em>) – Specifies the ID of the Key Vault Key Vault instance where the Secret resides, available on the <code class="docutils literal notranslate"><span class="pre">keyvault.KeyVault</span></code> Data Source / Resource.</p></li>
+<li><p><strong>key_vault_id</strong> (<em>str</em>) – Specifies the ID of the Key Vault instance where the Secret resides, available on the <code class="docutils literal notranslate"><span class="pre">keyvault.KeyVault</span></code> Data Source / Resource.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Key Vault Secret.</p></li>
 </ul>
 </dd>

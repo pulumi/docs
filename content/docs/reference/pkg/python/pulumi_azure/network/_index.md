@@ -1230,6 +1230,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.network.AwaitableGetPublicIpPrefixResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetPublicIpPrefixResult</code><span class="sig-paren">(</span><em class="sig-param">ip_prefix=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">prefix_length=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetPublicIpPrefixResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.network.AwaitableGetRouteTableResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetRouteTableResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -3046,6 +3051,54 @@ in which the connection is created.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetPublicIPsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetPublicIPsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.network.GetPublicIpPrefixResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetPublicIpPrefixResult</code><span class="sig-paren">(</span><em class="sig-param">ip_prefix=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">prefix_length=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetPublicIpPrefixResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPublicIpPrefix.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetPublicIpPrefixResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetPublicIpPrefixResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The supported Azure location where the resource exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetPublicIpPrefixResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetPublicIpPrefixResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Public IP prefix resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetPublicIpPrefixResult.prefix_length">
+<code class="sig-name descname">prefix_length</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetPublicIpPrefixResult.prefix_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of bits of the prefix.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetPublicIpPrefixResult.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetPublicIpPrefixResult.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the public IP.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetPublicIpPrefixResult.sku">
+<code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetPublicIpPrefixResult.sku" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SKU of the Public IP Prefix.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetPublicIpPrefixResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetPublicIpPrefixResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetPublicIpPrefixResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetPublicIpPrefixResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -5110,6 +5163,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>container_network_interface</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">container_network_interface</span></code> block as documented below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</p></li>
@@ -5130,6 +5184,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/network_profile.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.network.Profile.container_network_interface">
+<code class="sig-name descname">container_network_interface</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Profile.container_network_interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">container_network_interface</span></code> block as documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.network.Profile.container_network_interface_ids">
 <code class="sig-name descname">container_network_interface_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Profile.container_network_interface_ids" title="Permalink to this definition">¶</a></dt>
@@ -5171,6 +5240,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>container_network_interface</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">container_network_interface</span></code> block as documented below.</p></li>
 <li><p><strong>container_network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more Resource IDs of Azure Container Network Interfaces.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
@@ -8046,6 +8116,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/public_ip.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/public_ip.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.network.get_public_ip_prefix">
+<code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">get_public_ip_prefix</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_public_ip_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Public IP Prefix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the public IP prefix.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/public_ip_prefix.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/public_ip_prefix.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

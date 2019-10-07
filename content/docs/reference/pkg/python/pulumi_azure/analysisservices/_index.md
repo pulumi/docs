@@ -14,7 +14,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.analysisservices"></span><dl class="class">
 <dt id="pulumi_azure.analysisservices.Server">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.analysisservices.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_users=None</em>, <em class="sig-param">enable_power_bi_service=None</em>, <em class="sig-param">ipv4_firewall_rules=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">querypool_connection_mode=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.analysisservices.Server" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.analysisservices.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_users=None</em>, <em class="sig-param">backup_blob_container_uri=None</em>, <em class="sig-param">enable_power_bi_service=None</em>, <em class="sig-param">ipv4_firewall_rules=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">querypool_connection_mode=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.analysisservices.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Analysis Services Server.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -22,6 +22,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>admin_users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of email addresses of admin users.</p></li>
+<li><p><strong>backup_blob_container_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI and SAS token for a blob container to store backups.</p></li>
 <li><p><strong>enable_power_bi_service</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the Power BI service is allowed to access or not.</p></li>
 <li><p><strong>ipv4_firewall_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">ipv4_firewall_rule</span></code> block(s) as defined below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where the Analysis Services Server exists. Changing this forces a new resource to be created.</p></li>
@@ -45,6 +46,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.analysisservices.Server.admin_users">
 <code class="sig-name descname">admin_users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.analysisservices.Server.admin_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of email addresses of admin users.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.analysisservices.Server.backup_blob_container_uri">
+<code class="sig-name descname">backup_blob_container_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.analysisservices.Server.backup_blob_container_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI and SAS token for a blob container to store backups.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -89,6 +96,12 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.analysisservices.Server.server_full_name">
+<code class="sig-name descname">server_full_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.analysisservices.Server.server_full_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full name of the Analysis Services Server.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.analysisservices.Server.sku">
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.analysisservices.Server.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>SKU for the Analysis Services Server. Possible values are: <code class="docutils literal notranslate"><span class="pre">D1</span></code>, <code class="docutils literal notranslate"><span class="pre">B1</span></code>, <code class="docutils literal notranslate"><span class="pre">B2</span></code>, <code class="docutils literal notranslate"><span class="pre">S0</span></code>, <code class="docutils literal notranslate"><span class="pre">S1</span></code>, <code class="docutils literal notranslate"><span class="pre">S2</span></code>, <code class="docutils literal notranslate"><span class="pre">S4</span></code>, <code class="docutils literal notranslate"><span class="pre">S8</span></code> and <code class="docutils literal notranslate"><span class="pre">S9</span></code></p>
@@ -96,7 +109,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_azure.analysisservices.Server.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_users=None</em>, <em class="sig-param">enable_power_bi_service=None</em>, <em class="sig-param">ipv4_firewall_rules=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">querypool_connection_mode=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.analysisservices.Server.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_users=None</em>, <em class="sig-param">backup_blob_container_uri=None</em>, <em class="sig-param">enable_power_bi_service=None</em>, <em class="sig-param">ipv4_firewall_rules=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">querypool_connection_mode=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_full_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.analysisservices.Server.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Server resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -106,12 +119,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>admin_users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of email addresses of admin users.</p></li>
+<li><p><strong>backup_blob_container_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI and SAS token for a blob container to store backups.</p></li>
 <li><p><strong>enable_power_bi_service</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates if the Power BI service is allowed to access or not.</p></li>
 <li><p><strong>ipv4_firewall_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">ipv4_firewall_rule</span></code> block(s) as defined below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where the Analysis Services Server exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the firewall rule.</p></li>
 <li><p><strong>querypool_connection_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls how the read-write server is used in the query pool. If this values is set to <code class="docutils literal notranslate"><span class="pre">All</span></code> then read-write servers are also used for queries. Otherwise with <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> these servers do not participate in query operations.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Analysis Services Server should be exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>server_full_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full name of the Analysis Services Server.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SKU for the Analysis Services Server. Possible values are: <code class="docutils literal notranslate"><span class="pre">D1</span></code>, <code class="docutils literal notranslate"><span class="pre">B1</span></code>, <code class="docutils literal notranslate"><span class="pre">B2</span></code>, <code class="docutils literal notranslate"><span class="pre">S0</span></code>, <code class="docutils literal notranslate"><span class="pre">S1</span></code>, <code class="docutils literal notranslate"><span class="pre">S2</span></code>, <code class="docutils literal notranslate"><span class="pre">S4</span></code>, <code class="docutils literal notranslate"><span class="pre">S8</span></code> and <code class="docutils literal notranslate"><span class="pre">S9</span></code></p></li>
 </ul>
 </dd>

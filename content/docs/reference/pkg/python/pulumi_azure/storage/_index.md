@@ -640,6 +640,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.storage.AwaitableGetPolicyResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AwaitableGetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">rules=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.storage.Blob">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">Blob</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_tier=None</em>, <em class="sig-param">attempts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parallelism=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">source_content=None</em>, <em class="sig-param">source_uri=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Blob within a Storage Container.</p>
@@ -952,6 +957,105 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.storage.Container.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Container.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.storage.DataLakeGen2Filesystem">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">DataLakeGen2Filesystem</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.DataLakeGen2Filesystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Data Lake Gen2 File System within an Azure Storage Account.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> This Resource requires using Azure Active Directory to connect to Azure Storage, which in turn requires the <code class="docutils literal notranslate"><span class="pre">Storage</span></code> specific roles - which are not granted by default.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Data Lake Gen2 File System which should be created within the Storage Account. Must be unique within the storage account the queue is located. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of Key to Base64-Encoded Values which should be assigned to this Data Lake Gen2 File System.</p></li>
+<li><p><strong>storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Storage Account in which the Data Lake Gen2 File System should exist. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_data_lake_gen2_filesystem.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_data_lake_gen2_filesystem.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.storage.DataLakeGen2Filesystem.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.DataLakeGen2Filesystem.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Data Lake Gen2 File System which should be created within the Storage Account. Must be unique within the storage account the queue is located. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.DataLakeGen2Filesystem.properties">
+<code class="sig-name descname">properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.DataLakeGen2Filesystem.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of Key to Base64-Encoded Values which should be assigned to this Data Lake Gen2 File System.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.DataLakeGen2Filesystem.storage_account_id">
+<code class="sig-name descname">storage_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.DataLakeGen2Filesystem.storage_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the ID of the Storage Account in which the Data Lake Gen2 File System should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.storage.DataLakeGen2Filesystem.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">storage_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.DataLakeGen2Filesystem.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DataLakeGen2Filesystem resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Data Lake Gen2 File System which should be created within the Storage Account. Must be unique within the storage account the queue is located. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of Key to Base64-Encoded Values which should be assigned to this Data Lake Gen2 File System.</p></li>
+<li><p><strong>storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Storage Account in which the Data Lake Gen2 File System should exist. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_data_lake_gen2_filesystem.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_data_lake_gen2_filesystem.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.storage.DataLakeGen2Filesystem.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.DataLakeGen2Filesystem.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.storage.DataLakeGen2Filesystem.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.DataLakeGen2Filesystem.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1286,6 +1390,192 @@ for more information.</p>
 <dt id="pulumi_azure.storage.GetAccountSASResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountSASResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.storage.GetPolicyResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">GetPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">rules=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPolicy.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetPolicyResult.rules">
+<code class="sig-name descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetPolicyResult.rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">rule</span></code> block as documented below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetPolicyResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetPolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.storage.ManagementPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">ManagementPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ManagementPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Azure Storage Account Management Policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rule</span></code> block as documented below.</p></li>
+<li><p><strong>storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the id of the storage account to apply the management policy to.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">actions</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">baseBlob</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">base_blob</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteAfterDaysSinceModificationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The age in days after last modification to delete the blob. Must be at least 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tierToArchiveAfterDaysSinceModificationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tierToCoolAfterDaysSinceModificationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">snapshot</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteAfterDaysSinceCreationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The age in days after create to delete the snaphot. Must be at least 0.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to specify whether the rule is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">filter</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">blobTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An array of predefined values. Only <code class="docutils literal notranslate"><span class="pre">blockBlob</span></code> is supported.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixMatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An array of strings for prefixes to be matched.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_management_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_management_policy.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.storage.ManagementPolicy.rules">
+<code class="sig-name descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.ManagementPolicy.rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">rule</span></code> block as documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An <code class="docutils literal notranslate"><span class="pre">actions</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">baseBlob</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">base_blob</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteAfterDaysSinceModificationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The age in days after last modification to delete the blob. Must be at least 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tierToArchiveAfterDaysSinceModificationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tierToCoolAfterDaysSinceModificationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">snapshot</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteAfterDaysSinceCreationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The age in days after create to delete the snaphot. Must be at least 0.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean to specify whether the rule is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">filter</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">blobTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An array of predefined values. Only <code class="docutils literal notranslate"><span class="pre">blockBlob</span></code> is supported.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixMatches</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An array of strings for prefixes to be matched.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.ManagementPolicy.storage_account_id">
+<code class="sig-name descname">storage_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.ManagementPolicy.storage_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the id of the storage account to apply the management policy to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.storage.ManagementPolicy.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">storage_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ManagementPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ManagementPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rule</span></code> block as documented below.</p></li>
+<li><p><strong>storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the id of the storage account to apply the management policy to.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">actions</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">baseBlob</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">base_blob</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteAfterDaysSinceModificationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The age in days after last modification to delete the blob. Must be at least 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tierToArchiveAfterDaysSinceModificationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tierToCoolAfterDaysSinceModificationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">snapshot</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteAfterDaysSinceCreationGreaterThan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The age in days after create to delete the snaphot. Must be at least 0.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to specify whether the rule is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">filter</span></code> block as documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">blobTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An array of predefined values. Only <code class="docutils literal notranslate"><span class="pre">blockBlob</span></code> is supported.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefixMatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An array of strings for prefixes to be matched.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_management_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_management_policy.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.storage.ManagementPolicy.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ManagementPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.storage.ManagementPolicy.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ManagementPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -2085,6 +2375,20 @@ and <em>not</em> a <a class="reference external" href="https://docs.microsoft.co
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_account_sas.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_account_sas.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.storage.get_policy">
+<code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">get_policy</code><span class="sig-paren">(</span><em class="sig-param">storage_account_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.get_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Storage Management Policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>storage_account_id</strong> (<em>str</em>) – Specifies the id of the storage account to retrieve the management policy for.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_management_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/storage_management_policy.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
