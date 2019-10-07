@@ -108,3 +108,11 @@ file that is created in a separate **Run a script** step.
 
 The next steps are to simply create a release from the latest package from the package feed and deploy it.
 Click on **Releases** under the **Projects** tab and click on **Create Release**, and follow on-screen instructions.
+
+## Additional Information
+
+### Manual Intervention Steps
+Since Octopus Deploy is a _deployment_ automation server it does not inherit the capabilities of a traditional VCS wherein you have Pull Request or Push builds. With Pulumi modifying your infrastructure, you may be interested in running `pulumi preview` first, then run `pulumi up` but only if the `preview` looks right to you. One way to do this is, to add a [Manual Intervention and Approval Step](https://octopus.com/docs/deployment-process/steps/manual-intervention-and-approvals). With this step, you can effectively pause the deployment of your infrastructure changes until someone has signed-off on it. This is desirable in a team-based environment where several members might be making changes.
+
+### Variable Sets
+We showed you at a high-level how you could use Project Variables to inject sensitive values in to your deployment process. Octopus Deploy also supports [Variable Sets](https://octopus.com/docs/deployment-process/variables/library-variable-sets) which are variables that are common across deployment environments. Variable Sets can be scoped just like regular Project-specific variables. [Learn more](https://octopus.com/docs/deployment-process/variables) about all of the ways you can make use of the rich configuration system in Octopus Deploy.
