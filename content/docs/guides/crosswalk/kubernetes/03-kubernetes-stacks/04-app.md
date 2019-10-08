@@ -4,8 +4,8 @@ title: Provisioning a Kubernetes Application
 aliases: ["/docs/guides/crosswalk/kubernetes/app/"]
 ---
 
-This lab assumes you have successfully completed [lab 1]({{< relref "identity.md" >}}), and [lab
-2]({{< relref "./infrastructure.md" >}}) the results of which are to have (1) successfully bootstrapped the
+This lab assumes you have successfully completed [lab 1]({{< relref "/docs/guides/crosswalk/kubernetes/02-cloud-stacks/01-identity.md" >}}), and [lab
+2]({{< relref "./01-cluster-configuration.md" >}}) the results of which are to have (1) successfully bootstrapped the
 identity platform for CI/CD and teams, and (2) successfully created the Kubernetes cluster on which
 we will deploy.
 

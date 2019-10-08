@@ -45,11 +45,11 @@ Kubernetes the Prod Way is organized as a series of labs. These labs cover every
 bootstrapping IAM roles, to provisioning compute, storage, and networking, to deploying applications
 on top of Kubernetes.
 
-* [Prerequisites]({{< relref "prerequisites.md" >}})
-* [A Production Architecture for _Teams_]({{< relref "architecture.md" >}})
-* [Lab 1: Bootstrapping Identity]({{< relref "identity.md" >}})
-* [Lab 2: Provisioning Environments]({{< relref "infrastructure.md" >}})
-* [Lab 3: Provisioning Applications]({{< relref "app.md" >}})
+* [Prerequisites]({{< relref "01-intro/00-prerequisites.md" >}})
+* [A Production Architecture for _Teams_]({{< relref "01-intro/01-architecture.md" >}})
+* [Lab 1: Bootstrapping Identity]({{< relref "02-cloud-stacks/01-identity.md" >}})
+* [Lab 2: Provisioning Environments]({{< relref "03-kubernetes-stacks/01-cluster-configuration.md" >}})
+* [Lab 3: Provisioning Applications]({{< relref "03-kubernetes-stacks/04-app.md" >}})
 * Lab 4: Setting Up CI/CD
 * Lab 5: Configuring Standard Kubernetes Infrastructure (coming soon!)
 * Lab 6: Testing your infrastructure (coming soon!)
