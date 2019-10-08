@@ -1,7 +1,7 @@
 ---
 title: Bootstrapping Identity
 
-aliases: ["/docs/quickstart/k8s-the-prod-way/identity/"]
+aliases: ["/docs/guides/crosswalk/kubernetes/identity/"]
 ---
 
 Begin by cloning the [Kubernetes the Prod Way repository][ktpw]. The `identity` stack is implemented

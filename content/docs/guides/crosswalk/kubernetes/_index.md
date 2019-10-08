@@ -1,7 +1,12 @@
 ---
-title: Kubernetes the Prod Way
+title: "Pulumi Crosswalk for Kubernetes"
+linktitle: Crosswalk for Kubernetes
+menu:
+  userguides:
+    parent: guides
+    identifier: crosswalk-kubernetes
 
-aliases: ["/docs/quickstart/k8s-the-prod-way/"]
+aliases: ["/docs/reference/crosswalk/kubernetes/"]
 ---
 
 **Kubernetes the Prod Way** is a tutorial, reference architecture, and collection of prod-first code

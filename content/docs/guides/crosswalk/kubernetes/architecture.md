@@ -1,7 +1,7 @@
 ---
 title: A Prod-First Architecture for Teams
 
-aliases: ["/docs/quickstart/k8s-the-prod-way/architecture/"]
+aliases: ["/docs/guides/crosswalk/kubernetes/architecture/"]
 ---
 
 Infrastructure mis-configuration probably accounts for the most significant subset of serious

@@ -1,7 +1,7 @@
 ---
 title: Kubernetes Checklist
 
-aliases: ["/docs/quickstart/k8s-the-prod-way/checklist/"]
+aliases: ["/docs/guides/crosswalk/kubernetes/checklist/"]
 ---
 
 ## Identity
