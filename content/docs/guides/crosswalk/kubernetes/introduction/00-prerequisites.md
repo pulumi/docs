@@ -1,7 +1,7 @@
 ---
 title: Prerequisites
 
-aliases: ["/docs/quickstart/k8s-the-prod-way/prerequisites/"]
+aliases: ["/docs/guides/crosswalk/kubernetes/prerequisites/"]
 ---
 
 This tutorial leverages [Pulumi][pulumi] and [Node.js][nodejs] to provision and configure
