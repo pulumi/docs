@@ -34,13 +34,13 @@ You may choose a naming convention that best suits your organization.
 
 ### Infrastructure
 
-Infrastructure in Octopus is represented as environments, deployment targets and workers (tentacles or SSH machines). You could think of each environment as representing one of your Pulumi stacks. For example, if you are creating cloud infrastructure that represents your dev, staging and prod environments, each of those would typically map to a [Pulumi stack](https://www.pulumi.com/docs/intro/concepts/stack/), and hence you could create an Octopus environment for each of those.
+Infrastructure in Octopus is represented as environments, deployment targets and workers (tentacles or SSH machines.) You could think of each environment as representing one of your Pulumi stacks. For example, if you are creating cloud infrastructure that represents your dev, staging and prod environments, each of those would typically map to a [Pulumi stack](https://www.pulumi.com/docs/intro/concepts/stack/) and you could create an Octopus environment for each of those.
 
 In a typical scenario where Pulumi is creating your cloud infrastructure, you will only need to a worker that can run the Pulumi CLI commands against your code package.
 
 ### Project
 
-A project represents the application being deployed. A project uses versioned packages (which you will read about in the following section) and uses variables during the deployment process. A project also contains a deployment process which is a series of steps that are associated with "deploying" your project. A project can contain the actual runtime application (a Go service, or a Python Flask app etc.), as well as the infrastructure it requires.
+A project represents the application being deployed and uses versioned packages (detailed below) as well as variables, during the deployment process. A project also contains a deployment process, which is a series of steps that are associated with "deploying" your project. Projects can contain the actual runtime application (a Go service, or a Python Flask app, etc.), as well as any infrastructure required.
 
 ### Packages
 
@@ -52,7 +52,7 @@ For Pulumi apps, you can simply package the entire Pulumi app and extract the bu
 
 ## Deployment Process
 
-In order to create an [Octopus deployment process](https://octopus.com/docs/deployment-process), project variables need to be configured for each of the environments which
+In order to create an [Octopus deployment process](https://octopus.com/docs/deployment-process), project variables need to be configured for each of the environments which maps to a Pulumi stack. Each Pulumi stack could use environment-specific configuration. For example, each stack (or environment) could be deployed using different cloud credentials. So at a minimum you would need to configure those credentials needed for deploying a Pulumi stack.
 
 ### Configure Project Variables
 You can configure your AWS Account and Azure Subscription credentials as project variables using the built-in `AWS Account` and `Azure Subscription` variable types. Before you can do that, though, you will need to add them to the **Accounts** section under **Infrastructure** in your Octopus instance.
@@ -68,7 +68,7 @@ To run Pulumi commands non-interactively, you will need to set the env var `PULU
 
 A process consists of the steps to execute in a project. The following sections outline the steps for configuring your process in order to use Pulumi to deploy infrastructure (not be confused with Octopus Infrastructure).
 
-#### Extract the code package
+#### Extract the Code Package
 
 - Click on the **Add Step** button in your project's **Process** section.
 - Click the **Referenced Packages** and choose the package that contains your Pulumi infrastructure app.
@@ -107,4 +107,4 @@ To do that, click on **Releases** under the **Projects** tab and click on **Crea
 Since Octopus Deploy is a _deployment_ automation server it does not inherit the capabilities of a traditional VCS wherein you have Pull Request or Push builds. With Pulumi modifying your infrastructure, you may be interested in running `pulumi preview` first, then run `pulumi up` but only if the `preview` looks right to you. One way to do this is, to add a [Manual Intervention and Approval Step](https://octopus.com/docs/deployment-process/steps/manual-intervention-and-approvals). With this step, you can effectively pause the deployment of your infrastructure changes until someone has signed-off on it. This is desirable in a team-based environment where several members might be making changes.
 
 ### Variable Sets
-We showed you at a high-level how you could use Project Variables to inject sensitive values in to your deployment process. Octopus Deploy also supports [Variable Sets](https://octopus.com/docs/deployment-process/variables/library-variable-sets) which are variables that are common across deployment environments. Variable Sets can be scoped just like regular Project-specific variables. [Learn more](https://octopus.com/docs/deployment-process/variables) about all of the ways you can make use of the rich configuration system in Octopus Deploy.
+In addition to Project Variables, Octopus Deploy also supports [Variable Sets](https://octopus.com/docs/deployment-process/variables/library-variable-sets) which are variables that are common across deployment environments. Variable Sets can be scoped just like regular Project-specific variables. [Learn more](https://octopus.com/docs/deployment-process/variables) about all of the ways you can make use of the rich configuration system in Octopus Deploy.
