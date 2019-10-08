@@ -452,8 +452,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>DEPRECATED - apps/v1beta2/Deployment is not supported by Kubernetes 1.16+ clusters. Use
 apps/v1/Deployment instead.</p>
 <p>Deployment enables declarative updates for Pods and ReplicaSets.</p>
-<p>This resource waits until it is ready before registering success for
-create/update and populating output properties from the current state of the resource.
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
 The following conditions are used to determine whether the resource creation has
 succeeded or failed:</p>
 <ol class="arabic simple">
@@ -911,8 +911,8 @@ apps/v1/StatefulSet instead.</p>
 The StatefulSet guarantees that a given network identity will always map to the same storage
 identity.</p></li>
 </ul>
-<p>This resource waits until it is ready before registering success for
-create/update and populating output properties from the current state of the resource.
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
 The following conditions are used to determine whether the resource creation has
 succeeded or failed:</p>
 <ol class="arabic simple">

@@ -10,6 +10,10 @@ notitle: true
 <dt id="pulumi_kubernetes.batch.v1.Job">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.batch.v1.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.batch.v1.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Job represents the configuration of a single job.</p>
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
+The following conditions are used to determine whether the resource creation has
+succeeded or failed:</p>
 <ol class="arabic simple">
 <li><p>The Job’s ‘.status.startTime’ is set, which indicates that the Job has started running.</p></li>
 <li><p>The Job’s ‘.status.conditions’ has a status of type ‘Complete’, and a ‘status’ set

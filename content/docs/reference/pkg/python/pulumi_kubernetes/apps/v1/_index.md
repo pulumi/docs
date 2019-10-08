@@ -446,8 +446,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_kubernetes.apps.v1.Deployment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.apps.v1.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1.Deployment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deployment enables declarative updates for Pods and ReplicaSets.</p>
-<p>This resource waits until it is ready before registering success for
-create/update and populating output properties from the current state of the resource.
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
 The following conditions are used to determine whether the resource creation has
 succeeded or failed:</p>
 <ol class="arabic simple">
@@ -901,8 +901,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 The StatefulSet guarantees that a given network identity will always map to the same storage
 identity.</p></li>
 </ul>
-<p>This resource waits until it is ready before registering success for
-create/update and populating output properties from the current state of the resource.
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
 The following conditions are used to determine whether the resource creation has
 succeeded or failed:</p>
 <ol class="arabic simple">
