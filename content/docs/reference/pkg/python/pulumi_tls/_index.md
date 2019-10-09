@@ -19,7 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_tls.CertRequest">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">CertRequest</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns_names=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">private_key_pem=None</em>, <em class="sig-param">subjects=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.CertRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">CertRequest</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns_names=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">private_key_pem=None</em>, <em class="sig-param">subjects=None</em>, <em class="sig-param">uris=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.CertRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a CertRequest resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -32,6 +32,7 @@ anything, please consult the source <a class="reference external" href="https://
 in <code class="docutils literal notranslate"><span class="pre">private_key_pem</span></code>.</p></li>
 <li><p><strong>subjects</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.</p></li>
+<li><p><strong>uris</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of URIs for which a certificate is being requested.</p></li>
 </ul>
 </dd>
 </dl>
@@ -93,9 +94,15 @@ a nested configuration block whose structure is described below.</p>
 </ul>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_tls.CertRequest.uris">
+<code class="sig-name descname">uris</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.CertRequest.uris" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of URIs for which a certificate is being requested.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_tls.CertRequest.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cert_request_pem=None</em>, <em class="sig-param">dns_names=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">private_key_pem=None</em>, <em class="sig-param">subjects=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.CertRequest.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cert_request_pem=None</em>, <em class="sig-param">dns_names=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">private_key_pem=None</em>, <em class="sig-param">subjects=None</em>, <em class="sig-param">uris=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.CertRequest.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CertRequest resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -111,6 +118,7 @@ properties used to qualify the lookup.</p>
 in <code class="docutils literal notranslate"><span class="pre">private_key_pem</span></code>.</p></li>
 <li><p><strong>subjects</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The subject for which a certificate is being requested. This is
 a nested configuration block whose structure is described below.</p></li>
+<li><p><strong>uris</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of URIs for which a certificate is being requested.</p></li>
 </ul>
 </dd>
 </dl>
@@ -214,7 +222,7 @@ is selected.</p>
 
 <dl class="class">
 <dt id="pulumi_tls.LocallySignedCert">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">LocallySignedCert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_uses=None</em>, <em class="sig-param">ca_cert_pem=None</em>, <em class="sig-param">ca_key_algorithm=None</em>, <em class="sig-param">ca_private_key_pem=None</em>, <em class="sig-param">cert_request_pem=None</em>, <em class="sig-param">early_renewal_hours=None</em>, <em class="sig-param">is_ca_certificate=None</em>, <em class="sig-param">validity_period_hours=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.LocallySignedCert" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">LocallySignedCert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_uses=None</em>, <em class="sig-param">ca_cert_pem=None</em>, <em class="sig-param">ca_key_algorithm=None</em>, <em class="sig-param">ca_private_key_pem=None</em>, <em class="sig-param">cert_request_pem=None</em>, <em class="sig-param">early_renewal_hours=None</em>, <em class="sig-param">is_ca_certificate=None</em>, <em class="sig-param">set_subject_key_id=None</em>, <em class="sig-param">validity_period_hours=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.LocallySignedCert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a LocallySignedCert resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -233,6 +241,9 @@ function.</p></li>
 <li><p><strong>is_ca_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling whether the CA flag will be set in the
 generated certificate. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, meaning that the certificate does not represent
 a certificate authority.</p></li>
+<li><p><strong>set_subject_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the certificate will include
+the subject key identifier. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, in which case the subject
+key identifier is not set at all.</p></li>
 <li><p><strong>validity_period_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours after initial issuing that the
 certificate will become invalid.</p></li>
 </ul>
@@ -290,6 +301,14 @@ a certificate authority.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_tls.LocallySignedCert.set_subject_key_id">
+<code class="sig-name descname">set_subject_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.LocallySignedCert.set_subject_key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the certificate will include
+the subject key identifier. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, in which case the subject
+key identifier is not set at all.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_tls.LocallySignedCert.validity_end_time">
 <code class="sig-name descname">validity_end_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.LocallySignedCert.validity_end_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time until which the certificate is invalid, as an
@@ -312,7 +331,7 @@ certificate will become invalid.</p>
 
 <dl class="method">
 <dt id="pulumi_tls.LocallySignedCert.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_uses=None</em>, <em class="sig-param">ca_cert_pem=None</em>, <em class="sig-param">ca_key_algorithm=None</em>, <em class="sig-param">ca_private_key_pem=None</em>, <em class="sig-param">cert_pem=None</em>, <em class="sig-param">cert_request_pem=None</em>, <em class="sig-param">early_renewal_hours=None</em>, <em class="sig-param">is_ca_certificate=None</em>, <em class="sig-param">validity_end_time=None</em>, <em class="sig-param">validity_period_hours=None</em>, <em class="sig-param">validity_start_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.LocallySignedCert.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_uses=None</em>, <em class="sig-param">ca_cert_pem=None</em>, <em class="sig-param">ca_key_algorithm=None</em>, <em class="sig-param">ca_private_key_pem=None</em>, <em class="sig-param">cert_pem=None</em>, <em class="sig-param">cert_request_pem=None</em>, <em class="sig-param">early_renewal_hours=None</em>, <em class="sig-param">is_ca_certificate=None</em>, <em class="sig-param">ready_for_renewal=None</em>, <em class="sig-param">set_subject_key_id=None</em>, <em class="sig-param">validity_end_time=None</em>, <em class="sig-param">validity_period_hours=None</em>, <em class="sig-param">validity_start_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.LocallySignedCert.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LocallySignedCert resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -334,6 +353,9 @@ function.</p></li>
 <li><p><strong>is_ca_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling whether the CA flag will be set in the
 generated certificate. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, meaning that the certificate does not represent
 a certificate authority.</p></li>
+<li><p><strong>set_subject_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the certificate will include
+the subject key identifier. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, in which case the subject
+key identifier is not set at all.</p></li>
 <li><p><strong>validity_end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time until which the certificate is invalid, as an
 <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p>
 </p></li>
@@ -615,7 +637,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_tls.SelfSignedCert">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">SelfSignedCert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_uses=None</em>, <em class="sig-param">dns_names=None</em>, <em class="sig-param">early_renewal_hours=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">is_ca_certificate=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">private_key_pem=None</em>, <em class="sig-param">subjects=None</em>, <em class="sig-param">validity_period_hours=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.SelfSignedCert" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">SelfSignedCert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_uses=None</em>, <em class="sig-param">dns_names=None</em>, <em class="sig-param">early_renewal_hours=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">is_ca_certificate=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">private_key_pem=None</em>, <em class="sig-param">set_subject_key_id=None</em>, <em class="sig-param">subjects=None</em>, <em class="sig-param">uris=None</em>, <em class="sig-param">validity_period_hours=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.SelfSignedCert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SelfSignedCert resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -631,9 +653,13 @@ generated certificate. Defaults to <code class="docutils literal notranslate"><s
 a certificate authority.</p></li>
 <li><p><strong>key_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the algorithm for the key provided
 in <code class="docutils literal notranslate"><span class="pre">private_key_pem</span></code>.</p></li>
+<li><p><strong>set_subject_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the certificate will include
+the subject key identifier. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, in which case the subject
+key identifier is not set at all.</p></li>
 <li><p><strong>subjects</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
 corresponding block for <code class="docutils literal notranslate"><span class="pre">.CertRequest</span></code>.</p></li>
+<li><p><strong>uris</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of URIs for which a certificate is being requested.</p></li>
 <li><p><strong>validity_period_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours after initial issuing that the
 certificate will become invalid.</p></li>
 </ul>
@@ -695,6 +721,14 @@ in <code class="docutils literal notranslate"><span class="pre">private_key_pem<
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_tls.SelfSignedCert.set_subject_key_id">
+<code class="sig-name descname">set_subject_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.SelfSignedCert.set_subject_key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the certificate will include
+the subject key identifier. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, in which case the subject
+key identifier is not set at all.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_tls.SelfSignedCert.subjects">
 <code class="sig-name descname">subjects</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.SelfSignedCert.subjects" title="Permalink to this definition">¶</a></dt>
 <dd><p>The subject for which a certificate is being requested.
@@ -711,6 +745,12 @@ corresponding block for <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">serialNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">streetAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_tls.SelfSignedCert.uris">
+<code class="sig-name descname">uris</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_tls.SelfSignedCert.uris" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of URIs for which a certificate is being requested.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -736,7 +776,7 @@ certificate will become invalid.</p>
 
 <dl class="method">
 <dt id="pulumi_tls.SelfSignedCert.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_uses=None</em>, <em class="sig-param">cert_pem=None</em>, <em class="sig-param">dns_names=None</em>, <em class="sig-param">early_renewal_hours=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">is_ca_certificate=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">private_key_pem=None</em>, <em class="sig-param">subjects=None</em>, <em class="sig-param">validity_end_time=None</em>, <em class="sig-param">validity_period_hours=None</em>, <em class="sig-param">validity_start_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.SelfSignedCert.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_uses=None</em>, <em class="sig-param">cert_pem=None</em>, <em class="sig-param">dns_names=None</em>, <em class="sig-param">early_renewal_hours=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">is_ca_certificate=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">private_key_pem=None</em>, <em class="sig-param">ready_for_renewal=None</em>, <em class="sig-param">set_subject_key_id=None</em>, <em class="sig-param">subjects=None</em>, <em class="sig-param">uris=None</em>, <em class="sig-param">validity_end_time=None</em>, <em class="sig-param">validity_period_hours=None</em>, <em class="sig-param">validity_start_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.SelfSignedCert.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SelfSignedCert resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -755,9 +795,13 @@ generated certificate. Defaults to <code class="docutils literal notranslate"><s
 a certificate authority.</p></li>
 <li><p><strong>key_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the algorithm for the key provided
 in <code class="docutils literal notranslate"><span class="pre">private_key_pem</span></code>.</p></li>
+<li><p><strong>set_subject_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the certificate will include
+the subject key identifier. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, in which case the subject
+key identifier is not set at all.</p></li>
 <li><p><strong>subjects</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
 corresponding block for <code class="docutils literal notranslate"><span class="pre">.CertRequest</span></code>.</p></li>
+<li><p><strong>uris</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of URIs for which a certificate is being requested.</p></li>
 <li><p><strong>validity_end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The time until which the certificate is invalid, as an
 <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC3339</a> timestamp.</p>
 </p></li>

@@ -5630,9 +5630,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
-<dt id="pulumi_gcp.compute.MangedSslCertificate">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">MangedSslCertificate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a MangedSslCertificate resource with the given unique name, props, and options.</p>
+<dt id="pulumi_gcp.compute.ManagedSslCertificate">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">ManagedSslCertificate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ManagedSslCertificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ManagedSslCertificate resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5651,22 +5651,22 @@ If it is not provided, the provider project is used.</p></li>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_managed_ssl_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_managed_ssl_certificate.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
-<dt id="pulumi_gcp.compute.MangedSslCertificate.project">
-<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate.project" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.compute.ManagedSslCertificate.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ManagedSslCertificate.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.compute.MangedSslCertificate.self_link">
-<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate.self_link" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.compute.ManagedSslCertificate.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ManagedSslCertificate.self_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URI of the created resource.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pulumi_gcp.compute.MangedSslCertificate.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_id=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expire_time=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">subject_alternative_names=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing MangedSslCertificate resource’s state with the given name, id, and optional extra
+<dt id="pulumi_gcp.compute.ManagedSslCertificate.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_id=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expire_time=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">subject_alternative_names=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ManagedSslCertificate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ManagedSslCertificate resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -5687,6 +5687,80 @@ If it is not provided, the provider project is used.</p></li>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_managed_ssl_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_managed_ssl_certificate.html.markdown</a>.</p>
 </div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.ManagedSslCertificate.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ManagedSslCertificate.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.ManagedSslCertificate.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ManagedSslCertificate.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.MangedSslCertificate">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">MangedSslCertificate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a MangedSslCertificate resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>managed</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="pulumi_gcp.compute.MangedSslCertificate.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_id=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expire_time=None</em>, <em class="sig-param">managed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">subject_alternative_names=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.MangedSslCertificate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MangedSslCertificate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>managed</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -7589,6 +7663,287 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.compute.RegionSslCertificate">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionSslCertificate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionSslCertificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a RegionSslCertificate resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the
+specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_ssl_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_ssl_certificate.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.RegionSslCertificate.name_prefix">
+<code class="sig-name descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionSslCertificate.name_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a unique name beginning with the
+specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.RegionSslCertificate.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionSslCertificate.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.RegionSslCertificate.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionSslCertificate.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.RegionSslCertificate.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_id=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionSslCertificate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RegionSslCertificate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the
+specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_ssl_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_ssl_certificate.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.RegionSslCertificate.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionSslCertificate.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.RegionSslCertificate.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionSslCertificate.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.RegionTargetHttpProxy">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionTargetHttpProxy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">url_map=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a RegionTargetHttpProxy resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_target_http_proxy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_target_http_proxy.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.RegionTargetHttpProxy.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpProxy.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.RegionTargetHttpProxy.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpProxy.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.RegionTargetHttpProxy.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">proxy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">url_map=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpProxy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RegionTargetHttpProxy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_target_http_proxy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_target_http_proxy.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.RegionTargetHttpProxy.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpProxy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.RegionTargetHttpProxy.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpProxy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.RegionTargetHttpsProxy">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionTargetHttpsProxy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">ssl_certificates=None</em>, <em class="sig-param">url_map=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpsProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a RegionTargetHttpsProxy resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_target_https_proxy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_target_https_proxy.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.RegionTargetHttpsProxy.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpsProxy.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.RegionTargetHttpsProxy.self_link">
+<code class="sig-name descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpsProxy.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.RegionTargetHttpsProxy.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">proxy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">ssl_certificates=None</em>, <em class="sig-param">url_map=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpsProxy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RegionTargetHttpsProxy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_target_https_proxy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_target_https_proxy.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.RegionTargetHttpsProxy.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpsProxy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.RegionTargetHttpsProxy.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionTargetHttpsProxy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.compute.RegionUrlMap">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionUrlMap</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_service=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">host_rules=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path_matchers=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tests=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionUrlMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a RegionUrlMap resource with the given unique name, props, and options.</p>
@@ -8522,6 +8877,14 @@ and
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>advertise_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User-specified flag to indicate which mode to use for advertisement.
+Options include <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> or <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p></li>
+<li><p><strong>advertised_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – User-specified list of prefix groups to advertise in custom mode,
+which can take one of the following options:</p></li>
+<li><p><strong>advertised_ip_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if <code class="docutils literal notranslate"><span class="pre">advertise_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> and overrides
+the list defined for the router (in the “bgp” message). These IP ranges are advertised in
+addition to any specified groups. Leave this field blank to advertise no custom IP ranges.</p></li>
 <li><p><strong>advertised_route_priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of routes advertised to this BGP peer.
 Changing this forces a new peer to be created.</p></li>
 <li><p><strong>interface</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the interface the BGP peer is associated with.
@@ -8550,6 +8913,33 @@ Changing this forces a new peer to be created.</p></li>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_peer.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_peer.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.RouterPeer.advertise_mode">
+<code class="sig-name descname">advertise_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RouterPeer.advertise_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>User-specified flag to indicate which mode to use for advertisement.
+Options include <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> or <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.RouterPeer.advertised_groups">
+<code class="sig-name descname">advertised_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RouterPeer.advertised_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>User-specified list of prefix groups to advertise in custom mode,
+which can take one of the following options:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.RouterPeer.advertised_ip_ranges">
+<code class="sig-name descname">advertised_ip_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RouterPeer.advertised_ip_ranges" title="Permalink to this definition">¶</a></dt>
+<dd><p>User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if <code class="docutils literal notranslate"><span class="pre">advertise_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> and overrides
+the list defined for the router (in the “bgp” message). These IP ranges are advertised in
+addition to any specified groups. Leave this field blank to advertise no custom IP ranges.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RouterPeer.advertised_route_priority">
 <code class="sig-name descname">advertised_route_priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RouterPeer.advertised_route_priority" title="Permalink to this definition">¶</a></dt>
@@ -8624,6 +9014,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>advertise_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User-specified flag to indicate which mode to use for advertisement.
+Options include <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code> or <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p></li>
+<li><p><strong>advertised_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – User-specified list of prefix groups to advertise in custom mode,
+which can take one of the following options:</p></li>
+<li><p><strong>advertised_ip_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – User-specified list of individual IP ranges to advertise in
+custom mode. This field can only be populated if <code class="docutils literal notranslate"><span class="pre">advertise_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> and overrides
+the list defined for the router (in the “bgp” message). These IP ranges are advertised in
+addition to any specified groups. Leave this field blank to advertise no custom IP ranges.</p></li>
 <li><p><strong>advertised_route_priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of routes advertised to this BGP peer.
 Changing this forces a new peer to be created.</p></li>
 <li><p><strong>interface</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the interface the BGP peer is associated with.
