@@ -19,7 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetDatabaseClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDatabaseClusterResult</code><span class="sig-paren">(</span><em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDatabaseClusterResult</code><span class="sig-paren">(</span><em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -442,6 +442,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseCluster.private_host">
+<code class="sig-name descname">private_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.private_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <code class="docutils literal notranslate"><span class="pre">host</span></code>, but only accessible from resources within the account and in the same region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseCluster.private_uri">
+<code class="sig-name descname">private_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.private_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <code class="docutils literal notranslate"><span class="pre">uri</span></code>, but only accessible from resources within the account and in the same region.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_digitalocean.DatabaseCluster.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>DigitalOcean region where the cluster will reside.</p>
@@ -485,7 +497,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_digitalocean.DatabaseCluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DatabaseCluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -502,6 +514,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of nodes that will be included in the cluster.</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for the cluster’s default user.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Network port that the database cluster is listening on.</p></li>
+<li><p><strong>private_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Same as <code class="docutils literal notranslate"><span class="pre">host</span></code>, but only accessible from resources within the account and in the same region.</p></li>
+<li><p><strong>private_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Same as <code class="docutils literal notranslate"><span class="pre">uri</span></code>, but only accessible from resources within the account and in the same region.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DigitalOcean region where the cluster will reside.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database droplet size associated with the cluster (ex. <code class="docutils literal notranslate"><span class="pre">db-s-1vcpu-1gb</span></code>).</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag names to be applied to the database cluster.</p></li>
@@ -616,6 +630,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseReplica.private_host">
+<code class="sig-name descname">private_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica.private_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <code class="docutils literal notranslate"><span class="pre">host</span></code>, but only accessible from resources within the account and in the same region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseReplica.private_uri">
+<code class="sig-name descname">private_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica.private_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <code class="docutils literal notranslate"><span class="pre">uri</span></code>, but only accessible from resources within the account and in the same region.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_digitalocean.DatabaseReplica.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>DigitalOcean region where the replica will reside.</p>
@@ -641,7 +667,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_digitalocean.DatabaseReplica.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DatabaseReplica resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -656,6 +682,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the database replica.</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for the replica’s default user.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Network port that the database replica is listening on.</p></li>
+<li><p><strong>private_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Same as <code class="docutils literal notranslate"><span class="pre">host</span></code>, but only accessible from resources within the account and in the same region.</p></li>
+<li><p><strong>private_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Same as <code class="docutils literal notranslate"><span class="pre">uri</span></code>, but only accessible from resources within the account and in the same region.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DigitalOcean region where the replica will reside.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database Droplet size associated with the replica (ex. <code class="docutils literal notranslate"><span class="pre">db-s-1vcpu-1gb</span></code>).</p></li>
 <li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full URI for connecting to the database replica.</p></li>
@@ -1860,7 +1888,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDatabaseClusterResult</code><span class="sig-paren">(</span><em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDatabaseClusterResult</code><span class="sig-paren">(</span><em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatabaseCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult.database">
@@ -1893,9 +1921,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.password">
+<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password for the cluster’s default user.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult.port">
 <code class="sig-name descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Network port that the database cluster is listening on.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.private_host">
+<code class="sig-name descname">private_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.private_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <code class="docutils literal notranslate"><span class="pre">host</span></code>, but only accessible from resources within the account and in the same region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.private_uri">
+<code class="sig-name descname">private_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.private_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <code class="docutils literal notranslate"><span class="pre">uri</span></code>, but only accessible from resources within the account and in the same region.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2273,9 +2319,11 @@ snapshots and backups and are only available within your account.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">kube_config.0</span></code> - A representation of the Kubernetes cluster’s kubeconfig with the following attributes:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">raw_config</span></code> - The full contents of the Kubernetes cluster’s kubeconfig file.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> - The URL of the API server on the Kubernetes master node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_key</span></code> - The base64 encoded private key used by clients to access the cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_certificate</span></code> - The base64 encoded public certificate used by clients to access the cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_ca_certificate</span></code> - The base64 encoded public certificate for the cluster’s certificate authority.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> - The DigitalOcean API access token used by clients to access the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_key</span></code> - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_certificate</span></code> - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expires_at</span></code> - The date and time when the credentials will expire and need to be regenerated.</p></li>
 </ul>
 </dd></dl>
 
@@ -2470,9 +2518,11 @@ snapshots and backups and are only available within your account.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">kube_config.0</span></code> - A representation of the Kubernetes cluster’s kubeconfig with the following attributes:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">raw_config</span></code> - The full contents of the Kubernetes cluster’s kubeconfig file.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> - The URL of the API server on the Kubernetes master node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_key</span></code> - The base64 encoded private key used by clients to access the cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_certificate</span></code> - The base64 encoded public certificate used by clients to access the cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_ca_certificate</span></code> - The base64 encoded public certificate for the cluster’s certificate authority.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> - The DigitalOcean API access token used by clients to access the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_key</span></code> - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_certificate</span></code> - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expires_at</span></code> - The date and time when the credentials will expire and need to be regenerated.</p></li>
 </ul>
 </li>
 </ul>
@@ -2537,9 +2587,11 @@ snapshots and backups and are only available within your account.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">kube_config.0</span></code> - A representation of the Kubernetes cluster’s kubeconfig with the following attributes:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">raw_config</span></code> - The full contents of the Kubernetes cluster’s kubeconfig file.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> - The URL of the API server on the Kubernetes master node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_key</span></code> - The base64 encoded private key used by clients to access the cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_certificate</span></code> - The base64 encoded public certificate used by clients to access the cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_ca_certificate</span></code> - The base64 encoded public certificate for the cluster’s certificate authority.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> - The DigitalOcean API access token used by clients to access the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_key</span></code> - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_certificate</span></code> - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expires_at</span></code> - The date and time when the credentials will expire and need to be regenerated.</p></li>
 </ul>
 </li>
 </ul>
@@ -2583,9 +2635,11 @@ snapshots and backups and are only available within your account.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">kube_config.0</span></code> - A representation of the Kubernetes cluster’s kubeconfig with the following attributes:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">raw_config</span></code> - The full contents of the Kubernetes cluster’s kubeconfig file.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> - The URL of the API server on the Kubernetes master node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_key</span></code> - The base64 encoded private key used by clients to access the cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_certificate</span></code> - The base64 encoded public certificate used by clients to access the cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_ca_certificate</span></code> - The base64 encoded public certificate for the cluster’s certificate authority.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> - The DigitalOcean API access token used by clients to access the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_key</span></code> - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_certificate</span></code> - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expires_at</span></code> - The date and time when the credentials will expire and need to be regenerated.</p></li>
 </ul>
 </dd></dl>
 
@@ -2635,9 +2689,11 @@ properties used to qualify the lookup.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `kube_config.0` - A representation of the Kubernetes cluster&#39;s kubeconfig with the following attributes:
 - `raw_config` - The full contents of the Kubernetes cluster&#39;s kubeconfig file.
 - `host` - The URL of the API server on the Kubernetes master node.
-- `client_key` - The base64 encoded private key used by clients to access the cluster.
-- `client_certificate` - The base64 encoded public certificate used by clients to access the cluster.
 - `cluster_ca_certificate` - The base64 encoded public certificate for the cluster&#39;s certificate authority.
+- `token` - The DigitalOcean API access token used by clients to access the cluster.
+- `client_key` - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
+- `client_certificate` - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.
+- `expires_at` - The date and time when the credentials will expire and need to be regenerated.
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2651,8 +2707,10 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clientKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clusterCaCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiresAt</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rawConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>node_pool</strong> object supports the following:</p>
 <ul class="simple">
@@ -2670,9 +2728,11 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">kube_config.0</span></code> - A representation of the Kubernetes cluster’s kubeconfig with the following attributes:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">raw_config</span></code> - The full contents of the Kubernetes cluster’s kubeconfig file.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> - The URL of the API server on the Kubernetes master node.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_key</span></code> - The base64 encoded private key used by clients to access the cluster.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_certificate</span></code> - The base64 encoded public certificate used by clients to access the cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_ca_certificate</span></code> - The base64 encoded public certificate for the cluster’s certificate authority.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> - The DigitalOcean API access token used by clients to access the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_key</span></code> - The base64 encoded private key used by clients to access the cluster. Only available if token authentication is not supported on your cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_certificate</span></code> - The base64 encoded public certificate used by clients to access the cluster. Only available if token authentication is not supported on your cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expires_at</span></code> - The date and time when the credentials will expire and need to be regenerated.</p></li>
 </ul>
 </li>
 </ul>

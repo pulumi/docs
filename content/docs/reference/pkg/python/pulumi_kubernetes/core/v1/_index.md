@@ -2167,8 +2167,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.core.v1.</code><code class="sig-name descname">Pod</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.core.v1.Pod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pod is a collection of containers that can run on a host. This resource is created by clients
 and scheduled onto hosts.</p>
-<p>This resource waits until it is ready before registering success for
-create/update and populating output properties from the current state of the resource.
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
 The following conditions are used to determine whether the resource creation has
 succeeded or failed:</p>
 <ol class="arabic simple">
@@ -3290,8 +3290,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Service is a named abstraction of software service (for example, mysql) consisting of local port
 (for example 3306) that the proxy listens on, and the selector that determines which pods will
 answer requests sent through the proxy.</p>
-<p>This resource waits until it is ready before registering success for
-create/update and populating output properties from the current state of the resource.
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
 The following conditions are used to determine whether the resource creation has
 succeeded or failed:</p>
 <ol class="arabic simple">

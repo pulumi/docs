@@ -230,8 +230,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>DEPRECATED - extensions/v1beta1/Deployment is not supported by Kubernetes 1.16+ clusters. Use
 apps/v1/Deployment instead.</p>
 <p>Deployment enables declarative updates for Pods and ReplicaSets.</p>
-<p>This resource waits until it is ready before registering success for
-create/update and populating output properties from the current state of the resource.
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
 The following conditions are used to determine whether the resource creation has
 succeeded or failed:</p>
 <ol class="arabic simple">
@@ -463,8 +463,8 @@ networking/v1beta1/Ingress instead.</p>
 <p>Ingress is a collection of rules that allow inbound connections to reach the endpoints defined
 by a backend. An Ingress can be configured to give services externally-reachable urls, load
 balance traffic, terminate SSL, offer name based virtual hosting etc.</p>
-<p>This resource waits until it is ready before registering success for
-create/update and populating output properties from the current state of the resource.
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
 The following conditions are used to determine whether the resource creation has
 succeeded or failed:</p>
 <ol class="arabic simple">
