@@ -190,7 +190,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.bigquery.Dataset">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Dataset</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accesses=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">default_partition_expiration_ms=None</em>, <em class="sig-param">default_table_expiration_ms=None</em>, <em class="sig-param">delete_contents_on_destroy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigquery.</code><code class="sig-name descname">Dataset</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accesses=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">default_encryption_configuration=None</em>, <em class="sig-param">default_partition_expiration_ms=None</em>, <em class="sig-param">default_table_expiration_ms=None</em>, <em class="sig-param">delete_contents_on_destroy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Dataset resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -220,6 +220,10 @@ If it is not provided, the provider project is used.</p></li>
 </ul>
 </li>
 </ul>
+<p>The <strong>default_encryption_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_dataset.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_dataset.html.markdown</a>.</p>
 </div></blockquote>
@@ -246,7 +250,7 @@ If it is not provided, the provider project is used.</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.bigquery.Dataset.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accesses=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">default_partition_expiration_ms=None</em>, <em class="sig-param">default_table_expiration_ms=None</em>, <em class="sig-param">delete_contents_on_destroy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accesses=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">dataset_id=None</em>, <em class="sig-param">default_encryption_configuration=None</em>, <em class="sig-param">default_partition_expiration_ms=None</em>, <em class="sig-param">default_table_expiration_ms=None</em>, <em class="sig-param">delete_contents_on_destroy=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Dataset resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -278,6 +282,10 @@ If it is not provided, the provider project is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">table_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
+</ul>
+<p>The <strong>default_encryption_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_dataset.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigquery_dataset.html.markdown</a>.</p>

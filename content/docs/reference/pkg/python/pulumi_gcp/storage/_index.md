@@ -65,7 +65,7 @@ bucket that contains objects, this provider will fail that run.</p></li>
 is not provided, the provider project is used.</p></li>
 <li><p><strong>requester_pays</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables <a class="reference external" href="https://cloud.google.com/storage/docs/requester-pays">Requester Pays</a> on a storage bucket.</p></li>
 <li><p><strong>retention_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration of the bucket’s data retention policy for how long objects in the bucket should be retained. Structure is documented below.</p></li>
-<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
+<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
 <li><p><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The bucket’s <a class="reference external" href="https://cloud.google.com/storage/docs/object-versioning">Versioning</a> configuration.</p></li>
 <li><p><strong>website</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration if the bucket acts as a website. Structure is documented below.</p></li>
 </ul>
@@ -86,7 +86,7 @@ is not provided, the provider project is used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
@@ -171,7 +171,7 @@ bucket that contains objects, this provider will fail that run.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
@@ -242,7 +242,7 @@ is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.Bucket.storage_class">
 <code class="sig-name descname">storage_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.storage_class" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p>
+<dd><p>The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -303,7 +303,7 @@ is not provided, the provider project is used.</p></li>
 </p></li>
 <li><p><strong>retention_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration of the bucket’s data retention policy for how long objects in the bucket should be retained. Structure is documented below.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
-<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p>
+<li><p><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p>
 </p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The base URL of the bucket, in the format <code class="docutils literal notranslate"><span class="pre">gs://&lt;bucket-name&gt;</span></code>.</p></li>
 <li><p><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The bucket’s <a class="reference external" href="https://cloud.google.com/storage/docs/object-versioning">Versioning</a> configuration.</p>
@@ -327,7 +327,7 @@ is not provided, the provider project is used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
@@ -496,6 +496,88 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_gcp.storage.BucketACL.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketACL.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.storage.BucketAccessControl">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketAccessControl</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">entity=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The BucketAccessControls resource represents the Access Control Lists
+(ACLs) for buckets within Google Cloud Storage. ACLs let you specify who
+has access to your data and to what extent.</p>
+<p>There are three roles that can be assigned to an entity:</p>
+<p>READERs can get the bucket, though no acl property will be returned, and
+list the bucket’s objects.  WRITERs are READERs, and they can insert
+objects into the bucket and delete the bucket’s objects.  OWNERs are
+WRITERs, and they can get the acl property of a bucket, update a bucket,
+and call all BucketAccessControls methods on the bucket.  For more
+information, see Access Control, with the caveat that this API uses
+READER, WRITER, and OWNER instead of READ, WRITE, and FULL_CONTROL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_access_control.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pulumi_gcp.storage.BucketAccessControl.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">entity=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing BucketAccessControl resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_access_control.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_access_control.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.storage.BucketAccessControl.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.storage.BucketAccessControl.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketAccessControl.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
