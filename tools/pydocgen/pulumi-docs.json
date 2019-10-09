@@ -128,6 +128,12 @@
       "terraform_provider_name": "newrelic"
     },
     {
+      "name": "Pulumi Terraform",
+      "package_name": "pulumi_terraform",
+      "pulumi_provider_name": "terraform",
+      "terraform_provider_name": "terraform"
+    },
+    {
       "name": "Pulumi TLS",
       "package_name": "pulumi_tls",
       "pulumi_provider_name": "tls",

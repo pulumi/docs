@@ -89,6 +89,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**OpenStack** (`pulumi_openstack`)]({{< relref "python/pulumi_openstack" >}})
 * [**Packet** (`pulumi_packet`)]({{< relref "python/pulumi_packet" >}})
 * [**PostgreSQL** (`pulumi_postgresql`)]({{< relref "python/pulumi_postgresql" >}})
+* [**Terraform** (`pulumi_terraform`)]({{< relref "python/pulumi_terraform" >}})
 * [**TLS** (`pulumi_tls`)]({{< relref "python/pulumi_tls" >}})
 * [**Hashicorp Vault** (`pulumi_vault`)]({{< relref "python/pulumi_vault" >}})
 * [**vSphere** (`pulumi_vsphere`)]({{< relref "python/pulumi_vsphere" >}})
