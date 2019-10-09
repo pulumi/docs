@@ -28,7 +28,7 @@ and
 <div><p><strong>Warning:</strong> As of November 1, 2019, newly created Functions are
 private-by-default and will require <a class="reference external" href="https://cloud.google.com/functions/docs/reference/iam/roles">appropriate IAM permissions</a>
 to be invoked. See below examples for how to set up the appropriate permissions,
-or view the <a class="reference external" href="https://www.terraform.io/docs/r/cloudfunctions_cloud_function_iam.html">Cloud Functions IAM resources</a>
+or view the <a class="reference external" href="https://www.terraform.io/docs/providers/google/r/cloudfunctions_cloud_function_iam.html">Cloud Functions IAM resources</a>
 for Cloud Functions.</p>
 </div></blockquote>
 <dl class="field-list simple">

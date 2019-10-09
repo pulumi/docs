@@ -13,6 +13,142 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.bigtable"></span><dl class="class">
+<dt id="pulumi_gcp.bigtable.GCPolicy">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigtable.</code><code class="sig-name descname">GCPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">column_family=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">max_ages=None</em>, <em class="sig-param">max_versions=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">table=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Google Cloud Bigtable GC Policy inside a family. For more information see
+<a class="reference external" href="https://cloud.google.com/bigtable/">the official documentation</a> and
+<a class="reference external" href="https://cloud.google.com/bigtable/docs/go/reference">API</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Bigtable instance.</p></li>
+<li><p><strong>max_ages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GC policy that applies to all cells older than the given age.</p></li>
+<li><p><strong>max_versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GC policy that applies to all versions of a cell except for the most recent.</p></li>
+<li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If multiple policies are set, you should choose between <code class="docutils literal notranslate"><span class="pre">UNION</span></code> OR <code class="docutils literal notranslate"><span class="pre">INTERSECTION</span></code>.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>max_ages</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of days before applying GC policy.</p></li>
+</ul>
+<p>The <strong>max_versions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">number</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of version before applying the GC policy.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_gc_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_gc_policy.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.GCPolicy.instance_name">
+<code class="sig-name descname">instance_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.instance_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Bigtable instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.GCPolicy.max_ages">
+<code class="sig-name descname">max_ages</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.max_ages" title="Permalink to this definition">¶</a></dt>
+<dd><p>GC policy that applies to all cells older than the given age.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of days before applying GC policy.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.GCPolicy.max_versions">
+<code class="sig-name descname">max_versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.max_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>GC policy that applies to all versions of a cell except for the most recent.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">number</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of version before applying the GC policy.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.GCPolicy.mode">
+<code class="sig-name descname">mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>If multiple policies are set, you should choose between <code class="docutils literal notranslate"><span class="pre">UNION</span></code> OR <code class="docutils literal notranslate"><span class="pre">INTERSECTION</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.bigtable.GCPolicy.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigtable.GCPolicy.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">column_family=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">max_ages=None</em>, <em class="sig-param">max_versions=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">table=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing GCPolicy resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Bigtable instance.</p></li>
+<li><p><strong>max_ages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GC policy that applies to all cells older than the given age.</p></li>
+<li><p><strong>max_versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – GC policy that applies to all versions of a cell except for the most recent.</p></li>
+<li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If multiple policies are set, you should choose between <code class="docutils literal notranslate"><span class="pre">UNION</span></code> OR <code class="docutils literal notranslate"><span class="pre">INTERSECTION</span></code>.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>max_ages</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of days before applying GC policy.</p></li>
+</ul>
+<p>The <strong>max_versions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">number</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of version before applying the GC policy.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_gc_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_gc_policy.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigtable.GCPolicy.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.bigtable.GCPolicy.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.GCPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.bigtable.Instance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.bigtable.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">clusters=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Google Bigtable instance. For more information see
