@@ -1,129 +1,118 @@
 ---
-title: Bootstrapping Identity
 
-aliases: ["/docs/guides/crosswalk/kubernetes/identity/"]
+title: Identity
+
+aliases: ["/docs/guides/crosswalk/kubernetes/aws/identity/"]
 ---
 
-Begin by cloning the [Kubernetes the Prod Way repository][ktpw]. The `identity` stack is implemented
-for each of [AWS][aws], [Azure][azure], and [GCP][gcp].
+AWS exposes an [Identity Access and Management (IAM)][iam] API which can be used to grant
+permissions to both human and bot users. Using this API, [**IAM User**][users] accounts can be
+slotted into [**IAM Groups**][groups] (e.g., the `networkAdmins` IAM Group), which can then be
+allocated baseline permissions using [**IAM Policies**][policies].
 
-This stack is the root from which we will bootstrap the rest of our infrastructure. This tutorial
-defines the following:
+AWS workloads (e.g., AWS Lambdas) can also be granted permissions temporarily, without the need for usernames and passwords, using [**IAM Roles**][roles].
 
-* A service accounts for managed infrastructure CI/CD.
-* A service accounts for Kubernetes application CI/CD
+In [Crosswalk for AWS][crosswalk-aws] we showcase how to define IAM:
 
-In the rest of the tutorial we will look at the code example that defines the identity
-infrastructure, and then we will use Pulumi to provision it.
+  - [Users][iam-users]
+  - [Groups][iam-groups]
+  - [Roles][iam-roles]
+  - [Policies][iam-policies]
 
-## Modeling Identity Infrastructure with Code
+The full code for this stack is on [GitHub][gh-repo-stack].
 
-Infrastructure-as-code tools such as Pulumi allow you to model your infrastructure with _code_ that
-describes a _desired state_ for your infrastructure. An engine of some kind will _execute_ this code
-to bring this desired state to reality.
+## Creating an IAM Role for Kubernetes Admins
 
-Pulumi projects the API of cloud providers (_e.g._, AWS) into TypeScript classes. Pulumi also has a
-pluggable language layer, and currently supports Python 3 and Go as well.
-
-If we look inside [`gcp/identity/index.ts`][identity], we can see what it looks like to model the
-identity stack. Consider the service account that drives CI/CD for the `infrastructure` stack.
-Defining this essentially involves four things:
-
-1. Defining a GCP service account using `new gcp.serviceAccount.Account`.
-1. Granting GKE and Cloud SQL admin permissions to that service account by defining a
-   `gcp.projects.IAMBinding` that binds those permissions (currently this happens via a utility
-   function, `util.bindToRole`).
-1. Creating and exporting a client secret that we can use to set up CI/CD. (More on this later.)
-
-Currently, the code looks like this:
+Create an admin role in AWS that assumes the AWS account caller,
+and attach EKS admin policies to the role. This role will be mapped into the
+[`system:masters`][k8s-sys-masters] group in Kubernetes RBAC.
 
 ```typescript
-const infraCi = new gcp.serviceAccount.Account(infraCiId, {
-    project: config.project,
-    accountId: "infra-ci",
-    displayName: "Infrastructure CI account"
-});
+import * as aws from "@pulumi/aws";
 
-const infraCiClusterAdminRole = util.bindToRole(`${infraCiId}ClusterAdmin`, infraCi, {
-    project: config.project,
-    role: "roles/container.clusterAdmin"
-});
-
-const infraCiCloudSqlAdminRole = util.bindToRole(`${infraCiId}CloudSqlAdmin`, infraCi, {
-    project: config.project,
-    role: "roles/cloudsql.admin"
-});
-
-const infraCiKey = util.createCiKey(`${infraCiId}Key`, infraCi);
-
-// Export client secret so that CI/CD systems can authenticate as this service account.
-export const infraCiClientSecret = util.clientSecret(infraCiKey);
+// Create the EKS cluster admins role.
+const adminName = "admins";
+const adminsIamRole = new aws.iam.Role(`${adminName}-eksClusterAdmin`, {
+    assumeRolePolicy: aws.getCallerIdentity().then(id =>
+        aws.iam.assumeRolePolicyForPrincipal({"AWS": `arn:aws:iam::${id.accountId}:root`}))
+})
+const adminsIamRolePolicy = new aws.iam.RolePolicy(`${adminName}-eksClusterAdminPolicy`, {
+    role: adminsIamRole,
+    policy: {
+        Version: "2012-10-17",
+        Statement: [
+            { Effect: "Allow", Action: ["eks:*", "ec2:DescribeImages"], Resource: "*", },
+            { Effect: "Allow", Action: "iam:PassRole", Resource: "*"},
+        ],
+    },
+},
+    { parent: adminsIamRole },
+);
 ```
 
-## Prerequisites: Bootstrapping Identity
+## Creating an IAM Role for Kubernetes Developers
 
-Once defined, we can use Pulumi to provision the identity layer. In order to do this, we must:
+Create a developer role in AWS that assumes the AWS account caller.
+This role will be mapped into a limited developer role in Kubernetes RBAC.
 
-1. Create an admin account in the relevant cloud provider (AWS, Azure, or GCP)
-1. Use that admin account to provision the initial set of identities, so that CI/CD and teams can
-   provision and manage infrastructure.
+```typescript
+import * as aws from "@pulumi/aws";
 
-Before you begin, you'll need to do this and then log in through the CLI:
-
-* For AWS, run `aws configure` (see [docs][aws-cli])
-* For Azure, run `az login` (see [docs][az-cli])
-* For GCP, run `gcloud auth` (see [docs][gcp-cli])
-
-
-## Provisioning
-
-Once you've logged in through the CLI, `cd` into the `identity` directory of the cloud provider
-you've chosen and install the Pulumi toolchain:
-
-```sh
-yarn install
+// Create the EKS cluster developers role.
+const devName = "devs";
+const devsIamRole = new aws.iam.Role(`${devName}-eksClusterDeveloper`, {
+    assumeRolePolicy: aws.getCallerIdentity().then(id =>
+        aws.iam.assumeRolePolicyForPrincipal({"AWS": `arn:aws:iam::${id.accountId}:root`}))
+})
 ```
 
-In the previous step, you should have configured default values for various cloud-specific variables
-(_e.g._, default zone, project name, and so on). Assuming you've done that, we can now run:
+## Creating IAM Roles for Kubernetes NodeGroups
 
-```sh
-pulumi stack init <a-stack-name>
-pulumi up
+Create a node group worker role in AWS that assumes the EC2 Service, and attach
+required EKS cluster polices to the role. This role will be used by the node group in an
+instance profile during cluster configuration and creation.
+
+```typescript
+// The managed policies EKS requires of nodegroups join a cluster.
+const nodegroupManagedPolicyArns: string[] = [
+    "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+    "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+    "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+];
+
+// Create the standard node group worker role and attach the required policies.
+const stdNodegroupIamRoleName = "standardNodeGroup";
+const stdNodegroupIamRole = new aws.iam.Role(`${stdNodegroupIamRoleName}-eksClusterWorkerNode`, {
+    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({"Service": "ec2.amazonaws.com"})
+})
+attachPoliciesToRole(stdNodegroupIamRoleName, stdNodegroupIamRole, nodegroupManagedPolicyArns);
+
+// Create the performant node group worker role and attach the required policies.
+const perfNodegroupIamRoleName = "performanceNodeGroup";
+const perfNodegroupIamRole = new aws.iam.Role(`${perfNodegroupIamRoleName}-eksClusterWorkerNode`, {
+    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({"Service": "ec2.amazonaws.com"})
+})
+attachPoliciesToRole(perfNodegroupIamRoleName, perfNodegroupIamRole, nodegroupManagedPolicyArns);
+
+// Attach policies to a role.
+function attachPoliciesToRole(name: string, role: aws.iam.Role, policyArns: string[]) {
+    for (const policyArn of policyArns) {
+        new aws.iam.RolePolicyAttachment(`${name}-${policyArn.split('/')[1]}`,
+            { policyArn: policyArn, role: role },
+        );
+    }
+}
 ```
 
-This will provision the service accounts for CI/CD and the roles for teams (if necessary). You
-should see something like the following. This output is for GCP, but something similar will happen
-for Azure and AWS.
-
-<img src="/images/docs/k8s-the-prod-way/identity.png">
-
-## Stack Outputs: Identity Credentials
-
-Pulumi makes it easy for other stacks to consume the credentials generated in this stack using
-_stack outputs_. These are values that can be referenced from other stacks. For example, in the case
-of GCP, if we run `pulumi stack output` we see that we export two values:
-
-1. `infraCiClientSecret`, the authentication credential that will be used by the infrastructure CI
-1. `k8sAppDevCiClientSecret`, the authentication credential that will be used by the Kubernetes
-   application CI.
-
-Likewise, if we run `pulumi stack output k8sAppDevCiClientSecret`, this will output the Kubernetes
-application CI credential.
-
-## Next Steps
-
-In the next lab, we will see how to consume these stack outputs to provision app infrastructure.
-
-
-[ktpw]: https://github.com/pulumi/kubernetes-the-prod-way/
-
-[aws]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/identity
-[azure]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/identity
-[gcp]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/identity
-
-[aws-cli]: {{< relref "/docs/intro/cloud-providers/aws/setup.md" >}}
-[az-cli]: {{< relref "/docs/intro/cloud-providers/azure/setup.md" >}}
-[gcp-cli]: {{< relref "/docs/intro/cloud-providers/gcp/setup.md" >}}
-
-[identity]: https://github.com/pulumi/kubernetes-the-prod-way/blob/master/gcp/identity/index.ts
+[iam]: https://aws.amazon.com/iam/
+[users]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
+[groups]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
+[roles]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
+[policies]: https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
+[crosswalk-aws]: /docs/guides/crosswalk/aws
+[iam-users]: /docs/guides/crosswalk/aws/iam/#iam-users
+[iam-groups]: /docs/guides/crosswalk/aws/iam/#iam-groups
+[iam-roles]: /docs/guides/crosswalk/aws/iam/#iam-roles
+[iam-policies]: /docs/guides/crosswalk/aws/iam/#using-the-policydocument-interface
+[gh-repo-stack]: https://github.com/metral/kubernetes-the-prod-way/tree/metral/crosswalk/aws/01-identity
+[k8s-sys-masters]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
