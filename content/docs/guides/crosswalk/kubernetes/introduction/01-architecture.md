@@ -1,10 +1,10 @@
 ---
-title: A Prod-First Architecture for Teams
+title: Production Architecture for Teams
 
 aliases: ["/docs/guides/crosswalk/kubernetes/architecture/"]
 ---
 
-Infrastructure mis-configuration probably accounts for the most significant subset of serious
+Infrastructure misconfiguration accounts for the most significant subset of serious
 production outages in major systems. Some [reasonable estimates][post-mortems] put the fraction in
 the range of 40-50%.
 
@@ -12,54 +12,49 @@ Many of these failure modes are trivially preventable. The primary objective of 
 architecture is to create sensible defaults that make many of these issues either impossible, or
 dramatically less likely.
 
-**Infrastructure-as-code tools, such as Pulumi, are our most effective means of accomplishing
-this.**
+**Modern Infrastructure-as-Code tools, such as Pulumi, are effective means of accomplishing
+this goal.**
 
-These tools allow engineering teams to share an unambiguous specification for what their
-infrastructure _should_ look like. These specifications can be _executed_, allowing teams to
+These tools allow engineering teams to share specifications for what their
+infrastructure should look like. These specifications can be executed, allowing teams to
 reliably provision and manage infastructure. Changes to infrastructure can be audited as part of
-code review. They allow teams to detect drift.
+code review. And they allow teams to detect drift.
 
-But something is missing. Even the most powerful tools don't solve problems -- teams do. And doing
+But even the most powerful tools don't solve problems -- teams do. And doing
 so requires the organizational discipline to use such tools effectively.
 
-This architecture is meant to show how infrastructure-as-code tools can be used in a _team_ setting.
+This architecture is meant to show how infrastructure-as-code tools can be used in a team setting.
 It is meant to answer questions like:
 
-* [Security] Who has access to what, and how is this ensured?
-* [Governance] How do we ensure the blast radius of changes is as small as possible?
-* [Engineering] How do we How do we hook these things up to CI?
+* **Security:** Who has access to what, and how are things ensured?
+* **Governance:** How do we ensure the blast radius of changes is as small as possible?
+* **Engineering:**  How do we automate this with CI/CD?
 
-## Production-Infrastructure-As-Code
+## Production Infrastructure-as-Code
 
 At the heart of this architecture is a simple idea: that we should **separate resources into
-loosely-coupled, independently-managable sets, based on _risk_ and _functionality_.**
+loosely-coupled, independently-managable sets, based on risk and functionality.**
 
 There are many benefits to this approach:
 
-* **Faster release velocity.** Modern infrastructure-as-code tools (_e.g._, Pulumi, Terraform) can
-  take tens of minutes to generate large plans. Splitting up configuration into well-scoped modules
-  is _always_ more time-efficient.
+* **Faster release velocity.** Modern infrastructure-as-code tools can
+  take tens of minutes to generate large plans of resources. Splitting up configuration into well-scoped modules
+  is always more time-efficient.
 * **Tractable plans.** It is markedly easier to notice that you're destroying your primary datastore
   in a 30-line plan than a 900-line plan.
-* **Users get permissions they _need_ rather than global admin permissions.**
-* **Limited blast radius.** Separating (_e.g._) app and storage configration means that the app team
+* **Users get permissions they need rather than global admin permissions.**
+* **Limited blast radius.** Separating (e.g.) app and storage configration means that the app team
   can't accidentally destroy the primary datastore.
-* **Independently managable.** For example, the identity stack (containing, _e.g._, GCP IAM) can
+* **Independently managable.** For example, the identity stack (containing, e.g., GCP IAM) can
   expose roles and credentials; the permissions of a specific role can be changed without making
   changes to (say) the application layer.
 
-And so on.
-
-We advocate splitting infrastructure up into (roughly) 3 sets of resources. As we will see, this is
+We advocate splitting infrastructure up into (roughly) 6 stacks of resources. As we will see, this is
 particularly easy with Pulumi, as the notion of a [Pulumi
 stack]({{< relref "/docs/intro/concepts/organizing-stacks-projects.md" >}}) was specifically designed for
 this use case.
 
-An explanation of the 3 stacks follows the diagram. In the next section, we begin to provision and
-configure each of these stacks.
-
-<img src="/images/docs/k8s-the-prod-way/kube-arch.png">
+<center><img src="/images/docs/quickstart/kubernetes/cake.svg" width="670"></center>
 
 ## 1. Identity
 
@@ -69,40 +64,53 @@ anything. This is a requirement for every production Kubernetes deployment.
 One side-effect of isolating resources into loosely-coupled stacks is that we
 have the opportunity to grant **minimal permissions** based on need. (See also
 [principle of least
-privilege](https://en.m.wikipedia.org/wiki/Principle_of_least_privilege)).
+privilege](https://en.m.wikipedia.org/wiki/Principleofleastprivilege)).
 
-Typically the identity stack looks something like this:
+Typically the identity stack looks like:
 
-1. **AWS/Azure/GCP identities and roles for the team.** (_e.g._, [AWS IAM][aws-iam], [GCP
-   IAM][gcp-iam], [Azure AD][azure-ad].) For example, the databases team typically gets _only_
-   administrative permissions for the datastores, while an app team might _only_ get cluster
-   developer permissions on for (_e.g._) GKE.
+1. **AWS/Azure/GCP identities and roles for the team.** (e.g., [AWS IAM][aws-iam], [GCP
+   IAM][gcp-iam], [Azure AD][azure-ad].) For example, the databases team typically gets only
+   administrative permissions for the datastores, while an app team might only get cluster
+   developer permissions.
 1. **AWS/Azure/GCP service accounts for CI/CD.** While IAM roles and Active Directory accounts
-   describe identity of users, service accounts grant an identity for _workloads_, _e.g._, "Storage
-   CI/CD." The identity stack provisions these as well, with similarly minimal permissions. For
-   example, the storage infrastructure service account has _only_ administrative permissions, _etc_.
+   describe identity of users, service accounts grant an identity for workloads, e.g. Storage
+   CI/CD. The identity stack provisions these as well, with similarly minimal permissions. For
+   example, the storage infrastructure service account may only have administrative permissions in its given namespace.
 
-## 2. Shared, managed infrastructure (_e.g._, compute, networking, storage)
+## 2. Managed Infrastructure
 
-The next step is to provision all shared, managed infrastructure. At minimum, this typically 
-includes networking infrastructure and a managed Kubernetes platform (_e.g._, [EKS][eks],
-[GKE][gke], [AKS][aks]), and frequently also involves a managed datastore (_e.g._, [Aurora][aurora],
-[Cloud SQL][cloud-sql], [CosmosDB][cosmos-db]).
+Provisioning shared, managed infrastructure is required to configure the
+cluster. At minimum, this typically this includes networking infrastructure,
+and can often include a managed datastore (e.g., [Aurora][aurora],
+[Cloud SQL][cloud-sql], [CosmosDB][cosmos-db]) along with other cloud services such as VMs, registries, data pipelines, and data warehouses.
 
-Typically this also involves provisioning Kubernetes cluster infrastructure -- things like
-`Namespace`s, `ClusterRoleBinding`s, and so on.
+## 3. Kubernetes Cluster 
 
-In (1), we provisioned a service account with admin permissions to each of the managed
-infrastructure offerings we wish to use. This is used in CI/CD. Typically all changes to shared,
-managed infrastructure are executed by this service account.
+Provision the managed Kubernetes cluster on [EKS][eks], [GKE][gke], or [AKS][aks],
+and configure it with the desired settings and defaults.
 
-## 3. Applications
+Typically this also involves provisioning Kubernetes cluster infrastructure
+such as `Namespaces`, `Roles` , `RoleBindings`, `Quotas` etc.
 
-Finally, using the service account with Kubernetes developer permissions provisioned in (1), and
-credentials to shared, managed infrastructure provisioned in (2) (_e.g._, kubeconfig files, database
-credentials, and so on), we can provision applications.
+## 4. Cluster Services
 
+With a running, vanilla cluster you should install any Kubernetes cluster-scoped
+services that will be shared by a subset or all cluster users.
 
+At a minimum, services include centralized cluster and app-based logging, and often
+include monitoring, policies, registries, and service meshes.
+
+## 5. App Services
+
+Configure any Kubernetes app-scoped services that will be shared
+by a subset or all users with deployment permissions.
+
+At a minimum, app services include ingress controllers, and often include DNS and TLS
+certificate managers, and app pipelines.
+
+## 6. Apps
+
+Deploy applications and workloads into the cluster.
 
 [post-mortems]: https://danluu.com/postmortem-lessons/
 
