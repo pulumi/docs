@@ -8,8 +8,7 @@ This tutorial leverages [Pulumi][pulumi] and [Node.js][nodejs] to provision and 
 infrastructure on AWS, Azure, or GCP. Pulumi is a platform for building and deploying cloud
 infrastructure and applications in your favorite language on any cloud. This particular tutorial is
 written in [TypeScript][ts], a strict superset of JavaScript that allows users to add optional type
-hints to variables. (Pulumi also supports Python and nothing in principle prevents using that
-instead.)
+hints to variables.
 
 ## Pulumi CLI
 
@@ -36,12 +35,11 @@ guides:
 * [Azure][azure-setup]
 * [GCP][gcp-setup]
 
-## `kubectl`, the Kubernetes CLI
+## kubectl
 
 Pulumi will help to provision cloud resources, including those running on Kubernetes. To interact
 with the cluster, it will be useful to install `kubectl`, the official Kubernetes CLI. See official
 instructions [here][kubectl].
-
 
 [pulumi]: https://www.pulumi.com/
 [nodejs]: https://nodejs.org/en/
