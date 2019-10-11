@@ -678,7 +678,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.emr.InstanceGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.emr.</code><code class="sig-name descname">InstanceGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling_policy=None</em>, <em class="sig-param">bid_price=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">ebs_configs=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">instance_count=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.emr.</code><code class="sig-name descname">InstanceGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling_policy=None</em>, <em class="sig-param">bid_price=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">configurations_json=None</em>, <em class="sig-param">ebs_configs=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">instance_count=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic MapReduce Cluster Instance Group configuration.
 See <a class="reference external" href="https://aws.amazon.com/documentation/emr/">Amazon Elastic MapReduce Documentation</a> for more information.</p>
 <blockquote>
@@ -695,6 +695,7 @@ this provider will resize any Instance Group to zero when destroying the resourc
 </p></li>
 <li><p><strong>bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>configurations_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.</p></li>
 <li><p><strong>ebs_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">ebs_config</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>instance_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – target number of instances for the instance group. defaults to 0.</p></li>
@@ -729,6 +730,12 @@ this provider will resize any Instance Group to zero when destroying the resourc
 <dt id="pulumi_aws.emr.InstanceGroup.cluster_id">
 <code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup.cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.emr.InstanceGroup.configurations_json">
+<code class="sig-name descname">configurations_json</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup.configurations_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -769,7 +776,7 @@ this provider will resize any Instance Group to zero when destroying the resourc
 
 <dl class="method">
 <dt id="pulumi_aws.emr.InstanceGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling_policy=None</em>, <em class="sig-param">bid_price=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">ebs_configs=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">instance_count=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">running_instance_count=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling_policy=None</em>, <em class="sig-param">bid_price=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">configurations_json=None</em>, <em class="sig-param">ebs_configs=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">instance_count=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">running_instance_count=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InstanceGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -782,6 +789,7 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>configurations_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.</p></li>
 <li><p><strong>ebs_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">ebs_config</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>instance_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – target number of instances for the instance group. defaults to 0.</p></li>
