@@ -108,9 +108,7 @@ export const existingPrivateSubnetIds = existingVpc.privateSubnetIds;
   * Attach a NAT Gateway to a public subnet such that private subnet instances
     can route to the Internet.
 
-
-[crosswalk-aws]: /docs/guides/crosswalk/aws
-
+[crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}
 [aws-managed-svcs]: https://aws.amazon.com/products/
 [aws-vpc]: https://aws.amazon.com/vpc/
 [aws-azs]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html
@@ -119,12 +117,10 @@ export const existingPrivateSubnetIds = existingVpc.privateSubnetIds;
 [aws-igw]: https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
 [aws-ngw]: https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html
 [aws-sgs]: https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html
-
-[vpc]: /docs/guides/crosswalk/aws/vpc/#setting-up-a-new-vpc
-[vpc-azs]: /docs/guides/crosswalk/aws/vpc/#configuring-availability-zones-for-an-aws-vpc
-[vpc-subnets]: /docs/guides/crosswalk/aws/vpc/#configuring-subnets-for-a-vpc
-[vpc-gw]: /docs/guides/crosswalk/aws/vpc/#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc
-[vpc-sg]: /docs/guides/crosswalk/aws/vpc/#configuring-security-groups-for-a-vpc
-
+[vpc]: {{< relref "/docs/guides/crosswalk/aws/vpc#setting-up-a-new-vpc" >}}
+[vpc-azs]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-availability-zones-for-an-aws-vpc" >}}
+[vpc-subnets]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-subnets-for-a-vpc" >}}
+[vpc-gw]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc" >}}
+[vpc-sg]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-security-groups-for-a-vpc" >}}
 [eks-tagging]: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html#vpc-subnet-tagging
 [gh-repo-stack]: https://github.com/metral/kubernetes-the-prod-way/tree/metral/crosswalk/aws/02-networking
