@@ -280,3 +280,52 @@ field once the Ingress resource is ready to route traffic.
 For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
 is [set properly](https://docs.traefik.io/providers/kubernetes-ingress/). This option was
 introduced in Traefik 1.7.0.
+
+## Synchronous call was made to "X" with an unregistered Provider.
+
+The warning occurs when making a 'data source' call in Pulumi in a synchronous fashion and passing along a ProivderResource that has not been registered.  i.e. code like:
+
+```ts
+const provider = new aws.Provider(...);
+
+// A call to some provider's `getXXX` data source function.
+const ids = aws.ec2.getSubnetIds(..., { provider });
+
+// or
+
+const parent = new SomeResource("name", { provider });
+const ids = aws.ec2.getSubnetIds(..., { parent });
+```
+
+This warning may be benign.  However, if you are experiencing crashes or hangs in Pulumi (especially above Node.js 12) and you see this
+warning, then it is likely this is the source.  To fix the issue update the code to one of the following forms:
+
+### Invoking the data-source function asynchronously:
+
+```ts
+const ids = await aws.ec2.getSubnetIds(..., { provider, async: true }); // or
+const ids = await aws.ec2.getSubnetIds(..., { parent, async: true });
+```
+
+In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always execute asynchronously.  Because of this, the 
+result of the call will only be a `Promise` and the calling code will need to either `await` it or call `.then(...)` on it to get the
+underlying value returned.
+
+### Registering the provider first:
+
+```ts
+const provider = new aws.Provider(...);
+await ProviderResource.register(provider);
+
+const ids = await aws.ec2.getSubnetIds(..., { provider }); // or
+const ids = await aws.ec2.getSubnetIds(..., { parent });
+```
+
+In this form, the ProviderResource is explicitly registered first, allowin it to be safely used *synchronously* in the data-source
+calls.  The data-source results can be used immediately, without needing to operate on them as promises (i.e. no need for `await` or
+`.then(...)`).
+
+### Compat
+
+Currently, a warning is issued so as to not break existing code that is functionality properly. In a future version, Pulumi *may* be updated to throw instead of producing a warning when this happens.  It is recommended that Pulumi apps be updated to use one of the
+above forms to prevent breakage in the future.
