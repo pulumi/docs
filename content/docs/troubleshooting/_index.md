@@ -281,7 +281,7 @@ For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
 is [set properly](https://docs.traefik.io/providers/kubernetes-ingress/). This option was
 introduced in Traefik 1.7.0.
 
-## Synchronous call was made to "X" with an unregistered Provider.
+## Synchronous call was made to "X" with an unregistered Provider. {#synchronous-call}
 
 The warning occurs when making a 'data source' call in Pulumi in a synchronous fashion and passing along a ProivderResource that has not been registered.  i.e. code like:
 
