@@ -298,10 +298,13 @@ const ids = aws.ec2.getSubnetIds(..., { parent });
 ```
 
 This warning may be benign. However, if you are experiencing crashes or hangs in Pulumi (especially above Node.js 12) and you see this
-warning, then it is likely that this is the source.  This warning may become an error in the future. As such, it is recommended that if 
-you see this warning you update your application.
+warning, then it is likely that this is the source.
 
-To address the issue update your code to one of the following forms:
+Currently, a warning is issued so as to not break existing code that is functionality properly. In a future version, Pulumi *may* be
+updated to throw instead of producing a warning when this happens.  It is recommended that Pulumi apps be updated to prevent breakage
+in the future.
+
+To address the issue update your app to use one of the following forms:
 
 ### Invoking the data-source function asynchronously:
 
@@ -327,9 +330,3 @@ const ids = await aws.ec2.getSubnetIds(..., { parent });
 In this form, the ProviderResource is explicitly registered first, allowin it to be safely used *synchronously* in the data-source
 calls. This registration should generally be done right after creating the provider. With this form the data-source results can be used immediately, without needing to operate on them as promises (i.e. no need for `await` or
 `.then(...)`).
-
-### Compat
-
-Currently, a warning is issued so as to not break existing code that is functionality properly. In a future version, Pulumi *may* be
-updated to throw instead of producing a warning when this happens.  It is recommended that Pulumi apps be updated to use one of the
-above forms to prevent breakage in the future.
