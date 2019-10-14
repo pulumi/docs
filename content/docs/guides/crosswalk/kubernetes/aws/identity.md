@@ -31,12 +31,12 @@ and attach EKS admin policies to the role. This role will be mapped into the
 import * as aws from "@pulumi/aws";
 
 // Create the EKS cluster admins role.
-const adminName = "admins";
-const adminsIamRole = new aws.iam.Role(`${adminName}-eksClusterAdmin`, {
+const adminsName = "admins";
+const adminsIamRole = new aws.iam.Role(`${adminsName}-eksClusterAdmin`, {
     assumeRolePolicy: aws.getCallerIdentity().then(id =>
         aws.iam.assumeRolePolicyForPrincipal({"AWS": `arn:aws:iam::${id.accountId}:root`}))
 })
-const adminsIamRolePolicy = new aws.iam.RolePolicy(`${adminName}-eksClusterAdminPolicy`, {
+const adminsIamRolePolicy = new aws.iam.RolePolicy(`${adminsName}-eksClusterAdminPolicy`, {
     role: adminsIamRole,
     policy: {
         Version: "2012-10-17",
