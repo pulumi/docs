@@ -58,3 +58,14 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 -   Go: Planned
 
 [k8s]: https://kubernetes.io
+
+## Crosswalk for Kubernetes
+
+[Pulumi Crosswalk for Kubernetes][crosswalk-k8s] is a collection of industry standard
+best-practices and tasks for managing Kubernetes and its infrastructure in production.
+
+Get started with deploying high-grade stacks by understanding how to enable 
+[Production Architecture for Teams][prod-arch-for-teams].
+
+[crosswalk-k8s]: /docs/guides/crosswalk/kubernetes/
+[prod-arch-for-teams]: /docs/guides/crosswalk/kubernetes/introduction/01-architecture/
