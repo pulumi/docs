@@ -11,7 +11,7 @@
                 {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
 
                 <header>
-                    <h3 class="no-anchor">Posts Tagged {{ .Data.Term }}</h3>
+                    <h1 class="no-anchor">Posts Tagged {{ .Data.Term }}</h1>
                 </header>
 
                 {{ range $paginator.Pages }}
