@@ -283,7 +283,8 @@ introduced in Traefik 1.7.0.
 
 ## Synchronous call made to "X" with an unregistered provider {#synchronous-call}
 
-The warning occurs when making a 'data source' call in Pulumi in a synchronous fashion and passing along a ProivderResource that has not been registered. For example:
+The warning occurs when making a 'data source' call in Pulumi in a synchronous fashion and passing along a ProivderResource that has
+not been registered. For example:
 
 ```ts
 const provider = new aws.Provider(...);
@@ -297,8 +298,8 @@ const parent = new SomeResource("name", { provider });
 const ids = aws.ec2.getSubnetIds(..., { parent });
 ```
 
-This warning may be benign. However, if you are experiencing crashes or hangs in Pulumi (especially in Node.js version 12.11.0 and above)
-and you see this warning, then it is likely that this is the source.
+This warning may be benign. However, if you are experiencing crashes or hangs in Pulumi (especially in Node.js version 12.11.0 and
+above) and you see this warning, then it is likely that this is the source.
 
 Currently, a warning is issued so as to not break existing code that is functionality properly. In a future version, Pulumi *may* be
 updated to throw instead of producing a warning when this happens.  It is recommended that Pulumi apps be updated to prevent breakage.
@@ -316,7 +317,8 @@ This is the preferred way to solve this issue. In this form, the `async: true` f
 execute asynchronously.  Because of this, the result of the call is wrapped into an `Output` to allow it to be easily passed around and
 to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
 
-Sometimes, however, the above is not possible because the call to the data-source happens a deeper layer (possibly in a component not under your control).  In that case, we recommend the following solution:
+Sometimes, however, the above is not possible because the call to the data-source happens a deeper layer (possibly in a component not
+under your control).  In that case, we recommend the following solution:
 
 ### Register the provider first
 
@@ -331,7 +333,8 @@ const ids = aws.ec2.getSubnetIds(..., { parent });
 ```
 
 In this form, the ProviderResource is explicitly registered first, allowing it to be safely used *synchronously* in the data-source
-calls. This registration should generally be done right after creating the provider. With this form the data-source results can be used immediately, without needing to operate on them as promises (i.e. no need for `await` or
-`.then(...)`).
+calls. This registration should generally be done right after creating the provider. With this form the data-source results can be 
+used immediately, without needing to operate on them as promises (i.e. no need for `await` or `.then(...)`).
 
-This approach can always safely make it possible to perform these synchronous data-source calls.  However, it may crequire refactoring some code due to the need to potentially use `async/await` code in areas of a program that are currently synchronous.
+This approach can always safely make it possible to perform these synchronous data-source calls.  However, it may require refactoring
+some code due to the need to potentially use `async`/`await` code in areas of a program that are currently synchronous.
