@@ -309,7 +309,7 @@ It is recommended that Pulumi apps be updated to prevent breakage.
 
 To address the issue update your app to use one of the following forms:
 
-### Invoke the data-source function asynchronously
+### Invoke the resource function asynchronously
 
 ```ts
 const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider, async: true })); // or
@@ -320,8 +320,8 @@ This is the preferred way to solve this issue. In this form, the `async: true` f
 execute asynchronously.  The result of the call is then wrapped into an `Output` so it can easily be passed as a resource input and
 to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
 
-Sometimes, however, this approach is not possible because the call to the data-source happens a deeper layer (possibly in a component not
-under your control).  In that case, we recommend the solution in the next section:
+Sometimes, however, this approach is not possible because the call to the resource functio happens a deeper layer (possibly in a
+component not under your control).  In that case, we recommend the solution in the next section:
 
 ### Register the provider first
 
@@ -335,9 +335,9 @@ const ids = aws.ec2.getSubnetIds(..., { provider }); // or
 const ids = aws.ec2.getSubnetIds(..., { parent });
 ```
 
-In this form, the ProviderResource is explicitly registered first, allowing it to be safely used *synchronously* in the data-source
-calls. This registration should generally be done immediately after creating the provider. With this form the data-source results can be 
-used immediately, without needing to operate on them as promises (i.e. no need for `await` or `.then(...)`).
+In this form, the ProviderResource is explicitly registered first, allowing it to be safely used *synchronously* in the resource 
+function calls. This registration should generally be done immediately after creating the provider. With this form the resource function
+results can be used immediately, without needing to operate on them as promises (i.e. no need for `await` or `.then(...)`).
 
-This approach makes it possible to safely perform these data-source calls synchronously.  However, it may require refactoring
+This approach makes it possible to safely perform these resource function calls synchronously.  However, it may require refactoring
 some code due to the need to potentially use `async`/`await` code in areas of a program that are currently synchronous.
