@@ -313,11 +313,11 @@ const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider, async: true }));
 const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent, async: true }));
 ```
 
-This is the preferred way to solve this issu. In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always
+This is the preferred way to solve this issue. In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always
 execute asynchronously.  Because of this, the result of the call is wrapped into an `Output` to allow it to be easily passed around and
 to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
 
-Sometimes, however, the above is not possible because the call the data-source happens a deeper layer (possibly in a component not under your control).  In that case:
+Sometimes, however, the above is not possible because the call to the data-source happens a deeper layer (possibly in a component not under your control).  In that case:
 
 ### Register the provider first:
 
@@ -325,13 +325,14 @@ Sometimes, however, the above is not possible because the call the data-source h
 const provider = new aws.Provider(...);
 await ProviderResource.register(provider);
 
-const ids = await aws.ec2.getSubnetIds(..., { provider }); // or
-const ids = await aws.ec2.getSubnetIds(..., { parent });
+// later on
+
+const ids = aws.ec2.getSubnetIds(..., { provider }); // or
+const ids = aws.ec2.getSubnetIds(..., { parent });
 ```
 
-In this form, the ProviderResource is explicitly registered first, allowin it to be safely used *synchronously* in the data-source
+In this form, the ProviderResource is explicitly registered first, allowing it to be safely used *synchronously* in the data-source
 calls. This registration should generally be done right after creating the provider. With this form the data-source results can be used immediately, without needing to operate on them as promises (i.e. no need for `await` or
 `.then(...)`).
 
-This approach can always safely make it possible to perform these synchronous data-source calls.  However, it may come with significant
-additional complexity due to the need to potentially use `async/await` code in areas of a program that are currently synchronous.
+This approach can always safely make it possible to perform these synchronous data-source calls.  However, it may crequire refactoring some code due to the need to potentially use `async/await` code in areas of a program that are currently synchronous.
