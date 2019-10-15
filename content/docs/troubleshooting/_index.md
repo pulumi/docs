@@ -336,7 +336,7 @@ const ids = aws.ec2.getSubnetIds(..., { parent });
 ```
 
 In this form, the ProviderResource is explicitly registered first, allowing it to be safely used *synchronously* in the data-source
-calls. This registration should generally be done right after creating the provider. With this form the data-source results can be 
+calls. This registration should generally be done immediately after creating the provider. With this form the data-source results can be 
 used immediately, without needing to operate on them as promises (i.e. no need for `await` or `.then(...)`).
 
 This approach can always safely make it possible to perform these synchronous data-source calls.  However, it may require refactoring
