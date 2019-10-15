@@ -320,7 +320,7 @@ This is the preferred way to solve this issue. In this form, the `async: true` f
 execute asynchronously.  The result of the call is then wrapped into an `Output` so it can easily be passed as a resource input and
 to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
 
-Sometimes, however, the above is not possible because the call to the data-source happens a deeper layer (possibly in a component not
+Sometimes, however, this approach is not possible because the call to the data-source happens a deeper layer (possibly in a component not
 under your control).  In that case, we recommend the solution in the next section:
 
 ### Register the provider first
