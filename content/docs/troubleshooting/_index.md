@@ -306,7 +306,7 @@ in the future.
 
 To address the issue update your app to use one of the following forms:
 
-### Invoke the data-source function asynchronously:
+### Invoke the data-source function asynchronously
 
 ```ts
 const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider, async: true })); // or
