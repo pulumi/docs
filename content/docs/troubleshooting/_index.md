@@ -283,8 +283,9 @@ introduced in Traefik 1.7.0.
 
 ## Synchronous call made to "X" with an unregistered provider {#synchronous-call}
 
-The warning occurs when making a 'data source' call in Pulumi in a synchronous fashion and passing along a ProivderResource that has
-not been registered. For example:
+The warning occurs when invoking a resource function synchronously while also using
+[an explicit provider object](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) that isn't yet ready to use.
+For example:
 
 ```ts
 const provider = new aws.Provider(...);
