@@ -306,18 +306,20 @@ in the future.
 
 To address the issue update your app to use one of the following forms:
 
-### Invoking the data-source function asynchronously:
+### Invoke the data-source function asynchronously:
 
 ```ts
-const ids = await aws.ec2.getSubnetIds(..., { provider, async: true }); // or
-const ids = await aws.ec2.getSubnetIds(..., { parent, async: true });
+const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider, async: true })); // or
+const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent, async: true }));
 ```
 
-In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always execute asynchronously.  Because of this, the 
-result of the call will only be a `Promise` and the calling code will need to either `await` it or call `.then(...)` on it to get the
-underlying value returned.
+This is the preferred way to solve this issu. In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always
+execute asynchronously.  Because of this, the result of the call is wrapped into an `Output` to allow it to be easily passed around and
+to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
 
-### Registering the provider first:
+Sometimes, however, the above is not possible because the call the data-source happens a deeper layer (possibly in a component not under your control).  In that case:
+
+### Register the provider first:
 
 ```ts
 const provider = new aws.Provider(...);
@@ -330,3 +332,6 @@ const ids = await aws.ec2.getSubnetIds(..., { parent });
 In this form, the ProviderResource is explicitly registered first, allowin it to be safely used *synchronously* in the data-source
 calls. This registration should generally be done right after creating the provider. With this form the data-source results can be used immediately, without needing to operate on them as promises (i.e. no need for `await` or
 `.then(...)`).
+
+This approach can always safely make it possible to perform these synchronous data-source calls.  However, it may come with significant
+additional complexity due to the need to potentially use `async/await` code in areas of a program that are currently synchronous.
