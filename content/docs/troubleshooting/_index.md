@@ -321,7 +321,7 @@ execute asynchronously.  Because of this, the result of the call is wrapped into
 to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
 
 Sometimes, however, the above is not possible because the call to the data-source happens a deeper layer (possibly in a component not
-under your control).  In that case, we recommend the following solution:
+under your control).  In that case, we recommend the solution in the next section:
 
 ### Register the provider first
 
