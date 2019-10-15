@@ -47,10 +47,7 @@ Let's create the networking project.
     $ pulumi config set aws:region us-east-2
     ```
     
-This gives us the shell of our project that we need to create our resources.  In thinking of how we build our networking resources,
-we will have to create 2 copies of each resource due to separate VPCs for application and database. Of course, we can use a loop to do
-this, but a more elegant way, would be to create a class that we could pass parameters into to make life easy. We want the basic shape of
-the API to look as follows:
+This gives us the shell of our project we need to create our resources.  In thinking of how we build our networking resources, we will create 2 copies of each resource due to separate VPCs for application and database. Of course, we can use a loop to do this, but the more elegant way would be to create a class that we could pass parameters into to make life easy. We want the basic shape of the API to look as follows:
 
     ```typescript
     const availabilityZones = aws.getAvailabilityZones({
