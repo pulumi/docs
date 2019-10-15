@@ -319,7 +319,7 @@ to make it [simple to access properties](https://www.pulumi.com/docs/intro/conce
 
 Sometimes, however, the above is not possible because the call to the data-source happens a deeper layer (possibly in a component not under your control).  In that case:
 
-### Register the provider first:
+### Register the provider first
 
 ```ts
 const provider = new aws.Provider(...);
