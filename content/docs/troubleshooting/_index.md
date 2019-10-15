@@ -302,8 +302,10 @@ const ids = aws.ec2.getSubnetIds(..., { parent });
 This warning may be benign. However, if you are experiencing crashes or hangs in Pulumi (especially in Node.js version 12.11.0 and
 above) and you see this warning, then it is likely that this is the source.
 
-Currently, a warning is issued so as to not break existing code that is functionality properly. In a future version, Pulumi *may* be
-updated to throw instead of producing a warning when this happens.  It is recommended that Pulumi apps be updated to prevent breakage.
+Currently, a warning is issued so as to not break existing code that is functionality properly. However, the root cause of this problem
+pertains to undefined behavior in the Node.js runtime, so apparently-working code today may begin crashing or hanging tomorrow. As such,
+we recommend updating your code In a future version, Pulumi *may* be updated to throw instead of producing a warning when this happens.
+It is recommended that Pulumi apps be updated to prevent breakage.
 
 To address the issue update your app to use one of the following forms:
 
