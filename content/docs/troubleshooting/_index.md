@@ -301,8 +301,7 @@ This warning may be benign. However, if you are experiencing crashes or hangs in
 and you see this warning, then it is likely that this is the source.
 
 Currently, a warning is issued so as to not break existing code that is functionality properly. In a future version, Pulumi *may* be
-updated to throw instead of producing a warning when this happens.  It is recommended that Pulumi apps be updated to prevent breakage
-in the future.
+updated to throw instead of producing a warning when this happens.  It is recommended that Pulumi apps be updated to prevent breakage.
 
 To address the issue update your app to use one of the following forms:
 
