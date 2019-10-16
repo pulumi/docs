@@ -2,7 +2,7 @@
 title: "Architect AWS Application Infrastructure with Pulumi Stack References"
 date: "2019-06-14"
 meta_desc: "How to architect your AWS infrastructure to optimize team collaboration with Pulumi Stack References"
-meta_image: "dashboard.png"
+meta_image: "application-architecture.png"
 authors: ["paul-stack"]
 tags: ["AWS","stack-reference", "architecture"]
 ---
