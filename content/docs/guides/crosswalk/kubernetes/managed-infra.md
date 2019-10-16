@@ -1,8 +1,5 @@
 ---
-
 title: Managed Infrastructure
-
-aliases: ["/docs/guides/crosswalk/kubernetes/aws/managed-infra/"]
 ---
 
 AWS has a catalog of [managed infrastructure][aws-managed-svcs] services that

@@ -1,8 +1,5 @@
 ---
-
-title: Identity
-
-aliases: ["/docs/guides/crosswalk/kubernetes/aws/identity/"]
+title: Pulumi Crosswalk for Kubernetes - Identity
 ---
 
 AWS exposes an [Identity Access and Management (IAM)][iam] API which can be used to grant
