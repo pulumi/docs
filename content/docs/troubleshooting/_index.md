@@ -280,3 +280,64 @@ field once the Ingress resource is ready to route traffic.
 For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
 is [set properly](https://docs.traefik.io/providers/kubernetes-ingress/). This option was
 introduced in Traefik 1.7.0.
+
+## Synchronous call made to "X" with an unregistered provider {#synchronous-call}
+
+The warning occurs when invoking a resource function synchronously while also using
+[an explicit provider object](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) that isn't yet ready to use.
+For example:
+
+```ts
+const provider = new aws.Provider(...);
+
+// A call to some provider's `getXXX` data source function.
+const ids = aws.ec2.getSubnetIds(..., { provider });
+
+// or
+
+const parent = new SomeResource("name", { provider });
+const ids = aws.ec2.getSubnetIds(..., { parent });
+```
+
+This warning may be benign. However, if you are experiencing crashes or hangs in Pulumi (especially in Node.js version 12.11.0 and
+above) and you see this warning, then it is likely that this is the source.
+
+Currently, a warning is issued so as to not break existing code that is functionality properly. However, the root cause of this problem
+pertains to undefined behavior in the Node.js runtime, so apparently-working code today may begin crashing or hanging tomorrow. As such,
+we recommend updating your code In a future version, Pulumi *may* be updated to throw instead of producing a warning when this happens.
+It is recommended that Pulumi apps be updated to prevent breakage.
+
+To address the issue update your app to use one of the following forms:
+
+### Invoke the resource function asynchronously
+
+```ts
+const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider, async: true })); // or
+const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent, async: true }));
+```
+
+This is the preferred way to solve this issue. In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always
+execute asynchronously.  The result of the call is then wrapped into an `Output` so it can easily be passed as a resource input and
+to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
+
+Sometimes, however, this approach is not possible because the call to the resource functio happens a deeper layer (possibly in a
+component not under your control).  In that case, we recommend the solution in the next section:
+
+### Register the provider first
+
+```ts
+const provider = new aws.Provider(...);
+await ProviderResource.register(provider);
+
+// later on
+
+const ids = aws.ec2.getSubnetIds(..., { provider }); // or
+const ids = aws.ec2.getSubnetIds(..., { parent });
+```
+
+In this form, the ProviderResource is explicitly registered first, allowing it to be safely used *synchronously* in the resource 
+function calls. This registration should generally be done immediately after creating the provider. With this form the resource function
+results can be used immediately, without needing to operate on them as promises (i.e. no need for `await` or `.then(...)`).
+
+This approach makes it possible to safely perform these resource function calls synchronously.  However, it may require refactoring
+some code due to the need to potentially use `async`/`await` code in areas of a program that are currently synchronous.
