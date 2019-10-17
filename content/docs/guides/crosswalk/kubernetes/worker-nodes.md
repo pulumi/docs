@@ -7,23 +7,54 @@ menu:
     weight: 2
 ---
 
+{{< cloudchoose >}}
+
 The [worker nodes][k8s-concepts] are hosts that are responsible for
 running the apps and workloads of the cluster after the control plane has 
 scheduled it work. It also typically faciliates virtual networking using an
 overlay or integrated network depending on setup.
 
+See the [official Kubernetes docs][k8s-docs] for more details.
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-See the [official Kubernetes docs][k8s-docs] for more details.
+[gh-repo-stack]: https://github.com/metral/kubernetes-the-prod-way/tree/metral/crosswalk/aws/03-cluster-configuration
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+
+[gh-repo-stack]: https://github.com/metral/kubernetes-the-prod-way/tree/metral/crosswalk/azure/03-cluster-configuration
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+
+[gh-repo-stack]: https://github.com/metral/kubernetes-the-prod-way/tree/metral/crosswalk/gcp/03-cluster-configuration
+
+{{% /md %}}
+</div>
 
 ## Overview
 
 Given that apps and workloads will vary in quantity, and in the resources they
 require, it's wise to offer differing pools of nodes for Pods to use.
 
-Pools, also known as Node Groups, can vary by machine `instanceType` for specific
-hardware profiles. Or in `minSize`, `maxSize` and `desiredCapacity` of nodes
-in a scaling group. As well as other properties like the `version` of the [Kubelet][k8s-kubelet] to run.
+Pools, also known as Node Groups, can vary by machine instance type for specific
+hardware profiles. Or in sizing and capacity of nodes in a scaling group.
+As well as other properties like the version of the [Kubelet][k8s-kubelet] to run.
 
 How you segment and configure your node groups will vary by preferences and
 requirements. Generally, there are at least a few classes of worker node
@@ -42,6 +73,10 @@ We'll configure and deploy:
   and best-practices, such as version pinning, and resource tags.
 
 ### Worker Identity
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 When creating node groups, it is recommended to use separate identities between
 node groups, as separation of roles creates many functions: it can be used to
@@ -74,7 +109,42 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 });
 ```
 
+[aws-instance-profile]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
+[crosswalk-aws-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
 ### Worker Networking
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 Node groups in EKS can also have their node security group be configured to a
 new or existing security group.
@@ -108,6 +178,36 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 });
 ```
 
+[crosswalk-sgs]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-security-groups-for-a-vpc" >}}
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
 ### Scheduling
 
 Scheduling in Kubernetes takes on many forms depending on the context. It
@@ -121,11 +221,14 @@ groups. These groups provide automatic scaling and management of a logical
 collection of hosts through health checks and policies, and are an effective
 means of ensuring node groups are adequately provisioned as intended.
 
-We can configure the `desiredCapacity` of the scaling group to run a specific
-quantity of nodes that falls between our `minSize` and `maxSize`.
+We can configure the scaling group to run a specific quantity of nodes.
 
 Size the node groups accordingly to known or approximate usage and bursting 
 expectations.
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 ```typescript
 // Create a Standard node group of t2.medium workers with an IAM instance profile.
@@ -152,6 +255,35 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
     providers: { kubernetes: cluster.provider},
 });
 ```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
 
 If necessary, consider installing the [Kubernetes Cluster
 Autoscaler][k8s-cluster-autoscaler] to automatically adjust the size of the
@@ -172,6 +304,10 @@ Both configurations can be set in the `PodSpec` using a
 [`nodeSelector`][k8s-node-selector] or [`tolerations`][k8s-taints]
 respectively.
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
 ```typescript
 // Create a Standard node group of t2.medium workers with an IAM instance profile.
 const ngStandard = new eks.NodeGroup(`${projectName}-ng-standard`, {
@@ -195,108 +331,113 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 });
 ```
 
-### Recommended Worker Settings
+{{% /md %}}
+</div>
 
-  * Use a specific version of Kubernetes for node group by specifing the AMI
-    for the region. This pins the nodes to a particular release in a declarative
-    manner, instead of implicitly using the latest available version, or using a smart default
-    where both can be updated at any moment.
-  * Tag resources under management to provide the ability to assign
-    metadata to resources to make it easier to manage, search, and filter them.
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 
-  ```typescript
-  // Create a Standard node group of t2.medium workers with an IAM instance profile.
-  const ngStandard = new eks.NodeGroup(`${projectName}-ng-standard`, {
-      cluster: cluster,
-      instanceType: "t2.medium",
-      amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
-      cloudFormationTags: clusterName.apply(clusterName => ({
-          "CloudFormationGroupTag": "true",
-          "k8s.io/cluster-autoscaler/enabled": "true",
-          [`k8s.io/cluster-autoscaler/${clusterName}`]: "true",
-      })),
-      ...
-  }, {
-      providers: { kubernetes: cluster.provider},
-  });
-  
-  // Create a 2xlarge node group of t3.2xlarge workers with an IAM instance profile.
-  const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
-      cluster: cluster,
-      instanceType: "t3.2xlarge",
-      amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
-      cloudFormationTags: clusterName.apply(clusterName => ({
-          "CloudFormationGroupTag": "true",
-          "k8s.io/cluster-autoscaler/enabled": "true",
-          [`k8s.io/cluster-autoscaler/${clusterName}`]: "true",
-      })),
-      ...
-  }, {
-      providers: { kubernetes: cluster.provider},
-  });
-  ```
-
-### Aggregated Node Groups Example
-
-Below is an aggregated example of the recommended EKS node groups configuration.
-
-The full code for this stack is also available on [GitHub][gh-repo-stack].
+TODO
 
 ```typescript
-// Create a Standard node group of t2.medium workers.
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+### Recommended Worker Settings
+
+  * Use a specific version of Kubernetes for node group. This pins the nodes
+  to a particular release in a declarative manner, instead of implicitly
+  using the latest available version, or using a smart default where both
+  can be updated at any moment.
+  * Tag resources under management to provide the ability to assign
+  metadata to resources to make it easier to manage, search, and filter them.
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+```typescript
+// Create a Standard node group of t2.medium workers with an IAM instance profile.
 const ngStandard = new eks.NodeGroup(`${projectName}-ng-standard`, {
     cluster: cluster,
-    instanceProfile: new aws.iam.InstanceProfile("ng-standard", {role: stdNodegroupIamRoleName}),
-    nodeAssociatePublicIpAddress: false,
-    nodeSecurityGroup: cluster.nodeSecurityGroup,
-    clusterIngressRule: cluster.eksClusterIngressRule,
-    amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
     instanceType: "t2.medium",
-    desiredCapacity: 3,
-    minSize: 3,
-    maxSize: 10,
-    labels: {"amiId": "ami-0ca5998dc2c88e64b"},
+    amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
     cloudFormationTags: clusterName.apply(clusterName => ({
         "CloudFormationGroupTag": "true",
         "k8s.io/cluster-autoscaler/enabled": "true",
         [`k8s.io/cluster-autoscaler/${clusterName}`]: "true",
     })),
+    ...
 }, {
     providers: { kubernetes: cluster.provider},
 });
 
-// Create a 2xlarge node group of t3.2xlarge workers with taints for special workloads.
+// Create a 2xlarge node group of t3.2xlarge workers with an IAM instance profile.
 const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
     cluster: cluster,
-    instanceProfile: new aws.iam.InstanceProfile("ng-2xlarge", {role: perfNodegroupIamRoleName}),
-    nodeAssociatePublicIpAddress: false,
-    nodeSecurityGroup: cluster.nodeSecurityGroup,
-    clusterIngressRule: cluster.eksClusterIngressRule,
-    amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
     instanceType: "t3.2xlarge",
-    desiredCapacity: 5,
-    minSize: 5,
-    maxSize: 10,
-    labels: {"amiId": "ami-0ca5998dc2c88e64b"},
-    taints: { "special": { value: "true", effect: "NoSchedule"}},
+    amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
     cloudFormationTags: clusterName.apply(clusterName => ({
         "CloudFormationGroupTag": "true",
         "k8s.io/cluster-autoscaler/enabled": "true",
         [`k8s.io/cluster-autoscaler/${clusterName}`]: "true",
     })),
+    ...
 }, {
     providers: { kubernetes: cluster.provider},
 });
 ```
 
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
 [k8s-concepts]: https://kubernetes.io/docs/concepts
 [k8s-kubelet]: https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/
-[aws-instance-profile]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
-[crosswalk-aws-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
-[crosswalk-sgs]: {{< relref "/docs/guides/crosswalk/aws/vpc#configuring-security-groups-for-a-vpc" >}}
 [k8s-labels]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 [k8s-taints]: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
 [k8s-cluster-autoscaler]: https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler
-[gh-repo-stack]: https://github.com/metral/kubernetes-the-prod-way/tree/metral/crosswalk/aws/03-cluster-configuration
 [k8s-node-selector]: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
 [k8s-docs]: https://kubernetes.io/docs/reference/
