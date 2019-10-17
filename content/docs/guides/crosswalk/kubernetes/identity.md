@@ -1,6 +1,13 @@
 ---
-title: Pulumi Crosswalk for Kubernetes - Identity
+title: Identity
+linktitle: Identity
 ---
+
+{{< cloudchoose >}}
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 AWS exposes an [Identity Access and Management (IAM)][iam] API which can be used to grant
 permissions to both human and bot users. Using this API, [**IAM User**][users] accounts can be
@@ -18,7 +25,94 @@ In [Crosswalk for AWS][crosswalk-aws] we showcase how to define IAM:
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-## Creating an IAM Role for Kubernetes Admins
+[iam]: https://aws.amazon.com/iam/
+[users]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
+[groups]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
+[roles]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
+[policies]: https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
+[crosswalk-aws]: /docs/guides/crosswalk/aws
+[iam-users]: /docs/guides/crosswalk/aws/iam/#iam-users
+[iam-groups]: /docs/guides/crosswalk/aws/iam/#iam-groups
+[iam-roles]: /docs/guides/crosswalk/aws/iam/#iam-roles
+[iam-policies]: /docs/guides/crosswalk/aws/iam/#using-the-policydocument-interface
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/01-identity
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/01-identity
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/01-identity
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+## Overview
+
+We'll review how to:
+
+  * [Create an IAM Role for Admins](#create-an-iam-role-for-admins)
+  * [Create an IAM Role for Developers](#create-an-iam-role-for-developers)
+  * [Create IAM Roles for EKS Node Groups](#create-iam-roles-for-eks-node-groups)
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+## Overview
+
+We'll review how to:
+
+  * [Create an IAM Role for Admins](#create-an-iam-role-for-admins)
+  * [Create an IAM Role for Developers](#create-an-iam-role-for-developers)
+  * [Create IAM Roles for AKS Node Pools](#create-iam-roles-for-aks-node-pools)
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+## Overview
+
+We'll review how to:
+
+  * [Create an IAM Role for Admins](#create-an-iam-role-for-admins)
+  * [Create an IAM Role for Developers](#create-an-iam-role-for-developers)
+  * [Create IAM Roles for GKE Node Pools](#create-iam-roles-for-gke-node-pools)
+
+{{% /md %}}
+</div>
+
+## Create an IAM Role for Admins
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 Create an admin role in AWS that assumes the AWS account caller,
 and attach EKS admin policies to the role. This role will be mapped into the
@@ -46,8 +140,41 @@ const adminsIamRolePolicy = new aws.iam.RolePolicy(`${adminsName}-eksClusterAdmi
     { parent: adminsIamRole },
 );
 ```
+[k8s-sys-masters]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
+{{% /md %}}
+</div>
 
-## Creating an IAM Role for Kubernetes Developers
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+## Create an IAM Role for Developers
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 Create a developer role in AWS that assumes the AWS account caller.
 This role will be mapped into a limited developer role in Kubernetes RBAC.
@@ -63,7 +190,39 @@ const devsIamRole = new aws.iam.Role(`${devName}-eksClusterDeveloper`, {
 })
 ```
 
-## Creating IAM Roles for Kubernetes NodeGroups
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+## Create IAM Roles for EKS Node Groups
 
 Create a node group worker role in AWS that assumes the EC2 Service, and attach
 required EKS cluster polices to the role. This role will be used by the node group in an
@@ -101,15 +260,33 @@ function attachPoliciesToRole(name: string, role: aws.iam.Role, policyArns: stri
 }
 ```
 
-[iam]: https://aws.amazon.com/iam/
-[users]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
-[groups]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
-[roles]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
-[policies]: https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
-[crosswalk-aws]: /docs/guides/crosswalk/aws
-[iam-users]: /docs/guides/crosswalk/aws/iam/#iam-users
-[iam-groups]: /docs/guides/crosswalk/aws/iam/#iam-groups
-[iam-roles]: /docs/guides/crosswalk/aws/iam/#iam-roles
-[iam-policies]: /docs/guides/crosswalk/aws/iam/#using-the-policydocument-interface
-[gh-repo-stack]: https://github.com/metral/kubernetes-the-prod-way/tree/metral/crosswalk/aws/01-identity
-[k8s-sys-masters]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+## Create IAM Roles for AKS Node Pools
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+## Create IAM Roles for GKE Node Pools
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
