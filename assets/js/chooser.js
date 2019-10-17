@@ -89,6 +89,11 @@ function selectOs(os) {
     selectChoice("os", os);
 }
 
+// selectCloud chooses a cloud provider.
+function selectCloud(cloud) {
+    selectChoice("cloud", cloud);
+}
+
 // Hides and shows choices based on previous preferences.
 function hideShowChoices(kind, selector, defaultChoice) {
     var tabsOnPage = {};
@@ -138,4 +143,5 @@ $(function() {
         defaultOsChoice = "linux";
     }
     hideShowChoices("os", selectOs, defaultOsChoice);
+    hideShowChoices("cloud", selectCloud, "aws");
 });
