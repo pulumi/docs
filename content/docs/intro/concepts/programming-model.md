@@ -241,7 +241,7 @@ let res2 = new MyResource("res2", {}, { dependsOn: [res1] });
 
 ```python
 res1 = MyResource("res1");
-res2 = MyResource("res2", opts=ResourceOptions(depends_on=res1));
+res2 = MyResource("res2", opts=ResourceOptions(depends_on=[res1]));
 ```
 
 ```go
