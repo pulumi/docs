@@ -7,9 +7,59 @@ menu:
     weight: 6
 ---
 
+{{< cloudchoose >}}
+
 TODO - Intro
 
-### Use the admins IAM role in Kubernetes
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/03-cluster-configuration
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/03-cluster-configuration
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
+
+{{% /md %}}
+</div>
+
+## Overview
+
+We'll examine how to:
+
+  * [Use the `admins` IAM Role](#use-the-admins-iam-role)
+  * [Use the `devs` IAM Role](#use-the-devs-iam-role)
+  * [Configure RBAC Authorization](#configure-rbac-authorization)
+
+### Use the `admins` IAM role
+
+In [Identity][crosswalk-identity] we demonstrate how to create typical IAM roles for
+use in Kubernetes.
+
+We create an `admins` role for cluster administrators with root privileges, that
+will be tied into Kubernetes RBAC.
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 Make a copy of the kubeconfig that will be edited for the admins.
 
@@ -22,55 +72,24 @@ Edit `kubeconfig-admins.json` by inserting a role to authenticate with in the
 
 ```bash
 ...
-"k8s-aws-cluster-eksCluster-1ef1afe",
-"-r",
-"arn:aws:iam::000000000000:role/admins-eksClusterAdmin-0627674"
-```
-
-The result should look similar to below.
-
-```bash
-{
-  "apiVersion": "v1",
-  "clusters": [
-    {
-      "cluster": {
-        "certificate-authority-data": "<OMITTED>"
-        "server": "https://093081F384CFC80A55E74581337E4C31.gr7.us-west-2.eks.amazonaws.com"
-      },
-      "name": "kubernetes"
-    }
-  ],
-  "contexts": [
-    {
-      "context": {
-        "cluster": "kubernetes",
-        "user": "aws"
-      },
-      "name": "aws"
-    }
-  ],
-  "current-context": "aws",
-  "kind": "Config",
-  "users": [
-    {
-      "name": "aws",
-      "user": {
-        "exec": {
-          "apiVersion": "client.authentication.k8s.io/v1alpha1",
-          "args": [
-            "token",
-            "-i",
-            "k8s-aws-cluster-eksCluster-1ef1afe",
-            "-r",
-            "arn:aws:iam::000000000000:role/admins-eksClusterAdmin-0627674"
-          ],
-          "command": "aws-iam-authenticator"
-        }
+"users": [
+  {
+    "name": "aws",
+    "user": {
+      "exec": {
+        "apiVersion": "client.authentication.k8s.io/v1alpha1",
+        "args": [
+          "token",
+          "-i",
+          "k8s-aws-cluster-eksCluster-1ef1afe",
+          "-r",
+          "arn:aws:iam::000000000000:role/admins-eksClusterAdmin-0627674"
+        ],
+        "command": "aws-iam-authenticator"
       }
     }
-  ]
-}
+  }
+]
 ```
 
 Update and use the new `kubeconfig`.
@@ -116,7 +135,47 @@ NAMESPACE     NAME                                 DESIRED   CURRENT   READY   A
 kube-system   replicaset.apps/coredns-6f647f5754   2         2         2       15h
 ```
 
-### Use the developers IAM role in Kubernetes
+[aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+### Use the `devs` IAM role
+
+In [Identity][crosswalk-identity] we demonstrate how to create typical IAM roles for
+use in Kubernetes.
+
+We create limited scope `devs` role for general purpose execution of workloads,
+that will be tied into Kubernetes RBAC.
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 Make a copy of the kubeconfig that will be edited for the developers.
 
@@ -129,55 +188,24 @@ Edit `kubeconfig-devs.json` by inserting a role to authenticate with in the
 
 ```bash
 ...
-"k8s-aws-cluster-eksCluster-1ef1afe",
-"-r",
-"arn:aws:iam::000000000000:role/devs-eksClusterDeveloper-e332028"
-```
-
-The result should look similar to below.
-
-```bash
-{
-  "apiVersion": "v1",
-  "clusters": [
-    {
-      "cluster": {
-        "certificate-authority-data": "<OMITTED>"
-        "server": "https://093081F384CFC80A55E74581337E4C31.gr7.us-west-2.eks.amazonaws.com"
-      },
-      "name": "kubernetes"
-    }
-  ],
-  "contexts": [
-    {
-      "context": {
-        "cluster": "kubernetes",
-        "user": "aws"
-      },
-      "name": "aws"
-    }
-  ],
-  "current-context": "aws",
-  "kind": "Config",
-  "users": [
-    {
-      "name": "aws",
-      "user": {
-        "exec": {
-          "apiVersion": "client.authentication.k8s.io/v1alpha1",
-          "args": [
-            "token",
-            "-i",
-            "k8s-aws-cluster-eksCluster-1ef1afe",
-            "-r",
-            "arn:aws:iam::000000000000:role/devs-eksClusterDeveloper-e332028"
-          ],
-          "command": "aws-iam-authenticator"
-        }
+"users": [
+  {
+    "name": "aws",
+    "user": {
+      "exec": {
+        "apiVersion": "client.authentication.k8s.io/v1alpha1",
+        "args": [
+          "token",
+          "-i",
+          "k8s-aws-cluster-eksCluster-1ef1afe",
+          "-r",
+          "arn:aws:iam::000000000000:role/devs-eksClusterDeveloper-e332028"
+        ],
+        "command": "aws-iam-authenticator"
       }
     }
-  ]
-}
+  }
+]
 ```
 
 Update and use the new `kubeconfig`.
@@ -202,13 +230,45 @@ Error from server (Forbidden): jobs.batch is forbidden: User "pulumi:alice" cann
 Error from server (Forbidden): cronjobs.batch is forbidden: User "pulumi:alice" cannot list resource "cronjobs" in API group "batch" at the cluster scope
 ```
 
-### Configure Kubernetes RBAC
+[aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
+{{% /md %}}
+</div>
 
-IAM is not configured by default with Kubernetes RBAC.
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
 
-For example, in [Use the developers IAM role](#use-the-developers-iam-role-in-kubernetes) the
-user is authenticated into the cluster using the IAM role, but it is not yet
-authorized to do work in the cluster. This means that it cannot perform any operations in the cluster by
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+```typescript
+// TODO
+```
+
+{{% /md %}}
+</div>
+
+### Configure RBAC Authorization
+
+Access control is not configured by default with Kubernetes RBAC.
+
+In [Use the `devs` IAM role](#use-the-devs-iam-role) the
+user is **authenticated** into the cluster using the IAM role, but it is not yet
+**authorized** to do work in the cluster.
+
+This means that the user cannot perform any operations in the cluster by
 default, or retrieve information as shown in the `Error from server (Forbidden)`
 messages.
 
@@ -218,11 +278,13 @@ $ kubectl run --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --se
 Error from server (Forbidden): pods is forbidden: User "pulumi:alice" cannot create resource "pods" in API group "" in the namespace "apps-x1z818eg"
 ```
 
-To allow the devs group to operate in the cluster, we must create [Kubernetes RBAC][k8s-rbac-docs]
+For example, to allow the `devs` group to operate in the cluster, we must create [Kubernetes RBAC][k8s-rbac-docs]
 resources to bind the IAM role to certain privileges.
 
-Create a role with the ability to deploy common workloads **only** in the
-`apps` namespace, created earlier during the setup of [cluster defaults](#set-defaults).
+Below we create the Kubernetes `Role` with the ability to **only** deploy common
+workloads in the `apps` namespace, created earlier during the configuration of
+[cluster defaults][crosswalk-configure-defaults], and a `RoleBinding` to associate
+the Kubernetes `Role` to the IAM `devs` role.
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -230,9 +292,7 @@ import * as k8s from "@pulumi/kubernetes";
 // Create a limited role for the `pulumi:devs` to use in the apps namespace.
 let devsGroupRole = new k8s.rbac.v1.Role("pulumi-devs",
     {
-        metadata: {
-            namespace: appNamespaceName,
-        },
+        metadata: {namespace: appNamespaceName},
         rules: [
             {
                 apiGroups: ["", "apps"],
@@ -241,16 +301,12 @@ let devsGroupRole = new k8s.rbac.v1.Role("pulumi-devs",
             },
         ],
     },
-    {
-        provider: cluster.provider,
-    },
+    {provider: cluster.provider},
 );
 
 // Bind the `pulumi:devs` RBAC group to the new, limited role.
 let devsGroupRoleBinding = new k8s.rbac.v1.RoleBinding("pulumi-devs", {
-	metadata: {
-		namespace: appNamespaceName,
-	},
+	metadata: {namespace: appNamespaceName},
     subjects: [{
         kind: "Group",
         name: "pulumi:devs",
@@ -263,10 +319,11 @@ let devsGroupRoleBinding = new k8s.rbac.v1.RoleBinding("pulumi-devs", {
 }, {provider: cluster.provider});
 ```
 
-After creating the `Role` and `RoleBinding` during a pulumi update, now try
-deploying the workload with the new authorization.
+After creating the `Role` and `RoleBinding` during a Pulumi update, now try
+deploying the workload with the new authorization for the `devs` role.
 
 ```bash
+$ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 $ kubectl run --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}' -n `pulumi stack output appNamespaceName` --limits cpu=200m,memory=256Mi
 service/nginx created
 pod/nginx created
@@ -278,11 +335,37 @@ Delete the pod and service.
 $ kubectl delete pod/nginx svc/nginx
 ```
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
 For a complete example of this in action, please see [Simplifying Kubernetes
 RBAC in Amazon EKS][simplify-rbac].
 
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO - Extra links to docs / examples
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO - Extra links to docs / examples
+
+{{% /md %}}
+</div>
+
 See the [official Kubernetes RBAC docs][k8s-rbac-docs] for more details.
 
-[aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 [simplify-rbac]: /blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/
 [k8s-rbac-docs]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
+[crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
