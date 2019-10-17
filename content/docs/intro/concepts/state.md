@@ -238,7 +238,7 @@ pulumi login --cloud-url gs://my-pulumi-state-bucket
 ##### Azure Blob Storage
 
 ```
-pulumi login --cloud-url az://my-pulumi-state-bucket
+pulumi login --cloud-url azblob://my-pulumi-state-bucket
 ```
 
 This stores all stack checkpoints as JSON files to the `.pulumi` directory of
