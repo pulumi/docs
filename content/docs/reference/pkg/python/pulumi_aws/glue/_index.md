@@ -431,16 +431,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Classifier">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Classifier</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">grok_classifier=None</em>, <em class="sig-param">json_classifier=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">xml_classifier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Classifier" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Classifier</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">csv_classifier=None</em>, <em class="sig-param">grok_classifier=None</em>, <em class="sig-param">json_classifier=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">xml_classifier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Classifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Classifier resource.</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> It is only valid to create one type of classifier (grok, JSON, or XML). Changing classifier types will recreate the classifier.</p>
+<div><p><strong>NOTE:</strong> It is only valid to create one type of classifier (csv, grok, JSON, or XML). Changing classifier types will recreate the classifier.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>csv_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier for Csv content. Defined below.</p></li>
 <li><p><strong>grok_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier that uses grok patterns. Defined below.</p></li>
 <li><p><strong>json_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier for JSON content. Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the classifier.</p></li>
@@ -448,6 +449,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>csv_classifier</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSingleColumn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables the processing of files that contain only one column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containsHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether the CSV file contains a header. This can be one of “ABSENT”, “PRESENT”, or “UNKNOWN”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The delimiter used in the Csv to separate columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableValueTrimming</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether to trim column values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of strings representing column names.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quoteSymbol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.</p></li>
+</ul>
 <p>The <strong>grok_classifier</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">classification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An identifier of the data format that the classifier matches.</p></li>
@@ -466,6 +476,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Classifier.csv_classifier">
+<code class="sig-name descname">csv_classifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Classifier.csv_classifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>A classifier for Csv content. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSingleColumn</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables the processing of files that contain only one column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containsHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates whether the CSV file contains a header. This can be one of “ABSENT”, “PRESENT”, or “UNKNOWN”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The delimiter used in the Csv to separate columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableValueTrimming</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether to trim column values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of strings representing column names.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quoteSymbol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.</p></li>
+</ul>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Classifier.grok_classifier">
 <code class="sig-name descname">grok_classifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Classifier.grok_classifier" title="Permalink to this definition">¶</a></dt>
@@ -504,7 +528,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.glue.Classifier.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">grok_classifier=None</em>, <em class="sig-param">json_classifier=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">xml_classifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Classifier.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">csv_classifier=None</em>, <em class="sig-param">grok_classifier=None</em>, <em class="sig-param">json_classifier=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">xml_classifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Classifier.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Classifier resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -513,6 +537,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>csv_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier for Csv content. Defined below.</p></li>
 <li><p><strong>grok_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier that uses grok patterns. Defined below.</p></li>
 <li><p><strong>json_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier for JSON content. Defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the classifier.</p></li>
@@ -520,6 +545,15 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>csv_classifier</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSingleColumn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables the processing of files that contain only one column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containsHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether the CSV file contains a header. This can be one of “ABSENT”, “PRESENT”, or “UNKNOWN”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The delimiter used in the Csv to separate columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableValueTrimming</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether to trim column values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of strings representing column names.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quoteSymbol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.</p></li>
+</ul>
 <p>The <strong>grok_classifier</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">classification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An identifier of the data format that the classifier matches.</p></li>

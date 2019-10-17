@@ -241,6 +241,95 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gitlab.DeployKeyEnable">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">DeployKeyEnable</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">can_push=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.DeployKeyEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource allows you to enable pre-existing deploy keys for your GitLab projects.</p>
+<p><strong>the GITLAB KEY_ID for the deploy key must be known</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Gitlab key id for the pre-existing deploy key</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the deploy key to.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/deploy_key_enable.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/deploy_key_enable.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gitlab.DeployKeyEnable.key_id">
+<code class="sig-name descname">key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.DeployKeyEnable.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Gitlab key id for the pre-existing deploy key</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.DeployKeyEnable.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.DeployKeyEnable.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name or id of the project to add the deploy key to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gitlab.DeployKeyEnable.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">can_push=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.DeployKeyEnable.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DeployKeyEnable resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Gitlab key id for the pre-existing deploy key</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the deploy key to.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/deploy_key_enable.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/deploy_key_enable.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gitlab.DeployKeyEnable.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.DeployKeyEnable.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gitlab.DeployKeyEnable.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.DeployKeyEnable.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gitlab.GetGroupResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">full_name=None</em>, <em class="sig-param">full_path=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">lfs_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">request_access_enabled=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
@@ -767,7 +856,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Acceptable values are: guest, reporter, developer, master.</p></li>
+<li><p><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Acceptable values are: guest, reporter, developer, master, owner.</p></li>
 <li><p><strong>expires_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Expiration date for the group membership. Format: <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span></code></p></li>
 <li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the group.</p></li>
 <li><p><strong>user_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The id of the user.</p></li>
@@ -780,7 +869,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gitlab.GroupMembership.access_level">
 <code class="sig-name descname">access_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GroupMembership.access_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Acceptable values are: guest, reporter, developer, master.</p>
+<dd><p>Acceptable values are: guest, reporter, developer, master, owner.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -812,7 +901,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Acceptable values are: guest, reporter, developer, master.</p></li>
+<li><p><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Acceptable values are: guest, reporter, developer, master, owner.</p></li>
 <li><p><strong>expires_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Expiration date for the group membership. Format: <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span></code></p></li>
 <li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the group.</p></li>
 <li><p><strong>user_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The id of the user.</p></li>
@@ -864,7 +953,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gitlab.GroupVariable">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GroupVariable</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupVariable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">GroupVariable</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">variable_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage CI/CD variables for your GitLab groups.
 For further information on variables, consult the <a class="reference external" href="https://docs.gitlab.com/ce/ci/variables/README.html#variables">gitlab
 documentation</a>.</p>
@@ -877,6 +966,7 @@ documentation</a>.</p>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the variable.</p></li>
 <li><p><strong>protected</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the variable will be passed only to pipelines running on protected branches and tags. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the variable.</p></li>
+<li><p><strong>variable_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of a variable. Available types are: env_var (default) and file.</p></li>
 </ul>
 </dd>
 </dl>
@@ -907,9 +997,15 @@ documentation</a>.</p>
 <dd><p>The value of the variable.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gitlab.GroupVariable.variable_type">
+<code class="sig-name descname">variable_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.GroupVariable.variable_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of a variable. Available types are: env_var (default) and file.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gitlab.GroupVariable.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupVariable.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">variable_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.GroupVariable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GroupVariable resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -922,6 +1018,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the variable.</p></li>
 <li><p><strong>protected</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the variable will be passed only to pipelines running on protected branches and tags. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the variable.</p></li>
+<li><p><strong>variable_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of a variable. Available types are: env_var (default) and file.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1287,7 +1384,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gitlab.Project">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">approvals_before_merge=None</em>, <em class="sig-param">archived=None</em>, <em class="sig-param">container_registry_enabled=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">merge_method=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">only_allow_merge_if_all_discussions_are_resolved=None</em>, <em class="sig-param">only_allow_merge_if_pipeline_succeeds=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">shared_runners_enabled=None</em>, <em class="sig-param">shared_with_groups=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">wiki_enabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">approvals_before_merge=None</em>, <em class="sig-param">archived=None</em>, <em class="sig-param">container_registry_enabled=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">initialize_with_readme=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">merge_method=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">only_allow_merge_if_all_discussions_are_resolved=None</em>, <em class="sig-param">only_allow_merge_if_pipeline_succeeds=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">shared_runners_enabled=None</em>, <em class="sig-param">shared_with_groups=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">wiki_enabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Project resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1299,6 +1396,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>container_registry_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable container registry for the project.</p></li>
 <li><p><strong>default_branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default branch for the project.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the project.</p></li>
+<li><p><strong>initialize_with_readme</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create master branch with first commit containing a README.md file.</p></li>
 <li><p><strong>issues_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable issue tracking for the project.</p></li>
 <li><p><strong>merge_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">ff</span></code> to create fast-forward merges
 Valid values are <code class="docutils literal notranslate"><span class="pre">merge</span></code>, <code class="docutils literal notranslate"><span class="pre">rebase_merge</span></code>, <code class="docutils literal notranslate"><span class="pre">ff</span></code>
@@ -1366,6 +1464,12 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">gu
 <code class="sig-name descname">http_url_to_repo</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Project.http_url_to_repo" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL that can be provided to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> to clone the
 repository via HTTP.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.Project.initialize_with_readme">
+<code class="sig-name descname">initialize_with_readme</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.Project.initialize_with_readme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create master branch with first commit containing a README.md file.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1484,7 +1588,7 @@ Repositories are created as private by default.</p>
 
 <dl class="method">
 <dt id="pulumi_gitlab.Project.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">approvals_before_merge=None</em>, <em class="sig-param">archived=None</em>, <em class="sig-param">container_registry_enabled=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_url_to_repo=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">merge_method=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">only_allow_merge_if_all_discussions_are_resolved=None</em>, <em class="sig-param">only_allow_merge_if_pipeline_succeeds=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">runners_token=None</em>, <em class="sig-param">shared_runners_enabled=None</em>, <em class="sig-param">shared_with_groups=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">ssh_url_to_repo=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">wiki_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">approvals_before_merge=None</em>, <em class="sig-param">archived=None</em>, <em class="sig-param">container_registry_enabled=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">http_url_to_repo=None</em>, <em class="sig-param">initialize_with_readme=None</em>, <em class="sig-param">issues_enabled=None</em>, <em class="sig-param">merge_method=None</em>, <em class="sig-param">merge_requests_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">only_allow_merge_if_all_discussions_are_resolved=None</em>, <em class="sig-param">only_allow_merge_if_pipeline_succeeds=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">runners_token=None</em>, <em class="sig-param">shared_runners_enabled=None</em>, <em class="sig-param">shared_with_groups=None</em>, <em class="sig-param">snippets_enabled=None</em>, <em class="sig-param">ssh_url_to_repo=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_level=None</em>, <em class="sig-param">web_url=None</em>, <em class="sig-param">wiki_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.Project.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1500,6 +1604,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the project.</p></li>
 <li><p><strong>http_url_to_repo</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL that can be provided to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> to clone the
 repository via HTTP.</p></li>
+<li><p><strong>initialize_with_readme</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create master branch with first commit containing a README.md file.</p></li>
 <li><p><strong>issues_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable issue tracking for the project.</p></li>
 <li><p><strong>merge_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">ff</span></code> to create fast-forward merges
 Valid values are <code class="docutils literal notranslate"><span class="pre">merge</span></code>, <code class="docutils literal notranslate"><span class="pre">rebase_merge</span></code>, <code class="docutils literal notranslate"><span class="pre">ff</span></code>
@@ -2008,8 +2113,250 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gitlab.ProjectPushRules">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectPushRules</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">author_email_regex=None</em>, <em class="sig-param">branch_name_regex=None</em>, <em class="sig-param">commit_message_regex=None</em>, <em class="sig-param">deny_delete_tag=None</em>, <em class="sig-param">file_name_regex=None</em>, <em class="sig-param">max_file_size=None</em>, <em class="sig-param">member_check=None</em>, <em class="sig-param">prevent_secrets=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource allows you to create and manage push rules for your GitLab projects.
+For further information on push rules, consult the <a class="reference external" href="https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules">gitlab
+documentation</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>author_email_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commit author emails must match this regex, e.g. “&#64;my-company.com$”</p></li>
+<li><p><strong>branch_name_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All branch names must match this regex, e.g. “(feature|hotfix)/<a href="#id8"><span class="problematic" id="id9">*</span></a>”</p></li>
+<li><p><strong>commit_message_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commit messages must match this regex, e.g. “Fixed d+..*”</p></li>
+<li><p><strong>deny_delete_tag</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Deny deleting a tag</p></li>
+<li><p><strong>file_name_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commited filenames must not match this regex, e.g. “(jar|exe)$”</p></li>
+<li><p><strong>max_file_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum file size (MB)</p></li>
+<li><p><strong>member_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Restrict commits by author (email) to existing GitLab users</p></li>
+<li><p><strong>prevent_secrets</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – GitLab will reject any files that are likely to contain secrets</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the push rules to.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_push_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_push_rules.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectPushRules.author_email_regex">
+<code class="sig-name descname">author_email_regex</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.author_email_regex" title="Permalink to this definition">¶</a></dt>
+<dd><p>All commit author emails must match this regex, e.g. “&#64;my-company.com$”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectPushRules.branch_name_regex">
+<code class="sig-name descname">branch_name_regex</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.branch_name_regex" title="Permalink to this definition">¶</a></dt>
+<dd><p>All branch names must match this regex, e.g. “(feature|hotfix)/<a href="#id10"><span class="problematic" id="id11">*</span></a>”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectPushRules.commit_message_regex">
+<code class="sig-name descname">commit_message_regex</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.commit_message_regex" title="Permalink to this definition">¶</a></dt>
+<dd><p>All commit messages must match this regex, e.g. “Fixed d+..*”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectPushRules.deny_delete_tag">
+<code class="sig-name descname">deny_delete_tag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.deny_delete_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deny deleting a tag</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectPushRules.file_name_regex">
+<code class="sig-name descname">file_name_regex</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.file_name_regex" title="Permalink to this definition">¶</a></dt>
+<dd><p>All commited filenames must not match this regex, e.g. “(jar|exe)$”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectPushRules.max_file_size">
+<code class="sig-name descname">max_file_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.max_file_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum file size (MB)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectPushRules.member_check">
+<code class="sig-name descname">member_check</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.member_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restrict commits by author (email) to existing GitLab users</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectPushRules.prevent_secrets">
+<code class="sig-name descname">prevent_secrets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.prevent_secrets" title="Permalink to this definition">¶</a></dt>
+<dd><p>GitLab will reject any files that are likely to contain secrets</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectPushRules.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name or id of the project to add the push rules to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gitlab.ProjectPushRules.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">author_email_regex=None</em>, <em class="sig-param">branch_name_regex=None</em>, <em class="sig-param">commit_message_regex=None</em>, <em class="sig-param">deny_delete_tag=None</em>, <em class="sig-param">file_name_regex=None</em>, <em class="sig-param">max_file_size=None</em>, <em class="sig-param">member_check=None</em>, <em class="sig-param">prevent_secrets=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProjectPushRules resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>author_email_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commit author emails must match this regex, e.g. “&#64;my-company.com$”</p></li>
+<li><p><strong>branch_name_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All branch names must match this regex, e.g. “(feature|hotfix)/<a href="#id12"><span class="problematic" id="id13">*</span></a>”</p></li>
+<li><p><strong>commit_message_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commit messages must match this regex, e.g. “Fixed d+..*”</p></li>
+<li><p><strong>deny_delete_tag</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Deny deleting a tag</p></li>
+<li><p><strong>file_name_regex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – All commited filenames must not match this regex, e.g. “(jar|exe)$”</p></li>
+<li><p><strong>max_file_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum file size (MB)</p></li>
+<li><p><strong>member_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Restrict commits by author (email) to existing GitLab users</p></li>
+<li><p><strong>prevent_secrets</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – GitLab will reject any files that are likely to contain secrets</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the push rules to.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_push_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_push_rules.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gitlab.ProjectPushRules.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gitlab.ProjectPushRules.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectPushRules.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gitlab.ProjectShareGroup">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectShareGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_level=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectShareGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource allows you to share a project with a group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of five levels of access to the project.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The id of the group.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_share_group.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_share_group.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectShareGroup.access_level">
+<code class="sig-name descname">access_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectShareGroup.access_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>One of five levels of access to the project.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectShareGroup.group_id">
+<code class="sig-name descname">group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectShareGroup.group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectShareGroup.project_id">
+<code class="sig-name descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectShareGroup.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the project.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gitlab.ProjectShareGroup.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_level=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectShareGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProjectShareGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of five levels of access to the project.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The id of the group.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_share_group.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_share_group.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gitlab.ProjectShareGroup.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectShareGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gitlab.ProjectShareGroup.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectShareGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gitlab.ProjectVariable">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectVariable</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectVariable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectVariable</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">environment_scope=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">masked=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">variable_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage CI/CD variables for your GitLab projects.
 For further information on variables, consult the <a class="reference external" href="https://docs.gitlab.com/ce/ci/variables/README.html#variables">gitlab
 documentation</a>.</p>
@@ -2018,10 +2365,13 @@ documentation</a>.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>environment_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The environment_scope of the variable</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the variable.</p></li>
+<li><p><strong>masked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the variable will be masked if it would have been written to the logs. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the hook to.</p></li>
 <li><p><strong>protected</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the variable will be passed only to pipelines running on protected branches and tags. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the variable.</p></li>
+<li><p><strong>variable_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of a variable. Available types are: env_var (default) and file.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2029,9 +2379,21 @@ documentation</a>.</p>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_variable.html.markdown">https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/r/project_variable.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_gitlab.ProjectVariable.environment_scope">
+<code class="sig-name descname">environment_scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectVariable.environment_scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>The environment_scope of the variable</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gitlab.ProjectVariable.key">
 <code class="sig-name descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectVariable.key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the variable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectVariable.masked">
+<code class="sig-name descname">masked</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectVariable.masked" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the variable will be masked if it would have been written to the logs. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2052,9 +2414,15 @@ documentation</a>.</p>
 <dd><p>The value of the variable.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gitlab.ProjectVariable.variable_type">
+<code class="sig-name descname">variable_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gitlab.ProjectVariable.variable_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of a variable. Available types are: env_var (default) and file.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gitlab.ProjectVariable.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectVariable.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">environment_scope=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">masked=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">variable_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectVariable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ProjectVariable resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2063,10 +2431,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>environment_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The environment_scope of the variable</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the variable.</p></li>
+<li><p><strong>masked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the variable will be masked if it would have been written to the logs. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the hook to.</p></li>
 <li><p><strong>protected</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the variable will be passed only to pipelines running on protected branches and tags. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the variable.</p></li>
+<li><p><strong>variable_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of a variable. Available types are: env_var (default) and file.</p></li>
 </ul>
 </dd>
 </dl>

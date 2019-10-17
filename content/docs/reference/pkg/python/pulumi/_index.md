@@ -192,7 +192,7 @@ resource.</p></li>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">ResourceOptions</code><span class="sig-paren">(</span><em class="sig-param">parent: Optional[Resource] = None</em>, <em class="sig-param">depends_on: Optional[List[Resource]] = None</em>, <em class="sig-param">protect: Optional[bool] = None</em>, <em class="sig-param">provider: Optional[ProviderResource] = None</em>, <em class="sig-param">providers: Optional[Mapping[str</em>, <em class="sig-param">ProviderResource]] = None</em>, <em class="sig-param">delete_before_replace: Optional[bool] = None</em>, <em class="sig-param">ignore_changes: Optional[List[str]] = None</em>, <em class="sig-param">version: Optional[str] = None</em>, <em class="sig-param">aliases: Optional[List[Input[Union[str</em>, <em class="sig-param">Alias]]]] = None</em>, <em class="sig-param">additional_secret_outputs: Optional[List[str]] = None</em>, <em class="sig-param">id: Optional[Input[str]] = None</em>, <em class="sig-param">import_: Optional[str] = None</em>, <em class="sig-param">custom_timeouts: Optional[CustomTimeouts] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">ResourceOptions</code><span class="sig-paren">(</span><em class="sig-param">parent: Optional[Resource] = None, depends_on: Optional[List[Resource]] = None, protect: Optional[bool] = None, provider: Optional[ProviderResource] = None, providers: Optional[Mapping[str, ProviderResource]] = None, delete_before_replace: Optional[bool] = None, ignore_changes: Optional[List[str]] = None, version: Optional[str] = None, aliases: Optional[List[Input[Union[str, Alias]]]] = None, additional_secret_outputs: Optional[List[str]] = None, id: Optional[Input[str]] = None, import_: Optional[str] = None, custom_timeouts: Optional[CustomTimeouts] = None, transformations: Optional[List[Callable[[pulumi.resource.ResourceTransformationArgs], Optional[pulumi.resource.ResourceTransformationResult]]]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -213,7 +213,6 @@ or replacements.</p></li>
 <li><p><strong>additional_secret*outputs</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – <p>If provided, a list of output property names that should
 also be treated as secret.</p>
 </p></li>
-<li><p><strong>customTimeouts</strong> (<em>Optional</em><em>[</em><em>CustomTimeouts</em><em>]</em>) – If provided, a config block for custom timeout information.</p></li>
 <li><p><strong>id</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – If provided, an existing resource ID to read, rather than create.</p></li>
 </ul>
 </dd>
@@ -222,6 +221,15 @@ also be treated as secret.</p>
 <dt>:param Optional[str] import*: When provided with a resource ID, import indicates that this resource’s provider should</dt><dd><p>import its state from the cloud resource with the given ID. The inputs to the resource’s constructor must align
 with the resource’s current state. Once a resource has been imported, the import property must be removed from
 the resource’s options.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>customTimeouts</strong> (<em>Optional</em><em>[</em><em>CustomTimeouts</em><em>]</em>) – If provided, a config block for custom timeout information.</p></li>
+<li><p><strong>transformations</strong> (<em>Optional</em><em>[</em><em>transformations</em><em>]</em>) – If provided, a list of transformations to apply to this resource
+during construction.</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="attribute">
@@ -310,6 +318,14 @@ It can be used to mark certain outputs as a secrets on a per resource basis.</p>
 its state from the cloud resource with the given ID. The inputs to the resource’s constructor
 must align with the resource’s current state. Once a resource has been imported, the import
 property must be removed from the resource’s options.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.transformations">
+<code class="sig-name descname">transformations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.transformations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional list of transformations to apply to this resource during construction. The
+transformations are applied in order, and are applied prior to transformation applied to
+parents walking from the resource up to the stack.</p>
 </dd></dl>
 
 <dl class="method">
