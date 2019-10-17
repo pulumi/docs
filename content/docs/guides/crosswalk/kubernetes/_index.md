@@ -67,7 +67,7 @@ anything. This is a requirement for every production Kubernetes deployment.
 
 By isolating resources into loosely-coupled stacks we
 have the opportunity to grant minimal permissions based on the [principle of least
-privilege](https://en.m.wikipedia.org/wiki/Principleofleastprivilege).
+privilege][least-privileged].
 
 The identity stack typically looks like:
 
@@ -145,3 +145,4 @@ Deploy applications and workloads into the cluster.
 [crosswalk-app-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/app-services" >}}
 [crosswalk-apps]: {{< relref "/docs/guides/crosswalk/kubernetes/apps" >}}
 [crosswalk-update-worker-nodes]: {{< relref "/docs/guides/crosswalk/kubernetes/update-worker-nodes" >}}
+[least-privileged]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
