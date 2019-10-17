@@ -7,17 +7,53 @@ menu:
     weight: 4
 ---
 
+{{< cloudchoose >}}
+
 After running `pulumi up` the cluster will be created and there will exist
 [Pulumi outputs][pulumi-outputs] with fields like the cluster's `kubeconfig`
 and it's cluster name for reference and usage.
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+## Overview
+
+We'll examine how to:
+
+  * [Access the Cluster](#access-the-cluster)
+  * [Query the Cluster](#query-the-cluster)
+  * [Deploy a Workload](#deploy-a-workload)
+
+[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+{{% /md %}}
+</div>
+
+### Access the Cluster
 
 In EKS, the AWS account caller will be placed into the
 `system:masters` Kubernetes RBAC group by default. The `kubeconfig`
 generated will cater to this primary cluster creator use-case, and it must be
 copied, and reconfigured to use with other IAM roles the caller assumes, as
-demonstrated below in [Use Kubernetes RBAC](#use-kubernetes-rbac).
-
-### Access the Cluster
+demonstrated in [Configure Access Control][crosswalk-configure-access].
 
 To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file.
@@ -50,9 +86,7 @@ $ kubectl cluster-info
 Get nodes.
 
 ```bash
-$ kubectl get nodes
-$ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type=t2.medium
-$ kubectl get nodes -o wide --show-labels -l beta.kubernetes.io/instance-type=t3.2xlarge
+$ kubectl get nodes -o wide --show-labels
 ```
 
 Get all pods.
@@ -71,9 +105,38 @@ $ kubectl run --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --se
 
 After a few moments, visit the load balancer URL.
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
 ```bash
 $ if ING_LB=$((kubectl get svc nginx -o template --template='{{(index .status.loadBalancer.ingress 0).hostname}}') 2>&1) ; then echo "http://$ING_LB"; else echo "LB is not ready yet."; fi
 ```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+```bash
+$ if ING_LB=$((kubectl get svc nginx -o template --template='{{(index .status.loadBalancer.ingress 0).ip}}') 2>&1) ; then echo "http://$ING_LB"; else echo "LB is not ready yet."; fi
+```
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+```bash
+$ if ING_LB=$((kubectl get svc nginx -o template --template='{{(index .status.loadBalancer.ingress 0).ip}}') 2>&1) ; then echo "http://$ING_LB"; else echo "LB is not ready yet."; fi
+```
+
+{{% /md %}}
+</div>
 
 Delete the pod and service.
 
