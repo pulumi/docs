@@ -7,10 +7,50 @@ menu:
     weight: 5
 ---
 
+{{< cloudchoose >}}
+
 With a vanilla cluster running, create any desired resources, and logically
 segment the cluster as needed.
 
 TODO - Flush out intro
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/03-cluster-configuration
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/03-cluster-configuration
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
+
+{{% /md %}}
+</div>
+
+## Overview
+
+We'll examine how to create:
+
+  * [Namespaces](#namespaces)
+  * [Quotas](#quotas)
+  * [PodSecurityPolicies](#podsecuritypolicies)
 
 ### Namespaces
 
@@ -105,6 +145,10 @@ services                0     5
 
 ### PodSecurityPolicies
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
 By default EKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
 `eks.privileged`. This privileged PSP should be removed **after** its replacements
 have been created to ensure running workloads continue executing properly (order matters).
@@ -112,6 +156,27 @@ have been created to ensure running workloads continue executing properly (order
 See the official [EKS Pod Security Policy][eks-psp] docs and the
 [Kubernetes docs][k8s-psp] for more details.
 
-[k8s-quotas]: https://kubernetes.io/docs/concepts/policy/resource-quotas/#compute-resource-quota
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 [eks-psp]: https://docs.aws.amazon.com/eks/latest/userguide/pod-security-policy.html
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+TODO
+
+{{% /md %}}
+</div>
+
+[k8s-quotas]: https://kubernetes.io/docs/concepts/policy/resource-quotas/#compute-resource-quota
