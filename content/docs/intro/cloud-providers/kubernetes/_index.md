@@ -67,5 +67,5 @@ best-practices and tasks for managing Kubernetes and its infrastructure in produ
 Get started with deploying high-grade stacks by understanding how to enable 
 [Production Architecture for Teams][prod-arch-for-teams].
 
-[crosswalk-k8s]: /docs/guides/crosswalk/kubernetes/
-[prod-arch-for-teams]: /docs/guides/crosswalk/kubernetes/introduction/01-architecture/
+[crosswalk-k8s]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
+[prod-arch-for-teams]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
