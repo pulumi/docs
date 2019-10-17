@@ -14,7 +14,7 @@ infrastructure in AWS:
 * AWS ALB as the entry point to the Fargate Service
 * AWS RDS Instance that is stored in a separate network from the Application and does not service traffic directly from the internet
 
-To do this, we are going to split the infrastructure into 2 AWS VPCs. 1 VPC will be used for the application based resources 
+To do this, we are going to split the infrastructure into two AWS VPCs. One VPC will be used for the application based resources 
 (e.g Fargate Service, ALB) and the other VPC will be for the database resources. The VPCs will be peered to allow communication
 between them so that the application can communicate with the database securely.
 
@@ -35,7 +35,7 @@ $ tree -d -L 1
 └── networking
 ```
     
-This means, all of the work required for the networking components can be in the network project. We can use 
+This means all of the work required for the networking components can be in the network project. We can use 
 [Stack References](https://www.pulumi.com/docs/intro/concepts/organizing-stacks-projects/#inter-stack-dependencies) in Pulumi 
 to expose any required information from the networking layer, to the database and application layers.
 
@@ -49,9 +49,9 @@ $ pulumi config set aws:region us-east-2
 ```
     
 This gives us the shell of our project we need to create our resources.  In thinking of how we build our networking resources, 
-we will create 2 copies of each resource due to separate VPCs for application and database. Of course, we can use a loop to do 
-this, but the more elegant way would be to create a class that we could pass parameters into to make life easy. We want the 
-the API to look as follows:
+we will create two copies of each resource due to separate VPCs for application and database. Of course, we can use a loop to do 
+this, but the more elegant way would be to create a class that we could pass parameters into to make life easy. We want an 
+API as follows:
 
 ```typescript
 const availabilityZones = aws.getAvailabilityZones({
@@ -68,7 +68,7 @@ const myVpc = new Vpc("my-vpc", {
 });
 ```
     
-This is where we see the power of Pulumi when we build our infrastructure with TypeScript. We can create a TypeScript
+We can see the power of Pulumi when we build our infrastructure with TypeScript. We create a TypeScript
 class that [extends](https://www.typescriptlang.org/docs/handbook/classes.html) Pulumi ComponentResource. ComponentResource 
 is a resource that aggregates one or more other child resources into a higher level abstraction. The component resource 
 itself is a resource, but does not require custom create, read, update and delete operations for provisioning.
@@ -81,7 +81,7 @@ export class Vpc extends ComponentResource {
 }
 ```
     
-We want to pass a name and some custom parameters to the class, so we create an interface for the parameters as follows:
+We want to pass a name and some custom parameters to the class, so we create an interface for the parameters:
 
 ```typescript
 export interface VpcArgs {
@@ -89,7 +89,7 @@ export interface VpcArgs {
 }
 ```
     
-We update our class with a constructor that allows us to create a new instance of the VPC class.
+We update our class with a constructor that allows us to create a new instance of the VPC class:
 
 ```typescript
 export class Vpc extends ComponentResource {
@@ -133,7 +133,7 @@ async function main() {
 module.exports = main();
 ```
     
-This application will create 2 instances of the VPC class containing all of the resources needed for a VPC. This
+This application will create two instances of the VPC class containing all of the resources needed for a VPC. This
 reusable `VPC` class` is a more efficient way of building out infrastructure than to simply loop over the resources. We can
 take advantage of relating the resources to the correct parent to build out graph.
 
@@ -206,7 +206,7 @@ $ pulumi config set aws:region us-east-2
 ```
 
 Our database project follows the same principals as the networking project - it has a RDS class that extends the
-Pulumi ComponentResource. We don't need to go into the internals of that specific class for the purpose of this tutorial. 
+Pulumi ComponentResource.  
 
 ```typescript
 export interface RdsArgs {
@@ -380,7 +380,7 @@ const app = new Application("app", {
 export const albAddress = app.albAddress();
 ```
     
-Notice in this application, we are taking advantage of the [Pulumi AWS Extensions](https://github.com/pulumi/pulumi-awsx). 
+Notice that we are taking advantage of the [Pulumi AWS Extensions](https://github.com/pulumi/pulumi-awsx). 
 Pulumi AWSX is a set of component wrappers around many AWS operations. In our case, we are taking advantage of being able 
 to create an AWS ECS container image from a known path to a [dockerfile](https://docs.docker.com/engine/reference/builder/). 
 This is a concise API that removes us from the need to run `docker build` as a separate process. It will happen as part of 
