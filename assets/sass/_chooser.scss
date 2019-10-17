@@ -135,6 +135,9 @@ $tab-font-size: 14px !default;
 .language-prologue-visualbasic + *,
 .os-prologue-linux + *,
 .os-prologue-macos + *,
-.os-prologue-windows + * {
+.os-prologue-windows + *,
+.cloud-prologue-aws + *,
+.cloud-prologue-azure + *,
+.cloud-prologue-gcp + * {
     display: none;
 }
