@@ -29,7 +29,7 @@ meta_desc: "Explore members of the tests module in the @pulumi/pulumi package."
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="assertAsyncThrows" data-link-title="assertAsyncThrows">
-    <a href="https://github.com/pulumi/pulumi/blob/97803a6591f8089d5067d0b60a1bb1a597fced50/sdk/nodejs/tests/util.ts#L40">
+    <a href="https://github.com/pulumi/pulumi/blob/1ae6629d812ec549b4c372e7541c0999bc8c59b3/sdk/nodejs/tests/util.ts#L40">
         function <strong>assertAsyncThrows</strong>
     </a>
 </h3>
@@ -38,7 +38,7 @@ meta_desc: "Explore members of the tests module in the @pulumi/pulumi package."
 <pre class="highlight"><code><span class='kd'></span>assertAsyncThrows(test: () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="asyncTest" data-link-title="asyncTest">
-    <a href="https://github.com/pulumi/pulumi/blob/97803a6591f8089d5067d0b60a1bb1a597fced50/sdk/nodejs/tests/util.ts#L21">
+    <a href="https://github.com/pulumi/pulumi/blob/1ae6629d812ec549b4c372e7541c0999bc8c59b3/sdk/nodejs/tests/util.ts#L21">
         function <strong>asyncTest</strong>
     </a>
 </h3>
@@ -47,7 +47,7 @@ meta_desc: "Explore members of the tests module in the @pulumi/pulumi package."
 <pre class="highlight"><code><span class='kd'></span>asyncTest(test: () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;): (func: <a href='#MochaFunc'>MochaFunc</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="MochaFunc" data-link-title="MochaFunc">
-    <a href="https://github.com/pulumi/pulumi/blob/97803a6591f8089d5067d0b60a1bb1a597fced50/sdk/nodejs/tests/util.ts#L17">
+    <a href="https://github.com/pulumi/pulumi/blob/1ae6629d812ec549b4c372e7541c0999bc8c59b3/sdk/nodejs/tests/util.ts#L17">
         type <strong>MochaFunc</strong>
     </a>
 </h3>
