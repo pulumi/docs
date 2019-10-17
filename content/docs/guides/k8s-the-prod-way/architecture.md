@@ -84,7 +84,7 @@ Typically the identity stack looks something like this:
 
 ## 2. Shared, managed infrastructure (_e.g._, compute, networking, storage)
 
-The next step is to provision all shared, managed infrastructure. At minimum, this typically this
+The next step is to provision all shared, managed infrastructure. At minimum, this typically 
 includes networking infrastructure and a managed Kubernetes platform (_e.g._, [EKS][eks],
 [GKE][gke], [AKS][aks]), and frequently also involves a managed datastore (_e.g._, [Aurora][aurora],
 [Cloud SQL][cloud-sql], [CosmosDB][cosmos-db]).
