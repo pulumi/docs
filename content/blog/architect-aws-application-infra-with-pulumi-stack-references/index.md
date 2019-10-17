@@ -1,6 +1,6 @@
 ---
 title: "Architect AWS Application Infrastructure with Pulumi Stack References"
-date: "2019-06-14"
+date: "2019-10-17"
 meta_desc: "How to architect your AWS infrastructure to optimize team collaboration with Pulumi Stack References"
 meta_image: "application-architecture.png"
 authors: ["paul-stack"]
@@ -16,7 +16,7 @@ infrastructure in AWS:
 
 To do this, we are going to split the infrastructure into 2 AWS VPCs. 1 VPC will be used for the application based resources 
 (e.g Fargate Service, ALB) and the other VPC will be for the database resources. The VPCs will be peered to allow communication
-between them so that the application can communicate with the databse securely.
+between them so that the application can communicate with the database securely.
 
 ![application-architecture](application-architecture.png)
 
@@ -24,7 +24,8 @@ between them so that the application can communicate with the databse securely.
 
 When we think of infrastructure, we tend to think of layers. A layer is a logical set of components / resources that can be
 grouped together. In our case, we can think of the networking as a layer upon which our database and application can be built.
-So let's break our application into 3 separate projects:
+For the purposes of this post, an infrastructure layer will be represented as a project in Pulumi. So let's break our application 
+into separate Pulumi projects:
 
     ```bash
     $ tree -d -L 1
@@ -47,7 +48,10 @@ Let's create the networking project.
     $ pulumi config set aws:region us-east-2
     ```
     
-This gives us the shell of our project we need to create our resources.  In thinking of how we build our networking resources, we will create 2 copies of each resource due to separate VPCs for application and database. Of course, we can use a loop to do this, but the more elegant way would be to create a class that we could pass parameters into to make life easy. We want the basic shape of the API to look as follows:
+This gives us the shell of our project we need to create our resources.  In thinking of how we build our networking resources, 
+we will create 2 copies of each resource due to separate VPCs for application and database. Of course, we can use a loop to do 
+this, but the more elegant way would be to create a class that we could pass parameters into to make life easy. We want the 
+the API to look as follows:
 
     ```typescript
     const availabilityZones = aws.getAvailabilityZones({
@@ -65,9 +69,11 @@ This gives us the shell of our project we need to create our resources.  In thin
     ```
     
 This is where we see the power of Pulumi when we build our infrastructure with TypeScript. We can create a TypeScript
-class that [extends](https://www.typescriptlang.org/docs/handbook/classes.html) Pulumi ComponentResource. ComponentResource is a resource that aggregates one or more other child resources into a higher level abstraction. The component resource itself is a resource, but does not require custom create, read, update and delete operations for provisioning.
+class that [extends](https://www.typescriptlang.org/docs/handbook/classes.html) Pulumi ComponentResource. ComponentResource 
+is a resource that aggregates one or more other child resources into a higher level abstraction. The component resource 
+itself is a resource, but does not require custom create, read, update and delete operations for provisioning.
 
-The shell of the class will look as follows:
+The outline of the class will look as follows:
 
     ```typescript
     export class Vpc extends ComponentResource {
@@ -127,8 +133,8 @@ After we implement all of the resources needed for our VPC, our Pulumi applicati
     module.exports = main();
     ```
     
-This application will create 2 instances of the VPC class contaiing all of the resources needed for a VPC. This
-reusable class, `VPC` is a more efficient way of building out infrastructure than to simply loop over the resources. We can
+This application will create 2 instances of the VPC class containing all of the resources needed for a VPC. This
+reusable `VPC` class` is a more efficient way of building out infrastructure than to simply loop over the resources. We can
 take advantage of relating the resources to the correct parent to build out graph.
 
 We take it one step further, and be able to peer the VPCs. TypeScript, again, gives us the ability to do this in a
@@ -273,8 +279,8 @@ Our database project looks like this:
     });
     ```
     
-We can then instruct Pulumi to create our resources with a `pulumi up` command, as before. This will show you a preview of 
-changes first and the list of AWS resources it will create:
+We can then instruct Pulumi to create our resources with a `pulumi up` command, as before. This will show you a preview 
+of changes first and the list of AWS resources it will create:
                                                                                            
    ```bash
    $ pulumi up
@@ -331,8 +337,8 @@ database. So we will have an `Application` class that extends Pulumi ComponentRe
     }
     ``` 
     
- The application project differs from the database project in that it needs stack references to the networking *and* database 
- projects. Let's specify those via configuration as we did in the database project:
+The application project differs from the database project in that it needs stack references to the networking *and* database 
+projects. Let's specify those via configuration as we did in the database project:
  
     ```bash
     $ pulumi config set networkingStack stack72/networking-layer/dev
@@ -374,9 +380,15 @@ We can then access details like, database endpoint, database user, application V
     export const albAddress = app.albAddress();
     ```
     
-Notice in this application, we are taking advantage of the [Pulumi AWS Extensions](https://github.com/pulumi/pulumi-awsx). Pulumi AWSX is a set of component wrappers around many AWS operations. In our case, we are taking advantage of being able to create an AWS ECS container image from a known path to a [dockerfile](https://docs.docker.com/engine/reference/builder/). This is a concise API that removes us from the need to run `docker build` as a separate process. It will happen as part of our Pulumi application. 
+Notice in this application, we are taking advantage of the [Pulumi AWS Extensions](https://github.com/pulumi/pulumi-awsx). 
+Pulumi AWSX is a set of component wrappers around many AWS operations. In our case, we are taking advantage of being able 
+to create an AWS ECS container image from a known path to a [dockerfile](https://docs.docker.com/engine/reference/builder/). 
+This is a concise API that removes us from the need to run `docker build` as a separate process. It will happen as part of 
+our Pulumi application. 
 
-We can, again, instruct Pulumi to create our resources for us by issuing the `pulumi up` command. In the interactive output, you will see how Pulumi interacts with docker and also see how it reads both of the stack references we told it to read information from. It will also show you a preview of the changes and the list of AWS resources it will create:
+We can, again, instruct Pulumi to create our resources for us by issuing the `pulumi up` command. In the interactive output, 
+you will see how Pulumi interacts with docker and also see how it reads both of the stack references we told it to read 
+information from. It will also show you a preview of the changes and the list of AWS resources it will create:
                                                                                                  
     ```bash
     $ pulumi up
@@ -390,7 +402,9 @@ We can, again, instruct Pulumi to create our resources for us by issuing the `pu
     
 ### Testing our application
 
-The application in this repository has a number of endpoints that we can use to test that the AWS ECS Fargate service is working as expected. We can test them either from a browser or from the command line. We can access the service using the address of the AWS ALB that was created to serve traffic to the application. Let's test the endpoints from the CLI:
+The application in this repository has a number of endpoints that we can use to test that the AWS ECS Fargate service is 
+working as expected. We can test them either from a browser or from the command line. We can access the service using the 
+address of the AWS ALB that was created to serve traffic to the application. Let's test the endpoints from the CLI:
 
     ```bash
     $ curl $(pulumi stack output albAddress)
@@ -435,9 +449,13 @@ To cleanup the resources we created, we need to go into each project directory a
     
 Once the resources have been deleted, then we can follow the interactive prompt to delete the stack.
 
-## 
+## Wrapping Up
 
 In this post, we have discussed how we would break our infrastructure into logically grouped projects and how we share
-information between these projects. You can find a runable version of this infrastructure in our [examples](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) repository. 
+information between these projects. You can find a runable version of this infrastructure in our 
+[examples](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) repository. 
 
 This demonstrates the suggested way of architecting Pulumi applications both for operability and collaboration. 
+
+You can try this code today get started with Pulumi today at [https://www.pulumi.com](https://www.pulumi.com) and 
+following the [Getting Started](https://www.pulumi.com/docs/get-started/aws/) for managing AWS resources with Pulumi.
