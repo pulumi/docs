@@ -11,7 +11,7 @@ menu:
 
 After running `pulumi up` the cluster will be created and there will exist
 [Pulumi outputs][pulumi-outputs] with fields like the cluster's `kubeconfig`
-and it's cluster name for reference and usage.
+and its cluster name for reference and usage.
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
