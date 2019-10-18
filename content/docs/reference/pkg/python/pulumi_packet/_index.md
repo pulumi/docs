@@ -1368,8 +1368,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_packet.ProjectSshKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">ProjectSshKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ProjectSshKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Packet project SSH key resource to manage project-specific SSH keys. On contrary to user SSH keys, project SSH keys are used to exclusively populate <code class="docutils literal notranslate"><span class="pre">authorized_keys</span></code> in new devices.</p>
-<p>If you supply a list of project SSH keys when creating a new device, only the listed keys are used; user SSH keys are ignored.</p>
+<dd><p>Provides a Packet project SSH key resource to manage project-specific SSH keys.
+Project SSH keys will only be populated onto servers that belong to that project, in contrast to User SSH Keys.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
