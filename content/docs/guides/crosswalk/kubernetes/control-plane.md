@@ -13,8 +13,8 @@ menu:
 <div class="mt">
 {{% md %}}
 In order to run container workloads, you will need a Kubernetes cluster.
-It is possible to provision and manage a cluster manually on AWS,
-however the managed offering, [Elastic Kubernetes Service (EKS)][eks], offers an
+It is possible to provision and manage a cluster manually on AWS.
+However, the managed offering, [Elastic Kubernetes Service (EKS)][eks], offers an
 easier way to get up and running.
 
 See the [official Kubernetes docs][k8s-docs] for more details.
@@ -73,7 +73,7 @@ to successfully run.
 We'll configure and deploy:
 
   * [Identity](#identity): For authentication and authorization of
-  cluster users, and worker nodes.
+  cluster users and worker nodes.
   * [Managed Infrastructure](#managed-infrastructure): To provide managed services for the cluster.
   At a minimum, this includes a virtual network for the cluster to use.
   * [Storage](#storage): To provide data stores for the cluster and its
@@ -92,14 +92,14 @@ execution of workloads. Both roles will be tied into Kubernetes RBAC.
 
 For **worker nodes**, we create separate roles for a few typical
 classes of worker node groups: a standard pool of nodes, and a performant
-pool of nodes that differ by instance type. 
+pool of nodes that differ by instance type.
 
 Separation of roles creates many functions: it can be used to
-limit the blast radius if a given group is compromised, can regulate the number 
+limit the blast radius if a given group is compromised, can regulate the number
 of API requests originating from a certain group, and can also help scope
 privileges to specific node types and workloads.
 
-### Users 
+### Users
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -166,7 +166,7 @@ TODO
 {{% md %}}
 
 We configure the worker identities using `instanceRoles` in the cluster.
-Later on when we [define the node groups][nodegroups], we'll use an [instance
+Later on, when we [define the node groups][nodegroups], we'll use an [instance
 profile][aws-instance-profile] of each group's role to allow them to join the
 cluster per the configuration below.
 
@@ -217,9 +217,9 @@ TODO
 ## Managed Infrastructure
 
 In [Managed Infrastructure][crosswalk-infra] we demonstrate deploying managed services
-and how to create or use an existing a virtual network for use with Kubernetes.
+and how to create or use an existing virtual network for use with Kubernetes.
 
-### Networking 
+### Networking
 
 How you create the network will vary on your permissions and preferences.
 
@@ -244,7 +244,7 @@ if some need to be removed, the change is straightforward with a Pulumi update.
 
 By default, [`pulumi/eks`][pulumi-eks] will deploy workers into the private subnets, if
 specified, if not into the public subnets provided. Using private subnets for
-workers without associating a public IP address is highly recommended - it 
+workers without associating a public IP address is highly recommended - it
 creates workers that will not be publicly accessible from the Internet,
 and they'll typically be shielded within your VPC.
 
@@ -301,10 +301,10 @@ TODO
 
 ## Storage
 
-Kubernetes [storage][k8s-storage] centers on providing data persistence for 
+Kubernetes [storage][k8s-storage] centers on providing data persistence for
 the cluster with shared storage and/or Pods with volumes. The volume classes
 are extensive and vary by cloud provider, but
-typically they include volume types for mechanical drives and 
+typically they include volume types for mechanical drives and
 SSDs, along with network backed storage such as [NFS][nfs], [iSCSI][iscsi], and [CephFS][ceph-fs].
 
 To provision a [PersistentVolume][k8s-pvs], we have to ensure we have the
@@ -335,7 +335,7 @@ metadata:
   name: gp2-encrypted
 provisioner: kubernetes.io/aws-ebs
 parameters:
-  type: gp2 
+  type: gp2
   encrypted: "true"
 
 ---
@@ -346,7 +346,7 @@ metadata:
   name: sc1
 provisioner: kubernetes.io/aws-ebs
 parameters:
-  type: sc1 
+  type: sc1
 EOF
 ```
 
@@ -354,7 +354,7 @@ EOF
 $ kubectl apply -f storage-classes.yaml
 ```
 
-or 
+or
 
 Create the storage classes using Pulumi.
 
@@ -397,7 +397,7 @@ EOF
 $ kubectl apply -f pvc.yaml
 ```
 
-or 
+or
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
@@ -455,7 +455,7 @@ TODO
 
 ## Recommended Settings
 
-With the core infrastruture in place for the control plane, there are some
+With the core infrastructure in place for the control plane, there are some
 general best-practices and recommendations to configure in the cluster.
 
 **General:**
@@ -481,13 +481,13 @@ general best-practices and recommendations to configure in the cluster.
     plane's actions, and for use in debugging and auditing.
   * (Optional) Configure private accessibility of the control plane /
     API Server endpoint to prevent it from being publicly exposed on the
-    Internet. Note, to enable this feature additional networking is required,
+    Internet. Note, to enable this feature, additional networking is required,
     and a [bastion host][aws-bastion] would be needed to access the control
     plane.
 
 ```typescript
   import * as eks from "@pulumi/eks";
-  
+
   // Create an EKS cluster with recommended settings.
   const cluster = new eks.Cluster(`${projectName}`, {
       version: "1.14",
