@@ -20,8 +20,8 @@ The primary steps to follow include how to:
 
   * [Create the Control Plane][crosswalk-control-plane]
   * [Create the Worker Nodes][crosswalk-worker-nodes]
+  * [Try out the Cluster][crosswalk-use-the-cluster]
   * [Update the Worker Nodes][crosswalk-update-worker-nodes]
-  * [Use the Cluster][crosswalk-use-the-cluster]
   * [Configure Cluster Defaults][crosswalk-configure-defaults]
   * [Configure Access Control][crosswalk-configure-access]
   * [Deploy Cluster Services][crosswalk-cluster-svcs]

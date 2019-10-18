@@ -9,7 +9,12 @@ menu:
 
 {{< cloudchoose >}}
 
-TODO - Intro
+Access control in Kubernetes is done by configuring permissions for IAM users
+and roles to operate in the cluster.
+
+The `kubeconfig` will be shared across users for access, and each IAM role
+will have a particular binding into the cluster's auth to determine how it works
+with the cluster.
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -61,7 +66,7 @@ will be tied into Kubernetes RBAC.
 <div class="mt">
 {{% md %}}
 
-Make a copy of the kubeconfig that will be edited for the admins.
+Make a copy of the kubeconfig that will be edited for the `admins`.
 
 ```bash
 $ cp kubeconfig.json kubeconfig-admins.json
@@ -99,7 +104,7 @@ $ export KUBECONFIG=`pwd`/kubeconfig-admins.json
 $ kubectl cluster-info
 ```
 
-Test the admins role by using it and viewing all resources in the cluster as
+Test the `admins` role by using it and viewing all resources in the cluster as
 expected.
 
 ```bash
@@ -177,7 +182,7 @@ that will be tied into Kubernetes RBAC.
 <div class="mt">
 {{% md %}}
 
-Make a copy of the kubeconfig that will be edited for the developers.
+Make a copy of the kubeconfig that will be edited for the `devs`.
 
 ```bash
 $ cp kubeconfig.json kubeconfig-devs.json
@@ -214,7 +219,7 @@ Update and use the new `kubeconfig`.
 $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 ```
 
-Test the developers role by using it and witnessing a lack of privileges.
+Test the `devs` role by using it and witnessing a lack of privileges.
 
 ```bash
 $ kubectl get all -A
@@ -341,6 +346,7 @@ $ kubectl delete pod/nginx svc/nginx
 
 For a complete example of this in action, please see [Simplifying Kubernetes
 RBAC in Amazon EKS][simplify-rbac].
+[simplify-rbac]: /blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/
 
 {{% /md %}}
 </div>
@@ -366,6 +372,5 @@ TODO - Extra links to docs / examples
 See the [official Kubernetes RBAC docs][k8s-rbac-docs] for more details.
 
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
-[simplify-rbac]: /blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/
 [k8s-rbac-docs]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 [crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}

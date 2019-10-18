@@ -1,51 +1,26 @@
 ---
-title: Use the Cluster
+title: Try out the Cluster
 menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-use-cluster
-    weight: 4
+    weight: 3
 ---
 
 {{< cloudchoose >}}
 
-After running `pulumi up` the cluster will be created and there will exist
-[Pulumi outputs][pulumi-outputs] with fields like the cluster's `kubeconfig`
-and its cluster name for reference and usage.
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+After the cluster is created with a Pulumi update, there will be
+[outputs][pulumi-outputs] with fields like the cluster's `kubeconfig` file
+contents, and its cluster name for reference.
 
 ## Overview
 
-We'll examine how to:
+We'll explore how to:
 
   * [Access the Cluster](#access-the-cluster)
   * [Query the Cluster](#query-the-cluster)
   * [Deploy a Workload](#deploy-a-workload)
-
-[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-
-TODO
-
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-
-TODO
-
-{{% /md %}}
-</div>
+  * [Learn More](#learn-more)
 
 ### Access the Cluster
 
@@ -144,4 +119,10 @@ Delete the pod and service.
 $ kubectl delete pod/nginx svc/nginx
 ```
 
+### Learn More
+
+See the official [Kubernetes Basics][k8s-basics] tutorial for more details.
+
 [pulumi-outputs]: https://www.pulumi.com/docs/intro/concepts/programming-model/#outputs
+[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
+[k8s-basics]: https://kubernetes.io/docs/tutorials/kubernetes-basics/
