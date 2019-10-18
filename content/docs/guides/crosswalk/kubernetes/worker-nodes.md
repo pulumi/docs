@@ -10,8 +10,8 @@ menu:
 {{< cloudchoose >}}
 
 The [worker nodes][k8s-concepts] are hosts that are responsible for
-running the apps and workloads of the cluster after the control plane has 
-scheduled it work. It also typically faciliates virtual networking using an
+running the apps and workloads of the cluster after the control plane has
+scheduled its work. It also typically facilitates virtual networking using an
 overlay or integrated network depending on setup.
 
 See the [official Kubernetes docs][k8s-docs] for more details.
@@ -80,7 +80,7 @@ We'll configure and deploy:
 
 When creating node groups, it is recommended to use separate identities between
 node groups, as separation of roles creates many functions: it can be used to
-limit the blast radius if a given group is compromised, can regulate the number 
+limit the blast radius if a given group is compromised, can regulate the number
 of API requests originating from a certain group, and can also help scope
 privileges to specific node types and related workloads.
 
@@ -223,7 +223,7 @@ means of ensuring node groups are adequately provisioned as intended.
 
 We can configure the scaling group to run a specific quantity of nodes.
 
-Size the node groups accordingly to known or approximate usage and bursting 
+Size the node groups accordingly to known or approximate usage and bursting
 expectations.
 
 <div class="cloud-prologue-aws"></div>
