@@ -66,7 +66,6 @@ We'll configure and deploy:
     use.
   cluster users, and worker nodes.
   * [Storage](#storage): To provide data stores for the cluster.
-  * [Other Services](#other-services): To provide other managed services for the cluster.
 
 ## Networking
 
@@ -284,20 +283,44 @@ TODO
 
 ## Storage
 
+Cloud storage persists data in many forms, from data warehouses to analytics,
+and is presented as object, file, block storage, and migration capabilities.
+
+Generally, the storage services in this stack tend to be foundational for
+teams, and is typically shared across clusters and orgs.
+
+In the managed clusters, the worker node groups by default will use block devices,
+and Kubernetes itself could manage [PersistentVolumes][k8s-pvs].
+
+Often times, this layer may be conflated with storage services managed in stacks
+closer to the apps, such as the Kubernetes [Cluster Services][crosswalk-cluster-svcs]
+or [App Services][crosswalk-app-svcs]. Those higher layers tend to primarily focus on
+the direct needs of a **given** Kubernetes cluster and its apps, rather than the
+needs of your complete architecture.
+
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
 
-TODO
+## Amazon Simple Storage Service (S3)
+
+See [Crosswalk AWS S3][pulumi-s3] and the [AWS S3 docs][aws-s3] for more details.
+
+## Elastic Container Registry (ECR)
+
+See [Crosswalk AWS ECR][crosswalk-ecr] and the [AWS ECR docs][aws-ecr] for more details.
 
 ## Amazon Elastic File System (EFS)
 
-See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] to see
-more details on deploying [Amazon Elastic File System (EFS)][aws-efs].
+See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] and the
+[AWS EFS docs][aws-efs] for more details.
 
 [pulumi-efs]: {{< relref "/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks" >}}
 [aws-efs]: https://aws.amazon.com/efs/
-
+[pulumi-s3]: {{< relref "/docs/aws/s3" >}}
+[crosswalk-ecr]: {{< relref "/docs/guides/crosswalk/aws/ecr" >}}
+[aws-ecr]: https://aws.amazon.com/ecr/
+[aws-s3]: https://aws.amazon.com/s3
 {{% /md %}}
 </div>
 
@@ -327,45 +350,6 @@ TODO
 {{% /md %}}
 </div>
 
-## Other Services
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
-
-TODO
-
-### Elastic Container Registry (ECR)
-
-TODO
-
-Ex: https://www.pulumi.com/blog/deploy-a-function-app-with-keda/#docker-image
-
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-
-TODO
-
-```typescript
-// TODO
-```
-
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-
-TODO
-
-```typescript
-// TODO
-```
-
-{{% /md %}}
-</div>
+[crosswalk-cluster-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/cluster-services" >}}
+[crosswalk-app-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/app-services" >}}
+[k8s-pvs]: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
