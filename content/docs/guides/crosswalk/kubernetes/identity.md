@@ -30,11 +30,11 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [groups]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
 [roles]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
 [policies]: https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
-[crosswalk-aws]: /docs/guides/crosswalk/aws
-[iam-users]: /docs/guides/crosswalk/aws/iam/#iam-users
-[iam-groups]: /docs/guides/crosswalk/aws/iam/#iam-groups
-[iam-roles]: /docs/guides/crosswalk/aws/iam/#iam-roles
-[iam-policies]: /docs/guides/crosswalk/aws/iam/#using-the-policydocument-interface
+[crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}
+[iam-users]: {{< relref "/docs/guides/crosswalk/aws/iam#iam-users" >}}
+[iam-groups]: {{< relref "/docs/guides/crosswalk/aws/iam#iam-groups" >}}
+[iam-roles]: {{< relref "/docs/guides/crosswalk/aws/iam#iam-roles" >}}
+[iam-policies]: {{< relref "/docs/guides/crosswalk/aws/iam#using-the-policydocument-interface" >}}
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/01-identity
 {{% /md %}}
 </div>
@@ -140,7 +140,7 @@ const adminsIamRolePolicy = new aws.iam.RolePolicy(`${adminsName}-eksClusterAdmi
     { parent: adminsIamRole },
 );
 ```
-[k8s-sys-masters]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
+[k8s-sys-masters]: https://kubernetes.io/docs/reference/access-authn-authz/rbac#user-facing-roles
 {{% /md %}}
 </div>
 
