@@ -64,15 +64,15 @@ capacity and capability.
 
 We'll configure and deploy:
 
-  * [Worker Identity](#worker-identity): For authentication and authorization of the worker nodes.
-  * [Worker Networking](#worker-networking): To provide a virtual network for the
+  * [Node Group Worker Identity](#node-group-worker-identity): For authentication and authorization of the worker nodes.
+  * [Node Group Worker Networking](#node-group-worker-networking): To provide a virtual network for the
     nodes and the Pods it runs.
-  * [Scheduling](#scheduling): To properly tune our scaling node groups, and to
-    schedule Pods on nodes using predicates.
+  * [Node Sizing](#node-sizing): To size our node scaling groups
+  * [Pod Scheduling](#pod-scheduling): To schedule Pods on nodes using predicates.
   * [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
   and best-practices, such as version pinning, and resource tags.
 
-### Worker Identity
+### Node Group Worker Identity
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -140,7 +140,7 @@ TODO
 {{% /md %}}
 </div>
 
-### Worker Networking
+### Node Group Worker Networking
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -208,13 +208,7 @@ TODO
 {{% /md %}}
 </div>
 
-### Scheduling
-
-Scheduling in Kubernetes takes on many forms depending on the context. It
-generally revolves around the capacity of the worker nodes, or where to place
-the Pods at runtime depending on preferences or requirements.
-
-#### Node Scheduling
+### Node Sizing
 
 In managed Kubernetes offerings, worker node groups are backed by auto scaling
 groups. These groups provide automatic scaling and management of a logical
@@ -293,7 +287,7 @@ the `cluster-autoscaler` to run properly. See the [Recommended Worker
 Settings](#recommended-worker-settings) below to configure the tags of
 a node group accordingly for the `cluster-autoscaler`.
 
-#### Pod Scheduling
+### Pod Scheduling
 
 We can logically organize node groups in Kubernetes to use with configurable scheduling
 predicates on Pods. Node [Labels][k8s-labels] are used to identify nodes by attributes,

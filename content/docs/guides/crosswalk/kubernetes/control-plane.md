@@ -53,7 +53,7 @@ easier way to get up and running.
 
 See the [official Kubernetes docs][k8s-docs] for more details.
 
-The full code for this stack is on [GitHub][gh-repo-stack]. (TODO)
+The full code for this stack is on [GitHub][gh-repo-stack].
 [gke]: https://cloud.google.com/kubernetes-engine/
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
 [k8s-docs]: https://kubernetes.io/docs/reference/

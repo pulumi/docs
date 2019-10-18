@@ -290,9 +290,13 @@ TODO
 
 TODO
 
-```typescript
-// TODO
-```
+## Amazon Elastic File System (EFS)
+
+See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] to see
+more details on deploying [Amazon Elastic File System (EFS)][aws-efs].
+
+[pulumi-efs]: {{< relref "/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks" >}}
+[aws-efs]: https://aws.amazon.com/efs/
 
 {{% /md %}}
 </div>
@@ -336,15 +340,6 @@ TODO
 TODO
 
 Ex: https://www.pulumi.com/blog/deploy-a-function-app-with-keda/#docker-image
-
-## Amazon Elastic File System (EFS)
-
-See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] to see
-more details on deploying [Amazon Elastic File System (EFS)][aws-efs].
-
-[pulumi-efs]: {{< relref "/blog/persisting-kubernetes-workloads-with-amazon-efscsi-volumes-using-pulumi-sdks" >}}
-[aws-efs]: https://aws.amazon.com/efs/
-
 
 {{% /md %}}
 </div>
