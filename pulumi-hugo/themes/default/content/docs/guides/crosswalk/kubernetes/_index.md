@@ -7,7 +7,7 @@ menu:
     identifier: crosswalk-kubernetes
 ---
 
-Pulumi Crosswalk for Kubernetes is a collection of industry standard
+Pulumi Crosswalk for Kubernetes is a collection of industry-standard
 best-practices and tasks for managing Kubernetes and its infrastructure in production.
 
 This guide is for provisioning and configuring production-grade Kubernetes
@@ -34,7 +34,7 @@ Infrastructure misconfiguration accounts for the most significant subset of seri
 production outages in major systems. Many of these failure modes are preventable.
 
 The primary objective of this reference architecture is to create sensible
-defaults that reduces the likelihood of these errors. Modern infrastructure as
+defaults that reduce the likelihood of these errors. Modern infrastructure as
 code tools, such as Pulumi, are effective means of accomplishing
 this goal.
 
@@ -53,23 +53,23 @@ to employ and understand:
 ## Production Infrastructure as Code
 
 At the heart of this architecture is a simple idea: that we should separate resources into
-loosely-coupled, independently-managable sets, based on risk and functionality.
-
-We suggest splitting infrastructure up into (roughly) 6 [Pulumi
-stack]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) of resources.
+loosely-coupled, independently-manageable sets, based on risk and functionality.
 
 <center><img src="/images/docs/quickstart/kubernetes/cake.svg" width="670"></center>
+
+We suggest splitting infrastructure up into (roughly) six [Pulumi
+stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) of resources.
 
 ### 1. Identity
 
 Identities and role definitions for organizations and CI/CD are required before anyone can provision
 anything. This is a requirement for every production Kubernetes deployment.
 
-By isolating resources into loosely-coupled stacks we
+By isolating resources into loosely-coupled stacks, we
 have the opportunity to grant minimal permissions based on the [principle of least
 privilege][least-privileged].
 
-The identity stack typically looks like:
+The identity stack typically contains:
 
 * Identities and roles for the team e.g. [AWS IAM][aws-iam], [GCP IAM][gcp-iam], [Azure AD][azure-ad].
 
@@ -78,18 +78,18 @@ The identity stack typically looks like:
 
     While IAM roles and Active Directory accounts describe identity of users,
     service accounts grant an identity for workloads, e.g. Storage
-    CI/CD. 
+    CI/CD.
 
 ### 2. Managed Infrastructure
 
 Provisioning shared, managed infrastructure is required to configure the
 cluster.
 
-At a minimum, this typically this includes networking infrastructure,
+At a minimum, this typically includes networking infrastructure,
 and can often include storage backends along with other cloud services such as
 VMs, registries, data pipelines, and data warehouses.
 
-### 3. Kubernetes Cluster 
+### 3. Kubernetes Cluster
 
 Configure and provision the Kubernetes cluster with the desired settings and defaults.
 
