@@ -7,7 +7,7 @@ meta_desc: "Continuous deployment"
 date: "2019-10-15"
 ---
 
-[Octopus Deploy](https://octopus.com) is a deployment automation server integrates with your existing build pipeline such as Jenkins, TeamCity, Azure DevOps and Bamboo. You can choose the environments for deploying your software and who can deploy them. For example, the QA team can only deploy to the Test environment but not to Development or Production. Different team members can trigger deployments but the deployment process is always consistent.
+[Octopus Deploy](https://octopus.com) is a deployment automation server that integrates with your existing build pipeline such as Jenkins, TeamCity, Azure DevOps and Bamboo. You can choose the environments for deploying your software and who can deploy them. For example, the QA team can only deploy to the Test environment but not to Development or Production. Different team members can trigger deployments but the deployment process is always consistent.
 
 ## Continuous Delivery with Octopus Deploy
 
