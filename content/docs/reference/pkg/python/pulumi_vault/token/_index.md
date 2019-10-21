@@ -50,8 +50,6 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <li><p><strong>token_num_uses</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
 if any, in number of seconds to set on the token.</p></li>
-<li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of policies to encode onto generated tokens. Depending
-on the auth method, this list may be supplemented by user/group/other values.</p></li>
 <li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.</p></li>
 <li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
@@ -158,13 +156,6 @@ if any, in number of seconds to set on the token.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_vault.token.AuthBackendRole.token_policies">
-<code class="sig-name descname">token_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.token.AuthBackendRole.token_policies" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of policies to encode onto generated tokens. Depending
-on the auth method, this list may be supplemented by user/group/other values.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_vault.token.AuthBackendRole.token_ttl">
 <code class="sig-name descname">token_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.token.AuthBackendRole.token_ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The incremental lifetime for generated tokens in number of seconds.
@@ -221,8 +212,6 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
 if any, in number of seconds to set on the token.</p>
 </p></li>
-<li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of policies to encode onto generated tokens. Depending
-on the auth method, this list may be supplemented by user/group/other values.</p></li>
 <li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.</p></li>
 <li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,

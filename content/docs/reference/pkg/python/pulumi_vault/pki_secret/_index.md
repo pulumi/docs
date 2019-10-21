@@ -527,6 +527,102 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_vault.pki_secret.SecretBackendCrlConfig">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendCrlConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">disable=None</em>, <em class="sig-param">expiry=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCrlConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows setting the duration for which the generated CRL should be marked valid. If the CRL is disabled, it will return a signed but zero-length CRL for any request. If enabled, it will re-build the CRL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path the PKI secret backend is mounted at, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
+<li><p><strong>disable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Disables or enables CRL building.</p></li>
+<li><p><strong>expiry</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the time until expiration.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_crl_config.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_crl_config.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vault.pki_secret.SecretBackendCrlConfig.backend">
+<code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCrlConfig.backend" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path the PKI secret backend is mounted at, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.pki_secret.SecretBackendCrlConfig.disable">
+<code class="sig-name descname">disable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCrlConfig.disable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables or enables CRL building.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.pki_secret.SecretBackendCrlConfig.expiry">
+<code class="sig-name descname">expiry</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCrlConfig.expiry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the time until expiration.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vault.pki_secret.SecretBackendCrlConfig.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">disable=None</em>, <em class="sig-param">expiry=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCrlConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SecretBackendCrlConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path the PKI secret backend is mounted at, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
+<li><p><strong>disable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Disables or enables CRL building.</p></li>
+<li><p><strong>expiry</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the time until expiration.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_crl_config.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/pki_secret_backend_crl_config.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vault.pki_secret.SecretBackendCrlConfig.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCrlConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vault.pki_secret.SecretBackendCrlConfig.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendCrlConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_vault.pki_secret.SecretBackendIntermediateCertRequest">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.pki_secret.</code><code class="sig-name descname">SecretBackendIntermediateCertRequest</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alt_names=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">common_name=None</em>, <em class="sig-param">country=None</em>, <em class="sig-param">exclude_cn_from_sans=None</em>, <em class="sig-param">format=None</em>, <em class="sig-param">ip_sans=None</em>, <em class="sig-param">key_bits=None</em>, <em class="sig-param">key_type=None</em>, <em class="sig-param">locality=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">other_sans=None</em>, <em class="sig-param">ou=None</em>, <em class="sig-param">postal_code=None</em>, <em class="sig-param">private_key_format=None</em>, <em class="sig-param">province=None</em>, <em class="sig-param">street_address=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">uri_sans=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.pki_secret.SecretBackendIntermediateCertRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SecretBackendIntermediateCertRequest resource with the given unique name, props, and options.</p>

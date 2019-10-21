@@ -19,6 +19,7 @@ TOOLS_REPOS=(
     "pulumi-f5bigip"
     "pulumi-gcp"
     "pulumi-gitlab"
+    "pulumi-kafka"
     "pulumi-kubernetes"
     "pulumi-linode"
     "pulumi-mysql"

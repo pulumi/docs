@@ -14,7 +14,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_vault.database"></span><dl class="class">
 <dt id="pulumi_vault.database.SecretBackendConnection">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.database.</code><code class="sig-name descname">SecretBackendConnection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cassandra=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">hana=None</em>, <em class="sig-param">mongodb=None</em>, <em class="sig-param">mssql=None</em>, <em class="sig-param">mysql=None</em>, <em class="sig-param">mysql_aurora=None</em>, <em class="sig-param">mysql_legacy=None</em>, <em class="sig-param">mysql_rds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oracle=None</em>, <em class="sig-param">postgresql=None</em>, <em class="sig-param">verify_connection=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.database.</code><code class="sig-name descname">SecretBackendConnection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cassandra=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">hana=None</em>, <em class="sig-param">mongodb=None</em>, <em class="sig-param">mssql=None</em>, <em class="sig-param">mysql=None</em>, <em class="sig-param">mysql_aurora=None</em>, <em class="sig-param">mysql_legacy=None</em>, <em class="sig-param">mysql_rds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oracle=None</em>, <em class="sig-param">postgresql=None</em>, <em class="sig-param">root_rotation_statements=None</em>, <em class="sig-param">verify_connection=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SecretBackendConnection resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -35,6 +35,7 @@ connection.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name to give the database connection.</p></li>
 <li><p><strong>oracle</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for Oracle connections.</p></li>
 <li><p><strong>postgresql</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for PostgreSQL connections.</p></li>
+<li><p><strong>root_rotation_statements</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of database statements to be executed to rotate the root user’s credentials.</p></li>
 <li><p><strong>verify_connection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the connection should be verified on
 initial configuration or not.</p></li>
 </ul>
@@ -369,6 +370,12 @@ use.</p></li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vault.database.SecretBackendConnection.root_rotation_statements">
+<code class="sig-name descname">root_rotation_statements</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection.root_rotation_statements" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of database statements to be executed to rotate the root user’s credentials.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vault.database.SecretBackendConnection.verify_connection">
 <code class="sig-name descname">verify_connection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection.verify_connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the connection should be verified on
@@ -377,7 +384,7 @@ initial configuration or not.</p>
 
 <dl class="method">
 <dt id="pulumi_vault.database.SecretBackendConnection.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cassandra=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">hana=None</em>, <em class="sig-param">mongodb=None</em>, <em class="sig-param">mssql=None</em>, <em class="sig-param">mysql=None</em>, <em class="sig-param">mysql_aurora=None</em>, <em class="sig-param">mysql_legacy=None</em>, <em class="sig-param">mysql_rds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oracle=None</em>, <em class="sig-param">postgresql=None</em>, <em class="sig-param">verify_connection=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_roles=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cassandra=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">hana=None</em>, <em class="sig-param">mongodb=None</em>, <em class="sig-param">mssql=None</em>, <em class="sig-param">mysql=None</em>, <em class="sig-param">mysql_aurora=None</em>, <em class="sig-param">mysql_legacy=None</em>, <em class="sig-param">mysql_rds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oracle=None</em>, <em class="sig-param">postgresql=None</em>, <em class="sig-param">root_rotation_statements=None</em>, <em class="sig-param">verify_connection=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecretBackendConnection resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -400,6 +407,7 @@ connection.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name to give the database connection.</p></li>
 <li><p><strong>oracle</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for Oracle connections.</p></li>
 <li><p><strong>postgresql</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for PostgreSQL connections.</p></li>
+<li><p><strong>root_rotation_statements</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of database statements to be executed to rotate the root user’s credentials.</p></li>
 <li><p><strong>verify_connection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the connection should be verified on
 initial configuration or not.</p></li>
 </ul>
