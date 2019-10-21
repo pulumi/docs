@@ -7,7 +7,9 @@ meta_desc: "Continuous deployment"
 date: "2019-10-15"
 ---
 
-[Octopus Deploy](https://octopus.com) is a deployment automation server that integrates with your existing build pipeline such as Jenkins, TeamCity, Azure DevOps and Bamboo. You can choose the environments for deploying your software and who can deploy them. For example, the QA team can only deploy to the Test environment but not to Development or Production. Different team members can trigger deployments but the deployment process is always consistent.
+Continuous delivery is about making changes in your application and getting them into production securely, quickly in a consistent way. Pulumi's infrastructure as code approach uses source code to model cloud resources, making it ideal for continuous delivery. Your infrastructure code can go through the same process as your application code including running unit and integration tests, perform code reviews via Pull Requests, and examining your infrastructure using lingers or static analysis tools.  Like your application, your cloud infrastructure can be validated and tested before deploying to production. Pulumi can integrate into any CI/CD system (Jenkins, Azure DevOps, CircleCI, Spinnaker, TravisCI, GitLab CI, Codeship, NodeJS in Google Cloud, DigitalOcean, Codefresh and npm), so let's take a look at how to implement a deployment server.
+
+[Octopus Deploy](https://octopus.com) is a deployment automation server that integrates with your existing build pipeline such as Jenkins, Azure DevOps or through a REST API. You can choose the environments for deploying your software and who can deploy them. For example, the QA team can only deploy to the Test environment but not to Development or Production. Different team members can trigger deployments but the deployment process is always consistent.
 
 ## Continuous Delivery with Octopus Deploy
 
