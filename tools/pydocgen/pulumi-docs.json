@@ -74,6 +74,12 @@
       "terraform_provider_name": "gitlab"
     },
     {
+      "name": "Pulumi Kafka",
+      "package_name": "pulumi_kafka",
+      "pulumi_provider_name": "kafka",
+      "terraform_provider_name": ""
+    },
+    {
       "name": "Pulumi vSphere",
       "package_name": "pulumi_vsphere",
       "pulumi_provider_name": "vsphere",
