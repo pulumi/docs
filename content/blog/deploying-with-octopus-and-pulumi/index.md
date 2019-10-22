@@ -1,5 +1,5 @@
 ---
-title: "Deploying with Octopus and Pulumi"
+title: ""Continuous Delivery on Octopus Deploy using Pulumi"
 authors: ["sophia-parafina"]
 tags: ["CI"]
 meta_image: "octopus-pulumi.png"
@@ -19,7 +19,9 @@ Pulumi's [guide](https://www.pulumi.com/docs/guides/continuous-delivery/octopus-
 
 Octopus environments are analogous to Pulumi stacks. If you have Development, Test, and Production Octopus environments, you would create a Pulumi stack for each environment. The application being deployed is a Pulumi project. Octopus uses packages that contain the source code bundled in a supported format such as .zip files, gzip or bzip tar files,  Java archive formats such as .jar or .war, and Docker images. Pulumi apps can be packaged in the desired format and extracted onto a Octopus worker that the Pulumi CLI can access.
 
-In Octopus, a **Process** is made up of the steps needed to execute a project. To deploy a Pulumi package, additional steps are needed to extract the code. You can add a step to a process by using the Octopus menu. In the Process section, select **AddStep** to add the package. You will need to specify the package feed, the package id and a package name. The step can be further customized by adding a script that specifies where to extract the package.
+In Octopus, a **Process** is made up of the steps needed to execute a project. To deploy a Pulumi package, additional steps are needed to extract the code. You can add a step to a process by using the Octopus menu. In the Process section, select **Add Step** to add the package. You will need to specify the package feed, the package id and a package name. The step can be further customized by adding a script that specifies where to extract the package.
+
+![Pulumi Step Template](octopus-pulumi-step-template.png)
 
 To deploy your Pulumi package, select **Add Step** again and search for the `Pulumi` template from the **Community Library Steps**. Fill out the template with the appropriate configuration parameters for your stack. Next, create a release from by selecting **Releases** and click **Create Release** and follow the instructions.
 
