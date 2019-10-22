@@ -13,7 +13,7 @@ Continuous delivery is about making changes in your application and getting them
 
 ## Continuous Delivery with Octopus Deploy
 
-Deployment targets are grouped in **environments** in Octopus. Environments represent different stages of the deployment pipeline that your software passes through on it's way to a release. A common practice is to create Development, Test, and Production environments which lets you define you deployment process. Octopus Deploy lets you deploy the correct versions of you software, with the right configuration and to the appropriate environment.
+Deployment targets are grouped in **environments** in Octopus. Environments represent different stages of the deployment pipeline that your software passes through on it's way to a release. A common practice is to create unique Development, Test, and Production environments. Octopus Deploy lets you deploy the correct versions of your software, with the right configuration for the appropriate environment.
 
 Pulumi's [guide](https://www.pulumi.com/docs/guides/continuous-delivery/octopus-deploy/) to implementing Octopus Deploy walks you through the process of implementing a environment for deploying a Python flask application on [AWS Fargate](https://aws.amazon.com/fargate/). Before starting, make sure you have met the [prerequisites](https://www.pulumi.com/docs/guides/continuous-delivery/octopus-deploy/#prerequisites).
 
