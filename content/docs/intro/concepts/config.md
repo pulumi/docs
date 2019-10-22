@@ -171,7 +171,7 @@ dbPassword := c.Require("dbPassword")
 
 In this example, we have read back the `name` and `dbPassword` configuration variables programmatically. The `name` is just the string `BroomeLLC`, while the `dbPassword` is a secret output value that is encrypted.
 
-> Notice the keys used above have no namespaces, both in the CLI gestures and in the `pulumi.Config` constructor. This means they have taken our project name as the default namespace. We could have specified this explicitly, as in `pulumi config set broome-proj:name BroomeLLC` and `new pulumi.Config("BroomeLLC")`.
+> Notice the keys used above have no namespaces, both in the CLI gestures and in the `pulumi.Config` constructor. This means they have taken our project name as the default namespace. We could have specified this explicitly, as in `pulumi config set broome-proj:name BroomeLLC` and `new pulumi.Config("broome-proj")`.
 
 For more advanced details of interacting with configuration and secrets, refer to the
 [Programming Model documentation]({{< relref "programming-model.md" >}}).
