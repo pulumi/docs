@@ -98,6 +98,11 @@ function selectCloud(cloud) {
     selectChoice("cloud", cloud);
 }
 
+// selectCloud chooses a kubernetes language syntax.
+function selectK8sLang(syntax) {
+    selectChoice("k8s-language", syntax);
+}
+
 // Hides and shows choices based on previous preferences.
 function hideShowChoices(kind, selector, defaultChoice) {
     var tabsOnPage = {};
@@ -148,4 +153,5 @@ $(function() {
     }
     hideShowChoices("os", selectOs, defaultOsChoice);
     hideShowChoices("cloud", selectCloud, "aws");
+    hideShowChoices("k8s-language", selectK8sLang, "yaml");
 });
