@@ -237,18 +237,18 @@ const nodegroupManagedPolicyArns: string[] = [
 ];
 
 // Create the standard node group worker role and attach the required policies.
-const stdNodegroupIamRoleName = "standardNodeGroup";
-const stdNodegroupIamRole = new aws.iam.Role(`${stdNodegroupIamRoleName}-eksClusterWorkerNode`, {
+const stdName = "standardNodeGroup";
+const stdNodegroupIamRole = new aws.iam.Role(`${stdName}-eksClusterWorkerNode`, {
     assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({"Service": "ec2.amazonaws.com"})
 })
-attachPoliciesToRole(stdNodegroupIamRoleName, stdNodegroupIamRole, nodegroupManagedPolicyArns);
+attachPoliciesToRole(stdName, stdNodegroupIamRole, nodegroupManagedPolicyArns);
 
 // Create the performant node group worker role and attach the required policies.
-const perfNodegroupIamRoleName = "performanceNodeGroup";
-const perfNodegroupIamRole = new aws.iam.Role(`${perfNodegroupIamRoleName}-eksClusterWorkerNode`, {
+const perfName = "performanceNodeGroup";
+const perfNodegroupIamRole = new aws.iam.Role(`${perfName}-eksClusterWorkerNode`, {
     assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({"Service": "ec2.amazonaws.com"})
 })
-attachPoliciesToRole(perfNodegroupIamRoleName, perfNodegroupIamRole, nodegroupManagedPolicyArns);
+attachPoliciesToRole(perfName, perfNodegroupIamRole, nodegroupManagedPolicyArns);
 
 // Attach policies to a role.
 function attachPoliciesToRole(name: string, role: aws.iam.Role, policyArns: string[]) {
