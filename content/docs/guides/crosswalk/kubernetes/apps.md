@@ -7,40 +7,49 @@ menu:
     weight: 9
 ---
 
-{{< cloudchoose >}}
+TODO
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps
+
+## Examples
+
+### Example 1
 
 TODO
 
-<div class="cloud-prologue-aws"></div>
+{{< k8s-language nokx >}}
+
+<div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
 {{% md %}}
-
-The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/06-apps
-
+YAML TODO
 {{% /md %}}
 </div>
 
-<div class="cloud-prologue-azure"></div>
+<div class="k8s-language-prologue-pulumi-k8s"></div>
 <div class="mt">
 {{% md %}}
-
-The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/06-apps
-
+pulumi-k8s TODO
 {{% /md %}}
 </div>
 
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-
-The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/06-apps
-
-{{% /md %}}
-</div>
-
-## Overview
+### Example 2
 
 TODO
+
+{{< k8s-language nokx >}}
+
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
+YAML TODO
+{{% /md %}}
+</div>
+
+<div class="k8s-language-prologue-pulumi-k8s"></div>
+<div class="mt">
+{{% md %}}
+pulumi-k8s TODO
+{{% /md %}}
+</div>
