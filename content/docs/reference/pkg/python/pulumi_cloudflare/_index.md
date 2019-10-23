@@ -471,6 +471,112 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_cloudflare.AccessServiceToken">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AccessServiceToken</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access Service Tokens are used for service-to-service communication
+when an application is behind Cloudflare Access.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the account where the Access
+Service is being created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the token’s intent.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_cloudflare.AccessServiceToken.account_id">
+<code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken.account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the account where the Access
+Service is being created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.AccessServiceToken.client_id">
+<code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>UUID client ID associated with the Service Token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.AccessServiceToken.client_secret">
+<code class="sig-name descname">client_secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken.client_secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>A secret for interacting with Access protocols.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.AccessServiceToken.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Friendly name of the token’s intent.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.AccessServiceToken.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing AccessServiceToken resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the account where the Access
+Service is being created.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – UUID client ID associated with the Service Token.</p></li>
+<li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A secret for interacting with Access protocols.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the token’s intent.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.AccessServiceToken.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.AccessServiceToken.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_cloudflare.AccountMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AccountMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">email_address=None</em>, <em class="sig-param">role_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccountMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare account members.</p>
@@ -657,6 +763,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_cloudflare.AwaitableGetIpRangesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">ipv4_cidr_blocks=None</em>, <em class="sig-param">ipv6_cidr_blocks=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetIpRangesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudflare.AwaitableGetWafGroupsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetWafGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetWafGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudflare.AwaitableGetWafPackagesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetWafPackagesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">packages=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetWafPackagesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1140,6 +1256,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetIpRangesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.GetIpRangesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudflare.GetWafGroupsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetWafGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetWafGroupsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getWafGroups.</p>
+<dl class="attribute">
+<dt id="pulumi_cloudflare.GetWafGroupsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.GetWafGroupsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudflare.GetWafPackagesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetWafPackagesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">packages=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetWafPackagesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getWafPackages.</p>
+<dl class="attribute">
+<dt id="pulumi_cloudflare.GetWafPackagesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.GetWafPackagesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -2711,7 +2851,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.SpectrumApplication">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">SpectrumApplication</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">ip_firewall=None</em>, <em class="sig-param">origin_directs=None</em>, <em class="sig-param">origin_dns=None</em>, <em class="sig-param">origin_port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">SpectrumApplication</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">ip_firewall=None</em>, <em class="sig-param">origin_directs=None</em>, <em class="sig-param">origin_dns=None</em>, <em class="sig-param">origin_port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare’s DDoS, TLS, and IP Firewall to your other TCP-based services.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2726,6 +2866,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port configuration at Cloudflare’s edge. e.g. <code class="docutils literal notranslate"><span class="pre">tcp/22</span></code>.</p></li>
 <li><p><strong>proxy_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables Proxy Protocol v1 to the origin. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>tls</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TLS configuration option for Cloudflare to connect to your origin. Valid values are: <code class="docutils literal notranslate"><span class="pre">off</span></code>, <code class="docutils literal notranslate"><span class="pre">flexible</span></code>, <code class="docutils literal notranslate"><span class="pre">full</span></code> and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set’s application type. Valid values are: <code class="docutils literal notranslate"><span class="pre">direct</span></code>, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">direct</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2796,9 +2937,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>TLS configuration option for Cloudflare to connect to your origin. Valid values are: <code class="docutils literal notranslate"><span class="pre">off</span></code>, <code class="docutils literal notranslate"><span class="pre">flexible</span></code>, <code class="docutils literal notranslate"><span class="pre">full</span></code> and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_cloudflare.SpectrumApplication.traffic_type">
+<code class="sig-name descname">traffic_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.traffic_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set’s application type. Valid values are: <code class="docutils literal notranslate"><span class="pre">direct</span></code>, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">direct</span></code>.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_cloudflare.SpectrumApplication.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">ip_firewall=None</em>, <em class="sig-param">origin_directs=None</em>, <em class="sig-param">origin_dns=None</em>, <em class="sig-param">origin_port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">ip_firewall=None</em>, <em class="sig-param">origin_directs=None</em>, <em class="sig-param">origin_dns=None</em>, <em class="sig-param">origin_port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpectrumApplication resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2815,6 +2962,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port configuration at Cloudflare’s edge. e.g. <code class="docutils literal notranslate"><span class="pre">tcp/22</span></code>.</p></li>
 <li><p><strong>proxy_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables Proxy Protocol v1 to the origin. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>tls</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TLS configuration option for Cloudflare to connect to your origin. Valid values are: <code class="docutils literal notranslate"><span class="pre">off</span></code>, <code class="docutils literal notranslate"><span class="pre">flexible</span></code>, <code class="docutils literal notranslate"><span class="pre">full</span></code> and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
+<li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set’s application type. Valid values are: <code class="docutils literal notranslate"><span class="pre">direct</span></code>, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">direct</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2853,6 +3001,214 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_cloudflare.SpectrumApplication.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudflare.WafGroup">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WafGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Cloudflare WAF rule group resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall groups.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The WAF Rule Group ID.</p></li>
+<li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mode of the group, can be one of [“on”, “off”].</p></li>
+<li><p><strong>package_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the WAF Rule Package that contains the group.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID to apply to.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_cloudflare.WafGroup.group_id">
+<code class="sig-name descname">group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafGroup.group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The WAF Rule Group ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.WafGroup.mode">
+<code class="sig-name descname">mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafGroup.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mode of the group, can be one of [“on”, “off”].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.WafGroup.package_id">
+<code class="sig-name descname">package_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafGroup.package_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the WAF Rule Package that contains the group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.WafGroup.zone_id">
+<code class="sig-name descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafGroup.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS zone ID to apply to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.WafGroup.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing WafGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The WAF Rule Group ID.</p></li>
+<li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mode of the group, can be one of [“on”, “off”].</p></li>
+<li><p><strong>package_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the WAF Rule Package that contains the group.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID to apply to.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.WafGroup.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.WafGroup.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudflare.WafPackage">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WafPackage</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action_mode=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">sensitivity=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafPackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Cloudflare WAF rule package resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall packages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>action_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The action mode of the package, can be one of [“block”, “challenge”, “simulate”].</p></li>
+<li><p><strong>package_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The WAF Package ID.</p></li>
+<li><p><strong>sensitivity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sensitivity of the package, can be one of [“high”, “medium”, “low”, “off”].</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID to apply to.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_cloudflare.WafPackage.action_mode">
+<code class="sig-name descname">action_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafPackage.action_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The action mode of the package, can be one of [“block”, “challenge”, “simulate”].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.WafPackage.package_id">
+<code class="sig-name descname">package_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafPackage.package_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The WAF Package ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.WafPackage.sensitivity">
+<code class="sig-name descname">sensitivity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafPackage.sensitivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The sensitivity of the package, can be one of [“high”, “medium”, “low”, “off”].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.WafPackage.zone_id">
+<code class="sig-name descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafPackage.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS zone ID to apply to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.WafPackage.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action_mode=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">sensitivity=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafPackage.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing WafPackage resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>action_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The action mode of the package, can be one of [“block”, “challenge”, “simulate”].</p></li>
+<li><p><strong>package_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The WAF Package ID.</p></li>
+<li><p><strong>sensitivity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sensitivity of the package, can be one of [“high”, “medium”, “low”, “off”].</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID to apply to.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.WafPackage.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafPackage.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.WafPackage.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafPackage.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -3918,6 +4274,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the [IP ranges][1] of Cloudflare edge nodes.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/ip_ranges.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/ip_ranges.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_cloudflare.get_waf_groups">
+<code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_waf_groups</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_waf_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to look up [WAF Rule Groups][1].</p>
+<p>The <strong>filter</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_groups.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_cloudflare.get_waf_packages">
+<code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_waf_packages</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_waf_packages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to look up [WAF Rule Packages][1].</p>
+<p>The <strong>filter</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action_mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">detectionMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sensitivity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_packages.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_packages.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
