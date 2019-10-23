@@ -105,7 +105,7 @@ With a running, vanilla cluster you should install any Kubernetes cluster-scoped
 services that will be shared by a subset or all cluster users.
 
 At a minimum, services include centralized cluster and app-based logging, and often
-include monitoring, policies, registries, and service meshes.
+include monitoring, policies, and service meshes.
 
 ### 5. App Services
 
