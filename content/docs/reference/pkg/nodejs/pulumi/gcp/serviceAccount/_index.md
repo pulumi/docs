@@ -56,7 +56,7 @@ meta_desc: "Explore members of the serviceAccount module in the @pulumi/gcp pack
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Account" data-link-title="Account">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L31">
         Resource <strong>Account</strong>
     </a>
 </h3>
@@ -87,7 +87,7 @@ const objectViewer = new gcp.serviceAccount.Account("objectViewer", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account.html.markdown.
 
 <h4 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -101,7 +101,7 @@ Create a Account resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -112,14 +112,14 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -130,7 +130,7 @@ Returns true if the given object is an instance of Account.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Account-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L64">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L64">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
 
 <h4 class="pdoc-member-header" id="Account-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L69">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L69">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ The display name for the service account.
 Can be updated without creating a new resource.
 
 <h4 class="pdoc-member-header" id="Account-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L75">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L75">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
 
 <h4 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -169,7 +169,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ deployments and may be missing (undefined) during planning phases.
 The fully-qualified name of the service account.
 
 <h4 class="pdoc-member-header" id="Account-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L84">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L84">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h4 class="pdoc-member-header" id="Account-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L88">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L88">property <b>uniqueId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uniqueId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ Defaults to the provider project configuration.
 The unique id of the service account.
 
 <h4 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -203,7 +203,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IAMBinding" data-link-title="IAMBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L85">
         Resource <strong>IAMBinding</strong>
     </a>
 </h3>
@@ -288,7 +288,7 @@ const gceDefaultAccountIam = new gcp.serviceAccount.IAMMember("gce-default-accou
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_iam_binding.html.markdown.
 
 <h4 class="pdoc-member-header" id="IAMBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L126"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L126"> <b>constructor</b></a>
 </h4>
 
 
@@ -302,7 +302,7 @@ Create a IAMBinding resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IAMBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L94">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L94">method <b>get</b></a>
 </h4>
 
 
@@ -313,14 +313,14 @@ Get an existing IAMBinding resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IAMBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L85">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L85">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IAMBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L105">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L105">method <b>isInstance</b></a>
 </h4>
 
 
@@ -331,7 +331,7 @@ Returns true if the given object is an instance of IAMBinding.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IAMBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L115">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L115">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -339,7 +339,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the service account IAM policy.
 
 <h4 class="pdoc-member-header" id="IAMBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -348,12 +348,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IAMBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L116">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L116">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAMBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L122">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L122">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -363,7 +363,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IAMBinding-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L126">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L126">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ The role that should be applied. Only one
 The fully-qualified name of the service account to apply policy to.
 
 <h4 class="pdoc-member-header" id="IAMBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L85">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L85">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -380,7 +380,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IAMMember" data-link-title="IAMMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L85">
         Resource <strong>IAMMember</strong>
     </a>
 </h3>
@@ -465,7 +465,7 @@ const gceDefaultAccountIam = new gcp.serviceAccount.IAMMember("gce-default-accou
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_iam_member.html.markdown.
 
 <h4 class="pdoc-member-header" id="IAMMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L126"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L126"> <b>constructor</b></a>
 </h4>
 
 
@@ -479,7 +479,7 @@ Create a IAMMember resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IAMMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L94">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L94">method <b>get</b></a>
 </h4>
 
 
@@ -490,14 +490,14 @@ Get an existing IAMMember resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IAMMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L85">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L85">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IAMMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L105">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L105">method <b>isInstance</b></a>
 </h4>
 
 
@@ -508,7 +508,7 @@ Returns true if the given object is an instance of IAMMember.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IAMMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L115">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L115">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -516,7 +516,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the service account IAM policy.
 
 <h4 class="pdoc-member-header" id="IAMMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -525,12 +525,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IAMMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L116">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L116">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAMMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L122">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L122">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IAMMember-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L126">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L126">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -548,7 +548,7 @@ The role that should be applied. Only one
 The fully-qualified name of the service account to apply policy to.
 
 <h4 class="pdoc-member-header" id="IAMMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L85">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L85">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -557,7 +557,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IAMPolicy" data-link-title="IAMPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L85">
         Resource <strong>IAMPolicy</strong>
     </a>
 </h3>
@@ -642,7 +642,7 @@ const gceDefaultAccountIam = new gcp.serviceAccount.IAMMember("gce-default-accou
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_iam_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="IAMPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L124"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L124"> <b>constructor</b></a>
 </h4>
 
 
@@ -656,7 +656,7 @@ Create a IAMPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IAMPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L94">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L94">method <b>get</b></a>
 </h4>
 
 
@@ -667,14 +667,14 @@ Get an existing IAMPolicy resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IAMPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L85">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L85">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IAMPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L105">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L105">method <b>isInstance</b></a>
 </h4>
 
 
@@ -685,7 +685,7 @@ Returns true if the given object is an instance of IAMPolicy.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IAMPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L115">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L115">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -693,7 +693,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the service account IAM policy.
 
 <h4 class="pdoc-member-header" id="IAMPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -702,7 +702,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IAMPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L120">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L120">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -711,7 +711,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="IAMPolicy-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L124">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L124">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -719,7 +719,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 The fully-qualified name of the service account to apply policy to.
 
 <h4 class="pdoc-member-header" id="IAMPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L85">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L85">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -728,7 +728,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Key" data-link-title="Key">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L46">
         Resource <strong>Key</strong>
     </a>
 </h3>
@@ -773,7 +773,7 @@ const mykey = new gcp.serviceAccount.Key("mykey", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_account_key.html.markdown.
 
 <h4 class="pdoc-member-header" id="Key-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L134"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L134"> <b>constructor</b></a>
 </h4>
 
 
@@ -787,7 +787,7 @@ Create a Key resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Key-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -798,14 +798,14 @@ Get an existing Key resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Key-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Key-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -816,7 +816,7 @@ Returns true if the given object is an instance of Key.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Key-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -825,7 +825,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Key-keyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L79">property <b>keyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L79">property <b>keyAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -836,7 +836,7 @@ Valid values are listed at
 (only used on create)
 
 <h4 class="pdoc-member-header" id="Key-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L83">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -844,7 +844,7 @@ Valid values are listed at
 The name used for this key pair
 
 <h4 class="pdoc-member-header" id="Key-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L90">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L90">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pgpKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -855,7 +855,7 @@ a base64-encoded public key or a `keybase:keybaseusername` string for looking up
 in Vault.
 
 <h4 class="pdoc-member-header" id="Key-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L96">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L96">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -865,7 +865,7 @@ service account keys through the CLI or web console. This is only populated when
 `pgpKey` is provided.
 
 <h4 class="pdoc-member-header" id="Key-privateKeyEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L102">property <b>privateKeyEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L102">property <b>privateKeyEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKeyEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -875,7 +875,7 @@ encrypted with the given `pgpKey`. This is only populated when creating a new
 key and `pgpKey` is supplied
 
 <h4 class="pdoc-member-header" id="Key-privateKeyFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L107">property <b>privateKeyFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L107">property <b>privateKeyFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKeyFingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -884,7 +884,7 @@ The MD5 public key fingerprint for the encrypted
 private key. This is only populated when creating a new key and `pgpKey` is supplied
 
 <h4 class="pdoc-member-header" id="Key-privateKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L111">property <b>privateKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L111">property <b>privateKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKeyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -892,7 +892,7 @@ private key. This is only populated when creating a new key and `pgpKey` is supp
 The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
 
 <h4 class="pdoc-member-header" id="Key-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L115">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L115">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -900,7 +900,7 @@ The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the defaul
 The public key, base64 encoded
 
 <h4 class="pdoc-member-header" id="Key-publicKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L119">property <b>publicKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L119">property <b>publicKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicKeyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -908,7 +908,7 @@ The public key, base64 encoded
 The output format of the public key requested. X509_PEM is the default output format.
 
 <h4 class="pdoc-member-header" id="Key-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L125">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L125">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -918,7 +918,7 @@ The Service account id of the Key Pair. This can be a string in the format
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
 
 <h4 class="pdoc-member-header" id="Key-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -927,7 +927,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Key-validAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L129">property <b>validAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L129">property <b>validAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ deployments.
 The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 <h4 class="pdoc-member-header" id="Key-validBefore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L134">property <b>validBefore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L134">property <b>validBefore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validBefore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -946,7 +946,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getAccount" data-link-title="getAccount">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L24">
         Data Source <strong>getAccount</strong>
     </a>
 </h3>
@@ -972,7 +972,7 @@ const objectViewer = gcp.serviceAccount.getAccount({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account.html.markdown.
 
 <h3 class="pdoc-module-header" id="getAccountAccessToken" data-link-title="getAccountAccessToken">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L59">
         Data Source <strong>getAccountAccessToken</strong>
     </a>
 </h3>
@@ -1033,7 +1033,7 @@ export const targetEmail = me.email;
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account_access_token.html.markdown.
 
 <h3 class="pdoc-module-header" id="getAccountKey" data-link-title="getAccountKey">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L31">
         Data Source <strong>getAccountKey</strong>
     </a>
 </h3>
@@ -1067,7 +1067,7 @@ const mykeyAccountKey = mykeyKey.name.apply(name => gcp.serviceAccount.getAccoun
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountArgs" data-link-title="AccountArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L171">
         interface <strong>AccountArgs</strong>
     </a>
 </h3>
@@ -1077,7 +1077,7 @@ const mykeyAccountKey = mykeyKey.name.apply(name => gcp.serviceAccount.getAccoun
 The set of arguments for constructing a Account resource.
 
 <h4 class="pdoc-member-header" id="AccountArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L178">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L178">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1088,7 +1088,7 @@ must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L183">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L183">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ The display name for the service account.
 Can be updated without creating a new resource.
 
 <h4 class="pdoc-member-header" id="AccountArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L188">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L188">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1106,7 +1106,7 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h3 class="pdoc-module-header" id="AccountState" data-link-title="AccountState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L134">
         interface <strong>AccountState</strong>
     </a>
 </h3>
@@ -1116,7 +1116,7 @@ Defaults to the provider project configuration.
 Input properties used for looking up and filtering Account resources.
 
 <h4 class="pdoc-member-header" id="AccountState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L141">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L141">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1127,7 +1127,7 @@ must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L146">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L146">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1136,7 +1136,7 @@ The display name for the service account.
 Can be updated without creating a new resource.
 
 <h4 class="pdoc-member-header" id="AccountState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L152">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L152">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1146,7 +1146,7 @@ should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
 
 <h4 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1154,7 +1154,7 @@ that would grant the service account privileges.
 The fully-qualified name of the service account.
 
 <h4 class="pdoc-member-header" id="AccountState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L161">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L161">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h4 class="pdoc-member-header" id="AccountState-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/account.ts#L165">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/account.ts#L165">property <b>uniqueId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniqueId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1171,7 +1171,7 @@ Defaults to the provider project configuration.
 The unique id of the service account.
 
 <h3 class="pdoc-module-header" id="GetAccountAccessTokenArgs" data-link-title="GetAccountAccessTokenArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L80">
         interface <strong>GetAccountAccessTokenArgs</strong>
     </a>
 </h3>
@@ -1181,7 +1181,7 @@ The unique id of the service account.
 A collection of arguments for invoking getAccountAccessToken.
 
 <h4 class="pdoc-member-header" id="GetAccountAccessTokenArgs-delegates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L84">property <b>delegates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L84">property <b>delegates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>delegates?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1189,7 +1189,7 @@ A collection of arguments for invoking getAccountAccessToken.
 Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. `["projects/-/serviceAccounts/delegate-svc-account@project-id.iam.gserviceaccount.com"]`)
 
 <h4 class="pdoc-member-header" id="GetAccountAccessTokenArgs-lifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L88">property <b>lifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L88">property <b>lifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1197,7 +1197,7 @@ Delegate chain of approvals needed to perform full impersonation. Specify the fu
 Lifetime of the impersonated token (defaults to its max: `3600s`).
 
 <h4 class="pdoc-member-header" id="GetAccountAccessTokenArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L92">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L92">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1205,7 +1205,7 @@ Lifetime of the impersonated token (defaults to its max: `3600s`).
 The scopes the new credential should have (e.g. `["storage-ro", "cloud-platform"]`)
 
 <h4 class="pdoc-member-header" id="GetAccountAccessTokenArgs-targetServiceAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L96">property <b>targetServiceAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L96">property <b>targetServiceAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetServiceAccount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1213,7 +1213,7 @@ The scopes the new credential should have (e.g. `["storage-ro", "cloud-platform"
 The service account _to_ impersonate (e.g. `service_B@your-project-id.iam.gserviceaccount.com`)
 
 <h3 class="pdoc-module-header" id="GetAccountAccessTokenResult" data-link-title="GetAccountAccessTokenResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L102">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L102">
         interface <strong>GetAccountAccessTokenResult</strong>
     </a>
 </h3>
@@ -1223,7 +1223,7 @@ The service account _to_ impersonate (e.g. `service_B@your-project-id.iam.gservi
 A collection of values returned by getAccountAccessToken.
 
 <h4 class="pdoc-member-header" id="GetAccountAccessTokenResult-accessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L106">property <b>accessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L106">property <b>accessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1231,12 +1231,12 @@ A collection of values returned by getAccountAccessToken.
 The `accessToken` representing the new generated identity.
 
 <h4 class="pdoc-member-header" id="GetAccountAccessTokenResult-delegates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L107">property <b>delegates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L107">property <b>delegates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>delegates?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountAccessTokenResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L114">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L114">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1244,22 +1244,22 @@ The `accessToken` representing the new generated identity.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountAccessTokenResult-lifetime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L108">property <b>lifetime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L108">property <b>lifetime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifetime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountAccessTokenResult-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L109">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L109">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountAccessTokenResult-targetServiceAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L110">property <b>targetServiceAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountAccessToken.ts#L110">property <b>targetServiceAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetServiceAccount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAccountArgs" data-link-title="GetAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L43">
         interface <strong>GetAccountArgs</strong>
     </a>
 </h3>
@@ -1269,7 +1269,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L47">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L47">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1277,7 +1277,7 @@ A collection of arguments for invoking getAccount.
 The Service account id.  (This is the part of the service account's email field that comes before the @ symbol.)
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L52">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L52">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1286,7 +1286,7 @@ The ID of the project that the service account is present in.
 Defaults to the provider project configuration.
 
 <h3 class="pdoc-module-header" id="GetAccountKeyArgs" data-link-title="GetAccountKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L51">
         interface <strong>GetAccountKeyArgs</strong>
     </a>
 </h3>
@@ -1296,7 +1296,7 @@ Defaults to the provider project configuration.
 A collection of arguments for invoking getAccountKey.
 
 <h4 class="pdoc-member-header" id="GetAccountKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1306,7 +1306,7 @@ The name of the service account key. This must have format
 is the email address or unique id of the service account.
 
 <h4 class="pdoc-member-header" id="GetAccountKeyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L62">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L62">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1315,7 +1315,7 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h4 class="pdoc-member-header" id="GetAccountKeyArgs-publicKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L66">property <b>publicKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L66">property <b>publicKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKeyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1323,7 +1323,7 @@ Defaults to the provider project configuration.
 The output format of the public key requested. X509_PEM is the default output format.
 
 <h3 class="pdoc-module-header" id="GetAccountKeyResult" data-link-title="GetAccountKeyResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L72">
         interface <strong>GetAccountKeyResult</strong>
     </a>
 </h3>
@@ -1333,7 +1333,7 @@ The output format of the public key requested. X509_PEM is the default output fo
 A collection of values returned by getAccountKey.
 
 <h4 class="pdoc-member-header" id="GetAccountKeyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L84">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L84">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1341,22 +1341,22 @@ A collection of values returned by getAccountKey.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountKeyResult-keyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L73">property <b>keyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L73">property <b>keyAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyAlgorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountKeyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountKeyResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L75">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L75">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountKeyResult-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L79">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L79">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1364,12 +1364,12 @@ id is the provider-assigned unique ID for this managed resource.
 The public key, base64 encoded
 
 <h4 class="pdoc-member-header" id="GetAccountKeyResult-publicKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccountKey.ts#L80">property <b>publicKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccountKey.ts#L80">property <b>publicKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKeyType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAccountResult" data-link-title="GetAccountResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L58">
         interface <strong>GetAccountResult</strong>
     </a>
 </h3>
@@ -1379,12 +1379,12 @@ The public key, base64 encoded
 A collection of values returned by getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L59">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L59">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L63">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L63">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1392,7 +1392,7 @@ A collection of values returned by getAccount.
 The display name for the service account.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L69">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L69">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1402,7 +1402,7 @@ should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1410,7 +1410,7 @@ that would grant the service account privileges.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1418,12 +1418,12 @@ id is the provider-assigned unique ID for this managed resource.
 The fully-qualified name of the service account.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L74">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L74">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-uniqueId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/getAccount.ts#L78">property <b>uniqueId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/getAccount.ts#L78">property <b>uniqueId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uniqueId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1431,7 +1431,7 @@ The fully-qualified name of the service account.
 The unique id of the service account.
 
 <h3 class="pdoc-module-header" id="IAMBindingArgs" data-link-title="IAMBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L195">
         interface <strong>IAMBindingArgs</strong>
     </a>
 </h3>
@@ -1441,12 +1441,12 @@ The unique id of the service account.
 The set of arguments for constructing a IAMBinding resource.
 
 <h4 class="pdoc-member-header" id="IAMBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L196">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L196">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAMBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L202">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L202">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1456,7 +1456,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IAMBindingArgs-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L206">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L206">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1464,7 +1464,7 @@ The role that should be applied. Only one
 The fully-qualified name of the service account to apply policy to.
 
 <h3 class="pdoc-module-header" id="IAMBindingState" data-link-title="IAMBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L174">
         interface <strong>IAMBindingState</strong>
     </a>
 </h3>
@@ -1474,7 +1474,7 @@ The fully-qualified name of the service account to apply policy to.
 Input properties used for looking up and filtering IAMBinding resources.
 
 <h4 class="pdoc-member-header" id="IAMBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L178">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L178">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1482,12 +1482,12 @@ Input properties used for looking up and filtering IAMBinding resources.
 (Computed) The etag of the service account IAM policy.
 
 <h4 class="pdoc-member-header" id="IAMBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L179">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L179">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAMBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L185">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L185">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1497,7 +1497,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IAMBindingState-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMBinding.ts#L189">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMBinding.ts#L189">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1505,7 +1505,7 @@ The role that should be applied. Only one
 The fully-qualified name of the service account to apply policy to.
 
 <h3 class="pdoc-module-header" id="IAMMemberArgs" data-link-title="IAMMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L195">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L195">
         interface <strong>IAMMemberArgs</strong>
     </a>
 </h3>
@@ -1515,12 +1515,12 @@ The fully-qualified name of the service account to apply policy to.
 The set of arguments for constructing a IAMMember resource.
 
 <h4 class="pdoc-member-header" id="IAMMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L196">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L196">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAMMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L202">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L202">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1530,7 +1530,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IAMMemberArgs-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L206">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L206">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1538,7 +1538,7 @@ The role that should be applied. Only one
 The fully-qualified name of the service account to apply policy to.
 
 <h3 class="pdoc-module-header" id="IAMMemberState" data-link-title="IAMMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L174">
         interface <strong>IAMMemberState</strong>
     </a>
 </h3>
@@ -1548,7 +1548,7 @@ The fully-qualified name of the service account to apply policy to.
 Input properties used for looking up and filtering IAMMember resources.
 
 <h4 class="pdoc-member-header" id="IAMMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L178">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L178">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1556,12 +1556,12 @@ Input properties used for looking up and filtering IAMMember resources.
 (Computed) The etag of the service account IAM policy.
 
 <h4 class="pdoc-member-header" id="IAMMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L179">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L179">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IAMMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L185">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L185">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1571,7 +1571,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="IAMMemberState-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMMember.ts#L189">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMMember.ts#L189">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1579,7 +1579,7 @@ The role that should be applied. Only one
 The fully-qualified name of the service account to apply policy to.
 
 <h3 class="pdoc-module-header" id="IAMPolicyArgs" data-link-title="IAMPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L186">
         interface <strong>IAMPolicyArgs</strong>
     </a>
 </h3>
@@ -1589,7 +1589,7 @@ The fully-qualified name of the service account to apply policy to.
 The set of arguments for constructing a IAMPolicy resource.
 
 <h4 class="pdoc-member-header" id="IAMPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L191">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L191">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1598,7 +1598,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="IAMPolicyArgs-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L195">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L195">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1606,7 +1606,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 The fully-qualified name of the service account to apply policy to.
 
 <h3 class="pdoc-module-header" id="IAMPolicyState" data-link-title="IAMPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L167">
         interface <strong>IAMPolicyState</strong>
     </a>
 </h3>
@@ -1616,7 +1616,7 @@ The fully-qualified name of the service account to apply policy to.
 Input properties used for looking up and filtering IAMPolicy resources.
 
 <h4 class="pdoc-member-header" id="IAMPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L171">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L171">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1624,7 +1624,7 @@ Input properties used for looking up and filtering IAMPolicy resources.
 (Computed) The etag of the service account IAM policy.
 
 <h4 class="pdoc-member-header" id="IAMPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L176">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L176">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1633,7 +1633,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="IAMPolicyState-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/iAMPolicy.ts#L180">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/iAMPolicy.ts#L180">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1641,7 +1641,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 The fully-qualified name of the service account to apply policy to.
 
 <h3 class="pdoc-module-header" id="KeyArgs" data-link-title="KeyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L260">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L260">
         interface <strong>KeyArgs</strong>
     </a>
 </h3>
@@ -1651,7 +1651,7 @@ The fully-qualified name of the service account to apply policy to.
 The set of arguments for constructing a Key resource.
 
 <h4 class="pdoc-member-header" id="KeyArgs-keyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L267">property <b>keyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L267">property <b>keyAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1662,7 +1662,7 @@ Valid values are listed at
 (only used on create)
 
 <h4 class="pdoc-member-header" id="KeyArgs-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L274">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L274">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1673,7 +1673,7 @@ a base64-encoded public key or a `keybase:keybaseusername` string for looking up
 in Vault.
 
 <h4 class="pdoc-member-header" id="KeyArgs-privateKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L278">property <b>privateKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L278">property <b>privateKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1681,7 +1681,7 @@ in Vault.
 The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
 
 <h4 class="pdoc-member-header" id="KeyArgs-publicKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L282">property <b>publicKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L282">property <b>publicKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKeyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1689,7 +1689,7 @@ The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the defaul
 The output format of the public key requested. X509_PEM is the default output format.
 
 <h4 class="pdoc-member-header" id="KeyArgs-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L288">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L288">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1699,7 +1699,7 @@ The Service account id of the Key Pair. This can be a string in the format
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
 
 <h3 class="pdoc-module-header" id="KeyState" data-link-title="KeyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L192">
         interface <strong>KeyState</strong>
     </a>
 </h3>
@@ -1709,7 +1709,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
 Input properties used for looking up and filtering Key resources.
 
 <h4 class="pdoc-member-header" id="KeyState-keyAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L199">property <b>keyAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L199">property <b>keyAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1720,7 +1720,7 @@ Valid values are listed at
 (only used on create)
 
 <h4 class="pdoc-member-header" id="KeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L203">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1728,7 +1728,7 @@ Valid values are listed at
 The name used for this key pair
 
 <h4 class="pdoc-member-header" id="KeyState-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L210">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L210">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1739,7 +1739,7 @@ a base64-encoded public key or a `keybase:keybaseusername` string for looking up
 in Vault.
 
 <h4 class="pdoc-member-header" id="KeyState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L216">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L216">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1749,7 +1749,7 @@ service account keys through the CLI or web console. This is only populated when
 `pgpKey` is provided.
 
 <h4 class="pdoc-member-header" id="KeyState-privateKeyEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L222">property <b>privateKeyEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L222">property <b>privateKeyEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1759,7 +1759,7 @@ encrypted with the given `pgpKey`. This is only populated when creating a new
 key and `pgpKey` is supplied
 
 <h4 class="pdoc-member-header" id="KeyState-privateKeyFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L227">property <b>privateKeyFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L227">property <b>privateKeyFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyFingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1768,7 +1768,7 @@ The MD5 public key fingerprint for the encrypted
 private key. This is only populated when creating a new key and `pgpKey` is supplied
 
 <h4 class="pdoc-member-header" id="KeyState-privateKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L231">property <b>privateKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L231">property <b>privateKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1776,7 +1776,7 @@ private key. This is only populated when creating a new key and `pgpKey` is supp
 The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
 
 <h4 class="pdoc-member-header" id="KeyState-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L235">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L235">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1784,7 +1784,7 @@ The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the defaul
 The public key, base64 encoded
 
 <h4 class="pdoc-member-header" id="KeyState-publicKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L239">property <b>publicKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L239">property <b>publicKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKeyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1792,7 +1792,7 @@ The public key, base64 encoded
 The output format of the public key requested. X509_PEM is the default output format.
 
 <h4 class="pdoc-member-header" id="KeyState-serviceAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L245">property <b>serviceAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L245">property <b>serviceAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1802,7 +1802,7 @@ The Service account id of the Key Pair. This can be a string in the format
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
 
 <h4 class="pdoc-member-header" id="KeyState-validAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L249">property <b>validAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L249">property <b>validAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1810,7 +1810,7 @@ unique id of the service account. If the `{ACCOUNT}` syntax is used, the project
 The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 <h4 class="pdoc-member-header" id="KeyState-validBefore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/aee00383667e05eb41b74c08207661f46555a198/sdk/nodejs/serviceAccount/key.ts#L254">property <b>validBefore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/318fda0ccbc6c880d0d3e349d73a83b9b6a81ff4/sdk/nodejs/serviceAccount/key.ts#L254">property <b>validBefore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validBefore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

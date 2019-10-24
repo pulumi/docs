@@ -631,7 +631,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.Instance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_ip_v4=None</em>, <em class="sig-param">access_ip_v6=None</em>, <em class="sig-param">admin_pass=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">block_devices=None</em>, <em class="sig-param">config_drive=None</em>, <em class="sig-param">flavor_id=None</em>, <em class="sig-param">flavor_name=None</em>, <em class="sig-param">force_delete=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">key_pair=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">personalities=None</em>, <em class="sig-param">power_state=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduler_hints=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">stop_before_destroy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vendor_options=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_ip_v4=None</em>, <em class="sig-param">access_ip_v6=None</em>, <em class="sig-param">admin_pass=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">block_devices=None</em>, <em class="sig-param">config_drive=None</em>, <em class="sig-param">flavor_id=None</em>, <em class="sig-param">flavor_name=None</em>, <em class="sig-param">force_delete=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">key_pair=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">personalities=None</em>, <em class="sig-param">power_state=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduler_hints=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">stop_before_destroy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vendor_options=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 VM instance resource within OpenStack.</p>
 <p>Importing instances can be tricky, since the nova api does not offer all
 information provided at creation time for later retrieval.
@@ -701,6 +701,8 @@ and not the instance.</p></li>
 <li><p><strong>stop_before_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to try stop instance gracefully
 before destroying it, thus giving chance for guest OS daemons to stop correctly.
 If instance doesn’t stop within timeout, it will be destroyed anyway.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the instance. Changing this
+updates the existing instance tags.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance.
 Changing this creates a new server.</p></li>
 <li><p><strong>vendor_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional vendor-specific options.
@@ -769,6 +771,13 @@ Supported options are described below.</p></li>
 <code class="sig-name descname">admin_pass</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.admin_pass" title="Permalink to this definition">¶</a></dt>
 <dd><p>The administrative password to assign to the server.
 Changing this changes the root password on the existing server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.Instance.all_tags">
+<code class="sig-name descname">all_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.all_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The collection of tags assigned on the instance, which have
+been explicitly and implicitly added.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -947,6 +956,13 @@ If instance doesn’t stop within timeout, it will be destroyed anyway.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_openstack.compute.Instance.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of string tags for the instance. Changing this
+updates the existing instance tags.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_openstack.compute.Instance.user_data">
 <code class="sig-name descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.user_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>The user data to provide when launching the instance.
@@ -965,7 +981,7 @@ Supported options are described below.</p>
 
 <dl class="method">
 <dt id="pulumi_openstack.compute.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_ip_v4=None</em>, <em class="sig-param">access_ip_v6=None</em>, <em class="sig-param">admin_pass=None</em>, <em class="sig-param">all_metadata=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">block_devices=None</em>, <em class="sig-param">config_drive=None</em>, <em class="sig-param">flavor_id=None</em>, <em class="sig-param">flavor_name=None</em>, <em class="sig-param">force_delete=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">key_pair=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">personalities=None</em>, <em class="sig-param">power_state=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduler_hints=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">stop_before_destroy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vendor_options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_ip_v4=None</em>, <em class="sig-param">access_ip_v6=None</em>, <em class="sig-param">admin_pass=None</em>, <em class="sig-param">all_metadata=None</em>, <em class="sig-param">all_tags=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">block_devices=None</em>, <em class="sig-param">config_drive=None</em>, <em class="sig-param">flavor_id=None</em>, <em class="sig-param">flavor_name=None</em>, <em class="sig-param">force_delete=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">key_pair=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">personalities=None</em>, <em class="sig-param">power_state=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduler_hints=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">stop_before_destroy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vendor_options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -978,6 +994,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>access_ip_v6</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first detected Fixed IPv6 address.</p></li>
 <li><p><strong>admin_pass</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrative password to assign to the server.
 Changing this changes the root password on the existing server.</p></li>
+<li><p><strong>all_tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of tags assigned on the instance, which have
+been explicitly and implicitly added.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The availability zone in which to create
 the server. Changing this creates a new server.</p></li>
 <li><p><strong>block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Configuration of block devices. The block_device
@@ -1031,6 +1049,8 @@ and not the instance.</p></li>
 <li><p><strong>stop_before_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to try stop instance gracefully
 before destroying it, thus giving chance for guest OS daemons to stop correctly.
 If instance doesn’t stop within timeout, it will be destroyed anyway.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the instance. Changing this
+updates the existing instance tags.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance.
 Changing this creates a new server.</p></li>
 <li><p><strong>vendor_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional vendor-specific options.
@@ -1375,6 +1395,264 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_openstack.compute.Keypair.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Keypair.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.compute.QuotaSetV2">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">QuotaSetV2</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cores=None</em>, <em class="sig-param">fixed_ips=None</em>, <em class="sig-param">floating_ips=None</em>, <em class="sig-param">injected_file_content_bytes=None</em>, <em class="sig-param">injected_file_path_bytes=None</em>, <em class="sig-param">injected_files=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">key_pairs=None</em>, <em class="sig-param">metadata_items=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">ram=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_rules=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">server_group_members=None</em>, <em class="sig-param">server_groups=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V2 compute quotaset resource within OpenStack.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This usually requires admin privileges.</p>
+<dl class="simple">
+<dt><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API </dt><dd><p>in case of delete call.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cores</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for cores.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for fixed IPs.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>floating_ips</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for floating IPs.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>injected_file_content_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for content bytes
+of injected files. Changing this updates the existing quotaset.</p></li>
+<li><p><strong>injected_file_path_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for path bytes of
+injected files. Changing this updates the existing quotaset.</p></li>
+<li><p><strong>injected_files</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for injected files.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for instances.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>key_pairs</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for key pairs.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>metadata_items</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for metadata items.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project to manage quotas.
+Changing this creates a new quotaset.</p></li>
+<li><p><strong>ram</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for RAM.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new quotaset.</p></li>
+<li><p><strong>security_group_rules</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for security group rules.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for security groups.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>server_group_members</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for server groups members.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>server_groups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for server groups.
+Changing this updates the existing quotaset.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.cores">
+<code class="sig-name descname">cores</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.cores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for cores.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.fixed_ips">
+<code class="sig-name descname">fixed_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.fixed_ips" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for fixed IPs.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.floating_ips">
+<code class="sig-name descname">floating_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.floating_ips" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for floating IPs.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.injected_file_content_bytes">
+<code class="sig-name descname">injected_file_content_bytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.injected_file_content_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for content bytes
+of injected files. Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.injected_file_path_bytes">
+<code class="sig-name descname">injected_file_path_bytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.injected_file_path_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for path bytes of
+injected files. Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.injected_files">
+<code class="sig-name descname">injected_files</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.injected_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for injected files.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.instances">
+<code class="sig-name descname">instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for instances.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.key_pairs">
+<code class="sig-name descname">key_pairs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.key_pairs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for key pairs.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.metadata_items">
+<code class="sig-name descname">metadata_items</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.metadata_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for metadata items.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.project_id">
+<code class="sig-name descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the project to manage quotas.
+Changing this creates a new quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.ram">
+<code class="sig-name descname">ram</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.ram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for RAM.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to create the volume. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.security_group_rules">
+<code class="sig-name descname">security_group_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.security_group_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for security group rules.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.security_groups">
+<code class="sig-name descname">security_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.security_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for security groups.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.server_group_members">
+<code class="sig-name descname">server_group_members</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.server_group_members" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for server groups members.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.QuotaSetV2.server_groups">
+<code class="sig-name descname">server_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.server_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for server groups.
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.compute.QuotaSetV2.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cores=None</em>, <em class="sig-param">fixed_ips=None</em>, <em class="sig-param">floating_ips=None</em>, <em class="sig-param">injected_file_content_bytes=None</em>, <em class="sig-param">injected_file_path_bytes=None</em>, <em class="sig-param">injected_files=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">key_pairs=None</em>, <em class="sig-param">metadata_items=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">ram=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_rules=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">server_group_members=None</em>, <em class="sig-param">server_groups=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing QuotaSetV2 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cores</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for cores.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for fixed IPs.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>floating_ips</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for floating IPs.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>injected_file_content_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for content bytes
+of injected files. Changing this updates the existing quotaset.</p></li>
+<li><p><strong>injected_file_path_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for path bytes of
+injected files. Changing this updates the existing quotaset.</p></li>
+<li><p><strong>injected_files</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for injected files.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for instances.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>key_pairs</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for key pairs.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>metadata_items</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for metadata items.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project to manage quotas.
+Changing this creates a new quotaset.</p></li>
+<li><p><strong>ram</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for RAM.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new quotaset.</p></li>
+<li><p><strong>security_group_rules</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for security group rules.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for security groups.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>server_group_members</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for server groups members.
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>server_groups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for server groups.
+Changing this updates the existing quotaset.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.compute.QuotaSetV2.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.compute.QuotaSetV2.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.QuotaSetV2.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
