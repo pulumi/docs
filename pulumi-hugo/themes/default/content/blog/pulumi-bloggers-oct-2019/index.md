@@ -17,8 +17,10 @@ We are always excited when people join the Infrastructure as Code community and 
 
 [Jon Hathway](https://twitter.com/hatechllc) of HATech published a white paper comparing Pulumi to Terraform and explained why HATech is evaluating Pulumi.
 
-> Take for example the teams that are trying to collaborate and drive reliably deployed and maintained product innovations. Is it better to have languages that support each individual team’s needs, or is it better to have one language to support the entire workflow/pipeline? </BR>
-> How about this thought experiment: Imagine your developers only spoke English, your QA team only spoke French, and the operations team only spoke Spanish? It would be carnage!</BR>
+> Take for example the teams that are trying to collaborate and drive reliably deployed and maintained product innovations. Is it better to have languages that support each individual team’s needs, or is it better to have one language to support the entire workflow/pipeline?
+>
+> How about this thought experiment: Imagine your developers only spoke English, your QA team only spoke French, and the operations team only spoke Spanish? It would be carnage!
+>
 >You’d never hire that way. So why, when choosing DevOps tools, do people find it acceptable to have different languages, DSLs that only key individuals understand?”
 
 Jon provides an in-depth review of Pulumi and includes the [code samples](https://github.com/hatech/demo-pulumi-python) he used on GitHub. Download the white paper from [HATech](https://hatech.io/pulumi-v-terraform-whitepaper-lp/).
