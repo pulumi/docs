@@ -156,7 +156,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of this monitor.</p></li>
 <li><p><strong>sla_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The base threshold for the SLA report.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor status (i.e. ENABLED, MUTED, DISABLED)</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor type.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).</p></li>
 <li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI for the monitor to hit.</p></li>
 <li><p><strong>validation_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The string to validate against in the response.</p></li>
 <li><p><strong>verify_ssl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Verify SSL.</p></li>
@@ -205,7 +205,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_newrelic.synthetics.Monitor.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.synthetics.Monitor.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The monitor type.</p>
+<dd><p>The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -243,7 +243,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of this monitor.</p></li>
 <li><p><strong>sla_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The base threshold for the SLA report.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor status (i.e. ENABLED, MUTED, DISABLED)</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor type.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).</p></li>
 <li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI for the monitor to hit.</p></li>
 <li><p><strong>validation_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The string to validate against in the response.</p></li>
 <li><p><strong>verify_ssl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Verify SSL.</p></li>
