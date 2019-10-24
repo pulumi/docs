@@ -162,7 +162,7 @@ $ kubectl get pods -n amazon-cloudwatch
 Verify the fluentd setup in the [CloudWatch console][aws-cw-console] by
 navigating to the logs in your region, and looking for the following groups.
 
-```bash
+```
 /aws/containerinsights/Cluster_Name/application
 /aws/containerinsights/Cluster_Name/host
 /aws/containerinsights/Cluster_Name/dataplane
@@ -376,7 +376,7 @@ $ kubectl get pods -n amazon-cloudwatch
 Verify the metrics setup in the [CloudWatch console][aws-cw-console] by
 navigating to Logs in your region, and looking for the following group.
 
-```bash
+```
 /aws/containerinsights/Cluster_Name/performance
 ```
 
