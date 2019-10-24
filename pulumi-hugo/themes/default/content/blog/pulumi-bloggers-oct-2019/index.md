@@ -7,7 +7,7 @@ meta_desc: "Continuous delivery of Pulumi apps with Octopus Deploy "
 date: "2019-10-24"
 ---
 
-We are always excited when people join the Infrastructure as Code community and write about their experiences using Pulumi. Here are four great posts ranging from an evaluation, a CI/CD tutorial, building a VM and Pulumi internals.
+We are always excited when people join the Infrastructure as Code community and write about their experiences. Here are four new posts that we think are great!
 
 ## CircleCI on Google Kubernetes Engine (GKE)
 
