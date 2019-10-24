@@ -31,13 +31,13 @@ The self-hosted version of the Pulumi Service also offers some features that are
 
 ## Deployment Topology
 
-One of the benefits of choosing to self-host the Pulumi Service on your organization's infrastructure is that you can either have the Pulumi Service be accessible over the internet or have it completely sealed off from it.
+Pulumi can be installed in almost any environment. The self-hosted install can be integrated with other on-premise services such as GitHub Enterprise, SAML SSO providers as well as making Pulumi highly-available within your organization.
 
-Here are some examples of typical deployment topologies.
+Here are some examples of deployment topologies.
 
 {{< figure src="/images/docs/guides/self-hosted/on-prem-internet-config.png" caption="Internet Accessible Deployment" >}}
 
-{{< figure src="/images/docs/guides/self-hosted/on-prem-intranet-config.png" caption="Intranet-Only Accessible Deployment" >}}
+{{< figure src="/images/docs/guides/self-hosted/on-prem-intranet-config.png" caption="Intranet Deployment" >}}
 
 ## Components
 
