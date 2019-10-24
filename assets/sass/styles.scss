@@ -29,7 +29,12 @@
 @import "tables";
 @import "toc";
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @apply font-display text-gray-700 mb-2;
 
     &:not(:first-child) {
@@ -71,6 +76,16 @@ p {
 
 body {
     @apply font-body text-gray-900;
+
+    figure {
+        figcaption {
+            clear: left;
+            margin: .75em 0;
+            text-align: center;
+            font-style: italic;
+            line-height: 1.5em;
+        }
+    }
 }
 
 .nav-main {
@@ -82,7 +97,10 @@ body {
 main {
     @apply text-gray-700;
 
-    p, li, blockquote, table {
+    p,
+    li,
+    blockquote,
+    table {
 
         a {
             @apply text-blue-600 break-words;
@@ -93,7 +111,8 @@ main {
         }
     }
 
-    ul, ol {
+    ul,
+    ol {
         @apply pl-5;
     }
 
@@ -131,7 +150,7 @@ main {
 }
 
 .github-widget {
-    > span {
+    >span {
         @apply flex;
     }
 }

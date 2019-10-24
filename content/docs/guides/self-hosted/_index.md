@@ -1,0 +1,80 @@
+---
+title: Self-Hosted Pulumi Service
+menu:
+    userguides:
+        parent: guides
+        identifier: self_hosted
+        weight: 4
+---
+
+This guide walks you through the components that are required to get the Pulumi Service running your own environment. A self-hosted Pulumi Service is a great way to securely use Pulumi within your organization, and still get all of the benefits that Pulumi has to offer.
+
+<!--more-->
+
+The Pulumi Service has two services that need to be hosted for the purposes of remote state management and a management UI for users.
+
+To store user data, and the state for your [stacks](https://www.pulumi.com/docs/intro/concepts/stack/), the following components are also needed:
+
+* MySQL 5.6 (higher versions may work, but untested) DB server with at least 20GB storage space for data
+* Minimum 50GB SSD for object storage (gzipped, JSON files representing state for your stacks)
+
+**Note**: You are responsible for the safe backup and storage of the object storage volume, as well as your DB’s data volume.
+
+## Deployment Topology
+
+One of the benefits of choosing to self-host the Pulumi Service on your organization's infrastructure is that you can either have the Pulumi Service be accessible over the internet or have it completely sealed off from it.
+
+Here's a general overview of the two deployment topologies.
+
+{{< figure src="/images/docs/guides/self-hosted/on-prem-internet-config.png" caption="Internet Accessible Deployment" >}}
+
+{{< figure src="/images/docs/guides/self-hosted/on-prem-intranet-config.png" caption="Intranet-Only Accessible Deployment" >}}
+
+## Components
+
+| Component | Repository |
+| --------- | ---------- |
+| [Service]({{< relref "service" >}}) | https://hub.docker.com/r/pulumi/service/ |
+| [Console]({{< relref "console" >}}) |	https://hub.docker.com/r/pulumi/console/ |
+| Migrations | https://hub.docker.com/r/pulumi/migrations/ |
+
+**Note**: Each of these containers are private and can be granted access to when you contact us at [sales@pulumi.com](mailto:sales@pulumi.com).
+
+## Quickstart
+
+The above Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.
+
+**Note**: docker-compose is not required to run these containers. We recommend that you choose a container orchestrator with which your IT team has experience.
+
+In addition to the environment variables that each container exposes, the following can be set when using either of the quickstart solutions below. These are used by the `run-ee.sh` script provided to you as part of the self-evaluation package. If any of these variables are not set when you run `run-ee.sh`, the default values will be used.
+
+`PULUMI_DATA_PATH`: The persistent path where the service should store the checkpoint objects. Default uses `/tmp/pulumi-ee/data`.
+
+`PULUMI_LOCAL_DATABASE_NAME`: The database instance’s hostname. Default is `pulumi-db`.
+
+`PULUMI_LOCAL_DATABASE_PORT`: The database instance’s port. Default is `3306`.
+
+For example, `PULUMI_DATA_PATH=/my/persistent/dir LOCAL_DATABASE_NAME=my-db LOCAL_DATABASE_PORT=3306 ./scripts/run-ee.sh`.
+
+Regardless of the quickstart option you choose below, `run-ee.sh` will be the way to start the necessary containers. There will be at most 3 containers (including the DB) for the system to be considered complete.
+
+Just see this quickstart video recorded by our CTO, Luke Hoban. You, too, can get started with Pulumi very quickly.
+
+<!--INSERT YOUTUBE LINK-->
+
+### Quickstart Option #1 - Using the all-in-one approach
+
+If you would like to use Pulumi’s all-in-one solution, you just need to run the run-ee.sh like this: `run-ee.sh -f ./all-in-one/docker-compose.yml`. This will start all of the necessary components using working defaults, including a DB container that is migrated using our DB scripts.
+
+**Note**: Values for the environment variables used by the each of the containers in this approach should be set in the `./all-in-one/docker-compose.yml` file.
+
+### Quickstart Option #2 - Provide your own Database
+
+The service is tested against a MySQL version 5.6 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`. If your DB instance uses a different port, be sure to update 
+
+**Note**: You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance. Your Pulumi sales contact should be able to provide you with this.
+
+## Licensing
+
+In order to run the Pulumi Service in your own environment, you will need a license key. Please contact [sales@pulumi.com](mailto:sales@pulumi.com) to get started. You can get started with evaluating Pulumi for your organization within minutes.
+
