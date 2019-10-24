@@ -16,7 +16,10 @@ policy enforcement and service meshes.
 
 ## Overview
 
-TODO
+We'll explore how to setup:
+
+  * [Logging](#logging)
+  * [Monitoring](#monitoring)
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -74,7 +77,7 @@ $ pulumi stack output clusterName
 
 ### Worker Nodes and Pods
 
-### Configure Worker Node IAM Policy
+#### Configure Worker Node IAM Policy
 
 To work with [Cloudwatch Logs][aws-cw-logs], the identities created in
 [Identity][crosswalk-k8s-identity] for each worker node group must have the
@@ -171,6 +174,12 @@ The cluster name can be retrieved from the [cluster stack][crosswalk-control-pla
 $ pulumi stack output clusterName
 ```
 
+Clean Up.
+
+```bash
+$ kubectl delete ns amazon-cloudwatch
+```
+
 [crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 [k8s-logs-samples]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-logs.html
@@ -234,7 +243,7 @@ const fluentdCloudwatch = new k8s.helm.v2.Chart(name,
 Validate the deployment.
 
 ```bash
-$ kubectl get pods -n cluster-svcs-00000000
+$ kubectl get pods -n `pulumi stack output clusterSvcsNamespaceName`
 ```
 
 Verify the fluentd setup in the [CloudWatch console][aws-cw-console] by
@@ -318,21 +327,78 @@ GCP pulumi-k8s TODO
 <div class="mt">
 {{% md %}}
 
-TODO
+Using the YAML manifests in the [AWS samples][aws-metrics-samples], we can provision the CloudWatch Agent
+to run as a [DaemonSet][k8s-ds] and send metrics to [CloudWatch][aws-cw].
 
-{{< k8s-language nokx >}}
+[aws-cw]: https://aws.amazon.com/cloudwatch
+[k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+[aws-metrics-samples]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-metrics.html
+
+{{< k8s-language yaml-only >}}
+
+#### Install CloudWatch Agent
 
 <div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
 {{% md %}}
-AWS YAML TODO
-{{% /md %}}
-</div>
 
-<div class="k8s-language-prologue-pulumi-k8s"></div>
-<div class="mt">
-{{% md %}}
-AWS pulumi-k8s TODO
+Create a Namespace.
+
+```bash
+$ kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/master/k8s-yaml-templates/cloudwatch-namespace.yaml
+
+```
+
+Create a ServiceAccount.
+
+```bash
+$ kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/master/k8s-yaml-templates/cwagent-kubernetes-monitoring/cwagent-serviceaccount.yaml
+```
+
+Create a ConfigMap.
+
+```bash
+$ curl -s https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/master/k8s-yaml-templates/cwagent-kubernetes-monitoring/cwagent-configmap.yaml | sed -e "s#{{cluster_name}}#`pulumi stack output clusterName`#g" | kubectl apply -f -
+```
+
+Deploy the DaemonSet.
+
+```bash
+$ kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/master/k8s-yaml-templates/cwagent-kubernetes-monitoring/cwagent-daemonset.yaml
+```
+
+Validate the deployment.
+
+```bash
+$ kubectl get pods -n amazon-cloudwatch
+```
+
+Verify the metrics setup in the [CloudWatch console][aws-cw-console] by
+navigating to Logs in your region, and looking for the following group.
+
+```bash
+/aws/containerinsights/Cluster_Name/performance
+```
+
+The cluster name can be retrieved from the [cluster stack][crosswalk-control-plane] output.
+
+```bash
+$ pulumi stack output clusterName
+```
+
+You can also examine the stats in the [CloudWatch console][aws-cw-console] by
+navigating to Metrics in your region, and looking for the ContainerInsights for
+your cluster by its name.
+
+Clean Up.
+
+```bash
+$ kubectl delete ns amazon-cloudwatch
+```
+
+[crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
+[aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
+
 {{% /md %}}
 </div>
 
