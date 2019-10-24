@@ -2724,6 +2724,209 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_openstack.networking.QuotaV2">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">QuotaV2</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">floatingip=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">rbac_policy=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">router=None</em>, <em class="sig-param">security_group=None</em>, <em class="sig-param">security_group_rule=None</em>, <em class="sig-param">subnet=None</em>, <em class="sig-param">subnetpool=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V2 networking quota resource within OpenStack.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This usually requires admin privileges.</p>
+<dl class="simple">
+<dt><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API </dt><dd><p>in case of delete call.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>floatingip</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for floating IPs. Changing this updates the
+existing quota.</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for networks. Changing this updates the
+existing quota.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for ports. Changing this updates the
+existing quota.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project to manage quota. Changing this
+creates new quota.</p></li>
+<li><p><strong>rbac_policy</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for RBAC policies.
+Changing this updates the existing quota.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the quota. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates new quota.</p></li>
+<li><p><strong>router</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for routers. Changing this updates the
+existing quota.</p></li>
+<li><p><strong>security_group</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for security groups. Changing
+this updates the existing quota.</p></li>
+<li><p><strong>security_group_rule</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for security group rules.
+Changing this updates the existing quota.</p></li>
+<li><p><strong>subnet</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for subnets. Changing
+this updates the existing quota.</p></li>
+<li><p><strong>subnetpool</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for subnetpools.
+Changing this updates the existing quota.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.floatingip">
+<code class="sig-name descname">floatingip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.floatingip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for floating IPs. Changing this updates the
+existing quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.network">
+<code class="sig-name descname">network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for networks. Changing this updates the
+existing quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.port">
+<code class="sig-name descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for ports. Changing this updates the
+existing quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.project_id">
+<code class="sig-name descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the project to manage quota. Changing this
+creates new quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.rbac_policy">
+<code class="sig-name descname">rbac_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.rbac_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for RBAC policies.
+Changing this updates the existing quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to create the quota. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates new quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.router">
+<code class="sig-name descname">router</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.router" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for routers. Changing this updates the
+existing quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.security_group">
+<code class="sig-name descname">security_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.security_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for security groups. Changing
+this updates the existing quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.security_group_rule">
+<code class="sig-name descname">security_group_rule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.security_group_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for security group rules.
+Changing this updates the existing quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.subnet">
+<code class="sig-name descname">subnet</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.subnet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for subnets. Changing
+this updates the existing quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.QuotaV2.subnetpool">
+<code class="sig-name descname">subnetpool</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.subnetpool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for subnetpools.
+Changing this updates the existing quota.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QuotaV2.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">floatingip=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">rbac_policy=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">router=None</em>, <em class="sig-param">security_group=None</em>, <em class="sig-param">security_group_rule=None</em>, <em class="sig-param">subnet=None</em>, <em class="sig-param">subnetpool=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing QuotaV2 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>floatingip</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for floating IPs. Changing this updates the
+existing quota.</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for networks. Changing this updates the
+existing quota.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for ports. Changing this updates the
+existing quota.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project to manage quota. Changing this
+creates new quota.</p></li>
+<li><p><strong>rbac_policy</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for RBAC policies.
+Changing this updates the existing quota.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the quota. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates new quota.</p></li>
+<li><p><strong>router</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for routers. Changing this updates the
+existing quota.</p></li>
+<li><p><strong>security_group</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for security groups. Changing
+this updates the existing quota.</p></li>
+<li><p><strong>security_group_rule</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for security group rules.
+Changing this updates the existing quota.</p></li>
+<li><p><strong>subnet</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for subnets. Changing
+this updates the existing quota.</p></li>
+<li><p><strong>subnetpool</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for subnetpools.
+Changing this updates the existing quota.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QuotaV2.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.networking.QuotaV2.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.QuotaV2.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.networking.RbacPolicyV2">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.networking.</code><code class="sig-name descname">RbacPolicyV2</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">object_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">target_tenant=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RbacPolicyV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>The RBAC policy resource contains functionality for working with Neutron RBAC

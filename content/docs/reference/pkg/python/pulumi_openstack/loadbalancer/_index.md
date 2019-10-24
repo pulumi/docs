@@ -409,8 +409,9 @@ for more information.</p></li>
 Listener. Changing this creates a new Listener.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the Listener. Does not have
 to be unique.</p></li>
-<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol - can either be TCP, HTTP, HTTPS or TERMINATED_HTTPS.
-Changing this creates a new Listener.</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol - can either be TCP, HTTP, HTTPS,
+TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
+new Listener.</p></li>
 <li><p><strong>protocol_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which to listen for client traffic.
 Changing this creates a new Listener.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
@@ -490,8 +491,9 @@ to be unique.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.Listener.protocol">
 <code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Listener.protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>The protocol - can either be TCP, HTTP, HTTPS or TERMINATED_HTTPS.
-Changing this creates a new Listener.</p>
+<dd><p>The protocol - can either be TCP, HTTP, HTTPS,
+TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
+new Listener.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -580,8 +582,9 @@ for more information.</p>
 Listener. Changing this creates a new Listener.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the Listener. Does not have
 to be unique.</p></li>
-<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol - can either be TCP, HTTP, HTTPS or TERMINATED_HTTPS.
-Changing this creates a new Listener.</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol - can either be TCP, HTTP, HTTPS,
+TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
+new Listener.</p></li>
 <li><p><strong>protocol_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which to listen for client traffic.
 Changing this creates a new Listener.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
@@ -649,7 +652,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.loadbalancer.LoadBalancer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">loadbalancer_provider=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">vip_address=None</em>, <em class="sig-param">vip_subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.loadbalancer.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">flavor_id=None</em>, <em class="sig-param">loadbalancer_provider=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">vip_address=None</em>, <em class="sig-param">vip_subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 loadbalancer resource within OpenStack.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -659,7 +662,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the Loadbalancer.</p></li>
-<li><p><strong>flavor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of a flavor. Changing this creates a new
+<li><p><strong>flavor_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of a flavor. Changing this creates a new
 loadbalancer.</p></li>
 <li><p><strong>loadbalancer_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the provider. Changing this
 creates a new loadbalancer.</p></li>
@@ -701,8 +704,8 @@ A valid value is true (UP) or false (DOWN).</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_openstack.loadbalancer.LoadBalancer.flavor">
-<code class="sig-name descname">flavor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.flavor" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_openstack.loadbalancer.LoadBalancer.flavor_id">
+<code class="sig-name descname">flavor_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.flavor_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The UUID of a flavor. Changing this creates a new
 loadbalancer.</p>
 </dd></dl>
@@ -770,7 +773,7 @@ are shared).  Changing this creates a new loadbalancer.</p>
 
 <dl class="method">
 <dt id="pulumi_openstack.loadbalancer.LoadBalancer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">loadbalancer_provider=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">vip_address=None</em>, <em class="sig-param">vip_port_id=None</em>, <em class="sig-param">vip_subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">flavor_id=None</em>, <em class="sig-param">loadbalancer_provider=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">vip_address=None</em>, <em class="sig-param">vip_port_id=None</em>, <em class="sig-param">vip_subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.loadbalancer.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LoadBalancer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -782,7 +785,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the Loadbalancer.</p></li>
-<li><p><strong>flavor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of a flavor. Changing this creates a new
+<li><p><strong>flavor_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of a flavor. Changing this creates a new
 loadbalancer.</p></li>
 <li><p><strong>loadbalancer_provider</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the provider. Changing this
 creates a new loadbalancer.</p></li>
@@ -1211,9 +1214,9 @@ other than their own. Changing this creates a new monitor.</p></li>
 <li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of probe, which is PING, TCP, HTTP, or HTTPS,
-that is sent by the load balancer to verify the member state. Changing this
-creates a new monitor.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of probe, which is PING, TCP, HTTP, HTTPS,
+TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
+balancer to verify the member state. Changing this creates a new monitor.</p></li>
 <li><p><strong>url_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.</p></li>
 </ul>
@@ -1299,9 +1302,9 @@ value.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.Monitor.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Monitor.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of probe, which is PING, TCP, HTTP, or HTTPS,
-that is sent by the load balancer to verify the member state. Changing this
-creates a new monitor.</p>
+<dd><p>The type of probe, which is PING, TCP, HTTP, HTTPS,
+TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
+balancer to verify the member state. Changing this creates a new monitor.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1346,9 +1349,9 @@ other than their own. Changing this creates a new monitor.</p></li>
 <li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of probe, which is PING, TCP, HTTP, or HTTPS,
-that is sent by the load balancer to verify the member state. Changing this
-creates a new monitor.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of probe, which is PING, TCP, HTTP, HTTPS,
+TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
+balancer to verify the member state. Changing this creates a new monitor.</p></li>
 <li><p><strong>url_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.</p></li>
 </ul>
@@ -1634,7 +1637,8 @@ Note:  One of LoadbalancerID or ListenerID must be provided.</p></li>
 <li><p><strong>persistence</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.</p></li>
-<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – See Argument Reference above.</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol - can either be TCP, HTTP, HTTPS, PROXY
+or UDP (supported only in Octavia). Changing this creates a new pool.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
@@ -1715,7 +1719,8 @@ supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.</p></li>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.Pool.protocol">
 <code class="sig-name descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.Pool.protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>See Argument Reference above.</p>
+<dd><p>The protocol - can either be TCP, HTTP, HTTPS, PROXY
+or UDP (supported only in Octavia). Changing this creates a new pool.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1762,7 +1767,8 @@ Note:  One of LoadbalancerID or ListenerID must be provided.</p></li>
 <li><p><strong>persistence</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Omit this field to prevent session persistence.  Indicates
 whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.</p></li>
-<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – See Argument Reference above.</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol - can either be TCP, HTTP, HTTPS, PROXY
+or UDP (supported only in Octavia). Changing this creates a new pool.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
