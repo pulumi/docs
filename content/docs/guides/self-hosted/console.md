@@ -17,7 +17,7 @@ In order for the CLI to persist the state of a particular stack, a user must log
 
 The Console service depends on the API service. It relies on the API service for authentication callbacks. Depending on the type of authentication mechanism you choose for your users, the services in the Console container may need to communicate with the API container.
 
-## Prerquisites
+## Prerequisites
 
 * Provide a server or virtual machine to install and run the Pulumi components (see Minimum System Requirements below).
 
@@ -52,21 +52,21 @@ The following are the core environment variables that are required at a minimum.
 | ------------- | ----------- |
 | RECAPTCHA_SITE_KEY | Use for password reset requests by users. Create a new reCaptcha v2 [here](https://www.google.com/recaptcha/admin). |
 
-### GitHub OAuth
+#### GitHub OAuth
 | Variable Name | Description |
 | ------------- | ----------- |
 | GITHUB_OAUTH_ID | GitHub OAuth app client ID. Used for GitHub OAuth signins. Create a new GitHub OAuth app [here](https://github.com/settings/applications/new). |
 | GITHUB_OAUTH_SECRET | GitHub OAuth app client secret. See above. |
 | GITHUB_OAUTH_ENDPOINT | |
 
-### GitLab OAuth
+#### GitLab OAuth
 | Variable Name | Description |
 | ------------- | ----------- |
 | GITLAB_OAUTH_ID | GitLab OAuth app client ID. Used for GitLab OAuth signins. Create a new GitLab OAuth app [here](https://gitlab.com/profile/applications). |
 | GITLAB_OAUTH_SECRET | GitLab OAuth app client secret. See above. |
 | GITLAB_OAUTH_ENDPOINT | |
 
-### Bitbucket OAuth
+#### Bitbucket OAuth
 | Variable Name | Description |
 | ------------- | ----------- |
 | BITBUCKET_OAUTH_ID| Atlassian Bitbucket OAuth consumer client ID. Used for Bitbucket OAuth signins. |

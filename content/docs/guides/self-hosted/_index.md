@@ -5,11 +5,16 @@ menu:
         parent: guides
         identifier: self_hosted
         weight: 4
+meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi within your organization's infrastructure. This document walks you through the components and their configuration.
 ---
 
-This guide walks you through the components that are required to get the Pulumi Service running your own environment. A self-hosted Pulumi Service is a great way to securely use Pulumi within your organization, and still get all of the benefits that Pulumi has to offer.
+<div class="note note-info" role="alert">
+    <p>
+        <strong>Licensing</strong> In order to run the Pulumi Service in your own environment, you will need a license key. Please contact <a href="mailto:sales@pulumi.com">sales@pulumi.com</a> to get started. Self-hosting is available only to <a href="https://www.pulumi.com/pricing"><strong>Enterprise Edition</strong></a> customers.
+    </p>
+</div>
 
-<!--more-->
+This guide walks you through the components that are required to get the Pulumi Service running your own environment. A self-hosted Pulumi Service is a great way to securely use Pulumi within your organization, and still get all of the benefits that Pulumi has to offer.
 
 The Pulumi Service has two services that need to be hosted for the purposes of remote state management and a management UI for users.
 
@@ -20,11 +25,15 @@ To store user data, and the state for your [stacks](https://www.pulumi.com/docs/
 
 **Note**: You are responsible for the safe backup and storage of the object storage volume, as well as your DB’s data volume.
 
+## Self-Hosted vs. Managed Pulumi Service
+
+The self-hosted version of the Pulumi Service also offers some features that are not available with the managed version (i.e. app.pulumi.com). The self-hosted installation of Pulumi provides more control, as well as the security of having a dedicated instance for your organization. Contact us for a full list of all of the benefits of a self-hosted installation.
+
 ## Deployment Topology
 
 One of the benefits of choosing to self-host the Pulumi Service on your organization's infrastructure is that you can either have the Pulumi Service be accessible over the internet or have it completely sealed off from it.
 
-Here's a general overview of the two deployment topologies.
+Here are some examples of typical deployment topologies.
 
 {{< figure src="/images/docs/guides/self-hosted/on-prem-internet-config.png" caption="Internet Accessible Deployment" >}}
 
@@ -38,7 +47,7 @@ Here's a general overview of the two deployment topologies.
 | [Console]({{< relref "console" >}}) |	https://hub.docker.com/r/pulumi/console/ |
 | Migrations | https://hub.docker.com/r/pulumi/migrations/ |
 
-**Note**: Each of these containers are private and can be granted access to when you contact us at [sales@pulumi.com](mailto:sales@pulumi.com).
+**Note**: The above container image repositories are private.
 
 ## Quickstart
 
@@ -73,8 +82,3 @@ If you would like to use Pulumi’s all-in-one solution, you just need to run th
 The service is tested against a MySQL version 5.6 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`. If your DB instance uses a different port, be sure to update 
 
 **Note**: You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance. Your Pulumi sales contact should be able to provide you with this.
-
-## Licensing
-
-In order to run the Pulumi Service in your own environment, you will need a license key. Please contact [sales@pulumi.com](mailto:sales@pulumi.com) to get started. You can get started with evaluating Pulumi for your organization within minutes.
-

@@ -11,7 +11,7 @@ The API Service provides the necessary APIs for both the CLI and the Console.
 
 <!--more-->
 
-## Prerquisites
+## Prerequisites
 
 * Provide a server or virtual machine to install and run the Pulumi components (see Minimum System Requirements below).
 * Provide a persistent volume for the service to store checkpoint objects.
