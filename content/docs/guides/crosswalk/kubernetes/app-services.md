@@ -9,6 +9,7 @@ menu:
 
 {{< cloudchoose >}}
 
+
 TODO
 
 <div class="cloud-prologue-aws"></div>
@@ -65,7 +66,7 @@ AWS YAML TODO
 {{% /md %}}
 </div>
 
-<div class="k8s-language-prologue-pulumi-k8s"></div>
+<div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
 AWS pulumi-k8s TODO
@@ -88,7 +89,7 @@ AZURE YAML TODO
 {{% /md %}}
 </div>
 
-<div class="k8s-language-prologue-pulumi-k8s"></div>
+<div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
 AZURE pulumi-k8s TODO
@@ -111,7 +112,7 @@ GCP YAML TODO
 {{% /md %}}
 </div>
 
-<div class="k8s-language-prologue-pulumi-k8s"></div>
+<div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
 GCP pulumi-k8s TODO
@@ -136,7 +137,7 @@ YAML TODO
 {{% /md %}}
 </div>
 
-<div class="k8s-language-prologue-pulumi-k8s"></div>
+<div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
 pulumi-k8s TODO
@@ -156,7 +157,7 @@ YAML TODO
 {{% /md %}}
 </div>
 
-<div class="k8s-language-prologue-pulumi-k8s"></div>
+<div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
 pulumi-k8s TODO
