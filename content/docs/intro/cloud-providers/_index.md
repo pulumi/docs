@@ -14,6 +14,7 @@ aliases: ["/docs/reference/clouds/"]
 
 * [AWS]({{< relref "./aws" >}})
 * [Azure]({{< relref "./azure" >}})
+* [DigitalOcean]({{< relref "./digitalocean" >}})
 * [Google Cloud]({{< relref "./gcp" >}})
 * [Kubernetes]({{< relref "./kubernetes" >}})
 * [OpenStack]({{< relref "./openstack" >}})
