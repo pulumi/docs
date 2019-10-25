@@ -39,4 +39,4 @@ For the francophones in our community, Thomas Schersach has written a three-part
 
 ## Bloggers Welcome
 
-If you write about your experience using Pulumi, let us know by tagging us on [Twitter](http://twitter.com/pulumicorp).
+If you write about your experience using Pulumi, let us know by tagging us on [Twitter](https://twitter.com/pulumicorp).
