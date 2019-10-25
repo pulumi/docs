@@ -112,9 +112,9 @@ include monitoring, policies, and service meshes.
 Configure any Kubernetes app-scoped services that will be shared
 by a subset or all users with deployment permissions.
 
-App services tend to include ingress controllers, DNS managers, TLS
-certificate managers, app pipelines, and managed datastores (e.g. [Aurora][aurora],
-[Cloud SQL][cloud-sql], [SQS][aws-sqs], and [CosmosDB][cosmos-db]).
+App services tend to include managed datastores (e.g. [RDS][aws-rds],
+[Cloud SQL][cloud-sql], and [CosmosDB][cosmos-db]), ingress controllers,
+DNS managers, TLS certificate managers, and app pipelines.
 
 ### 6. Apps
 
@@ -130,7 +130,7 @@ Deploy applications and workloads into the cluster.
 [eks]: https://aws.amazon.com/eks/
 [gke]: https://cloud.google.com/kubernetes-engine/
 [aks]: https://docs.microsoft.com/en-us/azure/aks/
-[aurora]: https://aws.amazon.com/rds/aurora/
+[aws-rds]: https://aws.amazon.com/rds
 [cloud-sql]: https://cloud.google.com/sql/
 [cosmos-db]: https://azure.microsoft.com/en-us/services/cosmos-db/
 [k8s-get-started]: {{< relref "/docs/get-started/kubernetes" >}}
