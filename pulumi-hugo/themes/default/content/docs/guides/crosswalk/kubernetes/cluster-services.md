@@ -334,13 +334,7 @@ to run as a [DaemonSet][k8s-ds] and send metrics to [CloudWatch][aws-cw].
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 [aws-metrics-samples]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-metrics.html
 
-{{< k8s-language yaml-only >}}
-
 #### Install CloudWatch Agent
-
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
 
 Create a Namespace.
 
@@ -398,9 +392,6 @@ $ kubectl delete ns amazon-cloudwatch
 
 [crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
-
-{{% /md %}}
-</div>
 
 {{% /md %}}
 </div>
