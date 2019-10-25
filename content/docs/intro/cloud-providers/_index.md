@@ -17,6 +17,7 @@ aliases: ["/docs/reference/clouds/"]
 * [DigitalOcean]({{< relref "./digitalocean" >}})
 * [Google Cloud]({{< relref "./gcp" >}})
 * [Kubernetes]({{< relref "./kubernetes" >}})
+* [Linode]({{< relref "./linode" >}})
 * [OpenStack]({{< relref "./openstack" >}})
 * [Packet.net]({{< relref "./packet" >}})
 
