@@ -98,7 +98,7 @@ const db = new aws.rds.Instance("postgresdb", {
 });
 
 // Create a Secret from the DB connection information.
-const eksProvider = new k8s.Provider("eks-provider", {kubeconfig: config.kubeconfig.apply(JSON.stringify)});
+const provider = new k8s.Provider("eks-provider", {kubeconfig: config.kubeconfig.apply(JSON.stringify)});
 const dbConn = new k8s.core.v1.Secret("postgres-db-conn",
     {
         data: {
@@ -108,7 +108,7 @@ const dbConn = new k8s.core.v1.Secret("postgres-db-conn",
             password: postgresDbPassword.apply(pass => Buffer.from(pass).toString("base64")),
         },
     },
-    { provider: eksProvider },
+    {provider: provider},
 );
 ```
 
@@ -141,7 +141,7 @@ const cacheConn = new k8s.core.v1.ConfigMap("postgres-db-conn",
             host: cacheCluster.cacheNodes[0].address.apply(addr => Buffer.from(addr).toString("base64")),
         },
     },
-    { provider: eksProvider },
+    {provider: provider},
 );
 ```
 
@@ -200,42 +200,262 @@ GCP pulumi-k8s TODO
 
 ## General App Services
 
-### Ingress Management
+### NGINX Ingress Controller
 
-TODO
+The [NGINX Ingress Controller][nginx] is a custom Kubernetes [Controller][k8s-controller].
+It manages [L7 network ingress][nginx-l7] / [north-south traffic][ns-traffic]
+between external clients, and the servers in the cluster's apps.
 
-{{< k8s-language nokx >}}
+[nginx]: https://github.com/kubernetes/ingress-nginx
+[k8s-controller]: https://kubernetes.io/docs/concepts/architecture/controller/
+[nginx-l7]: https://www.nginx.com/resources/glossary/layer-7-load-balancing/
+[ns-traffic]: https://networkengineering.stackexchange.com/a/18877
 
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
-YAML TODO
-{{% /md %}}
-</div>
-
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
-pulumi-k8s TODO
-{{% /md %}}
-</div>
-
-### Other Example
-
-TODO
+#### Install NGINX
 
 {{< k8s-language nokx >}}
 
 <div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
 {{% md %}}
-YAML TODO
+
+Deploy the [example YAML manifests][nginx-yaml] into the `ingress-nginx` namespace, and publicly expose it to the
+Internet using a [load balanced Service][k8s-lb-svc].
+
+```bash
+$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml
+```
+
+Check that the NGINX deployment is running.
+
+```bash
+$ kubectl get pods -n ingress-nginx
+NAME                                        READY   STATUS    RESTARTS   AGE
+nginx-ingress-controller-7dcc95dfbf-k99k6   1/1     Running   0          21s
+```
+
+[nginx-yaml]: https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md#prerequisite-generic-deployment-command
+[k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 {{% /md %}}
 </div>
 
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
-pulumi-k8s TODO
+
+Deploy the [Helm chart][nginx-helm] into the `app-svcs` namespace created in [Configure
+Cluster Defaults][crosswalk-k8s-defaults], and publicly expose it to the
+Internet using a [load balanced Service][k8s-lb-svc].
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+// Deploy the NGINX ingress controller using the Helm chart.
+const nginx = new k8s.helm.v2.Chart("nginx",
+    {
+        namespace: config.appSvcsNamespaceName,
+        chart: "nginx-ingress",
+        version: "1.24.4",
+        fetchOpts: {repo: "https://kubernetes-charts.storage.googleapis.com/"},
+        values: {controller: {publishService: {enabled: true}}},
+        transformations: [
+            (obj: any) => {
+                // Do transformations on the YAML to set the namespace
+                if (obj.metadata) {
+                    obj.metadata.namespace = config.appSvcsNamespaceName;
+                }
+            },
+        ],
+    },
+    {providers: {kubernetes: provider}},
+);
+```
+
+[k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
+[nginx-helm]: https://github.com/helm/charts/tree/master/stable/nginx-ingress
+[crosswalk-k8s-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults#namespaces" >}}
 {{% /md %}}
 </div>
+
+#### Deploy a Workload
+
+Deploy a [kuard][k8s-kuard] Pod, service, and ingress resources to
+test the NGINX ingress controller.
+
+Create the [ingress][k8s-ingress] resource for kuard that NGINX will manage by
+keying off the `ingress.class` used.
+
+NGINX will front the app through it's desired host and paths, and the apps are
+will be accessible to the public internet as they share the public load balancer
+endpoint provisioned for NGINX's service.
+
+Traffic is then routed to the app by inspecting the host headers and paths
+expected by NGINX onto the service that the kuard Pod runs.
+
+{{< k8s-language nokx >}}
+
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
+
+```bash
+$ kubectl run --generator=run-pod/v1 kuard --namespace=`pulumi stack output appsNamespaceName` --image=gcr.io/kuar-demo/kuard-amd64:blue --port=8080 --expose
+```
+
+```bash
+$ cat > ingress.yaml << EOF
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: kuard
+  labels:
+    app: kuard
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: apps.example.com
+    http:
+      paths:
+        - path: "/"
+          backend:
+            serviceName: kuard
+            servicePort: http
+EOF
+```
+
+```bash
+$ kubectl apply -f ingress.yaml --namespace=`pulumi stack output appsNamespaceName`
+```
+
+{{% /md %}}
+</div>
+
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
+
+```typescript
+// Create a kuard Deployment
+const name = "kuard"
+const labels = {app: name}
+const deployment = new k8s.apps.v1.Deployment(name,
+    {
+        metadata: {
+            namespace: config.appsNamespaceName,
+            labels: {app: name},
+        },
+        spec: {
+            replicas: 1,
+            selector: { matchLabels: labels },
+            template: {
+                metadata: { labels: labels, },
+                spec: {
+                    containers: [
+                        {
+                            name: name,
+                            image: "gcr.io/kuar-demo/kuard-amd64:blue",
+                            resources: {requests: {cpu: "50m", memory: "20Mi"}},
+                            ports: [{ name: "http", containerPort: 8080 }]
+                        }
+                    ],
+                }
+            }
+        },
+    },
+    {provider: provider}
+);
+
+// Create a Service for the kuard Deployment
+const service = new k8s.core.v1.Service(name,
+    {
+        metadata: {labels: labels, namespace: config.appsNamespaceName},
+        spec: {ports: [{ port: 8080, targetPort: "http" }], selector: labels},
+    },
+    {provider: provider}
+);
+
+// Export the Service name and public LoadBalancer endpoint
+export const serviceName = service.metadata.name;
+
+// Create the kuard Ingress
+const ingress = new k8s.extensions.v1beta1.Ingress(name,
+    {
+        metadata: {
+            labels: labels,
+            namespace: config.appsNamespaceName,
+            annotations: {"kubernetes.io/ingress.class": "nginx"},
+        },
+        spec: {
+            rules: [
+                {
+                    host: "apps.example.com",
+                    http: {
+                        paths: [
+                            {
+                                path: "/",
+                                backend: {
+                                    serviceName: serviceName,
+                                    servicePort: "http",
+                                }
+                            },
+                        ],
+                    },
+                }
+            ]
+        }
+    },
+    {provider: provider}
+);
+```
+{{% /md %}}
+</div>
+
+Check that the ingress is created, and after a few moments the `Address` will
+be set to the NGINX LoadBalancer Service address.
+
+```bash
+$ kubectl describe ingress kuard --namespace=`pulumi stack output appsNamespaceName`
+```
+or 
+
+```bash
+$ kubectl describe ingress kuard-<POD_SUFFIX> --namespace=`pulumi stack output appsNamespaceName`
+```
+
+Use the NGINX LoadBalancer Service address to access kuard on its expected
+hosts & paths. We simulate the headers using `curl`.
+
+```bash
+$ curl -Lv -H 'Host: apps.example.com' <INGRESS_ADDRESS>
+```
+
+#### Clean Up
+
+Delete the pod, service, and ingress controller.
+
+{{< k8s-language nokx >}}
+
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
+```bash
+$ kubectl delete pod/kuard svc/kuard ingress/kuard
+$ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml
+```
+{{% /md %}}
+</div>
+
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
+```bash
+$ kubectl delete pod/kuard svc/kuard ingress/kuard
+```
+
+Delete the nginx definition in the Pulumi program, and run a Pulumi update.
+{{% /md %}}
+</div>
+
+[k8s-kuard]: https://github.com/kubernetes-up-and-running/kuard
+[k8s-ingress]: https://kubernetes.io/docs/concepts/services-networking/ingress/
