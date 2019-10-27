@@ -7,7 +7,7 @@ meta_desc: "Continuous delivery of Pulumi apps with Octopus Deploy "
 date: "2019-10-24"
 ---
 
-We are always excited when people join the Infrastructure as Code community and write about their experiences. Here are four new posts that we think are great!
+We are always excited when people join the Infrastructure as Code community and write about their experiences. Here are three new posts that we think are great!
 
 ## CircleCI on Google Kubernetes Engine (GKE)
 
