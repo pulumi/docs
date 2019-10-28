@@ -70,8 +70,8 @@ export const clusterSvcsNamespaceName = clusterSvcsNamespace.metadata.name;
 const appSvcsNamespace = new k8s.core.v1.Namespace("app-svcs", undefined, { provider: cluster.provider });
 export const appSvcsNamespaceName = appSvcsNamespace.metadata.name;
 
-const appNamespace = new k8s.core.v1.Namespace("apps", undefined, { provider: cluster.provider });
-export const appNamespaceName = appNamespace.metadata.name;
+const appsNamespace = new k8s.core.v1.Namespace("apps", undefined, { provider: cluster.provider });
+export const appsNamespaceName = appsNamespace.metadata.name;
 ```
 
 ### Quotas
@@ -111,7 +111,7 @@ import * as k8s from "@pulumi/kubernetes";
 
 // Create a resource quota in the apps namespace.
 const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
-    metadata: {namespace: appNamespaceName},
+    metadata: {namespace: appsNamespaceName},
     spec: {
         hard: {
             cpu: "20",
@@ -130,7 +130,7 @@ const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
 Track the quota usage in the namespace using `kubectl` and Pulumi output.
 
 ```bash
-$ kubectl describe quota -n `pulumi stack output appNamespaceName`
+$ kubectl describe quota -n `pulumi stack output appsNamespaceName`
 Name:                   apps-tb8bxlvb
 Namespace:              apps-x1z818eg
 Resource                Used  Hard
