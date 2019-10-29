@@ -13,6 +13,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.postgresql"></span><dl class="class">
+<dt id="pulumi_azure.postgresql.AwaitableGetServerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.postgresql.</code><code class="sig-name descname">AwaitableGetServerResult</code><span class="sig-paren">(</span><em class="sig-param">administrator_login=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.AwaitableGetServerResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.postgresql.Configuration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.postgresql.</code><code class="sig-name descname">Configuration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a PostgreSQL Configuration value on a PostgreSQL Server.</p>
@@ -351,6 +356,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.postgresql.GetServerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.postgresql.</code><code class="sig-name descname">GetServerResult</code><span class="sig-paren">(</span><em class="sig-param">administrator_login=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.GetServerResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getServer.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.postgresql.GetServerResult.administrator_login">
+<code class="sig-name descname">administrator_login</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.postgresql.GetServerResult.administrator_login" title="Permalink to this definition">¶</a></dt>
+<dd><p>The administrator username of the PostgreSQL Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.postgresql.GetServerResult.fqdn">
+<code class="sig-name descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.postgresql.GetServerResult.fqdn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully qualified domain name of the PostgreSQL Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.postgresql.GetServerResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.postgresql.GetServerResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the Resource Group in which the PostgreSQL Server exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.postgresql.GetServerResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.postgresql.GetServerResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.postgresql.GetServerResult.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.postgresql.GetServerResult.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the PostgreSQL Server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.postgresql.GetServerResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.postgresql.GetServerResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.postgresql.Server">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.postgresql.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administrator_login=None</em>, <em class="sig-param">administrator_login_password=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a PostgreSQL Server.</p>
@@ -663,6 +710,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.postgresql.get_server">
+<code class="sig-prename descclassname">pulumi_azure.postgresql.</code><code class="sig-name descname">get_server</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.get_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing PostgreSQL Azure Database Server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the PostgreSQL Server.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the Resource Group where the PostgreSQL Server exists.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/postgresql_server.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/postgresql_server.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

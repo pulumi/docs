@@ -810,6 +810,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.appservice.AwaitableGetCertificateOrderResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">AwaitableGetCertificateOrderResult</code><span class="sig-paren">(</span><em class="sig-param">app_service_certificate_not_renewable_reasons=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">csr=None</em>, <em class="sig-param">distinguished_name=None</em>, <em class="sig-param">domain_verification_token=None</em>, <em class="sig-param">expiration_time=None</em>, <em class="sig-param">intermediate_thumbprint=None</em>, <em class="sig-param">is_private_key_external=None</em>, <em class="sig-param">key_size=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">root_thumbprint=None</em>, <em class="sig-param">signed_certificate_thumbprint=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">validity_in_years=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AwaitableGetCertificateOrderResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.appservice.AwaitableGetCertificateResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">AwaitableGetCertificateResult</code><span class="sig-paren">(</span><em class="sig-param">expiration_date=None</em>, <em class="sig-param">friendly_name=None</em>, <em class="sig-param">host_names=None</em>, <em class="sig-param">issue_date=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subject_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">thumbprint=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AwaitableGetCertificateResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -966,6 +971,234 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.appservice.Certificate.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Certificate.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.appservice.CertificateOrder">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">CertificateOrder</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">csr=None</em>, <em class="sig-param">distinguished_name=None</em>, <em class="sig-param">key_size=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">validity_in_years=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an App Service Certificate Order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – true if the certificate should be automatically renewed when it expires; otherwise, false.</p></li>
+<li><p><strong>csr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Last CSR that was created for this order.</p></li>
+<li><p><strong>distinguished_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Distinguished Name for the App Service Certificate Order.</p></li>
+<li><p><strong>key_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Certificate key size.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>product_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate product type, such as <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">WildCard</span></code>.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>validity_in_years</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in years (must be between 1 and 3).</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_certificate_order.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_certificate_order.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.app_service_certificate_not_renewable_reasons">
+<code class="sig-name descname">app_service_certificate_not_renewable_reasons</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.app_service_certificate_not_renewable_reasons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reasons why App Service Certificate is not renewable at the current moment.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.auto_renew">
+<code class="sig-name descname">auto_renew</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.auto_renew" title="Permalink to this definition">¶</a></dt>
+<dd><p>true if the certificate should be automatically renewed when it expires; otherwise, false.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.certificates">
+<code class="sig-name descname">certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.certificates" title="Permalink to this definition">¶</a></dt>
+<dd><p>State of the Key Vault secret. A <code class="docutils literal notranslate"><span class="pre">certificates</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the App Service Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Key Vault resource Id.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultSecretName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Key Vault secret name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provisioningState</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Status of the Key Vault secret.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.csr">
+<code class="sig-name descname">csr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.csr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Last CSR that was created for this order.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.distinguished_name">
+<code class="sig-name descname">distinguished_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.distinguished_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Distinguished Name for the App Service Certificate Order.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.domain_verification_token">
+<code class="sig-name descname">domain_verification_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.domain_verification_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Domain verification token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.expiration_time">
+<code class="sig-name descname">expiration_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.expiration_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate expiration time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.intermediate_thumbprint">
+<code class="sig-name descname">intermediate_thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.intermediate_thumbprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate thumbprint intermediate certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.is_private_key_external">
+<code class="sig-name descname">is_private_key_external</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.is_private_key_external" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the private key is external or not.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.key_size">
+<code class="sig-name descname">key_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.key_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate key size.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the certificate. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.product_type">
+<code class="sig-name descname">product_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.product_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate product type, such as <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">WildCard</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.root_thumbprint">
+<code class="sig-name descname">root_thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.root_thumbprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate thumbprint for root certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.signed_certificate_thumbprint">
+<code class="sig-name descname">signed_certificate_thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.signed_certificate_thumbprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate thumbprint for signed certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current order status.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.CertificateOrder.validity_in_years">
+<code class="sig-name descname">validity_in_years</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.validity_in_years" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duration in years (must be between 1 and 3).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.CertificateOrder.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_service_certificate_not_renewable_reasons=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">csr=None</em>, <em class="sig-param">distinguished_name=None</em>, <em class="sig-param">domain_verification_token=None</em>, <em class="sig-param">expiration_time=None</em>, <em class="sig-param">intermediate_thumbprint=None</em>, <em class="sig-param">is_private_key_external=None</em>, <em class="sig-param">key_size=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">root_thumbprint=None</em>, <em class="sig-param">signed_certificate_thumbprint=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">validity_in_years=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing CertificateOrder resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_service_certificate_not_renewable_reasons</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Reasons why App Service Certificate is not renewable at the current moment.</p></li>
+<li><p><strong>auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – true if the certificate should be automatically renewed when it expires; otherwise, false.</p></li>
+<li><p><strong>certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – State of the Key Vault secret. A <code class="docutils literal notranslate"><span class="pre">certificates</span></code> block as defined below.</p></li>
+<li><p><strong>csr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Last CSR that was created for this order.</p></li>
+<li><p><strong>distinguished_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Distinguished Name for the App Service Certificate Order.</p></li>
+<li><p><strong>domain_verification_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Domain verification token.</p></li>
+<li><p><strong>expiration_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate expiration time.</p></li>
+<li><p><strong>intermediate_thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate thumbprint intermediate certificate.</p></li>
+<li><p><strong>is_private_key_external</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the private key is external or not.</p></li>
+<li><p><strong>key_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Certificate key size.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>product_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate product type, such as <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">WildCard</span></code>.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>root_thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate thumbprint for root certificate.</p></li>
+<li><p><strong>signed_certificate_thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Certificate thumbprint for signed certificate.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current order status.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>validity_in_years</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in years (must be between 1 and 3).</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>certificates</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the App Service Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Key Vault resource Id.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyVaultSecretName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Key Vault secret name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provisioningState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Status of the Key Vault secret.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_certificate_order.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_certificate_order.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.CertificateOrder.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appservice.CertificateOrder.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CertificateOrder.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1197,6 +1430,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">supportCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether or not the http2 protocol should be enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">linuxFxVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Linux App Framework and version for the AppService, e.g. <code class="docutils literal notranslate"><span class="pre">DOCKER|(golang:latest)</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">use32BitWorkerProcess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the Function App run in 32 bit mode, rather than 64 bit mode? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Virtual Network which this App Service should be attached to.</p></li>
@@ -1368,6 +1602,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">supportCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether or not the http2 protocol should be enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">linuxFxVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Linux App Framework and version for the AppService, e.g. <code class="docutils literal notranslate"><span class="pre">DOCKER|(golang:latest)</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">use32BitWorkerProcess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the Function App run in 32 bit mode, rather than 64 bit mode? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Virtual Network which this App Service should be attached to.</p></li>
@@ -1505,6 +1740,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">supportCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">http2Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether or not the http2 protocol should be enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">linuxFxVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Linux App Framework and version for the AppService, e.g. <code class="docutils literal notranslate"><span class="pre">DOCKER|(golang:latest)</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">use32BitWorkerProcess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the Function App run in 32 bit mode, rather than 64 bit mode? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Virtual Network which this App Service should be attached to.</p></li>
@@ -1709,6 +1945,120 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.GetAppServiceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">GetCertificateOrderResult</code><span class="sig-paren">(</span><em class="sig-param">app_service_certificate_not_renewable_reasons=None</em>, <em class="sig-param">auto_renew=None</em>, <em class="sig-param">certificates=None</em>, <em class="sig-param">csr=None</em>, <em class="sig-param">distinguished_name=None</em>, <em class="sig-param">domain_verification_token=None</em>, <em class="sig-param">expiration_time=None</em>, <em class="sig-param">intermediate_thumbprint=None</em>, <em class="sig-param">is_private_key_external=None</em>, <em class="sig-param">key_size=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">root_thumbprint=None</em>, <em class="sig-param">signed_certificate_thumbprint=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">validity_in_years=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCertificateOrder.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.app_service_certificate_not_renewable_reasons">
+<code class="sig-name descname">app_service_certificate_not_renewable_reasons</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.app_service_certificate_not_renewable_reasons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reasons why App Service Certificate is not renewable at the current moment.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.auto_renew">
+<code class="sig-name descname">auto_renew</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.auto_renew" title="Permalink to this definition">¶</a></dt>
+<dd><p>true if the certificate should be automatically renewed when it expires; otherwise, false.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.certificates">
+<code class="sig-name descname">certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.certificates" title="Permalink to this definition">¶</a></dt>
+<dd><p>State of the Key Vault secret. A <code class="docutils literal notranslate"><span class="pre">certificates</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.csr">
+<code class="sig-name descname">csr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.csr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Last CSR that was created for this order.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.distinguished_name">
+<code class="sig-name descname">distinguished_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.distinguished_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Distinguished Name for the App Service Certificate Order.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.domain_verification_token">
+<code class="sig-name descname">domain_verification_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.domain_verification_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Domain verification token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.expiration_time">
+<code class="sig-name descname">expiration_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.expiration_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate expiration time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.intermediate_thumbprint">
+<code class="sig-name descname">intermediate_thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.intermediate_thumbprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate thumbprint intermediate certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.is_private_key_external">
+<code class="sig-name descname">is_private_key_external</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.is_private_key_external" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the private key is external or not.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.key_size">
+<code class="sig-name descname">key_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.key_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate key size.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Azure location where the App Service exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.product_type">
+<code class="sig-name descname">product_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.product_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate product type, such as <code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">WildCard</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.root_thumbprint">
+<code class="sig-name descname">root_thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.root_thumbprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate thumbprint for root certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.signed_certificate_thumbprint">
+<code class="sig-name descname">signed_certificate_thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.signed_certificate_thumbprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Certificate thumbprint for signed certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current order status.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.validity_in_years">
+<code class="sig-name descname">validity_in_years</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.validity_in_years" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duration in years (must be between 1 and 3).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetCertificateOrderResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetCertificateOrderResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -2518,7 +2868,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">SourceCodeToken</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">token_secret=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.SourceCodeToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service source control token.</p>
 <blockquote>
-<div><p><strong>NOTE:</strong> Source Control Token’s are configured at the subscription level, not on each App Service - as such this can only be configured Subscription-wide</p>
+<div><p><strong>NOTE:</strong> Source Control Tokens are configured at the subscription level, not on each App Service - as such this can only be configured Subscription-wide</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2660,6 +3010,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/app_service_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/app_service_certificate.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.appservice.get_certificate_order">
+<code class="sig-prename descclassname">pulumi_azure.appservice.</code><code class="sig-name descname">get_certificate_order</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_certificate_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing App Service Certificate Order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the App Service.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The Name of the Resource Group where the App Service exists.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/app_service_certificate_order.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/app_service_certificate_order.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

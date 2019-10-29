@@ -42,6 +42,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="eventhub/">eventhub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="frontdoor/">frontdoor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hdinsight/">hdinsight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="healthcare/">healthcare</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keyvault/">keyvault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kusto/">kusto</a></li>

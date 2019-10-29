@@ -23,6 +23,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.core.AwaitableGetResourcesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">AwaitableGetResourcesResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">required_tags=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetResourcesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.core.AwaitableGetSubscriptionResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">AwaitableGetSubscriptionResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">location_placement_id=None</em>, <em class="sig-param">quota_id=None</em>, <em class="sig-param">spending_limit=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetSubscriptionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -68,6 +73,36 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.core.GetResourceGroupResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetResourceGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.core.GetResourcesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">GetResourcesResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">required_tags=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetResourcesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getResources.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.core.GetResourcesResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetResourcesResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of this resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.GetResourcesResult.resources">
+<code class="sig-name descname">resources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetResourcesResult.resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">resource</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.GetResourcesResult.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetResourcesResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of this resoource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.GetResourcesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetResourcesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -449,6 +484,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/resource_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/resource_group.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.core.get_resources">
+<code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">get_resources</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">required_tags=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about existing resources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Resource.</p></li>
+<li><p><strong>required_tags</strong> (<em>dict</em>) – A mapping of tags which the resource has to have in order to be included in the result.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the Resource group where the Resources are located.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The Resource Type of the Resources you want to list (e.g. <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks</span></code>). A full list of available Resource Types can be found <a class="reference external" href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/azure-services-resource-providers">here</a>.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/resources.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/resources.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

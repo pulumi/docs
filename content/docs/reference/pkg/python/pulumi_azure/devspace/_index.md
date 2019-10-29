@@ -14,14 +14,13 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.devspace"></span><dl class="class">
 <dt id="pulumi_azure.devspace.Controller">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devspace.</code><code class="sig-name descname">Controller</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">host_suffix=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_container_host_credentials_base64=None</em>, <em class="sig-param">target_container_host_resource_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devspace.Controller" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devspace.</code><code class="sig-name descname">Controller</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_container_host_credentials_base64=None</em>, <em class="sig-param">target_container_host_resource_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devspace.Controller" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DevSpace Controller.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>host_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host suffix for the DevSpace Controller. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported location where the DevSpace Controller should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the DevSpace Controller. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group under which the DevSpace Controller resource has to be created. Changing this forces a new resource to be created.</p></li>
@@ -49,7 +48,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.devspace.Controller.host_suffix">
 <code class="sig-name descname">host_suffix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devspace.Controller.host_suffix" title="Permalink to this definition">¶</a></dt>
-<dd><p>The host suffix for the DevSpace Controller. Changing this forces a new resource to be created.</p>
+<dd><p>The host suffix for the DevSpace Controller.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -110,7 +109,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>data_plane_fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DNS name for accessing DataPlane services.</p></li>
-<li><p><strong>host_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host suffix for the DevSpace Controller. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>host_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host suffix for the DevSpace Controller.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported location where the DevSpace Controller should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the DevSpace Controller. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group under which the DevSpace Controller resource has to be created. Changing this forces a new resource to be created.</p></li>

@@ -16,9 +16,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.mariadb.Configuration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mariadb.</code><code class="sig-name descname">Configuration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mariadb.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a MariaDB Configuration value on a MariaDB Server.</p>
-<blockquote>
-<div><p><strong>NOTE</strong> MariaDB Server is currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-us/updates/mariadb-public-preview/">how to register for the Public Preview here</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -354,9 +351,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.mariadb.Server">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.mariadb.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administrator_login=None</em>, <em class="sig-param">administrator_login_password=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">ssl_enforcement=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.mariadb.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a MariaDB Server.</p>
-<blockquote>
-<div><p><strong>NOTE</strong> MariaDB Server is currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-us/updates/mariadb-public-preview/">how to register for the Public Preview here</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
