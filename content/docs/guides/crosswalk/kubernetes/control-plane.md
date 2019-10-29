@@ -328,7 +328,7 @@ See the [official EKS docs][eks-storage-classes] for more details.
 Create the storage classes using `kubectl`.
 
 ```bash
-cat > storage-classes.yaml << EOF
+$ cat > storage-classes.yaml << EOF
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
@@ -376,7 +376,7 @@ necessary persistent volumes in the cluster.
 Create the persistent volume with a persistent volume claim and `kubectl`.
 
 ```bash
-cat > pvc.yaml << EOF
+$ cat > pvc.yaml << EOF
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
