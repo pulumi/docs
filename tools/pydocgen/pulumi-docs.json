@@ -38,6 +38,12 @@
       "terraform_provider_name": "cloudflare"
     },
     {
+      "name": "Pulumi Consul",
+      "package_name": "pulumi_consul",
+      "pulumi_provider_name": "consul",
+      "terraform_provider_name": "consul"
+    },
+    {
       "name": "Pulumi Datadog",
       "package_name": "pulumi_datadog",
       "pulumi_provider_name": "datadog",
