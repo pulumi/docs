@@ -86,14 +86,6 @@ We'll configure and deploy:
 In [Identity][crosswalk-identity] we demonstrate how to create typical IAM roles for
 use in Kubernetes.
 
-For **users**, we create an `admins` role for cluster administrators with
-root privileges, and a limited scope `devs` role for general purpose
-execution of workloads. Both roles will be tied into Kubernetes RBAC.
-
-For **worker nodes**, we create separate roles for a few typical
-classes of worker node groups: a standard pool of nodes, and a performant
-pool of nodes that differ by instance type.
-
 Separation of roles creates many functions: it can be used to
 limit the blast radius if a given group is compromised, can regulate the number
 of API requests originating from a certain group, and can also help scope
@@ -104,6 +96,14 @@ privileges to specific node types and workloads.
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+For **users**, we create an `admins` role for cluster administrators with
+root privileges, and a limited scope `devs` role for general purpose
+execution of workloads. Both roles will be tied into Kubernetes RBAC.
+
+For **worker nodes**, we create separate roles for a few typical
+classes of worker node groups: a standard pool of nodes, and a performant
+pool of nodes that differ by instance type.
+
 We configure the user identities using `roleMappings` in the cluster since
 we created roles for the users, and map it into Kubernetes RBAC as defined in the [docs][k8s-rbac-docs].
 
@@ -139,11 +139,34 @@ const cluster = new eks.Cluster(`${projectName}`, {
 
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
-TODO
-
 {{% md %}}
+For users, we create a ServicePrincipal for cluster administrators with
+root privileges, and a limited scope `devs` user group for general purpose
+execution of workloads. Both identities will be tied into Kubernetes RBAC.
+
+We configure the principal identities using `servicePrincipal` to create the
+cluster, and set up `roleBasedAccessControl` to manage authentication into the cluster.
+
 ```typescript
-// TODO
+import * as azure from "@pulumi/azure";
+
+// Create the AKS cluster with IAM.
+const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
+    resourceGroupName: config.resourceGroupName,
+    servicePrincipal: {
+        clientId: config.adClientAppId,
+        clientSecret: config.adClientAppSecret,
+    },
+    roleBasedAccessControl: {
+        enabled: true,
+        azureActiveDirectory: {
+            clientAppId: config.adClientAppId,
+            serverAppId: config.adServerAppId,
+            serverAppSecret: config.adServerAppSecret,
+        },
+    },
+    ...
+}
 ```
 {{% /md %}}
 </div>
@@ -159,11 +182,12 @@ TODO
 {{% /md %}}
 </div>
 
-### Worker Node Groups
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+
+### Worker Node Groups
 
 We configure the worker identities using `instanceRoles` in the cluster.
 Later on, when we [define the node groups][nodegroups], we'll use an [instance
@@ -188,19 +212,6 @@ const cluster = new eks.Cluster(`${projectName}`, {
 {{% /md %}}
 </div>
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-
-TODO
-
-```typescript
-// TODO
-```
-
-{{% /md %}}
-</div>
-
 <div class="cloud-prologue-gcp"></div>
 <div class="mt">
 {{% md %}}
@@ -221,6 +232,10 @@ and how to create or use an existing virtual network for use with Kubernetes.
 
 ### Networking
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
 How you create the network will vary on your permissions and preferences.
 
 Typical setups will want to provide Kubernetes with the following resources
@@ -234,10 +249,6 @@ to use for the cluster.
 Kubernetes requires that all subnets you intend to use be [properly tagged][eks-subnet-tagging],
 in order to know which subnets it can provision load balancers within.
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
-
 To ensure proper functionality, pass in **any** public and/or private subnets you
 intend to use into the cluster definition. If these need to be updated to include more subnets, or
 if some need to be removed, the change is straightforward with a Pulumi update.
@@ -250,7 +261,7 @@ and they'll typically be shielded within your VPC.
 
 EKS will automatically manage Kubernetes Pod networking for us through
 the use of the [AWS CNI Plugin][aws-k8s-cni]. This plugin is deployed by
-default on worker nodes as a [DeamonSet][k8s-ds] named `aws-node` in all clusters
+default on worker nodes as a [DaemonSet][k8s-ds] named `aws-node` in all clusters
 provisioned with `pulumi/eks`, and is capable of being [configured][configure-cni].
 
 ```typescript
@@ -277,12 +288,45 @@ const cluster = new eks.Cluster(`${projectName}`, {
 <div class="mt">
 {{% md %}}
 
-TODO
+How you create the network will vary on your permissions and preferences.
+
+Typical setups will want to provide Kubernetes with the following resources
+to use for the cluster.
+
+  * Private subnets for use with provisioning private load balancers.
+  * Private subnets for use as the default subnets for workers to run in.
+  * Managed [Pod networking][k8s-pod-networking].
+
+By default, [`pulumi/azure`][pulumi-azure] will deploy workers into the
+private subnets without associating a public IP address. This
+creates workers that will not be publicly accessible from the Internet,
+and they'll typically be shielded within your network.
+
+AKS will manage Kubernetes Pod networking for us through
+the use of the [AKS CNI Plugin][aks-k8s-cni]. This plugin is deployed by
+default on worker nodes as a [DaemonSet][k8s-ds] named `azure-cni-networkmonitor` in all clusters
+provisioned with `pulumi/azure`.
 
 ```typescript
-// TODO
+import * as azure from "@pulumi/azure";
+
+// Create the AKS cluster with IAM.
+const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
+    resourceGroupName: config.resourceGroupName,
+    networkProfile: {
+        networkPlugin: "azure",
+        dnsServiceIp: "10.2.2.254",
+        serviceCidr: "10.2.2.0/24",
+        dockerBridgeCidr: "172.17.0.1/16",
+    },
+    ...
+}
 ```
 
+[pulumi-azure]: https://github.com/pulumi/pulumi-azure
+[aks-k8s-cni]: https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni
+[k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+[k8s-pod-networking]: https://kubernetes.io/docs/concepts/cluster-administration/networking/
 {{% /md %}}
 </div>
 
@@ -431,10 +475,25 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
 <div class="mt">
 {{% md %}}
 
-TODO
+After the cluster is provisioned and running, create an example StorageClass to
+provision Azure disks.
 
-```typescript
-// TODO
+```yaml
+$ cat > storage-classes.yaml << EOF
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: managed-premium-retain
+provisioner: kubernetes.io/azure-disk
+reclaimPolicy: Retain
+parameters:
+  storageaccounttype: Premium_LRS
+  kind: Managed
+EOF
+```
+
+```bash
+$ kubectl apply -f storage-classes.yaml
 ```
 
 {{% /md %}}
@@ -464,8 +523,6 @@ general best-practices and recommendations to configure in the cluster.
     cluster to a particular release in a declarative manner, instead of
     implicitly using the latest available version, or using a smart default
     where both can be updated at any moment.
-  * Tag resources under management to provide the ability to assign
-    metadata to resources to make it easier to manage, search, and filter them.
   * Instead of [reaching for][kube-dash-security] `kube-dashboard`, try [VMware's
     Octant][octant].
 
@@ -475,6 +532,8 @@ general best-practices and recommendations to configure in the cluster.
 
 **EKS:**
 
+  * Tag resources under management to provide the ability to assign
+    metadata to resources to make it easier to manage, search, and filter them.
   * Skip enabling the default node group in favor of managing them separately from
     the control plane, as demonstrated in [Create the Worker Nodes][nodegroups].
   * Enable control plane logging to have diagnostics of the control
@@ -517,12 +576,10 @@ general best-practices and recommendations to configure in the cluster.
 
 **AKS:**
 
-  * TODO
+  * Enable [PodSecurityPolicies][k8s-psp] using `enablePodSecurityPolicy: true`
+  * Enable Log Analytics using the `oms_agent` block
 
-```typescript
-// TODO
-```
-
+[k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 {{% /md %}}
 </div>
 
