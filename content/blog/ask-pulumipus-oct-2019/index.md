@@ -7,10 +7,9 @@ authors: ["sophia-parafina"]
 tags: ["Pulumi","questions","support","slack","stack overflow"]
 ---
 
+Welcome to **Ask Pulumipus**, a monthly series featuring questions and answers from the community. We get questions from many sources including GitHub [issues](https://github.com/pulumi/pulumi/issues), questions from [Pulumi Community Slack](https://pulumi-community.slack.com), and [Stack Overflow](https://stackoverflow.com/questions/tagged/pulumi). In this installment, we'll take a look at two of the most popular questions from [Stack Overflow](https://stackoverflow.com/questions/tagged/pulumi).
 
-Welcome to **Ask Pulumipus**, a monthly series featuring questions and answers from the community. Where do these questions come from? In addition to [issues](https://github.com/pulumi/pulumi/issues) on Github, questions from [Pulumi Community Slack](https://pulumi-community.slack.com) and Stack Overflow. In this installment, we'll take a look at two of the most popular questions from [Stack Overflow](https://stackoverflow.com/questions/tagged/pulumi).
-
-And just who is Pulumipus? Glad you asked! Pulumipus is our platypus mascot in the cloud that inspires us to build applications such as Platypull which automates our build process.
+And just who is Pulumipus? Glad you asked! Pulumipus is our platypus mascot in the cloud that inspires us to build Pulumi.
 
 ## Getting Secrets with Pulumi
 
