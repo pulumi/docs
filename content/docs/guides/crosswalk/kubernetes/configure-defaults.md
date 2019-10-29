@@ -80,7 +80,7 @@ Create [quotas][k8s-quotas] to restrict the amount of resources that can be cons
 all Pods in a namespace.
 
 ```bash
-cat > quota.yaml << EOF
+$ cat > quota.yaml << EOF
 apiVersion: v1
 kind: ResourceQuota
 metadata:
