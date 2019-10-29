@@ -27,10 +27,10 @@ Create a project directory, `hello-fargate`, and change into it. Run [`pulumi ne
 
 Run `pulumi new` to create a new project:
 
-    ```bash
-    $ mkdir hello-fargate && cd hello-fargate
-    $ pulumi new aws-typescript --name myproject
-    ```
+```bash
+$ mkdir hello-fargate && cd hello-fargate
+$ pulumi new aws-typescript --name myproject
+```
 
 ### Step 2: Build the Dockerized app
 
