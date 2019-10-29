@@ -21,6 +21,7 @@ PACKAGES=(
   "pulumi_linode"
   "pulumi_mysql"
   "pulumi_newrelic"
+  "pulumi_okta"
   "pulumi_openstack"
   "pulumi_packet"
   "pulumi_postgresql"
