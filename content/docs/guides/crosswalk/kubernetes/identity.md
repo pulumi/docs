@@ -10,11 +10,11 @@ linktitle: Identity
 {{% md %}}
 
 AWS exposes an [Identity Access and Management (IAM)][iam] API which can be used to grant
-permissions to both human and bot users. Using this API, [**IAM User**][users] accounts can be
-slotted into [**IAM Groups**][groups] (e.g., the `networkAdmins` IAM Group), which can then be
-allocated baseline permissions using [**IAM Policies**][policies].
+permissions to both human and bot users. Using this API, [IAM User][users] accounts can be
+slotted into [IAM Groups][groups] (e.g., the `networkAdmins` IAM Group), which can then be
+allocated baseline permissions using [IAM Policies][policies].
 
-AWS workloads (e.g., AWS Lambdas) can also be granted permissions temporarily, without the need for usernames and passwords, using [**IAM Roles**][roles].
+AWS workloads (e.g., AWS Lambdas) can also be granted permissions temporarily, without the need for usernames and passwords, using [IAM Roles][roles].
 
 In [Crosswalk for AWS][crosswalk-aws] we showcase how to define IAM:
 
@@ -43,10 +43,21 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="mt">
 {{% md %}}
 
-TODO
+Azure exposes an [Active Directory][azure-iam] API which can be used to grant
+permissions to both human and bot users. Using this API, [IAM User][azure-users] accounts can be
+slotted into [IAM Groups][azure-groups] (e.g., the `networkAdmins` IAM Group), which can then be
+allocated baseline permissions using [IAM Permissions][azure-permissions].
+
+Azure services can also be granted permissions temporarily, without the need for usernames and passwords, using [Applications and ServicePrincipals][azure-sp].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
+[azure-iam]: https://azure.microsoft.com/en-us/services/active-directory/
+[azure-users]: https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-overview-user-model
+[azure-groups]: https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-overview-user-model
+[azure-roles]: https://docs.microsoft.com/en-us/azure/role-based-access-control/rbac-and-directory-admin-roles?context=azure/active-directory/users-groups-roles/context/ugr-context
+[azure-permissions]: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/users-default-permissions?context=azure/active-directory/users-groups-roles/context/ugr-context
+[azure-sp]: https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/01-identity
 {{% /md %}}
 </div>
@@ -86,9 +97,9 @@ We'll review how to:
 
 We'll review how to:
 
-  * [Create an IAM Role for Admins](#create-an-iam-role-for-admins)
-  * [Create an IAM Role for Developers](#create-an-iam-role-for-developers)
-  * [Create IAM Roles for AKS Node Pools](#create-iam-roles-for-aks-node-pools)
+  * [Create an IAM Server Application and ServicePrincipal](#create-an-iam-server-application-and-serviceprincipal)
+  * [Create an IAM Client Application and ServicePrincipal](#create-an-iam-server-application-and-serviceprincipal)
+  * [Create an IAM Group for Developers](#create-an-iam-group-for-developers)
 
 {{% /md %}}
 </div>
@@ -108,11 +119,11 @@ We'll review how to:
 {{% /md %}}
 </div>
 
-## Create an IAM Role for Admins
-
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+
+## Create an IAM Role for Admins
 
 Create an admin role in AWS that assumes the AWS account caller,
 and attach EKS admin policies to the role. This role will be mapped into the
@@ -148,12 +159,110 @@ const adminsIamRolePolicy = new aws.iam.RolePolicy(`${adminsName}-eksClusterAdmi
 <div class="mt">
 {{% md %}}
 
-TODO
+Azure AD integration with AKS requires that two Azure AD application objects be
+created: a server component to provide authentication, and a client component
+used by the CLI for authentication that works with the server component.
+
+See the official [docs][azure-ad-aks] for more details.
+
+## Create an IAM Server Application and ServicePrincipal
 
 ```typescript
-// TODO
+import * as azuread from "@pulumi/azuread";
+
+// Create the server application in Azure AD.
+const applicationServer = new azuread.Application(`${name}-app-server`, {
+    replyUrls: ["http://k8s_server"],
+    type: "webapp/api",
+    groupMembershipClaims: "All",
+    requiredResourceAccesses: [
+        // Windows Azure Active Directory API
+        {
+            resourceAppId: "00000002-0000-0000-c000-000000000000",
+            resourceAccesses: [{
+                // DELEGATED PERMISSIONS: "Sign in and read user profile"
+                id: "311a71cc-e848-46a1-bdf8-97ff7156d8e6",
+                type: "Scope",
+            }],
+        },
+        // MicrosoftGraph API
+        {
+            resourceAppId: "00000003-0000-0000-c000-000000000000",
+            resourceAccesses: [
+                // APPLICATION PERMISSIONS: "Read directory data"
+                {
+                    id: "7ab1d382-f21e-4acd-a863-ba3e13f7da61",
+                    type: "Role",
+                },
+                // DELEGATED PERMISSIONS: "Sign in and read user profile"
+                {
+                    id: "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+                    type: "Scope",
+                },
+                // DELEGATED PERMISSIONS: "Read directory data"
+                {
+                    id: "06da0dbc-49e2-44d2-8312-53f166ab848a",
+                    type: "Scope",
+                },
+            ],
+        },
+    ],
+});
+
+// Create the server application Service Principal.
+const principalServer = new azuread.ServicePrincipal(`${name}-sp-server`, {
+    applicationId: applicationServer.applicationId,
+});
+
+// Export outputs.
+export const resourceGroupName = resourceGroup.name;
+export const adServerAppId = applicationServer.applicationId;
+export const adServerAppSecret = spPasswordServer.value;
 ```
 
+## Create an IAM Client Application and ServicePrincipal
+
+```typescript
+import * as azuread from "@pulumi/azuread";
+
+// Create the client application in Azure AD.
+const applicationClient = new azuread.Application(`${name}-app-client`, {
+    replyUrls: ["http://k8s_server"],
+    type: "native",
+    requiredResourceAccesses: [
+        // Windows Azure Active Directory API
+        {
+            resourceAppId: "00000002-0000-0000-c000-000000000000",
+            resourceAccesses: [{
+                // DELEGATED PERMISSIONS: "Sign in and read user profile"
+                id: "311a71cc-e848-46a1-bdf8-97ff7156d8e6",
+                type: "Scope",
+            }],
+        },
+        // AKS ad application server
+        {
+            resourceAppId: applicationServer.applicationId,
+            resourceAccesses: [{
+                // Server app Oauth2 permissions id
+                id: applicationServer.oauth2Permissions[0].id,
+                type: "Scope",
+            }],
+        },
+    ],
+});
+
+// Create the client application Service Principal.
+const principalClient = new azuread.ServicePrincipal(`${name}-sp-client`, {
+    applicationId: applicationClient.applicationId,
+});
+
+// Export outputs.
+export const adClientAppId = applicationClient.applicationId;
+export const adClientAppSecret = spPasswordClient.value;
+export const adGroupDevs = devs.name;
+```
+
+[azure-ad-aks]: https://docs.microsoft.com/en-us/azure/aks/azure-ad-integration
 {{% /md %}}
 </div>
 
@@ -170,11 +279,11 @@ TODO
 {{% /md %}}
 </div>
 
-## Create an IAM Role for Developers
-
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+
+## Create an IAM Role for Developers
 
 Create a developer role in AWS that assumes the AWS account caller.
 This role will be mapped into a limited developer role in Kubernetes RBAC.
@@ -197,10 +306,18 @@ const devsIamRole = new aws.iam.Role(`${devName}-eksClusterDeveloper`, {
 <div class="mt">
 {{% md %}}
 
-TODO
+## Create an IAM Group for Developers
 
 ```typescript
-// TODO
+import * as azuread from "@pulumi/azuread";
+
+// Create the AD group for Developers.
+const devs = new azuread.Group("devs", {
+    name: "pulumi:devs",
+});
+
+// Export outputs.
+export const adGroupDevs = devs.name;
 ```
 
 {{% /md %}}
@@ -222,6 +339,7 @@ TODO
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+
 ## Create IAM Roles for EKS Node Groups
 
 Create a node group worker role in AWS that assumes the EC2 Service, and attach
@@ -258,34 +376,6 @@ function attachPoliciesToRole(name: string, role: aws.iam.Role, policyArns: stri
         );
     }
 }
-```
-
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-## Create IAM Roles for AKS Node Pools
-
-TODO
-
-```typescript
-// TODO
-```
-
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-## Create IAM Roles for GKE Node Pools
-
-TODO
-
-```typescript
-// TODO
 ```
 
 {{% /md %}}
