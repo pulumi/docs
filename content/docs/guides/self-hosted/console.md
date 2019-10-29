@@ -1,5 +1,5 @@
 ---
-title: Console
+title: Pulumi Console
 menu:
     userguides:
         parent: self_hosted
@@ -37,7 +37,7 @@ The Console container is a Node 10-based image. A single web server handles deli
 
 The following are the core environment variables that are required at a minimum.
 
-**Tip**: The quickstart solutions set reasonable default values for these variables, so you can get started without worrying about configuration.
+> **Tip**: The quickstart solutions set reasonable default values for these variables, so you can get started without worrying about configuration.
 
 | Variable Name | Description |
 | ------------- | ----------- |

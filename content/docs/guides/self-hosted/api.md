@@ -1,5 +1,5 @@
 ---
-title: API
+title: Pulumi API
 menu:
     userguides:
         parent: self_hosted
@@ -29,7 +29,7 @@ The API Service provides the necessary APIs for both the CLI and the Console.
 | Storage | 20GB SSD |  For MySQL data.<br><br>**Note**: By default, the installation uses a single data path via `PULUMI_DATA_PATH` to map both the SQL data volume and the object storage path. Specify a volume for the `db` container as required. |
 | Storage | 200GB SSD |  For Object Storage.<br><br>**Note**: By default, the installation uses a single data path via `PULUMI_DATA_PATH` to map both the SQL data volume and the object storage path. A dedicated path can be set via env var `PULUMI_LOCAL_OBJECTS` for the `api` container. |
 
-**Note**: The storage recommendations for the Object Storage can be lesser than 200GB depending on your organization size and the expected usage.
+> **Note**: The storage recommendations for the Object Storage can be lesser than 200GB depending on your organization size and the expected usage.
 
 ## What's In The Container?
 

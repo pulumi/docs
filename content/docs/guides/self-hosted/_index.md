@@ -10,50 +10,55 @@ meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi wi
 
 <div class="note note-info" role="alert">
     <p>
-        <strong>Licensing</strong> In order to run the Pulumi Service in your own environment, you will need a license key. Please contact <a href="mailto:sales@pulumi.com">sales@pulumi.com</a> to get started. Self-hosting is available only to <a href="https://www.pulumi.com/pricing"><strong>Enterprise Edition</strong></a> customers.
+        Self-hosting is only available with the <strong>Pulumi Enterprise Edition</strong>.
     </p>
 </div>
 
-This guide walks you through the components that are required to get the Pulumi Service running your own environment. A self-hosted Pulumi Service is a great way to securely use Pulumi within your organization, and still get all of the benefits that Pulumi has to offer.
+This guide walks you through the components that are required to get the Pulumi Service running in your own environment.
 
-The Pulumi Service has two services that need to be hosted for the purposes of remote state management and a management UI for users.
+There are two services that need to be hosted for the purposes of remote state management and a management UI for users. To store user data, and the state for your [stacks](https://www.pulumi.com/docs/intro/concepts/stack/), the following components are also needed:
 
-To store user data, and the state for your [stacks](https://www.pulumi.com/docs/intro/concepts/stack/), the following components are also needed:
+* MySQL 5.6 DB server with at least 20GB storage space for data
+* Minimum 50GB SSD for object storage
 
-* MySQL 5.6 (higher versions may work, but untested) DB server with at least 20GB storage space for data
-* Minimum 50GB SSD for object storage (gzipped, JSON files representing state for your stacks)
-
-**Note**: You are responsible for the safe backup and storage of the object storage volume, as well as your DB’s data volume.
+> **Note**: You are responsible for the safe backup and storage of the object storage volume, as well as your DB’s data volume.
 
 ## Self-Hosted vs. Managed Pulumi Service
 
-The self-hosted version of the Pulumi Service also offers some features that are not available with the managed version (i.e. app.pulumi.com). The self-hosted installation of Pulumi provides more control, as well as the security of having a dedicated instance for your organization. Contact us for a full list of all of the benefits of a self-hosted installation.
+The self-hosted version of the Pulumi Service also offers some features that are not available with the managed version (i.e. [app.pulumi.com](https://app.pulumi.com)). The self-hosted installation of Pulumi provides full control of your data -- a requirement for enterprises in certain industries with specific security compliance requirements.
+
+If you are unsure about whether a self-hosted version of the Pulumi Service is right for your organization, [contact us](https://www.pulumi.com/about/#contact) to learn more.
 
 ## Deployment Topology
 
-Pulumi can be installed in almost any environment. The self-hosted install can be integrated with other on-premise services such as GitHub Enterprise, SAML SSO providers as well as making Pulumi highly-available within your organization.
+Pulumi can be installed in almost any on-premise or cloud provider environment. The self-hosted install can be integrated with your preferred identity provider as well, such as:
 
-Here are some examples of deployment topologies.
+* GitHub Enterprise
+* GitLab Enterprise
+* SAML SSO
+* Email/password identity
 
-{{< figure src="/images/docs/guides/self-hosted/on-prem-internet-config.png" caption="Internet Accessible Deployment" >}}
+Here are some examples of deployment topologies:
 
-{{< figure src="/images/docs/guides/self-hosted/on-prem-intranet-config.png" caption="Intranet Deployment" >}}
+{{< figure src="/images/docs/guides/self-hosted/on-prem-internet-config.png" caption="Internet-Accessible Deployment" >}}
+
+{{< figure src="/images/docs/guides/self-hosted/on-prem-intranet-config.png" caption="Intranet-Only Deployment" >}}
 
 ## Components
 
 | Component | Repository |
 | --------- | ---------- |
-| [Service]({{< relref "service" >}}) | https://hub.docker.com/r/pulumi/service/ |
+| [API]({{< relref "api" >}}) | https://hub.docker.com/r/pulumi/service/ |
 | [Console]({{< relref "console" >}}) |	https://hub.docker.com/r/pulumi/console/ |
 | Migrations | https://hub.docker.com/r/pulumi/migrations/ |
 
-**Note**: The above container image repositories are private.
+> **Note**: The above container image repositories are private.
 
 ## Quickstart
 
 The above Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.
 
-**Note**: docker-compose is not required to run these containers. We recommend that you choose a container orchestrator with which your IT team has experience.
+> **Note**: docker-compose is not required to run these containers. We recommend that you choose a container orchestrator with which your IT team has experience.
 
 In addition to the environment variables that each container exposes, the following can be set when using either of the quickstart solutions below. These are used by the `run-ee.sh` script provided to you as part of the self-evaluation package. If any of these variables are not set when you run `run-ee.sh`, the default values will be used.
 
@@ -75,10 +80,10 @@ Just see this quickstart video recorded by our CTO, Luke Hoban. You, too, can ge
 
 If you would like to use Pulumi’s all-in-one solution, you just need to run the run-ee.sh like this: `run-ee.sh -f ./all-in-one/docker-compose.yml`. This will start all of the necessary components using working defaults, including a DB container that is migrated using our DB scripts.
 
-**Note**: Values for the environment variables used by the each of the containers in this approach should be set in the `./all-in-one/docker-compose.yml` file.
+> **Note**: Values for the environment variables used by the each of the containers in this approach should be set in the `./all-in-one/docker-compose.yml` file.
 
 ### Quickstart Option #2 - Provide your own Database
 
 The service is tested against a MySQL version 5.6 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`. If your DB instance uses a different port, be sure to update 
 
-**Note**: You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance. Your Pulumi sales contact should be able to provide you with this.
+> **Note**: You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance. Your Pulumi sales contact should be able to provide you with this.
