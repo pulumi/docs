@@ -217,7 +217,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.idp.Oidc.account_link_action">
@@ -458,7 +458,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -544,7 +544,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.idp.Saml.account_link_action">
@@ -785,7 +785,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -842,7 +842,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.idp.SamlKey.created">
@@ -908,7 +908,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_key.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -990,7 +990,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.idp.Social.account_link_action">
@@ -1217,7 +1217,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1269,7 +1269,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/idp_metadata_saml.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/idp_metadata_saml.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_metadata_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_metadata_saml.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1286,7 +1286,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/idp_saml.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/idp_saml.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_saml.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

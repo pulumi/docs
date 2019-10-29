@@ -27,7 +27,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/factor.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/factor.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/factor.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/factor.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.factor.Factor.active">
@@ -51,7 +51,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/factor.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/factor.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/factor.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/factor.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

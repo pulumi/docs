@@ -80,7 +80,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.group.Group.description">
@@ -111,7 +111,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -169,7 +169,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.group.Roles.admin_roles">
@@ -200,7 +200,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -261,7 +261,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.group.Rule.expression_type">
@@ -313,7 +313,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -358,7 +358,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_okta.group.get_everyone_group">
 <code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">get_everyone_group</code><span class="sig-paren">(</span><em class="sig-param">include_users=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.get_everyone_group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Use this data source to retrieve the Everyone group from Okta. The same can be achieved with the <code class="docutils literal notranslate"><span class="pre">group.Group</span></code> data source with <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;Everyone&quot;</span></code>. This is simply a shortcut.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/everyone_group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/everyone_group.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -374,7 +377,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/group.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/group.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/group.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
