@@ -38,10 +38,24 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="mt">
 {{% md %}}
 
-TODO
+Azure has a catalog of [managed infrastructure][azure-managed-svcs] services that
+support and complement Kubernetes clusters and their workloads.
+
+At a minimum, networking must be configured for deployment of an AKS cluster.
+
+AWS exposes a [Virtual Network][azure-vpc] API which can be used to create
+resources into a virtual network. With the VPC you can define
+use, alongwith [Route Tables][azure-rts], [Subnets][azure-subnets],
+[Security Groups][azure-sgs] and [VPN Gateways][azure-vpn-gw].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
+[azure-managed-svcs]: https://azure.microsoft.com/en-us/services/
+[azure-vpc]: https://azure.microsoft.com/en-us/services/
+[azure-subnets]: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm#subnets
+[azure-rts]: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#user-defined
+[azure-sgs]: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm#security
+[azure-vpn-gw]: https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/02-managed-infra
 {{% /md %}}
 </div>
@@ -115,15 +129,24 @@ export const privateSubnetIds = vpc.privateSubnetIds;
 <div class="mt">
 {{% md %}}
 
-TODO 
+### Create a New Virtual Network for Kubernetes
 
-### Create a New VPC for Kubernetes
-
-Create a new VPC to use with the cluster that uses custom settings and
+Create a new Virtual Network to use with the cluster that uses custom settings and
 best-practice defaults.
 
 ```typescript
-// TODO
+// Create a Virtual Network for the cluster.
+const vnet = new azure.network.VirtualNetwork(name, {
+    resourceGroupName: config.resourceGroupName,
+    addressSpaces: ["10.2.0.0/16"],
+});
+
+// Create a Subnet for the cluster.
+const subnet = new azure.network.Subnet(name, {
+    resourceGroupName: config.resourceGroupName,
+    virtualNetworkName: vnet.name,
+    addressPrefix: "10.2.1.0/24",
+});
 ```
 
 {{% /md %}}
@@ -267,8 +290,9 @@ and [AWS VPC Recommendations](https://docs.aws.amazon.com/vpc/latest/userguide/V
 <div class="mt">
 {{% md %}}
 
-TODO
+See the official Networking [docs][azure-net-docs] for more details.
 
+[azure-net-docs]: https://docs.microsoft.com/en-us/azure/aks/concepts-network
 {{% /md %}}
 </div>
 
@@ -328,10 +352,60 @@ See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] and the
 <div class="mt">
 {{% md %}}
 
-TODO
+## Azure Object Storage
 
 ```typescript
-// TODO
+import * as azure from "@pulumi/azure";
+
+// Create an Azure Resource Group.
+const resourceGroup = new azure.core.ResourceGroup("website-rg", {
+    location: azure.Locations.WestUS,
+});
+
+// Create a Storage Account.
+const storageAccount = new azure.storage.Account("websitesa", {
+    resourceGroupName: resourceGroup.name,
+    accountReplicationType: "LRS",
+    accountTier: "Standard",
+    accountKind: "StorageV2",
+});
+
+// Upload the following files from a local directory.
+["index.html", "404.html"].map(name =>
+    new azure.storage.Blob(name, {
+        name,
+        resourceGroupName: resourceGroup.name,
+        storageAccountName: storageAccount.name,
+        storageContainerName: "wwwroot",
+        type: "block",
+        source: `./wwwroot/${name}`,
+        contentType: "text/html",
+    }),
+);
+```
+## Azure Container Registry (ACR)
+
+```typescript
+import * as azure from "@pulumi/azure";
+
+// Create an Azure Resource Group.
+const resourceGroup = new azure.core.ResourceGroup("rg", {
+    location: "West US",
+    name: "resourceGroup1",
+});
+
+// Create an ACR.
+const acr = new azure.containerservice.Registry("acr", {
+    adminEnabled: false,
+    georeplicationLocations: [
+        "East US",
+        "West Europe",
+    ],
+    location: resourceGroup.location,
+    name: "containerRegistry1",
+    resourceGroupName: resourceGroup.name,
+    sku: "Premium",
+});
 ```
 
 {{% /md %}}
@@ -344,7 +418,7 @@ TODO
 TODO
 
 ```typescript
-// TODO
+TODO
 ```
 
 {{% /md %}}
