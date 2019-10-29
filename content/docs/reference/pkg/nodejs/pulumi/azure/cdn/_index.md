@@ -41,7 +41,7 @@ meta_desc: "Explore members of the cdn module in the @pulumi/azure package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Endpoint" data-link-title="Endpoint">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L49">
         Resource <strong>Endpoint</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ const testEndpoint = new azure.cdn.Endpoint("test", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_endpoint.html.markdown.
 
 <h4 class="pdoc-member-header" id="Endpoint-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L140"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L140"> <b>constructor</b></a>
 </h4>
 
 
@@ -102,7 +102,7 @@ Create a Endpoint resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Endpoint-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -113,14 +113,14 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Endpoint-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Endpoint-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -131,7 +131,7 @@ Returns true if the given object is an instance of Endpoint.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Endpoint-contentTypesToCompresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L79">property <b>contentTypesToCompresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L79">property <b>contentTypesToCompresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentTypesToCompresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -139,7 +139,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
 
 <h4 class="pdoc-member-header" id="Endpoint-geoFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L83">property <b>geoFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L83">property <b>geoFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>geoFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EndpointGeoFilter'>outputs.cdn.EndpointGeoFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -147,12 +147,12 @@ An array of strings that indicates a content types on which compression will be 
 A set of Geo Filters for this CDN Endpoint. Each `geoFilter` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="Endpoint-hostName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L84">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L84">property <b>hostName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Endpoint-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -161,7 +161,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Endpoint-isCompressionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L88">property <b>isCompressionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L88">property <b>isCompressionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isCompressionEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ deployments and may be missing (undefined) during planning phases.
 Indicates whether compression is to be enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Endpoint-isHttpAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L92">property <b>isHttpAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L92">property <b>isHttpAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isHttpAllowed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ Indicates whether compression is to be enabled. Defaults to false.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Endpoint-isHttpsAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L96">property <b>isHttpsAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L96">property <b>isHttpsAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isHttpsAllowed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ Defaults to `true`.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Endpoint-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L100">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L100">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ Defaults to `true`.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Endpoint-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Endpoint-optimizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L108">property <b>optimizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L108">property <b>optimizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optimizationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ Specifies the name of the CDN Endpoint. Changing this forces a new resource to b
 What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
 
 <h4 class="pdoc-member-header" id="Endpoint-originHostHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L116">property <b>originHostHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L116">property <b>originHostHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>originHostHeader: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ What types of optimization should this CDN Endpoint optimize for? Possible value
 The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
 
 <h4 class="pdoc-member-header" id="Endpoint-originPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L120">property <b>originPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L120">property <b>originPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>originPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ The host header CDN provider will send along with content requests to origins. D
 The path used at for origin requests.
 
 <h4 class="pdoc-member-header" id="Endpoint-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L112">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L112">property <b>origins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EndpointOrigin'>outputs.cdn.EndpointOrigin</a>[]&gt;;</code></pre>
@@ -233,7 +233,7 @@ The path used at for origin requests.
 The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="Endpoint-probePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L124">property <b>probePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L124">property <b>probePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>probePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ The set of origins of the CDN endpoint. When multiple origins exist, the first o
 the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `originPath`.
 
 <h4 class="pdoc-member-header" id="Endpoint-profileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L128">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L128">property <b>profileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -249,7 +249,7 @@ the path to a file hosted on the origin which helps accelerate delivery of the d
 The CDN Profile to which to attach the CDN Endpoint.
 
 <h4 class="pdoc-member-header" id="Endpoint-querystringCachingBehaviour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L132">property <b>querystringCachingBehaviour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L132">property <b>querystringCachingBehaviour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>querystringCachingBehaviour: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ The CDN Profile to which to attach the CDN Endpoint.
 Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. Defaults to `IgnoreQueryString`.
 
 <h4 class="pdoc-member-header" id="Endpoint-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L136">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L136">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `Byp
 The name of the resource group in which to create the CDN Endpoint.
 
 <h4 class="pdoc-member-header" id="Endpoint-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L140">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L140">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -273,7 +273,7 @@ The name of the resource group in which to create the CDN Endpoint.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Endpoint-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -282,7 +282,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Profile" data-link-title="Profile">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L36">
         Resource <strong>Profile</strong>
     </a>
 </h3>
@@ -316,7 +316,7 @@ const testProfile = new azure.cdn.Profile("test", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cdn_profile.html.markdown.
 
 <h4 class="pdoc-member-header" id="Profile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -330,7 +330,7 @@ Create a Profile resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Profile-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -341,14 +341,14 @@ Get an existing Profile resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Profile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Profile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -359,7 +359,7 @@ Returns true if the given object is an instance of Profile.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Profile-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -368,7 +368,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Profile-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L66">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L66">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -376,7 +376,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Profile-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -385,7 +385,7 @@ Specifies the name of the CDN Profile. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="Profile-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L76">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L76">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -394,7 +394,7 @@ The name of the resource group in which to
 create the CDN Profile.
 
 <h4 class="pdoc-member-header" id="Profile-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L80">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L80">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -402,7 +402,7 @@ create the CDN Profile.
 The pricing related information of current CDN profile. Accepted values are `Standard_Akamai`, `Standard_ChinaCdn`, `Standard_Microsoft`, `Standard_Verizon` or `Premium_Verizon`.
 
 <h4 class="pdoc-member-header" id="Profile-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L84">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L84">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -410,7 +410,7 @@ The pricing related information of current CDN profile. Accepted values are `Sta
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Profile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -421,7 +421,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getProfile" data-link-title="getProfile">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L28">
         Data Source <strong>getProfile</strong>
     </a>
 </h3>
@@ -451,7 +451,7 @@ export const cdnProfileId = test.id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EndpointArgs" data-link-title="EndpointArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L285">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L285">
         interface <strong>EndpointArgs</strong>
     </a>
 </h3>
@@ -461,7 +461,7 @@ export const cdnProfileId = test.id;
 The set of arguments for constructing a Endpoint resource.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-contentTypesToCompresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L289">property <b>contentTypesToCompresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L289">property <b>contentTypesToCompresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentTypesToCompresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -469,7 +469,7 @@ The set of arguments for constructing a Endpoint resource.
 An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-geoFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L293">property <b>geoFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L293">property <b>geoFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geoFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EndpointGeoFilter'>inputs.cdn.EndpointGeoFilter</a>&gt;[]&gt;;</code></pre>
@@ -477,7 +477,7 @@ An array of strings that indicates a content types on which compression will be 
 A set of Geo Filters for this CDN Endpoint. Each `geoFilter` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-isCompressionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L297">property <b>isCompressionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L297">property <b>isCompressionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isCompressionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -485,7 +485,7 @@ A set of Geo Filters for this CDN Endpoint. Each `geoFilter` block supports fiel
 Indicates whether compression is to be enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-isHttpAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L301">property <b>isHttpAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L301">property <b>isHttpAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isHttpAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ Indicates whether compression is to be enabled. Defaults to false.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-isHttpsAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L305">property <b>isHttpsAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L305">property <b>isHttpsAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isHttpsAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ Defaults to `true`.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L309">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L309">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ Defaults to `true`.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L313">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L313">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +517,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-optimizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L317">property <b>optimizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L317">property <b>optimizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optimizationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -525,7 +525,7 @@ Specifies the name of the CDN Endpoint. Changing this forces a new resource to b
 What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-originHostHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L325">property <b>originHostHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L325">property <b>originHostHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originHostHeader?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ What types of optimization should this CDN Endpoint optimize for? Possible value
 The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-originPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L329">property <b>originPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L329">property <b>originPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ The host header CDN provider will send along with content requests to origins. D
 The path used at for origin requests.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L321">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L321">property <b>origins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EndpointOrigin'>inputs.cdn.EndpointOrigin</a>&gt;[]&gt;;</code></pre>
@@ -549,7 +549,7 @@ The path used at for origin requests.
 The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-probePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L333">property <b>probePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L333">property <b>probePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>probePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -557,7 +557,7 @@ The set of origins of the CDN endpoint. When multiple origins exist, the first o
 the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `originPath`.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-profileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L337">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L337">property <b>profileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -565,7 +565,7 @@ the path to a file hosted on the origin which helps accelerate delivery of the d
 The CDN Profile to which to attach the CDN Endpoint.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-querystringCachingBehaviour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L341">property <b>querystringCachingBehaviour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L341">property <b>querystringCachingBehaviour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>querystringCachingBehaviour?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -573,7 +573,7 @@ The CDN Profile to which to attach the CDN Endpoint.
 Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. Defaults to `IgnoreQueryString`.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L345">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L345">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -581,7 +581,7 @@ Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `Byp
 The name of the resource group in which to create the CDN Endpoint.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L349">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L349">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -589,7 +589,7 @@ The name of the resource group in which to create the CDN Endpoint.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="EndpointState" data-link-title="EndpointState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L214">
         interface <strong>EndpointState</strong>
     </a>
 </h3>
@@ -599,7 +599,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Endpoint resources.
 
 <h4 class="pdoc-member-header" id="EndpointState-contentTypesToCompresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L218">property <b>contentTypesToCompresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L218">property <b>contentTypesToCompresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentTypesToCompresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -607,7 +607,7 @@ Input properties used for looking up and filtering Endpoint resources.
 An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
 
 <h4 class="pdoc-member-header" id="EndpointState-geoFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L222">property <b>geoFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L222">property <b>geoFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geoFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EndpointGeoFilter'>inputs.cdn.EndpointGeoFilter</a>&gt;[]&gt;;</code></pre>
@@ -615,12 +615,12 @@ An array of strings that indicates a content types on which compression will be 
 A set of Geo Filters for this CDN Endpoint. Each `geoFilter` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="EndpointState-hostName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L223">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L223">property <b>hostName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EndpointState-isCompressionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L227">property <b>isCompressionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L227">property <b>isCompressionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isCompressionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -628,7 +628,7 @@ A set of Geo Filters for this CDN Endpoint. Each `geoFilter` block supports fiel
 Indicates whether compression is to be enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="EndpointState-isHttpAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L231">property <b>isHttpAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L231">property <b>isHttpAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isHttpAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -636,7 +636,7 @@ Indicates whether compression is to be enabled. Defaults to false.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EndpointState-isHttpsAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L235">property <b>isHttpsAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L235">property <b>isHttpsAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isHttpsAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ Defaults to `true`.
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EndpointState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L239">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L239">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -652,7 +652,7 @@ Defaults to `true`.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EndpointState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L243">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L243">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -660,7 +660,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the CDN Endpoint. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EndpointState-optimizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L247">property <b>optimizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L247">property <b>optimizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optimizationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -668,7 +668,7 @@ Specifies the name of the CDN Endpoint. Changing this forces a new resource to b
 What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
 
 <h4 class="pdoc-member-header" id="EndpointState-originHostHeader">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L255">property <b>originHostHeader</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L255">property <b>originHostHeader</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originHostHeader?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -676,7 +676,7 @@ What types of optimization should this CDN Endpoint optimize for? Possible value
 The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
 
 <h4 class="pdoc-member-header" id="EndpointState-originPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L259">property <b>originPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L259">property <b>originPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -684,7 +684,7 @@ The host header CDN provider will send along with content requests to origins. D
 The path used at for origin requests.
 
 <h4 class="pdoc-member-header" id="EndpointState-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L251">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L251">property <b>origins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EndpointOrigin'>inputs.cdn.EndpointOrigin</a>&gt;[]&gt;;</code></pre>
@@ -692,7 +692,7 @@ The path used at for origin requests.
 The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="EndpointState-probePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L263">property <b>probePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L263">property <b>probePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>probePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ The set of origins of the CDN endpoint. When multiple origins exist, the first o
 the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `originPath`.
 
 <h4 class="pdoc-member-header" id="EndpointState-profileName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L267">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L267">property <b>profileName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profileName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -708,7 +708,7 @@ the path to a file hosted on the origin which helps accelerate delivery of the d
 The CDN Profile to which to attach the CDN Endpoint.
 
 <h4 class="pdoc-member-header" id="EndpointState-querystringCachingBehaviour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L271">property <b>querystringCachingBehaviour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L271">property <b>querystringCachingBehaviour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>querystringCachingBehaviour?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -716,7 +716,7 @@ The CDN Profile to which to attach the CDN Endpoint.
 Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. Defaults to `IgnoreQueryString`.
 
 <h4 class="pdoc-member-header" id="EndpointState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L275">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L275">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `Byp
 The name of the resource group in which to create the CDN Endpoint.
 
 <h4 class="pdoc-member-header" id="EndpointState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/endpoint.ts#L279">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/endpoint.ts#L279">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -732,7 +732,7 @@ The name of the resource group in which to create the CDN Endpoint.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetProfileArgs" data-link-title="GetProfileArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L47">
         interface <strong>GetProfileArgs</strong>
     </a>
 </h3>
@@ -742,7 +742,7 @@ A mapping of tags to assign to the resource.
 A collection of arguments for invoking getProfile.
 
 <h4 class="pdoc-member-header" id="GetProfileArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -750,7 +750,7 @@ A collection of arguments for invoking getProfile.
 The name of the CDN Profile.
 
 <h4 class="pdoc-member-header" id="GetProfileArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L55">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L55">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -758,7 +758,7 @@ The name of the CDN Profile.
 The name of the resource group in which the CDN Profile exists.
 
 <h3 class="pdoc-module-header" id="GetProfileResult" data-link-title="GetProfileResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L61">
         interface <strong>GetProfileResult</strong>
     </a>
 </h3>
@@ -768,7 +768,7 @@ The name of the resource group in which the CDN Profile exists.
 A collection of values returned by getProfile.
 
 <h4 class="pdoc-member-header" id="GetProfileResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L79">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -776,7 +776,7 @@ A collection of values returned by getProfile.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetProfileResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L65">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L65">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -784,17 +784,17 @@ id is the provider-assigned unique ID for this managed resource.
 The Azure Region where the resource exists.
 
 <h4 class="pdoc-member-header" id="GetProfileResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L67">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L67">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L71">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L71">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -802,7 +802,7 @@ The Azure Region where the resource exists.
 The pricing related information of current CDN profile.
 
 <h4 class="pdoc-member-header" id="GetProfileResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/getProfile.ts#L75">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/getProfile.ts#L75">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -810,7 +810,7 @@ The pricing related information of current CDN profile.
 A mapping of tags assigned to the resource.
 
 <h3 class="pdoc-module-header" id="ProfileArgs" data-link-title="ProfileArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L159">
         interface <strong>ProfileArgs</strong>
     </a>
 </h3>
@@ -820,7 +820,7 @@ A mapping of tags assigned to the resource.
 The set of arguments for constructing a Profile resource.
 
 <h4 class="pdoc-member-header" id="ProfileArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L163">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L163">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -828,7 +828,7 @@ The set of arguments for constructing a Profile resource.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProfileArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -837,7 +837,7 @@ Specifies the name of the CDN Profile. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProfileArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L173">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L173">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -846,7 +846,7 @@ The name of the resource group in which to
 create the CDN Profile.
 
 <h4 class="pdoc-member-header" id="ProfileArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L177">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L177">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -854,7 +854,7 @@ create the CDN Profile.
 The pricing related information of current CDN profile. Accepted values are `Standard_Akamai`, `Standard_ChinaCdn`, `Standard_Microsoft`, `Standard_Verizon` or `Premium_Verizon`.
 
 <h4 class="pdoc-member-header" id="ProfileArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L181">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L181">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -862,7 +862,7 @@ The pricing related information of current CDN profile. Accepted values are `Sta
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ProfileState" data-link-title="ProfileState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L131">
         interface <strong>ProfileState</strong>
     </a>
 </h3>
@@ -872,7 +872,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Profile resources.
 
 <h4 class="pdoc-member-header" id="ProfileState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L135">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L135">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ Input properties used for looking up and filtering Profile resources.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProfileState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -889,7 +889,7 @@ Specifies the name of the CDN Profile. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProfileState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L145">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L145">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -898,7 +898,7 @@ The name of the resource group in which to
 create the CDN Profile.
 
 <h4 class="pdoc-member-header" id="ProfileState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L149">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L149">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -906,7 +906,7 @@ create the CDN Profile.
 The pricing related information of current CDN profile. Accepted values are `Standard_Akamai`, `Standard_ChinaCdn`, `Standard_Microsoft`, `Standard_Verizon` or `Premium_Verizon`.
 
 <h4 class="pdoc-member-header" id="ProfileState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/0cb2da2d4a7346233ac5e937167bbe5be7357b6f/sdk/nodejs/cdn/profile.ts#L153">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/cdn/profile.ts#L153">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>

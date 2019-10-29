@@ -13,6 +13,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.datafactory"></span><dl class="class">
+<dt id="pulumi_azure.datafactory.AwaitableGetFactoryResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.datafactory.</code><code class="sig-name descname">AwaitableGetFactoryResult</code><span class="sig-paren">(</span><em class="sig-param">github_configurations=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vsts_configurations=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.AwaitableGetFactoryResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.datafactory.DatasetMysql">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.datafactory.</code><code class="sig-name descname">DatasetMysql</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_properties=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">data_factory_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">linked_service_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">schema_columns=None</em>, <em class="sig-param">table_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.DatasetMysql" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a MySQL Dataset inside a Azure Data Factory.</p>
@@ -727,6 +732,265 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.datafactory.Factory.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.Factory.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.datafactory.GetFactoryResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.datafactory.</code><code class="sig-name descname">GetFactoryResult</code><span class="sig-paren">(</span><em class="sig-param">github_configurations=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vsts_configurations=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.GetFactoryResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getFactory.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.GetFactoryResult.github_configurations">
+<code class="sig-name descname">github_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.GetFactoryResult.github_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">github_configuration</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.GetFactoryResult.identities">
+<code class="sig-name descname">identities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.GetFactoryResult.identities" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.GetFactoryResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.GetFactoryResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Azure location where the resource exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.GetFactoryResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.GetFactoryResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.GetFactoryResult.vsts_configurations">
+<code class="sig-name descname">vsts_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.GetFactoryResult.vsts_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">vsts_configuration</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.GetFactoryResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.GetFactoryResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.datafactory.</code><code class="sig-name descname">IntegrationRuntimeManaged</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_info=None</em>, <em class="sig-param">custom_setup_script=None</em>, <em class="sig-param">data_factory_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_parallel_executions_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_size=None</em>, <em class="sig-param">number_of_nodes=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">vnet_integration=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Azure Data Factory Managed Integration Runtime.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>catalog_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">catalog_info</span></code> block as defined below.</p></li>
+<li><p><strong>custom_setup_script</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">custom_setup_script</span></code> block as defined below.</p></li>
+<li><p><strong>data_factory_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Factory the Managed Integration Runtime belongs to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>edition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Managed Integration Runtime edition. Valid values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
+<li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the license that is used. Valid values are <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code> and <code class="docutils literal notranslate"><span class="pre">BasePrize</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code>.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>max_parallel_executions_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Defines the maximum parallel executions per node. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>. Max is <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the name of the Managed Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
+</p></li>
+<li><p><strong>node_size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of the nodes on which the Managed Integration Runtime runs. Valid values are: <code class="docutils literal notranslate"><span class="pre">Standard_D2_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D4_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D8_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D16_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D32_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D64_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E2_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E4_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E8_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E16_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E32_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E64_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D1_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D2_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D3_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D4_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_A4_v2</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_A8_v2</span></code></p></li>
+<li><p><strong>number_of_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of nodes for the Managed Integration Runtime. Max is <code class="docutils literal notranslate"><span class="pre">10</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Managed Integration Runtime. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>vnet_integration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">vnet_integration</span></code> block as defined below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>catalog_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">administratorLogin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">administratorPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pricingTier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>custom_setup_script</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">blobContainerUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sasToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>vnet_integration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_integration_runtime_managed.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_integration_runtime_managed.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.catalog_info">
+<code class="sig-name descname">catalog_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.catalog_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">catalog_info</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">administratorLogin</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">administratorPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pricingTier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.custom_setup_script">
+<code class="sig-name descname">custom_setup_script</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.custom_setup_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">custom_setup_script</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">blobContainerUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sasToken</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.data_factory_name">
+<code class="sig-name descname">data_factory_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.data_factory_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Data Factory the Managed Integration Runtime belongs to. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.edition">
+<code class="sig-name descname">edition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.edition" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Managed Integration Runtime edition. Valid values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.license_type">
+<code class="sig-name descname">license_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.license_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the license that is used. Valid values are <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code> and <code class="docutils literal notranslate"><span class="pre">BasePrize</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.max_parallel_executions_per_node">
+<code class="sig-name descname">max_parallel_executions_per_node</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.max_parallel_executions_per_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the maximum parallel executions per node. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>. Max is <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Managed Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.node_size">
+<code class="sig-name descname">node_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.node_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size of the nodes on which the Managed Integration Runtime runs. Valid values are: <code class="docutils literal notranslate"><span class="pre">Standard_D2_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D4_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D8_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D16_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D32_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D64_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E2_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E4_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E8_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E16_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E32_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E64_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D1_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D2_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D3_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D4_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_A4_v2</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_A8_v2</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.number_of_nodes">
+<code class="sig-name descname">number_of_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.number_of_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of nodes for the Managed Integration Runtime. Max is <code class="docutils literal notranslate"><span class="pre">10</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Managed Integration Runtime. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.vnet_integration">
+<code class="sig-name descname">vnet_integration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.vnet_integration" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">vnet_integration</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_info=None</em>, <em class="sig-param">custom_setup_script=None</em>, <em class="sig-param">data_factory_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_parallel_executions_per_node=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_size=None</em>, <em class="sig-param">number_of_nodes=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">vnet_integration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IntegrationRuntimeManaged resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>catalog_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">catalog_info</span></code> block as defined below.</p></li>
+<li><p><strong>custom_setup_script</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">custom_setup_script</span></code> block as defined below.</p></li>
+<li><p><strong>data_factory_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Factory the Managed Integration Runtime belongs to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>edition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Managed Integration Runtime edition. Valid values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
+<li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the license that is used. Valid values are <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code> and <code class="docutils literal notranslate"><span class="pre">BasePrize</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">LicenseIncluded</span></code>.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>max_parallel_executions_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Defines the maximum parallel executions per node. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>. Max is <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the name of the Managed Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
+</p></li>
+<li><p><strong>node_size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of the nodes on which the Managed Integration Runtime runs. Valid values are: <code class="docutils literal notranslate"><span class="pre">Standard_D2_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D4_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D8_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D16_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D32_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D64_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E2_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E4_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E8_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E16_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E32_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_E64_v3</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D1_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D2_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D3_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_D4_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_A4_v2</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_A8_v2</span></code></p></li>
+<li><p><strong>number_of_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of nodes for the Managed Integration Runtime. Max is <code class="docutils literal notranslate"><span class="pre">10</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Managed Integration Runtime. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>vnet_integration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">vnet_integration</span></code> block as defined below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>catalog_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">administratorLogin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">administratorPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pricingTier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>custom_setup_script</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">blobContainerUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sasToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>vnet_integration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_integration_runtime_managed.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_integration_runtime_managed.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.datafactory.IntegrationRuntimeManaged.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.IntegrationRuntimeManaged.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1492,6 +1756,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.datafactory.get_factory">
+<code class="sig-prename descclassname">pulumi_azure.datafactory.</code><code class="sig-name descname">get_factory</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.get_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Azure Data Factory (Version 2).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Data Factory to retrieve information about.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the resource group where the Data Factory exists.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/data_factory.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/data_factory.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

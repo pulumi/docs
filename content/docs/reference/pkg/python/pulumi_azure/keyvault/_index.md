@@ -1583,8 +1583,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>key_vault_id</strong> (<em>str</em>) – Specifies the ID of the Key Vault instance where the Secret resides, available on the <code class="docutils literal notranslate"><span class="pre">keyvault.KeyVault</span></code> Data Source / Resource.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Key Vault Key.</p></li>
-<li><p><strong>vault_uri</strong> (<em>str</em>) – Specifies the ID of the Key Vault Key Vault instance where the Key resides, available on the <code class="docutils literal notranslate"><span class="pre">keyvault.KeyVault</span></code> Data Source / Resource.</p></li>
 </ul>
 </dd>
 </dl>

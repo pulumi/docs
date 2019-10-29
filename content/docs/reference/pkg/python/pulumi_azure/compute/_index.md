@@ -194,6 +194,145 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.compute.BastionHost">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">BastionHost</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_configuration=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.BastionHost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Bastion Host Instance.</p>
+<blockquote>
+<div><p><strong>Note:</strong> Bastion Host Instances are a preview feature in Azure, and therefore are only supported in a select number of regions. <a class="reference external" href="https://docs.microsoft.com/en-us/azure/bastion/bastion-faq">Read more</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ip_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as defined below.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Bastion Host.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>ip_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.compute.BastionHost.dns_name">
+<code class="sig-name descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.BastionHost.dns_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The FQDN for the Azure Bastion Host.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.BastionHost.ip_configuration">
+<code class="sig-name descname">ip_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.BastionHost.ip_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.BastionHost.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.BastionHost.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.BastionHost.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.BastionHost.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.BastionHost.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.BastionHost.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Bastion Host.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.BastionHost.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.BastionHost.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.compute.BastionHost.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">ip_configuration=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.BastionHost.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing BastionHost resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN for the Azure Bastion Host.</p></li>
+<li><p><strong>ip_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as defined below.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Bastion Host.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>ip_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bastion_host.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.compute.BastionHost.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.BastionHost.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.compute.BastionHost.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.BastionHost.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.compute.DataDiskAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">DataDiskAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">caching=None</em>, <em class="sig-param">create_option=None</em>, <em class="sig-param">lun=None</em>, <em class="sig-param">managed_disk_id=None</em>, <em class="sig-param">virtual_machine_id=None</em>, <em class="sig-param">write_accelerator_enabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DataDiskAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages attaching a Disk to a Virtual Machine.</p>
@@ -1333,11 +1472,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.ScaleSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">ScaleSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automatic_os_upgrade=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">extensions=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profiles=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_profile_data_disks=None</em>, <em class="sig-param">storage_profile_image_reference=None</em>, <em class="sig-param">storage_profile_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_policy_mode=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ScaleSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a virtual machine scale set.</p>
-<blockquote>
-<div><p><strong>Note:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-</div></blockquote>
+<dd><p>Create a ScaleSet resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1405,10 +1540,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An ip_configuration block as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of one application gateway. Multiple scale sets cannot use the same application gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to inbound NAT rules for load balancers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Describes a virtual machines scale set IP Configuration’s PublicIPAddress configuration. The public_ip_address_configuration is documented below.</p>
@@ -1598,10 +1733,10 @@ When setting this field <code class="docutils literal notranslate"><span class="
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An ip_configuration block as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of one application gateway. Multiple scale sets cannot use the same application gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to inbound NAT rules for load balancers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Describes a virtual machines scale set IP Configuration’s PublicIPAddress configuration. The public_ip_address_configuration is documented below.</p>
@@ -1887,10 +2022,10 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An ip_configuration block as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of one application gateway. Multiple scale sets cannot use the same application gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to inbound NAT rules for load balancers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Describes a virtual machines scale set IP Configuration’s PublicIPAddress configuration. The public_ip_address_configuration is documented below.</p>
@@ -2049,9 +2184,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImage">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">SharedImage</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">eula=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">identifier=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">privacy_statement_uri=None</em>, <em class="sig-param">release_note_uri=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Shared Image within a Shared Image Gallery.</p>
-<blockquote>
-<div><p><strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">how to register for the Public Preview here</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2229,9 +2361,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImageGallery">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">SharedImageGallery</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImageGallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Shared Image Gallery.</p>
-<blockquote>
-<div><p><strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">how to register for the Public Preview here</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2351,9 +2480,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImageVersion">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">SharedImageVersion</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">exclude_from_latest=None</em>, <em class="sig-param">gallery_name=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">managed_image_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_regions=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImageVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Version of a Shared Image within a Shared Image Gallery.</p>
-<blockquote>
-<div><p><strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">how to register for the Public Preview here</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2687,10 +2813,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.VirtualMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">VirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">availability_set_id=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">delete_data_disks_on_termination=None</em>, <em class="sig-param">delete_os_disk_on_termination=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">os_profile_linux_config=None</em>, <em class="sig-param">os_profile_secrets=None</em>, <em class="sig-param">os_profile_windows_config=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">primary_network_interface_id=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_data_disks=None</em>, <em class="sig-param">storage_image_reference=None</em>, <em class="sig-param">storage_os_disk=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vm_size=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a Virtual Machine.</p>
-<blockquote>
-<div><p><strong>NOTE:</strong> Data Disks can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">compute.DataDiskAttachment</span></code> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
-</div></blockquote>
+<dd><p>Create a VirtualMachine resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3320,9 +3443,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_shared_image">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_shared_image</code><span class="sig-paren">(</span><em class="sig-param">gallery_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Shared Image within a Shared Image Gallery.</p>
-<blockquote>
-<div><p><strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">how to register for the Public Preview here</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3341,9 +3461,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_shared_image_gallery">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_shared_image_gallery</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_gallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Shared Image Gallery.</p>
-<blockquote>
-<div><p><strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">how to register for the Public Preview here</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3361,9 +3478,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_shared_image_version">
 <code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">get_shared_image_version</code><span class="sig-paren">(</span><em class="sig-param">gallery_name=None</em>, <em class="sig-param">image_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Version of a Shared Image within a Shared Image Gallery.</p>
-<blockquote>
-<div><p><strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">how to register for the Public Preview here</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
