@@ -97,7 +97,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.Server.audiences">
@@ -184,7 +184,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -249,7 +249,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.ServerClaim.always_include_in_token">
@@ -329,7 +329,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_claim.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -392,7 +392,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.ServerPolicy.auth_server_id">
@@ -458,7 +458,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -525,7 +525,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.ServerPolicyClaim.access_token_lifetime_minutes">
@@ -619,7 +619,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_policy_rule.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -681,7 +681,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.auth.ServerScope.auth_server_id">
@@ -740,7 +740,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server_scope.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -792,7 +792,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/auth_server.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/auth_server.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/auth_server.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/auth_server.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

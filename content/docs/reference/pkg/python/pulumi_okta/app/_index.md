@@ -36,7 +36,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.AutoLogin.label">
@@ -95,7 +95,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_auto_login.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -176,7 +176,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.Bookmark.label">
@@ -221,7 +221,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -573,7 +573,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.GroupAssignment.app_id">
@@ -604,7 +604,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -692,7 +692,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.OAuth.auto_key_rotation">
@@ -925,7 +925,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_oauth.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1094,7 +1094,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.Saml.accessibility_error_redirect_url">
@@ -1415,7 +1415,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1500,7 +1500,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.SecurePasswordStore.accessibility_error_redirect_url">
@@ -1712,7 +1712,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1790,7 +1790,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.Swa.accessibility_error_redirect_url">
@@ -1953,7 +1953,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -2032,7 +2032,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.ThreeField.accessibility_error_redirect_url">
@@ -2202,7 +2202,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_three_field.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -2263,7 +2263,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.User.app_id">
@@ -2315,7 +2315,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -2378,7 +2378,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.UserBaseSchema.app_id">
@@ -2444,7 +2444,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_base_schema.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -2527,7 +2527,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - display name for the enum value.</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.app.UserSchema.app_id">
@@ -2681,7 +2681,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - display name for the enum value.</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -2738,7 +2738,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/app.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/app.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -2755,7 +2755,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/app_metadata_saml.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/app_metadata_saml.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_metadata_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_metadata_saml.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -2783,7 +2783,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/app_saml.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/app_saml.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_saml.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

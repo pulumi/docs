@@ -27,6 +27,12 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">GetDefaultPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.GetDefaultPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDefaultPolicy.</p>
 <dl class="attribute">
+<dt id="pulumi_okta.policy.GetDefaultPolicyResult.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.GetDefaultPolicyResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of policy.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.policy.GetDefaultPolicyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.policy.GetDefaultPolicyResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -155,7 +161,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">enroll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Requirements for user initiated enrollment. Can be <code class="docutils literal notranslate"><span class="pre">&quot;NOT_ALLOWED&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;OPTIONAL&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;REQUIRED&quot;</span></code>. By default it is <code class="docutils literal notranslate"><span class="pre">&quot;OPTIONAL&quot;</span></code>.</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.Mfa.description">
@@ -415,7 +421,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">enroll</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Requirements for user initiated enrollment. Can be <code class="docutils literal notranslate"><span class="pre">&quot;NOT_ALLOWED&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;OPTIONAL&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;REQUIRED&quot;</span></code>. By default it is <code class="docutils literal notranslate"><span class="pre">&quot;OPTIONAL&quot;</span></code>.</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -499,7 +505,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.Password.auth_provider">
@@ -712,7 +718,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -798,7 +804,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.RuleIdpDiscovery.name">
@@ -887,7 +893,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -951,7 +957,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.RuleMfa.enroll">
@@ -1024,7 +1030,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_mfa.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1090,7 +1096,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.RulePassword.name">
@@ -1177,7 +1183,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_password.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1248,7 +1254,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.RuleSignon.access">
@@ -1377,7 +1383,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_signon.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1438,7 +1444,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.policy.Signon.description">
@@ -1490,7 +1496,7 @@ properties used to qualify the lookup.</p>
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_signon.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1535,7 +1541,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_okta.policy.get_default_policy">
 <code class="sig-prename descclassname">pulumi_okta.policy.</code><code class="sig-name descname">get_default_policy</code><span class="sig-paren">(</span><em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.policy.get_default_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><p>Use this data source to retrieve a “Default” policy from Okta. This same thing can be achieved using the <code class="docutils literal notranslate"><span class="pre">policy.getPolicy</span></code> with <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;Default&quot;</span></code>, this is simply a shortcut.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>type</strong> (<em>str</em>) – type of policy to retrieve.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/default_policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/default_policy.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1551,7 +1565,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd>
 </dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/policy.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/d/policy.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/policy.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/policy.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

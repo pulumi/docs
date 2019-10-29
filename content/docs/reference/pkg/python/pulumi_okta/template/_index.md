@@ -35,7 +35,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">template</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email body.</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/template_email.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/template_email.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/template_email.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/template_email.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_okta.template.Email.default_language">
@@ -84,7 +84,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">template</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email body.</p></li>
 </ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/template_email.html.markdown">https://github.com/terraform-providers/terraform-provider-okta/blob/master/website/docs/r/template_email.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/template_email.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/template_email.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
