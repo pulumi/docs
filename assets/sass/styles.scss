@@ -29,12 +29,7 @@
 @import "tables";
 @import "toc";
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     @apply font-display text-gray-700 mb-2;
 
     &:not(:first-child) {
@@ -97,10 +92,7 @@ body {
 main {
     @apply text-gray-700;
 
-    p,
-    li,
-    blockquote,
-    table {
+    p, li, blockquote, table {
 
         a {
             @apply text-blue-600 break-words;
@@ -111,8 +103,7 @@ main {
         }
     }
 
-    ul,
-    ol {
+    ul, ol {
         @apply pl-5;
     }
 
@@ -150,7 +141,7 @@ main {
 }
 
 .github-widget {
-    >span {
+    > span {
         @apply flex;
     }
 }
