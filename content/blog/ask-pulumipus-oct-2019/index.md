@@ -2,7 +2,7 @@
 title: "Ask Pulumipus"
 date: "2019-10-24"
 meta_desc: "Answers to questions from Stack Overflow"
-meta_image: "twitter_card_pulumipus.svg"
+meta_image: "pulumipus_twitter.png"
 authors: ["sophia-parafina"]
 tags: ["Pulumi","questions","support","slack","stack overflow"]
 ---
