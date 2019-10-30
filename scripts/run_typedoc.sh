@@ -101,6 +101,7 @@ REPOS=(
     "postgresql,pulumi-postgresql,sdk/nodejs"
     "pulumi,pulumi/sdk/nodejs"
     "random,pulumi-random,sdk/nodejs"
+    "signalfx,pulumi-signalfx,sdk/nodejs"
     "vsphere,pulumi-vsphere,sdk/nodejs"
     "azuread,pulumi-azuread,sdk/nodejs"
     "terraform,pulumi-terraform,sdk/nodejs"

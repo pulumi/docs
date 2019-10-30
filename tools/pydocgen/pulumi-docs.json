@@ -152,6 +152,12 @@
       "terraform_provider_name": "terraform"
     },
     {
+      "name": "Pulumi SignalFX",
+      "package_name": "pulumi_signalfx",
+      "pulumi_provider_name": "signalfx",
+      "terraform_provider_name": "signalfx"
+    },
+    {
       "name": "Pulumi TLS",
       "package_name": "pulumi_tls",
       "pulumi_provider_name": "tls",
