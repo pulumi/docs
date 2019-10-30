@@ -135,7 +135,7 @@ We'll review how to:
 
 ## Create an IAM Role for Admins
 
-Create an admin role in AWS and attach EKS admin policies to the role.
+Create an admin role in AWS that assumes the AWS account caller, and attach EKS admin policies to the role.
 This role will be mapped into the [`system:masters`][k8s-sys-masters] group in Kubernetes RBAC.
 
 ```typescript
@@ -175,6 +175,9 @@ used by the CLI for authentication that works with the server component.
 See the official [docs][azure-ad-aks] for more details.
 
 ## Create an IAM Server Application and ServicePrincipal
+
+Create an Azure server Application and ServicePrincipal, and attach it AD
+permissions.
 
 ```typescript
 import * as azuread from "@pulumi/azuread";
@@ -230,6 +233,9 @@ export const adServerAppSecret = spPasswordServer.value;
 ```
 
 ## Create an IAM Client Application and ServicePrincipal
+
+Create an Azure client Application and ServicePrincipal, and attach it AD
+permissions.
 
 ```typescript
 import * as azuread from "@pulumi/azuread";
@@ -382,6 +388,9 @@ const devsIamRole = new aws.iam.Role(`${devName}-eksClusterDeveloper`, {
 {{% md %}}
 
 ## Create an IAM Group for Developers
+
+Create a developer group in Azure. This group will be mapped into a limited
+developer role in Kubernetes RBAC.
 
 ```typescript
 import * as azuread from "@pulumi/azuread";
