@@ -210,6 +210,10 @@ TODO
 
 ### Node Sizing
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
 In managed Kubernetes offerings, worker node groups are backed by auto scaling
 groups. These groups provide automatic scaling and management of a logical
 collection of hosts through health checks and policies, and are an effective
@@ -219,10 +223,6 @@ We can configure the scaling group to run a specific quantity of nodes.
 
 Size the node groups accordingly to known or approximate usage and bursting
 expectations.
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
 
 ```typescript
 // Create a Standard node group of t2.medium workers with an IAM instance profile.
@@ -257,10 +257,35 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-TODO
+In managed Kubernetes offerings, worker node groups are backed by agent pools.
+These pools provide automatic scaling and management of a logical
+collection of hosts through health checks and policies, and are an effective
+means of ensuring node groups are adequately provisioned as intended.
+
+We can configure the agent pool profile to run a specific quantity of nodes.
+
+Size the node groups accordingly to known or approximate usage and bursting
+expectations.
 
 ```typescript
-// TODO
+const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
+    agentPoolProfiles: [{
+        name: "performant",
+        count: 3,
+        vmSize: "Standard_DS4_v2",
+        osType: "Linux",
+        osDiskSizeGb: 30,
+        vnetSubnetId: config.subnetId,
+    }, {
+        name: "standard",
+        count: 2,
+        vmSize: "Standard_B2s",
+        osType: "Linux",
+        osDiskSizeGb: 30,
+        vnetSubnetId: config.subnetId,
+    }],
+    // ...
+});
 ```
 
 {{% /md %}}
