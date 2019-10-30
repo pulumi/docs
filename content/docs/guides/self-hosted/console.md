@@ -5,11 +5,16 @@ menu:
         parent: self_hosted
         identifier: self_hosted_console_service
         weight: 2
+meta_desc: Pulumi Console is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Enterprise Edition.
 ---
 
-The Pulumi Console allows users to view the stacks they have created, see any past activities recorded for those stacks. It also allows you to manage RBAC for your users. 
+<div class="note note-info" role="alert">
+    <p>
+        Self-hosting is only available with the <strong>Pulumi Enterprise Edition</strong>.
+    </p>
+</div>
 
-<!--more-->
+The Pulumi Console allows users to view the stacks they have created, see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
 
 In order for the CLI to persist the state of a particular stack, a user must login to the CLI. In order to login to the CLI, you should have created an account using the Console first.
 
