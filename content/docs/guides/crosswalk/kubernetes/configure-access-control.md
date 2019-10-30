@@ -9,16 +9,16 @@ menu:
 
 {{< cloudchoose >}}
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
 Access control in Kubernetes is done by configuring permissions for IAM users
 and roles to operate in the cluster.
 
 The `kubeconfig` will be shared across users for access, and each IAM role
 will have a particular binding into the cluster's auth to determine how it works
 with the cluster.
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/03-cluster-configuration
@@ -29,6 +29,13 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
+
+Access control in Kubernetes is done by configuring permissions for Azure Active Directory (AD) users
+and groups to operate in the cluster.
+
+The `kubeconfig` will contain user authentication tokens for access, and each AD group
+will have a particular binding into the cluster's auth to determine how it works
+with the cluster.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/03-cluster-configuration
@@ -50,6 +57,10 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 We'll examine how to:
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
   * [Use the `admins` IAM Role](#use-the-admins-iam-role)
   * [Use the `devs` IAM Role](#use-the-devs-iam-role)
   * [Configure RBAC Authorization](#configure-rbac-authorization)
@@ -59,12 +70,8 @@ We'll examine how to:
 In [Identity][crosswalk-identity] we demonstrate how to create typical IAM roles for
 use in Kubernetes.
 
-We create an `admins` role for cluster administrators with root privileges, that
+We created an `admins` role for cluster administrators with root privileges, that
 will be tied into Kubernetes RBAC.
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
 
 Make a copy of the kubeconfig that will be edited for the `admins`.
 
@@ -148,12 +155,30 @@ kube-system   replicaset.apps/coredns-6f647f5754   2         2         2       1
 <div class="mt">
 {{% md %}}
 
-TODO
+  * [Use the `admins` AD Group](#use-the-admins-ad-group)
+  * [Use the `devs` AD Group](#use-the-devs-iam-group)
+  * [Configure RBAC Authorization](#configure-rbac-authorization)
 
-```typescript
-// TODO
+### Use the `admins` AD group
+
+In [Identity][crosswalk-identity] we demonstrate how to create typical roles for
+use in Kubernetes.
+
+We created an `admins` role for cluster administrators with root privileges, that
+will be tied into Kubernetes RBAC.
+
+Start with the `kubeconfig` exported from the Pulumi stack. It has no Active Directory authentication information.
+
+Use `kubectl` to retrieve cluster information. You will see a prompt to log in:
+
+```bash
+$ kubectl cluster-info
+To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code CF3TDACCY to authenticate.
 ```
 
+Proceed to the webpage and use the mentioned code to authenticate as an administrator user. The interactive login is only required once: the successful attempt will save the token to the `kubeconfig` file.
+
+After the login, cluster information will be displayed in the command-line console.
 {{% /md %}}
 </div>
 
@@ -170,6 +195,10 @@ TODO
 {{% /md %}}
 </div>
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
 ### Use the `devs` IAM role
 
 In [Identity][crosswalk-identity] we demonstrate how to create typical IAM roles for
@@ -177,10 +206,6 @@ use in Kubernetes.
 
 We create limited scope `devs` role for general purpose execution of workloads,
 that will be tied into Kubernetes RBAC.
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
 
 Make a copy of the kubeconfig that will be edited for the `devs`.
 
@@ -243,12 +268,46 @@ Error from server (Forbidden): cronjobs.batch is forbidden: User "pulumi:alice" 
 <div class="mt">
 {{% md %}}
 
-TODO
+### Use the `devs` AD group
 
-```typescript
-// TODO
+In [Identity][crosswalk-identity] we demonstrate how to create typical roles for
+use in Kubernetes.
+
+We create limited scope `devs` role for general purpose execution of workloads,
+that will be tied into Kubernetes RBAC.
+
+Start with the `kubeconfig` exported from the Pulumi stack. It has no Active Directory authentication information.
+
+Use `kubectl` to retrieve cluster information. You will see a prompt to log in:
+
+```bash
+$ kubectl cluster-info
+To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code CF3TDACCY to authenticate.
 ```
 
+Proceed to the webpage and use the mentioned code to authenticate as an dev user. The interactive login is only required once: the successful attempt will save the token to the `kubeconfig` file.
+
+After the login, cluster information retrieval fails because of lack of permissions:
+
+```bash
+Error from server (Forbidden): services is forbidden: User "alice@example.com" cannot list resource "services" in API group "" in the namespace "kube-system"
+```
+
+Test the `devs` role by using it and witnessing a lack of privileges.
+
+```bash
+$ kubectl get all
+Error from server (Forbidden): pods is forbidden: User "alice@example.com" cannot list resource "pods" in API group "" at the cluster scope
+Error from server (Forbidden): replicationcontrollers is forbidden: User "alice@example.com" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+Error from server (Forbidden): services is forbidden: User "alice@example.com" cannot list resource "services" in API group "" at the cluster scope
+Error from server (Forbidden): daemonsets.apps is forbidden: User "alice@example.com" cannot list resource "daemonsets" in API group "apps" at the cluster scope
+Error from server (Forbidden): deployments.apps is forbidden: User "alice@example.com" cannot list resource "deployments" in API group "apps" at the cluster scope
+Error from server (Forbidden): replicasets.apps is forbidden: User "alice@example.com" cannot list resource "replicasets" in API group "apps" at the cluster scope
+Error from server (Forbidden): statefulsets.apps is forbidden: User "alice@example.com" cannot list resource "statefulsets" in API group "apps" at the cluster scope
+Error from server (Forbidden): horizontalpodautoscalers.autoscaling is forbidden: User "alice@example.com" cannot list resource "horizontalpodautoscalers" in API group "autoscaling" at the cluster scope
+Error from server (Forbidden): jobs.batch is forbidden: User "alice@example.com" cannot list resource "jobs" in API group "batch" at the cluster scope
+Error from server (Forbidden): cronjobs.batch is forbidden: User "alice@example.com" cannot list resource "cronjobs" in API group "batch" at the cluster scope
+```
 {{% /md %}}
 </div>
 
