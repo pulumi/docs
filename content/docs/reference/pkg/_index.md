@@ -53,7 +53,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**Kubernetes** (`@pulumi/kubernetes`)]({{< relref "nodejs/pulumi/kubernetes" >}})
 
 * [**Cloudflare** (`@pulumi/cloudflare`)]({{< relref "nodejs/pulumi/cloudflare" >}})
-* [**Consul** (`@pulumi/consul`)]({{< relref "nodejs/pulumi/consul" >}})
+* [**HashiCorp Consul** (`@pulumi/consul`)]({{< relref "nodejs/pulumi/consul" >}})
 * [**Datadog** (`@pulumi/datadog`)]({{< relref "nodejs/pulumi/datadog" >}})
 * [**DigitalOcean** (`@pulumi/digitalocean`)]({{< relref "nodejs/pulumi/digitalocean" >}})
 * [**DNSimple** (`@pulumi/dnsimple`)]({{< relref "nodejs/pulumi/dnsimple" >}})
