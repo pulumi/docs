@@ -64,10 +64,24 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="mt">
 {{% md %}}
 
-TODO
+GCP has a catalog of [managed infrastructure][gcp-managed-svcs] services that
+support and complement Kubernetes clusters and their workloads.
+
+At a minimum, networking must be configured for deployment of an EKS cluster.
+
+GCP exposes a [Virtual Private Cloud][gcp-vpc] API which can be used to create
+resources into a virtual network. With the VPC you can define the region to use,
+alongwith [Routes][gcp-rts], [Subnets][gcp-subnets], [Forwarding Rules][gcp-fwd-rules],
+and [Firewall Rules][gcp-fw-rules].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
+[gcp-managed-svcs]: https://cloud.google.com/products/
+[gcp-subnets]: https://cloud.google.com/vpc/docs/vpc#vpc_networks_and_subnets
+[gcp-fwd-rules]: https://cloud.google.com/compute/docs/protocol-forwarding
+[gcp-vpc]: https://cloud.google.com/vpc/docs/overview
+[gcp-rts]: https://cloud.google.com/vpc/docs/routes
+[gcp-fw-rules]: https://cloud.google.com/vpc/docs/firewalls
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/02-managed-infra
 {{% /md %}}
 </div>
@@ -78,7 +92,6 @@ We'll configure and deploy:
 
   * [Networking](#networking): To provide a virtual network for the cluster to
     use.
-  cluster users, and worker nodes.
   * [Storage](#storage): To provide data stores for the cluster.
 
 ## Networking
@@ -156,25 +169,43 @@ const subnet = new azure.network.Subnet(name, {
 <div class="mt">
 {{% md %}}
 
-TODO
-
 ### Create a New VPC for Kubernetes
 
-Create a new VPC to use with the cluster that uses custom settings and
+Create a new network to use with the cluster that uses custom settings and
 best-practice defaults.
 
 ```typescript
-// TODO
+import * as gcp from "@pulumi/gcp";
+
+const network = new gcp.compute.Network(name, {
+    project: config.project,
+    autoCreateSubnetworks: false,
+});
+export const networkName = network.name;
+
+const subnet = new gcp.compute.Subnetwork(name, {
+    project: config.project,
+    region: pulumi.output(config.zone).apply(zone =>
+        (<string>zone)
+            .split("-")
+            .slice(0, 2)
+            .join("-"),
+    ),
+    ipCidrRange: "10.0.0.0/24",
+    network: network.name,
+    secondaryIpRanges: [{ rangeName: "pods", ipCidrRange: "10.1.0.0/16" }],
+});
+export const subnetworkName = subnet.name;
 ```
 
 {{% /md %}}
 </div>
 
-### Use the Default VPC with Kubernetes
-
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+
+### Use the Default VPC with Kubernetes
 
 Use the account's default VPC.
 
@@ -193,37 +224,11 @@ export const defaultPrivateSubnetIds = defaultVpc.privateSubnetIds;
 {{% /md %}}
 </div>
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-
-Use the account's default VPC.
-
-```typescript
-// TODO
-```
-
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-
-Use the account's default VPC.
-
-```typescript
-// TODO
-```
-
-{{% /md %}}
-</div>
-
-### Use an Existing VPC with Kubernetes
-
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+
+### Use an Existing VPC with Kubernetes
 
 To use an existing VPC, provide the IDs of the VPC and its resources.
 
@@ -244,32 +249,6 @@ export const existingVpcId = existingVpc.id;
 export const existingPublicSubnetIds = existingVpc.publicSubnetIds;
 export const existingPrivateSubnetIds = existingVpc.privateSubnetIds;
 ```
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-
-To use an existing VPC, provide the IDs of the VPC and its resources.
-
-```typescript
-// TODO
-```
-
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-
-To use an existing VPC, provide the IDs of the VPC and its resources.
-
-```typescript
-// TODO
-```
-
 {{% /md %}}
 </div>
 
@@ -300,8 +279,9 @@ See the official Networking [docs][azure-net-docs] for more details.
 <div class="mt">
 {{% md %}}
 
-TODO
+See the official Networking [docs][gke-net-docs] for more details.
 
+[gke-net-docs]: https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-admin-overview
 {{% /md %}}
 </div>
 
@@ -352,7 +332,9 @@ See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] and the
 <div class="mt">
 {{% md %}}
 
-## Azure Object Storage
+## Azure Blob Storage
+
+Create a new blob storage with a data source of a local directory and files.
 
 ```typescript
 import * as azure from "@pulumi/azure";
@@ -385,6 +367,8 @@ const storageAccount = new azure.storage.Account("websitesa", {
 ```
 ## Azure Container Registry (ACR)
 
+Create a new registry.
+
 ```typescript
 import * as azure from "@pulumi/azure";
 
@@ -415,10 +399,31 @@ const acr = new azure.containerservice.Registry("acr", {
 <div class="mt">
 {{% md %}}
 
-TODO
+## Google Container Registry (GCR)
+
+Fetch the URL to use for the Debian container image.
 
 ```typescript
-TODO
+import * as gcp from "@pulumi/gcp";
+
+const debian = gcp.container.getRegistryImage({
+    name: "debian",
+});
+
+export const gcrLocation = debian.imageUrl;
+```
+
+## GCP Object Storage
+
+Create a new bucket with a data source of a local file.
+
+```typescript
+import * as gcp from "@pulumi/gcp";
+
+const picture = new gcp.storage.BucketObject("picture", {
+    bucket: "image-store",
+    source: new pulumi.asset.FileAsset("/images/nature/garden-tiger-moth.jpg"),
+});
 ```
 
 {{% /md %}}
