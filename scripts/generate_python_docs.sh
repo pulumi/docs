@@ -27,6 +27,7 @@ PACKAGES=(
   "pulumi_packet"
   "pulumi_postgresql"
   "pulumi_random"
+  "pulumi_signalfx"
   "pulumi_terraform"
   "pulumi_tls"
   "pulumi_vault"
