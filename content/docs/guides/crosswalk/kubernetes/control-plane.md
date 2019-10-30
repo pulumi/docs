@@ -91,6 +91,20 @@ limit the blast radius if a given group is compromised, can regulate the number
 of API requests originating from a certain group, and can also help scope
 privileges to specific node types and workloads.
 
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+### Active Directory Integration
+
+Azure Kubernetes Service can be configured to use Azure Active Directory (Azure AD) for user authentication. Cluster administrators can then configure Kubernetes role-based access control (RBAC) based on a user's identity or directory group membership.
+
+To provide Azure AD authentication for an AKS cluster, two Azure AD applications are created. The first application is a server component that provides user authentication. The second application is a client component that uses the server application for the actual authentication of the credentials provided by the client.
+
+We configure applications and service principals using the `@pulumi/azuread` package. After the applications are created, there is manual step required to [grant admin concent](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-user-consent#grant-admin-consent-when-registering-an-app-in-the-azure-portal) for API permissions.
+{{% /md %}}
+</div>
+
+
 ### Users
 
 <div class="cloud-prologue-aws"></div>
@@ -577,7 +591,7 @@ general best-practices and recommendations to configure in the cluster.
 **AKS:**
 
   * Enable [PodSecurityPolicies][k8s-psp] using `enablePodSecurityPolicy: true`
-  * Enable Log Analytics using the `oms_agent` block
+  * Enable Log Analytics using the `omsAgent` setting
 
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 {{% /md %}}
