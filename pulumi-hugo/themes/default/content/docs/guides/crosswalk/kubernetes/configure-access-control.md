@@ -169,6 +169,11 @@ will be tied into Kubernetes RBAC.
 
 Start with the `kubeconfig` exported from the Pulumi stack. It has no Active Directory authentication information.
 
+```bash
+$ pulumi stack output kubeconfigAdmin > kubeconfig-admin.json
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
+
 Use `kubectl` to retrieve cluster information. You will see a prompt to log in:
 
 ```bash
@@ -179,6 +184,8 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 Proceed to the webpage and use the mentioned code to authenticate as an administrator user. The interactive login is only required once: the successful attempt will save the token to the `kubeconfig` file.
 
 After the login, cluster information will be displayed in the command-line console.
+
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 {{% /md %}}
 </div>
 
@@ -281,6 +288,11 @@ Start with the `kubeconfig` exported from the Pulumi stack. It has no Active Dir
 Use `kubectl` to retrieve cluster information. You will see a prompt to log in:
 
 ```bash
+$ pulumi stack output kubeconfig> kubeconfig.json
+$ export KUBECONFIG=`pwd`/kubeconfig.json
+```
+
+```bash
 $ kubectl cluster-info
 To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code CF3TDACCY to authenticate.
 ```
@@ -308,6 +320,8 @@ Error from server (Forbidden): horizontalpodautoscalers.autoscaling is forbidden
 Error from server (Forbidden): jobs.batch is forbidden: User "alice@example.com" cannot list resource "jobs" in API group "batch" at the cluster scope
 Error from server (Forbidden): cronjobs.batch is forbidden: User "alice@example.com" cannot list resource "cronjobs" in API group "batch" at the cluster scope
 ```
+
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 {{% /md %}}
 </div>
 
