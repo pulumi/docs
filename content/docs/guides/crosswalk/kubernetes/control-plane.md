@@ -104,7 +104,6 @@ We configure applications and service principals using the `@pulumi/azuread` pac
 {{% /md %}}
 </div>
 
-
 ### Users
 
 <div class="cloud-prologue-aws"></div>
@@ -517,10 +516,24 @@ $ kubectl apply -f storage-classes.yaml
 <div class="mt">
 {{% md %}}
 
-TODO
+After the cluster is provisioned and running, create an example StorageClass to
+provision GCP disks.
 
-```typescript
-// TODO
+```yaml
+$ cat > storage-classes.yaml << EOF
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: slow
+provisioner: kubernetes.io/gce-pd
+parameters:
+  type: pd-standard
+  replication-type: none
+EOF
+```
+
+```bash
+$ kubectl apply -f storage-classes.yaml
 ```
 
 {{% /md %}}
