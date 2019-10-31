@@ -95,7 +95,7 @@ class Program
             });
 
             // Export the connection string for the storage account
-            return new Dictionary<string, object> { { "connectionString", account.primaryConnectionString } };
+            return new Dictionary<string, object> { { "connectionString", account.PrimaryConnectionString } };
         });
 }
 ```
