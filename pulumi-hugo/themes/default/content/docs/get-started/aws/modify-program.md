@@ -87,6 +87,7 @@ pulumi.export('bucket_name',  bucket.id)
 ```
 
 ```csharp
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.Aws.Kms;
