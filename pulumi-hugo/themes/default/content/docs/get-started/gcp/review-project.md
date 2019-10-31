@@ -51,7 +51,7 @@ bucket = storage.Bucket('my-bucket')
 pulumi.export('bucket_name',  bucket.url)
 ```
 
-```c#
+```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Pulumi;
