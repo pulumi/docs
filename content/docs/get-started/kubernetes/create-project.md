@@ -34,13 +34,6 @@ $ mkdir quickstart && cd quickstart
 $ pulumi new kubernetes-python
 ```
 
-<div class="language-prologue-csharp"></div>
-
-```bash
-$ mkdir quickstart && cd quickstart
-$ pulumi new kubernetes-python
-```
-
 {{< cli-note >}}
 
 After logging in, the CLI will proceed with walking you through creating a new project.
