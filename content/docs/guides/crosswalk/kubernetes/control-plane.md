@@ -83,24 +83,23 @@ We'll configure and deploy:
 
 ## Identity
 
-In [Identity][crosswalk-identity] we demonstrate how to create typical IAM roles for
-use in Kubernetes.
+In [Identity][crosswalk-identity] we demonstrate how to create typical IAM resources for use in Kubernetes.
 
-Separation of roles creates many functions: it can be used to
+Separation of identities creates many functions: it can be used to
 limit the blast radius if a given group is compromised, can regulate the number
 of API requests originating from a certain group, and can also help scope
-privileges to specific node types and workloads.
-
+privileges to specific workloads.
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
-### Active Directory Integration
 
 Azure Kubernetes Service can be configured to use Azure Active Directory (Azure AD) for user authentication. Cluster administrators can then configure Kubernetes role-based access control (RBAC) based on a user's identity or directory group membership.
 
 To provide Azure AD authentication for an AKS cluster, two Azure AD applications are created. The first application is a server component that provides user authentication. The second application is a client component that uses the server application for the actual authentication of the credentials provided by the client.
 
 We configure applications and service principals using the `@pulumi/azuread` package. After the applications are created, there is manual step required to [grant admin concent](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-user-consent#grant-admin-consent-when-registering-an-app-in-the-azure-portal) for API permissions.
+
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 {{% /md %}}
 </div>
 
@@ -109,11 +108,13 @@ We configure applications and service principals using the `@pulumi/azuread` pac
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
-For **users**, we create an `admins` role for cluster administrators with
-root privileges, and a limited scope `devs` role for general purpose
-execution of workloads. Both roles will be tied into Kubernetes RBAC.
 
-For **worker nodes**, we create separate roles for a few typical
+For **users**, we created an `admins` role for cluster administrators with
+root privileges, and a limited scope `devs` role for general purpose
+execution of workloads. Both roles will be tied into Kubernetes RBAC in
+[Configure Access Control][crosswalk-configure-access].
+
+For **worker nodes**, we created separate roles for a few typical
 classes of worker node groups: a standard pool of nodes, and a performant
 pool of nodes that differ by instance type.
 
@@ -144,6 +145,7 @@ const cluster = new eks.Cluster(`${projectName}`, {
 }
 ```
 
+[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 [k8s-rbac-docs]: https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 [role-mapping]: {{< relref "/docs/reference/pkg/nodejs/pulumi/eks#RoleMapping" >}}
 [user-mapping]: {{< relref "/docs/reference/pkg/nodejs/pulumi/eks#UserMapping" >}}
@@ -153,9 +155,10 @@ const cluster = new eks.Cluster(`${projectName}`, {
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
-For users, we create a ServicePrincipal for cluster administrators with
+For users, we created and use a ServicePrincipal for cluster administrators with
 root privileges, and a limited scope `devs` user group for general purpose
-execution of workloads. Both identities will be tied into Kubernetes RBAC.
+execution of workloads. Both identities will be tied into Kubernetes RBAC in
+[Configure Access Control][crosswalk-configure-access].
 
 We configure the principal identities using `servicePrincipal` to create the
 cluster, and set up `roleBasedAccessControl` to manage authentication into the cluster.
@@ -181,20 +184,25 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
     ...
 }
 ```
+
+[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 {{% /md %}}
 </div>
 
 <div class="cloud-prologue-gcp"></div>
 <div class="mt">
-TODO
-
 {{% md %}}
-```typescript
-// TODO
-```
+For users, we created and use a ServiceAccount for cluster administrators with
+root privileges, and a limited scope `devs` ServiceAccount for general purpose
+execution of workloads. Both identities will be tied into Kubernetes RBAC in
+[Configure Access Control][crosswalk-configure-access].
+
+By authenticating with the ServiceAccount using `gcloud`, as outlined in [Identity][crosswalk-sa-admins], we automatically bind the ServiceAccount to be a cluster admin and no further action is required.
+
+[crosswalk-sa-admins]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
+[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 {{% /md %}}
 </div>
-
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -222,19 +230,6 @@ const cluster = new eks.Cluster(`${projectName}`, {
 
 [nodegroups]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
 [aws-instance-profile]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-
-TODO
-
-```typescript
-// TODO
-```
-
 {{% /md %}}
 </div>
 
@@ -347,12 +342,40 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 <div class="mt">
 {{% md %}}
 
-TODO
+How you create the network will vary on your permissions and preferences.
+
+Typical setups will want to provide Kubernetes with the following resources
+to use for the cluster.
+
+  * Private subnets for use as the default subnets for workers to run in.
+  * Managed [Pod networking][k8s-pod-networking].
+
+By default, [`pulumi/gcp`][pulumi-gcp] will deploy workers into the
+private subnets without associating an external IP address. This
+creates workers that will not be publicly accessible from the Internet,
+and they'll typically be shielded within your network.
+
+GKE will manage Kubernetes Pod networking for us through
+the use of Alias IPs to address and route pods within a GCP network.
 
 ```typescript
-// TODO
+// Create a new network.
+const network = new gcp.compute.Network(projectName, {
+    autoCreateSubnetworks: false,
+});
+export const networkName = network.name;
+
+// Create a new subnet.
+const subnet = new gcp.compute.Subnetwork(projectName, {
+    ipCidrRange: "10.0.0.0/24",
+    network: network.name,
+    secondaryIpRanges: [{ rangeName: "pods", ipCidrRange: "10.1.0.0/16" }],
+});
+export const subnetworkName = subnet.name;
 ```
 
+[pulumi-gcp]: https://github.com/pulumi/pulumi-gcp
+[k8s-pod-networking]: https://kubernetes.io/docs/concepts/cluster-administration/networking/
 {{% /md %}}
 </div>
 
@@ -593,6 +616,7 @@ general best-practices and recommendations to configure in the cluster.
 ```
 
 [nodegroups]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
+[aws-bastion]: https://docs.aws.amazon.com/quickstart/latest/linux-bastion/architecture.html
 
 {{% /md %}}
 </div>
@@ -604,6 +628,7 @@ general best-practices and recommendations to configure in the cluster.
 **AKS:**
 
   * Enable [PodSecurityPolicies][k8s-psp] using `enablePodSecurityPolicy: true`
+  * Set [Node Labels][k8s-labels] to identify nodes by attributes,
   * Enable Log Analytics using the `omsAgent` setting
 
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
@@ -616,20 +641,66 @@ general best-practices and recommendations to configure in the cluster.
 
 **GKE:**
 
-  * TODO
+  * Set [Node Labels][k8s-labels] to identify nodes by attributes,
+  * Enable [PodSecurityPolicies][k8s-psp] using `podSecurityPolicyConfig: { enabled: true }`
+  * Tag resources under management to provide the ability to assign
+    metadata to resources to make it easier to manage, search, and filter them.
+  * Skip enabling the default node group in favor of managing them separately from
+    the control plane, as demonstrated in [Create the Worker Nodes][nodegroups].
+  * Enable control plane logging to have diagnostics of the control
+    plane's actions, and for use in debugging and auditing.
+  * [Disable legacy metadata APIs][gcp-disable-metadata] that are not v1 and do not enforce internal GCP metadata headers
+  * (Optional) Configure private accessibility of the control plane /
+    API Server endpoint to prevent it from being publicly exposed on the
+    Internet. Note, to enable this feature, [additional
+    networking][gke-private-cluster] is required,
+    and a [bastion host][gke-bastion] would be needed to access the control
+    plane.
 
 ```typescript
-// TODO
+import * as gcp from "@pulumi/gcp";
+
+const cluster = new gcp.container.Cluster("cluster", {
+        ...
+        podSecurityPolicyConfig: { enabled: true },
+        nodeConfig: {
+            labels: {
+                foo: "bar",
+            },
+            tags: [
+                "foo",
+                "bar",
+            ],
+            // We can't create a cluster with no node pool defined, but we want to
+            // only use separately managed node pools. So we create the smallest
+            // possible default node pool and immediately delete it.
+            removeDefaultNodePool: true,
+            initialNodeCount: 1,
+            metadata: {
+                "disable-legacy-endpoints": "true",
+            },
+            oauthScopes: [
+                "https://www.googleapis.com/auth/logging.write",
+                "https://www.googleapis.com/auth/monitoring",
+            ],
+        },
+});
 ```
 
+[k8s-labels]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+[gcp-disable-metadata]: https://cloud.google.com/kubernetes-engine/docs/how-to/protecting-cluster-metadata#disable-legacy-apis
+[gke-bastion]: https://cloud.google.com/nat/docs/gke-example
+[gke-private-cluster]: https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters
+[nodegroups]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
+[k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 {{% /md %}}
 </div>
 
 [kube-dash-security]: https://blog.heptio.com/on-securing-the-kubernetes-dashboard-16b09b1b7aca
 [octant]: https://github.com/vmware-tanzu/octant
 [k8s-concepts]: https://kubernetes.io/docs/concepts
-[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 [crosswalk-infra]: {{< relref "/docs/guides/crosswalk/kubernetes/managed-infra" >}}
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 [crosswalk-cluster-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/cluster-services" >}}
 [crosswalk-app-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/app-services" >}}
 [crosswalk-apps]: {{< relref "/docs/guides/crosswalk/kubernetes/apps" >}}
