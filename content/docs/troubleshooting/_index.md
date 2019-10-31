@@ -24,7 +24,7 @@ issues](https://github.com/pulumi/pulumi/issues/new) and upvoting existing issue
 ## Diagnosing Issues
 
 There are a few tools available to get additional diagnostics on how your Pulumi program is
-behaving.  These can be useful for self-diagnosing issues, and for sharing details of issues as part
+behaving.  These can be useful for self-diagnosing issues, and for sharing details as part
 of issue reports.
 
 ### Verbose Logging
@@ -55,8 +55,8 @@ $ TF_LOG=TRACE pulumi up --logtostderr -v=9 2> out.txt
 
 If you are seeing unexpectedly slow performance, you can gather a trace to understand what
 operations are being performed throughout the deployment and what the long poles are for your
-deployment.  In most cases, this will be the provisioning of one or more resources in your cloud
-provider.  But there may be cases where Pulumi itself is doing work that is limiting the performance
+deployment.  In most cases, the most time consuming operations will be the provisioning of one or more resources in your cloud
+provider, however, there may be cases where Pulumi itself is doing work that is limiting the performance
 of your deployments, and this may indicate an opportunity to further improve the Pulumi deployment
 orchestration engine to get the maximal parallelism and performance possible for your cloud
 deployment.

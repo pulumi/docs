@@ -372,7 +372,7 @@ vpc, _ := ec2.Vpc(ctx, "vpc", &VpcArgs{}, pulumi.ResourceOpt{Provider: provider}
 ```
 
 ###### `transformations`
-A list of transformations to apply to the resource and all it's children. This can be used to override or modify the inputs to child resources of a component, for example to add other resource options (like `ignoreChanges` or `protect`) or to modify an input property (like adding to `tags` or changing a property which is not configurable via the component directly).  Transformations can also be applied to all resources in a stack using `pulumi.runtime.registerStackTransformation`.  Transformations are passed the resource type, name, input properties resource options and the resource instance itself.  They can optionally return a new set of resource input properties and resource options which will be used to construct the resource.
+A list of transformations to apply to the resource and all of its children. This can be used to override or modify the inputs to child resources of a component, for example to add other resource options (like `ignoreChanges` or `protect`) or to modify an input property (like adding to `tags` or changing a property which is not configurable via the component directly).  Transformations can also be applied to all resources in a stack using `pulumi.runtime.registerStackTransformation`.  Transformations are passed the resource type, name, input properties resource options and the resource instance itself.  They can optionally return a new set of resource input properties and resource options which will be used to construct the resource.
 
 {{< langchoose >}}
 
