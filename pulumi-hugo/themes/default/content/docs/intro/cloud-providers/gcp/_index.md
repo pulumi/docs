@@ -70,7 +70,7 @@ class Program
 {
     static Task Main() =>
         Deployment.Run(() => {
-            var bucket = new Gcp.storage.Bucket("my-bucket");
+            var bucket = new Gcp.Storage.Bucket("my-bucket");
         });
 }
 ```
