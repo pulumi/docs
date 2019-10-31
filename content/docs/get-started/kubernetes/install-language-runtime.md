@@ -22,6 +22,10 @@ aliases: ["/docs/quickstart/kubernetes/install-language-runtime/"]
 {{< install-python >}}
 {{< /lang >}}
 
+{{% lang dotnet %}}
+{{< install-dotnet >}}
+{{< /lang >}}
+
 Next, we'll configure Kubernetes.
 
 {{< get-started-stepper >}}

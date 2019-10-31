@@ -73,6 +73,7 @@ pulumi.export('connection_string', account.primary_connection_string)
 ```
 
 ```csharp
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.Azure;

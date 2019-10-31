@@ -86,6 +86,44 @@ bucket = storage.Bucket('my-bucket',
 pulumi.export('bucket_name',  bucket.url)
 ```
 
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Gcp;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() =>
+        {
+            // Let's create a customer managed key and use that for encryption instead of the default Google-managed key.
+            var keyRing = new Gcp.Kms.KeyRing("my-keyring", new Gcp.Kms.KeyRingArgs
+            {
+                Location = "global",
+            });
+
+            var cryptoKey = new Gcp.Kms.CryptoKey("my-cryptokey", new Gcp.Kms.CryptoKeyArgs
+            {
+                KeyRing = keyRing.selfLink,
+                RotationPeriod: "100000s",
+            });
+
+            // Create a GCP resource (Storage Bucket)
+            var bucket = new Gcp.storage.Bucket("my-bucket", new Gcp.storage.BucketArgs
+            {
+                Encryption = new Gcp.storage.BucketEncryptionArgs
+                {
+                    DefaultKmsKeyName = cryptoKey.SelfLink,
+                }
+            });
+
+            // Export the DNS name of the bucket
+            return new Dictionary<string, object> { { "bucketName", bucket.url } };
+        });
+}
+```
+
 Next, we'll deploy the changes.
 
 {{< get-started-stepper >}}

@@ -71,6 +71,32 @@ account = storage.Account("storage",
 pulumi.export('connection_string', account.primary_connection_string)
 ```
 
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Azure;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            // Create an Azure Resource Group
+            var resourceGroup = new Azure.Core.ResourceGroup("resourceGroup");
+
+            // Create an Azure resource (Storage Account)
+            var account = new Azure.Storage.Account("storage", new Azure.Storage.AccountArgs
+            {
+                ResourceGroupName = resourceGroup.Name,
+                AccountTier = "Standard",
+                AccountReplicationType = "LRS",
+            });
+
+            // Export the connection string for the storage account
+            return new Dictionary<string, object> { { "connectionString", account.primaryConnectionString } };
+        });
+}
+```
+
 This Pulumi program creates an Azure resource group and storage account and exports the storage account's connection string.
 
 **Note**: In this program, the location of the resource group is set in the configuration setting `azure:location` (check the `Pulumi.dev.yaml` file). This is an easy way to set a global location for your program so you don't have to specify the location for each resource manually. The location for the storage account is automatically derived from the location of the resource group. To override the location for a resource, simply set the location property to one of Azure's [supported locations](https://azure.microsoft.com/en-us/global-infrastructure/locations/).
