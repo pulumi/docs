@@ -73,8 +73,8 @@ class Program
 {
     static Task Main() =>
         Deployment.Run(() => {
-            var mediaBucket = new Aws.s3.Bucket("media-bucket");
-            var contentBucket = new Aws.s3.Bucket("content-bucket");
+            var mediaBucket = new Aws.S3.Bucket("media-bucket");
+            var contentBucket = new Aws.S3.Bucket("content-bucket");
         });
 }
 ```
