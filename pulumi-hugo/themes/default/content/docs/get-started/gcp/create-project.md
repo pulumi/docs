@@ -75,6 +75,10 @@ After some dependency installations from `npm`, the project and stack will be re
 After the command completes, the project and stack will be ready.
 {{% /lang %}}
 
+{{% lang dotnet %}}
+After the command completes, the project and stack will be ready.
+{{% /lang %}}
+
 Next, we'll review the generated project files.
 
 {{< get-started-stepper >}}
