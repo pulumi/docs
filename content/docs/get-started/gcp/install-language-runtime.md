@@ -12,7 +12,7 @@ aliases: ["/docs/quickstart/gcp/install-language-runtime/"]
 
 ## Choose Your Language
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 {{% lang nodejs %}}
 {{< install-node >}}

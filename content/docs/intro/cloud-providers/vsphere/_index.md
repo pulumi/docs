@@ -20,7 +20,7 @@ The vSphere provider supports several options for providing access to vSphere cr
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const vsphere = require("@pulumi/vsphere")

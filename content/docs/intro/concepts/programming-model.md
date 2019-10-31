@@ -15,7 +15,7 @@ In Pulumi, [resources](#resources) are defined by allocating resource objects in
 Dependencies between resources are expressed in Pulumi by using the [output properties](#outputs) of one resource in the construction of another resource.  For example, this definition of an EC2 instance creates a dependency on a `SecurityGroup`:
 
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let group = new aws.ec2.SecurityGroup(...);
@@ -101,7 +101,7 @@ This package also provides the following helpers:
 
 A resource is created with the following:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let res = new Resource(name, args, options)
@@ -134,7 +134,7 @@ All resource constructors also accept an `options` argument which can provide th
 ###### `additionalSecretOutputs`
 Provides a list of output properties which should be treated as secrets. This value augments any values that Pulumi detects itself, based on what secret inputs to the resource has. This is typically used to express that for a specific instance of a resource, some of its output properties should be treated as secrets (when they would not normally be).  Currently only top-level resource properties can be passed to `additionalSecretOutputs`, so if there is sensitive data nested inside output properties, the entire top-level output property must be marked as secret.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 // Ensure the password generated for the database is marked as a secret
@@ -173,7 +173,7 @@ Or it can be aliased to a relative change to the resource's name, parent, and/or
 
 `aliases: [{ name: "otherchild", parent: this }]`
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 // Provide an alias to ensure migration of the existing resource.
@@ -204,7 +204,7 @@ var db = new Database("new-name-for-db", new DatabaseArgs(), new ResourceOptions
 ###### `customTimeouts`
 Provides a set of custom timeouts for `create`, `update`, and `delete` operations on a resource. These timeouts can be specified as a string like "5m", "40s", or "1d" (5 minutes, 40 seconds, or 1 day, respectively). For example, `customTimeouts: { create: "1m" }`.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 // Wait up to 30m for the database to be created
@@ -234,7 +234,7 @@ var db = new Database("db", new DatabaseArgs(), new ResourceOptions { CustomTime
 ###### `deleteBeforeReplace`
 Set this option to `true` to specify that replacements of the resource will delete the existing resource before creating its replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 // The resource will be deleted before it's replacement is created
@@ -264,7 +264,7 @@ var db = new Database("db", new DatabaseArgs(), new CustomResourceOptions { Dele
 ###### `dependsOn`
 Provides a list of explicit resource dependencies to add to the resource. Every resource referenced either directly or indirectly by an `Output` that is passed in to the resource constructor will implicitly be included, so this additional information is only needed when the dependency is on something that is not already an input to the resource. The default is `[]`.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let res1 = new MyResource("res1", {});
@@ -294,7 +294,7 @@ var res2 = new MyResource("res2", new MyResourceArgs(), new ResourceOptions { De
 ###### `ignoreChanges`
 Provides a list of properties which will be ignored as part of updates. The value of the property will be used for newly created resources, but will not be used as part of updates. You would use this option to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 // Changes to the value of `prop` will not lead to updates/replacements
@@ -325,7 +325,7 @@ var res = new MyResource("res", new MyResourceArgs { prop = "new-value" }, new R
 ###### `import`
 The ID of an existing resource to import for Pulumi to manage. When set, Pulumi will read the current state of the resource with the given ID from the backing provider &ndash; AWS, Azure, GCP, or Kubernetes for example. The inputs to the resource's constructor must not differ from this state or the import will fail. Once a resource has been imported, this property should be unset.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 // The input properties must match the values for the exsiting resource `my-database-id`
@@ -355,7 +355,7 @@ var db = new Database("db", new DatabaseArgs { /*...*/ }, new CustomResourceOpti
 ###### `parent`
 A parent for the resource. See [Components](#components).  The default is to parent to the implicitly-created `Stack` resource that is a root resource for all Pulumi stacks.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let parent = new MyResource("parent", {});
@@ -385,7 +385,7 @@ var child = new MyResource("child", new MyResourceArgs(), new ResourceOptions { 
 ###### `protect`
 Marks a resource as protected. A protected resource cannot be deleted directly: First, you must set `protect: false` and run `pulumi up`. Then, you can delete the resource by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let db = new Database("db", {}, { protect: true});
@@ -410,7 +410,7 @@ var db = new Database("db", new DatabaseArgs(), new ResourceOptions { Protect = 
 ###### `provider`
 A provider for the resource. See [Providers](#providers).  The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let provider = new aws.Provider("provider", { region: "us-west-2" });
@@ -441,7 +441,7 @@ var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new ResourceOptions { Pr
 
 Every resource managed by Pulumi has a **logical name** that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let role = new aws.iam.Role("my-role");
@@ -484,7 +484,7 @@ This random suffix is added for two reasons:
 
 Auto-naming can be overridden by manually specifying a physical name on your resource for use cases that require precise names. Most resources offer this option by way of a `name` property that may be specified in the argument object to the constructor:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let role = new aws.iam.Role("my-role", {
@@ -521,7 +521,7 @@ var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
 
 Notice above that the physical and logical names do not need to match. You may even elect to construct the name using the name of your project and/or stack instead. This is often necessary if you are going to create multiple stacks for your project:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let role = new aws.iam.Role("my-role", {
@@ -594,7 +594,7 @@ Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw va
 
 To transform an output into a new value, use the [`apply` method]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#OutputInstance-apply" >}}). For example, use the following to create an HTTPS URL from the DNS name of a virtual machine:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let url = virtualmachine.dnsName.apply(dnsName => "https://" + dnsName)
@@ -628,7 +628,7 @@ The `apply` method accepts a callback which will be passed the value of the `Out
 
 It is common to only need access to some property of the value of an `Output` in order to pass in that property to another `Resource`.  For example, when using ACM certificates, one might write:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let certCertificate = new aws.acm.Certificate("cert", {
@@ -677,7 +677,7 @@ record = aws.route53.Record("validation",
 
 To make this kind of property and array element access more simple, an `Output` _lifts_ the properties of the value that is wrapped, allowing you to access them directly off of the `Output` itself.  This allows the previous example to be written more simply as:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let certCertificate = new aws.acm.Certificate("cert", {
@@ -725,7 +725,7 @@ This helps the clarity of the final code, while not losing any important depende
 
 To combine multiple `Output`s into a transformed value, use [pulumi.all].  This allows a new value to be constructed from several inputs, such as concatenating outputs from two different resources together, or constructing a policy document using information from several other resources.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let connectionString = pulumi.all([sqlServer.name, database.name])
@@ -761,7 +761,7 @@ var connectionString = Output.Tuple(sqlServer.name, database.name)
 
 To turn an `Input` into an `Output`, use [pulumi.output].  This can be useful when you want to transform an input value that could either be a raw value or an `Output`:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 function split(input) {
@@ -802,7 +802,7 @@ Output<string[]> Split(Input<string[]> input)
 
 It's very common to want to build a string out of the values contained in `Outputs`.  Common uses include either providing a custom [stack output](#stack-outputs), or providing a dynamically computed string as an [Input]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Input" >}}) to another Resource.  For example, say you had the following:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const hostName = // get some Output
@@ -930,7 +930,7 @@ Secrets are not yet available in Go. See <https://github.com/pulumi/pulumi/issue
 
 To illustrate using these functions, this code creates an AWS Parameter Store parameter insecurely:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const cfg = new pulumi.Config()
@@ -974,7 +974,7 @@ As written, this program's state will include the plaintext value of the `my-sec
 
 To fix this, we can use one of the above methods, ensuring the resulting data is encrypted in the state file the same way it was in the configuration that we read it from:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const cfg = new pulumi.Config()
@@ -1038,7 +1038,7 @@ as secrets and encrypt them in the state file and anywhere they flow to. To do s
 
 A [stack output]({{< relref "stack.md#outputs" >}}) is a value exported from a stack. A stack's outputs can be easily retrieved from the Pulumi CLI and are displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entrypoint for your project:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 exports.url = resource.url;
@@ -1071,7 +1071,7 @@ The right-hand side of a stack export can be a regular JavaScript value, an [Out
 
 Stack exports are JSON-serialized, though quotes are removed when exporting a string value. For example:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 exports.x = "hello"
@@ -1135,7 +1135,7 @@ You may pass `--show-secrets` to `pulumi stack output` to see the plaintext valu
 
 Stack references provide a way to access the [outputs](#stack-outputs) of one stack from another stack. To reference values from another stack, create an instance of the `StackReference` type using the name of the referenced stack as an input:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const pulumi = require("@pulumi/pulumi");
@@ -1162,7 +1162,7 @@ other_output = other.get_output("x")
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-```javascript
+```csharp
 // StackReference is not currently supported in .NET.
 //
 // https://github.com/pulumi/pulumi/issues/3406.
@@ -1174,7 +1174,7 @@ Each output of the stack can then be accessed via `getOutput` or `getOutputSync`
 
 To access configuration values that have been set with `pulumi config set`, use the following:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let config = new pulumi.Config();
@@ -1212,7 +1212,7 @@ Configuration values are always stored as strings, but can be parsed as richly t
 
 For richer structured data, the [config.getObject] method can be used to parse JSON values.  For example, following `pulumi config set data '{"active": true, "nums": [1,2,3]}'`, a program can read the `data` config into a rich object with:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let config = new pulumi.Config();
@@ -1259,7 +1259,7 @@ To create a new component, either in a top-level program or in a library, create
 
 Here's a simple component definition:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 class MyResource extends pulumi.ComponentResource {
@@ -1309,7 +1309,7 @@ A component must register a namespace, such as `pkg:MyResource` in the previous 
 
 Components will often contain child resources. To track this relationship, pass the component instance as the parent when constructing a resource:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
@@ -1327,14 +1327,14 @@ bucket = s3.Bucket(f"{name}-bucket", opts=pulumi.ResourceOptions(parent=self))
 bucket := s3.Bucket(ctx, fmt.Sprintf("%s-bucket", name), &s3.BucketArgs{}, pulumi.ResourceOpt{Parent: parent});
 ```
 
-```javascript
+```csharp
 var bucket = new Aws.S3.Bucket($"{name}-bucket", new Aws.S3.BucketArgs(), new ResourceOptions { Parent = this });
 ```
 
 Components can define their own properties using [registerOutputs]. The Pulumi engine uses this information to display the logical outputs of the component.  The call to `registerOutputs` also tells Pulumi that the resource is done registering children and should be considered fully constructed, so it is recommended that this method be called in all components even if no outputs need to be registered.
 
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 this.registerOutputs({
@@ -1369,7 +1369,7 @@ this.RegisterOutputs(new Dictionary<string, object>
 
 In addition to the usual resource options, components accept a set of [providers](#providers) to use for their child resources. If a component is itself a child of another component, its set of providers is inherited from its parent by default.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let component = new MyResource("component", { providers: { aws: useast1, kubernetes: myk8s } });
@@ -1402,7 +1402,7 @@ For more information about components, see the [Pulumi Components]({{< relref "/
 
 A [CustomResource][pulumi.CustomResource] needs an associated resource provider to manage its Create, Read, Update, and Delete (_CRUD_) operations. This is in contrast to a [ComponentResource][pulumi.ComponentResource], whose logic is authored entirely in a Pulumi program's source language such as Javascript or Python. By default, a provider for a `CustomResource` is determined based on its [package](#packages). This default provider is automatically created by Pulumi, and is configured using the [config values](#config) of the package. For example, the following configuration and program will create a single EC2 instance in the `us-west-2` region.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let aws = require("@pulumi/aws");
@@ -1452,7 +1452,7 @@ $ pulumi config set aws:region us-west-2
 
 While this works for the majority of Pulumi programs, some programs may have special requirements. For example, it may require the ability to deploy to multiple AWS regions simultaneously, or to deploy to a Kubernetes cluster created earlier in the program that requires explicitly creating, configuring, and referencing providers. This is typically done by instantiating the relevant package's `Provider` type and passing in the options for each `CustomResource` or `ComponentResource` that needs to use it. For example, the following configuration and program will create an ACM certificate in the `us-east-1` region and a load balancer listener in the `us-west-2` region.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let pulumi = require("@pulumi/pulumi");
@@ -1583,7 +1583,7 @@ $ pulumi config set aws:region us-west-2
 
 Component resources also accept a set of providers to use with their child resources. For example, the EC2 instance parented to `myResource` in the program below will be created in `us-east-1`, and the Kubernetes pod parented to `myResource` will be created in the cluster targeted by the "test-ci" context.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 class MyResource extends pulumi.ComponentResource {
@@ -1674,7 +1674,7 @@ You should consider implementing a dynamic provider if:
 
 Dynamic Providers are defined by first implementing the `pulumi.dynamic.ResourceProvider` interface, including the `create`, `read`, `update` and `delete` operations for your resource, as well as `check` and `diff`.  Default implementations are provided for everything except `create`, so a minimal implementation could look like:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const myprovider = {
@@ -1710,7 +1710,7 @@ class MyProvider(ResourceProvider):
 
 This resource provider is then used to create a new kind of custom resource by inheriting from the `pulumi.dynamic.Resource` base class which is a subclass of `pulumi.CustomResource`.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 class MyResource extends pulumi.dynamic.Resource {
@@ -1756,7 +1756,7 @@ A dynamic provider interfaces with other components via subclasses of `pulumi.dy
 
 > For statically typed languages, you can get rich type information for the inputs declaring an input type to make it easy to use your custom resource.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 class MyResource extends pulumi.dynamic.Resource {
@@ -1811,7 +1811,7 @@ Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementi
 
 Though the input properties passed to a `pulumi.dynamic.Resource` instance will usually be of type `pulumi.Input<T>` the dynamic provider's functions are invoked with the fully resolved input values in order to compose well with Pulumi resources. Strong typing for the inputs to your provider's functions can help clarify this. You can achieve this by creating a second interface with the same properties as your resource's inputs, but with fully unwrapped types.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```typescript
 // Exported type.
@@ -1889,7 +1889,7 @@ If you need to access the outputs of your custom resource outside it with strong
 
 > **Note:** The name of the class member must match the names of the output properties as returned by the `create` function.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```typescript
 ...
@@ -2009,7 +2009,7 @@ class Random(Resource):
 
 This example highlights making REST API calls to some backing provider---the GitHub API in this case---to perform CRUD operations.  Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and make calls to it local to each function.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let pulumi = require("@pulumi/pulumi");
@@ -2165,7 +2165,7 @@ Some Pulumi packages have a dependency on a [Resource Provider plugin]({{< relre
 
 You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime. For example, you can create an AWS Lambda function or an Azure Function by providing a JavaScript callback to be used as its implementation.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 let bucket = new aws.s3.Bucket("mybucket");

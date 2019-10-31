@@ -21,7 +21,7 @@ The OpenStack provider supports several options for providing access to OpenStac
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const os = require("@pulumi/openstack")
