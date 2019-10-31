@@ -71,6 +71,16 @@ p {
 
 body {
     @apply font-body text-gray-900;
+
+    figure {
+        figcaption {
+            clear: left;
+            margin: .75em 0;
+            text-align: center;
+            font-style: italic;
+            line-height: 1.5em;
+        }
+    }
 }
 
 .nav-main {
