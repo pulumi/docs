@@ -109,6 +109,20 @@ c := config.New(ctx, "")
 fmt.Println("Password: "+c.Require("dbPassword"))
 ```
 
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var config = new Pulumi.Config();
+            Console.WriteLine($"Password: {config.Require("dbPassword")}");
+        });
+}
+```
+
 Running this program yields the following result:
 
 ```bash
@@ -167,6 +181,22 @@ c := config.New(ctx, "")
 
 name := c.Require("name")
 dbPassword := c.Require("dbPassword")
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var config = new Pulumi.Config();
+
+            var name = config.Require("name");
+            var dbPassword = config.RequireSecret("dbPassword");
+        });
+}
 ```
 
 In this example, we have read back the `name` and `dbPassword` configuration variables programmatically. The `name` is just the string `BroomeLLC`, while the `dbPassword` is a secret output value that is encrypted.

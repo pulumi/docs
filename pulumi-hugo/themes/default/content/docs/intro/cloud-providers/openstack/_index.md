@@ -59,6 +59,24 @@ instance, _ := compute.NewInstance(ctx, "test", &compute.InstanceArgs{
 })
 ```
 
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.OpenStack;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var instance = new OpenStack.Compute.Instance("test", new OpenStack.Compute.InstanceArgs
+            {
+                FlavorName = "s1-2",
+                ImageName = "Ubuntu 16.04",
+            });
+        });
+}
+```
+
 ## Libraries
 
 The following packages are available in packager managers:

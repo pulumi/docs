@@ -64,6 +64,21 @@ mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", nil)
 contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
 ```
 
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Aws;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var mediaBucket = new Aws.s3.Bucket("media-bucket");
+            var contentBucket = new Aws.s3.Bucket("content-bucket");
+        });
+}
+```
+
 Now, we run `pulumi stack init mystack`. Since `mystack` is a new stack, the "last deployed state" has no resources.
 
 Next, we run `pulumi up`. Since this program is written in JavaScript, the Pulumi CLI launches the Node language host and requests that it execute the program. When the first `aws.s3.Bucket` object is constructed, the language host sends a _resource registration_ request to the deployment engine and then continues executing the program. This is subtle, but important: _When the call to `new aws.s3.Bucket` returns, it does not mean that the actual S3 bucket has been created in AWS_, it just means the language host has expressed that this bucket is part of the desired state of your infrastructure.  The language host continues to execute your program concurrently with the engine processing this request.
@@ -110,6 +125,24 @@ mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{Acl: "public-
 contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
 ```
 
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Aws;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+            {
+                Acl = "public-read",   // add acl
+            });
+            var contentBucket = new Aws.S3.Bucket("content-bucket");
+        });
+}
+```
+
 When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the call to aws.s3.Bucket causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `acl` property has changed from `private` (the default value) to `public-read`. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the acl property to `public-read`. When this operation completes, the current state is updated to reflect the change that had been made.
 
 The engine also receives a resource registration request for "content-bucket".  However, since there are no changes between the current state and the desired state, the engine does not need to make any changes to the resource.
@@ -140,6 +173,24 @@ app_bucket = s3.Bucket('app-bucket')
 ```go
 mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{Acl: "public-read"}) // add acl
 appBucket, _ := s3.NewBucket(ctx, "app-bucket", nil)
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Aws;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+            {
+                Acl = "public-read",   // add acl
+            });
+            var appBucket = new Aws.S3.Bucket("app-bucket");
+        });
+}
 ```
 
 This time, the engine will not need to make any changes to `media-bucket` since its desired state matches its actual state. However, when the resource request for `app-bucket` is processed, the engine sees there's no existing resource named `app-bucket` in the current state and so it must create a new S3 bucket.  Once that process is complete and the language host has shut down, the engine looks for any resources in the current state which it did not see a resource registration for. In this case, since we removed the registration of `content-bucket` from our program, the engine calls the resource provider to delete the existing `content-bucket` bucket.

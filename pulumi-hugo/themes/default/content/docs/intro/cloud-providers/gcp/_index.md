@@ -61,6 +61,20 @@ import "github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
 bucket, _ := storage.NewBucket(ctx, "my-bucket", nil)
 ```
 
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Gcp;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var bucket = new Gcp.storage.Bucket("my-bucket");
+        });
+}
+```
+
 You can find additional examples of using Google Cloud in
 [the Pulumi examples repo](https://github.com/pulumi/examples).
 

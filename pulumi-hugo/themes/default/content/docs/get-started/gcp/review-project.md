@@ -52,6 +52,8 @@ pulumi.export('bucket_name',  bucket.url)
 ```
 
 ```c#
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.Gcp.Storage;
 

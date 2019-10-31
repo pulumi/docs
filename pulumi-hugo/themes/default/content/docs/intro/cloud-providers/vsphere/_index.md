@@ -9,7 +9,7 @@ menu:
 aliases: ["/docs/reference/clouds/vsphere/"]
 ---
 
-The vSphere provider for Pulumi can be used to provision any of the cloud resources available in [vSphere](https://www.vmware.com/products/vsphere.html).  
+The vSphere provider for Pulumi can be used to provision any of the cloud resources available in [vSphere](https://www.vmware.com/products/vsphere.html).
 The vSphere provider must be configured with credentials to deploy and update resources in vSphere.
 
 See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/vsphere" >}}) for complete details of the available vSphere provider APIs.
@@ -50,6 +50,23 @@ import (
 dc, _ := vsphere.NewDatacenter(ctx, "test", &vsphere.DatacenterArgs{
   Name: "Production-DataCenter"
 })
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Vsphere;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var dc = new Vsphere.Datacenter("my-dc", new Vsphere.DatacenterArgs
+            {
+                Name = "Production-DataCenter",
+            });
+        });
+}
 ```
 
 ## Libraries
