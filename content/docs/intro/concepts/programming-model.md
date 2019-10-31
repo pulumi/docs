@@ -63,7 +63,7 @@ var group = new SecurityGroup(...);
 var server = new Instance("webserver-www", new InstanceArgs
 {
     //...
-    securityGroups = group.name, // reference the security group resource above
+    securityGroups = group.Name, // reference the security group resource above
 });
 ```
 
@@ -118,7 +118,7 @@ res, err := NewResource(ctx, name, args, opt1, opt2)
 ```
 
 ```.NET (preview)
-var res = new Resource(name, args, options)
+var res = new Resource(name, args, options);
 ```
 
 All resources have a [`name`](#names), which must be unique in the Pulumi program.
@@ -1056,8 +1056,8 @@ ctx.Export("url", resource.Url())
 
 ```.NET (preview)
 // The dictionary returned by the function passed to Deployment.Run will be used to provide all the exported values.
-static Task Main()
-    => Deployment.Run(async () =>
+static Task Main() =>
+    Deployment.Run(async () =>
     {
         return new Dictionary<string, object> { { "url", resource.Url } };
     });
@@ -1095,8 +1095,8 @@ ctx.Export("o", map[string]interface{}{
 
 ```.NET (preview)
 // The dictionary returned by the function passed to Deployment.Run will be used to provide all the exported values.
-static Task Main()
-    => Deployment.Run(async () =>
+static Task Main() =>
+    Deployment.Run(async () =>
     {
         return new Dictionary<string, object>
         {
@@ -1433,8 +1433,9 @@ instance = ec2.Instance("myInstance", instance_type="t2.micro", ami="myAMI")
 ```
 
 ```.NET (preview)
-import Pulumi.Aws;
+using Pulumi.Aws;
 
+// Inside call to Deployment.Run(...)
 var instance = new Aws.Ec2.Instance("myInstance", new Aws.Ec2.InstanceArgs
 {
     InstanceType = "t2.micro",
@@ -1543,8 +1544,8 @@ using Pulumi.Aws;
 
 class Program
 {
-   async Task Main()
-       => Deployment.Run(() =>
+   async Task Main() =>
+       Deployment.Run(() =>
        {
            // Create an AWS provider for the us-east-1 region.
            var useast1 = new Aws.Provider("useast1", new Aws.ProviderArgs { Region = "us-east-1" });
@@ -1645,8 +1646,8 @@ class MyResource : pulumi.ComponentResource
 
 class Program
 {
-   async Task Main()
-       => Deployment.Run(() =>
+   async Task Main() =>
+       Deployment.Run(() =>
        {
            var useast1 = new Aws.Provider("useast1", new Aws.ProviderArgs { Region = "us-east-1" });
            var myk8s = new Kubernetes.Provider("myk8s", new Kubernetes.ProviderArgs { Context = "test-ci" });
