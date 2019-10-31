@@ -20,6 +20,10 @@ In this tutorial, we will show you how to use JavaScript or Python to deploy a s
 {{< install-python >}}
 {{< /lang >}}
 
+{{% lang dotnet %}}
+{{< install-dotnet >}}
+{{< /lang >}}
+
 ## Deploy the App
 
 ### Step 1: Create a new project from a template
@@ -47,6 +51,13 @@ $ pulumi new aws-typescript --name myproject
 ```bash
 $ mkdir webserver && cd webserver
 $ pulumi new aws-python --name myproject
+```
+
+<div class="language-prologue-csharp"></div>
+
+```bash
+$ mkdir webserver && cd webserver
+$ pulumi new aws-csharp --name myproject
 ```
 
 ### Step 2: Create an EC2 instance with SSH access
@@ -137,6 +148,59 @@ pulumi.export('publicIp', server.public_ip)
 pulumi.export('publicHostName', server.public_dns)
 ```
 
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Aws;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() =>
+        {
+            var size = "t2.micro";     // t2.micro is available in the AWS free tier
+            var ami = Aws.Invokes.GetAmi(new Aws.GetAmiArgs
+            {
+                // TODO(cyrusn)
+                // filters: [{
+                //     name: "name",
+                //     values: ["amzn-ami-hvm-*"],
+                // }],
+                // owners: ["137112412989"], // This owner ID is Amazon
+                // mostRecent: true,
+            });
+
+            var group = new Aws.Ec2.SecurityGroup("webserver-secgrp", new Aws.Ec2.SecurityGroupArgs
+            {
+                Ingress =
+                {
+                    new Aws.Ec2.SecurityGroupIngressArgs
+                    {
+                        Protocol = "tcp",
+                        FromPort = 22,
+                        ToPort = 22,
+                        CidrBlocks = { "0.0.0.0/0" },
+                    },
+                },
+            });
+
+            var server = new Aws.Ec2.Instance("webserver-www", new Aws.Ec2.InstanceArgs
+            {
+                InstanceType = size,
+                SecurityGroups = { group.Name }, // reference the security group resource above
+                Ami = ami.Id,
+            });
+
+            return new Dictionary<string, object>
+            {
+                { "publicIp", server.PublicIp },
+                { "publicHostName", server.PublicDns },
+            };
+        });
+}
+```
+
 > **Note:** The example configuration is designed to work on most EC2 accounts, with access to a default VPC. For EC2 Classic users, please use t1.micro for `size`.
 
 This example uses the [`@pulumi/aws`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}) package in JavaScript and TypeScript code and the [`pulumi_aws`]({{< relref "/docs/reference/pkg/python/pulumi_aws" >}}) package in Python code to create two resources:
@@ -177,7 +241,7 @@ Updating (webserver-dev):
  +   pulumi:pulumi:Stack       myproject-webserver-dev  created
  +   ├─ aws:ec2:SecurityGroup  webserver-secgrp         created
  +   └─ aws:ec2:Instance       webserver-www            created
- 
+
 Outputs:
     publicHostName: "ec2-34-217-110-29.us-west-2.compute.amazonaws.com"
     publicIp      : "34.217.110.29"
@@ -306,6 +370,44 @@ server = ec2.Instance('webserver-www',
 ...
 ```
 
+```csharp
+//...
+var group = new Aws.Ec2.SecurityGroup("webserver-secgrp", new Aws.Ec2.SecurityGroupArgs
+{
+    Ingress =
+    {
+        new Aws.Ec2.SecurityGroupIngressArgs
+        {
+            Protocol = "tcp",
+            FromPort = 22,
+            ToPort = 22,
+            CidrBlocks = { "0.0.0.0/0" },
+        },
+        new Aws.Ec2.SecurityGroupIngressArgs
+        {
+            Protocol = "tcp",
+            FromPort = 80,
+            ToPort = 90,
+            CidrBlocks = { "0.0.0.0/0" },
+        },
+        // ^-- ADD THIS item
+    },
+});
+
+var userData = // <-- ADD THIS DEFINITION
+@"#!/bin/bash
+echo ""Hello, World!"" > index.html
+nohup python -m SimpleHTTPServer 80 &";
+
+var server = new Aws.Ec2.Instance("webserver-www", new Aws.Ec2.InstanceArgs
+{
+    InstanceType = size,
+    SecurityGroups = { group.Name }, // reference the security group resource above
+    Ami = Ami.Id,
+    UserData = userData,             // <-- ADD THIS LINE
+});
+```
+
 > Note that the `userData` script is defined inline in a string. In this example, `index.html` will be created in the root directory `/`. Because you are using a programming language to write your Pulumi program, you could also read this from a file, construct this string programmatically, or even build up a string that depends on other resources
 defined in your program.  You'll see in later sections how to deploy and version the application code of your
 program in a variety of different ways using Pulumi.
@@ -319,7 +421,7 @@ Previewing update (webserver-dev):
      pulumi:pulumi:Stack       myproject-webserver-dev
  ~   ├─ aws:ec2:SecurityGroup  webserver-secgrp         update      [diff: ~ingress]
  +-  └─ aws:ec2:Instance       webserver-www            replace     [diff: +userData~securityGroups]
- 
+
 Resources:
     ~ 1 to update
     +-1 to replace
