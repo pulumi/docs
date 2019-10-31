@@ -66,7 +66,7 @@ class Program
             var bucket = new Storage.Bucket("my-bucket");
 
             // Export the DNS name of the bucket
-            return new Dictionary<string, object> { { "bucket_name", bucket.url } };
+            return new Dictionary<string, object> { { "bucket_name", bucket.Url } };
         });
 }
 ```
