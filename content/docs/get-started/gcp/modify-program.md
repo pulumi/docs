@@ -105,21 +105,21 @@ class Program
 
             var cryptoKey = new Gcp.Kms.CryptoKey("my-cryptokey", new Gcp.Kms.CryptoKeyArgs
             {
-                KeyRing = keyRing.selfLink,
-                RotationPeriod: "100000s",
+                KeyRing = keyRing.SelfLink,
+                RotationPeriod = "100000s",
             });
 
             // Create a GCP resource (Storage Bucket)
-            var bucket = new Gcp.storage.Bucket("my-bucket", new Gcp.storage.BucketArgs
+            var bucket = new Gcp.Storage.Bucket("my-bucket", new Gcp.Storage.BucketArgs
             {
-                Encryption = new Gcp.storage.BucketEncryptionArgs
+                Encryption = new Gcp.Storage.BucketEncryptionArgs
                 {
                     DefaultKmsKeyName = cryptoKey.SelfLink,
-                }
+                },
             });
 
             // Export the DNS name of the bucket
-            return new Dictionary<string, object> { { "bucketName", bucket.url } };
+            return new Dictionary<string, object> { { "bucketName", bucket.Url } };
         });
 }
 ```
