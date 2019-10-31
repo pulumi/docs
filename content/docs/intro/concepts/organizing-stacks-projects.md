@@ -158,6 +158,12 @@ service = core.v1.Service(..., ResourceOptions(provider=provider))
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```csharp
+// StackReference is not supported in .NET currently.
+//
+// See https://github.com/pulumi/pulumi/issues/3406.
+```
+
 The `StackReference` constructor takes as input a string of the form `<organization>/<project>/<stack>`, and lets
 you access the outputs of that stack.
 
