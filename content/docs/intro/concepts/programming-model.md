@@ -56,13 +56,24 @@ if err != nil {
 }
 ```
 
+```.NET (preview)
+using Pulumi.Aws.Ec2;
+//...
+var group = new SecurityGroup(...);
+var server = new Instance("webserver-www", new InstanceArgs
+{
+    //...
+    securityGroups = group.name, // reference the security group resource above
+});
+```
+
 To publish values that you wish to access outside your application, create a [stack output](#stack-outputs) via module exports.
 
 In Pulumi, you can group multiple resources in a [component](#components). A component is a logical container for physical cloud resources and affects how resources are grouped in the CLI and the pulumi.com console.
 
 ## Programs {#programs}
 
-Pulumi programs are authored in general-purpose programming languages such as [JavaScript]({{< relref "/docs/intro/languages/javascript" >}}) or [Python]({{< relref "/docs/intro/languages/python" >}}). You can use any packages supported by the language's package manager, as well as [Pulumi packages]({{< relref "/docs/reference/pkg" >}}).
+Pulumi programs are authored in general-purpose programming languages such as [JavaScript]({{< relref "/docs/intro/languages/javascript" >}}) or [Python]({{< relref "/docs/intro/languages/python" >}}) or a [.NET Language (preview)]({{< relref "/docs/intro/languages/dotnet" >}}). You can use any packages supported by the language's package manager, as well as [Pulumi packages]({{< relref "/docs/reference/pkg" >}}).
 
 When `pulumi up` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or prebuilt Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi up`.
 
@@ -106,6 +117,10 @@ res = Resource(name, args, options)
 res, err := NewResource(ctx, name, args, opt1, opt2)
 ```
 
+```.NET (preview)
+var res = new Resource(name, args, options)
+```
+
 All resources have a [`name`](#names), which must be unique in the Pulumi program.
 
 The `args` provided to a resource determine what inputs will be used to initialize the resource.  These can be either raw values or [outputs from other resources](#outputs).
@@ -138,6 +153,11 @@ db = Database("db", opts=ResourceOptions(additional_secret_outputs=["password"])
 // AdditionalSecretOutputs is not yet supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```.NET (preview)
+// Ensure the password generated for the database is marked as a secret
+var db = new Database("new-name-for-db", new DatabaseArgs(), new CustomResourceOptions { AdditionalSecretOutputs = { "password" } });
 ```
 
 ###### `aliases`
@@ -174,6 +194,11 @@ db = Database("db", opts=ResourceOptions(aliases=[Alias(name="old-name-for-db")]
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```.NET (preview)
+// Provide an alias to ensure migration of the existing resource.
+var db = new Database("new-name-for-db", new DatabaseArgs(), new ResourceOptions { Aliases = { new Alias { Name = "old-name-for-db"} } });
+```
+
 ###### `customTimeouts`
 Provides a set of custom timeouts for `create`, `update`, and `delete` operations on a resource. These timeouts can be specified as a string like "5m", "40s", or "1d" (5 minutes, 40 seconds, or 1 day, respectively). For example, `customTimeouts: { create: "1m" }`.
 
@@ -197,6 +222,11 @@ db = Database("db", opts=ResourceOptions(custom_timeouts=CustomTimeouts(create="
 ```go
 // Wait up to 30m for the database to be created
 db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{CustomTimeouts: &CustomTimeouts{Create: "30m"}});
+```
+
+```.NET (preview)
+// Wait up to 30m for the database to be created
+var db = new Database("db", new DatabaseArgs(), new ResourceOptions { CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) } });
 ```
 
 ###### `deleteBeforeReplace`
@@ -224,6 +254,11 @@ db = Database("db", opts=ResourceOptions(delete_before_replace=True))
 db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{DeleteBeforeReplace: true});
 ```
 
+```.NET (preview)
+// The resource will be deleted before it's replacement is created
+var db = new Database("db", new DatabaseArgs(), new CustomResourceOptions { DeleteBeforeReplace = true });
+```
+
 ###### `dependsOn`
 Provides a list of explicit resource dependencies to add to the resource. Every resource referenced either directly or indirectly by an `Output` that is passed in to the resource constructor will implicitly be included, so this additional information is only needed when the dependency is on something that is not already an input to the resource. The default is `[]`.
 
@@ -247,6 +282,11 @@ res2 = MyResource("res2", opts=ResourceOptions(depends_on=[res1]));
 ```go
 res1, _ := MyResource(ctx, "res1");
 res2, _ := MyResource(ctx, "res2", pulumi.ResourceOpt{DependsOn: []Resource{res1}});
+```
+
+```.NET (preview)
+var res1 = new MyResource("res1", new MyResourceArgs());
+var res2 = new MyResource("res2", new MyResourceArgs(), new ResourceOptions { DependsOn = { res1 } });
 ```
 
 ###### `ignoreChanges`
@@ -275,6 +315,11 @@ res = MyResource("res", prop="new-value", opts=ResourceOptions(ignore_changes=["
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```.NET (preview)
+// Changes to the value of `prop` will not lead to updates/replacements
+var res = new MyResource("res", new MyResourceArgs { prop = "new-value" }, new ResourceOptions { IgnoreChanges = { "prop" } });
+```
+
 ###### `import`
 The ID of an existing resource to import for Pulumi to manage. When set, Pulumi will read the current state of the resource with the given ID from the backing provider &ndash; AWS, Azure, GCP, or Kubernetes for example. The inputs to the resource's constructor must not differ from this state or the import will fail. Once a resource has been imported, this property should be unset.
 
@@ -298,6 +343,11 @@ db = Database("db", opts=ResourceOptions(import_="my-database-id"))
 ```go
 // The input properties must match the values for the exsiting resource `my-database-id`
 db, _ := Database(ctx, "db", &DatabaseArgs{ /*...*/ }, pulumi.ResourceOpt{Import: "my-database-id"});
+```
+
+```.NET (preview)
+// The input properties must match the values for the exsiting resource `my-database-id`
+var db = new Database("db", new DatabaseArgs { /*...*/ }, new CustomResourceOptions { ImportId = "my-database-id" });
 ```
 
 ###### `parent`
@@ -325,6 +375,11 @@ parent, _ := MyResource(ctx, "parent");
 child, _ := MyResource(ctx, "child", pulumi.ResourceOpt{Parent: parent});
 ```
 
+```.NET (preview)
+var parent = new MyResource("parent", new MyResourceArgs());
+var child = new MyResource("child", new MyResourceArgs(), new ResourceOptions { Parent = parent });
+```
+
 ###### `protect`
 Marks a resource as protected. A protected resource cannot be deleted directly: First, you must set `protect: false` and run `pulumi up`. Then, you can delete the resource by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
@@ -344,6 +399,10 @@ db = Database("db", opts=ResourceOptions(protect=True))
 
 ```go
 db, _ := Database(ctx, "db", &DatabaseArgs{}, pulumi.ResourceOpt{Protect: true});
+```
+
+```.NET (preview)
+var db = new Database("db", new DatabaseArgs(), new ResourceOptions { Protect = true });
 ```
 
 ###### `provider`
@@ -371,6 +430,11 @@ provider, _ := aws.Provider(ctx, "provider", { region: "us-west-2" });
 vpc, _ := ec2.Vpc(ctx, "vpc", &VpcArgs{}, pulumi.ResourceOpt{Provider: provider});
 ```
 
+```.NET (preview)
+var provider = new Aws.Provider("provider", new Aws.ProviderArgs { Region = "us-west-2" });
+var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new ResourceOptions { Provider = provider });
+```
+
 ### Resource names {#names}
 
 Every resource managed by Pulumi has a **logical name** that you specify as an argument to its constructor. For instance, the logical name of this IAM role is `my-role`:
@@ -391,6 +455,10 @@ role = iam.Role("my-role")
 
 ```go
 role, _ := iam.Role(ctx, "my-role", &iam.RoleArgs{}, pulumi.ResourceOpt{})
+```
+
+```.NET (preview)
+var role = new Aws.Iam.Role("my-role");
 ```
 
 This logical name is used by Pulumi to track the identity of a resource across multiple deployments of the same program and is how Pulumi knows to choose between creating new resources versus updating existing ones.
@@ -440,6 +508,13 @@ role, _ := iam.Role(ctx, "my-role", &iam.RoleArgs{
 }, pulumi.ResourceOpt{})
 ```
 
+```.NET (preview)
+var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
+{
+    Name = "my-role-001",
+});
+```
+
 > If `name` doesn't work, please consult the documentation for the specific resource you are creating. Some resources use a different property to override the auto-naming. For instance, the `aws.s3.Bucket` type uses the property `bucket` instead of `name`. Other resources, like `aws.kms.Key`, don't even have physical names and instead use other auto-generated IDs to uniquely identify them.
 
 Notice above that the physical and logical names do not need to match. You may even elect to construct the name using the name of your project and/or stack instead. This is often necessary if you are going to create multiple stacks for your project:
@@ -468,6 +543,13 @@ role = iam.Role('my-role', {
 role, _ := iam.Role(ctx, "my-role", &iam.RoleArgs{
     Name: "my-role-"+pulumi.GetProject()+"-"+pulumi.GetStack(),
 }, pulumi.ResourceOpt{})
+```
+
+```.NET (preview)
+var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
+{
+    Name = "my-role-" + Deployment.Instance.ProjectName + "-" + Deployment.Instance.StackName,
+});
 ```
 
 Overriding auto-naming typically opens up your project to naming collisions. As a result, for resources that may need to be replaced, you will also need to specify `deleteBeforeReplace: true` in the resources's `ResourceOptions`. This ensures old resources are deleted before new ones are recreated.
@@ -532,6 +614,10 @@ url := virtualmachine.DnsName().Apply(func(dnsName string) (interface{}, error) 
 })
 ```
 
+```.NET (preview)
+var url = virtualmachine.DnsName.Apply(dnsName => "https://" + dnsName);
+```
+
 The `apply` method accepts a callback which will be passed the value of the `Output` when it is available, and which returns the new value.  The result of the call to `apply` is a new `Output` whose value is the value returned from the callback, and which includes the dependencies of the original `Output`.  If the callback itself returns an `Output`, the dependencies of that output are unioned into the dependencies of the returned `Output`.
 
 > _Note_: Several common types of transformations can be done more conveniently.  See [Accessing properties of an Output](#lifting) for how to access Output value properties simply.   Also, `Output` itself cannot be used directly in string concatenation as it is not itself the value of the output.  See [Working with Outputs and strings](#outputs-and-strings) for examples of how to use the two together.  In cases where these convenience forms are not sufficient, `.apply` is the most general way to transform one `Output` into another.
@@ -583,6 +669,10 @@ record = aws.route53.Record("validation",
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```.NET (preview)
+// Helpers for accessing properties are not yet available in .NET.
+```
+
 To make this kind of property and array element access more simple, an `Output` _lifts_ the properties of the value that is wrapped, allowing you to access them directly off of the `Output` itself.  This allows the previous example to be written more simply as:
 
 {{< langchoose >}}
@@ -623,6 +713,10 @@ record = aws.route53.Record("validation",
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```.NET (preview)
+// Helpers for accessing properties are not yet available in .NET
+```
+
 This helps the clarity of the final code, while not losing any important dependency information that is needed for properly creating and maintaining the stack.
 
 ##### All {#all}
@@ -652,6 +746,13 @@ connection_string = Output.all(sql_server.name, database.name) \
 // `all` is not yet available in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```.NET (preview)
+// In .NET 'Output.Tuple' is used so that each unwrapped value will preserve their distinct type.
+// 'Output.All' can be used when all input values have the same type (i.e. all are Output<string>)
+var connectionString = Output.Tuple(sqlServer.name, database.name)
+                             .Apply(t => `Server=tcp:${t.Item1}.database.windows.net;initial catalog=${t.Item2}...`);
 ```
 
 ##### Convert Input to Output {#frominput}
@@ -685,6 +786,14 @@ def split(input):
 // Helpers for converting Inputs to Outputs are not yet available in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```.NET (preview)
+Output<string[]> Split(Input<string[]> input)
+{
+    var output = input.ToOutput()
+    return output.Apply(v => v.Split(","));
+}
 ```
 
 ##### Working with Outputs and strings {#outputs-and-strings}
@@ -723,6 +832,14 @@ url = # ?
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```.NET (preview)
+Output<string> hostName = // get some Output
+Output<int> port = // get some Output
+
+// Would like to produce a string equivalent to: http://{hostname}:{port}/
+var url = // ?
+```
+
 Using [.apply](#apply) and [.all](#all), this could be solved as shown previously like so:
 
 ```javascript
@@ -741,6 +858,10 @@ url = Output.all([hostname, port]).apply(lambda l: f"http://{l[0]}:{l[1]}/")
 // Helpers for combining Outputs into strings are not yet available in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```.NET (preview)
+var url = pulumi.Tuple(hostname, port).Apply(t => `http://{t.Item1}:{t.Item2}/`);
 ```
 
 However, this is quite verbose and unwieldy.  To make this easier, Pulumi exposes helpers like `concat` and `interpolate` to make this more convenient.  They can be used as follows:
@@ -763,6 +884,11 @@ url = Output.concat("http://", hostname, ":", post, "/")
 // Helpers for combining Outputs into strings are not yet available in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```.NET (preview)
+// In .NET 'Interpolate' is called 'Format'.
+var url2 = Output.Format($"http://{hostname}:{port}/");
 ```
 
 `concat` takes a list of arguments that can be `Inputs`, `Outputs`, `Promises`, and simple values, and creates an `Output` with all their underlying values concatenated together.  `interpolate`---which is JavaScript only---does the same, but allows you to use a JavaScript `template literal` if that is your preferred way of combining values into strings.
@@ -833,6 +959,15 @@ param = ssm.Parameter("a-secret-param",
 // See https://github.com/pulumi/pulumi/issues/2820
 ```
 
+```.NET (preview)
+var cfg = new Pulumi.Config()
+var param = new Aws.Ssm.Parameter("a-secret-param", new Aws.Ssm.ParameterArgs
+{
+    type = "SecureString",
+    value = cfg.Require("my-secret-value"),
+});
+```
+
 As written, this program's state will include the plaintext value of the `my-secret-value` configuration variable in `a-secret-param`'s input properties.
 
 To fix this, we can use one of the above methods, ensuring the resulting data is encrypted in the state file the same way it was in the configuration that we read it from:
@@ -866,6 +1001,15 @@ param = ssm.Parameter("a-secret-param",
 // Secrets are not yet avaiaible in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/2820
+```
+
+```.NET (preview)
+var cfg = new Pulumi.Config()
+var param = new Aws.Ssm.Parameter("a-secret-param", new Aws.Ssm.ParameterArgs
+{
+    type = "SecureString",
+    value = cfg.RequireSecret("my-secret-value"),
+});
 ```
 
 After this change, the `Parameter` resource's `value` property will be encrypted in the state file.
@@ -910,6 +1054,15 @@ pulumi.export("url", resource.url)
 ctx.Export("url", resource.Url())
 ```
 
+```.NET (preview)
+// The dictionary returned by the function passed to Deployment.Run will be used to provide all the exported values.
+static Task Main()
+    => Deployment.Run(async () =>
+    {
+        return new Dictionary<string, object> { { "url", resource.Url } };
+    });
+```
+
 From the CLI, you can then use `pulumi stack output url` to get the value and incorporate into other scripts or tools.
 
 The right-hand side of a stack export can be a regular JavaScript value, an [Output](#outputs), or a `Promise`. The actual value will be resolved at the end of `pulumi up`.
@@ -938,6 +1091,19 @@ ctx.Export("x", "hello")
 ctx.Export("o", map[string]interface{}{
     "num": 42,
 })
+```
+
+```.NET (preview)
+// The dictionary returned by the function passed to Deployment.Run will be used to provide all the exported values.
+static Task Main()
+    => Deployment.Run(async () =>
+    {
+        return new Dictionary<string, object>
+        {
+            { "x", "hello" },
+            { "o", new Dictionary<string, int> { { "num", 42 } } },
+        };
+    });
 ```
 
 ```bash
@@ -994,6 +1160,12 @@ other_output = other.get_output("x")
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```javascript
+// StackReference is not currently supported in .NET.
+//
+// https://github.com/pulumi/pulumi/issues/3406.
+```
+
 Each output of the stack can then be accessed via `getOutput` or `getOutputSync` if the name of the stack is statically known.
 
 ## Config {#config}
@@ -1024,6 +1196,12 @@ print(f"Hello, {name}!")
 conf = config.New(ctx, "project");
 name = conf.Require("name");
 fmt.Printf("Hello, %s!", name);
+```
+
+```.NET (preview)
+var config = new Pulumi.Config();
+var name = config.Require("name");
+Console.WriteLine($"Hello, {name}!");
 ```
 
 Configuration values can be retrieved using [config.get] or [config.require].  Using `get` will return `undefined` if the configuration value was not provided, and `require` will raise an exception with a helpful error message to prevent the deployment from continuing.
@@ -1061,6 +1239,12 @@ print(f"Active: ${data.active}")
 // JSON parsing helpers for config are currently not built-in for Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```.NET (preview)
+var config = new Pulumi.Config();
+var data = config.RequireObject<JsonElement>("data");
+Console.WriteLine($"Active: {data.GetProperty("active")}");
 ```
 
 The `Config` object also provides functions to get the value from configuration and mark it as a secret. See [config.getSecret] or [config.requireSecret]. Unlike [config.get] and [config.require], these methods return an `Output<T>` which holds the underlying value and ensures that it is encrypted when it is being persisted.
@@ -1103,6 +1287,20 @@ class MyResource(pulumi.ComponentResource):
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```.NET (preview)
+class MyResource : Pulumi.ComponentResource
+{
+    public MyResource(string name, ComponentResourceOptions opts)
+        : base("pkg:MyResource", name, opts);
+    {
+        // initialization logic.
+        
+        // Signal to the UI that this resource has completed construction.
+        this.RegisterOutputs();
+    }
+}
+```
+
 The call to `super` registers the component instance with the Pulumi engine. This records the resource in the checkpoint and tracks it across program deployments. Since all resources must have a name, a component constructor should accept a name and pass it to `super`.
 
 A component must register a namespace, such as `pkg:MyResource` in the previous example. To reduce the potential of name conflicts, this name should contain the package name and resource type, such as `aws:lambda:Function`. The format `<package>:<module>:<type>` is typically used, though not currently fully enforced.
@@ -1125,6 +1323,10 @@ bucket = s3.Bucket(f"{name}-bucket", opts=pulumi.ResourceOptions(parent=self))
 
 ```go
 bucket := s3.Bucket(ctx, fmt.Sprintf("%s-bucket", name), &s3.BucketArgs{}, pulumi.ResourceOpt{Parent: parent});
+```
+
+```javascript
+var bucket = new Aws.S3.Bucket($"{name}-bucket", new Aws.S3.BucketArgs(), new ResourceOptions { Parent = this });
 ```
 
 Components can define their own properties using [registerOutputs]. The Pulumi engine uses this information to display the logical outputs of the component.  The call to `registerOutputs` also tells Pulumi that the resource is done registering children and should be considered fully constructed, so it is recommended that this method be called in all components even if no outputs need to be registered.
@@ -1156,6 +1358,13 @@ self.register_outputs({
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```.NET (preview)
+this.RegisterOutputs(new Dictionary<string, object>
+{
+    { "bucketDnsName", bucket.BucketDomainName }
+});
+```
+
 In addition to the usual resource options, components accept a set of [providers](#providers) to use for their child resources. If a component is itself a child of another component, its set of providers is inherited from its parent by default.
 
 {{< langchoose >}}
@@ -1179,6 +1388,10 @@ component = MyResource("component", ResourceOptions(providers={
 // ComponentResources are currently not directly supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```.NET (preview)
+var component = new MyResource("component", new ComponentResourceOptions { Providers = { awsUsEast1, myk8s } });
 ```
 
 For more information about components, see the [Pulumi Components]({{< relref "/docs/tutorials/aws/s3-folder-component" >}}) tutorial.
@@ -1217,6 +1430,16 @@ instance = ec2.Instance("myInstance", instance_type="t2.micro", ami="myAMI")
 // Providers are currently not supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```.NET (preview)
+import Pulumi.Aws;
+
+var instance = new Aws.Ec2.Instance("myInstance", new Aws.Ec2.InstanceArgs
+{
+    InstanceType = "t2.micro",
+    Ami = "myAMI",
+});
 ```
 
 
@@ -1314,6 +1537,43 @@ listener = aws.lb.Listener("listener",
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```.NET (preview)
+using Pulumi;
+using Pulumi.Aws;
+
+class Program
+{
+   async Task Main()
+       => Deployment.Run(() =>
+       {
+           // Create an AWS provider for the us-east-1 region.
+           var useast1 = new Aws.Provider("useast1", new Aws.ProviderArgs { Region = "us-east-1" });
+
+           // Create an ACM certificate in us-east-1.
+           var cert = new Aws.Acm.Certificate("cert", new Aws.Acm.CertifiateArgs
+           {
+               DomainName = "foo.com",
+               ValidationMethod = "EMAIL",
+           }, new ResourceArgs { Provider = useast1 });
+           
+           // Create an ALB listener in the default region that references the ACM certificate created above.
+           var listener = new Aws.Lb.Listener("listener", new Aws.Lb.ListenerArgs
+           {
+               LoadBalancerArn = loadBalancerArn,
+               Port = 443,
+               Protocol = "HTTPS",
+               SslPolicy = "ELBSecurityPolicy-2016-08",
+               CertificateArn = cert.arn,
+               DefaultAction: new Aws.Lb.ListenerDefaultAction
+               {
+                   TargetGroupArn = targetGroupArn,
+                   Type = "forward",
+               },
+           });
+       });
+}
+```
+
 ```bash
 $ pulumi config set aws:region us-west-2
 ```
@@ -1368,6 +1628,33 @@ my_resource = MyResource("myResource", pulumi.ResourceOptions(providers={
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+```.NET (preview)
+using Pulumi;
+using Pulumi.Aws;
+using Pulumi.Kubernetes;
+
+class MyResource : pulumi.ComponentResource
+{
+    public MyResource(string name, ComponentResourceOptions opts)
+        : base(name, opts)
+    {
+        var instance = new Aws.Ec2.Instance("instance", new Aws.Ec2.InstanceArgs { ... }, new ResourceOptions { Parent = this });
+        var pod = new Kubernetes.Core.V1.Pod("pod", new Kubernetes.Core.V1.PodArgs { ... }, new ResourceOptions { Parent = this });
+    }
+}
+
+class Program
+{
+   async Task Main()
+       => Deployment.Run(() =>
+       {
+           var useast1 = new Aws.Provider("useast1", new Aws.ProviderArgs { Region = "us-east-1" });
+           var myk8s = new Kubernetes.Provider("myk8s", new Kubernetes.ProviderArgs { Context = "test-ci" });
+           var myResource = new MyResource("myResource", new ComponentResourceOptions { Providers = { useast1, myk8s } });
+       });
+}
+```
+
 ## Dynamic Providers <span class="badge badge-preview">PREVIEW</span> {#dynamicproviders}
 
 Every `CustomResource` has a provider associated with it which knows how to `create`, `read`, `update`, and `delete` instances of the custom resource in the backing cloud provider.  This provider can be defined by implementing the Pulumi Resource Provider gRPC interface.  There are generally two approaches to implementing this provider interface:
@@ -1414,6 +1701,10 @@ class MyProvider(ResourceProvider):
 // Dynamic Providers are currently not supported in Go.
 ```
 
+```.NET (preview)
+// Dynamic Providers are currently not supported in .NET.
+```
+
 This resource provider is then used to create a new kind of custom resource by inheriting from the `pulumi.dynamic.Resource` base class which is a subclass of `pulumi.CustomResource`.
 
 {{< langchoose >}}
@@ -1446,6 +1737,10 @@ class MyResource(Resource):
 
 ```go
 // Dynamic Providers are currently not supported in Go.
+```
+
+```.NET (preview)
+// Dynamic Providers are currently not supported in .NET.
 ```
 
 We can now create instances of the new `MyResource` resource kind in our program with `new MyResource("name", args)`.  When doing so, if Pulumi determines the resource has not yet been created, it will call the `create` method on the resource provider interface.  If another Pulumi deployment happens and the resource already exists, Pulumi will call the `diff` method to determine whether a change can be made in place or whether a replacement is needed.  If a replacement is needed, Pulumi will call `create` for the new resource and then `delete` for the old resource.  If no replacement is needed, Pulumi will call `update`.  In all cases, Pulumi first calls the `check` method with the resource arguments to give the provider a chance to validate that the arguments are valid.  And finally, if Pulumi needs to read an existing resource without managing it directly, it will call `read`.
@@ -1503,6 +1798,10 @@ class MyResource(Resource):
 // Dynamic Providers are currently not supported in Go.
 ```
 
+```.NET (preview)
+// Dynamic Providers are currently not supported in .NET.
+```
+
 ### Resource Provider Interface
 
 Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the following methods. Each of these methods may be asynchronous, and most implementations of these methods will perform network I/O to provision resources in a backing cloud provider or other resource model. There are several important contracts between a dynamic provider and the Pulumi CLI that inform when these methods are called and with what data.
@@ -1547,6 +1846,10 @@ class MyResource extends pulumi.dynamic.Resource {
 
 ```go
 // Dynamic Providers are currently not supported in Go.
+```
+
+```.NET (preview)
+// Dynamic Providers are currently not supported in .NET.
 ```
 
 ##### `check(olds, news)`
@@ -1629,6 +1932,10 @@ class MyResource(Resource):
 
 ```go
 // Dynamic Providers are not yet supported in Go.
+```
+
+```.NET (preview)
+// Dynamic Providers are currently not supported in .NET.
 ```
 
 ### Dynamic Provider Examples
@@ -1841,6 +2148,10 @@ export("label_url", label.url)
 // Dynamic Providers are not currently supported in Go.
 ```
 
+```.NET (preview)
+// Dynamic Providers are currently not supported in .NET.
+```
+
 ## Packages {#packages}
 
 Pulumi packages are normal NPM or Python packages. They transitively depend on `@pulumi/pulumi` which defines how resources created by a Pulumi program will be communicated to the Pulumi engine.  The ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package.
@@ -1879,6 +2190,12 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 // Runtime code provided via callbacks are currently not supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```.NET (preview)
+// Runtime code provided via callbacks are currently not supported in .NET.
+//
+// See https://github.com/pulumi/pulumi/issues/3406.
 ```
 
 Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction---like the Lambda that is created by the `onObjectCreated` function in the previous example---are built on top of the [pulumi.runtime.serializeFunction] API, which takes a JavaScript `Function` object as input, and returns a `Promise` containing the serialized form of that function.
