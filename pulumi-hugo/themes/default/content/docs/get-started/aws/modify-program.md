@@ -104,15 +104,17 @@ class Program
             // Create an AWS resource (S3 Bucket)
             var bucket = new S3.Bucket('my-bucket', new S3.BucketArgs
             {
-                // TODO(cyrusn):
-                // ServerSideEncryptionConfiguration={
-                //     'rule': {
-                //         'apply_server_side_encryption_by_default': {
-                //             'sse_algorithm': 'aws:kms',
-                //             'kms_master_key_id': key.id
-                //         }
-                //     }
-                // })
+                ServerSideEncryptionConfiguration = new S3.BucketServerSideEncryptionConfigurationArgs
+                {
+                    Rules = new S3.BucketServerSideEncryptionConfigurationRuleArgs
+                    {
+                        ApplyServerSideEncryptionByDefault = new S3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs
+                        {
+                            SseAlgorithm = "aws:kms",
+                            KmsMasterKeyId = key.Id,
+                        },
+                    },
+                },
             });
 
             // Export the name of the bucket

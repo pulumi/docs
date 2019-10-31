@@ -162,13 +162,16 @@ class Program
             var size = "t2.micro";     // t2.micro is available in the AWS free tier
             var ami = Aws.Invokes.GetAmi(new Aws.GetAmiArgs
             {
-                // TODO(cyrusn)
-                // filters: [{
-                //     name: "name",
-                //     values: ["amzn-ami-hvm-*"],
-                // }],
-                // owners: ["137112412989"], // This owner ID is Amazon
-                // mostRecent: true,
+                Filters =
+                {
+                    new GetAmiFiltersArgs
+                    {
+                        Name = "name",
+                        Values =  { "amzn-ami-hvm-*" },
+                    },
+                },
+                Owners = { "137112412989" }, // This owner ID is Amazon
+                MostRecent = true,
             });
 
             var group = new Aws.Ec2.SecurityGroup("webserver-secgrp", new Aws.Ec2.SecurityGroupArgs
