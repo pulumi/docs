@@ -72,6 +72,7 @@ pulumi.export('connection_string', account.primary_connection_string)
 ```
 
 ```csharp
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.Azure;
@@ -92,7 +93,7 @@ class Program
             });
 
             // Export the connection string for the storage account
-            return new Dictionary<string, object> { { "connectionString", account.primaryConnectionString } };
+            return new Dictionary<string, object> { { "connectionString", account.PrimaryConnectionString } };
         });
 }
 ```
