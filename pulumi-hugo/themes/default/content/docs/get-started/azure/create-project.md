@@ -34,6 +34,13 @@ $ mkdir quickstart && cd quickstart
 $ pulumi new azure-python
 ```
 
+<div class="language-prologue-csharp"></div>
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new azure-csharp
+```
+
 {{< cli-note >}}
 
 After logging in, the CLI will proceed with walking you through creating a new project.

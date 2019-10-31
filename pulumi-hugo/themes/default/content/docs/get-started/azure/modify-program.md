@@ -72,6 +72,33 @@ account = storage.Account("storage",
 pulumi.export('connection_string', account.primary_connection_string)
 ```
 
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Azure;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            // Create an Azure Resource Group
+            var resourceGroup = new Azure.Core.ResourceGroup("resourceGroup");
+
+            // Create an Azure resource (Storage Account)
+            var account = new Azure.Storage.Account("storage", new Azure.Storage.AccountArgs
+            {
+                ResourceGroupName = resourceGroup.Name,
+                AccountTier = "Standard",
+                AccountReplicationType = "LRS",
+                EnableHttpsTrafficOnly = true,
+            });
+
+            // Export the connection string for the storage account
+            return new Dictionary<string, object> { { "connectionString", account.primaryConnectionString } };
+        });
+}
+```
+
 Next, we'll deploy the changes.
 
 {{< get-started-stepper >}}
