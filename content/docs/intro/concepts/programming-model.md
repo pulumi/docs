@@ -57,13 +57,15 @@ if err != nil {
 ```
 
 ```.NET (preview)
+using Pulumi;
 using Pulumi.Aws.Ec2;
-//...
+
+// Inside call to Deployment.Run
 var group = new SecurityGroup(...);
 var server = new Instance("webserver-www", new InstanceArgs
 {
     //...
-    securityGroups = group.Name, // reference the security group resource above
+    SecurityGroups = { group.Name }, // reference the security group resource above
 });
 ```
 
