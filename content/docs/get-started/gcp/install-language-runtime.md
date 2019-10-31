@@ -22,6 +22,10 @@ aliases: ["/docs/quickstart/gcp/install-language-runtime/"]
 {{< install-python >}}
 {{< /lang >}}
 
+{{% lang dotnet %}}
+{{< install-python >}}
+{{< /lang >}}
+
 Next, we'll configure Google Cloud.
 
 {{< get-started-stepper >}}

@@ -51,6 +51,24 @@ bucket = storage.Bucket('my-bucket')
 pulumi.export('bucket_name',  bucket.url)
 ```
 
+```c#
+using Pulumi;
+using Pulumi.Gcp.Storage;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() =>
+        {
+            // Create a GCP resource (Storage Bucket)
+            var bucket = new Storage.Bucket("my-bucket");
+
+            // Export the DNS name of the bucket
+            return new Dictionary<string, object> { { "bucket_name", bucket.url } };
+        });
+}
+```
+
 This Pulumi program creates a storage bucket and exports the bucket URL.
 
 {{% lang python %}}

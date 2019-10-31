@@ -22,6 +22,10 @@ aliases: ["/docs/quickstart/azure/install-language-runtime/"]
 {{< install-python >}}
 {{< /lang >}}
 
+{{% lang dotnet %}}
+{{< install-dotnet >}}
+{{< /lang >}}
+
 Next, we'll configure Azure.
 
 {{< get-started-stepper >}}

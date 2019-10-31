@@ -86,6 +86,39 @@ bucket = s3.Bucket('my-bucket',
 pulumi.export('bucket_name',  bucket.id)
 ```
 
+```csharp
+using Pulumi;
+using Pulumi.Aws.Kms;
+using Pulumi.Aws.S3;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() =>
+        {
+            // Create a KMS Key for S3 server-side encryption
+            var key = new Kms.Key('my-key');
+
+            // Create an AWS resource (S3 Bucket)
+            var bucket = new S3.Bucket('my-bucket', new S3.BucketArgs
+            {
+                // TODO(cyrusn):
+                // ServerSideEncryptionConfiguration={
+                //     'rule': {
+                //         'apply_server_side_encryption_by_default': {
+                //             'sse_algorithm': 'aws:kms',
+                //             'kms_master_key_id': key.id
+                //         }
+                //     }
+                // })
+            });
+
+            // Export the name of the bucket
+            return new Dictionary<string, object> { { "bucket_name", bucket.id } };
+        });
+}
+```
+
 Our program now creates a KMS key and enables server-side encryption on the S3 bucket using the KMS key.
 
 Next, we'll deploy the changes.

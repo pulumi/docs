@@ -22,6 +22,10 @@ aliases: ["/docs/quickstart/aws/install-language-runtime/"]
 {{< install-python >}}
 {{< /lang >}}
 
+{{% lang dotnet %}}
+{{< install-dotnet >}}
+{{< /lang >}}
+
 Next, we'll configure AWS.
 
 {{< get-started-stepper >}}
