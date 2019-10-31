@@ -53,7 +53,9 @@ bucket = s3.Bucket('my-bucket')
 pulumi.export('bucket_name',  bucket.id)
 ```
 
-```c#
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.Aws.S3;
 
@@ -62,10 +64,10 @@ class Program
     static Task Main() =>
         Deployment.Run(() => {
             // Create an AWS resource (S3 Bucket)
-            var bucket = s3.Bucket('my-bucket');
+            var bucket = S3.Bucket('my-bucket');
 
             // Export the name of the bucket
-            return new Dictionary<string, object> { { "bucket_name" , bucket.id } };
+            return new Dictionary<string, object> { { "bucket_name" , bucket.Id } };
         });
 }
 ```

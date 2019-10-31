@@ -116,7 +116,7 @@ class Program
             });
 
             // Export the name of the bucket
-            return new Dictionary<string, object> { { "bucket_name", bucket.id } };
+            return new Dictionary<string, object> { { "bucket_name", bucket.Id } };
         });
 }
 ```
