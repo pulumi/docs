@@ -318,17 +318,19 @@ provisioned with `pulumi/azure`.
 ```typescript
 import * as azure from "@pulumi/azure";
 
-// Create the AKS cluster with IAM.
-const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
+// Create a Virtual Network for the cluster.
+const vnet = new azure.network.VirtualNetwork(name, {
     resourceGroupName: config.resourceGroupName,
-    networkProfile: {
-        networkPlugin: "azure",
-        dnsServiceIp: "10.2.2.254",
-        serviceCidr: "10.2.2.0/24",
-        dockerBridgeCidr: "172.17.0.1/16",
-    },
-    ...
-}
+    addressSpaces: ["10.2.0.0/16"],
+});
+
+// Create a Subnet for the cluster.
+const subnet = new azure.network.Subnet(name, {
+    resourceGroupName: config.resourceGroupName,
+    virtualNetworkName: vnet.name,
+    addressPrefix: "10.2.1.0/24",
+});
+
 ```
 
 [pulumi-azure]: https://github.com/pulumi/pulumi-azure
@@ -573,8 +575,7 @@ general best-practices and recommendations to configure in the cluster.
     cluster to a particular release in a declarative manner, instead of
     implicitly using the latest available version, or using a smart default
     where both can be updated at any moment.
-  * Instead of [reaching for][kube-dash-security] `kube-dashboard`, try [VMware's
-    Octant][octant].
+  * Instead of [reaching for][kube-dash-security] `kube-dashboard`, try [VMware's Octant][octant].
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -631,6 +632,7 @@ general best-practices and recommendations to configure in the cluster.
   * Set [Node Labels][k8s-labels] to identify nodes by attributes,
   * Enable Log Analytics using the `omsAgent` setting
 
+[k8s-labels]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 {{% /md %}}
 </div>
@@ -641,15 +643,16 @@ general best-practices and recommendations to configure in the cluster.
 
 **GKE:**
 
-  * Set [Node Labels][k8s-labels] to identify nodes by attributes,
+  * Use a specific version of Kubernetes. This pins the nodes
+    to a particular release in a declarative manner, instead of implicitly
+    using the latest available version, or using a smart default where both
+    can be updated at any moment.
   * Enable [PodSecurityPolicies][k8s-psp] using `podSecurityPolicyConfig: { enabled: true }`
-  * Tag resources under management to provide the ability to assign
-    metadata to resources to make it easier to manage, search, and filter them.
   * Skip enabling the default node group in favor of managing them separately from
     the control plane, as demonstrated in [Create the Worker Nodes][nodegroups].
-  * Enable control plane logging to have diagnostics of the control
-    plane's actions, and for use in debugging and auditing.
   * [Disable legacy metadata APIs][gcp-disable-metadata] that are not v1 and do not enforce internal GCP metadata headers
+  * Enable control plane logging and monitoring to have diagnostics of the control
+    plane's actions, and for use in debugging and auditing.
   * (Optional) Configure private accessibility of the control plane /
     API Server endpoint to prevent it from being publicly exposed on the
     Internet. Note, to enable this feature, [additional
@@ -662,15 +665,9 @@ import * as gcp from "@pulumi/gcp";
 
 const cluster = new gcp.container.Cluster("cluster", {
         ...
+        minMasterVersion: "1.14.7-gke.10",
         podSecurityPolicyConfig: { enabled: true },
         nodeConfig: {
-            labels: {
-                foo: "bar",
-            },
-            tags: [
-                "foo",
-                "bar",
-            ],
             // We can't create a cluster with no node pool defined, but we want to
             // only use separately managed node pools. So we create the smallest
             // possible default node pool and immediately delete it.
