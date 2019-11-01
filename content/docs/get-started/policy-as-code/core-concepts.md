@@ -13,7 +13,7 @@ aliases: ["/docs/quickstart/policy-as-code/core-concepts/"]
 
 ## Policy
 
-A Policy contains specific logic you would like to enforce. For example, you may want to restrict the creation of public S3 buckets or you may disallow resource provisioning without tags. You can refer to other examples [here](https://github.com/pulumi/pulumi-policy/tree/master/sdk/nodejs/policy/examples).
+A Policy contains specific logic you would like to enforce. For example, you may want to restrict the creation of public S3 buckets or you may disallow resource provisioning without tags. You can refer to other examples [here](https://github.com/pulumi/examples/tree/master/policy-packs).
 
 Policy rules are written as functions that are evaluated against all resources in your Pulumi stack. If the function throws an `AssertionError` (via the assert package), the rule will consider the associated resource to be in violation of the policy.
 
