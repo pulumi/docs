@@ -33,22 +33,51 @@ easily compose different resources to build all the required infrastructure for
 an application.
 
 In just a few lines of code, we can create everything we need to deploy a real
-application on Kubernetes.  ```ts // Define the application configuration and
-secrets.  const configs = new kx.ConfigMap("appConfig", { file: "./my.cnf" });
-const secrets = new kx.Secret("appSecrets", { stringData: { "app-password": new
-kx.RandomPassword("app-password"), "database-password": config.databasePassword
-} });
+application on Kubernetes.
 
-// Define the application Pod.  const appConfigPath = "/app/config"; const
-appPod = new kx.PodBuilder({ containers: [ { image: "app:1.0.0", env: {
-    "APP_CONFIG_PATH": appConfigPath, "APP_USER": config.user, "APP_PASSWORD":
-    secrets.asEnvValue("app-password"), "APP_DATABASE_PASSWORD":
-    secrets.asEnvValue("database-password"), }, volumeMounts: [
-    configs.mount(appConfigPath) ], } ] });
+```ts
+// Define the application configuration and secrets.
+const configs = new kx.ConfigMap("appConfig", {
+    file: "./my.cnf"
+});
+const secrets = new kx.Secret("appSecrets", {
+    stringData: {
+        "app-password": new kx.RandomPassword("app-password"),
+        "database-password": config.databasePassword
+    }
+});
+
+// Define the application Pod.
+const appConfigPath = "/app/config";
+const appPod = new kx.PodBuilder({
+    containers: [
+        {
+            image: "app:1.0.0",
+            env: {
+                "APP_CONFIG_PATH": appConfigPath,
+                "APP_USER": config.user,
+                "APP_PASSWORD": secrets.asEnvValue("app-password"),
+                "APP_DATABASE_PASSWORD": secrets.asEnvValue("database-password"),
+            },
+            volumeMounts: [
+                configs.mount(appConfigPath)
+            ],
+        }
+    ]
+});
 
 // Create the application Pod as a Deployment and a load-balanced Service.
-const app = kx.LoadBalancerWorkload("app", { metadata: { labels: {
-    wordpressLabels } }, spec: appPod.asDeploymentSpec({ replicas: 3, }) }); ```
+const app = kx.LoadBalancerWorkload("app", {
+    metadata: {
+        labels: {
+            wordpressLabels
+        }
+    },
+    spec: appPod.asDeploymentSpec({
+        replicas: 3,
+    })
+});
+```
 
 Let's break this down and see how it compares to writing the raw YAML.
 
