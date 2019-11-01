@@ -11,12 +11,6 @@ aliases: ["/docs/quickstart/policy-as-code/authoring-a-policy-pack/"]
 ---
 {{% pac-preview %}}
 
-1. Clone the Template Policy repo.
-
-    ```sh
-    git clone git@github.com:pulumi/templates-policy.git
-    ```
-
 1. Create a directory for your new Policy Pack, and change into it.
 
     ```sh
@@ -24,10 +18,18 @@ aliases: ["/docs/quickstart/policy-as-code/authoring-a-policy-pack/"]
     cd <policy-pack-name>
     ```
 
-1. Copy the template contents to your new directory.
+1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_DEBUG_COMMANDS=true` as an environment variable or simply pre-append it to your commands as shown.
 
     ```sh
-    cp -r <path-to-template-repo>/policy-pack-typescript/* .
+    $ PULUMI_DEBUG_COMMANDS=true pulumi policy new aws-typescript
+    Created Policy Pack!
+    Installing dependencies...
+    ...
+    Finished installing dependencies
+
+    Your new Policy Pack is ready to go! ✨
+
+    Once you're done editing your Policy Pack, run `pulumi policy publish <org-name>/<policy-pack-name>` to publish the pack.
     ```
 
 1. Tweak the Policy Pack in the index.ts file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. A Policy Pack can contain up to 25 Policies. Each Policy must have a unique name, an enforcement level and at least one rule. Here we use a typeRule that allows us to create an assertion against all S3 resources.
@@ -64,8 +66,6 @@ aliases: ["/docs/quickstart/policy-as-code/authoring-a-policy-pack/"]
     You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). Best practices for writing a Policy Pack can be found [here](../best-practices).
 
 ## Testing the Policy Pack Locally
-
-Since Policy as Code is a beta feature, you will need to set `PULUMI_DEBUG_COMMANDS=true` as an environment variable or simply pre-append it to your commands as shown.
 
 Policy Packs can be tested on a user’s local workstation to facilitate rapid development and testing of policies. This removes the step of publishing and applying policy packs to the Pulumi Console and lets developers reference a policy pack on their local workstation.
 
