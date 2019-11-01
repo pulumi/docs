@@ -58,25 +58,24 @@ As well as other properties like the version of the [Kubelet][k8s-kubelet] to ru
 
 How you segment and configure your node groups will vary by preferences and
 requirements. Generally, there are at least a few classes of worker node
-groups for starters: a standard pool of nodes that
-offers a base for medium-sized use, and a performant pool of nodes with higher
-capacity and capability.
+groups for starters: a standard pool of nodes that offers a base for
+medium-sized use, and a performant pool of nodes with higher capacity and capability.
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 
 We'll configure and deploy:
 
-  * [Node Group Worker Identity](#node-group-worker-identity): For authentication and authorization of the worker nodes.
-  * [Node Group Worker Networking](#node-group-worker-networking): To provide a virtual network for the
+  * [Node Identity](#node-identity): For authentication and authorization of the worker nodes.
+  * [Node Group Networking](#node-group-networking): To provide a virtual network for the
     nodes and the Pods it runs.
   * [Node Sizing](#node-sizing): To size our node scaling groups
   * [Pod Scheduling](#pod-scheduling): To schedule Pods on nodes using predicates.
   * [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
   and best-practices, such as version pinning, and resource tags.
 
-### Node Group Worker Identity
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+### Node Identity
 
 When creating node groups, it is recommended to use separate identities between
 node groups, as separation of roles creates many functions: it can be used to
@@ -118,11 +117,12 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-TODO
+We'll configure and deploy:
 
-```typescript
-// TODO
-```
+  * [Node Pool Sizing](#node-pool-sizing): To properly size our nodes.
+  * [Pod Scheduling](#pod-scheduling): To schedule Pods on nodes using predicates.
+  * [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
+  and best-practices.
 
 {{% /md %}}
 </div>
@@ -131,20 +131,21 @@ TODO
 <div class="mt">
 {{% md %}}
 
-TODO
+We'll configure and deploy:
 
-```typescript
-// TODO
-```
+  * [Node Sizing](#node-sizing): To properly size our nodes.
+  * [Pod Scheduling](#pod-scheduling): To schedule Pods on nodes using predicates.
+  * [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
+  and best-practices.
 
 {{% /md %}}
 </div>
 
-### Node Group Worker Networking
-
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+
+### Node Group Networking
 
 Node groups in EKS can also have their node security group be configured to a
 new or existing security group.
@@ -186,23 +187,25 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-TODO
+### Node Pool Networking
+
+Network profiles can be configured in Azure to work within the virtual network
+created, allowing you to specify the Kubernetes Service and Docker network properties.
 
 ```typescript
-// TODO
-```
+import * as azure from "@pulumi/azure";
 
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-
-TODO
-
-```typescript
-// TODO
+// Create the AKS cluster within the network created.
+const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
+    resourceGroupName: config.resourceGroupName,
+    networkProfile: {
+        networkPlugin: "azure",
+        dnsServiceIp: "10.2.2.254",
+        serviceCidr: "10.2.2.0/24",
+        dockerBridgeCidr: "172.17.0.1/16",
+    },
+    ...
+}
 ```
 
 {{% /md %}}
@@ -214,8 +217,8 @@ TODO
 <div class="mt">
 {{% md %}}
 
-In managed Kubernetes offerings, worker node groups are backed by auto scaling
-groups. These groups provide automatic scaling and management of a logical
+In EKS, worker node groups are backed by auto scaling groups.
+These groups provide automatic scaling and management of a logical
 collection of hosts through health checks and policies, and are an effective
 means of ensuring node groups are adequately provisioned as intended.
 
@@ -257,14 +260,14 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-In managed Kubernetes offerings, worker node groups are backed by agent pools.
+In AKS, worker node pools are backed by [VM Scale Sets][azure-scalesets].
 These pools provide automatic scaling and management of a logical
 collection of hosts through health checks and policies, and are an effective
-means of ensuring node groups are adequately provisioned as intended.
+means of ensuring node pools are adequately provisioned as intended.
 
-We can configure the agent pool profile to run a specific quantity of nodes.
+We can configure the agent pool profile to run a specific quantity and type of nodes.
 
-Size the node groups accordingly to known or approximate usage and bursting
+Size the node pools accordingly to known or approximate usage and bursting
 expectations.
 
 ```typescript
@@ -288,6 +291,7 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 });
 ```
 
+[azure-scalesets]: https://azure.microsoft.com/en-us/services/virtual-machine-scale-sets/
 {{% /md %}}
 </div>
 
@@ -295,10 +299,30 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 <div class="mt">
 {{% md %}}
 
-TODO
+In GKE, worker node pools provide automatic scaling and management of a logical
+collection of hosts through health checks and policies, and are an effective
+means of ensuring node pools are adequately provisioned as intended.
+
+We can configure the node config to run a specific quantity of nodes, alongwith
+the min and max capacity the pool should have.
+
+Size the node pools accordingly to known or approximate usage and bursting
+expectations.
 
 ```typescript
-// TODO
+const standardNodes = new gcp.container.NodePool("standard-nodes", {
+    cluster: cluster.name,
+    version: "1.14.7-gke.10",
+    autoscaling: {minNodeCount: 2, maxNodeCount: 5},
+    ...
+});
+
+const performantNodes = new gcp.container.NodePool("performant-nodes", {
+    cluster: cluster.name,
+    version: "1.14.7-gke.10",
+    autoscaling: {minNodeCount: 2, maxNodeCount: 10},
+    ...
+});
 ```
 
 {{% /md %}}
@@ -357,10 +381,15 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-TODO
+Set labels on nodes.
 
 ```typescript
-// TODO
+$ kubectl label nodes <NODE_NAME> disktype=ssd
+```
+
+Set taints on nodes.
+```typescript
+$ kubectl taint nodes <NODE_NAME> special=true:NoSchedule
 ```
 
 {{% /md %}}
@@ -370,10 +399,42 @@ TODO
 <div class="mt">
 {{% md %}}
 
-TODO
-
 ```typescript
-// TODO
+import * as gcp from "@pulumi/gcp";
+
+const standardNodes = new gcp.container.NodePool("standard-nodes", {
+    cluster: cluster.name,
+    version: "1.14.7-gke.10",
+    autoscaling: {minNodeCount: 2, maxNodeCount: 5},
+    nodeConfig: {
+        machineType: "n1-standard-1",
+        oauthScopes: [
+            "https://www.googleapis.com/auth/compute",
+            "https://www.googleapis.com/auth/devstorage.read_only",
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring",
+        ],
+        labels: {"instanceType": "n1-standard-1"},
+    },
+});
+
+const performantNodes = new gcp.container.NodePool("performant-nodes", {
+    cluster: cluster.name,
+    version: "1.14.7-gke.10",
+    autoscaling: {minNodeCount: 2, maxNodeCount: 10},
+    nodeConfig: {
+        machineType: "n1-standard-16",
+        oauthScopes: [
+            "https://www.googleapis.com/auth/compute",
+            "https://www.googleapis.com/auth/devstorage.read_only",
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring",
+        ],
+        labels: {"instanceType": "n1-standard-16"},
+        taints: [{key: "special", value: "true", effect: "NO_SCHEDULE"}],
+    },
+});
+
 ```
 
 {{% /md %}}
@@ -381,16 +442,16 @@ TODO
 
 ### Recommended Worker Settings
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
   * Use a specific version of Kubernetes for node group. This pins the nodes
   to a particular release in a declarative manner, instead of implicitly
   using the latest available version, or using a smart default where both
   can be updated at any moment.
   * Tag resources under management to provide the ability to assign
   metadata to resources to make it easier to manage, search, and filter them.
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
 
 ```typescript
 // Create a Standard node group of t2.medium workers with an IAM instance profile.
@@ -431,7 +492,10 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-TODO
+  * Use a specific version of Kubernetes for node group. This pins the nodes
+  to a particular release in a declarative manner, instead of implicitly
+  using the latest available version, or using a smart default where both
+  can be updated at any moment.
 
 ```typescript
 // TODO
@@ -444,12 +508,37 @@ TODO
 <div class="mt">
 {{% md %}}
 
-TODO
+  * Use a specific version of Kubernetes for node group. This pins the nodes
+    to a particular release in a declarative manner, instead of implicitly
+    using the latest available version, or using a smart default where both
+    can be updated at any moment.
+  * Set [OAuth Scopes][gcp-oauth-scopes] for Google APIs to limit the capabilities of the node
+    pool.
+  * Tag resources under management to provide the ability to assign
+    metadata to resources to make it easier to manage, search, and filter them.
 
 ```typescript
-// TODO
+import * as gcp from "@pulumi/gcp";
+
+const standardNodes = new gcp.container.NodePool("standard-nodes", {
+        cluster: cluster.name,
+        version: "1.14.7-gke.10",
+        nodeCount: 2,
+        nodeConfig: {
+            machineType: "n1-standard-1",
+            oauthScopes: [
+                "https://www.googleapis.com/auth/compute",
+                "https://www.googleapis.com/auth/devstorage.read_only",
+                "https://www.googleapis.com/auth/logging.write",
+                "https://www.googleapis.com/auth/monitoring",
+            ],
+            tags: ["org-pulumi"],
+        },
+});
 ```
 
+[gcp-oauth-scopes]: https://developers.google.com/identity/protocols/googlescopes
+[k8s-labels]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 {{% /md %}}
 </div>
 
