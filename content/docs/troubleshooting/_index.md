@@ -17,6 +17,64 @@ First thing's first, we are always happy to hear from you and will try to help. 
 [join our Community Slack](https://slack.pulumi.com), where our whole team, in addition to a passionate
 community of users, are there to help out. Any and all questions are welcome!
 
+We also encourage everyone to contribute to the [Pulumi open source
+projects](https://github.com/pulumi) by [opening new
+issues](https://github.com/pulumi/pulumi/issues/new) and upvoting existing issues they care about.
+
+## Diagnosing Issues
+
+There are a few tools available to get additional diagnostics on how your Pulumi program is
+behaving.  These can be useful for self-diagnosing issues, and for sharing details as part
+of issue reports.
+
+### Verbose Logging
+
+Verbose logging of the internals of the Pulumi engine and resource providers can be enabled by
+passing the `-v` flag to any `pulumi` CLI command. The `--logtostderr` flag can be added to send
+this verbose logging directly to `stderr` for easier access.  Pulumi emits logs at a variety of log
+levels between `1` and `9`.  
+
+> These logs may include sensitive information that is provided from your execution environment to
+your cloud provider (and which Pulumi may not even itself be aware of) so be careful to audit before
+sharing.
+
+```
+$ pulumi up --logtostderr -v=9 2> out.txt
+```
+
+Individual resource providers may also have additional flags to customize their diagnostic logging.
+For example, for any Pulumi resource providers that expose a Terraform resource provider into
+Pulumi, you can use [`TF_TRACE`](https://www.terraform.io/docs/internals/debugging.html) set to
+`TRACE`, `DEBUG`, `INFO`, `WARN` or `ERROR`.
+
+```
+$ TF_LOG=TRACE pulumi up --logtostderr -v=9 2> out.txt
+```
+
+### Performance
+
+If you are seeing unexpectedly slow performance, you can gather a trace to understand what
+operations are being performed throughout the deployment and what the long poles are for your
+deployment.  In most cases, the most time consuming operations will be the provisioning of one or more resources in your cloud
+provider, however, there may be cases where Pulumi itself is doing work that is limiting the performance
+of your deployments, and this may indicate an opportunity to further improve the Pulumi deployment
+orchestration engine to get the maximal parallelism and performance possible for your cloud
+deployment.
+
+To collect a trace:
+
+```
+$ pulumi up --tracing=file:./up.trace
+```
+
+To view a trace locally using [AppDash](https://github.com/sourcegraph/appdash):
+
+```
+$ PULUMI_DEBUG_COMMANDS=1 pulumi view-trace ~/Downloads/up.trace
+Displaying trace at http://localhost:8008
+```
+
+
 ## Common Problems
 
 This section covers a few problems that can arise when working with Pulumi.
