@@ -1,3 +1,12 @@
+---
+title: "Introducing kx: Kubernetes the Easy Way"
+authors: ["levi-blackstone"]
+tags: ["Kubernetes"]
+meta_desc: "todo"
+date: "2019-11-01"
+
+---
+
 # Introducing kx: Kubernetes the Easy Way
 
 With great power comes great complexity. The sheer number of configuration
