@@ -28,6 +28,7 @@ $ pulumi new csharp
 
 This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), a `.csproj` file that holds references used by the project, and an `Program.cs` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
 
+<div class="language-prologue-csharp"></div>
 ## C\#
 
 You can write Pulumi programs in C# to get additional verification and tooling benefits. As of version 1.5, Pulumi supports .NET natively. The fastest way to get started with Pulumi in C#, is to use a template:
@@ -47,7 +48,7 @@ In addition to the `csharp` template, Pulumi provides the following c# templates
 * `azure-csharp`
 * `gcp-csharp`
 
-## F#
+## F\#
 
 You can write Pulumi programs in F# to get additional verification and tooling benefits. As of version 1.5, Pulumi supports .NET natively. The fastest way to get started with Pulumi in f#, is to use a template:
 
