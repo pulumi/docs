@@ -983,7 +983,7 @@ Pulumi records all resource inputs and outputs in a [state file]({{< relref "sta
 
 There are two ways to programmatically create secret values:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 <div class="language-prologue-javascript"></div>
 
