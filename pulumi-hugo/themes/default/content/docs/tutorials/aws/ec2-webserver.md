@@ -10,7 +10,7 @@ In this tutorial, we will show you how to use JavaScript or Python to deploy a s
 
 {{< multilang-tutorial-prereqs >}}
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 {{% lang nodejs %}}
 {{< install-node >}}
@@ -30,7 +30,7 @@ In this tutorial, we will show you how to use JavaScript or Python to deploy a s
 
 Create a project directory, `webserver`, and change into it. Run [`pulumi new aws-<language> --name myproject`]({{< relref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the AWS template for your chosen language. Replace `myproject` with your desired project name.
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 <div class="language-prologue-javascript"></div>
 
@@ -64,7 +64,7 @@ $ pulumi new aws-csharp --name myproject
 
 Open {{< langfile >}} and replace the contents with the following:
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 ```javascript
 const aws = require("@pulumi/aws");
@@ -292,7 +292,7 @@ Pulumi program to define the new state you want your infrastructure to be in, an
 Replace the creation of the two resources with the following code. This exposes an additional port, `80`, and adds a startup
 script to run a simple HTTP server at startup.
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 ```javascript
 ...

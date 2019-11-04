@@ -84,7 +84,7 @@ dbPassword                 ********
 
 Similarly, if our program attempts to print the value of `dbPassword` to the console---either intentionally or accidentally---Pulumi will mask it out:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 var pulumi = require("@pulumi/pulumi");
@@ -147,7 +147,7 @@ $ pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
 
 Use the following code to access these configuration values in your Pulumi program:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 var pulumi = require("@pulumi/pulumi");
