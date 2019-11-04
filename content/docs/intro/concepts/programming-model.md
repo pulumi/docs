@@ -1004,6 +1004,11 @@ There are two ways to programmatically create secret values:
 
 Secrets are not yet available in Go. See <https://github.com/pulumi/pulumi/issues/2820>.
 
+<div class="language-prologue-csharp"></div>
+
+- Using `Config.GetSecret(key)` or `Config.RequireSecret(key)` when reading a value from config.
+- Calling `Output.CreateSecret(value)` to construct a secret from an existing value.
+
 To illustrate using these functions, this code creates an AWS Parameter Store parameter insecurely:
 
 {{< langchoose csharp >}}
