@@ -8,7 +8,7 @@ menu:
 aliases: ["/docs/reference/dotnet/"]
 ---
 
-{{< langchoose dotnetonly >}}
+{{< langchoose csharp fsharp visualbasic >}}
 
 Pulumi supports programs written in .NET, because programs are just .NET, you may elect to write them in a .NET supported language. That includes C#, F#, or Visual Basic, in addition to your favorite tools such as build systems, linters, or
 test frameworks.
@@ -29,7 +29,7 @@ $ pulumi new csharp
 
 This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}), a `.csproj` file that holds references used by the project, and an `Program.cs` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
 
-## C#
+## C\#
 
 You can write Pulumi programs in C# to get additional verification and tooling benefits. As of version 1.5, Pulumi supports .NET natively. The fastest way to get started with Pulumi in C#, is to use a template:
 
@@ -40,7 +40,7 @@ $ pulumi new csharp
 
 This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}), a `Infra.csproj` file that holds references used by the project, and a `Program.cs` file, containing your program. The `.csproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
 
-### C# Templates
+### C\# Templates
 
 In addition to the `csharp` template, Pulumi provides the following c# templates:
 
