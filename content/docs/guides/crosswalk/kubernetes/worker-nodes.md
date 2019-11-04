@@ -314,6 +314,7 @@ const standardNodes = new gcp.container.NodePool("standard-nodes", {
     cluster: cluster.name,
     version: "1.14.7-gke.10",
     autoscaling: {minNodeCount: 2, maxNodeCount: 5},
+    initialNodeCount: 2,
     ...
 });
 
@@ -321,6 +322,7 @@ const performantNodes = new gcp.container.NodePool("performant-nodes", {
     cluster: cluster.name,
     version: "1.14.7-gke.10",
     autoscaling: {minNodeCount: 2, maxNodeCount: 10},
+    initialNodeCount: 2,
     ...
 });
 ```
@@ -406,6 +408,7 @@ const standardNodes = new gcp.container.NodePool("standard-nodes", {
     cluster: cluster.name,
     version: "1.14.7-gke.10",
     autoscaling: {minNodeCount: 2, maxNodeCount: 5},
+    initialNodeCount: 2,
     nodeConfig: {
         machineType: "n1-standard-1",
         oauthScopes: [
@@ -422,6 +425,7 @@ const performantNodes = new gcp.container.NodePool("performant-nodes", {
     cluster: cluster.name,
     version: "1.14.7-gke.10",
     autoscaling: {minNodeCount: 2, maxNodeCount: 10},
+    initialNodeCount: 2,
     nodeConfig: {
         machineType: "n1-standard-16",
         oauthScopes: [
@@ -521,9 +525,8 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 import * as gcp from "@pulumi/gcp";
 
 const standardNodes = new gcp.container.NodePool("standard-nodes", {
-        cluster: cluster.name,
+        ...
         version: "1.14.7-gke.10",
-        nodeCount: 2,
         nodeConfig: {
             machineType: "n1-standard-1",
             oauthScopes: [
