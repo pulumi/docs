@@ -15,7 +15,8 @@ clouds may be targeted. Each language is just as
 capable as the other and supports the entire surface area of resources available.
 
 The following language runtimes are currently supported by Pulumi:
-* [.NET]({{< relref "dotnet.md" >}}) <span class="badge badge-preview">PREVIEW</span> - .NET
+
+* [.NET]({{< relref "dotnet.md" >}}) <span class="badge badge-preview">PREVIEW</span> - C#, F# and Visual Basic
 * [Node.js]({{< relref "javascript.md" >}}) - JavaScript, TypeScript, or any other Node.js compatible language
 * [Python 3]({{< relref "python.md" >}}) - Python 3.6 or greater
 * Go <span class="badge badge-preview">PREVIEW</span> - statically compiled Go binaries (*documentation coming soon*)
