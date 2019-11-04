@@ -432,9 +432,61 @@ provider, _ := aws.Provider(ctx, "provider", { region: "us-west-2" });
 vpc, _ := ec2.Vpc(ctx, "vpc", &VpcArgs{}, pulumi.ResourceOpt{Provider: provider});
 ```
 
+<<<<<<< HEAD
 ```csharp
 var provider = new Aws.Provider("provider", new Aws.ProviderArgs { Region = "us-west-2" });
 var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new ResourceOptions { Provider = provider });
+=======
+###### `transformations`
+A list of transformations to apply to the resource and all of its children. This can be used to override or modify the inputs to child resources of a component, for example to add other resource options (like `ignoreChanges` or `protect`) or to modify an input property (like adding to `tags` or changing a property which is not configurable via the component directly).  Transformations can also be applied to all resources in a stack using `pulumi.runtime.registerStackTransformation`.  Transformations are passed the resource type, name, input properties resource options and the resource instance itself.  They can optionally return a new set of resource input properties and resource options which will be used to construct the resource.
+
+{{< langchoose >}}
+
+```javascript
+const vpc = new MyVpcComponent("vpc", {}, {
+    transformations: [args => {
+        if (args.type === "aws:ec2/vpc:Vpc" || args.type === "aws:ec2/subnet:Subnet") {
+            return {
+                props: args.props,
+                opts: pulumi.mergeOptions(args.opts, { ignoreChanges: ["tags"] })
+            }
+        }
+        return undefined;
+    }],
+});
+```
+
+```typescript
+const vpc = new MyVpcComponent("vpc", {}, {
+    transformations: [args => {
+        if (args.type === "aws:ec2/vpc:Vpc" || args.type === "aws:ec2/subnet:Subnet") {
+            return {
+                props: args.props,
+                opts: pulumi.mergeOptions(args.opts, { ignoreChanges: ["tags"] })
+            }
+        }
+        return undefined;
+    }],
+});
+```
+
+```python
+def transformation(args: ResourceTransformationArgs):
+    if args.type_ == "aws:ec2/vpc:Vpc" or args.type_ == "aws:ec2/subnet:Subnet":
+        return ResourceTransformationResult(
+            props=args.props,
+            opts=ResourceOptions.merge(args.opts, ResourceOptions(
+                ignore_changes=["tags"],
+            )))
+
+vpc = MyVpcComponent("vpc", opts=ResourceOptions(transformations=[transformation]))
+```
+
+```go
+// Transformations is not yet supported in Go.
+//
+// See https://github.com/pulumi/pulumi/issues/1614.
+>>>>>>> 48f2d82311617d095ce7d15d0721dc01bf976c78
 ```
 
 ### Resource names {#names}

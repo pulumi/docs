@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Oxygen');
+@import "colors";
+@import "fonts";
 
 body {
-    background-color: #7c4792;
+    background-color: map-get($purple, 500);
 }
 
 $base-header-height: 3.779vw;
@@ -17,9 +18,11 @@ $position-left: 27vw;
 
 // The content is put inside of #clouds-and-beams.
 #clouds-and-beams {
-    color: #fcf7e7;
-    font-family: Oxygen;
+    color: map-get($gray, 100);
     line-height: 1.1;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    margin-top: 48px;
 
     // The positioning of the #clouds-and-beams div is absolute, with the actual location being
     // dependent up media queries.
@@ -28,10 +31,12 @@ $position-left: 27vw;
 
     h1 {
         font-weight: 700;
+        text-shadow: 2px 2px 2px map-get($gray, 800);
     }
 
     h2 {
         font-weight: 400;
+        text-shadow: 2px 2px 2px map-get($gray, 800);
     }
 
     a {
@@ -44,7 +49,8 @@ $position-left: 27vw;
     }
 
     p {
-        line-height: 1.5
+        line-height: 1.5;
+        text-shadow: 2px 2px 2px map-get($gray, 800);
     }
 
     @media (max-width: $width-break) {
@@ -53,16 +59,13 @@ $position-left: 27vw;
         left: calc(#{ $position-left } * 1.5);
 
         h1 {
-            font-size: calc(#{ $base-header-height } * 1.5);
             text-shadow: calc(.14vw * 1.5) calc(.14vw * 1.5) calc(.28vw * 1.5) rgba(32, 21, 75, 0.5);
         }
 
         h2 {
-            font-size: calc(#{ $base-header2-height } * 1.5);
         }
 
         p {
-            font-size: calc(#{ $base-text-height } * 1.5);
             text-shadow: calc(.14vw * 1.5) calc(.14vw * 1.5) calc(.28vw * 1.5) rgba(32, 21, 75, 0.5);
         }
     }
@@ -72,16 +75,13 @@ $position-left: 27vw;
         left: $position-left;
 
         h1 {
-            font-size: $base-header-height;
             text-shadow: .14vw .14vw .28vw rgba(32, 21, 75, 0.5);
         }
 
         h2 {
-            font-size: $base-header2-height;
         }
 
         p {
-            font-size: $base-text-height;
             text-shadow: .14vw .14vw .28vw rgba(32, 21, 75, 0.5);
         }
     }
@@ -252,18 +252,46 @@ $position-left: 27vw;
 }
 .anim1 {
     animation: frames1 8s ease-in-out 0s infinite alternate-reverse;
+    min-height: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .anim2 {
     animation: frames3 17s ease-in-out 0s infinite alternate-reverse;
+    min-height: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .anim3 {
     animation: frames3 14s ease-in-out 0s infinite alternate-reverse;
+    min-height: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .anim4 {
     animation: frames4 7s ease-in-out 0s infinite alternate-reverse;
+    min-height: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .cloud1 {
