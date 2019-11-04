@@ -149,5 +149,5 @@ $(function() {
     }
     hideShowChoices("os", selectOs, defaultOsChoice);
     hideShowChoices("cloud", selectCloud, "aws");
-    hideShowChoices("k8s-language", selectK8sLang, "yaml");
+    hideShowChoices("k8s-language", selectK8sLang, "typescript");
 });
