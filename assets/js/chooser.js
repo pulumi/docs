@@ -14,10 +14,13 @@ function selectChoice(kind, choice, extra) {
     var choiceTabs = 0;
     $("a." + kind + "-tab").each(function (i, e) {
         choiceTabs++;
-        if (e.innerText.toLowerCase() === choice) {
-            $(e).addClass("is-active");
+
+        var $e = $(e);
+        var currentTabChoice = $e.attr("data-choice") || e.innerText.toLowerCase();
+        if (currentTabChoice === choice) {
+            $e.addClass("is-active");
         } else {
-            $(e).removeClass("is-active");
+            $e.removeClass("is-active");
         }
     });
 
@@ -93,7 +96,7 @@ function selectOs(os) {
 function hideShowChoices(kind, selector, defaultChoice) {
     var tabsOnPage = {};
     $("a." + kind + "-tab").each(function (i, e) {
-        var choice = e.innerText.toLowerCase();
+        var choice = $(e).attr("data-choice") || e.innerText.toLowerCase();
 
         // Save the languages we've seen.
         tabsOnPage[choice] = true;

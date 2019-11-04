@@ -35,7 +35,7 @@ In addition to the tutorial, several interesting examples are available complete
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const gcp = require("@pulumi/gcp")

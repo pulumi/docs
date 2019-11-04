@@ -22,7 +22,7 @@ The DigitalOcean provider supports several options for providing access to Digit
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const do = require("@pulumi/digitalocean")

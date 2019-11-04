@@ -22,7 +22,7 @@ The Packet.net provider supports several options for providing access to Packet.
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const packet = require("@pulumi/packet")

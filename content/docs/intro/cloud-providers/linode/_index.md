@@ -22,7 +22,7 @@ The Linode provider supports several options for providing access to Linode cred
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const linode = require("@pulumi/linode")

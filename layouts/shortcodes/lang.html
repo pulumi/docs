@@ -1,8 +1,9 @@
 {{/*
     This shortcode is used emit a language prologue followed by the content that should
     be displayed for that language.
-    The parameter specifies the language, or `nodejs` can be specified to emit language
-    prologues for both JavaScript and TypeScript.
+    The parameter specifies the language. `nodejs` can be specified to emit language
+    prologues for both JavaScript and TypeScript. `dotnet` can be specified to emit language
+    prologues for C#, F#, and Visual Basic.
     We specify version = 1 so that `.Inner` is rendered as markdown with surrounding `<div>`.
     See https://gohugo.io/content-management/shortcodes/#shortcodes-with-markdown.
 */}}
@@ -14,6 +15,15 @@
         <div>{{ $inner }}</div>
 
         <div class="language-prologue-typescript"></div>
+        <div>{{ $inner }}</div>
+    {{ else if eq . "dotnet" }}
+        <div class="language-prologue-csharp"></div>
+        <div>{{ $inner }}</div>
+
+        <div class="language-prologue-fsharp"></div>
+        <div>{{ $inner }}</div>
+
+        <div class="language-prologue-visualbasic"></div>
         <div>{{ $inner }}</div>
     {{ else }}
         <div class="language-prologue-{{ . }}"></div>
