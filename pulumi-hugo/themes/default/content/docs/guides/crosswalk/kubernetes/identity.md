@@ -170,14 +170,51 @@ const adminsIamRolePolicy = new aws.iam.RolePolicy(`${adminsName}-eksClusterAdmi
 
 Azure AD integration with AKS requires that two Azure AD application objects be
 created: a server component to provide authentication, and a client component
-used by the CLI for authentication that works with the server component.
+used by the CLI for authentication that works with the server component. We
+will create both in the sections below.
+
+> Note: The Server and Client Application registrations will be created with the desired accesses, but an administrator
+**will need** to grant consent before they can be used in proceeding stacks.
 
 See the official [docs][azure-ad-aks] for more details.
+
+### Prerequisites
+
+To facilitate working with Azure, it is recommended that you create a new
+ServicePrincipal with the proper permissions needed to create all of the
+resources in each stack.
+
+```bash
+$ az ad sp create-for-rbac --name MyServicePrincipal
+```
+
+And add permissions to both the current and legacy Graph APIs:
+
+**Azure Active Directory Graph (Legacy)**
+
+| Permission Name  | Type |
+|---|---|
+|Application.ReadWrite.All | Application |
+|Directory.ReadWrite.All | Application  |
+|Group.ReadWrite.All | Delegated  |
+|User.Read.All  | Delegated  |
+
+**Microsoft Graph**
+
+| Permission Name  | Type |
+|---|---|
+|Application.ReadWrite.All | Application |
+|Directory.ReadWrite.All | Application  |
+|Group.ReadWrite.All | Delegated  |
+|User.Read  | Delegated  |
 
 ## Create an IAM Server Application and ServicePrincipal
 
 Create an Azure server Application and ServicePrincipal, and attach it AD
 permissions.
+
+> Note: The Application registration will be created with the desired accesses, but an administrator
+**will need** to grant consent before they can be used in proceeding stacks.
 
 ```typescript
 import * as azuread from "@pulumi/azuread";
@@ -236,6 +273,9 @@ export const adServerAppSecret = spPasswordServer.value;
 
 Create an Azure client Application and ServicePrincipal, and attach it AD
 permissions.
+
+> Note: The Application registration will be created with the desired accesses, but an administrator
+**will need** to grant consent before they can be used in proceeding stacks.
 
 ```typescript
 import * as azuread from "@pulumi/azuread";
