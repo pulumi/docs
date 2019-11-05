@@ -12,8 +12,6 @@ menu:
 With a vanilla cluster running, create any desired resources, and logically
 segment the cluster as needed.
 
-TODO - Flush out intro
-
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
