@@ -115,7 +115,8 @@ $tab-font-size: 14px !default;
 
 .mdl-tabs__tab.language-tab,
 .mdl-tabs__tab.os-tab,
-.mdl-tabs__tab.cloud-tab {
+.mdl-tabs__tab.cloud-tab,
+.mdl-tabs__tab.k8s-language-tab {
     cursor: pointer;
 }
 
