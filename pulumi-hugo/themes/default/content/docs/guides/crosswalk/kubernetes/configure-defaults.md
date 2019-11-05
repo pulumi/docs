@@ -1,5 +1,4 @@
----
-title: Configure Cluster Defaults
+--- title: Configure Cluster Defaults
 menu:
   userguides:
     parent: crosswalk-kubernetes
@@ -58,6 +57,41 @@ Create namespaces for typical stacks:
  * App Services: Deploy application-scoped services, such as DNS and ingress management.
  * Apps: Deploy applications and workloads.
 
+{{< k8s-language nokx >}}
+
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
+
+```yaml
+cat > namespaces.yaml << EOF
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cluster-svcs
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: app-svcs
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: apps
+EOF
+```
+
+```bash
+$ kubectl apply -f namespaces.yaml
+```
+
+{{% /md %}}
+</div>
+
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
@@ -71,14 +105,21 @@ export const appSvcsNamespaceName = appSvcsNamespace.metadata.name;
 const appsNamespace = new k8s.core.v1.Namespace("apps", undefined, { provider: cluster.provider });
 export const appsNamespaceName = appsNamespace.metadata.name;
 ```
+{{% /md %}}
+</div>
 
 ### Quotas
 
 Create [quotas][k8s-quotas] to restrict the amount of resources that can be consumed across
 all Pods in a namespace.
 
-```bash
-$ cat > quota.yaml << EOF
+{{< k8s-language nokx >}}
+
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
+```yaml
+cat > quota.yaml << EOF
 apiVersion: v1
 kind: ResourceQuota
 metadata:
@@ -94,16 +135,15 @@ spec:
 EOF
 ```
 
-Create the quota using `kubectl`.
-
 ```bash
 $ kubectl apply -f quota.yaml
 ```
+{{% /md %}}
+</div>
 
-or 
-
-Create the quota using Pulumi.
-
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 
@@ -124,6 +164,8 @@ const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
     provider: cluster.provider
 });
 ```
+{{% /md %}}
+</div>
 
 Track the quota usage in the namespace using `kubectl` and Pulumi output.
 
@@ -147,7 +189,7 @@ services                0     5
 <div class="mt">
 {{% md %}}
 
-By default EKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
+By default, EKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
 `eks.privileged`. This privileged PSP should be removed **after** its replacements
 have been created to ensure running workloads continue executing properly (order matters).
 
@@ -163,7 +205,18 @@ See the official [EKS Pod Security Policy][eks-psp] docs and the
 <div class="mt">
 {{% md %}}
 
-TODO
+By default, AKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
+`privileged`. This privileged PSP should be removed **after** its replacements
+have been created to ensure running workloads continue executing properly (order matters).
+
+Users who are **not** admins will not be able to create Pods if the cluster was
+created with `enablePodSecurityPolicy: true`, as the PSP is only bound to
+admins, and requires a PSP be created and bound to the Kubernetes RBAC for these users.
+
+See the official [AKS Pod Security Policy][aks-psp] docs and the
+[Kubernetes docs][k8s-psp] for more details.
+[k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
+[aks-psp]: https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies
 
 {{% /md %}}
 </div>
@@ -172,8 +225,24 @@ TODO
 <div class="mt">
 {{% md %}}
 
-TODO
+By default, GKE ships with the following [PodSecurityPolicies][k8s-psp].
+These PSPs are used by GKE Pods and should generally be left untouched. If you
+choose to replace them, they should be removed **after** its replacements
+have been created to ensure running workloads continue executing properly (order matters).
 
+| PSP Name |
+|---|
+| gce.event-exporter |
+| gce.fluentd-gcp |
+| gce.persistent-volume-binder |
+| gce.privileged |
+| gce.unprivileged-addon |
+
+See the official [GKE Pod Security Policy][gke-psp] docs and the
+[Kubernetes docs][k8s-psp] for more details.
+
+[k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
+[gke-psp]: https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies
 {{% /md %}}
 </div>
 
