@@ -41,6 +41,7 @@ Updating an existing node group can be trivial for basic property changes.
    a value of `0`.
 1. Run an update with `pulumi up`.
 1. Update the desired node group properties, such as the `instanceType` or `amiId`.
+1. Scale the node group up to the desired value.
 1. Run an update with `pulumi up`.
 
    > Note: [Don't drift][k8s-version-skew] far apart in minor Kubernetes versions between
@@ -61,10 +62,11 @@ Updating an existing node group can be trivial for basic property changes.
 
 1. Verify that enough capacity is available in the cluster to handle workload
    spillover when the desired node group is scaled down.
-1. Edit the `count` of the node group to a value of `0`.
-1. Run an update with `pulumi up`.
+1. Edit the node pool in VMSS portal to a value of `0`, as node pools cannot
+   currently be scaled down to `0`, but it's [availability is planned][aks-scaledown].
 1. Update the desired node group properties, such as the `vmSize` or
    `kubernetesVersion`.
+1. Scale the node pool up to the desired value.
 1. Run an update with `pulumi up`.
 
    > Note: [Don't drift][k8s-version-skew] far apart in minor Kubernetes versions between
@@ -72,6 +74,7 @@ Updating an existing node group can be trivial for basic property changes.
 
 See the official AKS [docs][aks-upgrade-docs] for more details.
 
+[aks-scaledown]: https://github.com/Azure/AKS/issues/1050
 [k8s-version-skew]: https://kubernetes.io/docs/setup/release/version-skew-policy/#supported-version-skew
 [aks-upgrade-docs]: https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster
 {{% /md %}}
@@ -91,6 +94,7 @@ Manually updating an existing node group can be trivial for basic property chang
 1. Run an update with `pulumi up`.
 1. Update the desired node group properties, such as the `machineType` or
    `version`.
+1. Scale the node pool up to the desired value.
 1. Run an update with `pulumi up`.
 
    > Note: [Don't drift][k8s-version-skew] far apart in minor Kubernetes versions between
