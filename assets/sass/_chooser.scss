@@ -113,7 +113,9 @@ $tab-font-size: 14px !default;
     border-bottom: 2px solid $brand-purple;
 }
 
-.mdl-tabs__tab.language-tab, .mdl-tabs__tab.os-tab {
+.mdl-tabs__tab.language-tab,
+.mdl-tabs__tab.os-tab,
+.mdl-tabs__tab.cloud-tab {
     cursor: pointer;
 }
 
