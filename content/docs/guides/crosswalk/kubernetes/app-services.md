@@ -432,13 +432,13 @@ $ curl -Lv -H 'Host: apps.example.com' <INGRESS_ADDRESS>
 
 #### Clean Up
 
-Delete the pod, service, and ingress controller.
-
 {{< k8s-language nokx >}}
 
 <div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
 {{% md %}}
+Delete the pod, service, and ingress controller.
+
 ```bash
 $ kubectl delete pod/kuard svc/kuard ingress/kuard
 $ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml
@@ -449,10 +449,6 @@ $ kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/m
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
-```bash
-$ kubectl delete pod/kuard svc/kuard ingress/kuard
-```
-
 Delete the nginx definition in the Pulumi program, and run a Pulumi update.
 {{% /md %}}
 </div>
