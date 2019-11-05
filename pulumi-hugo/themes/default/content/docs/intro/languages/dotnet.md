@@ -10,7 +10,7 @@ aliases: ["/docs/reference/dotnet/"]
 
 {{< langchoose dotnetonly >}}
 
-Pulumi supports programs written in .NET. Because programs are just .NET, you can write them in a .NET supported language. That includes C#, F#, or Visual Basic and use your favorite tools such as build systems, linters, or test frameworks for development.
+Pulumi supports programs written in any supported .NET language, including C#, F#, and Visual Basic. You can also use your favorite .NET tools such as editors, package managers, build systems, and test frameworks.
 
 ## Getting Started
 
@@ -21,14 +21,14 @@ Pulumi supports programs written in .NET. Because programs are just .NET, you ca
 
 ### Example .NET Project
 
-To get started with .NET use a template.  From an empty directory, create a new .NET project:
+You can get started with .NET using a Pulumi template. From an empty directory, create a new .NET project:
 
 ```bash
 $ mkdir myproject && cd myproject
 $ pulumi new csharp
 ```
 
-The template will autogenerate a set of files that make up a Pulumi project.x
+The template will autogenerate a set of files that make up a Pulumi project.
 
 {{% lang csharp %}}
 
@@ -55,7 +55,7 @@ $ pulumi new
 
 ## F\#
 
-You can write Pulumi programs in F# to get additional verification and tooling benefits. As of version 1.5, Pulumi supports .NET natively. The fastest way to get started with Pulumi in F#, is to use a template:
+You can write Pulumi programs in F# to get additional verification and tooling benefits. The fastest way to get started with Pulumi in F# is to use a template:
 
 ```bash
 $ mkdir myproject && cd myproject
@@ -76,7 +76,7 @@ $ pulumi new
 
 ## Visual Basic
 
-You can write Pulumi programs in Visual Basic to get additional verification and tooling benefits. As of version 1.5, Pulumi supports .NET natively. The fastest way to get started with Pulumi in Visual Basic, is to use a template:
+You can write Pulumi programs in Visual Basic to get additional verification and tooling benefits. The easiest way to get started with Pulumi in Visual Basic is to use a template:
 
 ```bash
 $ mkdir myproject && cd myproject
