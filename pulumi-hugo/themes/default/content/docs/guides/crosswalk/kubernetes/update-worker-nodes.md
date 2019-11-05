@@ -61,7 +61,7 @@ Updating an existing node group can be trivial for basic property changes.
 
 1. Verify that enough capacity is available in the cluster to handle workload
    spillover when the desired node group is scaled down.
-1. Edit the `initialNodeCount` of the node group to a value of `0`.
+1. Edit the `count` of the node group to a value of `0`.
 1. Run an update with `pulumi up`.
 1. Update the desired node group properties, such as the `vmSize` or
    `kubernetesVersion`.
@@ -72,6 +72,7 @@ Updating an existing node group can be trivial for basic property changes.
 
 See the official AKS [docs][aks-upgrade-docs] for more details.
 
+[k8s-version-skew]: https://kubernetes.io/docs/setup/release/version-skew-policy/#supported-version-skew
 [aks-upgrade-docs]: https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster
 {{% /md %}}
 </div>
