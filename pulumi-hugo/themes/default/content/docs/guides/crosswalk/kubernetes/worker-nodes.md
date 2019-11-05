@@ -313,7 +313,7 @@ expectations.
 const standardNodes = new gcp.container.NodePool("standard-nodes", {
     cluster: cluster.name,
     version: "1.14.7-gke.10",
-    autoscaling: {minNodeCount: 2, maxNodeCount: 5},
+    autoscaling: {minNodeCount: 0, maxNodeCount: 3},
     initialNodeCount: 2,
     ...
 });
@@ -321,7 +321,7 @@ const standardNodes = new gcp.container.NodePool("standard-nodes", {
 const performantNodes = new gcp.container.NodePool("performant-nodes", {
     cluster: cluster.name,
     version: "1.14.7-gke.10",
-    autoscaling: {minNodeCount: 2, maxNodeCount: 10},
+    autoscaling: {minNodeCount: 0, maxNodeCount: 3},
     initialNodeCount: 2,
     ...
 });
@@ -407,7 +407,7 @@ import * as gcp from "@pulumi/gcp";
 const standardNodes = new gcp.container.NodePool("standard-nodes", {
     cluster: cluster.name,
     version: "1.14.7-gke.10",
-    autoscaling: {minNodeCount: 2, maxNodeCount: 5},
+    autoscaling: {minNodeCount: 0, maxNodeCount: 3},
     initialNodeCount: 2,
     nodeConfig: {
         machineType: "n1-standard-1",
@@ -424,7 +424,7 @@ const standardNodes = new gcp.container.NodePool("standard-nodes", {
 const performantNodes = new gcp.container.NodePool("performant-nodes", {
     cluster: cluster.name,
     version: "1.14.7-gke.10",
-    autoscaling: {minNodeCount: 2, maxNodeCount: 10},
+    autoscaling: {minNodeCount: 0, maxNodeCount: 3},
     initialNodeCount: 2,
     nodeConfig: {
         machineType: "n1-standard-16",
