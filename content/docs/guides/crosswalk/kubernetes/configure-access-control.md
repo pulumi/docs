@@ -288,8 +288,8 @@ Start with the `kubeconfig` exported from the Pulumi stack. It has no Active Dir
 Use `kubectl` to retrieve cluster information. You will see a prompt to log in:
 
 ```bash
-$ pulumi stack output kubeconfig> kubeconfig.json
-$ export KUBECONFIG=`pwd`/kubeconfig.json
+$ pulumi stack output kubeconfig > kubeconfig-devs.json
+$ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 ```
 
 ```bash
@@ -351,18 +351,34 @@ default, or retrieve information as shown in the `Error from server (Forbidden)`
 messages.
 
 ```bash
+$ pulumi stack output kubeconfig > kubeconfig-devs.json
 $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 $ kubectl run --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}' -n `pulumi stack output appNamespaceName` --limits cpu=200m,memory=256Mi
 Error from server (Forbidden): pods is forbidden: User "pulumi:alice" cannot create resource "pods" in API group "" in the namespace "apps-x1z818eg"
 ```
 
-For example, to allow the `devs` group to operate in the cluster, we must create [Kubernetes RBAC][k8s-rbac-docs]
+For example, to allow the `devs` group to operate in the cluster, an `admin` must create [Kubernetes RBAC][k8s-rbac-docs]
 resources to bind the IAM role to certain privileges.
 
 Below we create the Kubernetes `Role` with the ability to **only** deploy common
 workloads in the `apps` namespace, created earlier during the configuration of
 [cluster defaults][crosswalk-configure-defaults], and a `RoleBinding` to associate
 the Kubernetes `Role` to the IAM `devs` role.
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+Assume the `admin` user.
+
+```bash
+$ pulumi stack output kubeconfigAdmin > kubeconfig-admin.json
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
+{{% /md %}}
+</div>
+
+Create the [Role][k8s-rbac-docs] for the `apps` namespace that will be bound to `devs` group.
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -373,8 +389,13 @@ let devsGroupRole = new k8s.rbac.v1.Role("pulumi-devs",
         metadata: {namespace: appNamespaceName},
         rules: [
             {
-                apiGroups: ["", "apps"],
-                resources: ["pods", "deployments", "replicasets", "persistentvolumeclaims"],
+                apiGroups: [""],
+                resources: ["pods", "secrets", "services", "persistentvolumeclaims"],
+                verbs: ["get", "list", "watch", "create", "update", "delete"],
+            },
+            {
+                apiGroups: ["extensions", "apps"],
+                resources: ["replicasets", "deployments"],
                 verbs: ["get", "list", "watch", "create", "update", "delete"],
             },
         ],
