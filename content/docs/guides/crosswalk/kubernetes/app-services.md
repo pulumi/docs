@@ -336,6 +336,8 @@ $ kubectl apply -f ingress.yaml --namespace=`pulumi stack output appsNamespaceNa
 {{% md %}}
 
 ```typescript
+import * as k8s from "@pulumi/kubernetes";
+
 // Create a kuard Deployment
 const name = "kuard"
 const labels = {app: name}
