@@ -4,10 +4,8 @@ linktitle: Core Concepts
 weight: 4
 menu:
   getstarted:
-    parent: Policy as Code
-    identifier: policy-as-code-core-concepts
-
-aliases: ["/docs/quickstart/policy-as-code/core-concepts/"]
+    parent: pac
+    identifier: pac-core-concepts
 ---
 {{% pac-preview %}}
 

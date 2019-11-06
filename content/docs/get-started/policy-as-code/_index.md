@@ -3,10 +3,8 @@ title: Get Started with Policy as Code (Preview)
 linktitle: Policy as Code
 menu:
   getstarted:
-    identifier: Policy as Code
+    identifier: pac
     weight: 3
-
-aliases: ["/docs/quickstart/policy-as-code/"]
 ---
 {{% pac-preview %}}
 

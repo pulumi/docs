@@ -4,10 +4,8 @@ linktitle: Best Practices
 weight: 4
 menu:
   getstarted:
-    parent: Policy as Code
-    identifier: policy-as-code-best-practices
-
-aliases: ["/docs/quickstart/policy-as-code/bet-practices/"]
+    parent: pac
+    identifier: pac-best-practices
 ---
 {{% pac-preview %}}
 

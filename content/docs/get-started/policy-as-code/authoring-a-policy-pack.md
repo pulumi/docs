@@ -4,10 +4,8 @@ linktitle: Authoring a Policy Pack
 weight: 1
 menu:
   getstarted:
-    parent: Policy as Code
-    identifier: policy-as-code-authoring-a-policy-pack
-
-aliases: ["/docs/quickstart/policy-as-code/authoring-a-policy-pack/"]
+    parent: pac
+    identifier: pac-authoring-a-policy-pack
 ---
 {{% pac-preview %}}
 
@@ -17,7 +15,7 @@ aliases: ["/docs/quickstart/policy-as-code/authoring-a-policy-pack/"]
     $ mkdir policypack && cd policypack
     ```
 
-1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_DEBUG_COMMANDS=true` as an environment variable or simply pre-append it to your commands as shown.
+1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_DEBUG_COMMANDS=true` as an environment variable or simply pre-append it to your commands as shown. (Note: Pulumi 1.4.1 or later is required to use `pulumi policy new` command.)
 
     ```sh
     $ PULUMI_DEBUG_COMMANDS=true pulumi policy new aws-typescript
@@ -82,20 +80,20 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
 
     If the stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
 
-    ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack ~/    policy-pack-typescript
-    Previewing update (dev):
+    {{< highlight sh >}}
+$ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack policy-pack-typescript
+Previewing update (dev):
 
-         Type                 Name          Plan
-     +   pulumi:pulumi:Stack  test-dev  	create
-     +   └─ aws:s3:Bucket     my-bucket     create
+     Type                 Name          Plan
+ +   pulumi:pulumi:Stack  test-dev  	create
+ +   └─ aws:s3:Bucket     my-bucket     create
 
-    Resources:
-        + 2 to create
+Resources:
+    + 2 to create
 
-    Permalink:
-    ...
-    ```
+Permalink:
+...
+{{< /highlight >}}
 
 1. We can then edit the stack code to specify the ACL to be public-read.
 
@@ -107,25 +105,25 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
 
 1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
 
-    ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack ~/policy-pack-typescript
-    Previewing update (dev):
+    {{< highlight sh >}}
+$ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack ~/policy-pack-typescript
+Previewing update (dev):
 
-         Type                 Name          Plan       Info
-     +   pulumi:pulumi:Stack  test-dev  	create     1 error
-     +   └─ aws:s3:Bucket     my-bucket     create     1 error
+     Type                 Name          Plan       Info
+ +   pulumi:pulumi:Stack  test-dev  	create     1 error
+ +   └─ aws:s3:Bucket     my-bucket     create     1 error
 
-    Diagnostics:
-      pulumi:pulumi:Stack (test-dev):
-        error: preview failed
+Diagnostics:
+  pulumi:pulumi:Stack (test-dev):
+    error: preview failed
 
-      aws:s3:Bucket (my-bucket):
-        mandatory: [s3-no-public-read] Prohibits setting the publicRead or  publicReadWrite permission on AWS S3 buckets.
-        expected value 'true' to == 'false'
+  aws:s3:Bucket (my-bucket):
+    mandatory: [s3-no-public-read] Prohibits setting the publicRead or  publicReadWrite permission on AWS S3 buckets.
+    expected value 'true' to == 'false'
 
-    Permalink:
-    ...
-    ```
+Permalink:
+...
+{{< /highlight >}}
 
 Now that your Policy Pack is ready to go, let's enforce the pack across your organization.
 

@@ -4,10 +4,8 @@ linktitle: Enforcing a Policy Pack
 weight: 2
 menu:
   getstarted:
-    parent: Policy as Code
-    identifier: policy-as-code-enforcing-a-policy-pack
-
-aliases: ["/docs/quickstart/policy-as-code/enforcing-a-policy-pack/"]
+    parent: pac
+    identifier: pac-enforcing-a-policy-pack
 ---
 {{% pac-preview %}}
 
@@ -16,7 +14,7 @@ Once you’ve validated the behavior of your policies, an organization administr
 1. From within the Policy Pack directory, run the following command to publish your pack:
 
     ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi policy publish <org-name>/<policy-pack-name>
+    PULUMI_DEBUG_COMMANDS=true pulumi policy publish <org-name>/<policy-pack-name>
     ```
 
     The `<policy-pack-name>` is the name you’d like to see used to reference the pack in the Pulumi Console.
@@ -35,13 +33,17 @@ Once you’ve validated the behavior of your policies, an organization administr
 1. You can apply this Policy Pack to your organization’s default Policy Group by running:
 
     ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi policy apply <organization>/<policy-pack-name> <version>
+    PULUMI_DEBUG_COMMANDS=true pulumi policy apply <organization>/<policy-pack-name> <version>
     ```
 
     For example, to apply the Policy Pack created in the previous step:
 
     ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi policy apply pulumi/policy-pack-typescript 1
+    PULUMI_DEBUG_COMMANDS=true pulumi policy apply pulumi/policy-pack-typescript 1
     ```
 
     The CLI can only be used to apply the Policy Pack to your default Policy Group. If you would like to add the Policy Pack to a different Policy Group, you can do so via the Pulumi Console.
+
+## Next Steps
+
+Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs).
