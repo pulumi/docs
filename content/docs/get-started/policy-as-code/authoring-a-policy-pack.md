@@ -75,7 +75,7 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
     In the Pulumi project's directory run:
 
     ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack <path-to-policy-pack-directory>
+    PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack <path-to-policy-pack-directory>
     ```
 
     If the stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
