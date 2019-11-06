@@ -24,7 +24,7 @@ Organization administrators can write and publish Policy Packs for their organiz
 * **Policy** - an individual policy - i.e. “prohibit use of instances larger than t3.medium”.
 * **Enforcement Level** - the impact of a policy violation - i.e. “mandatory” or “advisory”.
 
-You can learn more about the core concepts of Policy as Code [here](./core-concepts).
+You can learn more about the core concepts of Policy as Code [here]({{< relref "core-concepts" >}}).
 
 ## Creating a Policy Pack
 

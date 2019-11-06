@@ -14,8 +14,7 @@ aliases: ["/docs/quickstart/policy-as-code/authoring-a-policy-pack/"]
 1. Create a directory for your new Policy Pack, and change into it.
 
     ```sh
-    mkdir <policy-pack-name>
-    cd <policy-pack-name>
+    $ mkdir policypack && cd policypack
     ```
 
 1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_DEBUG_COMMANDS=true` as an environment variable or simply pre-append it to your commands as shown.
@@ -32,7 +31,7 @@ aliases: ["/docs/quickstart/policy-as-code/authoring-a-policy-pack/"]
     Once you're done editing your Policy Pack, run `pulumi policy publish <org-name>/<policy-pack-name>` to publish the pack.
     ```
 
-1. Tweak the Policy Pack in the index.ts file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. A Policy Pack can contain up to 25 Policies. Each Policy must have a unique name, an enforcement level and at least one rule. Here we use a typeRule that allows us to create an assertion against all S3 resources.
+1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. A Policy Pack can contain up to 25 Policies. Each Policy must have a unique name, an enforcement level and at least one rule. Here we use a `typeRule` that allows us to create an assertion against all S3 resources.
 
     ```typescript
     // Create a new Policy Pack.
@@ -63,7 +62,7 @@ aliases: ["/docs/quickstart/policy-as-code/authoring-a-policy-pack/"]
     });
     ```
 
-    You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). Best practices for writing a Policy Pack can be found [here](../best-practices).
+    You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). Best practices for writing a Policy Pack can be found [here]({{< relref "best-practices" >}}).
 
 ## Testing the Policy Pack Locally
 
@@ -71,17 +70,17 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
 
 1. Run `npm install` in the Policy Pack directory.
 
-1. Use the `--policy-pack` flag by going to a directory that contains a Pulumi stack. This flag allows for quicker feedback loops when developing a Policy Pack.
+1. Use the `--policy-pack` flag with `pulumi preview` or `pulumi up` to specify the path to the directory containing your Policy Pack when previewing/updating a Pulumi project.
 
-    If you don’t have a stack readily available, you can create a new stack for testing by running `pulumi new aws-typescript` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our Policy.
+    If you don’t have a Pulumi project readily available, you can create a new project for testing by running `pulumi new aws-typescript` in an empty directory. This AWS example will create an S3 bucket, which is perfect for testing our Policy.
 
-    In the stack directory run:
+    In the Pulumi project's directory run:
 
     ```sh
-    PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack    <path-to-new-policy-pack-directory>
+    $ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack <path-to-policy-pack-directory>
     ```
 
-    If the stack is in compliance, we expect the output to simply tell us which     Policy Packs were run.
+    If the stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
 
     ```sh
     $ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack ~/    policy-pack-typescript
@@ -106,7 +105,7 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
     });
     ```
 
-1. We then run the pulumi preview command again and this time get an error message indicating we failed the preview because of a policy violation.
+1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
 
     ```sh
     $ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack ~/policy-pack-typescript

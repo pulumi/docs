@@ -22,6 +22,6 @@ Policy assertions should be complete sentences, specify the resource that has vi
 | ✅                                                    | ❌                           |
 | -----------                                           | -----------                  |
 | "The RDS cluster must specify a node type."           | "Specify a node type."       |
-| "The RDS cluster must have audit logging enabled."    | “Enable audit logging.”      |
+| "The RDS cluster must have audit logging enabled."    | "Enable audit logging."      |
 
 This format provides a clear message to end users, allowing them to understand what and why a policy is failing.
