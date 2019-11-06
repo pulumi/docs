@@ -1,5 +1,5 @@
 ---
-title: "Configure Infrastructure with .NET and Pulumi"
+title: "Infrastructure as Code with .NET and Pulumi"
 authors: ["sophia-parafina"]
 tags: [". NET", "C#", "F#", "Visual Basic"]
 meta_image: "microsoft_logo.jpg"
@@ -101,16 +101,16 @@ There are four files in the Pulumi project, the `Azure.Appservice.csproj` which 
     ```
 
 ___
-**NOTE**
+**NOTE:**
 
 > If you are using a free Azure account, some regions do not allow creation of services if they are too busy. You might have to try a different [Azure location](https://azure.microsoft.com/en-us/global-infrastructure/locations/).
->
+><br/><br/>
 > You must tear down the stack resources to update the project's location information.
-
-``` bash
-$ pulumi destroy --yes
-$ pulumi stack rm --yes
-```
+>
+   ``` bash
+   $ pulumi destroy --yes
+   $ pulumi stack rm --yes
+   ```
 
 ### Test Your Stack
 
@@ -235,4 +235,4 @@ We deploy the app service which includes the website and the connection to the S
        });
 ```
 
-In this example, we declared resources for a website and a database using C# and the Pulumi engine deployed them on Azure. To get started with infrastructure as code, download [Pulumi](https://www.pulumi.com/docs/get-started/install/) to build and deploy modern applications using .NET.
+In this example, we declared resources for a website and a database using C# and the Pulumi engine deployed them on Azure. To get started with infrastructure as code, download [Pulumi](https://www.pulumi.com/docs/get-started/install/) to build and deploy modern applications using .NET. 
