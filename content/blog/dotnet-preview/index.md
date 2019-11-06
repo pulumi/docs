@@ -1,5 +1,5 @@
 ---
-title: "Pulumi Adds .NET Languages""
+title: "Pulumi Adds .NET Languages"
 authors: ["sophia-parafina"]
 tags: [".NET", "C#", "F#", "Visual Basic"]
 meta_image: "microsoft_logo.jpg"
@@ -7,9 +7,9 @@ meta_desc: "Pulumi supports .NET languages for Infastructure as Code"
 date: "2019-11-08"
 ---
 
-Pulumi is excited to announce the preview of .NET support. Pulumi lets you declare infrastructure using general purpose programming languages. Our goal is to automate applications at all layers and help developers and operators work better together by eliminating the silos that separate them.
+We are excited to announce the preview of Pulumi .NET support. Pulumi lets you declare infrastructure using general purpose programming languages. Our goal is to automate applications at all layers and help developers and operators work better together by eliminating the silos that separate them.
 
-Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. You can provision infrastructure using .NET Core programs to build and deploy  Azure resources, including AKS Clusters, Functions, App Services, Virtual Machines, Cosmos DBs, KeyVaults, and much, much more.
+Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F# and Visual Basic. Because the .NET framework is available on Windows, Linux and macOS you have a choice of platforms to use. You can create cloud resources by writing **Microsoft .NET Core** programs to build and deploy AKS Clusters, Functions, App Services, Virtual Machines, Cosmos DBs, KeyVaults, and much, much more.
 
 ## What Does Pulumi Enable?
 
