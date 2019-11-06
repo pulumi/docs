@@ -1,21 +1,89 @@
 .homepage-carousel--container {
 	overflow: hidden;
+	.carousel-text--container {
+		height: 520px;
+		@media (min-width: 769px) and (max-width: 1030px) {
+			height: 365px;
+		}
+		@media (min-width: 600px) and (max-width: 768px) {
+			height: 440px;
+		}
+	}
 	@media (max-width: 1030px) {
 		max-width: 1023px;
 		padding: 0 25px;
 	}
 	@media (max-width: 1030px) {
 		.carousel-content--container {
+			display: flex;
 			flex-direction: column;
-
 			.carousel-text--container, .carousel-media--container {
 				width: 100%;
 			}
+			.carousel-text--container {
+				@include order(9999);
+			}
+			.carousel-media--container {
+				@include order(-9999);
+			}
 		}
 	}
-	@media (max-width: 530px) {
-		.carousel-text--container {
-			margin-bottom: 15px;
+	@media (max-width: 390px) {
+		padding: 0;
+		.carousel-ide {
+			font-size: 11px;
+		}
+	}
+	.home-carousel-ide--popup-group {
+		top: -6px;
+		left: 188px;
+		.home-carousel-ide--details-popup {
+			top: 40px;
+			left: 198px;
+			.ide-popup--container {
+				width: 292px;
+			}
+			@media (min-width: 1030px) and (max-width: 1280px) {
+				top: 25px;
+				left: 115px;
+			}
+			@media (min-width: 769px) and (max-width: 1029px) {
+				top: 38px;
+			}
+			@media (max-width: 768px) {
+				top: 40px;
+				left: -70px;
+			}
+			@media (max-width: 630px) {
+				left: 55px;
+			}
+			@media (max-width: 450px) {
+				left: 5px;
+				.ide-popup--container {
+					width: 260px;
+				}
+			}
+		}
+		@media (max-width: 630px) {
+			top: -2px;
+			left: 0;
+		}
+	}
+	.home-carousel-cli--text-container {
+		height: 400px;
+		@media (max-width: 500px) {
+			font-size: 10px;
+		}
+		@media (max-width: 430px) {
+			font-size: 8px;
+		}
+	}
+	.home-carousel--console-content {
+		@media (max-width: 480px) {
+			font-size: 9px;
+		}
+		@media (max-width: 380px) {
+			font-size: 8px;
 		}
 	}
 }
