@@ -1,9 +1,9 @@
 ---
 title: "Pulumi Adds .NET Languages""
 authors: ["sophia-parafina"]
-tags: [".NET","C#","F#","Visual Basic"]
-meta_image: "microsoft_-net_logo.jpg"
-meta_desc: "Pulumi supports .NET languages for Infastructure as Code "
+tags: [".NET", "C#", "F#", "Visual Basic"]
+meta_image: "microsoft_logo.jpg"
+meta_desc: "Pulumi supports .NET languages for Infastructure as Code"
 date: "2019-11-08"
 ---
 
