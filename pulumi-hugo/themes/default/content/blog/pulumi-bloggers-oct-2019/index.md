@@ -3,7 +3,7 @@ title: "Three Infrastructure as Code Blog Posts You Should Read"
 authors: ["sophia-parafina"]
 tags: ["Pulumi","bloggers",]
 meta_image: "blog.png"
-meta_desc: "Continuous delivery of Pulumi apps with Octopus Deploy "
+meta_desc: "Some of our favorite recent community posts about Infrastructure as Code."
 date: "2019-10-24"
 ---
 
