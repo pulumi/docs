@@ -1,0 +1,21 @@
+.homepage-carousel--container {
+	overflow: hidden;
+	@media (max-width: 1030px) {
+		max-width: 1023px;
+		padding: 0 25px;
+	}
+	@media (max-width: 1030px) {
+		.carousel-content--container {
+			flex-direction: column;
+
+			.carousel-text--container, .carousel-media--container {
+				width: 100%;
+			}
+		}
+	}
+	@media (max-width: 530px) {
+		.carousel-text--container {
+			margin-bottom: 15px;
+		}
+	}
+}
