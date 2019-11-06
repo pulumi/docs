@@ -367,6 +367,32 @@ It is recommended that Pulumi apps be updated to prevent breakage.
 
 To address the issue update your app to use one of the following forms:
 
+### Globally opt out of synchronous calls
+
+Set the following config variable for your application:
+
+```bash
+pulumi config set pulumi:noSyncCalls true
+```
+
+This is the preferred way to solve this issue. In this form all resource function calls will always execute asynchronously, returning their
+result through a `Promise<...>`.  This entirely avoids the legacy codepath which can cause the hangs. If your code needs to operate on the 
+result of a resource function call, it can do so with any of these forms:
+
+### Await the call (must be in an async context)
+
+```ts
+const ids = await aws.ec2.getSubnetIds(..., { provider }); // or
+const ids = await aws.ec2.getSubnetIds(..., { parent });
+```
+
+### Wrap the result in an Output
+
+```ts
+const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider })); // or
+const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent }));
+```
+
 ### Invoke the resource function asynchronously
 
 ```ts
@@ -374,11 +400,10 @@ const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider, async: true }));
 const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent, async: true }));
 ```
 
-This is the preferred way to solve this issue. In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always
-execute asynchronously.  The result of the call is then wrapped into an `Output` so it can easily be passed as a resource input and
-to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
+In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always execute asynchronously.  The result of the call is
+then wrapped into an `Output` so it can easily be passed as a resource input and to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
 
-Sometimes, however, this approach is not possible because the call to the resource functio happens a deeper layer (possibly in a
+Sometimes, however, this approach is not possible because the call to the resource function happens a deeper layer (possibly in a
 component not under your control).  In that case, we recommend the solution in the next section:
 
 ### Register the provider first
