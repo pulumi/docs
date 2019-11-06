@@ -501,10 +501,6 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
   using the latest available version, or using a smart default where both
   can be updated at any moment.
 
-```typescript
-// TODO
-```
-
 {{% /md %}}
 </div>
 
