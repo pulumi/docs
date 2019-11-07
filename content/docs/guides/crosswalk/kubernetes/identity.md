@@ -160,6 +160,13 @@ const adminsIamRolePolicy = new aws.iam.RolePolicy(`${adminsName}-eksClusterAdmi
     { parent: adminsIamRole },
 );
 ```
+
+Authenticate as the admin role.
+
+```bash
+$ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-session-name k8s-admin
+```
+
 [k8s-sys-masters]: https://kubernetes.io/docs/reference/access-authn-authz/rbac#user-facing-roles
 {{% /md %}}
 </div>
@@ -427,6 +434,12 @@ const devsIamRole = new aws.iam.Role(`${devName}-eksClusterDeveloper`, {
     assumeRolePolicy: aws.getCallerIdentity().then(id =>
         aws.iam.assumeRolePolicyForPrincipal({"AWS": `arn:aws:iam::${id.accountId}:root`}))
 })
+```
+
+Authenticate as the devs role.
+
+```bash
+$ aws sts assume-role --role-arn `pulumi stack output devsIamRoleArn` --role-session-name k8s-devs
 ```
 
 {{% /md %}}
