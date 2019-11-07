@@ -47,6 +47,13 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="mt">
 {{% md %}}
 
+Access control in Kubernetes is done by configuring permissions for IAM
+ServiceAccounts to operate in the cluster.
+
+The `kubeconfig` will be shared across ServiceAccounts for access, and each
+ServiceAccount will have a particular binding into the cluster's auth to determine how it works
+with the cluster.
+
 The full code for this stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
 
