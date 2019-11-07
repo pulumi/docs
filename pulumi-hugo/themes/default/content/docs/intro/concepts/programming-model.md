@@ -432,11 +432,11 @@ provider, _ := aws.Provider(ctx, "provider", { region: "us-west-2" });
 vpc, _ := ec2.Vpc(ctx, "vpc", &VpcArgs{}, pulumi.ResourceOpt{Provider: provider});
 ```
 
-<<<<<<< HEAD
 ```csharp
 var provider = new Aws.Provider("provider", new Aws.ProviderArgs { Region = "us-west-2" });
 var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new ResourceOptions { Provider = provider });
-=======
+```
+
 ###### `transformations`
 A list of transformations to apply to the resource and all of its children. This can be used to override or modify the inputs to child resources of a component, for example to add other resource options (like `ignoreChanges` or `protect`) or to modify an input property (like adding to `tags` or changing a property which is not configurable via the component directly).  Transformations can also be applied to all resources in a stack using `pulumi.runtime.registerStackTransformation`.  Transformations are passed the resource type, name, input properties resource options and the resource instance itself.  They can optionally return a new set of resource input properties and resource options which will be used to construct the resource.
 
@@ -486,8 +486,31 @@ vpc = MyVpcComponent("vpc", opts=ResourceOptions(transformations=[transformation
 // Transformations is not yet supported in Go.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
->>>>>>> 48f2d82311617d095ce7d15d0721dc01bf976c78
 ```
+
+```csharp
+var vpc = new MyVpcComponent("vpc", new ResourceOptions
+{
+    Transformations =
+    {
+        args =>
+        {
+            if (args.Resource.GetResourceType() == "aws:ec2/vpc:Vpc" ||
+                args.Resource.GetResourceType() === "aws:ec2/subnet:Subnet")
+            {
+                return new ResourceTransformationResult
+                {
+                    Args: args.Args,
+                    Options: ResourceOptions.Merge(
+                        args.Options,
+                        new ResourceOptions { IgnoreChanges =  { "tags" } }),
+                };
+            }
+
+            return null;
+        }
+    },
+});
 
 ### Resource names {#names}
 
@@ -959,7 +982,7 @@ Pulumi records all resource inputs and outputs in a [state file]({{< relref "sta
 
 There are two ways to programmatically create secret values:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 <div class="language-prologue-javascript"></div>
 
@@ -979,6 +1002,11 @@ There are two ways to programmatically create secret values:
 <div class="language-prologue-go"></div>
 
 Secrets are not yet available in Go. See <https://github.com/pulumi/pulumi/issues/2820>.
+
+<div class="language-prologue-csharp"></div>
+
+- Using `Config.GetSecret(key)` or `Config.RequireSecret(key)` when reading a value from config.
+- Calling `Output.CreateSecret(value)` to construct a secret from an existing value.
 
 To illustrate using these functions, this code creates an AWS Parameter Store parameter insecurely:
 
