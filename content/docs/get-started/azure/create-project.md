@@ -11,7 +11,7 @@ aliases: ["/docs/quickstart/azure/create-project/"]
 
 Let's get started with a new project in a new directory.
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 <div class="language-prologue-javascript"></div>
 
@@ -32,6 +32,13 @@ $ pulumi new azure-typescript
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new azure-python
+```
+
+<div class="language-prologue-csharp"></div>
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new azure-csharp
 ```
 
 {{< cli-note >}}

@@ -11,7 +11,7 @@ aliases: ["/docs/reference/clouds/packet/"]
 
 <img src="/logos/tech/packet.svg" align="right" class="h-16 px-8 pb-4">
 
-The Packet.net provider for Pulumi can be used to provision any of the cloud resources available in [Packet.net](https://www.packet.com).  
+The Packet.net provider for Pulumi can be used to provision any of the cloud resources available in [Packet.net](https://www.packet.com).
 The Packet.net provider must be configured with credentials to deploy and update resources in Packet.
 
 See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/packet" >}}) for complete details of the available Packet.net provider APIs.
@@ -22,7 +22,7 @@ The Packet.net provider supports several options for providing access to Packet.
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const packet = require("@pulumi/packet")
@@ -55,6 +55,23 @@ import (
 project, _ := packet.NewProject(ctx, "test", &packet.ProjectArgs{
   Name: "DevelopmentEnvironment"
 })
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Packet;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var project = new Packet.Project("my-project", new Packet.ProjectArgs
+            {
+                Name = "DevelopmentEnvironment"
+            });
+        });
+}
 ```
 
 ## Libraries

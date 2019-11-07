@@ -97,7 +97,7 @@ and testing. In that case, we'll have six distinct stacks, that pair up together
 The way Pulumi programs communicate information for external consumption is by using stack exports. For example,
 our infrastructure stack might export the Kubernetes configuration information needed to deploy into a cluster:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 exports.kubeConfig = ... a cluster's output property ...;
@@ -112,9 +112,15 @@ pulumi.export("kubeConfig", ... a cluster's output property ...)
 ```
 
 ```go
-// StackReference is currently not supported in Go.
+// StackReference is not supported in Go currently.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```csharp
+// StackReference is not supported in .NET currently.
+//
+// See https://github.com/pulumi/pulumi/issues/3406.
 ```
 
 The challenge here is that our services project needs to ingest this output during deployment so that it can
@@ -122,7 +128,7 @@ connect to the Kubernetes cluster provisioned in its respective environment.
 
 The Pulumi programming model offers a way to do this with its `StackReference` resource type. For example:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const k8s = require("@pulumi/kubernetes");
@@ -156,6 +162,12 @@ service = core.v1.Service(..., ResourceOptions(provider=provider))
 // StackReference is not supported in Go currently.
 //
 // See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+```csharp
+// StackReference is not supported in .NET currently.
+//
+// See https://github.com/pulumi/pulumi/issues/3406.
 ```
 
 The `StackReference` constructor takes as input a string of the form `<organization>/<project>/<stack>`, and lets

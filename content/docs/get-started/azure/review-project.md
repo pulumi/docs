@@ -15,7 +15,7 @@ Let's review some of the generated project files:
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config.md" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack.md" >}}) we initialized.
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 ```javascript
 "use strict";
@@ -69,6 +69,33 @@ account = storage.Account("storage",
 
 # Export the connection string for the storage account
 pulumi.export('connection_string', account.primary_connection_string)
+```
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Azure;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            // Create an Azure Resource Group
+            var resourceGroup = new Azure.Core.ResourceGroup("resourceGroup");
+
+            // Create an Azure resource (Storage Account)
+            var account = new Azure.Storage.Account("storage", new Azure.Storage.AccountArgs
+            {
+                ResourceGroupName = resourceGroup.Name,
+                AccountTier = "Standard",
+                AccountReplicationType = "LRS",
+            });
+
+            // Export the connection string for the storage account
+            return new Dictionary<string, object> { { "connectionString", account.PrimaryConnectionString } };
+        });
+}
 ```
 
 This Pulumi program creates an Azure resource group and storage account and exports the storage account's connection string.

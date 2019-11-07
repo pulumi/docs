@@ -42,7 +42,7 @@ Like the language runtime itself, the SDKs are available as regular packages.  F
 
 Let's walk through a simple example. Suppose we have the following Pulumi program, which creates two S3 buckets:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const mediaBucket = new aws.s3.Bucket("media-bucket");
@@ -62,6 +62,21 @@ content_bucket = s3.Bucket('content-bucket')
 ```go
 mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", nil)
 contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Aws;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var mediaBucket = new Aws.S3.Bucket("media-bucket");
+            var contentBucket = new Aws.S3.Bucket("content-bucket");
+        });
+}
 ```
 
 Now, we run `pulumi stack init mystack`. Since `mystack` is a new stack, the "last deployed state" has no resources.
@@ -84,7 +99,7 @@ Note the extra suffixes on the end of these bucket names. This is due to a proce
 
 Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to make the S3 `media-bucket` publicly readable.  We change our program to express this new desired state:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const mediaBucket = new aws.s3.Bucket("media-bucket", {
@@ -110,13 +125,31 @@ mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{Acl: "public-
 contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
 ```
 
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Aws;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+            {
+                Acl = "public-read",   // add acl
+            });
+            var contentBucket = new Aws.S3.Bucket("content-bucket");
+        });
+}
+```
+
 When you run `pulumi preview` or `pulumi up`, the entire process starts over.  The language host starts running your program and the call to aws.s3.Bucket causes a new resource registration request to be sent to the engine. This time, however, our state already contains a resource named `media-bucket`, so engine asks the resource provider to compare the existing state from our previous run of `pulumi up` with the desired state expressed by the program. The process detects that the `acl` property has changed from `private` (the default value) to `public-read`. By again consulting the resource provider the engine determines that it is able to update this property without creating a new bucket, and so it tells the provider to update the acl property to `public-read`. When this operation completes, the current state is updated to reflect the change that had been made.
 
 The engine also receives a resource registration request for "content-bucket".  However, since there are no changes between the current state and the desired state, the engine does not need to make any changes to the resource.
 
 Now, suppose we rename `content-bucket` to `app-bucket`.
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const mediaBucket = new aws.s3.Bucket("media-bucket", {
@@ -140,6 +173,24 @@ app_bucket = s3.Bucket('app-bucket')
 ```go
 mediaBucket, _ := s3.NewBucket(ctx, "media-bucket", &s3.BucketArgs{Acl: "public-read"}) // add acl
 appBucket, _ := s3.NewBucket(ctx, "app-bucket", nil)
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Aws;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+            {
+                Acl = "public-read",   // add acl
+            });
+            var appBucket = new Aws.S3.Bucket("app-bucket");
+        });
+}
 ```
 
 This time, the engine will not need to make any changes to `media-bucket` since its desired state matches its actual state. However, when the resource request for `app-bucket` is processed, the engine sees there's no existing resource named `app-bucket` in the current state and so it must create a new S3 bucket.  Once that process is complete and the language host has shut down, the engine looks for any resources in the current state which it did not see a resource registration for. In this case, since we removed the registration of `content-bucket` from our program, the engine calls the resource provider to delete the existing `content-bucket` bucket.

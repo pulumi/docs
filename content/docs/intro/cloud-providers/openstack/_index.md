@@ -21,7 +21,7 @@ The OpenStack provider supports several options for providing access to OpenStac
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const os = require("@pulumi/openstack")
@@ -57,6 +57,24 @@ instance, _ := compute.NewInstance(ctx, "test", &compute.InstanceArgs{
   FlavorName: "s1-2",
   ImageName: "Ubuntu 16.04",
 })
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.OpenStack;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var instance = new OpenStack.Compute.Instance("test", new OpenStack.Compute.InstanceArgs
+            {
+                FlavorName = "s1-2",
+                ImageName = "Ubuntu 16.04",
+            });
+        });
+}
 ```
 
 ## Libraries

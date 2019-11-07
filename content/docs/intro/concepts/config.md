@@ -84,7 +84,7 @@ dbPassword                 ********
 
 Similarly, if our program attempts to print the value of `dbPassword` to the console---either intentionally or accidentally---Pulumi will mask it out:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 var pulumi = require("@pulumi/pulumi");
@@ -107,6 +107,20 @@ print('Password: %s'.format(config.require('dbPassword')))
 ```go
 c := config.New(ctx, "")
 fmt.Println("Password: "+c.Require("dbPassword"))
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var config = new Pulumi.Config();
+            Console.WriteLine($"Password: {config.Require("dbPassword")}");
+        });
+}
 ```
 
 Running this program yields the following result:
@@ -133,7 +147,7 @@ $ pulumi config set --secret dbPassword S3cr37 # set an encrypted secret value
 
 Use the following code to access these configuration values in your Pulumi program:
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 var pulumi = require("@pulumi/pulumi");
@@ -167,6 +181,22 @@ c := config.New(ctx, "")
 
 name := c.Require("name")
 dbPassword := c.Require("dbPassword")
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var config = new Pulumi.Config();
+
+            var name = config.Require("name");
+            var dbPassword = config.RequireSecret("dbPassword");
+        });
+}
 ```
 
 In this example, we have read back the `name` and `dbPassword` configuration variables programmatically. The `name` is just the string `BroomeLLC`, while the `dbPassword` is a secret output value that is encrypted.
