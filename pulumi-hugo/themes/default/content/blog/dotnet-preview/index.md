@@ -45,18 +45,18 @@ We use a .NET Core console application to declare infrastructure. Let's create a
 
 Pulumi provides a repository of examples to get you started. Clone the examples from GitHub.
 
-``` bash
-git clone https://github.com/pulumi/examples/
-cd examples/
-```
+   ``` bash
+   $ git clone https://github.com/pulumi/examples/
+   $ cd examples/
+   ```
 
 ### Create a New Stack
 
 Change the directory to `azure-cs-appservice` directory
 
-``` bash
-$ cd azure-cs-appservice
-```
+   ``` bash
+   $ cd azure-cs-appservice
+   ```
 
 There are four files in the Pulumi project, the `Azure.Appservice.csproj` which sets the . NET SDK and the Pulumi packages for the project. `Pulumi.yaml` holds project parameters such as name and runtime. The `Pulumi.dev.yaml` file holds the database password. `SharedAccessSignature.cs` contains a helper function to generate storage blob access URLs with SAS tokens in them. It demonstrate that you can add custom code inside your Pulumi program. `Program.cs` is the main program for declaring resources.
 
