@@ -58,7 +58,7 @@ Change the directory to `azure-cs-appservice` directory
    $ cd azure-cs-appservice
    ```
 
-There are four files in the Pulumi project, the `Azure.Appservice.csproj` which sets the . NET SDK and the Pulumi packages for the project. `Pulumi.yaml` holds project parameters such as name and runtime. The `Pulumi.dev.yaml` file holds the database password. `SharedAccessSignature.cs` contains a helper function to generate storage blob access URLs with SAS tokens in them. It demonstrate that you can add custom code inside your Pulumi program. `Program.cs` is the main program for declaring resources.
+There are four files in the Pulumi project, the `Azure.Appservice.csproj`, which sets the .NET SDK and the Pulumi packages for the project. `Pulumi.yaml` holds project parameters such as name and runtime. The `Pulumi.dev.yaml` file holds the database password. `SharedAccessSignature.cs` contains a helper function to generate storage blob access URLs with SAS tokens in them. It demonstrates that you can add custom code inside your Pulumi program. `Program.cs` is the main program for declaring resources.
 
 1. Create a new stack:
 
