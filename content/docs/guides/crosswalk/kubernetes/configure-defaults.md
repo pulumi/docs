@@ -246,4 +246,82 @@ See the official [GKE Pod Security Policy][gke-psp] docs and the
 {{% /md %}}
 </div>
 
+#### Create a Restrictive PSP
+
+{{< k8s-language nokx >}}
+
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
+
+```yaml
+apiVersion: policy/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  name: demo-restrictive
+spec:
+  privileged: false
+  hostNetwork: false
+  allowPrivilegeEscalation: false
+  defaultAllowPrivilegeEscalation: false
+  hostPID: false
+  hostIPC: false
+  runAsUser:
+    rule: RunAsAny
+  fsGroup:
+    rule: RunAsAny
+  seLinux:
+    rule: RunAsAny
+  supplementalGroups:
+    rule: RunAsAny
+  volumes:
+  - 'configMap'
+  - 'downwardAPI'
+  - 'emptyDir'
+  - 'persistentVolumeClaim'
+  - 'secret'
+  - 'projected'
+  allowedCapabilities:
+  - '*'
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: demo-psp-restrictive
+rules:
+- apiGroups:
+  - policy
+  resourceNames:
+  - demo-restrictive
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - use
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: allow-demo-restricted-kube-system
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: demo-psp-restrictive
+subjects:
+- kind: Group
+  name: system:serviceaccounts
+  namespace: kube-system
+```
+{{% /md %}}
+</div>
+
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
+{{% /md %}}
+</div>
+
 [k8s-quotas]: https://kubernetes.io/docs/concepts/policy/resource-quotas/#compute-resource-quota
