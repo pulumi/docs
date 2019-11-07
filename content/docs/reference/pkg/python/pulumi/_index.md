@@ -192,25 +192,25 @@ resource.</p></li>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">ResourceOptions</code><span class="sig-paren">(</span><em class="sig-param">parent: Optional[Resource] = None</em>, <em class="sig-param">depends_on: Optional[List[Resource]] = None</em>, <em class="sig-param">protect: Optional[bool] = None</em>, <em class="sig-param">provider: Optional[ProviderResource] = None</em>, <em class="sig-param">providers: Optional[Mapping[str</em>, <em class="sig-param">ProviderResource]] = None</em>, <em class="sig-param">delete_before_replace: Optional[bool] = None</em>, <em class="sig-param">ignore_changes: Optional[List[str]] = None</em>, <em class="sig-param">version: Optional[str] = None</em>, <em class="sig-param">aliases: Optional[List[Input[Union[str</em>, <em class="sig-param">Alias]]]] = None</em>, <em class="sig-param">additional_secret_outputs: Optional[List[str]] = None</em>, <em class="sig-param">id: Optional[Input[str]] = None</em>, <em class="sig-param">import_: Optional[str] = None</em>, <em class="sig-param">custom_timeouts: Optional[CustomTimeouts] = None</em>, <em class="sig-param">transformations: Optional[List[Callable[pulumi.resource.ResourceTransformationArgs</em>, <em class="sig-param">Optional[pulumi.resource.ResourceTransformationResult]]]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">ResourceOptions</code><span class="sig-paren">(</span><em class="sig-param">parent: Optional[Resource] = None, depends_on: Optional[List[Resource]] = None, protect: Optional[bool] = None, provider: Optional[ProviderResource] = None, providers: Optional[Mapping[str, ProviderResource]] = None, delete_before_replace: Optional[bool] = None, ignore_changes: Optional[List[str]] = None, version: Optional[str] = None, aliases: Optional[List[Input[Union[str, Alias]]]] = None, additional_secret_outputs: Optional[List[str]] = None, id: Optional[Input[str]] = None, import_: Optional[str] = None, custom_timeouts: Optional[CustomTimeouts] = None, transformations: Optional[List[Callable[[pulumi.resource.ResourceTransformationArgs], Optional[pulumi.resource.ResourceTransformationResult]]]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>parent</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em>) – If provided, the currently-constructing resource should be the child of
 the provided parent resource.</p></li>
-<li><p><strong>depends_on</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em><em>]</em>) – If provided, the currently-constructing resource depends on the
+<li><p><strong>depends_on</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em><em>]</em>) – If provided, the currently-constructing resource depends on the
 provided list of resources.</p></li>
 <li><p><strong>protect</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource is not allowed to be deleted.</p></li>
 <li><p><strong>provider</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em>) – An optional provider to use for this resource’s CRUD operations.
 If no provider is supplied, the default provider for the resource’s package will be used. The default
 provider is pulled from the parent’s provider bag.</p></li>
-<li><p><strong>providers</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi_terraform/state/#pulumi_terraform.state.Mapping" title="pulumi_terraform.state.Mapping"><em>Mapping</em></a><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
+<li><p><strong>providers</strong> (<em>Optional</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
 by package name (e.g. “aws”)</p></li>
 <li><p><strong>delete_before_replace</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource must be deleted before it is replaced.</p></li>
-<li><p><strong>ignore_changes</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of property names to ignore for purposes of updates
+<li><p><strong>ignore_changes</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of property names to ignore for purposes of updates
 or replacements.</p></li>
-<li><p><strong>additional_secret*outputs</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><em>string</em><em>]</em><em>]</em>) – <p>If provided, a list of output property names that should
+<li><p><strong>additional_secret*outputs</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – <p>If provided, a list of output property names that should
 also be treated as secret.</p>
 </p></li>
 <li><p><strong>id</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – If provided, an existing resource ID to read, rather than create.</p></li>
@@ -460,7 +460,7 @@ of the current project is used.</p>
 
 <dl class="method">
 <dt id="pulumi.Config.get_secret">
-<code class="sig-name descname">get_secret</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[str]]<a class="headerlink" href="#pulumi.Config.get_secret" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_secret</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[str][str]]<a class="headerlink" href="#pulumi.Config.get_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an optional configuration value by its key, marked as a secret, or None if it doesn’t exist.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -498,7 +498,7 @@ If the configuration value isn’t a legal boolean, this function will throw an 
 
 <dl class="method">
 <dt id="pulumi.Config.get_secret_bool">
-<code class="sig-name descname">get_secret_bool</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[bool]]<a class="headerlink" href="#pulumi.Config.get_secret_bool" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_secret_bool</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[bool][bool]]<a class="headerlink" href="#pulumi.Config.get_secret_bool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an optional configuration value, as a bool, by its key, marked as a secret or None if it doesn’t exist.
 If the configuration value isn’t a legal boolean, this function will throw an error.</p>
 <dl class="field-list simple">
@@ -540,7 +540,7 @@ If the configuration value isn’t a legal int, this function will throw an erro
 
 <dl class="method">
 <dt id="pulumi.Config.get_secret_int">
-<code class="sig-name descname">get_secret_int</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[int]]<a class="headerlink" href="#pulumi.Config.get_secret_int" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_secret_int</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[int][int]]<a class="headerlink" href="#pulumi.Config.get_secret_int" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an optional configuration value, as an int, by its key, marked as a secret, or None if it doesn’t exist.
 If the configuration value isn’t a legal int, this function will throw an error.</p>
 <dl class="field-list simple">
@@ -582,7 +582,7 @@ If the configuration value isn’t a legal float, this function will throw an er
 
 <dl class="method">
 <dt id="pulumi.Config.get_secret_float">
-<code class="sig-name descname">get_secret_float</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[float]]<a class="headerlink" href="#pulumi.Config.get_secret_float" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_secret_float</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[float][float]]<a class="headerlink" href="#pulumi.Config.get_secret_float" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an optional configuration value, as a float, by its key, marked as a secret or None if it doesn’t exist.
 If the configuration value isn’t a legal float, this function will throw an error.</p>
 <dl class="field-list simple">
@@ -611,7 +611,7 @@ contents.</p>
 
 <dl class="method">
 <dt id="pulumi.Config.get_secret_object">
-<code class="sig-name descname">get_secret_object</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[Any]]<a class="headerlink" href="#pulumi.Config.get_secret_object" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_secret_object</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; Optional[pulumi.output.Output[typing.Any][Any]]<a class="headerlink" href="#pulumi.Config.get_secret_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an optional configuration value, as an object, by its key, marking it as a secret or
 undefined if it doesn’t exist. This routine simply JSON parses and doesn’t validate the
 shape of the contents.</p>
@@ -639,7 +639,7 @@ shape of the contents.</p>
 
 <dl class="method">
 <dt id="pulumi.Config.require_secret">
-<code class="sig-name descname">require_secret</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[str]<a class="headerlink" href="#pulumi.Config.require_secret" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">require_secret</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[str][str]<a class="headerlink" href="#pulumi.Config.require_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a configuration value, marked as a secret by its given key.  If it doesn’t exist, an error is thrown.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -683,7 +683,7 @@ configuration value is not a legal bool, an error is thrown.</p>
 
 <dl class="method">
 <dt id="pulumi.Config.require_secret_bool">
-<code class="sig-name descname">require_secret_bool</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[bool]<a class="headerlink" href="#pulumi.Config.require_secret_bool" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">require_secret_bool</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[bool][bool]<a class="headerlink" href="#pulumi.Config.require_secret_bool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a configuration value, as a bool, marked as a secret by its given key.  If it doesn’t exist, or the
 configuration value is not a legal bool, an error is thrown.</p>
 <dl class="field-list simple">
@@ -731,7 +731,7 @@ configuration value is not a legal int, an error is thrown.</p>
 
 <dl class="method">
 <dt id="pulumi.Config.require_secret_int">
-<code class="sig-name descname">require_secret_int</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[int]<a class="headerlink" href="#pulumi.Config.require_secret_int" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">require_secret_int</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[int][int]<a class="headerlink" href="#pulumi.Config.require_secret_int" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a configuration value, as an int, marked as a secret by its given key.  If it doesn’t exist, or the
 configuration value is not a legal int, an error is thrown.</p>
 <dl class="field-list simple">
@@ -811,7 +811,7 @@ is thrown.</p>
 
 <dl class="method">
 <dt id="pulumi.Config.require_secret_object">
-<code class="sig-name descname">require_secret_object</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[Any]<a class="headerlink" href="#pulumi.Config.require_secret_object" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">require_secret_object</code><span class="sig-paren">(</span><em class="sig-param">key: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Config.require_secret_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a configuration value as a JSON string and deserializes the JSON into a Python
 object, marking it as a secret. If it doesn’t exist, or the configuration value is not a
 legal JSON string, an error is thrown.</p>
@@ -911,7 +911,7 @@ value as well as the Resource the value came from.  This allows for a precise �
 dependency graph’ to be created, which properly tracks the relationship between resources.</p>
 <dl class="method">
 <dt id="pulumi.Output.__getitem__">
-<code class="sig-name descname">__getitem__</code><span class="sig-paren">(</span><em class="sig-param">key: Any</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[Any]<a class="headerlink" href="#pulumi.Output.__getitem__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__getitem__</code><span class="sig-paren">(</span><em class="sig-param">key: Any</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Output.__getitem__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Syntax sugar for looking up attributes dynamically off of outputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -928,7 +928,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 
 <dl class="method">
 <dt id="pulumi.Output.__getattr__">
-<code class="sig-name descname">__getattr__</code><span class="sig-paren">(</span><em class="sig-param">item: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[Any]<a class="headerlink" href="#pulumi.Output.__getattr__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__getattr__</code><span class="sig-paren">(</span><em class="sig-param">item: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Output.__getattr__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Syntax sugar for retrieving attributes off of outputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -945,7 +945,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 
 <dl class="method">
 <dt id="pulumi.Output.apply">
-<code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param">func: Callable[T, Union[T, Awaitable[T], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param">func: Callable[[T], Union[U, Awaitable[U], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~U][U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms the data of the output with the provided func.  The result remains a
 Output so that dependent resources can be properly tracked.</p>
 <p>‘func’ is not allowed to make resources.</p>
@@ -955,7 +955,7 @@ and you want to get a transitive dependency of it.</p>
 during ‘pulumi preview’ (as the values of resources are of course may not be known then).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>func</strong> (<a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.Callable" title="pulumi_kubernetes.helm.v2.Callable"><em>Callable</em></a><em>[</em><em>[</em><em>T</em><em>]</em><em>,</em><em>Input</em><em>[</em><em>U</em><em>]</em><em>]</em>) – A function that will, given this Output’s value, transform the value to
+<dd class="field-odd"><p><strong>func</strong> (<em>Callable</em><em>[</em><em>[</em><em>T</em><em>]</em><em>,</em><em>Input</em><em>[</em><em>U</em><em>]</em><em>]</em>) – A function that will, given this Output’s value, transform the value to
 an Input of some kind, where an Input is either a prompt value, a Future, or another Output of the given
 type.</p>
 </dd>
@@ -970,7 +970,7 @@ type.</p>
 
 <dl class="method">
 <dt id="pulumi.Output.from_input">
-<em class="property">static </em><code class="sig-name descname">from_input</code><span class="sig-paren">(</span><em class="sig-param">val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[T]<a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">from_input</code><span class="sig-paren">(</span><em class="sig-param">val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~T][T]<a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values as necessary
 given the type.</p>
 <dl class="field-list simple">
@@ -988,7 +988,7 @@ given the type.</p>
 
 <dl class="method">
 <dt id="pulumi.Output.secret">
-<em class="property">static </em><code class="sig-name descname">secret</code><span class="sig-paren">(</span><em class="sig-param">val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[T]<a class="headerlink" href="#pulumi.Output.secret" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">secret</code><span class="sig-paren">(</span><em class="sig-param">val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~T][T]<a class="headerlink" href="#pulumi.Output.secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values as necessary
 given the type. It also marks the returned Output as a secret, so its contents will be persisted in an encrypted
 form in state files.</p>
@@ -1007,27 +1007,27 @@ form in state files.</p>
 
 <dl class="method">
 <dt id="pulumi.Output.all">
-<em class="property">static </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param">*args: List[Union[T, Awaitable[T], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param">*args: List[Union[T, Awaitable[T], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.List[~T]][List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Produces an Output of Lists from a List of Inputs.</p>
 <p>This function can be used to combine multiple, separate Inputs into a single
 Output which can then be used as the target of <code class="docutils literal notranslate"><span class="pre">apply</span></code>. Resource dependencies
 are preserved in the returned Output.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>args</strong> (<a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><em>Input</em><em>[</em><em>T</em><em>]</em><em>]</em>) – A list of Inputs to convert.</p>
+<dd class="field-odd"><p><strong>args</strong> (<em>List</em><em>[</em><em>Input</em><em>[</em><em>T</em><em>]</em><em>]</em>) – A list of Inputs to convert.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>An output of lists, converted from an Input to prompt values.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[<a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List">List</a>[T]]</p>
+<dd class="field-odd"><p><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[List[T]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi.Output.concat">
-<em class="property">static </em><code class="sig-name descname">concat</code><span class="sig-paren">(</span><em class="sig-param">*args: List[Union[T, Awaitable[T], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[str]<a class="headerlink" href="#pulumi.Output.concat" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">concat</code><span class="sig-paren">(</span><em class="sig-param">*args: List[Union[str, Awaitable[str], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[str][str]<a class="headerlink" href="#pulumi.Output.concat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Concatenates a collection of Input[str] into a single Output[str].</p>
 <p>This function takes a sequence of Input[str], stringifies each, and concatenates all values
 into one final string. This can be used like so:</p>
@@ -1036,7 +1036,7 @@ into one final string. This can be used like so:</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>args</strong> (<a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><em>Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – A list of string Inputs to concatenate.</p>
+<dd class="field-odd"><p><strong>args</strong> (<em>List</em><em>[</em><em>Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – A list of string Inputs to concatenate.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A concatenated output string.</p>
