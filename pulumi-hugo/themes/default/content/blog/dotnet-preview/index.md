@@ -27,7 +27,7 @@ You can do all of this without having to learn a DSL or script CLI commands. Wit
 
 ## How Pulumi . NET Works
 
-Pulumi is declarative even though it uses general purpose programming languages. It does this by declaring a set of resources and the Pulumi engine orchestrates the CRUD operations to build and deploy infrastructure.
+Pulumi is declarative even though it uses general purpose programming languages. It does this by declaring a set of resources, and the Pulumi engine orchestrates the CRUD operations to build and deploy infrastructure.
 
 We use a .NET Core console application to declare infrastructure. Let's create an Azure App Service with a SQL database. The first step is make sure that your environment meets the prerequisites:
 
