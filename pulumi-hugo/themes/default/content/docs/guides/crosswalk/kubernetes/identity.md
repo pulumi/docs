@@ -471,18 +471,17 @@ const dev = new azuread.User("k8s-dev", {
 });
 */
 
-/* Get an existing AD user.
+// Get an existing AD user.
 const dev = azuread.getUser({
     userPrincipalName: "alice@example.com",
 });
-*/
 
 // Create the AD group for Developers.
 const devs = new azuread.Group("devs", {
     name: "pulumi:devs",
     members: [
         // Assign a new or existing user to the group.
-        // dev.objectId,
+        dev.objectId,
     ],
 });
 
