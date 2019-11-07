@@ -137,20 +137,7 @@ kube-system   pod/kube-proxy-dchf5           1/1     Running   0          15h
 kube-system   pod/kube-proxy-kdzfs           1/1     Running   0          15h
 kube-system   pod/kube-proxy-r447m           1/1     Running   0          15h
 kube-system   pod/kube-proxy-r9f8j           1/1     Running   0          15h
-
-NAMESPACE     NAME                 TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)         AGE
-default       service/kubernetes   ClusterIP   10.100.0.1    <none>        443/TCP         15h
-kube-system   service/kube-dns     ClusterIP   10.100.0.10   <none>        53/UDP,53/TCP   15h
-
-NAMESPACE     NAME                        DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
-kube-system   daemonset.apps/aws-node     6         6         6       6            6           <none>          15h
-kube-system   daemonset.apps/kube-proxy   6         6         6       6            6           <none>          15h
-
-NAMESPACE     NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
-kube-system   deployment.apps/coredns   2/2     2            2           15h
-
-NAMESPACE     NAME                                 DESIRED   CURRENT   READY   AGE
-kube-system   replicaset.apps/coredns-6f647f5754   2         2         2       15h
+...
 ```
 
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
@@ -189,8 +176,43 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 ```
 
 Proceed to the webpage and use the mentioned code to authenticate as an administrator user. The interactive login is only required once: the successful attempt will save the token to the `kubeconfig` file.
-
 After the login, cluster information will be displayed in the command-line console.
+
+Test the `admins` role by using it and viewing all resources in the cluster as
+expected.
+
+```bash
+$ kubectl get all -A
+NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
+kube-system   pod/azure-cni-networkmonitor-4fh89         1/1     Running   0          3h57m
+kube-system   pod/azure-cni-networkmonitor-629fq         1/1     Running   0          3h57m
+kube-system   pod/azure-cni-networkmonitor-ck89n         1/1     Running   0          3h57m
+kube-system   pod/azure-cni-networkmonitor-gs75m         1/1     Running   0          3h57m
+kube-system   pod/azure-cni-networkmonitor-s7b67         1/1     Running   0          3h57m
+kube-system   pod/azure-ip-masq-agent-27j2m              1/1     Running   0          3h57m
+kube-system   pod/azure-ip-masq-agent-czlc9              1/1     Running   0          3h57m
+kube-system   pod/azure-ip-masq-agent-g5txw              1/1     Running   0          3h57m
+kube-system   pod/azure-ip-masq-agent-h55ws              1/1     Running   0          3h57m
+kube-system   pod/azure-ip-masq-agent-tdvgm              1/1     Running   0          3h57m
+kube-system   pod/coredns-7fc597cc45-4z685               1/1     Running   0          3h55m
+kube-system   pod/coredns-7fc597cc45-k7p22               1/1     Running   0          4h
+kube-system   pod/coredns-autoscaler-7ccc76bfbd-k7zwl    1/1     Running   0          4h
+kube-system   pod/kube-proxy-9vbhg                       1/1     Running   0          3h57m
+kube-system   pod/kube-proxy-ftfsw                       1/1     Running   0          3h57m
+kube-system   pod/kube-proxy-rq8cm                       1/1     Running   0          3h57m
+kube-system   pod/kube-proxy-ssmsd                       1/1     Running   0          3h57m
+kube-system   pod/kube-proxy-x94dh                       1/1     Running   0          3h57m
+kube-system   pod/kubernetes-dashboard-cc4cc9f58-z5clx   1/1     Running   1          4h
+kube-system   pod/metrics-server-cbd95f966-mmgsg         1/1     Running   1          4h
+kube-system   pod/omsagent-5w45c                         1/1     Running   1          3h57m
+kube-system   pod/omsagent-dw2gc                         1/1     Running   0          3h57m
+kube-system   pod/omsagent-fzh6h                         1/1     Running   1          3h57m
+kube-system   pod/omsagent-kcqdm                         1/1     Running   0          3h57m
+kube-system   pod/omsagent-qnkp5                         1/1     Running   1          3h57m
+kube-system   pod/omsagent-rs-8555b897d9-26wks           1/1     Running   0          4h
+kube-system   pod/tunnelfront-5b6d458fbc-nzc25           1/1     Running   0          4h
+...
+```
 
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 {{% /md %}}
@@ -200,12 +222,70 @@ After the login, cluster information will be displayed in the command-line conso
 <div class="mt">
 {{% md %}}
 
-TODO
+  * [Use the `admins` ServiceAccount](#use-the-admins-service-account)
+  * [Use the `devs` ServiceAccount](#use-the-devs-service-account)
+  * [Configure RBAC Authorization](#configure-rbac-authorization)
 
-```typescript
-// TODO
+### Use the `admins` ServiceAccount
+
+In [Identity][crosswalk-identity] we demonstrate how to create typical roles for
+use in Kubernetes.
+
+We created an `admins` ServiceAccount for cluster administrators with root privileges, that
+will be tied into Kubernetes RBAC.
+
+Authenticate as the `admins` ServiceAccount from the [Identity
+stack][gcp-identity-stack].
+
+```bash
+$ pulumi stack output adminsIamServiceAccountSecret > k8s-admin-sa-key.json
+$ gcloud auth activate-service-account --key-file k8s-admin-sa-key.json
 ```
 
+Start with the `kubeconfig` exported from the Pulumi stack.
+
+```bash
+$ pulumi stack output --show-secrets kubeconfig > kubeconfig.json
+```
+
+Use `kubectl` to retrieve cluster information.
+
+```bash
+$ export KUBECONFIG=`pwd`/kubeconfig.json
+$ kubectl cluster-info
+```
+
+Test the `admins` ServiceAccount by using it and viewing all resources in the cluster as
+expected.
+
+```bash
+$ kubectl get all -A
+
+NAMESPACE     NAME                                                                 READY   STATUS    RESTARTS   AGE
+kube-system   pod/event-exporter-v0.2.5-7df89f4b8f-k84nc                           2/2     Running   0          12m
+kube-system   pod/fluentd-gcp-scaler-54ccb89d5-njcgt                               1/1     Running   0          12m
+kube-system   pod/fluentd-gcp-v3.1.1-4wknk                                         2/2     Running   0          3m55s
+kube-system   pod/fluentd-gcp-v3.1.1-bswkj                                         2/2     Running   0          3m16s
+kube-system   pod/fluentd-gcp-v3.1.1-bt8m4                                         2/2     Running   0          3m55s
+kube-system   pod/fluentd-gcp-v3.1.1-gdhzw                                         2/2     Running   0          3m55s
+kube-system   pod/heapster-55d5978c96-mpsdd                                        3/3     Running   0          4m12s
+kube-system   pod/kube-dns-5877696fb4-5gw7b                                        4/4     Running   0          12m
+kube-system   pod/kube-dns-5877696fb4-84jk4                                        4/4     Running   0          4m4s
+kube-system   pod/kube-dns-autoscaler-85f8bdb54-qz9zn                              1/1     Running   0          12m
+kube-system   pod/kube-proxy-gke-k8s-gke-cluster--performant-nodes-ab1e580a-pkwp   1/1     Running   0          10m
+kube-system   pod/kube-proxy-gke-k8s-gke-cluster--performant-nodes-ab1e580a-xmxc   1/1     Running   0          10m
+kube-system   pod/kube-proxy-gke-k8s-gke-cluster--standard-nodes-c-cca08c52-9zzp   1/1     Running   0          4m13s
+kube-system   pod/kube-proxy-gke-k8s-gke-cluster--standard-nodes-c-cca08c52-bgjz   1/1     Running   0          4m11s
+kube-system   pod/l7-default-backend-8f479dd9-npdkv                                1/1     Running   0          12m
+kube-system   pod/metrics-server-v0.3.1-8d4c5db46-hvr45                            2/2     Running   0          4m3s
+kube-system   pod/prometheus-to-sd-7jzkj                                           1/1     Running   0          4m13s
+kube-system   pod/prometheus-to-sd-v5ccv                                           1/1     Running   0          4m12s
+kube-system   pod/stackdriver-metadata-agent-cluster-level-5d4f66757f-t7sd6        1/1     Running   0          12m
+...
+```
+
+[gcp-identity-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/01-identity
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 {{% /md %}}
 </div>
 
@@ -307,23 +387,13 @@ $ pulumi stack output kubeconfig > kubeconfig-devs.json
 $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 ```
 
-```bash
-$ kubectl cluster-info
-To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code CF3TDACCY to authenticate.
-```
-
 Proceed to the webpage and use the mentioned code to authenticate as an dev user. The interactive login is only required once: the successful attempt will save the token to the `kubeconfig` file.
-
 After the login, cluster information retrieval fails because of lack of permissions:
-
-```bash
-Error from server (Forbidden): services is forbidden: User "alice@example.com" cannot list resource "services" in API group "" in the namespace "kube-system"
-```
 
 Test the `devs` role by using it and witnessing a lack of privileges.
 
 ```bash
-$ kubectl get all
+$ kubectl get all -A
 Error from server (Forbidden): pods is forbidden: User "alice@example.com" cannot list resource "pods" in API group "" at the cluster scope
 Error from server (Forbidden): replicationcontrollers is forbidden: User "alice@example.com" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
 Error from server (Forbidden): services is forbidden: User "alice@example.com" cannot list resource "services" in API group "" at the cluster scope
@@ -344,12 +414,46 @@ Error from server (Forbidden): cronjobs.batch is forbidden: User "alice@example.
 <div class="mt">
 {{% md %}}
 
-TODO
+### Use the `devs` ServiceAccount
 
-```typescript
-// TODO
+In [Identity][crosswalk-identity] we demonstrate how to create typical roles for
+use in Kubernetes.
+
+We created an `devs` ServiceAccount for cluster administrators with root privileges, that
+will be tied into Kubernetes RBAC.
+
+Authenticate as the `devs` ServiceAccount from the [Identity
+stack][gcp-identity-stack].
+
+```bash
+$ pulumi stack output devsIamServiceAccountSecret > k8s-devs-sa-key.json
+$ gcloud auth activate-service-account --key-file k8s-devs-sa-key.json
 ```
 
+Start with the `kubeconfig` exported from the Pulumi stack.
+
+```bash
+$ pulumi stack output --show-secrets kubeconfig > kubeconfig.json
+```
+
+Test the `devs` ServiceAccount by using it and viewing all resources in the cluster as
+expected.
+
+```bash
+$ kubectl get all -A
+Error from server (Forbidden): pods is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "pods" in API group "" at the cluster scope: Required "container.pods.list" permission.
+Error from server (Forbidden): replicationcontrollers is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "replicationcontrollers" in API group "" at the cluster scope: Required "container.replicationControllers.list" permission.
+Error from server (Forbidden): services is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "services" in API group "" at the cluster scope: Required "container.services.list" permission.
+Error from server (Forbidden): daemonsets.apps is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "daemonsets" in API group "apps" at the cluster scope: Required "container.daemonSets.list" permission.
+Error from server (Forbidden): deployments.apps is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "deployments" in API group "apps" at the cluster scope: Required "container.deployments.list" permission.
+Error from server (Forbidden): replicasets.apps is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "replicasets" in API group "apps" at the cluster scope: Required "container.replicaSets.list" permission.
+Error from server (Forbidden): statefulsets.apps is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "statefulsets" in API group "apps" at the cluster scope: Required "container.statefulSets.list" permission.
+Error from server (Forbidden): horizontalpodautoscalers.autoscaling is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "horizontalpodautoscalers" in API group "autoscaling" at the cluster scope: Required "container.horizontalPodAutoscalers.list" permission.
+Error from server (Forbidden): jobs.batch is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "jobs" in API group "batch" at the cluster scope: Required "container.jobs.list" permission.
+Error from server (Forbidden): cronjobs.batch is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "cronjobs" in API group "batch" at the cluster scope: Required "container.cronJobs.list" permission.
+```
+
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 {{% /md %}}
 </div>
 
