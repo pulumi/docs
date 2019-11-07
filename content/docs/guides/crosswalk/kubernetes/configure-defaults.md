@@ -192,11 +192,11 @@ services                0     5
 {{% md %}}
 
 By default, EKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
-`eks.privileged`. This PSP is bound to the `system:authenticated` group, which means any
+`eks.privileged`. This PSP is bound to the `system:authenticated` group, which means **any**
 authenticated user in the cluster can run privileged workloads. It is highly
 recommended that you replace this PSP with an appropriate, restricted PSP by user.
 
-> Note, PSPs should only be removed **after** its replacements have been created
+> Note: PSPs should only be removed **after** its replacements have been created
 to ensure running workloads continue executing properly (order matters).
 
 See the official [EKS Pod Security Policy][eks-psp] docs and the
