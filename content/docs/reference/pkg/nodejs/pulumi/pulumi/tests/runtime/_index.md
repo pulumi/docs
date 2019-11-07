@@ -22,7 +22,7 @@ meta_desc: "Explore members of the runtime module in the @pulumi/pulumi package.
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="exportedValue" data-link-title="exportedValue">
-    <a href="https://github.com/pulumi/pulumi/blob/3c832c33f5df665cbc775162e3c7fb6d305dbb5c/sdk/nodejs/tests/runtime/tsClosureCases.ts#L38">
+    <a href="https://github.com/pulumi/pulumi/blob/69e04367a5772abab09eda5ad39367cd2e780af7/sdk/nodejs/tests/runtime/tsClosureCases.ts#L38">
         const <strong>exportedValue</strong>
     </a>
 </h3>
