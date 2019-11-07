@@ -14,7 +14,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_terraform.state"></span><dl class="class">
 <dt id="pulumi_terraform.state.ArtifactoryBackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">ArtifactoryBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">repo: Union[str, Awaitable[str], Output[T]], subpath: Union[str, Awaitable[str], Output[T]], url: Union[str, Awaitable[str], Output[T]] = None, username: Union[str, Awaitable[str], Output[T]] = None, password: Union[str, Awaitable[str], Output[T]] = None, workspace: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.ArtifactoryBackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">ArtifactoryBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">repo: Union[T, Awaitable[T], Output[T]], subpath: Union[T, Awaitable[T], Output[T]], url: Union[T, Awaitable[T], Output[T]] = None, username: Union[T, Awaitable[T], Output[T]] = None, password: Union[T, Awaitable[T], Output[T]] = None, workspace: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.ArtifactoryBackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the Artifactory backend.</p>
 <p>Constructs an ArtifactoryBackendArgs.</p>
 <dl class="field-list simple">
@@ -38,7 +38,7 @@ in the environment, if unset.
 
 <dl class="class">
 <dt id="pulumi_terraform.state.AzureRMBackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">AzureRMBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">storage_account_name: Union[str, Awaitable[str], Output[T]], container_name: Union[str, Awaitable[str], Output[T]], key: Union[str, Awaitable[str], Output[T]] = None, environment: Union[str, Awaitable[str], Output[T]] = None, endpoint: Union[str, Awaitable[str], Output[T]] = None, use_msi: Union[bool, Awaitable[bool], Output[T]] = None, subscription_id: Union[str, Awaitable[str], Output[T]] = None, tenant_id: Union[str, Awaitable[str], Output[T]] = None, msi_endpoint: Union[str, Awaitable[str], Output[T]] = None, sas_token: Union[str, Awaitable[str], Output[T]] = None, access_key: Union[str, Awaitable[str], Output[T]] = None, resource_group_name: Union[str, Awaitable[str], Output[T]] = None, client_id: Union[str, Awaitable[str], Output[T]] = None, client_secret: Union[str, Awaitable[str], Output[T]] = None, workspace: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.AzureRMBackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">AzureRMBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">storage_account_name: Union[T, Awaitable[T], Output[T]], container_name: Union[T, Awaitable[T], Output[T]], key: Union[T, Awaitable[T], Output[T]] = None, environment: Union[T, Awaitable[T], Output[T]] = None, endpoint: Union[T, Awaitable[T], Output[T]] = None, use_msi: Union[T, Awaitable[T], Output[T]] = None, subscription_id: Union[T, Awaitable[T], Output[T]] = None, tenant_id: Union[T, Awaitable[T], Output[T]] = None, msi_endpoint: Union[T, Awaitable[T], Output[T]] = None, sas_token: Union[T, Awaitable[T], Output[T]] = None, access_key: Union[T, Awaitable[T], Output[T]] = None, resource_group_name: Union[T, Awaitable[T], Output[T]] = None, client_id: Union[T, Awaitable[T], Output[T]] = None, client_secret: Union[T, Awaitable[T], Output[T]] = None, workspace: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.AzureRMBackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the AzureRM backend.</p>
 <blockquote>
 <div><p>Constructs an AzureRMBackendArgs</p>
@@ -91,7 +91,7 @@ principal. Sourced from <code class="docutils literal notranslate"><span class="
 
 <dl class="class">
 <dt id="pulumi_terraform.state.ConsulBackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">ConsulBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">path: Union[str, Awaitable[str], Output[T]], access_token: Union[str, Awaitable[str], Output[T]], address: Union[str, Awaitable[str], Output[T]] = None, scheme: Union[str, Awaitable[str], Output[T]] = None, datacenter: Union[str, Awaitable[str], Output[T]] = None, http_auth: Union[str, Awaitable[str], Output[T]] = None, gzip: Union[bool, Awaitable[bool], Output[T]] = None, ca_file: Union[str, Awaitable[str], Output[T]] = None, cert_file: Union[str, Awaitable[str], Output[T]] = None, key_file: Union[str, Awaitable[str], Output[T]] = None, workspace: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.ConsulBackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">ConsulBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">path: Union[T, Awaitable[T], Output[T]], access_token: Union[T, Awaitable[T], Output[T]], address: Union[T, Awaitable[T], Output[T]] = None, scheme: Union[T, Awaitable[T], Output[T]] = None, datacenter: Union[T, Awaitable[T], Output[T]] = None, http_auth: Union[T, Awaitable[T], Output[T]] = None, gzip: Union[T, Awaitable[T], Output[T]] = None, ca_file: Union[T, Awaitable[T], Output[T]] = None, cert_file: Union[T, Awaitable[T], Output[T]] = None, key_file: Union[T, Awaitable[T], Output[T]] = None, workspace: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.ConsulBackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the Consul backend.</p>
 <p>Constructs a ConsulBackendArgs.</p>
 <dl class="field-list simple">
@@ -122,7 +122,7 @@ Sourced from <code class="docutils literal notranslate"><span class="pre">CONSUL
 
 <dl class="class">
 <dt id="pulumi_terraform.state.EtcdV2BackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">EtcdV2BackendArgs</code><span class="sig-paren">(</span><em class="sig-param">path: Union[str, Awaitable[str], Output[T]], endpoints: Union[str, Awaitable[str], Output[T]], username: Union[str, Awaitable[str], Output[T]] = None, password: Union[str, Awaitable[str], Output[T]] = None, workspace: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.EtcdV2BackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">EtcdV2BackendArgs</code><span class="sig-paren">(</span><em class="sig-param">path: Union[T, Awaitable[T], Output[T]], endpoints: Union[T, Awaitable[T], Output[T]], username: Union[T, Awaitable[T], Output[T]] = None, password: Union[T, Awaitable[T], Output[T]] = None, workspace: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.EtcdV2BackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the etcd v2 backend. Note that there is a separate
 configuration class for state stored in the ectd v3 backend.</p>
 <p>Constructs an EtcdV2BackendArgs.</p>
@@ -141,7 +141,7 @@ configuration class for state stored in the ectd v3 backend.</p>
 
 <dl class="class">
 <dt id="pulumi_terraform.state.EtcdV3BackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">EtcdV3BackendArgs</code><span class="sig-paren">(</span><em class="sig-param">endpoints: Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T]], username: Union[str, Awaitable[str], Output[T]] = None, password: Union[str, Awaitable[str], Output[T]] = None, prefix: Union[str, Awaitable[str], Output[T]] = None, cacert_path: Union[str, Awaitable[str], Output[T]] = None, cert_path: Union[str, Awaitable[str], Output[T]] = None, key_path: Union[str, Awaitable[str], Output[T]] = None, workspace: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.EtcdV3BackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">EtcdV3BackendArgs</code><span class="sig-paren">(</span><em class="sig-param">endpoints: Union[T, Awaitable[T], Output[T]], username: Union[T, Awaitable[T], Output[T]] = None, password: Union[T, Awaitable[T], Output[T]] = None, prefix: Union[T, Awaitable[T], Output[T]] = None, cacert_path: Union[T, Awaitable[T], Output[T]] = None, cert_path: Union[T, Awaitable[T], Output[T]] = None, key_path: Union[T, Awaitable[T], Output[T]] = None, workspace: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.EtcdV3BackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the etcd v3 backend. Note that there is a separate
 configuration class for state stored in the ectd v2 backend.</p>
 <p>Constructs an EtcdV3BackendArgs.</p>
@@ -166,7 +166,7 @@ TLS-enabled etcd servers.
 
 <dl class="class">
 <dt id="pulumi_terraform.state.GcsBackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">GcsBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">bucket: Union[str, Awaitable[str], Output[T]], credentials: Union[str, Awaitable[str], Output[T]] = None, prefix: Union[str, Awaitable[str], Output[T]] = None, encryption_key: Union[str, Awaitable[str], Output[T]] = None, workspace: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.GcsBackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">GcsBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">bucket: Union[T, Awaitable[T], Output[T]], credentials: Union[T, Awaitable[T], Output[T]] = None, prefix: Union[T, Awaitable[T], Output[T]] = None, encryption_key: Union[T, Awaitable[T], Output[T]] = None, workspace: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.GcsBackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the Google Cloud Storage backend.</p>
 <p>Constructs a GcsBackendArgs.</p>
 <dl class="field-list simple">
@@ -188,7 +188,7 @@ Sourced from <code class="docutils literal notranslate"><span class="pre">GOOGLE
 
 <dl class="class">
 <dt id="pulumi_terraform.state.HttpBackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">HttpBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">address: Union[str, Awaitable[str], Output[T]], update_method: Union[str, Awaitable[str], Output[T]] = None, lock_address: Union[str, Awaitable[str], Output[T]] = None, lock_method: Union[str, Awaitable[str], Output[T]] = None, unlock_address: Union[str, Awaitable[str], Output[T]] = None, unlock_method: Union[str, Awaitable[str], Output[T]] = None, username: Union[str, Awaitable[str], Output[T]] = None, password: Union[str, Awaitable[str], Output[T]] = None, skip_cert_validation: Union[bool, Awaitable[bool], Output[T]] = None, workspace: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.HttpBackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">HttpBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">address: Union[T, Awaitable[T], Output[T]], update_method: Union[T, Awaitable[T], Output[T]] = None, lock_address: Union[T, Awaitable[T], Output[T]] = None, lock_method: Union[T, Awaitable[T], Output[T]] = None, unlock_address: Union[T, Awaitable[T], Output[T]] = None, unlock_method: Union[T, Awaitable[T], Output[T]] = None, username: Union[T, Awaitable[T], Output[T]] = None, password: Union[T, Awaitable[T], Output[T]] = None, skip_cert_validation: Union[T, Awaitable[T], Output[T]] = None, workspace: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.HttpBackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the HTTP backend.</p>
 <p>Constructs an HttpBackendArgs.</p>
 <dl class="field-list simple">
@@ -211,7 +211,7 @@ Sourced from <code class="docutils literal notranslate"><span class="pre">GOOGLE
 
 <dl class="class">
 <dt id="pulumi_terraform.state.LocalBackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">LocalBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">path: Union[str, Awaitable[str], Output[T]]</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.LocalBackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">LocalBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">path: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.LocalBackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the local enhanced backend.</p>
 <p>Constructs a LocalBackendArgs.</p>
 <dl class="field-list simple">
@@ -223,7 +223,7 @@ Sourced from <code class="docutils literal notranslate"><span class="pre">GOOGLE
 
 <dl class="class">
 <dt id="pulumi_terraform.state.MantaBackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">MantaBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">account: Union[str, Awaitable[str], Output[T]], user: Union[str, Awaitable[str], Output[T]] = None, url: Union[str, Awaitable[str], Output[T]] = None, key_material: Union[str, Awaitable[str], Output[T]] = None, key_id: Union[str, Awaitable[str], Output[T]] = None, path: Union[str, Awaitable[str], Output[T]] = None, insecure_skip_tls_verify: Union[bool, Awaitable[bool], Output[T]] = None, workspace: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.MantaBackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">MantaBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">account: Union[T, Awaitable[T], Output[T]], user: Union[T, Awaitable[T], Output[T]] = None, url: Union[T, Awaitable[T], Output[T]] = None, key_material: Union[T, Awaitable[T], Output[T]] = None, key_id: Union[T, Awaitable[T], Output[T]] = None, path: Union[T, Awaitable[T], Output[T]] = None, insecure_skip_tls_verify: Union[T, Awaitable[T], Output[T]] = None, workspace: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.MantaBackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the Manta backend.</p>
 <p>Constructs a MantaBackendArgs.</p>
 <dl class="field-list simple">
@@ -254,8 +254,13 @@ will be stored.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_terraform.state.Mapping">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">Mapping</code><a class="headerlink" href="#pulumi_terraform.state.Mapping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_terraform.state.PostgresBackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">PostgresBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">conn_str: Union[str, Awaitable[str], Output[T]], schema_name: Union[str, Awaitable[str], Output[T]] = None, workspace: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.PostgresBackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">PostgresBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">conn_str: Union[T, Awaitable[T], Output[T]], schema_name: Union[T, Awaitable[T], Output[T]] = None, workspace: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.PostgresBackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the Postgres backend.</p>
 <p>Constructs a PostgresBackendArgs.</p>
 <dl class="field-list simple">
@@ -271,7 +276,7 @@ will be stored.
 
 <dl class="class">
 <dt id="pulumi_terraform.state.RemoteBackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">RemoteBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">organization: Union[str, Awaitable[str], Output[T]], token: Union[str, Awaitable[str], Output[T]] = None, hostname: Union[str, Awaitable[str], Output[T]] = None, workspace_name: Union[str, Awaitable[str], Output[T]] = None, workspace_prefix: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.RemoteBackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">RemoteBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">organization: Union[T, Awaitable[T], Output[T]], token: Union[T, Awaitable[T], Output[T]] = None, hostname: Union[T, Awaitable[T], Output[T]] = None, workspace_name: Union[T, Awaitable[T], Output[T]] = None, workspace_prefix: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.RemoteBackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration options for a workspace for use with the remote enhanced backend.</p>
 <p>Constructs a RemoteBackendArgs.</p>
 <dl class="field-list simple">
@@ -314,7 +319,7 @@ workspace_name.</p>
 
 <dl class="method">
 <dt id="pulumi_terraform.state.RemoteStateReference.get_output">
-<code class="sig-name descname">get_output</code><span class="sig-paren">(</span><em class="sig-param">name: Union[str, Awaitable[str], Output[T]]</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.RemoteStateReference.get_output" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_output</code><span class="sig-paren">(</span><em class="sig-param">name: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.RemoteStateReference.get_output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetches the value of a root output from the Terraform Remote State.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -365,7 +370,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_terraform.state.S3BackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">S3BackendArgs</code><span class="sig-paren">(</span><em class="sig-param">bucket: Union[str, Awaitable[str], Output[T]], key: Union[str, Awaitable[str], Output[T]], region: Union[str, Awaitable[str], Output[T]] = None, endpoint: Union[str, Awaitable[str], Output[T]] = None, access_key: Union[str, Awaitable[str], Output[T]] = None, secret_key: Union[str, Awaitable[str], Output[T]] = None, profile: Union[str, Awaitable[str], Output[T]] = None, shared_credentials_file: Union[str, Awaitable[str], Output[T]] = None, token: Union[str, Awaitable[str], Output[T]] = None, role_arn: Union[str, Awaitable[str], Output[T]] = None, external_id: Union[str, Awaitable[str], Output[T]] = None, session_name: Union[str, Awaitable[str], Output[T]] = None, workspace_key_prefix: Union[str, Awaitable[str], Output[T]] = None, iam_endpoint: Union[str, Awaitable[str], Output[T]] = None, sts_endpoint: Union[str, Awaitable[str], Output[T]] = None, workspace: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.S3BackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">S3BackendArgs</code><span class="sig-paren">(</span><em class="sig-param">bucket: Union[T, Awaitable[T], Output[T]], key: Union[T, Awaitable[T], Output[T]], region: Union[T, Awaitable[T], Output[T]] = None, endpoint: Union[T, Awaitable[T], Output[T]] = None, access_key: Union[T, Awaitable[T], Output[T]] = None, secret_key: Union[T, Awaitable[T], Output[T]] = None, profile: Union[T, Awaitable[T], Output[T]] = None, shared_credentials_file: Union[T, Awaitable[T], Output[T]] = None, token: Union[T, Awaitable[T], Output[T]] = None, role_arn: Union[T, Awaitable[T], Output[T]] = None, external_id: Union[T, Awaitable[T], Output[T]] = None, session_name: Union[T, Awaitable[T], Output[T]] = None, workspace_key_prefix: Union[T, Awaitable[T], Output[T]] = None, iam_endpoint: Union[T, Awaitable[T], Output[T]] = None, sts_endpoint: Union[T, Awaitable[T], Output[T]] = None, workspace: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.S3BackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the S3 backend.</p>
 <p>Constructs an S3BackendArgs.</p>
 <dl class="field-list simple">
@@ -397,8 +402,13 @@ using a non-default workspace, and defaults to <code class="docutils literal not
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_terraform.state.Sequence">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">Sequence</code><a class="headerlink" href="#pulumi_terraform.state.Sequence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_terraform.state.SwiftBackendArgs">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">SwiftBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">auth_url: Union[str, Awaitable[str], Output[T]], container: Union[str, Awaitable[str], Output[T]], username: Union[str, Awaitable[str], Output[T]] = None, user_id: Union[str, Awaitable[str], Output[T]] = None, password: Union[str, Awaitable[str], Output[T]] = None, token: Union[str, Awaitable[str], Output[T]] = None, region_name: Union[str, Awaitable[str], Output[T]] = None, tenant_id: Union[str, Awaitable[str], Output[T]] = None, tenant_name: Union[str, Awaitable[str], Output[T]] = None, domain_id: Union[str, Awaitable[str], Output[T]] = None, domain_name: Union[str, Awaitable[str], Output[T]] = None, insecure: Union[bool, Awaitable[bool], Output[T]] = None, cacert_file: Union[str, Awaitable[str], Output[T]] = None, cert: Union[str, Awaitable[str], Output[T]] = None, key: Union[str, Awaitable[str], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.SwiftBackendArgs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_terraform.state.</code><code class="sig-name descname">SwiftBackendArgs</code><span class="sig-paren">(</span><em class="sig-param">auth_url: Union[T, Awaitable[T], Output[T]], container: Union[T, Awaitable[T], Output[T]], username: Union[T, Awaitable[T], Output[T]] = None, user_id: Union[T, Awaitable[T], Output[T]] = None, password: Union[T, Awaitable[T], Output[T]] = None, token: Union[T, Awaitable[T], Output[T]] = None, region_name: Union[T, Awaitable[T], Output[T]] = None, tenant_id: Union[T, Awaitable[T], Output[T]] = None, tenant_name: Union[T, Awaitable[T], Output[T]] = None, domain_id: Union[T, Awaitable[T], Output[T]] = None, domain_name: Union[T, Awaitable[T], Output[T]] = None, insecure: Union[T, Awaitable[T], Output[T]] = None, cacert_file: Union[T, Awaitable[T], Output[T]] = None, cert: Union[T, Awaitable[T], Output[T]] = None, key: Union[T, Awaitable[T], Output[T]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_terraform.state.SwiftBackendArgs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration options for a Terraform Remote State stored in the Swift backend.</p>
 <p>Constructs a SwiftBackendArgs.</p>
 <dl class="field-list simple">

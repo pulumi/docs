@@ -15,7 +15,7 @@ notitle: true
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>namespace</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Optional namespace to install chart resources into.</p></li>
 <li><p><strong>values</strong> (<em>Optional</em><em>[</em><em>pulumi.Inputs</em><em>]</em>) – Optional overrides for chart values.</p></li>
-<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Tuple</em><em>[</em><em>Callable</em><em>,</em>) – Optional list
+<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.Tuple" title="pulumi_kubernetes.helm.v2.Tuple"><em>Tuple</em></a><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.Callable" title="pulumi_kubernetes.helm.v2.Callable"><em>Callable</em></a><em>,</em>) – Optional list
 of transformations to apply to resources that will be created by this chart prior to creation.
 Allows customization of the chart behaviour without directly modifying the chart itself.</p></li>
 <li><p><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
@@ -52,6 +52,17 @@ Example: A resource created with resource_prefix=”foo” would produce a resou
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_kubernetes.helm.v2.Callable">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.helm.v2.</code><code class="sig-name descname">Callable</code><a class="headerlink" href="#pulumi_kubernetes.helm.v2.Callable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callable type; Callable[[int], str] is a function of (int) -&gt; str.</p>
+<p>The subscription syntax must always be used with exactly two
+values: the argument list and the return type.  The argument list
+must be a list of types or ellipsis; the return type must be a single type.</p>
+<p>There is no syntax to indicate optional or keyword arguments,
+such function types are rarely used as callback types.</p>
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_kubernetes.helm.v2.Chart">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.helm.v2.</code><code class="sig-name descname">Chart</code><span class="sig-paren">(</span><em class="sig-param">release_name</em>, <em class="sig-param">config</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.Chart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Chart is a component representing a collection of resources described by an arbitrary Helm
@@ -82,7 +93,7 @@ resource’s behavior.</p></li>
 
 <dl class="method">
 <dt id="pulumi_kubernetes.helm.v2.Chart.get_resource">
-<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param">group_version_kind</em>, <em class="sig-param">name</em>, <em class="sig-param">namespace=None</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[pulumi.resource.CustomResource][pulumi.resource.CustomResource]<a class="headerlink" href="#pulumi_kubernetes.helm.v2.Chart.get_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param">group_version_kind</em>, <em class="sig-param">name</em>, <em class="sig-param">namespace=None</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[pulumi.resource.CustomResource]<a class="headerlink" href="#pulumi_kubernetes.helm.v2.Chart.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>get_resource returns a resource defined by a built-in Kubernetes group/version/kind and
 name. For example: <code class="docutils literal notranslate"><span class="pre">get_resource(&quot;apps/v1/Deployment&quot;,</span> <span class="pre">&quot;nginx&quot;)</span></code></p>
 <dl class="field-list simple">
@@ -111,7 +122,7 @@ Example: repo: “stable”, chart: “nginx-ingress” -&gt; “stable/nginx-in
 Example: chart: “stable/nginx-ingress” -&gt; “stable/nginx-ingress”</p></li>
 <li><p><strong>namespace</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Optional namespace to install chart resources into.</p></li>
 <li><p><strong>values</strong> (<em>Optional</em><em>[</em><em>pulumi.Inputs</em><em>]</em>) – Optional overrides for chart values.</p></li>
-<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Tuple</em><em>[</em><em>Callable</em><em>,</em>) – Optional list of
+<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.Tuple" title="pulumi_kubernetes.helm.v2.Tuple"><em>Tuple</em></a><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.Callable" title="pulumi_kubernetes.helm.v2.Callable"><em>Callable</em></a><em>,</em>) – Optional list of
 transformations to apply to resources that will be created by this chart prior to creation.
 Allows customization of the chart behaviour without directly modifying the chart itself.</p></li>
 <li><p><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
@@ -288,6 +299,11 @@ this is ignored.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_kubernetes.helm.v2.List">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.helm.v2.</code><code class="sig-name descname">List</code><a class="headerlink" href="#pulumi_kubernetes.helm.v2.List" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_kubernetes.helm.v2.LocalChartOpts">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.helm.v2.</code><code class="sig-name descname">LocalChartOpts</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">values=None</em>, <em class="sig-param">transformations=None</em>, <em class="sig-param">resource_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.LocalChartOpts" title="Permalink to this definition">¶</a></dt>
 <dd><p>LocalChartOpts is a bag of configuration options for a local Helm chart.</p>
@@ -298,7 +314,7 @@ this is ignored.</p>
 <code class="docutils literal notranslate"><span class="pre">Chart.yaml</span></code> file.</p></li>
 <li><p><strong>namespace</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Optional namespace to install chart resources into.</p></li>
 <li><p><strong>values</strong> (<em>Optional</em><em>[</em><em>pulumi.Inputs</em><em>]</em>) – Optional overrides for chart values.</p></li>
-<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Tuple</em><em>[</em><em>Callable</em><em>,</em>) – Optional list of
+<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.Tuple" title="pulumi_kubernetes.helm.v2.Tuple"><em>Tuple</em></a><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.Callable" title="pulumi_kubernetes.helm.v2.Callable"><em>Callable</em></a><em>,</em>) – Optional list of
 transformations to apply to resources that will be created by this chart prior to creation.
 Allows customization of the chart behaviour without directly modifying the chart itself.</p></li>
 <li><p><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
@@ -318,6 +334,16 @@ Example: A resource created with resource_prefix=”foo” would produce a resou
 <dt id="pulumi_kubernetes.helm.v2.TextIO">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.helm.v2.</code><code class="sig-name descname">TextIO</code><a class="headerlink" href="#pulumi_kubernetes.helm.v2.TextIO" title="Permalink to this definition">¶</a></dt>
 <dd><p>Typed version of the return of open() in text mode.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_kubernetes.helm.v2.Tuple">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.helm.v2.</code><code class="sig-name descname">Tuple</code><a class="headerlink" href="#pulumi_kubernetes.helm.v2.Tuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple type; Tuple[X, Y] is the cross-product type of X and Y.</p>
+<p>Example: Tuple[T1, T2] is a tuple of two elements corresponding
+to type variables T1 and T2.  Tuple[int, float, str] is a tuple
+of an int, a float and a string.</p>
+<p>To specify a variable-length tuple of homogeneous type, use Tuple[T, …].</p>
 </dd></dl>
 
 <dl class="function">
