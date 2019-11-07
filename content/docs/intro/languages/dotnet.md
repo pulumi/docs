@@ -5,7 +5,7 @@ menu:
     parent: languages
     weight: 2
 
-aliases: ["/docs/reference/dotnet/"]
+aliases: ["/dotnet/"]
 ---
 
 Pulumi supports .NET programs running on .NET Core 3 and later. You can also use your favorite .NET tools such as editors, package managers, build systems, and test frameworks.
