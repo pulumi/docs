@@ -73,13 +73,19 @@ use in Kubernetes.
 We created an `admins` role for cluster administrators with root privileges, that
 will be tied into Kubernetes RBAC.
 
-Make a copy of the kubeconfig that will be edited for the `admins`.
-
 ```bash
-$ cp kubeconfig.json kubeconfig-admins.json
+$ pulumi stack output adminsIamRoleArn
+arn:aws:iam::000000000000:role/admins-eksClusterAdmin-0627674
 ```
 
-Edit `kubeconfig-admins.json` by inserting a role to authenticate with in the
+Make a copy of the kubeconfig that will be edited for the `admins` to use the
+`adminsIamRoleArn` output.
+
+```bash
+$ pulumi stack output kubeconfig | jq '.' > kubeconfig-admin.json
+```
+
+Edit `kubeconfig-admin.json` by inserting a role to authenticate with in the
 `args` for the [`aws-iam-authenticator`][aws-iam-auth], e.g.
 
 ```bash
@@ -107,7 +113,7 @@ Edit `kubeconfig-admins.json` by inserting a role to authenticate with in the
 Update and use the new `kubeconfig`.
 
 ```bash
-$ export KUBECONFIG=`pwd`/kubeconfig-admins.json
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 $ kubectl cluster-info
 ```
 
@@ -215,10 +221,17 @@ use in Kubernetes.
 We create limited scope `devs` role for general purpose execution of workloads,
 that will be tied into Kubernetes RBAC.
 
-Make a copy of the kubeconfig that will be edited for the `devs`.
+```bash
+$ pulumi stack output devsIamRoleArn
+arn:aws:iam::000000000000:role/devs-eksClusterDeveloper-e332028
+```
+
+Make a copy of the kubeconfig that will be edited for the `devs` to use the
+`devsIamRoleArn` output.
+
 
 ```bash
-$ cp kubeconfig.json kubeconfig-devs.json
+$ pulumi stack output kubeconfig | jq '.' > kubeconfig-devs.json
 ```
 
 Edit `kubeconfig-devs.json` by inserting a role to authenticate with in the
@@ -268,6 +281,7 @@ Error from server (Forbidden): jobs.batch is forbidden: User "pulumi:alice" cann
 Error from server (Forbidden): cronjobs.batch is forbidden: User "pulumi:alice" cannot list resource "cronjobs" in API group "batch" at the cluster scope
 ```
 
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 [aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
 {{% /md %}}
 </div>
@@ -352,9 +366,8 @@ default, or retrieve information as shown in the `Error from server (Forbidden)`
 messages.
 
 ```bash
-$ pulumi stack output kubeconfig > kubeconfig-devs.json
 $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
-$ kubectl run --namespace=`pulumi stack output appsNamespaceName --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}' -n `pulumi stack output appNamespaceName` --limits cpu=200m,memory=256Mi
+$ kubectl run --namespace=`pulumi stack output appsNamespaceName` --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}' --limits cpu=200m,memory=256Mi
 Error from server (Forbidden): pods is forbidden: User "pulumi:alice" cannot create resource "pods" in API group "" in the namespace "apps-x1z818eg"
 ```
 
@@ -380,6 +393,10 @@ $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 </div>
 
 Create the [Role][k8s-rbac-docs] for the `apps` namespace that will be bound to `devs` group.
+
+```bash
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -424,7 +441,7 @@ deploying the workload with the new authorization for the `devs` role.
 
 ```bash
 $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
-$ kubectl run --namespace=`pulumi stack output appsNamespaceName --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}' -n `pulumi stack output appNamespaceName` --limits cpu=200m,memory=256Mi
+$ kubectl run --namespace=`pulumi stack output appsNamespaceName` --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}' --limits cpu=200m,memory=256Mi
 service/nginx created
 pod/nginx created
 ```
@@ -432,7 +449,7 @@ pod/nginx created
 Delete the pod and service.
 
 ```bash
-$ kubectl delete pod/nginx svc/nginx
+$ kubectl delete --namespace=`pulumi stack output appsNamespaceName` pod/nginx svc/nginx
 ```
 
 <div class="cloud-prologue-aws"></div>
