@@ -328,6 +328,13 @@ EOF
 $ kubectl apply -f ingress.yaml --namespace=`pulumi stack output appsNamespaceName`
 ```
 
+Check that the ingress is created, and after a few moments the `Address` will
+be set to the NGINX LoadBalancer Service address.
+
+```bash
+$ kubectl describe ingress kuard --namespace=`pulumi stack output appsNamespaceName`
+```
+
 {{% /md %}}
 </div>
 
@@ -410,20 +417,15 @@ const ingress = new k8s.extensions.v1beta1.Ingress(name,
     {provider: provider}
 );
 ```
-{{% /md %}}
-</div>
 
 Check that the ingress is created, and after a few moments the `Address` will
 be set to the NGINX LoadBalancer Service address.
 
 ```bash
-$ kubectl describe ingress kuard --namespace=`pulumi stack output appsNamespaceName`
-```
-or 
-
-```bash
 $ kubectl describe ingress kuard-<POD_SUFFIX> --namespace=`pulumi stack output appsNamespaceName`
 ```
+{{% /md %}}
+</div>
 
 Use the NGINX LoadBalancer Service address to access kuard on its expected
 hosts & paths. We simulate the headers using `curl`.
