@@ -23,7 +23,7 @@ meta_desc: "Explore members of the iterable module in the @pulumi/pulumi package
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="groupBy" data-link-title="groupBy">
-    <a href="https://github.com/pulumi/pulumi/blob/97b8c361215da9b5c3ed0935210aecefe97e192a/sdk/nodejs/iterable/index.ts#L61">
+    <a href="https://github.com/pulumi/pulumi/blob/b39b5500c5bfe38f4bdd8d282287731c1516ad68/sdk/nodejs/iterable/index.ts#L61">
         function <strong>groupBy</strong>
     </a>
 </h3>
@@ -46,7 +46,7 @@ and whose selector is roughly `(e) => [e.s, e.n]`, the resulting object will be
 
 
 <h3 class="pdoc-module-header" id="toObject" data-link-title="toObject">
-    <a href="https://github.com/pulumi/pulumi/blob/97b8c361215da9b5c3ed0935210aecefe97e192a/sdk/nodejs/iterable/index.ts#L30">
+    <a href="https://github.com/pulumi/pulumi/blob/b39b5500c5bfe38f4bdd8d282287731c1516ad68/sdk/nodejs/iterable/index.ts#L30">
         function <strong>toObject</strong>
     </a>
 </h3>
