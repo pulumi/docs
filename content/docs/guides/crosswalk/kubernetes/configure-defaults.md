@@ -54,7 +54,7 @@ We'll examine how to create:
 Create namespaces for typical stacks:
 
  * Cluster Services: Deploy cluster-scoped services, such as logging and monitoring.
- * App Services: Deploy application-scoped services, such as DNS and ingress management.
+ * App Services: Deploy application-scoped services, such as ingress or DNS management.
  * Apps: Deploy applications and workloads.
 
 {{< k8s-language nokx >}}
@@ -248,6 +248,9 @@ See the official [GKE Pod Security Policy][gke-psp] docs and the
 
 #### Create a Restrictive PSP
 
+Create a PSP that allows a restrictive, but usable set of permissions to deploy
+workloads.
+
 {{< k8s-language nokx >}}
 
 <div class="k8s-language-prologue-yaml"></div>
@@ -258,7 +261,7 @@ See the official [GKE Pod Security Policy][gke-psp] docs and the
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
-  name: demo-restrictive
+  name: restrictive
 spec:
   privileged: false
   hostNetwork: false
@@ -289,12 +292,12 @@ spec:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: demo-psp-restrictive
+  name: restrictive
 rules:
 - apiGroups:
   - policy
   resourceNames:
-  - demo-restrictive
+  - restrictive
   resources:
   - podsecuritypolicies
   verbs:
@@ -305,11 +308,11 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: allow-demo-restricted-kube-system
+  name: allow-restricted-kube-system
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: demo-psp-restrictive
+  name: restrictive
 subjects:
 - kind: Group
   name: system:serviceaccounts
