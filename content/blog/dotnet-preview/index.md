@@ -13,7 +13,11 @@ Millions of .NET developers can now use their favorite languages and open source
 
 ## What Does Pulumi Enable?
 
+<<<<<<< HEAD
 As a .NET developer you can:
+=======
+As a .NET developer, you can:
+>>>>>>> df348e40e53c2acdc77b12040d3175b26184e4d6
 
 * Declare infrastructure in C#, F#, or Visual Basic NET.
 * Code with favorite IDEs, including Visual Studio, Visual Studio Code, and Rider, with auto-completion and refactoring tools.
@@ -27,7 +31,7 @@ You can do all of this without having to learn a DSL or script CLI commands. Wit
 
 ## How Pulumi .NET Works
 
-Pulumi is declarative even though it uses general purpose programming languages. It does this by declaring a set of resources and the Pulumi engine orchestrates the CRUD operations to build and deploy infrastructure.
+Pulumi is declarative even though it uses general purpose programming languages. It does this by declaring a set of resources, and the Pulumi engine orchestrates the CRUD operations to build and deploy infrastructure.
 
 We use a .NET Core console application to declare infrastructure. Let's create an Azure App Service with a SQL database. The first step is make sure that your environment meets the prerequisites:
 
@@ -58,7 +62,11 @@ Change the directory to `azure-cs-appservice` directory
    $ cd azure-cs-appservice
    ```
 
+<<<<<<< HEAD
 There are four files in the Pulumi project, the `Azure.Appservice.csproj` which sets the .NET SDK and the Pulumi packages for the project. `Pulumi.yaml` holds project parameters such as name and runtime. The `Pulumi.dev.yaml` file holds the database password. `SharedAccessSignature.cs` contains a helper function to generate storage blob access URLs with SAS tokens in them. It demonstrate that you can add custom code inside your Pulumi program. `Program.cs` is the main program for declaring resources.
+=======
+There are four files in the Pulumi project, the `Azure.Appservice.csproj`, which sets the .NET SDK and the Pulumi packages for the project. `Pulumi.yaml` holds project parameters such as name and runtime. The `Pulumi.dev.yaml` file holds the database password. `SharedAccessSignature.cs` contains a helper function to generate storage blob access URLs with SAS tokens in them. It demonstrates that you can add custom code inside your Pulumi program. `Program.cs` is the main program for declaring resources.
+>>>>>>> df348e40e53c2acdc77b12040d3175b26184e4d6
 
 1. Create a new stack:
 
@@ -130,7 +138,7 @@ From there, feel free to experiment. Simply making edits and running `pulumi up`
 
 ## Recap
 
-In this post we've shown how to use Pulumi to deploy a modern application to Azure. The example code performs a number of tasks.
+In this post, we've shown how to use Pulumi to deploy a modern application to Azure. The example code performs a number of tasks.
 
 First, we created a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#resource-groups), a [storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-lrs), and an [application service plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans) for our application:
 
@@ -202,7 +210,11 @@ Using the configuration we set with the Pulumi CLI, the program creates a SQLSer
    });
    ```
 
+<<<<<<< HEAD
 We deploy the App Service which includes the website and the connection to the SQLServer instance.
+=======
+We deploy the app service, which includes the website and the connection to the SQLServer instance.
+>>>>>>> df348e40e53c2acdc77b12040d3175b26184e4d6
 
    ```C#
    var app = new AppService("app", new AppServiceArgs
