@@ -28,7 +28,29 @@ on the supplied callable.</p>
 <p>Alternatively, use getfullargspec() for an API with a similar namedtuple
 based interface, but full support for annotations and keyword-only
 parameters.</p>
+<p>Deprecated since Python 3.5, use <code class="docutils literal notranslate"><span class="pre">inspect.getfullargspec()</span></code>.</p>
 </dd></dl>
+
+<dl class="class">
+<dt id="pulumi_kubernetes.yaml.Callable">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">Callable</code><a class="headerlink" href="#pulumi_kubernetes.yaml.Callable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callable type; Callable[[int], str] is a function of (int) -&gt; str.</p>
+<p>The subscription syntax must always be used with exactly two
+values: the argument list and the return type.  The argument list
+must be a list of types or ellipsis; the return type must be a single type.</p>
+<p>There is no syntax to indicate optional or keyword arguments,
+such function types are rarely used as callback types.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_kubernetes.yaml.Dict">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">Dict</code><a class="headerlink" href="#pulumi_kubernetes.yaml.Dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_kubernetes.yaml.List">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.yaml.</code><code class="sig-name descname">List</code><a class="headerlink" href="#pulumi_kubernetes.yaml.List" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_kubernetes.yaml.CustomResource">
@@ -127,7 +149,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>str</em>) – A name for a resource.</p></li>
 <li><p><strong>file_id</strong> (<em>str</em>) – Path or a URL that uniquely identifies a file.</p></li>
 <li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a><em>]</em>) – A bag of optional settings that control a resource’s behavior.</p></li>
-<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Tuple</em><em>[</em><em>Callable</em><em>,</em>) – A set of
+<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><a class="reference internal" href="../helm/v2/#pulumi_kubernetes.helm.v2.Tuple" title="pulumi_kubernetes.helm.v2.Tuple"><em>Tuple</em></a><em>[</em><a class="reference internal" href="../helm/v2/#pulumi_kubernetes.helm.v2.Callable" title="pulumi_kubernetes.helm.v2.Callable"><em>Callable</em></a><em>,</em>) – A set of
 transformations to apply to Kubernetes resource definitions before registering with engine.</p></li>
 <li><p><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
 Example: A resource created with resource_prefix=”foo” would produce a resource named “foo-resourceName”.</p></li>
@@ -178,7 +200,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_kubernetes.yaml.ConfigFile.get_resource">
-<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param">group_version_kind</em>, <em class="sig-param">name</em>, <em class="sig-param">namespace=None</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[pulumi.resource.CustomResource][pulumi.resource.CustomResource]<a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile.get_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param">group_version_kind</em>, <em class="sig-param">name</em>, <em class="sig-param">namespace=None</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[pulumi.resource.CustomResource]<a class="headerlink" href="#pulumi_kubernetes.yaml.ConfigFile.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>get_resource returns a resource defined by a built-in Kubernetes group/version/kind and
 name. For example: <code class="docutils literal notranslate"><span class="pre">get_resource(&quot;apps/v1/Deployment&quot;,</span> <span class="pre">&quot;nginx&quot;)</span></code></p>
 <dl class="field-list simple">
