@@ -13,7 +13,7 @@ Millions of .NET developers can now use their favorite languages and open source
 
 ## What Does Pulumi Enable?
 
-As a . NET developer you can:
+As a .NET developer, you can:
 
 * Declare infrastructure in C#, F#, or Visual Basic NET.
 * Code with favorite IDEs, including Visual Studio, Visual Studio Code, and Rider, with auto-completion and refactoring tools.
