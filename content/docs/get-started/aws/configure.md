@@ -16,10 +16,7 @@ aliases: ["/docs/quickstart/aws/configure/"]
 If you have multiple AWS profiles set up, specify a different profile using one of the following ways:
 
 * Set `AWS_PROFILE`as an <a href="{{< relref "/docs/intro/cloud-providers/aws/setup#environment-variables" >}}" target="_blank">environment variable</a>, or
-* Run `pulumi config set aws:profile <profilename>`. See <a href="{{< relref "/docs/intro/cloud-providers/aws#configuration" >}}" target="_blank">AWS Configuration</a> for more configuration options.
-
-{{< cli-note >}}
-
+* After creating your project in the next step, run `pulumi config set aws:profile <profilename>`. See <a href="{{< relref "/docs/intro/cloud-providers/aws#configuration" >}}" target="_blank">AWS Configuration</a> for more configuration options.
 
 Next, we'll create a new project.
 
