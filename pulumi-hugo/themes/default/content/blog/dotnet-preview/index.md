@@ -202,7 +202,7 @@ Using the configuration we set with the Pulumi CLI, the program creates a SQLSer
    });
    ```
 
-We deploy the app service which includes the website and the connection to the SQLServer instance.
+We deploy the app service, which includes the website and the connection to the SQLServer instance.
 
    ```C#
    var app = new AppService("app", new AppServiceArgs
