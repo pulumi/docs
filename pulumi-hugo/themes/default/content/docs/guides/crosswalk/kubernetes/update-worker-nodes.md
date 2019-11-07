@@ -4,7 +4,7 @@ menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-update-workers
-    weight: 4
+    weight: 9
 ---
 
 {{< cloudchoose >}}
