@@ -3,7 +3,7 @@ menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-defaults
-    weight: 5
+    weight: 4
 ---
 
 {{< cloudchoose >}}
@@ -113,6 +113,8 @@ export const appsNamespaceName = appsNamespace.metadata.name;
 Create [quotas][k8s-quotas] to restrict the amount of resources that can be consumed across
 all Pods in a namespace.
 
+[k8s-quotas]: https://kubernetes.io/docs/concepts/policy/resource-quotas/#compute-resource-quota
+
 {{< k8s-language nokx >}}
 
 <div class="k8s-language-prologue-yaml"></div>
@@ -190,8 +192,12 @@ services                0     5
 {{% md %}}
 
 By default, EKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
-`eks.privileged`. This privileged PSP should be removed **after** its replacements
-have been created to ensure running workloads continue executing properly (order matters).
+`eks.privileged`. This PSP is bound to the `system:authenticated` group, which means any
+authenticated user in the cluster can run privileged workloads. It is highly
+recommended that you replace this PSP with an appropriate, restricted PSP by user.
+
+> Note, PSPs should only be removed **after** its replacements have been created
+to ensure running workloads continue executing properly (order matters).
 
 See the official [EKS Pod Security Policy][eks-psp] docs and the
 [Kubernetes docs][k8s-psp] for more details.
@@ -208,9 +214,9 @@ See the official [EKS Pod Security Policy][eks-psp] docs and the
 By default, AKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
 `privileged`. [Per AKS][aks-psp-priv], this privileged PSP should not be removed.
 
-Users who are **not** admins will not be able to create Pods if the cluster was
-created with `enablePodSecurityPolicy: true`, as the PSP is only bound to
-admins. We'll need to create a PSP that is bounded into Kubernetes RBAC for these users.
+Users who are **not** in the `cluster-admins` ClusterRole will not be able to
+create Pods if the cluster was created with `enablePodSecurityPolicy: true`.
+We'll need to create a PSP with proper Kubernetes RBAC for these users.
 
 See the official [AKS Pod Security Policy][aks-psp] docs and the
 [Kubernetes docs][k8s-psp] for more details.
@@ -290,6 +296,8 @@ spec:
 
 ---
 
+# Create a ClusterRole to use the restrictive PSP.
+
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
@@ -306,6 +314,9 @@ rules:
 
 ---
 
+# Create a binding to the restrictive PSP for the controllers running in
+# kube-system that use ServiceAccounts.
+
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
@@ -320,6 +331,9 @@ subjects:
   namespace: kube-system
 
 ---
+
+# Create a binding to the restrictive PSP for the pulumi:devs RBAC group running in
+# apps Namespace.
 
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -342,7 +356,9 @@ $ kubectl apply -f restrictive-psp.yaml
 
 #### Create a Privileged PSP Role Binding
 
-Create a binding for a namespace's service account to use a privileged PSP.
+If you wish to grant the ability to use a privileged PSP, we need to
+create a ClusterRoleBinding to the PSP. For example, here's how to bind the PSP to
+a given Namespace's (`ingress-nginx`) ServiceAccounts.
 
 {{< k8s-language nokx >}}
 
@@ -439,5 +455,3 @@ $ kubectl apply -f privileged-rolebinding.yaml
 {{% md %}}
 {{% /md %}}
 </div>
-
-[k8s-quotas]: https://kubernetes.io/docs/concepts/policy/resource-quotas/#compute-resource-quota
