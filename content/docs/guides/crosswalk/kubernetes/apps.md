@@ -4,7 +4,7 @@ menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-apps
-    weight: 9
+    weight: 8
 ---
 
 TODO

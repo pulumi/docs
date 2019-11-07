@@ -4,7 +4,7 @@ menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-configure-authorization
-    weight: 6
+    weight: 5
 ---
 
 {{< cloudchoose >}}
@@ -147,6 +147,7 @@ NAMESPACE     NAME                                 DESIRED   CURRENT   READY   A
 kube-system   replicaset.apps/coredns-6f647f5754   2         2         2       15h
 ```
 
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 [aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
 {{% /md %}}
 </div>
