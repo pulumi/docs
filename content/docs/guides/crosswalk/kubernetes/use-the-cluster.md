@@ -67,19 +67,19 @@ To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file.
 
 ```bash
-$ pulumi stack output kubeconfigAdmin > kubeconfigAdmin.json
+$ pulumi stack output kubeconfigAdmin > kubeconfig-admin.json
 ```
 
 Or in JSON pretty-print.
 
 ```bash
-$ pulumi stack output kubeconfigAdmin | jq '.' > kubeconfigAdmin.json
+$ pulumi stack output kubeconfigAdmin | jq '.' > kubeconfig-admin.json
 ```
 
 Export the environment variable for `kubectl` usage.
 
 ```bash
-$ export KUBECONFIG=`pwd`/kubeconfigAdmin.json
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
 [aks-cluster-roles]: https://docs.microsoft.com/en-us/azure/aks/control-kubeconfig-access#available-cluster-roles-permissions
