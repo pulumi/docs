@@ -32,7 +32,7 @@ This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}) con
 
 To get full tooling support for .NET, use Visual Studio Code or Visual Studio including auto-completion, red error markers and build errors.
 
-![VSCode](/images/docs/quickstart/vscode-.net.png)
+![VSCode](/images/docs/quickstart/vscode-dotnet.png)
 
 ## F\#
 
