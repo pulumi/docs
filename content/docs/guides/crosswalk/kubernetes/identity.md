@@ -334,24 +334,28 @@ This role will be bound to the admin service account.
 ```typescript
 import * as gcp from "@pulumi/gcp";
 
-// Create a new service account.
-const infraCi = new gcp.serviceAccount.Account("infraCi", {
+// Create the GKE cluster admins ServiceAccount.
+const adminsName = "admins";
+const adminsIamServiceAccount = new gcp.serviceAccount.Account(adminsName, {
     project: config.project,
-    accountId: "infra-ci",
-    displayName: "Infrastructure CI account",
+    accountId: `k8s-${adminsName}`,
+    displayName: "Kubernetes Admins",
 });
 
-// Create a key from the service account.
-const infraCiKey = util.createCiKey(`${infraCiId}Key`, infraCi);
-
-// Export client secret to authenticate as this service account.
-export const infraCiClientSecret = util.clientSecret(infraCiKey);
-
-// Assign the service account GKE cluster admin privileges to add/delete clusters.
-const infraCiClusterAdminRole = util.bindToRole(`${infraCiId}ClusterAdmin`, infraCi, {
+// Bind the admin ServiceAccount to be a GKE cluster admin.
+const adminsIamRoleBinding = util.bindToRole(`${adminsName}ClusterAdmin`, adminsIamServiceAccount, {
     project: config.project,
     role: "roles/container.clusterAdmin",
 });
+
+// Bind the admin ServiceAccount to be a CloudSQL admin.
+const cloudSqlIamRoleBinding = util.bindToRole(`${adminsName}CloudSqlAdmin`, adminsIamServiceAccount, {
+    project: config.project,
+    role: "roles/cloudsql.admin",
+});
+
+// Export the admins ServiceAccount key.
+const adminsIamServiceAccountKey = util.createServiceAccountKey(`${adminsName}Key`, adminsIamServiceAccount);
 
 // Helper to bind the service account to a given role.
 export function bindToRole(
@@ -367,7 +371,7 @@ export function bindToRole(
 }
 
 // Helper to create new service account key.
-export function createCiKey(name: string, sa: gcp.serviceAccount.Account): gcp.serviceAccount.Key {
+export function createServiceAccountKey(name: string, sa: gcp.serviceAccount.Account): gcp.serviceAccount.Key {
     return new gcp.serviceAccount.Key(name, { serviceAccountId: sa.name });
 }
 
@@ -381,8 +385,8 @@ Authenticate as the admin service account by exporting the key, and signing
 into gcloud with it.
 
 ```bash
-$ pulumi stack output infraCiClientSecret > infra-ci-client-secret.json
-$ gcloud auth activate-service-account --key-file infra-ci-client-secret.json
+$ pulumi stack output adminsIamServiceAccountSecret > k8s-admin-sa-key.json
+$ gcloud auth activate-service-account --key-file k8s-devs-sa-key.json
 ```
 
 ## Create an IAM Role for Managing CloudSQL Databases
@@ -460,32 +464,34 @@ role in Kubernetes RBAC.
 ```typescript
 import * as gcp from "@pulumi/gcp";
 
-// Create a new service account.
-const k8sAppDevCi = new gcp.serviceAccount.Account(k8sAppDevCiId, {
+// Create the GKE cluster developers ServiceAccount.
+const devName = "devs";
+const devsIamServiceAccount = new gcp.serviceAccount.Account(devName, {
     project: config.project,
-    accountId: "k8s-app-dev-ci",
-    displayName: "Infrastructure CI account",
+    accountId: `k8s-${devName}`,
+    displayName: "Kubernetes Developers",
 });
 
-// Assign the service account GKE cluster developer privileges to work with clusters.
-const k8sAppDevRole = util.bindToRole(k8sAppDevCiId, k8sAppDevCi, {
+// Bind the devs ServiceAccount to be a GKE cluster developer.
+const devsIamRoleBinding = util.bindToRole(devName, devsIamServiceAccount, {
     project: config.project,
     role: "roles/container.developer",
 });
 
-// Create a key from the service account.
-const k8sAppDevCiKey = util.createCiKey(`${k8sAppDevCiId}Key`, k8sAppDevCi);
+// Export the devs ServiceAccount key.
+const devsIamServiceAccountKey = util.createServiceAccountKey(`${devName}Key`, devsIamServiceAccount);
 
-// Export client secret so that CI/CD systems can authenticate as this service account.
-export const k8sAppDevCiClientSecret = util.clientSecret(k8sAppDevCiKey);
+// Export the devs ServiceAccount client secret to authenticate as this service account.
+export const devsIamServiceAccountClientSecret = util.clientSecret(devsIamServiceAccountKey);
+
 ```
 
 Authenticate as the dev service account by exporting the key, and signing
 into gcloud with it.
 
 ```bash
-$ pulumi stack output infraCiClientSecret > k8s-app-dev-ci-key.json
-$ gcloud auth activate-service-account --key-file k8s-app-dev-ci-key.json
+$ pulumi stack output devsIamServiceAccountSecret > k8s-devs-sa-key.json
+$ gcloud auth activate-service-account --key-file k8s-devs-sa-key.json
 ```
 
 {{% /md %}}
