@@ -206,17 +206,17 @@ See the official [EKS Pod Security Policy][eks-psp] docs and the
 {{% md %}}
 
 By default, AKS ships with a fully privileged [PodSecurityPolicy][k8s-psp] named
-`privileged`. This privileged PSP should be removed **after** its replacements
-have been created to ensure running workloads continue executing properly (order matters).
+`privileged`. [Per AKS][aks-psp-priv], this privileged PSP should not be removed.
 
 Users who are **not** admins will not be able to create Pods if the cluster was
 created with `enablePodSecurityPolicy: true`, as the PSP is only bound to
-admins, and requires a PSP be created and bound to the Kubernetes RBAC for these users.
+admins. We'll need to create a PSP that is bounded into Kubernetes RBAC for these users.
 
 See the official [AKS Pod Security Policy][aks-psp] docs and the
 [Kubernetes docs][k8s-psp] for more details.
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 [aks-psp]: https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies
+[aks-psp-priv]: https://docs.microsoft.com/en-us/azure/aks/use-pod-security-policies
 
 {{% /md %}}
 </div>
@@ -258,6 +258,7 @@ workloads.
 {{% md %}}
 
 ```yaml
+cat > restrictive-psp.yaml << EOF
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
@@ -317,7 +318,119 @@ subjects:
 - kind: Group
   name: system:serviceaccounts
   namespace: kube-system
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: allow-restricted-apps
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: restrictive
+subjects:
+- kind: Group
+  name: pulumi:devs
+  namespace: `pulumi stack output appsNamespaceName`
+EOF
 ```
+
+```bash
+$ kubectl apply -f restrictive-psp.yaml
+```
+
+#### Create a Privileged PSP Role Binding
+
+Create a binding for a namespace's service account to use a privileged PSP.
+
+{{< k8s-language nokx >}}
+
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+```yaml
+cat > privileged-clusterrolebinding.yaml << EOF
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: allow-privileged-ingress-nginx
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: eks:podsecuritypolicy:privileged
+subjects:
+- kind: Group
+  name: system:serviceaccounts:ingress-nginx
+  apiGroup: rbac.authorization.k8s.io
+EOF
+```
+
+```bash
+$ kubectl apply -f privileged-rolebinding.yaml
+```
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+```yaml
+cat > privileged-clusterrolebinding.yaml << EOF
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: allow-privileged-ingress-nginx
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: psp:privileged
+subjects:
+- kind: Group
+  name: system:serviceaccounts:ingress-nginx
+  apiGroup: rbac.authorization.k8s.io
+EOF
+```
+
+```bash
+$ kubectl apply -f privileged-rolebinding.yaml
+```
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+```yaml
+cat > privileged-clusterrolebinding.yaml << EOF
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: allow-privileged-ingress-nginx
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: gce.privileged
+subjects:
+- kind: Group
+  name: system:serviceaccounts:ingress-nginx
+  apiGroup: rbac.authorization.k8s.io
+EOF
+```
+
+```bash
+$ kubectl apply -f privileged-rolebinding.yaml
+```
+{{% /md %}}
+</div>
+
 {{% /md %}}
 </div>
 
