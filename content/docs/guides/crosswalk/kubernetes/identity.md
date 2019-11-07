@@ -315,7 +315,6 @@ const principalClient = new azuread.ServicePrincipal(`${name}-sp-client`, {
 // Export outputs.
 export const adClientAppId = applicationClient.applicationId;
 export const adClientAppSecret = spPasswordClient.value;
-export const adGroupDevs = devs.name;
 ```
 
 [azure-ad-aks]: https://docs.microsoft.com/en-us/azure/aks/azure-ad-integration
@@ -343,31 +342,36 @@ const adminsIamServiceAccount = new gcp.serviceAccount.Account(adminsName, {
 });
 
 // Bind the admin ServiceAccount to be a GKE cluster admin.
-const adminsIamRoleBinding = util.bindToRole(`${adminsName}ClusterAdmin`, adminsIamServiceAccount, {
+util.bindToRole(`${adminsName}-k8s`, adminsIamServiceAccount, {
     project: config.project,
-    role: "roles/container.clusterAdmin",
+    roles: ["roles/container.clusterAdmin", "roles/container.developer"],
 });
 
 // Bind the admin ServiceAccount to be a CloudSQL admin.
-const cloudSqlIamRoleBinding = util.bindToRole(`${adminsName}CloudSqlAdmin`, adminsIamServiceAccount, {
+util.bindToRole(`${adminsName}-cloudsql`, adminsIamServiceAccount, {
     project: config.project,
-    role: "roles/cloudsql.admin",
+    roles: ["roles/cloudsql.admin"],
 });
 
 // Export the admins ServiceAccount key.
 const adminsIamServiceAccountKey = util.createServiceAccountKey(`${adminsName}Key`, adminsIamServiceAccount);
 
+// Export the admins ServiceAccount client secret to authenticate as this service account.
+export const adminsIamServiceAccountSecret = util.clientSecret(adminsIamServiceAccountKey);
+
 // Helper to bind the service account to a given role.
 export function bindToRole(
     name: string,
     sa: gcp.serviceAccount.Account,
-    args: { project: pulumi.Input<string>; role: pulumi.Input<string> },
-): gcp.projects.IAMBinding {
-    return new gcp.projects.IAMBinding(name, {
-        project: args.project,
-        role: args.role,
-        members: [sa.email.apply(email => `serviceAccount:${email}`)],
-    });
+    args: { project: pulumi.Input<string>; roles: string[]})
+{
+    args.roles.forEach((role, index) => {
+        new gcp.projects.IAMBinding(`${name}-${index}`, {
+            project: args.project,
+            role: role,
+            members: [sa.email.apply(email => `serviceAccount:${email}`)],
+        });
+    })
 }
 
 // Helper to create new service account key.
@@ -381,12 +385,12 @@ export function clientSecret(key: gcp.serviceAccount.Key): pulumi.Output<string>
 }
 ```
 
-Authenticate as the admin service account by exporting the key, and signing
+Authenticate as the admin ServiceAccount by exporting the key, and signing
 into gcloud with it.
 
 ```bash
 $ pulumi stack output adminsIamServiceAccountSecret > k8s-admin-sa-key.json
-$ gcloud auth activate-service-account --key-file k8s-devs-sa-key.json
+$ gcloud auth activate-service-account --key-file k8s-admin-sa-key.json
 ```
 
 ## Create an IAM Role for Managing CloudSQL Databases
@@ -394,10 +398,10 @@ $ gcloud auth activate-service-account --key-file k8s-devs-sa-key.json
 ```typescript
 import * as gcp from "@pulumi/gcp";
 
-// (Optional): Assign the service account CloudSQL admin privileges to add/delete datastores.
-const infraCiCloudSqlAdminRole = bindToRole(`${infraCiId}CloudSqlAdmin`, infraCi, {
+// Bind the admin ServiceAccount to be a CloudSQL admin.
+util.bindToRole(`${adminsName}CloudSqlAdmin`, adminsIamServiceAccount, {
     project: config.project,
-    role: "roles/cloudsql.admin",
+    roles: ["roles/cloudsql.admin"],
 });
 ```
 
@@ -432,6 +436,25 @@ const devsIamRole = new aws.iam.Role(`${devName}-eksClusterDeveloper`, {
 <div class="mt">
 {{% md %}}
 
+## Create an IAM Group for Admins
+
+Create an admins group in Azure. This group will be mapped into the `system:masters`group in Kubernetes RBAC.
+
+```typescript
+import * as azure from "@pulumi/azure";
+import * as azuread from "@pulumi/azuread";
+
+const clientConfig = azure.core.getClientConfig();
+const currentPrincipal = clientConfig.objectId;
+
+const admins = new azuread.Group("admins", {
+    name: "pulumi:admins",
+    members: [
+        currentPrincipal,
+    ],
+});
+```
+
 ## Create an IAM Group for Developers
 
 Create a developer group in Azure. This group will be mapped into a limited
@@ -440,9 +463,27 @@ developer role in Kubernetes RBAC.
 ```typescript
 import * as azuread from "@pulumi/azuread";
 
+/* Create a new user in AD.
+const dev = new azuread.User("k8s-dev", {
+    userPrincipalName: "k8sdev@example.com",
+    displayName: "Kubernetes Dev",
+    password: "Qjker21!G",
+});
+*/
+
+/* Get an existing AD user.
+const dev = azuread.getUser({
+    userPrincipalName: "alice@example.com",
+});
+*/
+
 // Create the AD group for Developers.
 const devs = new azuread.Group("devs", {
     name: "pulumi:devs",
+    members: [
+        // Assign a new or existing user to the group.
+        // dev.objectId,
+    ],
 });
 
 // Export outputs.
@@ -465,28 +506,27 @@ role in Kubernetes RBAC.
 import * as gcp from "@pulumi/gcp";
 
 // Create the GKE cluster developers ServiceAccount.
-const devName = "devs";
-const devsIamServiceAccount = new gcp.serviceAccount.Account(devName, {
+const devsName = "devs";
+const devsIamServiceAccount = new gcp.serviceAccount.Account(devsName, {
     project: config.project,
-    accountId: `k8s-${devName}`,
+    accountId: `k8s-${devsName}`,
     displayName: "Kubernetes Developers",
 });
 
 // Bind the devs ServiceAccount to be a GKE cluster developer.
-const devsIamRoleBinding = util.bindToRole(devName, devsIamServiceAccount, {
+util.bindToRole(`${devsName}-k8s`, devsIamServiceAccount, {
     project: config.project,
-    role: "roles/container.developer",
+    roles: ["roles/container.developer"],
 });
 
 // Export the devs ServiceAccount key.
-const devsIamServiceAccountKey = util.createServiceAccountKey(`${devName}Key`, devsIamServiceAccount);
+const devsIamServiceAccountKey = util.createServiceAccountKey(`${devsName}Key`, devsIamServiceAccount);
 
 // Export the devs ServiceAccount client secret to authenticate as this service account.
 export const devsIamServiceAccountClientSecret = util.clientSecret(devsIamServiceAccountKey);
-
 ```
 
-Authenticate as the dev service account by exporting the key, and signing
+Authenticate as the dev ServiceAccount by exporting the key, and signing
 into gcloud with it.
 
 ```bash
