@@ -445,24 +445,6 @@ RBAC in Amazon EKS][simplify-rbac].
 {{% /md %}}
 </div>
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-
-TODO - Extra links to docs / examples
-
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-
-TODO - Extra links to docs / examples
-
-{{% /md %}}
-</div>
-
 See the [official Kubernetes RBAC docs][k8s-rbac-docs] for more details.
 
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
