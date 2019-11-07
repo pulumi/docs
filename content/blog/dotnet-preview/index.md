@@ -2,14 +2,14 @@
 title: "Infrastructure as Code with .NET and Pulumi"
 authors: ["sophia-parafina"]
 tags: [". NET", "C#", "F#", "Visual Basic"]
-meta_image: "microsoft_logo.jpg"
+meta_image: "microsoft_dotnet.png"
 meta_desc: "Pulumi supports . NET languages for Infastructure as Code"
 date: "2019-11-08"
 ---
 
-We are excited to announce the preview of Pulumi . NET support. Pulumi lets you declare infrastructure using general purpose programming languages. Our goal is to automate applications at all layers and help developers and operators work better together by eliminating the silos that separate them.
+We are excited to announce the preview of Pulumi .NET support. Pulumi lets you declare infrastructure using general purpose programming languages. Our goal is to automate applications at all layers and help developers and operators work better together by eliminating the silos that separate them.
 
-Millions of . NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F# and Visual Basic. Because the . NET framework is available on Windows, Linux and macOS you have a choice of platforms to use. You can create cloud resources by writing **Microsoft . NET Core** programs to build and deploy AKS Clusters, Functions, Azure App Services, Virtual Machines, Cosmos DBs, KeyVaults, and much, much more.
+Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because the .NET  is available on Windows, Linux and macOS you have a choice of platforms to use. You can create cloud resources by writing **Microsoft .NET Core** programs to build and deploy AKS Clusters, Functions, Azure App Services, Virtual Machines, Cosmos DBs, KeyVaults, and much, much more.
 
 ## What Does Pulumi Enable?
 
@@ -18,7 +18,7 @@ As a . NET developer you can:
 * Declare infrastructure in C#, F#, or Visual Basic NET.
 * Code with favorite IDEs, including Visual Studio, Visual Studio Code, and Rider, with auto-completion and refactoring tools.
 * Catch mistakes early on with red markers and build errors.
-* Allow package managers to reference any NuGet library compatible with . NET Core 3.0.
+* Allow package managers to reference any NuGet library compatible with .NET Core 3.0.
 * Use the Pulumi CLI or CI/CD integrations to perform deployments predictably and reliably.
 * Maintain your infrastructure in a repository and version it
 * Build modern, reliable, and scalable applications using a multitude of cloud architectures, including containers, serverless functions, and static websites.
@@ -29,7 +29,7 @@ You can do all of this without having to learn a DSL or script CLI commands. Wit
 
 Pulumi is declarative even though it uses general purpose programming languages. It does this by declaring a set of resources and the Pulumi engine orchestrates the CRUD operations to build and deploy infrastructure.
 
-We use a . NET Core console application to declare infrastructure. Let's create an Azure App Service with a SQL database. The first step is make sure that your environment meets the prerequisites:
+We use a .NET Core console application to declare infrastructure. Let's create an Azure App Service with a SQL database. The first step is make sure that your environment meets the prerequisites:
 
 ### Prerequisites
 
@@ -58,7 +58,7 @@ Change the directory to `azure-cs-appservice` directory
 $ cd azure-cs-appservice
 ```
 
-There are four files in the Pulumi project, the `Azure.Appservice.csproj` which sets the . NET SDK and the Pulumi packages for the project. `Pulumi.yaml` holds project parameters such as name, runtime and the database password. `SharedAccessSignature.cs` specifies the storage to hold code, which is the `wwwroot` directory in this project. `Program.cs` is the main program for declaring resources.
+There are four files in the Pulumi project, the `Azure.Appservice.csproj` which sets the . NET SDK and the Pulumi packages for the project. `Pulumi.yaml` holds project parameters such as name and runtime. The `Pulumi.dev.yaml` file holds the database password. `SharedAccessSignature.cs` contains a helper function to generate storage blob access URLs with SAS tokens in them. It demonstrate that you can add custom code inside your Pulumi program. `Program.cs` is the main program for declaring resources.
 
 1. Create a new stack:
 
@@ -103,14 +103,8 @@ There are four files in the Pulumi project, the `Azure.Appservice.csproj` which 
 ___
 **NOTE:**
 
-> If you are using a free Azure account, some regions do not allow creation of services if they are too busy. You might have to try a different [Azure location](https://azure.microsoft.com/en-us/global-infrastructure/locations/).
-><br/><br/>
-> You must tear down the stack resources to update the project's location information.
->
-   ``` bash
-   $ pulumi destroy --yes
-   $ pulumi stack rm --yes
-   ```
+> If you are using a free Azure account, some regions do not allow creation of services if they are too busy. You might have to try a different [Azure location](https://azure.microsoft.com/en-us/global-infrastructure/locations/). You must tear down the stack resources to update the project's location information.
+___
 
 ### Test Your Stack
 
