@@ -1,4 +1,5 @@
---- title: Configure Cluster Defaults
+---
+title: Configure Cluster Defaults
 menu:
   userguides:
     parent: crosswalk-kubernetes
