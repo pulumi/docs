@@ -222,6 +222,8 @@ between external clients, and the servers in the cluster's apps.
 Deploy the [example YAML manifests][nginx-yaml] into the `ingress-nginx` namespace, and publicly expose it to the
 Internet using a [load balanced Service][k8s-lb-svc].
 
+> Note: NGINX requires a privileged PSP given its [use][nginx-priv-use] of `allowPrivilegeEscalation: true`.
+
 ```bash
 $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml
 ```
@@ -234,6 +236,7 @@ NAME                                        READY   STATUS    RESTARTS   AGE
 nginx-ingress-controller-7dcc95dfbf-k99k6   1/1     Running   0          21s
 ```
 
+[nginx-priv-use]: https://github.com/kubernetes/ingress-nginx/blob/master/deploy/static/mandatory.yaml#L229
 [nginx-yaml]: https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md#prerequisite-generic-deployment-command
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 {{% /md %}}
@@ -246,6 +249,8 @@ nginx-ingress-controller-7dcc95dfbf-k99k6   1/1     Running   0          21s
 Deploy the [Helm chart][nginx-helm] into the `app-svcs` namespace created in [Configure
 Cluster Defaults][crosswalk-k8s-defaults], and publicly expose it to the
 Internet using a [load balanced Service][k8s-lb-svc].
+
+> Note: NGINX requires a privileged PSP given its [use][nginx-priv-use] of `allowPrivilegeEscalation: true`.
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -271,6 +276,7 @@ const nginx = new k8s.helm.v2.Chart("nginx",
 );
 ```
 
+[nginx-priv-use]: https://github.com/helm/charts/blob/master/stable/nginx-ingress/values.yaml#L12
 [k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 [nginx-helm]: https://github.com/helm/charts/tree/master/stable/nginx-ingress
 [crosswalk-k8s-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults#namespaces" >}}
