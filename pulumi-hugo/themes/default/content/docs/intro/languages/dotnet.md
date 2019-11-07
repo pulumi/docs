@@ -30,7 +30,9 @@ You can write Pulumi programs in C# to get additional verification and tooling b
 
 This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), a `Infra.csproj` file that holds references used by the project, and a `Program.cs` file, containing your program. The `.csproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
 
+To get full tooling support for .NET, use Visual Studio Code or Visual Studio including auto-completion, red error markers and build errors.
 
+![VSCode](/images/docs/quickstart/vscode-.net.png)
 
 ## F\#
 
