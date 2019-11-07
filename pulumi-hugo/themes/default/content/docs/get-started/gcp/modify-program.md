@@ -15,7 +15,7 @@ Now that we have an instance of our Pulumi program deployed, let's update it to 
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 ```javascript
 "use strict";
@@ -84,6 +84,44 @@ bucket = storage.Bucket('my-bucket',
 
 # Export the DNS name of the bucket
 pulumi.export('bucket_name',  bucket.url)
+```
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Gcp;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() =>
+        {
+            // Let's create a customer managed key and use that for encryption instead of the default Google-managed key.
+            var keyRing = new Gcp.Kms.KeyRing("my-keyring", new Gcp.Kms.KeyRingArgs
+            {
+                Location = "global",
+            });
+
+            var cryptoKey = new Gcp.Kms.CryptoKey("my-cryptokey", new Gcp.Kms.CryptoKeyArgs
+            {
+                KeyRing = keyRing.SelfLink,
+                RotationPeriod = "100000s",
+            });
+
+            // Create a GCP resource (Storage Bucket)
+            var bucket = new Gcp.Storage.Bucket("my-bucket", new Gcp.Storage.BucketArgs
+            {
+                Encryption = new Gcp.Storage.BucketEncryptionArgs
+                {
+                    DefaultKmsKeyName = cryptoKey.SelfLink,
+                },
+            });
+
+            // Export the DNS name of the bucket
+            return new Dictionary<string, object> { { "bucketName", bucket.Url } };
+        });
+}
 ```
 
 Next, we'll deploy the changes.

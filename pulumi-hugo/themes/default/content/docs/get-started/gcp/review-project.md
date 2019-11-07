@@ -15,7 +15,7 @@ Let's review some of the generated project files:
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config.md" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack.md" >}}) we initialized.
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 ```javascript
 "use strict";
@@ -49,6 +49,26 @@ bucket = storage.Bucket('my-bucket')
 
 # Export the DNS name of the bucket
 pulumi.export('bucket_name',  bucket.url)
+```
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Gcp.Storage;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() =>
+        {
+            // Create a GCP resource (Storage Bucket)
+            var bucket = new Storage.Bucket("my-bucket");
+
+            // Export the DNS name of the bucket
+            return new Dictionary<string, object> { { "bucket_name", bucket.Url } };
+        });
+}
 ```
 
 This Pulumi program creates a storage bucket and exports the bucket URL.

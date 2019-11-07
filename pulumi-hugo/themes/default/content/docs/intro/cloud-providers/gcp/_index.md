@@ -35,7 +35,7 @@ In addition to the tutorial, several interesting examples are available complete
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const gcp = require("@pulumi/gcp")
@@ -59,6 +59,20 @@ bucket = storage.Bucket('my-bucket')
 import "github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
 
 bucket, _ := storage.NewBucket(ctx, "my-bucket", nil)
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Gcp;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var bucket = new Gcp.Storage.Bucket("my-bucket");
+        });
+}
 ```
 
 You can find additional examples of using Google Cloud in

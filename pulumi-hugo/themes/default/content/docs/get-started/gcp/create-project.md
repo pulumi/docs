@@ -11,7 +11,7 @@ aliases: ["/docs/quickstart/gcp/create-project/"]
 
 Let's get started with a new project in a new directory.
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 <div class="language-prologue-javascript"></div>
 
@@ -32,6 +32,13 @@ $ pulumi new gcp-typescript
 ```bash
 $ mkdir quickstart && cd quickstart
 $ pulumi new gcp-python
+```
+
+<div class="language-prologue-csharp"></div>
+
+```bash
+$ mkdir quickstart && cd quickstart
+$ pulumi new gcp-csharp
 ```
 
 {{< cli-note >}}
@@ -72,6 +79,10 @@ After some dependency installations from `npm`, the project and stack will be re
 {{% /lang %}}
 
 {{% lang python %}}
+After the command completes, the project and stack will be ready.
+{{% /lang %}}
+
+{{% lang dotnet %}}
 After the command completes, the project and stack will be ready.
 {{% /lang %}}
 

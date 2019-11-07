@@ -13,7 +13,7 @@ Now that we have an instance of our Pulumi program deployed, let's enforce HTTPS
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 ```javascript
 "use strict";
@@ -70,6 +70,34 @@ account = storage.Account("storage",
 
 # Export the connection string for the storage account
 pulumi.export('connection_string', account.primary_connection_string)
+```
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Azure;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            // Create an Azure Resource Group
+            var resourceGroup = new Azure.Core.ResourceGroup("resourceGroup");
+
+            // Create an Azure resource (Storage Account)
+            var account = new Azure.Storage.Account("storage", new Azure.Storage.AccountArgs
+            {
+                ResourceGroupName = resourceGroup.Name,
+                AccountTier = "Standard",
+                AccountReplicationType = "LRS",
+                EnableHttpsTrafficOnly = true,
+            });
+
+            // Export the connection string for the storage account
+            return new Dictionary<string, object> { { "connectionString", account.PrimaryConnectionString } };
+        });
+}
 ```
 
 Next, we'll deploy the changes.

@@ -11,7 +11,7 @@ aliases: ["/docs/reference/clouds/linode/"]
 
 <img src="/logos/tech/linode.svg" align="right" class="h-16 px-8 pb-4">
 
-The Linode provider for Pulumi can be used to provision any of the cloud resources available in [Linode](https://www.linode.com).  
+The Linode provider for Pulumi can be used to provision any of the cloud resources available in [Linode](https://www.linode.com).
 The Linode provider must be configured with credentials to deploy and update resources in Linode.
 
 See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/linode" >}}) for complete details of the available Linode provider APIs.
@@ -22,7 +22,7 @@ The Linode provider supports several options for providing access to Linode cred
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const linode = require("@pulumi/linode")
@@ -60,6 +60,25 @@ domain, _ := linode.NewDomain(ctx, "test", &linode.DomainArgs{
   SoaEmail: "example@foobar.example",
   Type: "master",
 })
+```
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Linode;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var domain = new Linode.Domain("my-domain", new Linode.DomainArgs
+            {
+                Domain = "foobar.example",
+                SoaEmail = "example@foobar.example",
+                Type = "master",
+            });
+        });
+}
 ```
 
 ## Libraries

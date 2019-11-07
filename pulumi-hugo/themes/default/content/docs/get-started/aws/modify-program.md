@@ -13,7 +13,7 @@ Now that we have an instance of our Pulumi program deployed, let's enable encryp
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< langchoose nogo >}}
+{{< langchoose nogo csharp >}}
 
 ```javascript
 "use strict";
@@ -84,6 +84,43 @@ bucket = s3.Bucket('my-bucket',
 
 # Export the name of the bucket
 pulumi.export('bucket_name',  bucket.id)
+```
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Aws.Kms;
+using Pulumi.Aws.S3;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() =>
+        {
+            // Create a KMS Key for S3 server-side encryption
+            var key = new Kms.Key('my-key');
+
+            // Create an AWS resource (S3 Bucket)
+            var bucket = new S3.Bucket('my-bucket', new S3.BucketArgs
+            {
+                ServerSideEncryptionConfiguration = new S3.BucketServerSideEncryptionConfigurationArgs
+                {
+                    Rules = new S3.BucketServerSideEncryptionConfigurationRuleArgs
+                    {
+                        ApplyServerSideEncryptionByDefault = new S3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs
+                        {
+                            SseAlgorithm = "aws:kms",
+                            KmsMasterKeyId = key.Id,
+                        },
+                    },
+                },
+            });
+
+            // Export the name of the bucket
+            return new Dictionary<string, object> { { "bucket_name", bucket.Id } };
+        });
+}
 ```
 
 Our program now creates a KMS key and enables server-side encryption on the S3 bucket using the KMS key.

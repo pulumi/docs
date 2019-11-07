@@ -11,7 +11,7 @@ aliases: ["/docs/reference/clouds/digitalocean/"]
 
 <img src="/logos/tech/digitalocean.svg" align="right" class="h-16 px-8 pb-4">
 
-The DigitalOcean provider for Pulumi can be used to provision any of the cloud resources available in [DigitalOcean](https://www.digitalocean.com/). 
+The DigitalOcean provider for Pulumi can be used to provision any of the cloud resources available in [DigitalOcean](https://www.digitalocean.com/).
 The DigitalOcean provider must be configured with credentials to deploy and update resources in a DigitalOcean cloud.
 
 See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/digitalocean" >}}) for complete details of the available DigitalOcean provider APIs.
@@ -22,7 +22,7 @@ The DigitalOcean provider supports several options for providing access to Digit
 
 ## Example
 
-{{< langchoose >}}
+{{< langchoose csharp >}}
 
 ```javascript
 const do = require("@pulumi/digitalocean")
@@ -60,6 +60,25 @@ domain, _ := do.NewDomain(ctx, "test", &do.DomainArgs{
   Name: "mydomain.com",
   IpAddress: "192.168.10.10",
 })
+```
+
+```csharp
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.DigitalOcean;
+
+class Program
+{
+    static Task Main() =>
+        Deployment.Run(() => {
+            var instance = new DigitalOcean.Domain("test", new DigitalOcean.DomainArgs
+            {
+                Name = "mydomain.com",
+                IpAddress = "192.168.10.10",
+            });
+        });
+}
 ```
 
 ## Libraries
