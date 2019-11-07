@@ -130,7 +130,7 @@ From there, feel free to experiment. Simply making edits and running `pulumi up`
 
 ## Recap
 
-In this post we've shown how to use Pulumi to deploy a modern application to Azure. The example code performs a number of tasks.
+In this post, we've shown how to use Pulumi to deploy a modern application to Azure. The example code performs a number of tasks.
 
 First, we created a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview#resource-groups), a [storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-lrs), and an [application service plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans) for our application:
 
