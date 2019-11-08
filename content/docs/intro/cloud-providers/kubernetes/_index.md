@@ -18,7 +18,9 @@ on a cluster of machines.
 SDK, alongside other SDKs which span common cloud native utilities, cloud
 provider IaaS offerings, and their catalog of services - managed Kubernetes included.
 
-<center><img src="/images/docs/quickstart/kubernetes/cake.svg" width="670"></center>
+<a href="/images/docs/quickstart/kubernetes/cake.svg">
+<img src="/images/docs/quickstart/kubernetes/cake.svg">
+</a>
 
 ## Use Cases
 
@@ -61,11 +63,16 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 
 ## Crosswalk for Kubernetes
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 [Pulumi Crosswalk for Kubernetes][crosswalk-k8s] is a collection of industry standard
-best-practices and tasks for managing Kubernetes and its infrastructure in production.
+best-practices for managing Kubernetes, and its infrastructure in production.
 
-Get started with deploying high-grade stacks by understanding how to enable 
-[Production Architecture for Teams][prod-arch-for-teams].
+[Get started][crosswalk-control-plane] by deploying stacks of infrastructure architected to enable teams
+to run and manage Kubernetes in production.
 
+[crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
 [crosswalk-k8s]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
 [prod-arch-for-teams]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}

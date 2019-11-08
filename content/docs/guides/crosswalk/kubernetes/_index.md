@@ -7,13 +7,21 @@ menu:
     identifier: crosswalk-kubernetes
 ---
 
-Pulumi Crosswalk for Kubernetes is a collection of industry-standard
-best-practices, and tasks for managing Kubernetes and its infrastructure in production.
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
+[Pulumi Crosswalk for Kubernetes][crosswalk-k8s] is a collection of industry standard
+best-practices for managing Kubernetes, and its infrastructure in production.
 
 This guide is for provisioning and configuring production-grade Kubernetes
 clusters, and deploying workloads into the clusters.
 
 If you are just getting started with Pulumi and Kubernetes, the [Get Started][k8s-get-started] guide is a better place to start.
+
+<a href="/images/docs/quickstart/kubernetes/cake.svg">
+<img src="/images/docs/quickstart/kubernetes/cake.svg">
+</a>
 
 ## Overview
 
@@ -55,8 +63,6 @@ to employ and understand:
 
 At the heart of this architecture is a simple idea: that we should separate resources into
 loosely-coupled, independently-manageable sets, based on risk and functionality.
-
-<center><img src="/images/docs/quickstart/kubernetes/cake.svg" width="670"></center>
 
 We suggest splitting infrastructure up into (roughly) six [Pulumi
 stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) of resources.
@@ -136,7 +142,7 @@ Deploy applications and workloads into the cluster.
 
 1. **Where is the code located?**
 
-    You can find the Crosswalk reference architeture on [GitHub][ktpw-gh].
+    You can find the Crosswalk reference architecture on [GitHub][ktpw-gh].
 
 1. **Where can I suggest a change or open an issue with the docs?**
 
@@ -148,6 +154,11 @@ Deploy applications and workloads into the cluster.
     You can open an issue in [`pulumi/kubernetes-the-prod-way`][pulumi-ktpw] for
     any changes to the Crosswalk code.
 
+1. **Where can I ask for assistance on Crosswalk for Kubernetes?**
+
+    You can find us in the [community Slack][pulumi-slack] channel.
+
+[pulumi-slack]: https://slack.pulumi.com/
 [pulumi-docs]: https://github.com/pulumi/docs
 [pulumi-ktpw]: https://github.com/pulumi/kubernetes-the-prod-way
 [ktpw-gh]: https://github.com/pulumi/kubernetes-the-prod-way
@@ -173,3 +184,4 @@ Deploy applications and workloads into the cluster.
 [crosswalk-apps]: {{< relref "/docs/guides/crosswalk/kubernetes/apps" >}}
 [crosswalk-update-worker-nodes]: {{< relref "/docs/guides/crosswalk/kubernetes/update-worker-nodes" >}}
 [least-privileged]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
+[crosswalk-k8s]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
