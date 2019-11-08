@@ -235,14 +235,13 @@ kube-system   pod/tunnelfront-5b6d458fbc-nzc25           1/1     Running   0    
 
 ### Use the `admins` ServiceAccount
 
-In [Identity][crosswalk-identity] we demonstrate how to create typical roles for
-use in Kubernetes.
+In [Identity][crosswalk-identity] we demonstrate how to create typical
+ServiceAccounts for use in Kubernetes.
 
 We created an `admins` ServiceAccount for cluster administrators with root privileges, that
 will be tied into Kubernetes RBAC.
 
-Authenticate as the `admins` ServiceAccount from the [Identity
-stack][gcp-identity-stack].
+Authenticate as the `admins` ServiceAccount from the [Identity stack][gcp-identity-stack].
 
 ```bash
 $ pulumi stack output adminsIamServiceAccountSecret > k8s-admin-sa-key.json
@@ -283,11 +282,6 @@ kube-system   pod/kube-proxy-gke-k8s-gke-cluster--performant-nodes-ab1e580a-pkwp
 kube-system   pod/kube-proxy-gke-k8s-gke-cluster--performant-nodes-ab1e580a-xmxc   1/1     Running   0          10m
 kube-system   pod/kube-proxy-gke-k8s-gke-cluster--standard-nodes-c-cca08c52-9zzp   1/1     Running   0          4m13s
 kube-system   pod/kube-proxy-gke-k8s-gke-cluster--standard-nodes-c-cca08c52-bgjz   1/1     Running   0          4m11s
-kube-system   pod/l7-default-backend-8f479dd9-npdkv                                1/1     Running   0          12m
-kube-system   pod/metrics-server-v0.3.1-8d4c5db46-hvr45                            2/2     Running   0          4m3s
-kube-system   pod/prometheus-to-sd-7jzkj                                           1/1     Running   0          4m13s
-kube-system   pod/prometheus-to-sd-v5ccv                                           1/1     Running   0          4m12s
-kube-system   pod/stackdriver-metadata-agent-cluster-level-5d4f66757f-t7sd6        1/1     Running   0          12m
 ...
 ```
 
@@ -315,7 +309,6 @@ arn:aws:iam::000000000000:role/devs-eksClusterDeveloper-e332028
 
 Make a copy of the kubeconfig that will be edited for the `devs` to use the
 `devsIamRoleArn` output.
-
 
 ```bash
 $ pulumi stack output kubeconfig | jq '.' > kubeconfig-devs.json
@@ -423,14 +416,13 @@ Error from server (Forbidden): cronjobs.batch is forbidden: User "alice@example.
 
 ### Use the `devs` ServiceAccount
 
-In [Identity][crosswalk-identity] we demonstrate how to create typical roles for
-use in Kubernetes.
+In [Identity][crosswalk-identity] we demonstrate how to create typical
+ServiceAccounts for use in Kubernetes.
 
-We created an `devs` ServiceAccount for cluster administrators with root privileges, that
+We created a `devs` ServiceAccount for cluster administrators with root privileges, that
 will be tied into Kubernetes RBAC.
 
-Authenticate as the `devs` ServiceAccount from the [Identity
-stack][gcp-identity-stack].
+Authenticate as the `devs` ServiceAccount from the [Identity stack][gcp-identity-stack].
 
 ```bash
 $ pulumi stack output devsIamServiceAccountSecret > k8s-devs-sa-key.json
@@ -448,16 +440,18 @@ expected.
 
 ```bash
 $ kubectl get all -A
-Error from server (Forbidden): pods is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "pods" in API group "" at the cluster scope: Required "container.pods.list" permission.
-Error from server (Forbidden): replicationcontrollers is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "replicationcontrollers" in API group "" at the cluster scope: Required "container.replicationControllers.list" permission.
-Error from server (Forbidden): services is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "services" in API group "" at the cluster scope: Required "container.services.list" permission.
-Error from server (Forbidden): daemonsets.apps is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "daemonsets" in API group "apps" at the cluster scope: Required "container.daemonSets.list" permission.
-Error from server (Forbidden): deployments.apps is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "deployments" in API group "apps" at the cluster scope: Required "container.deployments.list" permission.
-Error from server (Forbidden): replicasets.apps is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "replicasets" in API group "apps" at the cluster scope: Required "container.replicaSets.list" permission.
-Error from server (Forbidden): statefulsets.apps is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "statefulsets" in API group "apps" at the cluster scope: Required "container.statefulSets.list" permission.
-Error from server (Forbidden): horizontalpodautoscalers.autoscaling is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "horizontalpodautoscalers" in API group "autoscaling" at the cluster scope: Required "container.horizontalPodAutoscalers.list" permission.
-Error from server (Forbidden): jobs.batch is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "jobs" in API group "batch" at the cluster scope: Required "container.jobs.list" permission.
-Error from server (Forbidden): cronjobs.batch is forbidden: User "k8s-devs@pulumi-development.iam.gserviceaccount.com" cannot list resource "cronjobs" in API group "batch" at the cluster scope: Required "container.cronJobs.list" permission.
+NAMESPACE     NAME                                                                 READY   STATUS    RESTARTS   AGE
+kube-system   pod/event-exporter-v0.2.5-7df89f4b8f-k84nc                           2/2     Running   0          4h38m
+kube-system   pod/fluentd-gcp-scaler-54ccb89d5-njcgt                               1/1     Running   0          4h38m
+kube-system   pod/fluentd-gcp-v3.1.1-4wknk                                         2/2     Running   0          4h29m
+kube-system   pod/fluentd-gcp-v3.1.1-gdhzw                                         2/2     Running   0          4h29m
+kube-system   pod/heapster-cf7d686d6-qkqlz                                         3/3     Running   0          35m
+kube-system   pod/kube-dns-5877696fb4-5gw7b                                        4/4     Running   0          4h38m
+kube-system   pod/kube-dns-5877696fb4-84jk4                                        4/4     Running   0          4h29m
+kube-system   pod/kube-dns-autoscaler-85f8bdb54-qz9zn                              1/1     Running   0          4h38m
+kube-system   pod/kube-proxy-gke-k8s-gke-cluster--standard-nodes-c-cca08c52-9zzp   1/1     Running   0          4h29m
+kube-system   pod/kube-proxy-gke-k8s-gke-cluster--standard-nodes-c-cca08c52-bgjz   1/1     Running   0          4h29m
+...
 ```
 
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
@@ -466,29 +460,33 @@ Error from server (Forbidden): cronjobs.batch is forbidden: User "k8s-devs@pulum
 
 ### Configure RBAC Authorization
 
-Access control is not configured by default with Kubernetes RBAC.
+In [Identity][crosswalk-identity], access control is configured on the ServiceAccounts to bind to
+[Predefined GKE Roles][gke-predefined-roles] for Kubernetes RBAC.
 
-In [Use the `devs` IAM role](#use-the-devs-iam-role) the
-user is **authenticated** into the cluster using the IAM role, but it is not yet
-**authorized** to do work in the cluster.
+If a ServiceAccount **does not** bind to predefined GKE roles, 
+the user will be able to **authenticate** into the cluster, but it will not be
+**authorized** to do work.
 
 This means that the user cannot perform any operations in the cluster by
 default, or retrieve information as shown in the `Error from server (Forbidden)`
 messages.
 
 ```bash
-$ export KUBECONFIG=`pwd`/kubeconfig-devs.json
+$ export KUBECONFIG=`pwd`/kubeconfig.json
 $ kubectl run --namespace=`pulumi stack output appsNamespaceName` --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}' --limits cpu=200m,memory=256Mi
 Error from server (Forbidden): pods is forbidden: User "pulumi:alice" cannot create resource "pods" in API group "" in the namespace "apps-x1z818eg"
 ```
 
-For example, to allow the `devs` group to operate in the cluster, an `admin` must create [Kubernetes RBAC][k8s-rbac-docs]
-resources to bind the IAM role to certain privileges.
+For example, if the `devs` ServiceAccount was not bound to `roles/container.developer`,
+an `admin` must create [Kubernetes RBAC][k8s-rbac-docs] resources to bind the ServiceAccount to certain privileges.
 
 Below we create the Kubernetes `Role` with the ability to **only** deploy common
 workloads in the `apps` namespace, created earlier during the configuration of
 [cluster defaults][crosswalk-configure-defaults], and a `RoleBinding` to associate
 the Kubernetes `Role` to the IAM `devs` role.
+
+[gke-predefined-roles]: https://cloud.google.com/kubernetes-engine/docs/how-to/iam#predefined
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
@@ -500,14 +498,36 @@ Assume the `admin` user.
 $ pulumi stack output kubeconfigAdmin > kubeconfig-admin.json
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+
 {{% /md %}}
 </div>
 
 Create the [Role][k8s-rbac-docs] for the `apps` namespace that will be bound to `devs` group.
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 ```bash
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+{{% /md %}}
+</div>
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+```bash
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
+{{% /md %}}
+</div>
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+```bash
+$ export KUBECONFIG=`pwd`/kubeconfig.json
+```
+{{% /md %}}
+</div>
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
