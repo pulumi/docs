@@ -141,14 +141,14 @@ $ pulumi stack output devsIamRoleArn
 arn:aws:iam::000000000000:role/devs-eksClusterDeveloper-e332028
 ```
 
-Make a copy of the kubeconfig that will be edited for the `admins` to use the
-`adminsIamRoleArn` output.
+Make a copy of the kubeconfig that will be edited for the `devs` to use the
+`devsIamRoleArn` output.
 
 ```bash
-$ pulumi stack output kubeconfig | jq '.' > kubeconfig-admin.json
+$ pulumi stack output kubeconfig | jq '.' > kubeconfig-devs.json
 ```
 
-Edit `kubeconfig-admin.json` to use a role for authentication in the
+Edit `kubeconfig-devs.json` to use a role for authentication in the
 `args` of the [`aws-iam-authenticator`][aws-iam-auth], e.g.
 
 ```bash
@@ -174,8 +174,8 @@ Edit `kubeconfig-admin.json` to use a role for authentication in the
 ```
 
 ```bash
-$ pulumi stack output kubeconfig > kubeconfig-admin.json
-$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+$ pulumi stack output kubeconfig > kubeconfig-devs.json
+$ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 ```
 
 [aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
