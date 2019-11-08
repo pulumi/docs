@@ -22,6 +22,37 @@ We'll explore how to:
   * [Deploy a Workload](#deploy-a-workload)
   * [Learn More](#learn-more)
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/metral/crosswalk/aws/03-cluster-configuration
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/metral/crosswalk/azure/03-cluster-configuration
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for this stack is on [GitHub][gh-repo-stack].
+
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/metral/crosswalk/gcp/03-cluster-configuration
+
+{{% /md %}}
+</div>
+
 ### Access the Cluster
 
 <div class="cloud-prologue-aws"></div>
@@ -33,7 +64,9 @@ generated will cater to this primary cluster creator use-case, and it must be
 copied, and reconfigured to use with other IAM roles the caller assumes, as
 demonstrated in [Configure Access Control][crosswalk-configure-access].
 
-#### Admin Authentication
+#### As an Admin
+
+##### Authentication
 
 Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] stack.
 
@@ -41,7 +74,7 @@ Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] 
 $ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-session-name k8s-admin
 ```
 
-##### Admin Kubeconfig Setup
+##### Kubeconfig Setup
 
 To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file, and export the environment variable for `kubectl` usage
@@ -89,7 +122,7 @@ $ pulumi stack output kubeconfig > kubeconfig-admin.json
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
-#### Developer Authentication
+##### Authentication
 
 Authenticate as the `devs` role from the [Identity][aws-devs-identity-stack] stack.
 
@@ -97,7 +130,7 @@ Authenticate as the `devs` role from the [Identity][aws-devs-identity-stack] sta
 $ aws sts assume-role --role-arn `pulumi stack output devsIamRoleArn` --role-session-name k8s-devs
 ```
 
-##### Developer Kubeconfig Setup
+##### Kubeconfig Setup
 
 To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file, and export the environment variable for `kubectl` usage
@@ -199,9 +232,10 @@ $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 {{% md %}}
 In GCP, the account caller will be placed into the
 `system:masters` Kubernetes RBAC group by default. The `kubeconfig`
-generated will cater to this primary cluster creator use-case. `gcloud`
-authentication will use tokens to operate as with other Users or ServiceAccounts, as
-demonstrated in [Configure Access Control][crosswalk-configure-access].
+generated will cater to this primary cluster creator use-case.
+
+GCP authentication will use tokens to operate as Members such as Users or ServiceAccounts,
+and with certain permissions as detailed in [Configure Access Control][crosswalk-configure-access].
 
 #### Admin Authentication
 
@@ -221,7 +255,7 @@ $ pulumi stack output devsIamServiceAccountSecret > k8s-devs-sa-key.json
 $ gcloud auth activate-service-account --key-file k8s-devs-sa-key.json
 ```
 
-##### Kubeconfig Setup
+#### Kubeconfig Setup
 
 To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file, and export the environment variable for `kubectl` usage.
