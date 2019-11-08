@@ -123,8 +123,34 @@ Deploy applications and workloads into the cluster.
 
 ## Frequently Asked Questions (FAQ)
 
-* TODO
+1. **What does Crosswalk for Kubernetes include?**
 
+    Crosswalk for Kubernetes is a set of tasks to configure, deploy, and manage
+    Kubernetes in production.
+
+    Tasks are segmented by operations, and belong to one of the 6 stacks outlined above.
+    The Pulumi code for each stack is available and linked at the top of each task.
+
+    Together, the docs and stack code provide a reference architecture to operate
+    and use Kubernetes in production across a team using industry best-practices.
+
+1. **Where is the code located?**
+
+    You can find the Crosswalk reference architeture on [GitHub][ktpw-gh].
+
+1. **Where can I suggest a change or open an issue with the docs?**
+
+    You can open an issue in [`pulumi/docs`][pulumi-docs] for any changes to the
+    Crosswalk documentation.
+
+1. **Where can I suggest a change or open an issue with the stack code?**
+
+    You can open an issue in [`pulumi/kubernetes-the-prod-way`][pulumi-ktpw] for
+    any changes to the Crosswalk code.
+
+[pulumi-docs]: https://github.com/pulumi/docs
+[pulumi-ktpw]: https://github.com/pulumi/kubernetes-the-prod-way
+[ktpw-gh]: https://github.com/pulumi/kubernetes-the-prod-way
 [aws-iam]: https://aws.amazon.com/iam/
 [gcp-iam]: https://cloud.google.com/iam/
 [azure-ad]: https://azure.microsoft.com/en-us/services/active-directory/
