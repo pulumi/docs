@@ -89,7 +89,7 @@ Make a copy of the kubeconfig that will be edited for the `admins` to use the
 `adminsIamRoleArn` output.
 
 ```bash
-$ pulumi stack output kubeconfig | jq '.' > kubeconfig-admin.json
+$ pulumi stack output kubeconfig > kubeconfig-admin.json
 ```
 
 Edit `kubeconfig-admin.json` to use a role for authentication in the
@@ -118,9 +118,10 @@ Edit `kubeconfig-admin.json` to use a role for authentication in the
 ```
 
 ```bash
-$ pulumi stack output kubeconfig > kubeconfig-admin.json
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
+
+#### As a Developer
 
 ##### Authentication
 
@@ -145,7 +146,7 @@ Make a copy of the kubeconfig that will be edited for the `devs` to use the
 `devsIamRoleArn` output.
 
 ```bash
-$ pulumi stack output kubeconfig | jq '.' > kubeconfig-devs.json
+$ pulumi stack output kubeconfig > kubeconfig-devs.json
 ```
 
 Edit `kubeconfig-devs.json` to use a role for authentication in the
@@ -174,7 +175,6 @@ Edit `kubeconfig-devs.json` to use a role for authentication in the
 ```
 
 ```bash
-$ pulumi stack output kubeconfig > kubeconfig-devs.json
 $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 ```
 
