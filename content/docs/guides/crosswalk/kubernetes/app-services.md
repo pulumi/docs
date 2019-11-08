@@ -196,23 +196,7 @@ const cacheConn = new k8s.core.v1.ConfigMap("postgres-db-conn",
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
-
-{{< k8s-language nokx >}}
-
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
-AZURE YAML TODO
-{{% /md %}}
-</div>
-
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
-AZURE pulumi-k8s TODO
-{{% /md %}}
-</div>
-
+AZURE TODO
 {{% /md %}}
 </div>
 
@@ -220,22 +204,7 @@ AZURE pulumi-k8s TODO
 <div class="mt">
 {{% md %}}
 
-{{< k8s-language nokx >}}
-
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
-GCP YAML TODO
-{{% /md %}}
-</div>
-
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
-GCP pulumi-k8s TODO
-{{% /md %}}
-</div>
-
+GCP TODO
 {{% /md %}}
 </div>
 
