@@ -68,11 +68,11 @@ We'll examine how to:
 <div class="mt">
 {{% md %}}
 
-  * [Use the `admins` IAM Role](#use-the-admins-iam-role)
-  * [Use the `devs` IAM Role](#use-the-devs-iam-role)
+  * [Use the Admins IAM Role](#use-the-admins-iam-role)
+  * [Use the Developers IAM Role](#use-the-developers-iam-role)
   * [Configure RBAC Authorization](#configure-rbac-authorization)
 
-### Use the `admins` IAM role
+### Use the Admins IAM Role
 
 In [Identity][crosswalk-identity] we demonstrate how to create typical IAM roles for
 use in Kubernetes.
@@ -156,19 +156,22 @@ kube-system   pod/kube-proxy-r9f8j           1/1     Running   0          15h
 <div class="mt">
 {{% md %}}
 
-  * [Use the `admins` AD Group](#use-the-admins-ad-group)
-  * [Use the `devs` AD Group](#use-the-devs-iam-group)
+  * [Use the Admins Kubeconfig](#use-the-admins-kubeconfig)
+  * [Use the Developers Kubeconfig](#use-the-developers-kubeconfig)
   * [Configure RBAC Authorization](#configure-rbac-authorization)
 
-### Use the `admins` AD group
+### Use the Admins Kubeconfig
 
-In [Identity][crosswalk-identity] we demonstrate how to create typical roles for
-use in Kubernetes.
+In [Identity][crosswalk-identity] we demonstrate how to create ServicePrincipals, 
+Application registrations, and an ActiveDirectory Group for use in Kubernetes.
 
-We created an `admins` role for cluster administrators with root privileges, that
-will be tied into Kubernetes RBAC.
+Authenticate as the ServicePrincipal.
 
-Start with the `kubeconfig` exported from the Pulumi stack. It has no Active Directory authentication information.
+```bash
+$ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
+```
+
+Start with the `kubeconfigAdmin` exported from the Pulumi stack. It has no Active Directory authentication information.
 
 ```bash
 $ pulumi stack output kubeconfigAdmin > kubeconfig-admin.json
@@ -179,11 +182,7 @@ Use `kubectl` to retrieve cluster information. You will see a prompt to log in:
 
 ```bash
 $ kubectl cluster-info
-To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code CF3TDACCY to authenticate.
 ```
-
-Proceed to the webpage and use the mentioned code to authenticate as an administrator user. The interactive login is only required once: the successful attempt will save the token to the `kubeconfig` file.
-After the login, cluster information will be displayed in the command-line console.
 
 Test the `admins` role by using it and viewing all resources in the cluster as
 expected.
@@ -193,31 +192,17 @@ $ kubectl get all -A
 NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
 kube-system   pod/azure-cni-networkmonitor-4fh89         1/1     Running   0          3h57m
 kube-system   pod/azure-cni-networkmonitor-629fq         1/1     Running   0          3h57m
-kube-system   pod/azure-cni-networkmonitor-ck89n         1/1     Running   0          3h57m
-kube-system   pod/azure-cni-networkmonitor-gs75m         1/1     Running   0          3h57m
-kube-system   pod/azure-cni-networkmonitor-s7b67         1/1     Running   0          3h57m
 kube-system   pod/azure-ip-masq-agent-27j2m              1/1     Running   0          3h57m
 kube-system   pod/azure-ip-masq-agent-czlc9              1/1     Running   0          3h57m
-kube-system   pod/azure-ip-masq-agent-g5txw              1/1     Running   0          3h57m
-kube-system   pod/azure-ip-masq-agent-h55ws              1/1     Running   0          3h57m
-kube-system   pod/azure-ip-masq-agent-tdvgm              1/1     Running   0          3h57m
 kube-system   pod/coredns-7fc597cc45-4z685               1/1     Running   0          3h55m
 kube-system   pod/coredns-7fc597cc45-k7p22               1/1     Running   0          4h
 kube-system   pod/coredns-autoscaler-7ccc76bfbd-k7zwl    1/1     Running   0          4h
 kube-system   pod/kube-proxy-9vbhg                       1/1     Running   0          3h57m
 kube-system   pod/kube-proxy-ftfsw                       1/1     Running   0          3h57m
-kube-system   pod/kube-proxy-rq8cm                       1/1     Running   0          3h57m
-kube-system   pod/kube-proxy-ssmsd                       1/1     Running   0          3h57m
-kube-system   pod/kube-proxy-x94dh                       1/1     Running   0          3h57m
 kube-system   pod/kubernetes-dashboard-cc4cc9f58-z5clx   1/1     Running   1          4h
 kube-system   pod/metrics-server-cbd95f966-mmgsg         1/1     Running   1          4h
 kube-system   pod/omsagent-5w45c                         1/1     Running   1          3h57m
 kube-system   pod/omsagent-dw2gc                         1/1     Running   0          3h57m
-kube-system   pod/omsagent-fzh6h                         1/1     Running   1          3h57m
-kube-system   pod/omsagent-kcqdm                         1/1     Running   0          3h57m
-kube-system   pod/omsagent-qnkp5                         1/1     Running   1          3h57m
-kube-system   pod/omsagent-rs-8555b897d9-26wks           1/1     Running   0          4h
-kube-system   pod/tunnelfront-5b6d458fbc-nzc25           1/1     Running   0          4h
 ...
 ```
 
@@ -229,17 +214,18 @@ kube-system   pod/tunnelfront-5b6d458fbc-nzc25           1/1     Running   0    
 <div class="mt">
 {{% md %}}
 
-  * [Use the `admins` ServiceAccount](#use-the-admins-service-account)
-  * [Use the `devs` ServiceAccount](#use-the-devs-service-account)
+  * [Use the Admins ServiceAccount](#use-the-admins-service-account)
+  * [Use the Developers ServiceAccount](#use-the-developers-service-account)
   * [Configure RBAC Authorization](#configure-rbac-authorization)
 
-### Use the `admins` ServiceAccount
+### Use the Admins ServiceAccount
 
 In [Identity][crosswalk-identity] we demonstrate how to create typical
-ServiceAccounts for use in Kubernetes.
+ServiceAccounts for use in Kubernetes, and how to configure access control on the
+ServiceAccounts by using [Predefined GKE Roles][gke-predefined-roles] for Kubernetes RBAC.
 
-We created an `admins` ServiceAccount for cluster administrators with root privileges, that
-will be tied into Kubernetes RBAC.
+We created a `admins` ServiceAccount for cluster administrators with root privileges that
+will be tied into Kubernetes RBAC by GKE for us.
 
 Authenticate as the `admins` ServiceAccount from the [Identity stack][gcp-identity-stack].
 
@@ -285,6 +271,7 @@ kube-system   pod/kube-proxy-gke-k8s-gke-cluster--standard-nodes-c-cca08c52-bgjz
 ...
 ```
 
+[gke-predefined-roles]: https://cloud.google.com/kubernetes-engine/docs/how-to/iam#predefined
 [gcp-identity-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/01-identity
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 {{% /md %}}
@@ -294,7 +281,7 @@ kube-system   pod/kube-proxy-gke-k8s-gke-cluster--standard-nodes-c-cca08c52-bgjz
 <div class="mt">
 {{% md %}}
 
-### Use the `devs` IAM role
+### Use the Developers IAM Role
 
 In [Identity][crosswalk-identity] we demonstrate how to create typical IAM roles for
 use in Kubernetes.
@@ -370,25 +357,36 @@ Error from server (Forbidden): cronjobs.batch is forbidden: User "pulumi:alice" 
 <div class="mt">
 {{% md %}}
 
-### Use the `devs` AD group
+### Use the Developers Kubeconfig
 
-In [Identity][crosswalk-identity] we demonstrate how to create typical roles for
-use in Kubernetes.
+In [Identity][crosswalk-identity] we demonstrate how to create ServicePrincipals, 
+Application registrations, and an ActiveDirectory Group for use in Kubernetes.
 
-We create limited scope `devs` role for general purpose execution of workloads,
-that will be tied into Kubernetes RBAC.
+Authenticate as the ServicePrincipal.
 
-Start with the `kubeconfig` exported from the Pulumi stack. It has no Active Directory authentication information.
+```bash
+$ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
+```
 
-Use `kubectl` to retrieve cluster information. You will see a prompt to log in:
+Start with the `kubeconfig` exported from the Pulumi stack. It has no Active Directory authentication information yet.
 
 ```bash
 $ pulumi stack output kubeconfig > kubeconfig-devs.json
 $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 ```
 
-Proceed to the webpage and use the mentioned code to authenticate as an dev user. The interactive login is only required once: the successful attempt will save the token to the `kubeconfig` file.
-After the login, cluster information retrieval fails because of lack of permissions:
+Use `kubectl` to retrieve cluster information. You will see a prompt to log in:
+
+```bash
+$ kubectl cluster-info
+To sign in, use a web browser to open the page
+https://microsoft.com/devicelogin and enter the code CF3TDACCY to authenticate.
+```
+
+Proceed to the webpage and use the mentioned code to authenticate as a developer.
+The interactive login is only required once: the successful attempt will save the token to the `kubeconfig` file.
+
+After the login though, cluster information retrieval fails because of lack of permissions.
 
 Test the `devs` role by using it and witnessing a lack of privileges.
 
@@ -414,13 +412,14 @@ Error from server (Forbidden): cronjobs.batch is forbidden: User "alice@example.
 <div class="mt">
 {{% md %}}
 
-### Use the `devs` ServiceAccount
+### Use the Developers ServiceAccount
 
 In [Identity][crosswalk-identity] we demonstrate how to create typical
-ServiceAccounts for use in Kubernetes.
+ServiceAccounts for use in Kubernetes, and how to configure access control on the
+ServiceAccounts by using [Predefined GKE Roles][gke-predefined-roles] for Kubernetes RBAC.
 
-We created a `devs` ServiceAccount for cluster administrators with root privileges, that
-will be tied into Kubernetes RBAC.
+We created a `devs` ServiceAccount for developers with limited privileges that
+will be tied into Kubernetes RBAC by GKE for us.
 
 Authenticate as the `devs` ServiceAccount from the [Identity stack][gcp-identity-stack].
 
@@ -453,17 +452,95 @@ kube-system   pod/kube-proxy-gke-k8s-gke-cluster--standard-nodes-c-cca08c52-9zzp
 kube-system   pod/kube-proxy-gke-k8s-gke-cluster--standard-nodes-c-cca08c52-bgjz   1/1     Running   0          4h29m
 ...
 ```
-
+[gcp-identity-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/01-identity
+[gke-predefined-roles]: https://cloud.google.com/kubernetes-engine/docs/how-to/iam#predefined
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 {{% /md %}}
 </div>
 
 ### Configure RBAC Authorization
 
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+Access control is not configured by default for **non-admins** with Kubernetes RBAC.
+
+In [Identity][crosswalk-identity] developers can **authenticate** into the cluster
+using the kubeconfig, but it is not yet **authorized** to do work in the cluster.
+
+This means that the user cannot perform any operations in the cluster by
+default, or retrieve information as shown in the `Error from server (Forbidden)`
+messages.
+
+```bash
+$ export KUBECONFIG=`pwd`/kubeconfig-devs.json
+$ kubectl run --namespace=`pulumi stack output appsNamespaceName` --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}' --limits cpu=200m,memory=256Mi
+Error from server (Forbidden): pods is forbidden: User "pulumi:alice" cannot create resource "pods" in API group "" in the namespace "apps-x1z818eg"
+```
+
+Below we create the Kubernetes `Role` with the ability to **only** deploy common
+workloads in the `apps` namespace, created earlier during the configuration of
+[cluster defaults][crosswalk-configure-defaults], and a `RoleBinding` to associate
+the Kubernetes `Role` to the IAM `devs` role.
+
+Assume the `admin` user.
+
+```bash
+$ pulumi stack output kubeconfigAdmin > kubeconfig-admin.json
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
+
+[crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
+[gke-predefined-roles]: https://cloud.google.com/kubernetes-engine/docs/how-to/iam#predefined
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+Access control is not configured by default for **non-admins** with Kubernetes RBAC.
+
+In [Identity][crosswalk-identity] developers can **authenticate** into the cluster
+using the IAM role and kubeconfig, but it is not yet **authorized** to do work in the cluster.
+
+This means that the user cannot perform any operations in the cluster by
+default, or retrieve information as shown in the `Error from server (Forbidden)`
+messages.
+
+```bash
+$ export KUBECONFIG=`pwd`/kubeconfig-devs.json
+$ kubectl run --namespace=`pulumi stack output appsNamespaceName` --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}' --limits cpu=200m,memory=256Mi
+Error from server (Forbidden): pods is forbidden: User "pulumi:alice" cannot create resource "pods" in API group "" in the namespace "apps-x1z818eg"
+```
+
+Below we create the Kubernetes `Role` with the ability to **only** deploy common
+workloads in the `apps` namespace created earlier during in the configuration of
+[cluster defaults][crosswalk-configure-defaults]. We also create a `RoleBinding`
+to associate the Kubernetes `Role` to the IAM `devs` role.
+
+Assume the `admin` user.
+
+```bash
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
+[crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
+[gke-predefined-roles]: https://cloud.google.com/kubernetes-engine/docs/how-to/iam#predefined
+[crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
 In [Identity][crosswalk-identity], access control is configured on the ServiceAccounts to bind to
 [Predefined GKE Roles][gke-predefined-roles] for Kubernetes RBAC.
 
-If a ServiceAccount **does not** bind to predefined GKE roles, 
+If a ServiceAccount **does not** bind to predefined GKE roles,
 the user will be able to **authenticate** into the cluster, but it will not be
 **authorized** to do work.
 
@@ -488,46 +565,16 @@ the Kubernetes `Role` to the IAM `devs` role.
 [gke-predefined-roles]: https://cloud.google.com/kubernetes-engine/docs/how-to/iam#predefined
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
+Use the `admins` kubeconfig.
 
-Assume the `admin` user.
-
-```bash
-$ pulumi stack output kubeconfigAdmin > kubeconfig-admin.json
-$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
-```
-
-{{% /md %}}
-</div>
-
-Create the [Role][k8s-rbac-docs] for the `apps` namespace that will be bound to `devs` group.
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
 ```bash
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 {{% /md %}}
 </div>
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-```bash
-$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
-```
-{{% /md %}}
-</div>
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-```bash
-$ export KUBECONFIG=`pwd`/kubeconfig.json
-```
-{{% /md %}}
-</div>
+
+Create a Role and RoleBinding for the `pulumi-devs` group in the `apps`
+Namespace.
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -567,7 +614,7 @@ let devsGroupRoleBinding = new k8s.rbac.v1.RoleBinding("pulumi-devs", {
 }, {provider: cluster.provider});
 ```
 
-After creating the `Role` and `RoleBinding` during a Pulumi update, now try
+After creating the Role and RoleBinding in a Pulumi update, now try
 deploying the workload with the new authorization for the `devs` role.
 
 ```bash
