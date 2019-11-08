@@ -21,11 +21,11 @@ We'll explore how to setup:
   * [Logging](#logging)
   * [Monitoring](#monitoring)
 
-## Prerequisites
-
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+
+## Prerequisites
 
 Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] stack.
 
@@ -36,31 +36,7 @@ $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 [aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
 {{% /md %}}
 </div>
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-Authenticate as the ServicePrincipal from the [Identity][azure-identity-stack] stack.
 
-```bash
-$ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
-$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
-```
-[azure-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
-{{% /md %}}
-</div>
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-Authenticate as the `admins` ServiceAccount from the [Identity][gcp-admin-identity-stack] stack.
-
-```bash
-$ gcloud auth activate-service-account --key-file k8s-admin-sa-key.json
-$ export KUBECONFIG=`pwd`/kubeconfig.json
-```
-
-[gcp-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
-{{% /md %}}
-</div>
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
@@ -318,46 +294,14 @@ the data being sent. See the [CloudWatch limits][aws-cw-limits] for more details
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
-
-{{< k8s-language nokx >}}
-
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
-AZURE YAML TODO
-{{% /md %}}
-</div>
-
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
-AZURE pulumi-k8s TODO
-{{% /md %}}
-</div>
-
+AZURE TODO
 {{% /md %}}
 </div>
 
 <div class="cloud-prologue-gcp"></div>
 <div class="mt">
 {{% md %}}
-
-{{< k8s-language nokx >}}
-
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
-GCP YAML TODO
-{{% /md %}}
-</div>
-
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
-GCP pulumi-k8s TODO
-{{% /md %}}
-</div>
-
+GCP TODO
 {{% /md %}}
 </div>
 
@@ -439,45 +383,13 @@ $ kubectl delete ns amazon-cloudwatch
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
-
-{{< k8s-language nokx >}}
-
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
-AZURE YAML TODO
-{{% /md %}}
-</div>
-
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
-AZURE pulumi-k8s TODO
-{{% /md %}}
-</div>
-
+AZURE TODO
 {{% /md %}}
 </div>
 
 <div class="cloud-prologue-gcp"></div>
 <div class="mt">
 {{% md %}}
-
-{{< k8s-language nokx >}}
-
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
-GCP YAML TODO
-{{% /md %}}
-</div>
-
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
-GCP pulumi-k8s TODO
-{{% /md %}}
-</div>
-
+GCP TODO
 {{% /md %}}
 </div>
