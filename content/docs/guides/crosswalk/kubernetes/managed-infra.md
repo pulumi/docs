@@ -90,8 +90,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 We'll configure and deploy:
 
-  * [Networking](#networking): To provide a virtual network for the cluster to
-    use.
+  * [Networking](#networking): To provide a virtual network for the cluster.
   * [Storage](#storage): To provide data stores for the cluster.
 
 ## Networking
