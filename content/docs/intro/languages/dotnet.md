@@ -14,6 +14,7 @@ Pulumi supports infrastructure as code using any .NET Core language. You can use
 
 > **Note:** Pulumi for .NET is in preview and is under active development. We would [love your feedback](https://github.com/pulumi/pulumi/issues/new)!
 
+{{% lang csharp %}}
 For example, this C# program provisions an Azure resource group and storage account:
 
 ```csharp
@@ -49,6 +50,73 @@ class Program
     }
 }
 ```
+{{% /lang %}}
+
+{{% lang fsharp %}}
+For example, this F# program provisions an Azure resource group and storage account:
+
+```fsharp
+module Program
+
+open Pulumi.FSharp
+open Pulumi.Azure.Core
+open Pulumi.Azure.Storage
+
+let infra () =
+    // Create an Azure Resource Group
+    let resourceGroup = new ResourceGroup "resourceGroup"
+
+    // Create an Azure Storage Account
+    let storageAccount =
+        new Account("storage",
+            new AccountArgs
+               (ResourceGroupName = io resourceGroup.Name,
+                AccountReplicationType = input "LRS",
+                AccountTier = input "Standard"))
+
+    // Export the connection string for the storage account
+    dict [("connectionString", storageAccount.PrimaryConnectionString :> obj)]
+
+[<EntryPoint>]
+let main _ =
+  Deployment.run infra
+```
+{{% /lang %}}
+
+{{% lang visualbasic %}}
+For example, this Visual Basic program provisions an Azure resource group and storage account:
+
+```vb
+Imports System.Threading.Tasks
+Imports Pulumi
+Imports Pulumi.Azure.Core
+Imports Pulumi.Azure.Storage
+
+Module Program
+    Public Function Run() As IDictionary(Of String, Object)
+        ' Create an Azure Resource Group
+        Dim resourceGroup = New ResourceGroup("resourceGroup")
+
+        ' Create an Azure Storage Account
+        Dim storageAccount = New Account("storageAccount", New AccountArgs With {
+            .ResourceGroupName = resourceGroup.Name,
+            .AccountReplicationType = "LRS",
+            .AccountTier = "Standard"
+        })
+
+        ' Export the connection string for the storage account
+        Return New Dictionary(Of String, Object) From {
+            {"connectionString", storageAccount.PrimaryConnectionString}
+        }
+    End Function
+
+    Sub Main()
+        Deployment.RunAsync(AddressOf Run).Wait()
+    End Sub
+
+End Module
+```
+{{% /lang %}}
 
 ## Getting Started
 

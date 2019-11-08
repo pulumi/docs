@@ -56,7 +56,7 @@ function selectLanguage(lang) {
         $("code").each(function (i, e) {
             var classes = getElemClasses(e);
             for (var i = 0; i < classes.length; i++) {
-                if (classes[i].startsWith("language-") && classes[i] !== "language-bash") {
+                if (classes[i].startsWith("language-") && classes[i] !== "language-bash" && classes[i] !== "language-sh") {
                     var parents = $(e).parents("div.highlight");
 
                     // Our Node reference docs contain examples written in TypeScript, and
@@ -75,7 +75,8 @@ function selectLanguage(lang) {
 
                     if (classes[i] === "language-"+lang ||
                         (lang === "typescript" && classes[i] === "language-ts") ||
-                        (lang === "javascript" && classes[i] === "language-js")) {
+                        (lang === "javascript" && classes[i] === "language-js") ||
+                        (lang === "visualbasic" && classes[i] === "language-vb")) {
                         parents.show();
                     } else {
                         parents.hide();
