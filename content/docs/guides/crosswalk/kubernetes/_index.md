@@ -20,7 +20,7 @@ The primary steps to follow include how to:
 
   * [Create the Control Plane][crosswalk-control-plane]
   * [Create the Worker Nodes][crosswalk-worker-nodes]
-  * [Try out the Cluster][crosswalk-use-the-cluster]
+  * [Try out the Cluster][crosswalk-try-out-the-cluster]
   * [Update the Worker Nodes][crosswalk-update-worker-nodes]
   * [Configure Cluster Defaults][crosswalk-configure-defaults]
   * [Configure Access Control][crosswalk-configure-access]
@@ -138,7 +138,7 @@ Deploy applications and workloads into the cluster.
 [aws-sqs]: https://aws.amazon.com/sqs/
 [crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
 [crosswalk-worker-nodes]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
-[crosswalk-use-the-cluster]: {{< relref "/docs/guides/crosswalk/kubernetes/use-the-cluster" >}}
+[crosswalk-try-out-the-cluster]: {{< relref "/docs/guides/crosswalk/kubernetes/try-out-the-cluster" >}}
 [crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 [crosswalk-cluster-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/cluster-services" >}}
