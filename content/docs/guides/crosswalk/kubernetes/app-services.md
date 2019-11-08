@@ -21,6 +21,47 @@ We'll explore how to setup:
   * [Datstores](#datastores)
   * [General App Services](#general-app-services)
 
+## Prerequisites
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] stack.
+
+```bash
+$ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-session-name k8s-admin
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
+[aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
+{{% /md %}}
+</div>
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+Authenticate as the ServicePrincipal from the [Identity][azure-identity-stack] stack.
+
+```bash
+$ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
+[azure-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#prerequisites" >}}
+{{% /md %}}
+</div>
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+Authenticate as the `admins` ServiceAccount from the [Identity][gcp-admin-identity-stack] stack.
+
+```bash
+$ gcloud auth activate-service-account --key-file k8s-admin-sa-key.json
+$ export KUBECONFIG=`pwd`/kubeconfig.json
+```
+
+[gcp-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
+{{% /md %}}
+</div>
+
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}

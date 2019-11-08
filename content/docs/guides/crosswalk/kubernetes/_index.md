@@ -8,11 +8,12 @@ menu:
 ---
 
 Pulumi Crosswalk for Kubernetes is a collection of industry-standard
-best-practices and tasks for managing Kubernetes and its infrastructure in production.
+best-practices, and tasks for managing Kubernetes and its infrastructure in production.
 
 This guide is for provisioning and configuring production-grade Kubernetes
-clusters, and deploying into the clusters. If you are just getting started
-with Pulumi and Kubernetes, the [Get Started][k8s-get-started] guide is a better place to start.
+clusters, and deploying workloads into the clusters.
+
+If you are just getting started with Pulumi and Kubernetes, the [Get Started][k8s-get-started] guide is a better place to start.
 
 ## Overview
 
