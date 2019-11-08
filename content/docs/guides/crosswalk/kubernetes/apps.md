@@ -7,7 +7,8 @@ menu:
     weight: 8
 ---
 
-TODO
+The following are examples of how to create and use various types of Kubernetes
+resources, and typical apps and workloads.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps
@@ -18,14 +19,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 TODO
 
-{{< k8s-language >}}
-
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
-YAML TODO
-{{% /md %}}
-</div>
+{{< k8s-language typescript-only >}}
 
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
@@ -34,25 +28,11 @@ pulumi-k8s TODO
 {{% /md %}}
 </div>
 
-<div class="k8s-language-prologue-typescript-kx"></div>
-<div class="mt">
-{{% md %}}
-pulumi-kx TODO
-{{% /md %}}
-</div>
-
 ### Example 2
 
 TODO
 
-{{< k8s-language >}}
-
-<div class="k8s-language-prologue-yaml"></div>
-<div class="mt">
-{{% md %}}
-YAML TODO
-{{% /md %}}
-</div>
+{{< k8s-language noyaml >}}
 
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
