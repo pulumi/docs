@@ -162,7 +162,7 @@ be generated that will cater to the admin and cluster user [use-cases][aks-clust
 To configure the cluster for use with IAM roles, check out
 [Configure Access Control][crosswalk-configure-access].
 
-#### Admin Authentication
+#### Authentication
 
 Authenticate as the ServicePrincipal from the [Identity][azure-identity-stack] stack.
 
@@ -170,7 +170,7 @@ Authenticate as the ServicePrincipal from the [Identity][azure-identity-stack] s
 $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
 ```
 
-##### Admin Kubeconfig Setup
+#### Admin Kubeconfig Setup
 
 To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file.
@@ -180,7 +180,7 @@ $ pulumi stack output kubeconfigAdmin > kubeconfig-admin.json
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 
-##### Developers Kubeconfig Setup
+#### Developers Kubeconfig Setup
 
 To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file.
