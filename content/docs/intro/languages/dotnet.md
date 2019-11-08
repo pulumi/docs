@@ -10,7 +10,7 @@ aliases: ["/dotnet/"]
 
 <img src="/logos/tech/dotnet.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports infrastructure as code using any .NET Core language. You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and GCP.
+Pulumi supports infrastructure as code using any .NET Core language. You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
 
 > **Note:** Pulumi for .NET is in preview and is under active development. We would [love your feedback](https://github.com/pulumi/pulumi/issues/new)!
 
@@ -64,9 +64,6 @@ The fastest way to get up and running is to choose from one of the following Get
     <a class="btn bg-transparent border w-1/2 border-solid border-gray-300 hover:bg-gray-200 justify-center p-4 mr-4" href="{{< relref "../../get-started/gcp" >}}">
         <img class="h-5 ml-auto mr-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
     </a>
-    <a class="btn bg-transparent border w-1/2 border-solid border-gray-300 hover:bg-gray-200 justify-center p-4" href="{{< relref "../../get-started/kubernetes" >}}">
-        <img class="h-5 ml-auto mr-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
-    </a>
 </div>
 
 > The Getting Started guides currently only demonstrate C#. For F# and Visual Basic, please refer to the
@@ -74,7 +71,7 @@ The fastest way to get up and running is to choose from one of the following Get
 
 ## Prerequisites
 
-Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core 3.0 or later. If you follow the Getting Started guides above, they will walk you through doing this.
+Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core SDK 3.0 or later. If you follow the Getting Started guides above, they will walk you through doing this.
 
 1. [Install Pulumi]({{< relref "/docs/get-started/install" >}})
 1. [Install .NET Core SDK 3.0](https://dotnet.microsoft.com/download)
@@ -86,9 +83,7 @@ As of version 1.5, Pulumi supports .NET Core 3.0. You can write Pulumi programs 
 
 {{< langchoose dotnetonly >}}
 
-<div class="language-prologue-csharp"></div>
-<span>
-{{% md %}}
+{{% lang csharp %}}
 You can write Pulumi programs in **C#**. From an empty directory, create a new C# project:
 
 ```bash
@@ -102,15 +97,12 @@ To deploy your infrastructure run `pulumi up` and the Pulumi engine automaticall
 
 This `csharp` template is cloud agnostic, and you will need to install NuGet packages for the cloud provider of your choice. Additional templates are available:
 
-* `aws-csharp`: a starter AWS project in C#
-* `azure-csharp`: a starter Azure project in C#
-* `gcp-csharp`: a starter GCP project in C#
-{{% /md %}}
-</span>
+* `pulumi new aws-csharp`: creates a starter AWS C# project
+* `pulumi new azure-csharp`: creates a starter Azure C# project
+* `pulumi new gcp-csharp`: creates a starter Google Cloud C# project
+{{% /lang %}}
 
-<div class="language-prologue-fsharp"></div>
-<span>
-{{% md %}}
+{{% lang fsharp %}}
 You can write Pulumi programs in **F#**. From an empty directory, create a new F# project:
 
 ```bash
@@ -124,15 +116,12 @@ To deploy your infrastructure run `pulumi up` and the Pulumi engine automaticall
 
 This `fsharp` template is cloud agnostic, and you will need to install NuGet packages for the cloud provider of your choice. Additional templates are available:
 
-* `aws-fsharp`: a starter AWS project in F#
-* `azure-fsharp`: a starter Azure project in F#
-* `gcp-fsharp`: a starter GCP project in F#
-{{% /md %}}
-</span>
+* `pulumi new aws-fsharp`: creates a starter AWS F# project
+* `pulumi new azure-fsharp`: creates a starter Azure F# project
+* `pulumi new gcp-fsharp`: creates a starter Google Cloud F# project
+{{% /lang %}}
 
-<div class="language-prologue-visualbasic"></div>
-<span>
-{{% md %}}
+{{% lang visualbasic %}}
 You can write Pulumi programs in **Visual Basic**. From an empty directory, create a new Visual Basic project:
 
 ```bash
@@ -146,11 +135,10 @@ To deploy your infrastructure run `pulumi up` and the Pulumi engine automaticall
 
 This `visualbasic` template is cloud agnostic, and you will need to install NuGet packages for the cloud provider of your choice. Additional templates are available:
 
-* `aws-visualbasic`: a starter AWS project in F#
-* `azure-visualbasic`: a starter Azure project in F#
-* `gcp-visualbasic`: a starter GCP project in F#
-{{% /md %}}
-</span>
+* `pulumi new aws-visualbasic`: creates a starter AWS Visual Basic project
+* `pulumi new azure-visualbasic`: creates a starter Azure Visual Basic project
+* `pulumi new gcp-visualbasic`: creates a starter Google Cloud Visual Basic project
+{{% /lang %}}
 
 ## .NET Core Tools
 
