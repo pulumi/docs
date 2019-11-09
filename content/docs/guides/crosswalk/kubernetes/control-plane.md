@@ -85,7 +85,7 @@ We'll configure and deploy:
 
 In [Identity][crosswalk-identity] we demonstrate how to create typical IAM resources for use in Kubernetes.
 
-Separation of identities creates many functions: it can be used to
+Separation of identities is important for several reasons: it can be used to
 limit the blast radius if a given group is compromised, can regulate the number
 of API requests originating from a certain group, and can also help scope
 privileges to specific workloads.
@@ -401,8 +401,6 @@ cannot be created.
 
 See the [Kubernetes docs][k8s-storage-classes] for more details.
 
-{{< k8s-language nokx >}}
-
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
@@ -413,6 +411,8 @@ storage class will always be created automatically for the cluster by EKS.
 See the [official EKS docs][eks-storage-classes] for more details.
 
 [eks-storage-classes]: https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
+
+{{< k8s-language nokx >}}
 
 <div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
@@ -527,12 +527,19 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
 <div class="mt">
 {{% md %}}
 
+See the [official AKS docs][aks-storage-classes] for more details.
+[aks-storage-classes]: https://docs.microsoft.com/en-us/azure/aks/concepts-storage
+
+{{< k8s-language nokx >}}
+
 <div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
 {{% md %}}
 
 After the cluster is provisioned and running, create an example StorageClass to
-provision Azure disks.
+provision GCP disks.
+
+Create the storage classes using `kubectl`.
 
 ```yaml
 cat > storage-classes.yaml << EOF
@@ -541,7 +548,6 @@ apiVersion: storage.k8s.io/v1
 metadata:
   name: managed-premium-retain
 provisioner: kubernetes.io/azure-disk
-reclaimPolicy: Retain
 parameters:
   storageaccounttype: Premium_LRS
   kind: Managed
@@ -575,52 +581,50 @@ EOF
 ```bash
 $ kubectl apply -f pvc.yaml
 ```
+
 {{% /md %}}
 </div>
+
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
 
-Create the storage classes using Pulumi.
+```ts
+import * as k8s from "@pulumi/k8s";
 
-```typescript
-import * as eks from "@pulumi/eks";
-
-// Create an EKS cluster with custom storage classes.
-const cluster = new eks.Cluster(`${projectName}`, {
-    storageClasses: {
-        "gp2-encrypted": { type: "gp2", encrypted: true},
-        "sc1": { type: "sc1"}
+// Create the premium StorageClass.
+const sc = new k8s.storage.v1.StorageClass("premium",
+    {
+        provisioner: "kubernetes.io/azure-disk",
+        parameters: {
+            "storageaccounttype": "Premium_LRS",
+            "kind": "Managed"
+        },
     },
-    ...
-}
+    { provider: provider }
+);
 ```
+
 With the desired storage classes created in the cluster, we can create any
 necessary persistent volumes in the cluster.
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
-```typescript
-import * as eks from "@pulumi/eks";
+```ts
 import * as k8s from "@pulumi/k8s";
 
-// Create a persistent volume claim with a storage class built into the cluster.
-cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
-    sc.metadata.name.apply(name => {
-        if (name) {
-            const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
-                    spec: {
-                        accessModes: ["ReadWriteOnce"],
-                        storageClassName: name,
-                        resources: {requests: {storage: "1Gi"}}
-                    }
-                },
-                { provider: cluster.provider }
-            );
-        }
-    });
-});
+// Create a Persistent Volume Claim on the StorageClass.
+const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
+    spec: {
+        accessModes: ["ReadWriteOnce"],
+        storageClassName: sc.metadata.name,
+        resources: {requests: {storage: "1Gi"}}
+    }
+},
+    { provider: provider }
+);
 ```
+
 {{% /md %}}
 </div>
 {{% /md %}}
@@ -630,6 +634,11 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
 <div class="mt">
 {{% md %}}
 
+See the [official GKE docs][gke-storage-classes] for more details.
+[gke-storage-classes]: https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes
+
+{{< k8s-language nokx >}}
+
 <div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
 {{% md %}}
@@ -637,22 +646,49 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
 After the cluster is provisioned and running, create an example StorageClass to
 provision GCP disks.
 
-```yaml
-$ cat > storage-classes.yaml << EOF
-apiVersion: storage.k8s.io/v1
+Create the storage classes using `kubectl`.
+
+```bash
+cat > storage-classes.yaml << EOF
 kind: StorageClass
+apiVersion: storage.k8s.io/v1
 metadata:
   name: slow
 provisioner: kubernetes.io/gce-pd
 parameters:
-  type: pd-standard
-  replication-type: none
+  type: "pd-standard"
+  replication-type: "none"
 EOF
 ```
 
 ```bash
 $ kubectl apply -f storage-classes.yaml
 ```
+
+Create the persistent volume with a persistent volume claim and `kubectl`.
+
+```bash
+cat > pvc.yaml << EOF
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mypvc
+  labels:
+    app: myapp
+spec:
+  storageClassName: slow
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+EOF
+```
+
+```bash
+$ kubectl apply -f pvc.yaml
+```
+
 {{% /md %}}
 </div>
 
@@ -660,46 +696,42 @@ $ kubectl apply -f storage-classes.yaml
 <div class="mt">
 {{% md %}}
 
-Create the storage classes using Pulumi.
+```ts
+import * as k8s from "@pulumi/k8s";
 
-```typescript
-import * as eks from "@pulumi/eks";
-
-// Create an EKS cluster with custom storage classes.
-const cluster = new eks.Cluster(`${projectName}`, {
-    storageClasses: {
-        "gp2-encrypted": { type: "gp2", encrypted: true},
-        "sc1": { type: "sc1"}
+// Create the standard StorageClass.
+const sc = new k8s.storage.v1.StorageClass("standard",
+    {
+        provisioner: "kubernetes.io/gce-pd",
+        parameters: {
+            "type": "pd-standard",
+            "replication-type": "none"
+        },
     },
-    ...
-}
+    { provider: provider }
+);
 ```
+
 With the desired storage classes created in the cluster, we can create any
 necessary persistent volumes in the cluster.
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
-```typescript
-import * as eks from "@pulumi/eks";
+```ts
 import * as k8s from "@pulumi/k8s";
 
-// Create a persistent volume claim with a storage class built into the cluster.
-cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
-    sc.metadata.name.apply(name => {
-        if (name) {
-            const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
-                    spec: {
-                        accessModes: ["ReadWriteOnce"],
-                        storageClassName: name,
-                        resources: {requests: {storage: "1Gi"}}
-                    }
-                },
-                { provider: cluster.provider }
-            );
+// Create a Persistent Volume Claim on the StorageClass.
+const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
+        spec: {
+            accessModes: ["ReadWriteOnce"],
+            storageClassName: sc.metadata.name,
+            resources: {requests: {storage: "1Gi"}}
         }
-    });
-});
+    },
+    { provider: provider }
+);
 ```
+
 {{% /md %}}
 </div>
 {{% /md %}}
