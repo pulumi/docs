@@ -37,22 +37,28 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="mt">
 {{% md %}}
 
-The full code for this stack is on [GitHub][gh-repo-stack].
+GKE logging and monitoring is managed by GCP through StackDriver.
+
+The repo for this stack is on [GitHub][gh-repo-stack], but it is empty since no
+extra steps are required after cluster and Node Pool creation in the [Cluster Configuration][crosswalk-k8s-cluster] stack.
+
+[crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/04-cluster-services
 
 {{% /md %}}
 </div>
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 ## Overview
 
 We'll explore how to setup:
 
-  * [Logging](#logging)
-  * [Monitoring](#monitoring)
+  * [AWS Logging](#aws-logging)
+  * [AWS Monitoring](#aws-monitoring)
 
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+See the [official AWS docs][k8s-logs-docs] for more details.
 
 ## Prerequisites
 
@@ -63,14 +69,8 @@ $ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-s
 $ export KUBECONFIG=`pwd`/kubeconfig-admin.json
 ```
 [aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
-{{% /md %}}
-</div>
 
-## Logging
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
+## AWS Logging
 
 ### Control Plane
 
@@ -278,13 +278,9 @@ $ pulumi stack output fluentdCloudWatchLogGroupName
 {{% /md %}}
 </div>
 
-See the [official AWS docs][k8s-logs-docs] for more details.
-
-Note, CloudWatch is rate limited and often times the size of the
-data being sent can cause `fluentd-cloudwatch` to experience
-`ThrottlingException error="Rate exceeded"`. This can cause a delay in logs
-showing up in CloudWatch. Request a limit increase, or alter
-the data being sent. See the [CloudWatch limits][aws-cw-limits] for more details.
+> Note: CloudWatch is rate limited and often times the size of the
+data being sent can cause `ThrottlingException error="Rate exceeded"`. This can cause a delay in logs showing up in CloudWatch. Request a limit increase, or alter
+the data being sent, if necessary.  See the [CloudWatch limits][aws-cw-limits] for more details.
 
 [k8s-logs-docs]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights.html
 [aws-cw-limits]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_limits.html
@@ -294,22 +290,155 @@ the data being sent. See the [CloudWatch limits][aws-cw-limits] for more details
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
-AZURE TODO
+
+## Overview
+
+We'll explore how to setup:
+
+  * [Azure Logging and Monitoring](#azure-logging-and-monitoring)
+
+See the official [Azure Monitor][aks-azure-monitor] and [AKS][aks-logs] docs for more details.
+
+## Azure Logging and Monitoring
+
+### Enable Azure Monitor for the Cluster
+
+Enable the Log Analytics agent on the AKS cluster in the
+[Cluster Configuration][crosswalk-k8s-cluster] stack.
+
+```ts
+import * as azure from "@pulumi/azure";
+
+// Create the AKS cluster with LogAnalytics enabled in the given workspace.
+const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
+    ...
+    resourceGroupName: config.resourceGroupName,
+    addonProfile: {
+        omsAgent: {
+            enabled: true,
+            logAnalyticsWorkspaceId: config.logAnalyticsWorkspaceId,
+        },
+    },
+});
+```
+
+Enable logging for the control plane, and monitoring of all metrics in the
+[Cluster Services][crosswalk-aks-cluster-svcs] stack.
+
+```ts
+import * as azure from "@pulumi/azure";
+
+// Enable the Monitoring Diagonostic control plane component logs and AllMetrics
+const azMonitoringDiagnostic = new azure.monitoring.DiagnosticSetting(name, {
+    logAnalyticsWorkspaceId: config.logAnalyticsWorkspaceId,
+    targetResourceId: config.clusterId,
+    logs: ["kube-apiserver", "kube-controller-manager", "kube-scheduler", "kube-audit", "cluster-autoscaler"]
+        .map(category => ({
+            category,
+            enabled : true,
+            retentionPolicy: { enabled: true },
+        })),
+    metrics: [{
+        category: "AllMetrics",
+        retentionPolicy: { enabled: true },
+    }],
+});
+
+```
+
+### Worker Nodes
+
+To get the Worker kubelet logs you need to SSH into the nodes.
+
+Use the node admin username and SSH key used in the
+[Cluster Configuration][crosswalk-k8s-cluster] stack.
+
+```ts
+import * as azure from "@pulumi/azure";
+
+// Create the AKS cluster with LogAnalytics enabled in the given workspace.
+const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
+    ...
+    resourceGroupName: config.resourceGroupName,
+    linuxProfile: {
+        adminUsername: "aksuser",
+        sshKey: {
+            keyData: sshPublicKey,
+        },
+    },
+});
+```
+
+See the official [AKS docs][aks-kubelet-logs] for more details.
+
+[aks-kubelet-logs]: https://docs.microsoft.com/en-us/azure/aks/kubelet-logs
+[aks-azure-monitor]: https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview
+[aks-logs]: https://docs.microsoft.com/en-us/azure/aks/view-master-logs
+[crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/03-cluster-configuration
+[crosswalk-aks-cluster-svcs]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/04-cluster-services
 {{% /md %}}
 </div>
 
 <div class="cloud-prologue-gcp"></div>
 <div class="mt">
 {{% md %}}
-GCP TODO
-{{% /md %}}
-</div>
 
-## Monitoring
+## Overview
+
+We'll explore how to setup:
+
+  * [GCP Logging and Monitoring](#azure-logging-and-monitoring)
+
+See the official [GKE][gke-logs] and [StackDriver Observing][gke-sd-observe] docs for more details.
+
+## GCP Logging and Monitoring
+
+GKE monitoring is managed by GCP through StackDriver.
+
+Stackdriver Kubernetes Engine Monitoring is the default logging option for GKE
+clusters, and it comes automatically enabled for all clusters starting with version 1.14.
+
+### Enable the Node Pool
+
+Enable the cluster's Node Pool with the proper logging and monitoring
+permission in the [Cluster Configuration][crosswalk-k8s-cluster] stack.
+
+```ts
+import * as gcp from "@pulumi/gcp";
+
+// Create a GKE cluster.
+// Versions >= 1.14 have Stackdriver Monitoring enabled by default.
+const cluster = new gcp.container.Cluster(`${name}`, {
+    ...
+    minMasterVersion: "1.14.7-gke.17",
+}
+
+// Create the GKE Node Pool with OAuth scopes enabled for logging and monitoring.
+const standardNodes = new gcp.container.NodePool("standard-nodes", {
+    ...
+    cluster: cluster.name,
+    version: "1.14.7-gke.17",
+    nodeConfig: {
+        machineType: "n1-standard-1",
+        oauthScopes: [
+            "https://www.googleapis.com/auth/compute",
+            "https://www.googleapis.com/auth/devstorage.read_only",
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring",
+        ],
+    },
+});
+```
+
+[gke-logs]: https://cloud.google.com/monitoring/kubernetes-engine/
+[gke-sd-observe]: https://cloud.google.com/monitoring/kubernetes-engine/observing
+[crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
+</div>
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
+## AWS Monitoring
 
 Using the YAML manifests in the [AWS samples][aws-metrics-samples], we can provision the CloudWatch Agent
 to run as a [DaemonSet][k8s-ds] and send metrics to [CloudWatch][aws-cw].
@@ -377,19 +506,5 @@ $ kubectl delete ns amazon-cloudwatch
 [crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
 [aws-cw-console]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingSetup.html#ConsoleSignIn
 
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-AZURE TODO
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-GCP TODO
 {{% /md %}}
 </div>
