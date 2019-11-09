@@ -29,13 +29,13 @@ The primary steps to follow include how to:
 
   * [Create the Control Plane][crosswalk-control-plane]
   * [Create the Worker Nodes][crosswalk-worker-nodes]
-  * [Try out the Cluster][crosswalk-try-out-the-cluster]
-  * [Update the Worker Nodes][crosswalk-update-worker-nodes]
+  * [Try Out the Cluster][crosswalk-try-out-the-cluster]
   * [Configure Cluster Defaults][crosswalk-configure-defaults]
   * [Configure Access Control][crosswalk-configure-access]
   * [Deploy Cluster Services][crosswalk-cluster-svcs]
   * [Deploy App Services][crosswalk-app-svcs]
   * [Deploy Apps][crosswalk-apps]
+  * [Update the Worker Nodes][crosswalk-update-worker-nodes]
 
 ## Production Architecture for Teams
 
