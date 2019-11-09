@@ -79,6 +79,14 @@ To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file, and export the environment variable for `kubectl` usage
 from the [Cluster Configuration][aws-cluster-config-stack] stack.
 
+Setup the kubeconfig environment variable.
+
+```bash
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
+
+Get the Admins IAM Role ARN.
+
 ```bash
 $ pulumi stack output adminsIamRoleArn
 arn:aws:iam::000000000000:role/admins-eksClusterAdmin-0627674
@@ -116,10 +124,6 @@ Edit `kubeconfig-admin.json` to use a role for authentication in the
 ]
 ```
 
-```bash
-$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
-```
-
 #### As a Developer
 
 ##### Authentication
@@ -135,6 +139,14 @@ $ aws sts assume-role --role-arn `pulumi stack output devsIamRoleArn` --role-ses
 To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file, and export the environment variable for `kubectl` usage
 from the [Cluster Configuration][aws-cluster-config-stack] stack.
+
+Setup the kubeconfig environment variable.
+
+```bash
+$ export KUBECONFIG=`pwd`/kubeconfig-devs.json
+```
+
+Get the Devs IAM Role ARN.
 
 ```bash
 $ pulumi stack output devsIamRoleArn
@@ -171,10 +183,6 @@ Edit `kubeconfig-devs.json` to use a role for authentication in the
     }
   }
 ]
-```
-
-```bash
-$ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 ```
 
 [aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
