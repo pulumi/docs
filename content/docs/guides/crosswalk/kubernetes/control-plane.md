@@ -14,7 +14,7 @@ menu:
 {{% md %}}
 In order to run container workloads, you will need a Kubernetes cluster.
 It is possible to provision and manage a cluster manually on AWS.
-However, the managed offering, [Elastic Kubernetes Service (EKS)][eks], offers an
+The managed offering [Elastic Kubernetes Service (EKS)][eks] offers an
 easier way to get up and running.
 
 See the [official Kubernetes docs][k8s-docs] for more details.
@@ -30,8 +30,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="mt">
 {{% md %}}
 In order to run container workloads, you will need a Kubernetes cluster.
-It is possible to provision and manage a cluster manually on Azure,
-however the managed offering, [Azure Kubernetes Service (AKS)][aks], offers an
+It is possible to provision and manage a cluster manually on Azure.
+The managed offering, [Azure Kubernetes Service (AKS)][aks], offers an
 easier way to get up and running.
 
 See the [official Kubernetes docs][k8s-docs] for more details.
@@ -47,8 +47,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="mt">
 {{% md %}}
 In order to run container workloads, you will need a Kubernetes cluster.
-It is possible to provision and manage a cluster manually on GCP,
-however the managed offering, [Google Kubernetes Engine (GKE)][gke], offers an
+It is possible to provision and manage a cluster manually on GCP.
+The managed offering, [Google Kubernetes Engine (GKE)][gke], offers an
 easier way to get up and running.
 
 See the [official Kubernetes docs][k8s-docs] for more details.
@@ -285,6 +285,8 @@ const cluster = new eks.Cluster(`${projectName}`, {
 }
 ```
 
+[eks-subnet-tagging]: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html#vpc-subnet-tagging
+[k8s-pod-networking]: https://kubernetes.io/docs/concepts/cluster-administration/networking/
 [pulumi-eks]: https://github.com/pulumi/pulumi-eks
 [aws-k8s-cni]: https://github.com/aws/amazon-vpc-cni-k8s/
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
@@ -383,9 +385,10 @@ export const subnetworkName = subnet.name;
 
 ## Storage
 
-Kubernetes [storage][k8s-storage] centers on providing data persistence for
-the cluster with shared storage and/or Pods with volumes. The volume classes
-are extensive and vary by cloud provider, but
+Kubernetes [storage][k8s-storage] provides data persistence for
+the cluster with shared storage, and/or volumes for Pods.
+
+The volume classes are extensive and vary by cloud provider, but
 typically they include volume types for mechanical drives and
 SSDs, along with network backed storage such as [NFS][nfs], [iSCSI][iscsi], and [CephFS][ceph-fs].
 
@@ -396,16 +399,24 @@ desired storage classes created in the cluster.
 If two or more of them are marked as default, a [`PersistentVolumeClaim`][k8s-pvs] without `storageClassName` explicitly specified
 cannot be created.
 
-See the [Kubernetes docs][k8s-storage-classes-default] for more details.
+See the [Kubernetes docs][k8s-storage-classes] for more details.
+
+{{< k8s-language nokx >}}
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
 
 As of Kubernetes v1.11+ on EKS, a default `gp2`
-[storage class][eks-storage-classes] will always be created automatically for the cluster by EKS.
+storage class will always be created automatically for the cluster by EKS.
 
 See the [official EKS docs][eks-storage-classes] for more details.
+
+[eks-storage-classes]: https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
+
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
 
 Create the storage classes using `kubectl`.
 
@@ -436,25 +447,6 @@ EOF
 $ kubectl apply -f storage-classes.yaml
 ```
 
-or
-
-Create the storage classes using Pulumi.
-
-```typescript
-import * as eks from "@pulumi/eks";
-
-// Create an EKS cluster with custom storage classes.
-const cluster = new eks.Cluster(`${projectName}`, {
-    storageClasses: {
-        "gp2-encrypted": { type: "gp2", encrypted: true},
-        "sc1": { type: "sc1"}
-    },
-    ...
-}
-```
-With the desired storage classes created in the cluster, we can create any
-necessary persistent volumes in the cluster.
-
 Create the persistent volume with a persistent volume claim and `kubectl`.
 
 ```bash
@@ -478,8 +470,29 @@ EOF
 ```bash
 $ kubectl apply -f pvc.yaml
 ```
+{{% /md %}}
+</div>
 
-or
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
+
+Create the storage classes using Pulumi.
+
+```typescript
+import * as eks from "@pulumi/eks";
+
+// Create an EKS cluster with custom storage classes.
+const cluster = new eks.Cluster(`${projectName}`, {
+    storageClasses: {
+        "gp2-encrypted": { type: "gp2", encrypted: true},
+        "sc1": { type: "sc1"}
+    },
+    ...
+}
+```
+With the desired storage classes created in the cluster, we can create any
+necessary persistent volumes in the cluster.
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
@@ -504,8 +517,9 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
     });
 });
 ```
+{{% /md %}}
+</div>
 
-[eks-storage-classes]: https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
 {{% /md %}}
 </div>
 
@@ -513,11 +527,15 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
 <div class="mt">
 {{% md %}}
 
+<div class="k8s-language-prologue-yaml"></div>
+<div class="mt">
+{{% md %}}
+
 After the cluster is provisioned and running, create an example StorageClass to
 provision Azure disks.
 
 ```yaml
-$ cat > storage-classes.yaml << EOF
+cat > storage-classes.yaml << EOF
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
@@ -534,10 +552,85 @@ EOF
 $ kubectl apply -f storage-classes.yaml
 ```
 
+Create the persistent volume with a persistent volume claim and `kubectl`.
+
+```yaml
+cat > pvc.yaml << EOF
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mypvc
+  labels:
+    app: myapp
+spec:
+  storageClassName: managed-premium-retain
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+EOF
+```
+
+```bash
+$ kubectl apply -f pvc.yaml
+```
+{{% /md %}}
+</div>
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
+
+Create the storage classes using Pulumi.
+
+```typescript
+import * as eks from "@pulumi/eks";
+
+// Create an EKS cluster with custom storage classes.
+const cluster = new eks.Cluster(`${projectName}`, {
+    storageClasses: {
+        "gp2-encrypted": { type: "gp2", encrypted: true},
+        "sc1": { type: "sc1"}
+    },
+    ...
+}
+```
+With the desired storage classes created in the cluster, we can create any
+necessary persistent volumes in the cluster.
+
+Create the persistent volume with a persistent volume claim and Pulumi.
+
+```typescript
+import * as eks from "@pulumi/eks";
+import * as k8s from "@pulumi/k8s";
+
+// Create a persistent volume claim with a storage class built into the cluster.
+cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
+    sc.metadata.name.apply(name => {
+        if (name) {
+            const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
+                    spec: {
+                        accessModes: ["ReadWriteOnce"],
+                        storageClassName: name,
+                        resources: {requests: {storage: "1Gi"}}
+                    }
+                },
+                { provider: cluster.provider }
+            );
+        }
+    });
+});
+```
+{{% /md %}}
+</div>
 {{% /md %}}
 </div>
 
 <div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+<div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
 {{% md %}}
 
@@ -560,7 +653,55 @@ EOF
 ```bash
 $ kubectl apply -f storage-classes.yaml
 ```
+{{% /md %}}
+</div>
 
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
+
+Create the storage classes using Pulumi.
+
+```typescript
+import * as eks from "@pulumi/eks";
+
+// Create an EKS cluster with custom storage classes.
+const cluster = new eks.Cluster(`${projectName}`, {
+    storageClasses: {
+        "gp2-encrypted": { type: "gp2", encrypted: true},
+        "sc1": { type: "sc1"}
+    },
+    ...
+}
+```
+With the desired storage classes created in the cluster, we can create any
+necessary persistent volumes in the cluster.
+
+Create the persistent volume with a persistent volume claim and Pulumi.
+
+```typescript
+import * as eks from "@pulumi/eks";
+import * as k8s from "@pulumi/k8s";
+
+// Create a persistent volume claim with a storage class built into the cluster.
+cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
+    sc.metadata.name.apply(name => {
+        if (name) {
+            const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
+                    spec: {
+                        accessModes: ["ReadWriteOnce"],
+                        storageClassName: name,
+                        resources: {requests: {storage: "1Gi"}}
+                    }
+                },
+                { provider: cluster.provider }
+            );
+        }
+    });
+});
+```
+{{% /md %}}
+</div>
 {{% /md %}}
 </div>
 
@@ -596,24 +737,24 @@ general best-practices and recommendations to configure in the cluster.
     plane.
 
 ```typescript
-  import * as eks from "@pulumi/eks";
+import * as eks from "@pulumi/eks";
 
-  // Create an EKS cluster with recommended settings.
-  const cluster = new eks.Cluster(`${projectName}`, {
-      version: "1.14",
-      tags: {
-          "Project": "k8s-aws-cluster",
-          "Org": "pulumi",
-      },
-      clusterSecurityGroupTags: { "ClusterSecurityGroupTag": "true" },
-      nodeSecurityGroupTags: { "NodeSecurityGroupTag": "true" },
-      skipDefaultNodeGroup: true,
-      deployDashboard: false,
-      enabledClusterLogTypes: ["api", "audit", "authenticator", "controllerManager", "scheduler"],
-      // endpointPublicAccess: false,     // Requires bastion to access cluster API endpoint
-      // endpointPrivateAccess: true,     // Requires bastion to access cluster API endpoint
-      ...
-  }
+// Create an EKS cluster with recommended settings.
+const cluster = new eks.Cluster(`${projectName}`, {
+        version: "1.14",
+        tags: {
+            "Project": "k8s-aws-cluster",
+            "Org": "pulumi",
+        },
+        clusterSecurityGroupTags: { "ClusterSecurityGroupTag": "true" },
+        nodeSecurityGroupTags: { "NodeSecurityGroupTag": "true" },
+        skipDefaultNodeGroup: true,
+        deployDashboard: false,
+        enabledClusterLogTypes: ["api", "audit", "authenticator", "controllerManager", "scheduler"],
+        // endpointPublicAccess: false,     // Requires bastion to access cluster API endpoint
+        // endpointPrivateAccess: true,     // Requires bastion to access cluster API endpoint
+        ...
+}
 ```
 
 [nodegroups]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
@@ -709,4 +850,5 @@ const cluster = new gcp.container.Cluster("cluster", {
 [iscsi]: https://kubernetes.io/docs/concepts/storage/#iscsi
 [ceph-fs]: https://docs.ceph.com/docs/master/cephfs/
 [k8s-pvs]: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
-[k8s-storage-classes-default]: https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/#changing-the-default-storageclass
+[k8s-storage-classes]: https://kubernetes.io/docs/concepts/storage/storage-classes/
+[eks-storage-classes]: https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
