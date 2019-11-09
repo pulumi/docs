@@ -363,7 +363,7 @@ $ kubectl delete pod/nginx svc/nginx
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
-Beclaratively deploy a NGINX Pod and public load-balanced service:
+Declaratively deploy a NGINX Pod and public load-balanced service:
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -405,8 +405,8 @@ const service = new k8s.core.v1.Service(name,
 {{% md %}}
 ```ts
 // Export the Service name and public LoadBalancer Endpoint
-export const serviceName = service.metadata.apply(m => m.name);
-export const serviceHostname = service.status.apply(s => s.loadBalancer.ingress[0].hostname)
+export const serviceName = service.metadata.name;
+export const serviceHostname = service.status.loadBalancer.ingress[0].hostname;
 ```
 
 After a few moments, visit the load balancer listed in the `serviceHostname`.
@@ -422,8 +422,8 @@ $ curl `pulumi stack output serviceHostname`
 {{% md %}}
 ```ts
 // Export the Service name and public LoadBalancer Endpoint
-export const serviceName = service.metadata.apply(m => m.name);
-export const serviceIp = service.status.apply(s => s.loadBalancer.ingress[0].ip)
+export const serviceName = service.metadata.name;
+export const serviceIp = service.status.loadBalancer.ingress[0].ip;
 ```
 
 After a few moments, visit the load balancer listed in the `serviceIp`.
@@ -439,8 +439,8 @@ $ curl `pulumi stack output serviceIp`
 {{% md %}}
 ```ts
 // Export the Service name and public LoadBalancer Endpoint
-export const serviceName = service.metadata.apply(m => m.name);
-export const serviceHostname = service.status.apply(s => s.loadBalancer.ingress[0].ip)
+export const serviceName = service.metadata.name;
+export const serviceIp = service.status.loadBalancer.ingress[0].ip;
 ```
 
 After a few moments, visit the load balancer listed in the `serviceIp`.
@@ -451,7 +451,7 @@ $ curl `pulumi stack output serviceIp`
 
 {{% /md %}}
 </div>
-To tear down NGINX, delete it's definition in the Pulumi program and run a Pulumi update.
+To tear down NGINX, delete its definition in the Pulumi program and run a Pulumi update.
 {{% /md %}}
 </div>
 

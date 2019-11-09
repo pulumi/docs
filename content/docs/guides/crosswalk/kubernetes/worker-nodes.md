@@ -52,9 +52,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 Given that apps and workloads will vary in quantity, and in the resources they
 require, it's wise to offer differing pools of nodes for Pods to use.
 
-Pools, also known as Node Groups, can vary by machine instance type for specific
-hardware profiles. Or in sizing and capacity of nodes in a scaling group.
-As well as other properties like the version of the [Kubelet][k8s-kubelet] to run.
+Pools, also known as Node Groups, can vary by instance type, sizing, capacity,
+scaling group, or other properties like the version of the [Kubelet][k8s-kubelet] to run.
 
 How you segment and configure your node groups will vary by preferences and
 requirements. Generally, there are at least a few classes of worker node
@@ -303,7 +302,7 @@ In GKE, worker node pools provide automatic scaling and management of a logical
 collection of hosts through health checks and policies, and are an effective
 means of ensuring node pools are adequately provisioned as intended.
 
-We can configure the node config to run a specific quantity of nodes, alongwith
+We can configure the node config to run a specific quantity of nodes, along with
 the min and max capacity the pool should have.
 
 Size the node pools accordingly to known or approximate usage and bursting
@@ -342,8 +341,8 @@ a node group accordingly for the `cluster-autoscaler`.
 
 We can logically organize node groups in Kubernetes to use with configurable scheduling
 predicates on Pods. Node [Labels][k8s-labels] are used to identify nodes by attributes,
-and [Taints][k8s-taints] repel a set of Pods to ensure that only a given
-class of workload that can tolerate the taint is allowed to run on the nodes.
+and [Taints][k8s-taints] ensure that only workloads with a matching set of
+tolerations are allowed to run on the nodes.
 
 Both configurations can be set in the `PodSpec` using a
 [`nodeSelector`][k8s-node-selector] or [`tolerations`][k8s-taints]
@@ -450,7 +449,7 @@ const performantNodes = new gcp.container.NodePool("performant-nodes", {
 <div class="mt">
 {{% md %}}
 
-  * Use a specific version of Kubernetes for node group. This pins the nodes
+  * Use a specific version of Kubernetes for each node group. This pins the nodes
   to a particular release in a declarative manner, instead of implicitly
   using the latest available version, or using a smart default where both
   can be updated at any moment.
@@ -458,34 +457,33 @@ const performantNodes = new gcp.container.NodePool("performant-nodes", {
   metadata to resources to make it easier to manage, search, and filter them.
 
 ```typescript
-// Create a Standard node group of t2.medium workers with an IAM instance profile.
+// Create a Standard node group of t2.medium workers.
 const ngStandard = new eks.NodeGroup(`${projectName}-ng-standard`, {
-    cluster: cluster,
-    instanceType: "t2.medium",
-    amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
-    cloudFormationTags: clusterName.apply(clusterName => ({
-        "CloudFormationGroupTag": "true",
-        "k8s.io/cluster-autoscaler/enabled": "true",
-        [`k8s.io/cluster-autoscaler/${clusterName}`]: "true",
-    })),
-    ...
+        cluster: cluster,
+        amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
+        instanceType: "t2.medium",
+        cloudFormationTags: clusterName.apply(clusterName => ({
+            "CloudFormationGroupTag": "true",
+            "k8s.io/cluster-autoscaler/enabled": "true",
+            [`k8s.io/cluster-autoscaler/${clusterName}`]: "true",
+        })),
+        ...
 }, {
-    providers: { kubernetes: cluster.provider},
+         providers: { kubernetes: cluster.provider},
 });
 
-// Create a 2xlarge node group of t3.2xlarge workers with an IAM instance profile.
+// Create a 2xlarge node group of t3.2xlarge workers with taints for special workloads.
 const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
-    cluster: cluster,
-    instanceType: "t3.2xlarge",
-    amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
-    cloudFormationTags: clusterName.apply(clusterName => ({
-        "CloudFormationGroupTag": "true",
-        "k8s.io/cluster-autoscaler/enabled": "true",
-        [`k8s.io/cluster-autoscaler/${clusterName}`]: "true",
-    })),
-    ...
+        cluster: cluster,
+        amiId: "ami-0ca5998dc2c88e64b", // k8s v1.14.7 in us-west-2
+        instanceType: "t3.2xlarge",
+        cloudFormationTags: clusterName.apply(clusterName => ({
+            "CloudFormationGroupTag": "true",
+            "k8s.io/cluster-autoscaler/enabled": "true",
+            [`k8s.io/cluster-autoscaler/${clusterName}`]: "true",
+        })),
 }, {
-    providers: { kubernetes: cluster.provider},
+        providers: { kubernetes: cluster.provider},
 });
 ```
 
@@ -496,7 +494,7 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-  * Use a specific version of Kubernetes for node group. This pins the nodes
+  * Use a specific version of Kubernetes for each node group. This pins the nodes
   to a particular release in a declarative manner, instead of implicitly
   using the latest available version, or using a smart default where both
   can be updated at any moment.
@@ -508,7 +506,7 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-  * Use a specific version of Kubernetes for node group. This pins the nodes
+  * Use a specific version of Kubernetes for each node group. This pins the nodes
     to a particular release in a declarative manner, instead of implicitly
     using the latest available version, or using a smart default where both
     can be updated at any moment.

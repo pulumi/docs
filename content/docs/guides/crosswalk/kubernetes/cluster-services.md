@@ -14,29 +14,6 @@ These services tend to include logging and monitoring at a minimum for the
 whole cluster, or a subset of apps and workloads. It could also include
 policy enforcement and service meshes.
 
-## Overview
-
-We'll explore how to setup:
-
-  * [Logging](#logging)
-  * [Monitoring](#monitoring)
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
-
-## Prerequisites
-
-Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] stack.
-
-```bash
-$ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-session-name k8s-admin
-$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
-```
-[aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
-{{% /md %}}
-</div>
-
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
@@ -63,6 +40,29 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 The full code for this stack is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/04-cluster-services
 
+{{% /md %}}
+</div>
+
+## Overview
+
+We'll explore how to setup:
+
+  * [Logging](#logging)
+  * [Monitoring](#monitoring)
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+## Prerequisites
+
+Authenticate as the `admins` role from the [Identity][aws-admin-identity-stack] stack.
+
+```bash
+$ aws sts assume-role --role-arn `pulumi stack output adminsIamRoleArn` --role-session-name k8s-admin
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
+[aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
 {{% /md %}}
 </div>
 
