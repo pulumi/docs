@@ -122,15 +122,15 @@ End Module
 
 The fastest way to get up and running is to choose from one of the following Getting Started guides:
 
-<div class="md:flex flex-row mt-6 mb-6">
-    <a class="btn bg-transparent border w-1/2 border-solid border-gray-300 hover:bg-gray-200 justify-center p-4 mr-5" href="{{< relref "../../get-started/aws" >}}">
-        <img class="h-5 ml-auto mr-auto" src="/logos/tech/aws.svg" alt="AWS">
+<div class="flex md:flex-row flex-col my-6">
+    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/aws" >}}">
+        <img class="h-5" src="/logos/tech/aws.svg" alt="AWS">
     </a>
-    <a class="btn bg-transparent border w-1/2 border-solid border-gray-300 hover:bg-gray-200 justify-center items-center p-4 mr-4" href="{{< relref "../../get-started/azure" >}}">
-        <img class="h-5 ml-auto mr-auto" src="/logos/tech/azure.svg" alt="Azure">
+    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/azure" >}}">
+        <img class="h-5" src="/logos/tech/azure.svg" alt="Azure">
     </a>
-    <a class="btn bg-transparent border w-1/2 border-solid border-gray-300 hover:bg-gray-200 justify-center p-4 mr-4" href="{{< relref "../../get-started/gcp" >}}">
-        <img class="h-5 ml-auto mr-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
+    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 flex justify-center" href="{{< relref "../../get-started/gcp" >}}">
+        <img class="h-5" src="/logos/tech/gcp.svg" alt="Google Cloud">
     </a>
 </div>
 
