@@ -14,6 +14,40 @@ These services tend to include datastores, and managers for ingress, DNS, and TL
 They can be shared amongst several apps or be specific to workloads, and are
 usually a mix of cloud provider and custom services.
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for the AWS app services stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/05-app-services
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for the Azure app services stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/05-app-services
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for the GCP app services stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/05-app-services
+
+{{% /md %}}
+</div>
+
+The full code for the general app services is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/general-app-services
+
+
 ## Overview
 
 We'll explore how to setup:
@@ -61,39 +95,6 @@ $ export KUBECONFIG=`pwd`/kubeconfig.json
 [gcp-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-and-serviceaccount-for-admins" >}}
 {{% /md %}}
 </div>
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
-
-The full code for the AWS app services stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/05-app-services
-
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-
-The full code for the Azure app services stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/05-app-services
-
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-
-The full code for the GCP app services stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/05-app-services
-
-{{% /md %}}
-</div>
-
-The full code for the general app services is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/general-app-services
 
 ## Datastores
 
