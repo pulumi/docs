@@ -10,7 +10,39 @@ menu:
 The following are examples of how to create and use various types of Kubernetes
 resources, and typical apps and workloads.
 
-The full code for this stack is on [GitHub][gh-repo-stack].
+{{< cloudchoose >}}
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for the AWS apps stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/06-apps
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for the Azure apps stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/06-apps
+
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+
+The full code for the GCP apps stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/06-apps
+
+{{% /md %}}
+</div>
+
+The full code for the apps is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps
 
 ## Examples

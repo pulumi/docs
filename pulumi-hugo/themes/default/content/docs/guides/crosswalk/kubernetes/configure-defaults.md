@@ -310,7 +310,7 @@ cat > restrictive-psp.yaml << EOF
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
-  name: restrictive
+  name: demo-restrictive
 spec:
   privileged: false
   hostNetwork: false
@@ -343,7 +343,7 @@ spec:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: restrictive
+  name: demo-restrictive
 rules:
 - apiGroups:
   - policy
@@ -366,7 +366,7 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: restrictive
+  name: demo-restrictive
 subjects:
 - kind: Group
   name: system:serviceaccounts
@@ -384,7 +384,7 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: restrictive
+  name: demo-restrictive
 subjects:
 - kind: Group
   name: pulumi:devs
@@ -395,6 +395,94 @@ EOF
 ```bash
 $ kubectl apply -f restrictive-psp.yaml
 ```
+{{% /md %}}
+</div>
+
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
+
+```ts
+import * as k8s from "@pulumi/kubernetes";
+
+const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("demo-restrictive", {
+    metadata: { name: "demo-restrictive" },
+    spec: {
+        privileged: false,
+        hostNetwork: false,
+        allowPrivilegeEscalation: false,
+        defaultAllowPrivilegeEscalation: false,
+        hostPID: false,
+        hostIPC: false,
+        runAsUser: { rule: "RunAsAny" },
+        fsGroup: { rule: "RunAsAny" },
+        seLinux: { rule: "RunAsAny" },
+        supplementalGroups: { rule: "RunAsAny" },
+        volumes: [
+            "configMap",
+            "downwardAPI",
+            "emptyDir",
+            "persistentVolumeClaim",
+            "secret",
+            "projected"
+        ],
+        allowedCapabilities: [
+            "*"
+        ]
+    }
+});
+const restrictiveClusterRole = new k8s.rbac.v1.ClusterRole("demo-restrictive", {
+    metadata: { name: "demo-restrictive" },
+    rules: [
+        {
+            apiGroups: [
+                "policy"
+            ],
+            resourceNames: [
+                restrictivePSP.metadata.name,
+            ],
+            resources: [
+                "podsecuritypolicies"
+            ],
+            verbs: [
+                "use"
+            ]
+        }
+    ]
+});
+const allowRestrictedKubeSystemCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restricted-kube-system", {
+    metadata: { name: "demo-restrictive" },
+    roleRef: {
+        apiGroup: "rbac.authorization.k8s.io",
+        kind: "ClusterRole",
+        name: restrictiveClusterRole.metadata.name
+    },
+    subjects: [
+        {
+            kind: "Group",
+            name: "system:serviceaccounts",
+            namespace: "kube-system"
+        }
+    ]
+});
+const allowRestrictedAppsCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restricted-apps", {
+    metadata: { name: "allow-restricted-apps" },
+    roleRef: {
+        apiGroup: "rbac.authorization.k8s.io",
+        kind: "ClusterRole",
+        name: restrictiveClusterRole.metadata.name
+    },
+    subjects: [
+        {
+            kind: "Group",
+            name: "pulumi:devs",
+            namespace: appsNamespaceName
+        }
+    ]
+});
+```
+{{% /md %}}
+</div>
 
 #### Create a Privileged PSP Role Binding
 
@@ -407,11 +495,6 @@ a given Namespace's (`ingress-nginx`) ServiceAccounts.
 <div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
 {{% md %}}
-
-<div class="cloud-prologue-aws"></div>
-<div class="mt">
-{{% md %}}
-
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
 apiVersion: rbac.authorization.k8s.io/v1
@@ -435,65 +518,28 @@ $ kubectl apply -f privileged-rolebinding.yaml
 {{% /md %}}
 </div>
 
-<div class="cloud-prologue-azure"></div>
-<div class="mt">
-{{% md %}}
-
-```yaml
-cat > privileged-clusterrolebinding.yaml << EOF
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: allow-privileged-ingress-nginx
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: psp:privileged
-subjects:
-- kind: Group
-  name: system:serviceaccounts:ingress-nginx
-  apiGroup: rbac.authorization.k8s.io
-EOF
-```
-
-```bash
-$ kubectl apply -f privileged-rolebinding.yaml
-```
-{{% /md %}}
-</div>
-
-<div class="cloud-prologue-gcp"></div>
-<div class="mt">
-{{% md %}}
-
-```yaml
-cat > privileged-clusterrolebinding.yaml << EOF
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: allow-privileged-ingress-nginx
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: gce.privileged
-subjects:
-- kind: Group
-  name: system:serviceaccounts:ingress-nginx
-  apiGroup: rbac.authorization.k8s.io
-EOF
-```
-
-```bash
-$ kubectl apply -f privileged-rolebinding.yaml
-```
-{{% /md %}}
-</div>
-
-{{% /md %}}
-</div>
-
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
+
+```ts
+import * as k8s from "@pulumi/kubernetes";
+
+const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
+    metadata: { name: "allow-privileged-ingress-nginx" },
+    roleRef: {
+        apiGroup: "rbac.authorization.k8s.io",
+        kind: "ClusterRole",
+        name: "demo-privileged"
+    },
+    subjects: [
+        {
+            kind: "Group",
+            name: "system:serviceaccounts:ingress-nginx",
+            apiGroup: "rbac.authorization.k8s.io"
+        }
+    ]
+});
+```
 {{% /md %}}
 </div>

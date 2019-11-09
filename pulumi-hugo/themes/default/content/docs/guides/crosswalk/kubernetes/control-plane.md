@@ -816,15 +816,11 @@ const cluster = new eks.Cluster(`${projectName}`, {
 
 **GKE:**
 
-  * Use a specific version of Kubernetes. This pins the nodes
-    to a particular release in a declarative manner, instead of implicitly
-    using the latest available version, or using a smart default where both
-    can be updated at any moment.
   * Enable [PodSecurityPolicies][k8s-psp] using `podSecurityPolicyConfig: { enabled: true }`
   * Skip enabling the default node group in favor of managing them separately from
     the control plane, as demonstrated in [Create the Worker Nodes][nodegroups].
   * [Disable legacy metadata APIs][gcp-disable-metadata] that are not v1 and do not enforce internal GCP metadata headers
-  * Enable control plane logging and monitoring to have diagnostics of the control
+  * Enable control plane logging and monitoring through `oauthScopes` to have diagnostics of the control
     plane's actions, and for use in debugging and auditing.
   * (Optional) Configure private accessibility of the control plane /
     API Server endpoint to prevent it from being publicly exposed on the
