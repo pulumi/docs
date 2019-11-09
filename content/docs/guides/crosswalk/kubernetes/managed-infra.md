@@ -366,7 +366,7 @@ const storageAccount = new azure.storage.Account("websitesa", {
 ```
 ## Azure Container Registry (ACR)
 
-Create a new registry.
+Create a new registry, build a local Docker image, and push it to the registry.
 
 ```typescript
 import * as azure from "@pulumi/azure";
@@ -378,7 +378,7 @@ const resourceGroup = new azure.core.ResourceGroup("rg", {
 });
 
 // Create an ACR.
-const acr = new azure.containerservice.Registry("acr", {
+const registry = new azure.containerservice.Registry("acr", {
     adminEnabled: false,
     georeplicationLocations: [
         "East US",
@@ -388,6 +388,21 @@ const acr = new azure.containerservice.Registry("acr", {
     name: "containerRegistry1",
     resourceGroupName: resourceGroup.name,
     sku: "Premium",
+});
+
+// Build a local Docker image with a given Dockerfile context, and push it
+// to the registry.
+const customImage = "node-app";
+const appImage = new docker.Image(customImage, {
+    imageName: pulumi.interpolate`${registry.loginServer}/${customImage}:v1.0.0`,
+    build: {
+        context: `./${customImage}`,
+    },
+    registry: {
+        server: registry.loginServer,
+        username: registry.adminUsername,
+        password: registry.adminPassword,
+    },
 });
 ```
 
@@ -410,6 +425,28 @@ const debian = gcp.container.getRegistryImage({
 });
 
 export const gcrLocation = debian.imageUrl;
+```
+
+Fetch the project's registry and display its GCR location.
+
+```ts
+import * as gcp from "@pulumi/gcp";
+
+const registry = gcp.container.getRegistryRepository();
+export const gcrLocation = registry.repositoryUrl;
+```
+
+Build a local Docker image with a given Dockerfile context, and push it to the registry.
+```ts
+import * as docker from "@pulumi/docker";
+
+const customImage = "node-app";
+const appImage = new docker.Image(customImage, {
+    imageName: pulumi.interpolate`${registry.repositoryUrl}/${customImage}:v1.0.0`,
+    build: {
+        context: `./${customImage}`,
+    },
+});
 ```
 
 ## GCP Object Storage
