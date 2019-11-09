@@ -101,7 +101,7 @@ VMs, registries, data pipelines, and data warehouses.
 Configure and provision the Kubernetes cluster with the desired settings and defaults.
 
 Typically this also involves provisioning Kubernetes cluster infrastructure
-with [API resources][k8s-api-resources] such as `Namespaces`, `Roles` , `RoleBindings`, and `Quotas`.
+with [API resources][k8s-api-resources] such as Namespaces, Roles , RoleBindings, and Quotas.
 
 Using a managed Kubernetes cluster on [EKS][eks], [GKE][gke], or [AKS][aks] is
 the easiest recommended way to get started with deploying a cluster.
