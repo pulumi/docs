@@ -22,7 +22,7 @@ See the [official Kubernetes docs][k8s-docs] for more details.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/metral/crosswalk/aws/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/03-cluster-configuration
 {{% /md %}}
 </div>
 
@@ -32,7 +32,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/metral/crosswalk/azure/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/03-cluster-configuration
 {{% /md %}}
 </div>
 
@@ -42,7 +42,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/metral/crosswalk/gcp/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
 
 {{% /md %}}
 </div>
