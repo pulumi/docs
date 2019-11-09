@@ -495,6 +495,10 @@ a given Namespace's (`ingress-nginx`) ServiceAccounts.
 <div class="k8s-language-prologue-yaml"></div>
 <div class="mt">
 {{% md %}}
+
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
 apiVersion: rbac.authorization.k8s.io/v1
@@ -517,11 +521,66 @@ $ kubectl apply -f privileged-rolebinding.yaml
 ```
 {{% /md %}}
 </div>
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+```yaml
+cat > privileged-clusterrolebinding.yaml << EOF
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: allow-privileged-ingress-nginx
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: psp:privileged
+subjects:
+- kind: Group
+  name: system:serviceaccounts:ingress-nginx
+  apiGroup: rbac.authorization.k8s.io
+EOF
+```
+
+```bash
+$ kubectl apply -f privileged-rolebinding.yaml
+```
+{{% /md %}}
+</div>
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+```yaml
+cat > privileged-clusterrolebinding.yaml << EOF
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: allow-privileged-ingress-nginx
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: gce:podsecuritypolicy:privileged
+subjects:
+- kind: Group
+  name: system:serviceaccounts:ingress-nginx
+  apiGroup: rbac.authorization.k8s.io
+EOF
+```
+
+```bash
+$ kubectl apply -f privileged-rolebinding.yaml
+```
+{{% /md %}}
+</div>
+
+{{% /md %}}
+</div>
 
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
-
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -530,7 +589,7 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
     roleRef: {
         apiGroup: "rbac.authorization.k8s.io",
         kind: "ClusterRole",
-        name: "demo-privileged"
+        name: "eks.privileged"
     },
     subjects: [
         {
@@ -541,5 +600,58 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
     ]
 });
 ```
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+```ts
+import * as k8s from "@pulumi/kubernetes";
+
+const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
+    metadata: { name: "allow-privileged-ingress-nginx" },
+    roleRef: {
+        apiGroup: "rbac.authorization.k8s.io",
+        kind: "ClusterRole",
+        name: "psp:privileged"
+    },
+    subjects: [
+        {
+            kind: "Group",
+            name: "system:serviceaccounts:ingress-nginx",
+            apiGroup: "rbac.authorization.k8s.io"
+        }
+    ]
+});
+```
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+```ts
+import * as k8s from "@pulumi/kubernetes";
+
+const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
+    metadata: { name: "allow-privileged-ingress-nginx" },
+    roleRef: {
+        apiGroup: "rbac.authorization.k8s.io",
+        kind: "ClusterRole",
+        name: "gce:podsecuritypolicy:privileged",
+    },
+    subjects: [
+        {
+            kind: "Group",
+            name: "system:serviceaccounts:ingress-nginx",
+            apiGroup: "rbac.authorization.k8s.io"
+        }
+    ]
+});
+```
+{{% /md %}}
+</div>
+
 {{% /md %}}
 </div>
