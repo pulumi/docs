@@ -802,8 +802,25 @@ const cluster = new eks.Cluster(`${projectName}`, {
 **AKS:**
 
   * Enable [PodSecurityPolicies][k8s-psp] using `enablePodSecurityPolicy: true`
-  * Set [Node Labels][k8s-labels] to identify nodes by attributes,
+  * Set [Node Labels][k8s-labels] to identify nodes by attributes
   * Enable Log Analytics using the `omsAgent` setting
+
+
+```ts
+import * as azure from "@pulumi/azure";
+
+const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
+        ...
+        enablePodSecurityPolicy: true,
+        kubernetesVersion: "1.14.8",
+        addonProfile: {
+            omsAgent: {
+                enabled: true,
+                logAnalyticsWorkspaceId: config.logAnalyticsWorkspaceId,
+            },
+        },
+});
+```
 
 [k8s-labels]: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 [k8s-psp]: https://kubernetes.io/docs/concepts/policy/pod-security-policy/
