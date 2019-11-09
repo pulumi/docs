@@ -1,5 +1,4 @@
----
-title: Try Out the Cluster
+--- title: Try Out the Cluster
 menu:
   userguides:
     parent: crosswalk-kubernetes
@@ -13,22 +12,13 @@ After the cluster is created with a Pulumi update, there will be
 [outputs][pulumi-outputs] with fields like the cluster's `kubeconfig` file
 contents, and its cluster name for reference.
 
-## Overview
-
-We'll explore how to:
-
-  * [Access the Cluster](#access-the-cluster)
-  * [Query the Cluster](#query-the-cluster)
-  * [Deploy a Workload](#deploy-a-workload)
-  * [Learn More](#learn-more)
-
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/metral/crosswalk/aws/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/03-cluster-configuration
 {{% /md %}}
 </div>
 
@@ -38,7 +28,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/metral/crosswalk/azure/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/03-cluster-configuration
 {{% /md %}}
 </div>
 
@@ -48,10 +38,19 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/metral/crosswalk/gcp/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
 
 {{% /md %}}
 </div>
+
+## Overview
+
+We'll explore how to:
+
+  * [Access the Cluster](#access-the-cluster)
+  * [Query the Cluster](#query-the-cluster)
+  * [Deploy a Workload](#deploy-a-workload)
+  * [Learn More](#learn-more)
 
 ### Access the Cluster
 
