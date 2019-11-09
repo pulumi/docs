@@ -83,7 +83,7 @@ We'll configure and deploy:
 
 ## Identity
 
-In [Identity][crosswalk-identity] we demonstrate how to create typical IAM resources for use in Kubernetes.
+In [Identity][crosswalk-identity] we demonstrate how to create typical IAM resources for use in Kubernetes. You'll want to create the Identity stack first.
 
 Separation of identities is important for several reasons: it can be used to
 limit the blast radius if a given group is compromised, can regulate the number
@@ -235,8 +235,10 @@ const cluster = new eks.Cluster(`${projectName}`, {
 
 ## Managed Infrastructure
 
-In [Managed Infrastructure][crosswalk-infra] we demonstrate deploying managed services
-and how to create or use an existing virtual network for use with Kubernetes.
+In [Managed Infrastructure][crosswalk-infra] we demonstrate deploying managed services and how to create or use an existing virtual network for use with Kubernetes.
+
+You'll want to create the Managed Infrastructure stack next, before the Cluster
+Configuration stack.
 
 ### Networking
 
