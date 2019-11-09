@@ -20,6 +20,30 @@ properly terminate, and should leverage capabilities such as [Node selectors][k8
 [affinity][k8s-affinity], and [probes][k8s-probes] to guarantee expected
 scheduling, and readiness during updates.
 
+<div class="cloud-prologue-aws"></div>
+<div class="mt">
+{{% md %}}
+The full code for this stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/03-cluster-configuration
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-azure"></div>
+<div class="mt">
+{{% md %}}
+The full code for this stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/03-cluster-configuration
+{{% /md %}}
+</div>
+
+<div class="cloud-prologue-gcp"></div>
+<div class="mt">
+{{% md %}}
+The full code for this stack is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
+{{% /md %}}
+</div>
+
 ## Overview
 
 We'll examine how to:
