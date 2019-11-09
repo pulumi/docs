@@ -83,7 +83,6 @@ messages.
 
 ```bash
 $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
-$ pulumi stack output kubeconfig > kubeconfig-devs.json
 $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 $ kubectl run --namespace=`pulumi stack output appsNamespaceName` --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}' --limits cpu=200m,memory=256Mi
 Error from server (Forbidden): pods is forbidden: User "pulumi:alice" cannot create resource "pods" in API group "" in the namespace "apps-x1z818eg"
@@ -91,6 +90,13 @@ Error from server (Forbidden): pods is forbidden: User "pulumi:alice" cannot cre
 
 Below is an example of how to create a Kubernetes Role and RoleBiding for the `devs` to **only** deploy common
 workloads in the `apps` namespace (created in  [cluster defaults][crosswalk-configure-defaults]).
+
+Assume the `admin` user.
+
+```ts
+$ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
+$ export KUBECONFIG=`pwd`/kubeconfig-admin.json
+```
 [crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 
