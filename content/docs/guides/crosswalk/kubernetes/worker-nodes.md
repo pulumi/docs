@@ -511,7 +511,7 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
     using the latest available version, or using a smart default where both
     can be updated at any moment.
   * Set [OAuth Scopes][gcp-oauth-scopes] for Google APIs to limit the capabilities of the node
-    pool.
+    pool, and enable managed GCP logging and monitoring of the cluster.
   * Tag resources under management to provide the ability to assign
     metadata to resources to make it easier to manage, search, and filter them.
 
