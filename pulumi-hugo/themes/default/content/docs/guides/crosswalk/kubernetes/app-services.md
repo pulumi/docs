@@ -197,9 +197,55 @@ const cacheConn = new k8s.core.v1.ConfigMap("postgres-db-conn",
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
-AZURE TODO
 
-##
+### MongoDB
+
+Create a MongoDB database instance in [Azure CosmosDB][azure-cosmosdb], and store its
+connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
+to and consume.
+
+```ts
+import * as azure from "@pulumi/azure";
+import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
+
+const name = pulumi.getProject();
+
+// Define a separate resource group for app services.
+const resourceGroup = new azure.core.ResourceGroup(name);
+
+// Create a MongoDB-flavored instance of CosmosDB.
+const cosmosdb = new azure.cosmosdb.Account("k8s-az-mongodb", {
+    resourceGroupName: resourceGroup.name,
+    kind: "MongoDB",
+    consistencyPolicy: {
+        consistencyLevel: "Session",
+    },
+    offerType: "Standard",
+    geoLocations: [
+        { location: resourceGroup.location, failoverPriority: 0 },
+    ],
+});
+
+// A k8s provider instance of the cluster.
+const provider = new k8s.Provider(`${name}-aks`, {
+    kubeconfig: config.kubeconfig,
+});
+
+// Create secret from MongoDB connection string.
+const mongoConnStrings = new k8s.core.v1.Secret(
+    "mongo-secrets",
+    {
+        metadata: { name: "mongo-secrets", namespace: config.appsNamespaceName},
+        data: mongoHelpers.parseConnString(cosmosdb.connectionStrings),
+    },
+    { provider },
+);
+
+```
+
+[azure-cosmosdb]: https://azure.microsoft.com/en-us/services/cosmos-db/
+[k8s-secret]: https://kubernetes.io/docs/concepts/configuration/secret/
 {{% /md %}}
 </div>
 
@@ -207,7 +253,95 @@ AZURE TODO
 <div class="mt">
 {{% md %}}
 
-GCP TODO
+### Postgres Database
+
+Create a Postgres database instance in [CloudSQL][gcp-cloudsql], and store its
+connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
+to and consume.
+
+```ts
+import * as gcp from "@pulumi/gcp";
+import * as k8s from "@pulumi/kubernetes";
+import * as random from "@pulumi/random";
+
+// Generate a strong password for the Postgres DB.
+const postgresDbPassword = new random.RandomString(
+    `${projectName}-db-password`,
+    {
+        length: 20,
+        special: true,
+    },
+    { additionalSecretOutputs: ["result"] },
+).result;
+
+// Create a Postgres DB instance.
+const db = new gcp.sql.DatabaseInstance("postgresdb", {
+    project: config.project,
+    region: "us-west1",
+    databaseVersion: "POSTGRES_9_6",
+    settings: { tier: "db-f1-micro" },
+});
+
+// Configure a new SQL user.
+const user = new gcp.sql.User("default", {
+    project: config.project,
+    instance: db.name,
+    password: postgresDbPassword,
+});
+
+// Create a new k8s provider.
+const provider = new k8s.Provider("provider", {
+    kubeconfig: config.kubeconfig,
+});
+
+// Create a Secret from the DB connection information.
+const dbConn = new k8s.core.v1.Secret(
+    "postgres-db-conn",
+    {
+        data: {
+            host: db.privateIpAddress.apply(addr => Buffer.from(addr).toString("base64")),
+            port: Buffer.from("5432").toString("base64"),
+            username: user.name.apply(user => Buffer.from(user).toString("base64")),
+            password: postgresDbPassword.apply(pass => Buffer.from(pass).toString("base64")),
+        },
+    },
+    { provider: provider },
+);
+```
+
+### Redis Datastore
+
+Create a Redis datastore instance in [GCP Cloud MemoryStore][gcp-redis], and store its
+connection information in a Kubernetes [ConfigMap][k8s-cm] for apps to refer
+to and consume.
+
+```ts
+import * as gcp from "@pulumi/gcp";
+import * as k8s from "@pulumi/kubernetes";
+
+// Create a Redis instance.
+const cache = new gcp.redis.Instance("redis", {
+    tier: "STANDARD_HA",
+    memorySizeGb: 1,
+    redisVersion: "REDIS_3_2",
+});
+
+// Create a ConfigMap from the cache connection information.
+const cacheConn = new k8s.core.v1.ConfigMap(
+    "postgres-db-conn",
+    {
+        data: {
+            host: cache.host.apply(addr => Buffer.from(addr).toString("base64")),
+        },
+    },
+    { provider: provider },
+);
+```
+
+[k8s-cm]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
+[k8s-secret]: https://kubernetes.io/docs/concepts/configuration/secret/
+[gcp-redis]: https://cloud.google.com/memorystore/
+[gcp-cloudsql]: https://cloud.google.com/sql/
 {{% /md %}}
 </div>
 
