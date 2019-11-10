@@ -297,9 +297,14 @@ We'll explore how to setup:
 
   * [Azure Logging and Monitoring](#azure-logging-and-monitoring)
 
-See the official [Azure Monitor][aks-azure-monitor] and [AKS][aks-logs] docs for more details.
+See the official [Azure Monitor][azure-monitor-overview] and [AKS][aks-logs] docs for more details.
 
 ## Azure Logging and Monitoring
+
+AKS monitoring is managed by Azure through [Log Analytics][azure-la].
+
+Once enabled, in the Azure portal visit the cluster's Kubernetes service details,
+and [analyze its Azure Monitor][azure-monitor-analyze] information in the Monitoring section's: Insights, Logs, and Metrics.
 
 ### Enable Azure Monitor for the Cluster
 
@@ -371,8 +376,10 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 
 See the official [AKS docs][aks-kubelet-logs] for more details.
 
+[azure-monitor-analyze]: https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-analyze
+[azure-la]: https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-portal
 [aks-kubelet-logs]: https://docs.microsoft.com/en-us/azure/aks/kubelet-logs
-[aks-azure-monitor]: https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview
+[azure-monitor-overview]: https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview
 [aks-logs]: https://docs.microsoft.com/en-us/azure/aks/view-master-logs
 [crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/03-cluster-configuration
 [crosswalk-aks-cluster-svcs]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/04-cluster-services
@@ -393,7 +400,7 @@ See the official [GKE][gke-logs] and [StackDriver Observing][gke-sd-observe] doc
 
 ## GCP Logging and Monitoring
 
-GKE monitoring is managed by GCP through StackDriver.
+GKE monitoring is managed by GCP through [StackDriver][gke-sd].
 
 Stackdriver Kubernetes Engine Monitoring is the default logging option for GKE
 clusters, and it comes automatically enabled for all clusters starting with version 1.14.
@@ -430,6 +437,7 @@ const standardNodes = new gcp.container.NodePool("standard-nodes", {
 });
 ```
 
+[gke-sd]: https://app.google.stackdriver.com/
 [gke-logs]: https://cloud.google.com/monitoring/kubernetes-engine/
 [gke-sd-observe]: https://cloud.google.com/monitoring/kubernetes-engine/observing
 [crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
