@@ -45,11 +45,23 @@ The full code for the GCP apps stack is on [GitHub][gh-repo-stack].
 The full code for the apps is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps
 
-## Build and Deploy Container
+## Overview
+
+Check out how to:
+
+  * [Build and Deploy a Container](#build-and-deploy-a-container)
+  * [Deploy Wordpress](#deploy-wordpress)
+  * [Create a Deployment with a Secret](#create-a-deployment-with-a-secret)
+  * [Perform a ConfigMap Rollout on a Deployment](#perform-a-configmap-rollout-on-a-deployment)
+  * [Deploy a DaemonSet](#deploy-a-daemonset)
+  * [Deploy a Job](#deploy-a-job)
+  * [Deploy a CronJob](#deploy-a-cronjob)
+  * [Deploy a StatefulSet](#deploy-a-statefulset)
+
+## Build and Deploy a Container
 
 Build a Docker container image, push it to the registry, and deploy it to
 Kubernetes.
-
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -220,7 +232,7 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 {{% /md %}}
 </div>
 
-## Wordpress
+## Deploy Wordpress
 
 The full code for this app stack is on [GitHub][gh-wp-stack].
 [gh-wp-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/wordpress
@@ -334,7 +346,7 @@ const wordpress = new k8s.apps.v1.Deployment("wordpress", {
 ...
 ```
 
-## Deployment with Secret
+## Create a Deployment with a Secret
 
 Create a [Deployment][k8s-deploy] NGINX that uses a [Secret][k8s-secret]. 
 
@@ -450,14 +462,14 @@ const nginxDeployment = new kx.Deployment(appName, {
 {{% /md %}}
 </div>
 
-## ConfigMap Rollout
+## Perform a ConfigMap Rollout on a Deployment
 
 For a complete example, check out the [Graceful App Rollout][tutorial-app-rollout] tutorial for more details
 on how to update a Deployment automatically when it's ConfigMap changes.
 
 [tutorial-app-rollout]: {{< relref "/docs/tutorials/kubernetes/configmap-rollout" >}}
 
-## DaemonSet
+## Deploy a DaemonSet
 
 Deploy a [DaemonSet][k8s-ss] of NGINX across all nodes in the cluster.
 
@@ -492,7 +504,7 @@ const nginx = new k8s.apps.v1.DaemonSet(appName, {
 }, { provider: provider });
 ```
 
-## Job
+## Deploy a Job
 
 Deploy a [Job][k8s-job] of a Perl program.
 
@@ -522,7 +534,7 @@ const exampleJob = new k8s.batch.v1.Job("example-job", {
 }, { provider: provider });
 ```
 
-## CronJob
+## Deploy a CronJob
 
 Deploy a [CronJob][k8s-cj] of a command that runs every minute.
 
@@ -557,7 +569,7 @@ const exampleCronJob = new k8s.batch.v1beta1.CronJob("example-cronjob", {
 }, { provider: provider });
 ```
 
-## StatefulSet
+## Deploy a StatefulSet
 
 Deploy a [StatefulSet][k8s-ss] of [MariaDB][mariadb].
 
