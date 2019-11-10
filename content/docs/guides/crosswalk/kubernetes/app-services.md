@@ -52,7 +52,7 @@ The full code for the general app services is on [GitHub][gh-repo-stack].
 
 We'll explore how to setup:
 
-  * [Datstores](#datastores)
+  * [Datastores](#datastores)
   * [General App Services](#general-app-services)
 
 ## Prerequisites
@@ -198,6 +198,8 @@ const cacheConn = new k8s.core.v1.ConfigMap("postgres-db-conn",
 <div class="mt">
 {{% md %}}
 AZURE TODO
+
+##
 {{% /md %}}
 </div>
 
