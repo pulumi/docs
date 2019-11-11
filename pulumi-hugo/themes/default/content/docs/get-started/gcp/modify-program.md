@@ -89,15 +89,16 @@ pulumi.export('bucket_name',  bucket.url)
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Pulumi;
-using Pulumi.Gcp;
+using Gcp = Pulumi.Gcp;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() =>
+    static Task Main()
+    {
+        return Deployment.RunAsync(() =>
         {
-            // Let's create a customer managed key and use that for encryption instead of the default Google-managed key.
+            // Let's create a customer managed key and use that for encryption
+            // instead of the default Google-managed key.
             var keyRing = new Gcp.Kms.KeyRing("my-keyring", new Gcp.Kms.KeyRingArgs
             {
                 Location = "global",
@@ -112,15 +113,18 @@ class Program
             // Create a GCP resource (Storage Bucket)
             var bucket = new Gcp.Storage.Bucket("my-bucket", new Gcp.Storage.BucketArgs
             {
-                Encryption = new Gcp.Storage.BucketEncryptionArgs
+                Encryption = new Gcp.Storage.Inputs.BucketEncryptionArgs
                 {
                     DefaultKmsKeyName = cryptoKey.SelfLink,
                 },
             });
 
             // Export the DNS name of the bucket
-            return new Dictionary<string, object> { { "bucketName", bucket.Url } };
+            return new Dictionary<string, object> {
+                { "bucketName", bucket.Url },
+            };
         });
+    }
 }
 ```
 
