@@ -50,6 +50,7 @@ The full code for the apps is on [GitHub][gh-repo-stack].
 Check out how to:
 
   * [Build and Deploy a Container](#build-and-deploy-a-container)
+  * [Deploy a Pod with a Sidecar](#deploy-a-pod-with-a-sidecar)
   * [Deploy Wordpress](#deploy-wordpress)
   * [Create a Deployment with a Secret](#create-a-deployment-with-a-secret)
   * [Perform a ConfigMap Rollout on a Deployment](#perform-a-configmap-rollout-on-a-deployment)
@@ -233,118 +234,53 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 {{% /md %}}
 </div>
 
-## Deploy Wordpress
+
+## Deploy a Pod with a Sidecar
 
 The full code for this app stack is on [GitHub][gh-wp-stack].
-[gh-wp-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/wordpress
+[gh-wp-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/pod-sidecar
+
+Create a NGINX Pod with a Debian sidecar that prints to a file in a shared
+volume of the Pod.
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
-const wordpressSvc = new k8s.core.v1.Service("wordpress", {
+// Create an example Pod with a Sidecar.
+const pod = new k8s.core.v1.Pod("example", {
     spec: {
-        type: "LoadBalancer",
-        externalTrafficPolicy: "Cluster",
-        ports: [
+        restartPolicy: "Never",
+        volumes: [
+            {name: "shared-data", emptyDir: {}},
+        ],
+        containers: [
             {
-                name: "http",
-                port: 80,
-                targetPort: "http"
+                name: "nginx",
+                image: "nginx",
+                resources: {requests: {cpu: "50m", memory: "50Mi"}},
+                volumeMounts: [
+                    { name: "shared-data", mountPath: "/usr/share/nginx/html"},
+                ],
             },
             {
-                name: "https",
-                port: 443,
-                targetPort: "https"
+                name: "debian-container",
+                image: "debian",
+                resources: {requests: {cpu: "50m", memory: "50Mi"}},
+                volumeMounts: [
+                    { name: "shared-data", mountPath: "/pod-data"},
+                ],
+                command: [ "/bin/bash"],
+                args: ["-c", "echo Hello from the Debian container > /pod-data/index.html ; sleep infinity"],
             }
         ],
-        selector: {
-            app: "wordpress"
-        }
     }
 }, { provider: provider });
+```
 
-const wordpress = new k8s.apps.v1.Deployment("wordpress", {
-    spec: {
-        selector: {
-            matchLabels: {
-                app: "wordpress",
-                release: "example"
-            }
-        },
-        strategy: {
-            type: "RollingUpdate"
-        },
-        replicas: 1,
-        template: {
-            metadata: {
-                labels: {
-                    app: "wordpress",
-                    release: "example"
-                }
-            },
-            spec: {
-                hostAliases: [
-                    {
-                        ip: "127.0.0.1",
-                        hostnames: [
-                            "status.localhost"
-                        ]
-                    }
-                ],
-                containers: [
-                    {
-                        name: "wordpress",
-                        image: "docker.io/bitnami/wordpress:5.2.4-debian-9-r0",
-                        imagePullPolicy: "IfNotPresent",
-                        env: [
-                            { name: "ALLOW_EMPTY_PASSWORD", value: "yes" },
-                            { name: "MARIADB_HOST", value: "mariadb" },
-                            { name: "MARIADB_PORT_NUMBER", value: "3306" },
-                            { name: "WORDPRESS_DATABASE_NAME", value: "bitnami_wordpress" },
-                            { name: "WORDPRESS_DATABASE_USER", value: "bn_wordpress" },
-                            {
-                                name: "WORDPRESS_DATABASE_PASSWORD",
-                                valueFrom: {
-                                    secretKeyRef: {
-                                        name: mariadbSecret.metadata.name,
-                                        key: "mariadb-password"
-                                    }
-                                }
-                            },
-                            ...
-                        ],
-                        ports: [
-                            { name: "http", containerPort: 80 },
-                            { name: "https", containerPort: 443 }
-                        ],
-                        volumeMounts: [
-                            {
-                                mountPath: "/bitnami/wordpress",
-                                name: "wordpress-data",
-                                subPath: "wordpress"
-                            }
-                        ],
-                        resources: {
-                            requests: {
-                                cpu: "300m",
-                                memory: "512Mi"
-                            }
-                        }
-                    }
-                ],
-                volumes: [
-                    {
-                        name: "wordpress-data",
-                        persistentVolumeClaim: {
-                            claimName: wordpressPVC.metadata.name
-                        }
-                    }
-                ]
-            }
-        }
-    }
-}, { provider: provider });
-...
+Print out the contents of the shared file from the `nginx` container in the Pod.
+
+```bash
+$ kubectl exec -it example-<SUFFIX> -n `pulumi output stack appsNamespaceName` -c nginx -- cat /usr/share/nginx/html/index.html
 ```
 
 ## Create a Deployment with a Secret
