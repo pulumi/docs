@@ -57,6 +57,7 @@ We'll explore how to setup:
 
   * [AWS Logging](#aws-logging)
   * [AWS Monitoring](#aws-monitoring)
+  * [Datadog](#datadog)
 
 See the [official AWS docs][k8s-logs-docs] for more details.
 
@@ -296,6 +297,7 @@ the data being sent, if necessary.  See the [CloudWatch limits][aws-cw-limits] f
 We'll explore how to setup:
 
   * [Azure Logging and Monitoring](#azure-logging-and-monitoring)
+  * [Datadog](#datadog)
 
 See the official [Azure Monitor][azure-monitor-overview] and [AKS][aks-logs] docs for more details.
 
@@ -395,6 +397,7 @@ See the official [AKS docs][aks-kubelet-logs] for more details.
 We'll explore how to setup:
 
   * [GCP Logging and Monitoring](#azure-logging-and-monitoring)
+  * [Datadog](#datadog)
 
 See the official [GKE][gke-logs] and [StackDriver Observing][gke-sd-observe] docs for more details.
 
@@ -516,3 +519,98 @@ $ kubectl delete ns amazon-cloudwatch
 
 {{% /md %}}
 </div>
+
+## Datadog
+
+Deploy [Datadog][k8s-datadog] as a DaemonSet to aggregate Kubernetes, node, and container metrics and events, in addition to provider managed logging and monitoring.
+
+The full code for this app stack is on [GitHub][gh-dd-stack].
+[gh-dd-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/general-cluster-services/datadog-daemonset
+
+```ts
+import * as k8s from "@pulumi/kubernetes";
+
+const appName = "datadog";
+const appLabels = { app: appName };
+
+// Create a DataDog DaemonSet.
+const datadog = new k8s.apps.v1.DaemonSet(appName, {
+    metadata: { labels: appLabels},
+    spec: {
+        selector: {
+            matchLabels: appLabels,
+        },
+        template: {
+            metadata: { labels: appLabels },
+            spec: {
+                containers: [
+                    {
+                        image: "datadog/agent:latest",
+                        name: "nginx",
+                        resources: {limits: {memory: "512Mi"}, requests: {memory: "512Mi"}},
+                        env: [
+                            {
+                                name: "DD_KUBERNETES_KUBELET_HOST",
+                                valueFrom: {
+                                    fieldRef: {
+                                        fieldPath: "status.hostIP",
+                                    },
+                                },
+                            },
+                            {
+                                name: "DD_API_KEY",
+                                valueFrom: {
+                                    configMapKeyRef: {
+                                        name: ddConfigMap.metadata.name,
+                                        key: "DD_API_KEY",
+                                    },
+                                },
+                            },
+                            {
+                                name: "DD_PROCESS_AGENT_ENABLED",
+                                valueFrom: {
+                                    configMapKeyRef: {
+                                        name: ddConfigMap.metadata.name,
+                                        key: "DD_PROCESS_AGENT_ENABLED",
+                                    },
+                                },
+                            },
+                            {
+                                name: "DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL",
+                                valueFrom: {
+                                    configMapKeyRef: {
+                                        name: ddConfigMap.metadata.name,
+                                        key: "DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL",
+                                    },
+                                },
+                            },
+                            {
+                                name: "DD_COLLECT_KUBERNETES_EVENTS",
+                                valueFrom: {
+                                    configMapKeyRef: {
+                                        name: ddConfigMap.metadata.name,
+                                        key: "DD_COLLECT_KUBERNETES_EVENTS",
+                                    },
+                                },
+                            },
+                            ...
+                        ],
+                        volumeMounts: [
+                            {name: "dockersocket", mountPath: "/var/run/docker.sock"},
+                            {name: "proc", mountPath: "/host/proc"},
+                            {name: "cgroup", mountPath: "/host/sys/fs/cgroup"},
+                        ],
+                    },
+                ],
+                volumes: [
+                    {name: "dockersocket", hostPath: {path: "/var/run/docker.sock"}},
+                    {name: "proc", hostPath: {path: "/proc"}},
+                    {name: "cgroup", hostPath: {path: "/sys/fs/cgroup"}},
+                ],
+            },
+        },
+    },
+}, { provider: provider });
+```
+
+[k8s-datadog]: https://docs.datadoghq.com/integrations/kubernetes/
