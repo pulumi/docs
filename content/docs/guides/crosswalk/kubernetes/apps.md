@@ -57,6 +57,7 @@ Check out how to:
   * [Deploy a Job](#deploy-a-job)
   * [Deploy a CronJob](#deploy-a-cronjob)
   * [Deploy a StatefulSet](#deploy-a-statefulset)
+  * [Learn More](#learn-more)
 
 ## Build and Deploy a Container
 
@@ -366,12 +367,8 @@ import * as k8s from "@pulumi/kubernetes";
 // Create a Secret with the database credentials.
 const databaseSecret = new k8s.core.v1.Secret("db-secret", {
     stringData: {
-        // This example uses hard-coded values, but a real application would usually load the credentials
-        // as config values like this:
-        // "database-username": config.databaseUsername,
-        // "database-password": config.databasePassword,
-        "database-username": "admin",
-        "database-password": "supersecurepassword123",
+        "database-username": config.databaseUsername,
+        "database-password": config.databasePassword,
     }
 }, { provider: provider });
 
@@ -431,12 +428,8 @@ import * as kx from "@pulumi/kubernetesx";
 // Create a KX Secret with the database credentials.
 const databaseSecretKx = new kx.Secret("db-secret", {
     stringData: {
-        // This example uses hard-coded values, but a real application would usually load the credentials
-        // as config values like this:
-        // "database-username": config.databaseUsername,
-        // "database-password": config.databasePassword,
-        "database-username": "admin",
-        "database-password": "supersecurepassword123",
+        "database-username": config.databaseUsername,
+        "database-password": config.databasePassword,
     }
 }, { provider: provider });
 
@@ -727,3 +720,10 @@ const mariadb = new k8s.apps.v1.StatefulSet("mariadb", {
 }, { provider: provider });
 ```
 
+## Learn More
+
+
+To learn more about how to work with Kubernetes and Pulumi, check out the
+[Kubernetes Tutorials][k8s-tutorials] for details.
+
+[k8s-tutorials]: {{< relref "/docs/tutorials/kubernetes" >}}
