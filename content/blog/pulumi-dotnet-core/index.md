@@ -10,6 +10,8 @@ meta_image: "pulumi-dotnet.png"
 
 Today we are excited to announce the Preview of .NET Core support for all of your modern infrastructure as code needs. This means you can create, deploy, and manage your infrastructure, on any cloud, using your favorite .NET language, including C#, F#, and VB.NET.
 
+<!--more-->
+
 This is a heartwarming milestone for the entire Pulumi team. It’s no secret that several of our founding members had a hand in shaping the early .NET project over a decade ago. In fact, before leaving Microsoft to found Pulumi, I had the privilege of helping to kick off the .NET Core effort to take .NET open source and add macOS and Linux support alongside Windows. It’s truly wonderful to build on top of this amazing and vibrant ecosystem, and reconnect with old friends!
 
 Please [head on over to the .NET blog to read more](https://devblogs.microsoft.com/dotnet/building-modern-cloud-applications-using-pulumi-and-net-core/), or [check out our new .NET Core landing page](https://pulumi.com/dotnet) if you can’t wait to dive in.
