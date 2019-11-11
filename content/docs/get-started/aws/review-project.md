@@ -61,14 +61,18 @@ using Pulumi.Aws.S3;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() => {
+    static Task Main()
+    {
+        return Deployment.RunAsync(() => {
             // Create an AWS resource (S3 Bucket)
-            var bucket = S3.Bucket('my-bucket');
+            var bucket = new Bucket("my-bucket");
 
             // Export the name of the bucket
-            return new Dictionary<string, object> { { "bucket_name" , bucket.Id } };
+            return new Dictionary<string, object> {
+                { "bucket_name" , bucket.Id },
+            };
         });
+    }
 }
 ```
 

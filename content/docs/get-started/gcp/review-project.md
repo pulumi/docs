@@ -59,15 +59,19 @@ using Pulumi.Gcp.Storage;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() =>
+    static Task Main()
+    {
+        return Deployment.RunAsync(() =>
         {
             // Create a GCP resource (Storage Bucket)
             var bucket = new Storage.Bucket("my-bucket");
 
             // Export the DNS name of the bucket
-            return new Dictionary<string, object> { { "bucket_name", bucket.Url } };
+            return new Dictionary<string, object> {
+                { "bucket_name", bucket.Url },
+            };
         });
+    }
 }
 ```
 

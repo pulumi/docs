@@ -75,13 +75,13 @@ pulumi.export('connection_string', account.primary_connection_string)
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Pulumi;
-using Pulumi.Azure;
+using Azure = Pulumi.Azure;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() => {
+    static Task Main()
+    {
+        return Deployment.RunAsync(() => {
             // Create an Azure Resource Group
             var resourceGroup = new Azure.Core.ResourceGroup("resourceGroup");
 
@@ -95,8 +95,11 @@ class Program
             });
 
             // Export the connection string for the storage account
-            return new Dictionary<string, object> { { "connectionString", account.PrimaryConnectionString } };
+            return new Dictionary<string, object> {
+                { "connectionString", account.PrimaryConnectionString },
+            };
         });
+    }
 }
 ```
 
