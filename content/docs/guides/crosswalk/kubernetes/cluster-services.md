@@ -18,7 +18,7 @@ policy enforcement and service meshes.
 <div class="mt">
 {{% md %}}
 
-The full code for this stack is on [GitHub][gh-repo-stack].
+The full code for the AWS cluster services is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/04-cluster-services
 {{% /md %}}
 </div>
@@ -27,7 +27,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="mt">
 {{% md %}}
 
-The full code for this stack is on [GitHub][gh-repo-stack].
+The full code for the Azure cluster services is on [GitHub][gh-repo-stack].
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/04-cluster-services
 
 {{% /md %}}
@@ -39,14 +39,16 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 GKE logging and monitoring is managed by GCP through StackDriver.
 
-The repo for this stack is on [GitHub][gh-repo-stack], but it is empty since no
-extra steps are required after cluster and Node Pool creation in the [Cluster Configuration][crosswalk-k8s-cluster] stack.
+The repo for the GCP cluster services is on [GitHub][gh-repo-stack], but it is empty since no extra steps are required after cluster and Node Pool creation in the [Cluster Configuration][crosswalk-k8s-cluster] stack.
 
 [crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
 [gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/04-cluster-services
 
 {{% /md %}}
 </div>
+
+The full code for the general cluster services is on [GitHub][gh-repo-stack].
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/general-cluster-services
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
