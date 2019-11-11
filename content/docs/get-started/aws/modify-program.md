@@ -90,25 +90,25 @@ pulumi.export('bucket_name',  bucket.id)
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Aws.Kms;
-using Pulumi.Aws.S3;
+using Aws = Pulumi.Aws;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() =>
+    static Task Main()
+    {
+        return Deployment.RunAsync(() =>
         {
             // Create a KMS Key for S3 server-side encryption
-            var key = new Kms.Key('my-key');
+            var key = new Aws.Kms.Key("my-key");
 
             // Create an AWS resource (S3 Bucket)
-            var bucket = new S3.Bucket('my-bucket', new S3.BucketArgs
+            var bucket = new Aws.S3.Bucket("my-bucket", new Aws.S3.BucketArgs
             {
-                ServerSideEncryptionConfiguration = new S3.BucketServerSideEncryptionConfigurationArgs
+                ServerSideEncryptionConfiguration = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationArgs
                 {
-                    Rules = new S3.BucketServerSideEncryptionConfigurationRuleArgs
+                    Rule = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleArgs
                     {
-                        ApplyServerSideEncryptionByDefault = new S3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs
+                        ApplyServerSideEncryptionByDefault = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs
                         {
                             SseAlgorithm = "aws:kms",
                             KmsMasterKeyId = key.Id,
@@ -118,8 +118,11 @@ class Program
             });
 
             // Export the name of the bucket
-            return new Dictionary<string, object> { { "bucket_name", bucket.Id } };
+            return new Dictionary<string, object> {
+                { "bucket_name", bucket.Id },
+            };
         });
+    }
 }
 ```
 
