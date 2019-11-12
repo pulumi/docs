@@ -91,7 +91,7 @@ $ export KUBECONFIG=`pwd`/kubeconfig.json
 {{% /md %}}
 </div>
 
-### Namespaces
+## Namespaces
 
 Create namespaces for typical stacks:
 
@@ -150,7 +150,7 @@ export const appsNamespaceName = appsNamespace.metadata.name;
 {{% /md %}}
 </div>
 
-### Quotas
+## Quotas
 
 Create [quotas][k8s-quotas] to restrict the number of resources that can be consumed across
 all Pods in a namespace.
@@ -227,7 +227,7 @@ resourcequotas          1     1
 services                0     5
 ```
 
-### PodSecurityPolicies
+## PodSecurityPolicies
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">

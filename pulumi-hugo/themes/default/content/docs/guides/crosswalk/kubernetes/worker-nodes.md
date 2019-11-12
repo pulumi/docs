@@ -1,10 +1,12 @@
 ---
 title: Create the Worker Nodes
+no_on_this_page: true
 menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-worker-nodes
     weight: 2
+
 ---
 
 {{< cloudchoose >}}
@@ -74,7 +76,7 @@ We'll configure and deploy:
   * [Recommended Worker Settings](#recommended-worker-settings): To apply helpful features
   and best-practices, such as version pinning, and resource tags.
 
-### Node Identity
+## Node Identity
 
 When creating node groups, it is recommended to use separate identities between
 node groups, as separation of roles creates many functions: it can be used to
@@ -144,7 +146,7 @@ We'll configure and deploy:
 <div class="mt">
 {{% md %}}
 
-### Node Group Networking
+## Node Group Networking
 
 Node groups in EKS can also have their node security group be configured to a
 new or existing security group.
@@ -186,7 +188,7 @@ const ng2xlarge = new eks.NodeGroup(`${projectName}-ng-2xlarge`, {
 <div class="mt">
 {{% md %}}
 
-### Node Pool Networking
+## Node Pool Networking
 
 Network profiles can be configured in Azure to work within the virtual network
 created, allowing you to specify the Kubernetes Service and Docker network properties.
@@ -210,7 +212,7 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 {{% /md %}}
 </div>
 
-### Node Sizing
+## Node Sizing
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -337,7 +339,7 @@ the `cluster-autoscaler` to run properly. See the [Recommended Worker
 Settings](#recommended-worker-settings) below to configure the tags of
 a node group accordingly for the `cluster-autoscaler`.
 
-### Pod Scheduling
+## Pod Scheduling
 
 We can logically organize node groups in Kubernetes to use with configurable scheduling
 predicates on Pods. Node [Labels][k8s-labels] are used to identify nodes by attributes,
@@ -443,7 +445,7 @@ const performantNodes = new gcp.container.NodePool("performant-nodes", {
 {{% /md %}}
 </div>
 
-### Recommended Worker Settings
+## Recommended Worker Settings
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">

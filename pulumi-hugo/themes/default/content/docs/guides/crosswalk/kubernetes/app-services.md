@@ -106,7 +106,7 @@ running and managing their lifecycles.
 <div class="mt">
 {{% md %}}
 
-### Postgres Database
+#### Postgres Database
 
 Create a Postgres database instance in [AWS RDS][aws-rds], and store its
 connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
@@ -154,7 +154,7 @@ const dbConn = new k8s.core.v1.Secret("postgres-db-conn",
 );
 ```
 
-### Redis Datastore
+#### Redis Datastore
 
 Create a Redis datastore instance in [AWS ElastiCache][aws-ec], and store its
 connection information in a Kubernetes [ConfigMap][k8s-cm] for apps to refer
@@ -198,7 +198,7 @@ const cacheConn = new k8s.core.v1.ConfigMap("postgres-db-conn",
 <div class="mt">
 {{% md %}}
 
-### MongoDB
+#### MongoDB
 
 Create a MongoDB database instance in [Azure CosmosDB][azure-cosmosdb], and store its
 connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
@@ -253,7 +253,7 @@ const mongoConnStrings = new k8s.core.v1.Secret(
 <div class="mt">
 {{% md %}}
 
-### Postgres Database
+#### Postgres Database
 
 Create a Postgres database instance in [CloudSQL][gcp-cloudsql], and store its
 connection information in a Kubernetes [Secret][k8s-secret] for apps to refer
@@ -309,7 +309,7 @@ const dbConn = new k8s.core.v1.Secret(
 );
 ```
 
-### Redis Datastore
+#### Redis Datastore
 
 Create a Redis datastore instance in [GCP Cloud MemoryStore][gcp-redis], and store its
 connection information in a Kubernetes [ConfigMap][k8s-cm] for apps to refer
