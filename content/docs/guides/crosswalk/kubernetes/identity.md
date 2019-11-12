@@ -330,6 +330,29 @@ export const adClientAppSecret = spPasswordClient.value;
 <div class="mt">
 {{% md %}}
 
+See the official [docs][gke-rbac] for more details.
+
+[gke-rbac]: https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control
+
+### Prerequisites
+
+To facilitate working with GCP, it is recommended that you create a new
+ServiceAccount with the proper permissions needed to create all of the
+resources in each stack. We'll set this ServiceAccount to be bound to [GCP roles][gcp-roles]
+the with permissions of `role/editor` and `roles/container.clusterAdmin`.
+
+Create the ServiceAccount and its secret key to use for auth. Then bind it to
+the `roles/editor` role, and authenticate as the ServiceAccount to use with the stacks.
+
+```bash
+$ gcloud iam service-accounts create my-service-account --description MyServiceAccount --display-name MyServiceAccount
+$ gcloud iam service-accounts keys create ~/key.json --iam-account my-service-account@pulumi-development.iam.gserviceaccount.com
+$ gcloud projects add-iam-policy-binding pulumi-development  --member serviceAccount:my-service-account@pulumi-development.iam.gserviceaccount.com --role roles/editor --role roles/container.clusterAdmin
+$ gcloud auth activate-service-account --key-file ~/key.json
+```
+
+[gcp-roles]: https://cloud.google.com/iam/docs/understanding-roles
+
 ## Create an IAM Role and ServiceAccount for Admins
 
 Create an admin role in GCP and attach admin policies to the role.
