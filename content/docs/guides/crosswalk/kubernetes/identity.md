@@ -196,7 +196,7 @@ $ az ad sp create-for-rbac --name MyServicePrincipal
 $ az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
 ```
 
-And add permissions to the legacy, and current Graph APIs:
+Ensure the ServicePrincipal has the following permissions for the legacy, and current Graph APIs:
 
 **Azure Active Directory Graph (Legacy)**
 
