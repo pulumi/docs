@@ -9,9 +9,9 @@ menu:
 
 {{< cloudchoose >}}
 
-After running `pulumi up` the cluster will be created and there will exist
+After running `pulumi up` the cluster will be created and there will be
 [Pulumi outputs][pulumi-outputs] with fields like the cluster's `kubeconfig`
-and it's cluster name for reference and usage.
+and its cluster name for reference and usage.
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -51,7 +51,7 @@ TODO
 
 In EKS, the AWS account caller will be placed into the
 `system:masters` Kubernetes RBAC group by default. The `kubeconfig`
-generated will cater to this primary cluster creator use-case, and it must be
+generated will be specific to this primary cluster creator use-case. It must be
 copied, and reconfigured to use with other IAM roles the caller assumes, as
 demonstrated in [Configure Access Control][crosswalk-configure-access].
 
@@ -103,7 +103,7 @@ Imperatively deploy a NGINX Pod and public load-balanced service:
 $ kubectl run --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}'
 ```
 
-After a few moments, visit the load balancer URL.
+After it is deployed, visit the load balancer URL.
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
