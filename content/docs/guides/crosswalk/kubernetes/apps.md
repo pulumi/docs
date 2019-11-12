@@ -1,5 +1,4 @@
----
-title: Deploy Apps
+--- title: Deploy Apps
 menu:
   userguides:
     parent: crosswalk-kubernetes
@@ -51,6 +50,7 @@ Check out how to:
 
   * [Build and Deploy a Container](#build-and-deploy-a-container)
   * [Deploy a Pod with a Sidecar](#deploy-a-pod-with-a-sidecar)
+  * [Deploy a Helm Chart](#deploy-a-helm-chart)
   * [Deploy Wordpress](#deploy-wordpress)
   * [Create a Deployment with a Secret](#create-a-deployment-with-a-secret)
   * [Perform a ConfigMap Rollout on a Deployment](#perform-a-configmap-rollout-on-a-deployment)
@@ -234,7 +234,6 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 {{% /md %}}
 </div>
 
-
 ## Deploy a Pod with a Sidecar
 
 The full code for this app stack is on [GitHub][gh-wp-stack].
@@ -281,6 +280,123 @@ Print out the contents of the shared file from the `nginx` container in the Pod.
 
 ```bash
 $ kubectl exec -it example-<SUFFIX> -n `pulumi output stack appsNamespaceName` -c nginx -- cat /usr/share/nginx/html/index.html
+```
+
+## Deploy a Helm Chart
+
+Deploy the [Helm chart][nginx-helm] into the `app-svcs` namespace created in [Configure
+Cluster Defaults][crosswalk-k8s-defaults], and publicly expose it to the
+Internet using a [load balanced Service][k8s-lb-svc].
+
+> Note: NGINX requires a privileged PSP given its [use][nginx-priv-use] of `allowPrivilegeEscalation: true`.
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+// Deploy the NGINX ingress controller using the Helm chart.
+const nginx = new k8s.helm.v2.Chart("nginx",
+    {
+        namespace: config.appSvcsNamespaceName,
+        chart: "nginx-ingress",
+        version: "1.24.4",
+        fetchOpts: {repo: "https://kubernetes-charts.storage.googleapis.com/"},
+        values: {controller: {publishService: {enabled: true}}},
+        transformations: [
+            (obj: any) => {
+                // Do transformations on the YAML to set the namespace
+                if (obj.metadata) {
+                    obj.metadata.namespace = config.appSvcsNamespaceName;
+                }
+            },
+        ],
+    },
+    {providers: {kubernetes: provider}},
+);
+```
+
+[nginx-priv-use]: https://github.com/helm/charts/blob/master/stable/nginx-ingress/values.yaml#L12
+[k8s-lb-svc]: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
+[nginx-helm]: https://github.com/helm/charts/tree/master/stable/nginx-ingress
+[crosswalk-k8s-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults#namespaces" >}}
+
+## Deploy Wordpress
+
+Create a Deployment of Wordpress.
+
+The full code for this app stack is on [GitHub][gh-deploy-wp-stack].
+[gh-deploy-wp-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/wordpress
+
+```ts
+import * as k8s from "@pulumi/kubernetes";
+
+const wordpress = new k8s.apps.v1.Deployment("wordpress", {
+    spec: {
+        selector: {
+            matchLabels: {
+                app: "wordpress",
+                release: "example"
+            }
+        },
+        strategy: {
+            type: "RollingUpdate"
+        },
+        replicas: 1,
+        template: {
+            metadata: { labels: { app: "wordpress", release: "example" } },
+            spec: {
+                hostAliases: [
+                    {
+                        ip: "127.0.0.1",
+                        hostnames: [
+                            "status.localhost"
+                        ]
+                    }
+                ],
+                containers: [
+                    {
+                        name: "wordpress",
+                        image: "docker.io/bitnami/wordpress:5.2.4-debian-9-r0",
+                        imagePullPolicy: "IfNotPresent",
+                        env: [
+                            { name: "MARIADB_HOST", value: "mariadb" },
+                            { name: "WORDPRESS_DATABASE_NAME", value: "bitnami_wordpress" },
+                            { name: "WORDPRESS_DATABASE_USER", value: "bn_wordpress" },
+                            {
+                                name: "WORDPRESS_DATABASE_PASSWORD",
+                                valueFrom: {
+                                    secretKeyRef: {
+                                        name: mariadbSecret.metadata.name,
+                                        key: "mariadb-password"
+                                    }
+                                }
+                            },
+                            ...
+                        ],
+                        ports: [
+                            { name: "http", containerPort: 80 },
+                            { name: "https", containerPort: 443 }
+                        ],
+                        volumeMounts: [
+                            {
+                                mountPath: "/bitnami/wordpress",
+                                name: "wordpress-data",
+                                subPath: "wordpress"
+                            }
+                        ],
+                        resources: {
+                            requests: {
+                                cpu: "300m",
+                                memory: "512Mi"
+                            }
+                        }
+                        ...
+                    }
+                ],
+                ...
+            }
+        }
+    }
+}, { provider: provider });
 ```
 
 ## Create a Deployment with a Secret
@@ -400,7 +516,7 @@ on how to update a Deployment automatically when it's ConfigMap changes.
 
 ## Deploy a DaemonSet
 
-Deploy a [DaemonSet][k8s-ss] of NGINX across all nodes in the cluster.
+Deploy a [DaemonSet][k8s-ds] of NGINX across all nodes in the cluster.
 
 The full code for this app stack is on [GitHub][gh-ds-stack].
 [gh-ds-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/daemonset
@@ -441,27 +557,25 @@ The full code for this app stack is on [GitHub][gh-job-stack].
 [gh-job-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/job
 [k8s-job]: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
 
-```ts
-import * as k8s from "@pulumi/kubernetes";
+{{< k8s-language noyaml >}}
 
-// Create an example Job.
-const exampleJob = new k8s.batch.v1.Job("example-job", {
-    spec: {
-        template: {
-            spec: {
-                containers: [
-                    {
-                        name: "pi",
-                        image: "perl",
-                        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"],
-                    }
-                ],
-                restartPolicy: "Never"
-            }
-        },
-    }
-}, { provider: provider });
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
+```ts
+TS TODO
 ```
+{{% /md %}}
+</div>
+
+<div class="k8s-language-prologue-typescript-kx"></div>
+<div class="mt">
+{{% md %}}
+```ts
+KX TODO
+```
+{{% /md %}}
+</div>
 
 ## Deploy a CronJob
 
@@ -657,7 +771,6 @@ const mariadb = new k8s.apps.v1.StatefulSet("mariadb", {
 ```
 
 ## Learn More
-
 
 To learn more about how to work with Kubernetes and Pulumi, check out the
 [Kubernetes Tutorials][k8s-tutorials] for details.
