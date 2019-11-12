@@ -55,13 +55,13 @@ In [Identity][crosswalk-identity] we demonstrate how to create typical IAM roles
 use in Kubernetes.
 
 We create an `admins` role for cluster administrators with root privileges, that
-will be tied into Kubernetes RBAC.
+will be tied to Kubernetes RBAC.
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
 
-Make a copy of the kubeconfig that will be edited for the admins.
+Make a copy of the kubeconfig file that will be edited for the admins.
 
 ```bash
 $ cp kubeconfig.json kubeconfig-admins.json
@@ -92,7 +92,7 @@ Edit `kubeconfig-admins.json` by inserting a role to authenticate with in the
 ]
 ```
 
-Update and use the new `kubeconfig`.
+Update and use the new `kubeconfig` file.
 
 ```bash
 $ export KUBECONFIG=`pwd`/kubeconfig-admins.json
@@ -170,14 +170,14 @@ TODO
 In [Identity][crosswalk-identity] we demonstrate how to create typical IAM roles for
 use in Kubernetes.
 
-We create limited scope `devs` role for general purpose execution of workloads,
-that will be tied into Kubernetes RBAC.
+We create a limited scope `devs` role for general purpose execution of workloads,
+that will be tied to Kubernetes RBAC.
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
 {{% md %}}
 
-Make a copy of the kubeconfig that will be edited for the developers.
+Make a copy of the kubeconfig file that will be edited for the developers.
 
 ```bash
 $ cp kubeconfig.json kubeconfig-devs.json
@@ -208,7 +208,7 @@ Edit `kubeconfig-devs.json` by inserting a role to authenticate with in the
 ]
 ```
 
-Update and use the new `kubeconfig`.
+Update and use the new `kubeconfig` file.
 
 ```bash
 $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
@@ -265,11 +265,11 @@ TODO
 Access control is not configured by default with Kubernetes RBAC.
 
 In [Use the `devs` IAM role](#use-the-devs-iam-role) the
-user is **authenticated** into the cluster using the IAM role, but it is not yet
+user is **authenticated** into the cluster using the IAM role, but they are not yet
 **authorized** to do work in the cluster.
 
 This means that the user cannot perform any operations in the cluster by
-default, or retrieve information as shown in the `Error from server (Forbidden)`
+default, such as retrieve information, as shown in the `Error from server (Forbidden)`
 messages.
 
 ```bash
