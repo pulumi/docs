@@ -65,7 +65,7 @@ meta_desc: "Explore members of the recoveryservices module in the @pulumi/azure 
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Fabric" data-link-title="Fabric">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L42">
         Resource <strong>Fabric</strong>
     </a>
 </h3>
@@ -105,7 +105,7 @@ const fabric = new azure.recoveryservices.Fabric("fabric", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_fabric.html.markdown.
 
 <h4 class="pdoc-member-header" id="Fabric-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -119,7 +119,7 @@ Create a Fabric resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Fabric-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -130,14 +130,14 @@ Get an existing Fabric resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Fabric-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Fabric-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -148,7 +148,7 @@ Returns true if the given object is an instance of Fabric.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Fabric-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -157,7 +157,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Fabric-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L72">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L72">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -165,7 +165,7 @@ deployments and may be missing (undefined) during planning phases.
 In what region should the fabric be located.
 
 <h4 class="pdoc-member-header" id="Fabric-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -173,7 +173,7 @@ In what region should the fabric be located.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="Fabric-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L80">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L80">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -181,7 +181,7 @@ The name of the network mapping.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="Fabric-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L84">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L84">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h4 class="pdoc-member-header" id="Fabric-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -198,7 +198,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NetworkMapping" data-link-title="NetworkMapping">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L67">
         Resource <strong>NetworkMapping</strong>
     </a>
 </h3>
@@ -265,7 +265,7 @@ const recoveryMapping = new azure.recoveryservices.NetworkMapping("recovery-mapp
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_network_mapping.html.markdown.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L121"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L121"> <b>constructor</b></a>
 </h4>
 
 
@@ -279,7 +279,7 @@ Create a NetworkMapping resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L76">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L76">method <b>get</b></a>
 </h4>
 
 
@@ -290,14 +290,14 @@ Get an existing NetworkMapping resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L67">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L67">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NetworkMapping-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L87">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L87">method <b>isInstance</b></a>
 </h4>
 
 
@@ -308,7 +308,7 @@ Returns true if the given object is an instance of NetworkMapping.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -317,7 +317,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L97">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L97">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L101">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L101">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ The name of the network mapping.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L105">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L105">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-sourceNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L109">property <b>sourceNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L109">property <b>sourceNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -349,7 +349,7 @@ Name of the resource group where the vault that should be updated is located.
 The id of the primary network.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-sourceRecoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L113">property <b>sourceRecoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L113">property <b>sourceRecoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceRecoveryFabricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -357,7 +357,7 @@ The id of the primary network.
 Specifies the ASR fabric where mapping should be created.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-targetNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L117">property <b>targetNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L117">property <b>targetNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ Specifies the ASR fabric where mapping should be created.
 The id of the recovery network.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-targetRecoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L121">property <b>targetRecoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L121">property <b>targetRecoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetRecoveryFabricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -373,7 +373,7 @@ The id of the recovery network.
 The Azure Site Recovery fabric object corresponding to the recovery Azure region.
 
 <h4 class="pdoc-member-header" id="NetworkMapping-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L67">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L67">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -382,7 +382,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProtectedVM" data-link-title="ProtectedVM">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L47">
         Resource <strong>ProtectedVM</strong>
     </a>
 </h3>
@@ -427,7 +427,7 @@ const vm1 = new azure.recoveryservices.ProtectedVM("vm1", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protected_vm.html.markdown.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -441,7 +441,7 @@ Create a ProtectedVM resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -452,14 +452,14 @@ Get an existing ProtectedVM resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProtectedVM-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -470,7 +470,7 @@ Returns true if the given object is an instance of ProtectedVM.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-backupPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L77">property <b>backupPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L77">property <b>backupPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -478,7 +478,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the id of the backup policy to use.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -487,7 +487,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L81">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L81">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -495,7 +495,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -503,7 +503,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-sourceVmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L89">property <b>sourceVmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L89">property <b>sourceVmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceVmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -511,7 +511,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L93">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L93">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -519,7 +519,7 @@ Specifies the ID of the VM to backup. Changing this forces a new resource to be 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ProtectedVM-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -528,7 +528,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProtectionContainer" data-link-title="ProtectionContainer">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L48">
         Resource <strong>ProtectionContainer</strong>
     </a>
 </h3>
@@ -574,7 +574,7 @@ const protectionContainer = new azure.recoveryservices.ProtectionContainer("prot
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protection_container.html.markdown.
 
 <h4 class="pdoc-member-header" id="ProtectionContainer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -588,7 +588,7 @@ Create a ProtectionContainer resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProtectionContainer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -599,14 +599,14 @@ Get an existing ProtectionContainer resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProtectionContainer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProtectionContainer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -617,7 +617,7 @@ Returns true if the given object is an instance of ProtectionContainer.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProtectionContainer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -626,7 +626,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProtectionContainer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,7 +634,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ProtectionContainer-recoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L82">property <b>recoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L82">property <b>recoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryFabricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -642,7 +642,7 @@ The name of the network mapping.
 Name of fabric that should contain this protection container.
 
 <h4 class="pdoc-member-header" id="ProtectionContainer-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L86">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L86">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -650,7 +650,7 @@ Name of fabric that should contain this protection container.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ProtectionContainer-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L90">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L90">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -658,7 +658,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h4 class="pdoc-member-header" id="ProtectionContainer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -667,7 +667,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProtectionContainerMapping" data-link-title="ProtectionContainerMapping">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L76">
         Resource <strong>ProtectionContainerMapping</strong>
     </a>
 </h3>
@@ -741,7 +741,7 @@ const containerMapping = new azure.recoveryservices.ProtectionContainerMapping("
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protection_container_mapping.html.markdown.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L130"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L130"> <b>constructor</b></a>
 </h4>
 
 
@@ -755,7 +755,7 @@ Create a ProtectionContainerMapping resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L85">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L85">method <b>get</b></a>
 </h4>
 
 
@@ -766,14 +766,14 @@ Get an existing ProtectionContainerMapping resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L76">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L76">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L96">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L96">method <b>isInstance</b></a>
 </h4>
 
 
@@ -784,7 +784,7 @@ Returns true if the given object is an instance of ProtectionContainerMapping.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -793,7 +793,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -801,7 +801,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-recoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L110">property <b>recoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L110">property <b>recoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryFabricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -809,7 +809,7 @@ The name of the network mapping.
 Name of fabric that should contains the protection container to map.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-recoveryReplicationPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L114">property <b>recoveryReplicationPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L114">property <b>recoveryReplicationPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryReplicationPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -817,7 +817,7 @@ Name of fabric that should contains the protection container to map.
 Id of the policy to use for this mapping.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-recoverySourceProtectionContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L118">property <b>recoverySourceProtectionContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L118">property <b>recoverySourceProtectionContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoverySourceProtectionContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +825,7 @@ Id of the policy to use for this mapping.
 Name of the protection container to map.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-recoveryTargetProtectionContainerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L122">property <b>recoveryTargetProtectionContainerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L122">property <b>recoveryTargetProtectionContainerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryTargetProtectionContainerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -833,7 +833,7 @@ Name of the protection container to map.
 Id of protection container to map to.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L126">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L126">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -841,7 +841,7 @@ Id of protection container to map to.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L130">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L130">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -849,7 +849,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMapping-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L76">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L76">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -858,7 +858,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProtectionPolicyVM" data-link-title="ProtectionPolicyVM">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L71">
         Resource <strong>ProtectionPolicyVM</strong>
     </a>
 </h3>
@@ -927,7 +927,7 @@ const test = new azure.recoveryservices.ProtectionPolicyVM("test", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_protection_policy_vm.html.markdown.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L137"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L137"> <b>constructor</b></a>
 </h4>
 
 
@@ -941,7 +941,7 @@ Create a ProtectionPolicyVM resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L80">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L80">method <b>get</b></a>
 </h4>
 
 
@@ -952,14 +952,14 @@ Get an existing ProtectionPolicyVM resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L71">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L91">method <b>isInstance</b></a>
 </h4>
 
 
@@ -970,7 +970,7 @@ Returns true if the given object is an instance of ProtectionPolicyVM.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-backup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L101">property <b>backup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L101">property <b>backup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMBackup'>outputs.recoveryservices.ProtectionPolicyVMBackup</a>&gt;;</code></pre>
@@ -978,7 +978,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Configures the Policy backup frequecent, times & days as documented in the `backup` block below.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -987,7 +987,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L105">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -995,7 +995,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Recovery Services Vault Policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L109">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L109">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1003,7 +1003,7 @@ Specifies the name of the Recovery Services Vault Policy. Changing this forces a
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L113">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L113">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1011,7 +1011,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-retentionDaily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L117">property <b>retentionDaily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L117">property <b>retentionDaily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionDaily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionDaily'>outputs.recoveryservices.ProtectionPolicyVMRetentionDaily</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1019,7 +1019,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 Configures the policy daily retention as documented in the `retentionDaily` block below. Required when backup frequency is `Daily`.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-retentionMonthly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L121">property <b>retentionMonthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L121">property <b>retentionMonthly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionMonthly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionMonthly'>outputs.recoveryservices.ProtectionPolicyVMRetentionMonthly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1027,7 +1027,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 Configures the policy monthly retention as documented in the `retentionMonthly` block below.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-retentionWeekly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L125">property <b>retentionWeekly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L125">property <b>retentionWeekly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionWeekly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionWeekly'>outputs.recoveryservices.ProtectionPolicyVMRetentionWeekly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1035,7 +1035,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 Configures the policy weekly retention as documented in the `retentionWeekly` block below. Required when backup frequency is `Weekly`.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-retentionYearly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L129">property <b>retentionYearly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L129">property <b>retentionYearly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionYearly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionYearly'>outputs.recoveryservices.ProtectionPolicyVMRetentionYearly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1043,7 +1043,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 Configures the policy yearly retention as documented in the `retentionYearly` block below.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L133">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L133">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1051,7 +1051,7 @@ Configures the policy yearly retention as documented in the `retentionYearly` bl
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L137">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L137">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1059,7 +1059,7 @@ A mapping of tags to assign to the resource.
 Specifies the timezone. Defaults to `UTC`
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVM-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L71">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1068,7 +1068,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ReplicatedVm" data-link-title="ReplicatedVm">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L152">
         Resource <strong>ReplicatedVm</strong>
     </a>
 </h3>
@@ -1218,7 +1218,7 @@ const vmReplication = new azure.recoveryservices.ReplicatedVm("vm-replication", 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_replicated_vm.html.markdown.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L223"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L223"> <b>constructor</b></a>
 </h4>
 
 
@@ -1232,7 +1232,7 @@ Create a ReplicatedVm resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L161">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L161">method <b>get</b></a>
 </h4>
 
 
@@ -1243,14 +1243,14 @@ Get an existing ReplicatedVm resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L152">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L152">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L172">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L172">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1261,7 +1261,7 @@ Returns true if the given object is an instance of ReplicatedVm.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L152">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L152">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1270,7 +1270,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-managedDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L182">property <b>managedDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L182">property <b>managedDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ReplicatedVmManagedDisk'>outputs.recoveryservices.ReplicatedVmManagedDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1278,7 +1278,7 @@ deployments and may be missing (undefined) during planning phases.
 One or more `managedDisk` block.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1286,12 +1286,12 @@ One or more `managedDisk` block.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-recoveryReplicationPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L187">property <b>recoveryReplicationPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L187">property <b>recoveryReplicationPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryReplicationPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ReplicatedVm-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L191">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L191">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1299,7 +1299,7 @@ The name of the network mapping.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L195">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L195">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1307,7 +1307,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-sourceRecoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L199">property <b>sourceRecoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L199">property <b>sourceRecoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceRecoveryFabricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1315,7 +1315,7 @@ Name of the resource group where the vault that should be updated is located.
 Name of fabric that should contains this replication.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-sourceRecoveryProtectionContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L203">property <b>sourceRecoveryProtectionContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L203">property <b>sourceRecoveryProtectionContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceRecoveryProtectionContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1323,7 +1323,7 @@ Name of fabric that should contains this replication.
 Name of the protection container to use.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-sourceVmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L207">property <b>sourceVmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L207">property <b>sourceVmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceVmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1331,7 +1331,7 @@ Name of the protection container to use.
 Id of the VM to replicate
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-targetAvailabilitySetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L211">property <b>targetAvailabilitySetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L211">property <b>targetAvailabilitySetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetAvailabilitySetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1339,7 +1339,7 @@ Id of the VM to replicate
 Id of availability set that the new VM should belong to when a failover is done.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-targetRecoveryFabricId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L215">property <b>targetRecoveryFabricId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L215">property <b>targetRecoveryFabricId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetRecoveryFabricId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1347,7 +1347,7 @@ Id of availability set that the new VM should belong to when a failover is done.
 Id of fabric where the VM replication should be handled when a failover is done.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-targetRecoveryProtectionContainerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L219">property <b>targetRecoveryProtectionContainerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L219">property <b>targetRecoveryProtectionContainerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetRecoveryProtectionContainerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1355,7 +1355,7 @@ Id of fabric where the VM replication should be handled when a failover is done.
 Id of protection container where the VM replication should be created when a failover is done.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-targetResourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L223">property <b>targetResourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L223">property <b>targetResourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetResourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1363,7 +1363,7 @@ Id of protection container where the VM replication should be created when a fai
 Id of resource group where the VM should be created when a failover is done.
 
 <h4 class="pdoc-member-header" id="ReplicatedVm-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L152">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L152">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1372,7 +1372,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ReplicationPolicy" data-link-title="ReplicationPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L39">
         Resource <strong>ReplicationPolicy</strong>
     </a>
 </h3>
@@ -1409,7 +1409,7 @@ const policy = new azure.recoveryservices.ReplicationPolicy("policy", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_replication_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -1423,7 +1423,7 @@ Create a ReplicationPolicy resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -1434,14 +1434,14 @@ Get an existing ReplicationPolicy resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1452,7 +1452,7 @@ Returns true if the given object is an instance of ReplicationPolicy.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-applicationConsistentSnapshotFrequencyInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L69">property <b>applicationConsistentSnapshotFrequencyInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L69">property <b>applicationConsistentSnapshotFrequencyInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationConsistentSnapshotFrequencyInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1460,7 +1460,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the frequency(in minutes) at which to create application consistent recovery points.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1469,7 +1469,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1477,7 +1477,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-recoveryPointRetentionInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L77">property <b>recoveryPointRetentionInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L77">property <b>recoveryPointRetentionInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryPointRetentionInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1485,7 +1485,7 @@ The name of the network mapping.
 Retain the recovery points for given time in minutes.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L81">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L81">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1493,7 +1493,7 @@ Retain the recovery points for given time in minutes.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1501,7 +1501,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1510,7 +1510,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Vault" data-link-title="Vault">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L32">
         Resource <strong>Vault</strong>
     </a>
 </h3>
@@ -1540,7 +1540,7 @@ const vault = new azure.recoveryservices.Vault("vault", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/recovery_services_vault.html.markdown.
 
 <h4 class="pdoc-member-header" id="Vault-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -1554,7 +1554,7 @@ Create a Vault resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Vault-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -1565,14 +1565,14 @@ Get an existing Vault resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Vault-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Vault-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1583,7 +1583,7 @@ Returns true if the given object is an instance of Vault.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Vault-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1592,7 +1592,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Vault-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L62">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L62">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1600,7 +1600,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Vault-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1608,7 +1608,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Recovery Services Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Vault-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L70">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L70">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1616,7 +1616,7 @@ Specifies the name of the Recovery Services Vault. Changing this forces a new re
 The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Vault-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L74">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L74">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1624,7 +1624,7 @@ The name of the resource group in which to create the Recovery Services Vault. C
 Sets the vault's SKU. Possible values include: `Standard`, `RS0`.
 
 <h4 class="pdoc-member-header" id="Vault-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L78">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L78">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1632,7 +1632,7 @@ Sets the vault's SKU. Possible values include: `Standard`, `RS0`.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Vault-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1643,7 +1643,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getVault" data-link-title="getVault">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L26">
         Data Source <strong>getVault</strong>
     </a>
 </h3>
@@ -1669,7 +1669,7 @@ const vault = azure.recoveryservices.getVault({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/recovery_services_vault.html.markdown.
 
 <h3 class="pdoc-module-header" id="getVMProtectionPolicy" data-link-title="getVMProtectionPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L27">
         Data Source <strong>getVMProtectionPolicy</strong>
     </a>
 </h3>
@@ -1698,7 +1698,7 @@ const policy = azure.recoveryservices.getVMProtectionPolicy({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="FabricArgs" data-link-title="FabricArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L151">
         interface <strong>FabricArgs</strong>
     </a>
 </h3>
@@ -1708,7 +1708,7 @@ const policy = azure.recoveryservices.getVMProtectionPolicy({
 The set of arguments for constructing a Fabric resource.
 
 <h4 class="pdoc-member-header" id="FabricArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L155">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L155">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1716,7 +1716,7 @@ The set of arguments for constructing a Fabric resource.
 In what region should the fabric be located.
 
 <h4 class="pdoc-member-header" id="FabricArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L159">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L159">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1724,7 +1724,7 @@ In what region should the fabric be located.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="FabricArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L163">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L163">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1732,7 +1732,7 @@ The name of the network mapping.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="FabricArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L167">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L167">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1740,7 +1740,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h3 class="pdoc-module-header" id="FabricState" data-link-title="FabricState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L129">
         interface <strong>FabricState</strong>
     </a>
 </h3>
@@ -1750,7 +1750,7 @@ Name of the resource group where the vault that should be updated is located.
 Input properties used for looking up and filtering Fabric resources.
 
 <h4 class="pdoc-member-header" id="FabricState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L133">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L133">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1758,7 +1758,7 @@ Input properties used for looking up and filtering Fabric resources.
 In what region should the fabric be located.
 
 <h4 class="pdoc-member-header" id="FabricState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L137">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L137">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1766,7 +1766,7 @@ In what region should the fabric be located.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="FabricState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L141">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L141">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1774,7 +1774,7 @@ The name of the network mapping.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="FabricState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/fabric.ts#L145">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/fabric.ts#L145">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1782,7 +1782,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h3 class="pdoc-module-header" id="GetVaultArgs" data-link-title="GetVaultArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L45">
         interface <strong>GetVaultArgs</strong>
     </a>
 </h3>
@@ -1792,7 +1792,7 @@ Name of the resource group where the vault that should be updated is located.
 A collection of arguments for invoking getVault.
 
 <h4 class="pdoc-member-header" id="GetVaultArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1800,7 +1800,7 @@ A collection of arguments for invoking getVault.
 Specifies the name of the Recovery Services Vault.
 
 <h4 class="pdoc-member-header" id="GetVaultArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L53">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L53">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1808,7 +1808,7 @@ Specifies the name of the Recovery Services Vault.
 The name of the resource group in which the Recovery Services Vault resides.
 
 <h3 class="pdoc-module-header" id="GetVaultResult" data-link-title="GetVaultResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L59">
         interface <strong>GetVaultResult</strong>
     </a>
 </h3>
@@ -1818,7 +1818,7 @@ The name of the resource group in which the Recovery Services Vault resides.
 A collection of values returned by getVault.
 
 <h4 class="pdoc-member-header" id="GetVaultResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1826,7 +1826,7 @@ A collection of values returned by getVault.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVaultResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L63">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L63">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1834,17 +1834,17 @@ id is the provider-assigned unique ID for this managed resource.
 The Azure location where the resource resides.
 
 <h4 class="pdoc-member-header" id="GetVaultResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVaultResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L65">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L65">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVaultResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L69">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L69">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1852,7 +1852,7 @@ The Azure location where the resource resides.
 The vault's current SKU.
 
 <h4 class="pdoc-member-header" id="GetVaultResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVault.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVault.ts#L73">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1860,7 +1860,7 @@ The vault's current SKU.
 A mapping of tags assigned to the resource.
 
 <h3 class="pdoc-module-header" id="GetVMProtectionPolicyArgs" data-link-title="GetVMProtectionPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L47">
         interface <strong>GetVMProtectionPolicyArgs</strong>
     </a>
 </h3>
@@ -1870,7 +1870,7 @@ A mapping of tags assigned to the resource.
 A collection of arguments for invoking getVMProtectionPolicy.
 
 <h4 class="pdoc-member-header" id="GetVMProtectionPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1878,7 +1878,7 @@ A collection of arguments for invoking getVMProtectionPolicy.
 Specifies the name of the Recovery Services VM Protection Policy.
 
 <h4 class="pdoc-member-header" id="GetVMProtectionPolicyArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L55">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L55">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1886,7 +1886,7 @@ Specifies the name of the Recovery Services VM Protection Policy.
 Specifies the name of the Recovery Services Vault.
 
 <h4 class="pdoc-member-header" id="GetVMProtectionPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L59">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L59">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1894,7 +1894,7 @@ Specifies the name of the Recovery Services Vault.
 The name of the resource group in which the Recovery Services VM Protection Policy resides.
 
 <h3 class="pdoc-module-header" id="GetVMProtectionPolicyResult" data-link-title="GetVMProtectionPolicyResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L65">
         interface <strong>GetVMProtectionPolicyResult</strong>
     </a>
 </h3>
@@ -1904,7 +1904,7 @@ The name of the resource group in which the Recovery Services VM Protection Poli
 A collection of values returned by getVMProtectionPolicy.
 
 <h4 class="pdoc-member-header" id="GetVMProtectionPolicyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1912,22 +1912,22 @@ A collection of values returned by getVMProtectionPolicy.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVMProtectionPolicyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVMProtectionPolicyResult-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L67">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L67">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVMProtectionPolicyResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L68">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L68">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVMProtectionPolicyResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L72">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L72">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1935,7 +1935,7 @@ id is the provider-assigned unique ID for this managed resource.
 A mapping of tags assigned to the resource.
 
 <h3 class="pdoc-module-header" id="NetworkMappingArgs" data-link-title="NetworkMappingArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L218">
         interface <strong>NetworkMappingArgs</strong>
     </a>
 </h3>
@@ -1945,7 +1945,7 @@ A mapping of tags assigned to the resource.
 The set of arguments for constructing a NetworkMapping resource.
 
 <h4 class="pdoc-member-header" id="NetworkMappingArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L222">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L222">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1953,7 +1953,7 @@ The set of arguments for constructing a NetworkMapping resource.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="NetworkMappingArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L226">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L226">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1961,7 +1961,7 @@ The name of the network mapping.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="NetworkMappingArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L230">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L230">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1969,7 +1969,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h4 class="pdoc-member-header" id="NetworkMappingArgs-sourceNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L234">property <b>sourceNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L234">property <b>sourceNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1977,7 +1977,7 @@ Name of the resource group where the vault that should be updated is located.
 The id of the primary network.
 
 <h4 class="pdoc-member-header" id="NetworkMappingArgs-sourceRecoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L238">property <b>sourceRecoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L238">property <b>sourceRecoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRecoveryFabricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1985,7 +1985,7 @@ The id of the primary network.
 Specifies the ASR fabric where mapping should be created.
 
 <h4 class="pdoc-member-header" id="NetworkMappingArgs-targetNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L242">property <b>targetNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L242">property <b>targetNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1993,7 +1993,7 @@ Specifies the ASR fabric where mapping should be created.
 The id of the recovery network.
 
 <h4 class="pdoc-member-header" id="NetworkMappingArgs-targetRecoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L246">property <b>targetRecoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L246">property <b>targetRecoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetRecoveryFabricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2001,7 +2001,7 @@ The id of the recovery network.
 The Azure Site Recovery fabric object corresponding to the recovery Azure region.
 
 <h3 class="pdoc-module-header" id="NetworkMappingState" data-link-title="NetworkMappingState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L184">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L184">
         interface <strong>NetworkMappingState</strong>
     </a>
 </h3>
@@ -2011,7 +2011,7 @@ The Azure Site Recovery fabric object corresponding to the recovery Azure region
 Input properties used for looking up and filtering NetworkMapping resources.
 
 <h4 class="pdoc-member-header" id="NetworkMappingState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2019,7 +2019,7 @@ Input properties used for looking up and filtering NetworkMapping resources.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="NetworkMappingState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L192">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L192">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2027,7 +2027,7 @@ The name of the network mapping.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="NetworkMappingState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L196">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L196">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2035,7 +2035,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h4 class="pdoc-member-header" id="NetworkMappingState-sourceNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L200">property <b>sourceNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L200">property <b>sourceNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceNetworkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2043,7 +2043,7 @@ Name of the resource group where the vault that should be updated is located.
 The id of the primary network.
 
 <h4 class="pdoc-member-header" id="NetworkMappingState-sourceRecoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L204">property <b>sourceRecoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L204">property <b>sourceRecoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRecoveryFabricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2051,7 +2051,7 @@ The id of the primary network.
 Specifies the ASR fabric where mapping should be created.
 
 <h4 class="pdoc-member-header" id="NetworkMappingState-targetNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L208">property <b>targetNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L208">property <b>targetNetworkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetNetworkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2059,7 +2059,7 @@ Specifies the ASR fabric where mapping should be created.
 The id of the recovery network.
 
 <h4 class="pdoc-member-header" id="NetworkMappingState-targetRecoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/networkMapping.ts#L212">property <b>targetRecoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/networkMapping.ts#L212">property <b>targetRecoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetRecoveryFabricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2067,7 +2067,7 @@ The id of the recovery network.
 The Azure Site Recovery fabric object corresponding to the recovery Azure region.
 
 <h3 class="pdoc-module-header" id="ProtectedVMArgs" data-link-title="ProtectedVMArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L172">
         interface <strong>ProtectedVMArgs</strong>
     </a>
 </h3>
@@ -2077,7 +2077,7 @@ The Azure Site Recovery fabric object corresponding to the recovery Azure region
 The set of arguments for constructing a ProtectedVM resource.
 
 <h4 class="pdoc-member-header" id="ProtectedVMArgs-backupPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L176">property <b>backupPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L176">property <b>backupPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2085,7 +2085,7 @@ The set of arguments for constructing a ProtectedVM resource.
 Specifies the id of the backup policy to use.
 
 <h4 class="pdoc-member-header" id="ProtectedVMArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L180">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L180">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2093,7 +2093,7 @@ Specifies the id of the backup policy to use.
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L184">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L184">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2101,7 +2101,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMArgs-sourceVmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L188">property <b>sourceVmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L188">property <b>sourceVmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceVmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2109,7 +2109,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L192">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L192">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2117,7 +2117,7 @@ Specifies the ID of the VM to backup. Changing this forces a new resource to be 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ProtectedVMState" data-link-title="ProtectedVMState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L146">
         interface <strong>ProtectedVMState</strong>
     </a>
 </h3>
@@ -2127,7 +2127,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering ProtectedVM resources.
 
 <h4 class="pdoc-member-header" id="ProtectedVMState-backupPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L150">property <b>backupPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L150">property <b>backupPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2135,7 +2135,7 @@ Input properties used for looking up and filtering ProtectedVM resources.
 Specifies the id of the backup policy to use.
 
 <h4 class="pdoc-member-header" id="ProtectedVMState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L154">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L154">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2143,7 +2143,7 @@ Specifies the id of the backup policy to use.
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L158">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L158">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2151,7 +2151,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMState-sourceVmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L162">property <b>sourceVmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L162">property <b>sourceVmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceVmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2159,7 +2159,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectedVMState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectedVM.ts#L166">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectedVM.ts#L166">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2167,7 +2167,7 @@ Specifies the ID of the VM to backup. Changing this forces a new resource to be 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ProtectionContainerArgs" data-link-title="ProtectionContainerArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L160">
         interface <strong>ProtectionContainerArgs</strong>
     </a>
 </h3>
@@ -2177,7 +2177,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a ProtectionContainer resource.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2185,7 +2185,7 @@ The set of arguments for constructing a ProtectionContainer resource.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerArgs-recoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L168">property <b>recoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L168">property <b>recoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryFabricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2193,7 +2193,7 @@ The name of the network mapping.
 Name of fabric that should contain this protection container.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L172">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L172">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2201,7 +2201,7 @@ Name of fabric that should contain this protection container.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L176">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L176">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2209,7 +2209,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h3 class="pdoc-module-header" id="ProtectionContainerMappingArgs" data-link-title="ProtectionContainerMappingArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L227">
         interface <strong>ProtectionContainerMappingArgs</strong>
     </a>
 </h3>
@@ -2219,7 +2219,7 @@ Name of the resource group where the vault that should be updated is located.
 The set of arguments for constructing a ProtectionContainerMapping resource.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L231">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L231">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2227,7 +2227,7 @@ The set of arguments for constructing a ProtectionContainerMapping resource.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingArgs-recoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L235">property <b>recoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L235">property <b>recoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryFabricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2235,7 +2235,7 @@ The name of the network mapping.
 Name of fabric that should contains the protection container to map.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingArgs-recoveryReplicationPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L239">property <b>recoveryReplicationPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L239">property <b>recoveryReplicationPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryReplicationPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2243,7 +2243,7 @@ Name of fabric that should contains the protection container to map.
 Id of the policy to use for this mapping.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingArgs-recoverySourceProtectionContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L243">property <b>recoverySourceProtectionContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L243">property <b>recoverySourceProtectionContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoverySourceProtectionContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2251,7 +2251,7 @@ Id of the policy to use for this mapping.
 Name of the protection container to map.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingArgs-recoveryTargetProtectionContainerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L247">property <b>recoveryTargetProtectionContainerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L247">property <b>recoveryTargetProtectionContainerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryTargetProtectionContainerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2259,7 +2259,7 @@ Name of the protection container to map.
 Id of protection container to map to.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L251">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L251">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2267,7 +2267,7 @@ Id of protection container to map to.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L255">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L255">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2275,7 +2275,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h3 class="pdoc-module-header" id="ProtectionContainerMappingState" data-link-title="ProtectionContainerMappingState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L193">
         interface <strong>ProtectionContainerMappingState</strong>
     </a>
 </h3>
@@ -2285,7 +2285,7 @@ Name of the resource group where the vault that should be updated is located.
 Input properties used for looking up and filtering ProtectionContainerMapping resources.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L197">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L197">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2293,7 +2293,7 @@ Input properties used for looking up and filtering ProtectionContainerMapping re
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingState-recoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L201">property <b>recoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L201">property <b>recoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryFabricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2301,7 +2301,7 @@ The name of the network mapping.
 Name of fabric that should contains the protection container to map.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingState-recoveryReplicationPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L205">property <b>recoveryReplicationPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L205">property <b>recoveryReplicationPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryReplicationPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2309,7 +2309,7 @@ Name of fabric that should contains the protection container to map.
 Id of the policy to use for this mapping.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingState-recoverySourceProtectionContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L209">property <b>recoverySourceProtectionContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L209">property <b>recoverySourceProtectionContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoverySourceProtectionContainerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2317,7 +2317,7 @@ Id of the policy to use for this mapping.
 Name of the protection container to map.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingState-recoveryTargetProtectionContainerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L213">property <b>recoveryTargetProtectionContainerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L213">property <b>recoveryTargetProtectionContainerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryTargetProtectionContainerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2325,7 +2325,7 @@ Name of the protection container to map.
 Id of protection container to map to.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L217">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L217">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2333,7 +2333,7 @@ Id of protection container to map to.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerMappingState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L221">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainerMapping.ts#L221">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2341,7 +2341,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h3 class="pdoc-module-header" id="ProtectionContainerState" data-link-title="ProtectionContainerState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L138">
         interface <strong>ProtectionContainerState</strong>
     </a>
 </h3>
@@ -2351,7 +2351,7 @@ Name of the resource group where the vault that should be updated is located.
 Input properties used for looking up and filtering ProtectionContainer resources.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2359,7 +2359,7 @@ Input properties used for looking up and filtering ProtectionContainer resources
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerState-recoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L146">property <b>recoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L146">property <b>recoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryFabricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2367,7 +2367,7 @@ The name of the network mapping.
 Name of fabric that should contain this protection container.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L150">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L150">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2375,7 +2375,7 @@ Name of fabric that should contain this protection container.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ProtectionContainerState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionContainer.ts#L154">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionContainer.ts#L154">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2383,7 +2383,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h3 class="pdoc-module-header" id="ProtectionPolicyVMArgs" data-link-title="ProtectionPolicyVMArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L243">
         interface <strong>ProtectionPolicyVMArgs</strong>
     </a>
 </h3>
@@ -2393,7 +2393,7 @@ Name of the resource group where the vault that should be updated is located.
 The set of arguments for constructing a ProtectionPolicyVM resource.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMArgs-backup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L247">property <b>backup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L247">property <b>backup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMBackup'>inputs.recoveryservices.ProtectionPolicyVMBackup</a>&gt;;</code></pre>
@@ -2401,7 +2401,7 @@ The set of arguments for constructing a ProtectionPolicyVM resource.
 Configures the Policy backup frequecent, times & days as documented in the `backup` block below.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2409,7 +2409,7 @@ Configures the Policy backup frequecent, times & days as documented in the `back
 Specifies the name of the Recovery Services Vault Policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L255">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L255">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2417,7 +2417,7 @@ Specifies the name of the Recovery Services Vault Policy. Changing this forces a
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L259">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L259">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2425,7 +2425,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMArgs-retentionDaily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L263">property <b>retentionDaily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L263">property <b>retentionDaily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionDaily'>inputs.recoveryservices.ProtectionPolicyVMRetentionDaily</a>&gt;;</code></pre>
@@ -2433,7 +2433,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 Configures the policy daily retention as documented in the `retentionDaily` block below. Required when backup frequency is `Daily`.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMArgs-retentionMonthly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L267">property <b>retentionMonthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L267">property <b>retentionMonthly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionMonthly'>inputs.recoveryservices.ProtectionPolicyVMRetentionMonthly</a>&gt;;</code></pre>
@@ -2441,7 +2441,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 Configures the policy monthly retention as documented in the `retentionMonthly` block below.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMArgs-retentionWeekly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L271">property <b>retentionWeekly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L271">property <b>retentionWeekly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionWeekly'>inputs.recoveryservices.ProtectionPolicyVMRetentionWeekly</a>&gt;;</code></pre>
@@ -2449,7 +2449,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 Configures the policy weekly retention as documented in the `retentionWeekly` block below. Required when backup frequency is `Weekly`.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMArgs-retentionYearly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L275">property <b>retentionYearly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L275">property <b>retentionYearly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionYearly'>inputs.recoveryservices.ProtectionPolicyVMRetentionYearly</a>&gt;;</code></pre>
@@ -2457,7 +2457,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 Configures the policy yearly retention as documented in the `retentionYearly` block below.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L279">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L279">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2465,7 +2465,7 @@ Configures the policy yearly retention as documented in the `retentionYearly` bl
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMArgs-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L283">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L283">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2473,7 +2473,7 @@ A mapping of tags to assign to the resource.
 Specifies the timezone. Defaults to `UTC`
 
 <h3 class="pdoc-module-header" id="ProtectionPolicyVMState" data-link-title="ProtectionPolicyVMState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L197">
         interface <strong>ProtectionPolicyVMState</strong>
     </a>
 </h3>
@@ -2483,7 +2483,7 @@ Specifies the timezone. Defaults to `UTC`
 Input properties used for looking up and filtering ProtectionPolicyVM resources.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMState-backup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L201">property <b>backup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L201">property <b>backup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMBackup'>inputs.recoveryservices.ProtectionPolicyVMBackup</a>&gt;;</code></pre>
@@ -2491,7 +2491,7 @@ Input properties used for looking up and filtering ProtectionPolicyVM resources.
 Configures the Policy backup frequecent, times & days as documented in the `backup` block below.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L205">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L205">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2499,7 +2499,7 @@ Configures the Policy backup frequecent, times & days as documented in the `back
 Specifies the name of the Recovery Services Vault Policy. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L209">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L209">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2507,7 +2507,7 @@ Specifies the name of the Recovery Services Vault Policy. Changing this forces a
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L213">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L213">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2515,7 +2515,7 @@ Specifies the name of the Recovery Services Vault to use. Changing this forces a
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMState-retentionDaily">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L217">property <b>retentionDaily</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L217">property <b>retentionDaily</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionDaily'>inputs.recoveryservices.ProtectionPolicyVMRetentionDaily</a>&gt;;</code></pre>
@@ -2523,7 +2523,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 Configures the policy daily retention as documented in the `retentionDaily` block below. Required when backup frequency is `Daily`.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMState-retentionMonthly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L221">property <b>retentionMonthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L221">property <b>retentionMonthly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionMonthly'>inputs.recoveryservices.ProtectionPolicyVMRetentionMonthly</a>&gt;;</code></pre>
@@ -2531,7 +2531,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 Configures the policy monthly retention as documented in the `retentionMonthly` block below.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMState-retentionWeekly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L225">property <b>retentionWeekly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L225">property <b>retentionWeekly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionWeekly'>inputs.recoveryservices.ProtectionPolicyVMRetentionWeekly</a>&gt;;</code></pre>
@@ -2539,7 +2539,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 Configures the policy weekly retention as documented in the `retentionWeekly` block below. Required when backup frequency is `Weekly`.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMState-retentionYearly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L229">property <b>retentionYearly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L229">property <b>retentionYearly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionYearly'>inputs.recoveryservices.ProtectionPolicyVMRetentionYearly</a>&gt;;</code></pre>
@@ -2547,7 +2547,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 Configures the policy yearly retention as documented in the `retentionYearly` block below.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L233">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L233">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2555,7 +2555,7 @@ Configures the policy yearly retention as documented in the `retentionYearly` bl
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ProtectionPolicyVMState-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L237">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L237">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2563,7 +2563,7 @@ A mapping of tags to assign to the resource.
 Specifies the timezone. Defaults to `UTC`
 
 <h3 class="pdoc-module-header" id="ReplicatedVmArgs" data-link-title="ReplicatedVmArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L356">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L356">
         interface <strong>ReplicatedVmArgs</strong>
     </a>
 </h3>
@@ -2573,7 +2573,7 @@ Specifies the timezone. Defaults to `UTC`
 The set of arguments for constructing a ReplicatedVm resource.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-managedDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L360">property <b>managedDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L360">property <b>managedDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReplicatedVmManagedDisk'>inputs.recoveryservices.ReplicatedVmManagedDisk</a>&gt;[]&gt;;</code></pre>
@@ -2581,7 +2581,7 @@ The set of arguments for constructing a ReplicatedVm resource.
 One or more `managedDisk` block.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L364">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L364">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2589,12 +2589,12 @@ One or more `managedDisk` block.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-recoveryReplicationPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L365">property <b>recoveryReplicationPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L365">property <b>recoveryReplicationPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryReplicationPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L369">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L369">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2602,7 +2602,7 @@ The name of the network mapping.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L373">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L373">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2610,7 +2610,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-sourceRecoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L377">property <b>sourceRecoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L377">property <b>sourceRecoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRecoveryFabricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2618,7 +2618,7 @@ Name of the resource group where the vault that should be updated is located.
 Name of fabric that should contains this replication.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-sourceRecoveryProtectionContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L381">property <b>sourceRecoveryProtectionContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L381">property <b>sourceRecoveryProtectionContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRecoveryProtectionContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2626,7 +2626,7 @@ Name of fabric that should contains this replication.
 Name of the protection container to use.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-sourceVmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L385">property <b>sourceVmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L385">property <b>sourceVmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceVmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2634,7 +2634,7 @@ Name of the protection container to use.
 Id of the VM to replicate
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-targetAvailabilitySetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L389">property <b>targetAvailabilitySetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L389">property <b>targetAvailabilitySetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetAvailabilitySetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2642,7 +2642,7 @@ Id of the VM to replicate
 Id of availability set that the new VM should belong to when a failover is done.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-targetRecoveryFabricId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L393">property <b>targetRecoveryFabricId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L393">property <b>targetRecoveryFabricId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetRecoveryFabricId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2650,7 +2650,7 @@ Id of availability set that the new VM should belong to when a failover is done.
 Id of fabric where the VM replication should be handled when a failover is done.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-targetRecoveryProtectionContainerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L397">property <b>targetRecoveryProtectionContainerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L397">property <b>targetRecoveryProtectionContainerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetRecoveryProtectionContainerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2658,7 +2658,7 @@ Id of fabric where the VM replication should be handled when a failover is done.
 Id of protection container where the VM replication should be created when a failover is done.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmArgs-targetResourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L401">property <b>targetResourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L401">property <b>targetResourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2666,7 +2666,7 @@ Id of protection container where the VM replication should be created when a fai
 Id of resource group where the VM should be created when a failover is done.
 
 <h3 class="pdoc-module-header" id="ReplicatedVmState" data-link-title="ReplicatedVmState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L305">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L305">
         interface <strong>ReplicatedVmState</strong>
     </a>
 </h3>
@@ -2676,7 +2676,7 @@ Id of resource group where the VM should be created when a failover is done.
 Input properties used for looking up and filtering ReplicatedVm resources.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-managedDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L309">property <b>managedDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L309">property <b>managedDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReplicatedVmManagedDisk'>inputs.recoveryservices.ReplicatedVmManagedDisk</a>&gt;[]&gt;;</code></pre>
@@ -2684,7 +2684,7 @@ Input properties used for looking up and filtering ReplicatedVm resources.
 One or more `managedDisk` block.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L313">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L313">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2692,12 +2692,12 @@ One or more `managedDisk` block.
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-recoveryReplicationPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L314">property <b>recoveryReplicationPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L314">property <b>recoveryReplicationPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryReplicationPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ReplicatedVmState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L318">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L318">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2705,7 +2705,7 @@ The name of the network mapping.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L322">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L322">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2713,7 +2713,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-sourceRecoveryFabricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L326">property <b>sourceRecoveryFabricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L326">property <b>sourceRecoveryFabricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRecoveryFabricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2721,7 +2721,7 @@ Name of the resource group where the vault that should be updated is located.
 Name of fabric that should contains this replication.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-sourceRecoveryProtectionContainerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L330">property <b>sourceRecoveryProtectionContainerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L330">property <b>sourceRecoveryProtectionContainerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRecoveryProtectionContainerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2729,7 +2729,7 @@ Name of fabric that should contains this replication.
 Name of the protection container to use.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-sourceVmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L334">property <b>sourceVmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L334">property <b>sourceVmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceVmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2737,7 +2737,7 @@ Name of the protection container to use.
 Id of the VM to replicate
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-targetAvailabilitySetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L338">property <b>targetAvailabilitySetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L338">property <b>targetAvailabilitySetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetAvailabilitySetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2745,7 +2745,7 @@ Id of the VM to replicate
 Id of availability set that the new VM should belong to when a failover is done.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-targetRecoveryFabricId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L342">property <b>targetRecoveryFabricId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L342">property <b>targetRecoveryFabricId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetRecoveryFabricId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2753,7 +2753,7 @@ Id of availability set that the new VM should belong to when a failover is done.
 Id of fabric where the VM replication should be handled when a failover is done.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-targetRecoveryProtectionContainerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L346">property <b>targetRecoveryProtectionContainerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L346">property <b>targetRecoveryProtectionContainerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetRecoveryProtectionContainerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2761,7 +2761,7 @@ Id of fabric where the VM replication should be handled when a failover is done.
 Id of protection container where the VM replication should be created when a failover is done.
 
 <h4 class="pdoc-member-header" id="ReplicatedVmState-targetResourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicatedVm.ts#L350">property <b>targetResourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicatedVm.ts#L350">property <b>targetResourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2769,7 +2769,7 @@ Id of protection container where the VM replication should be created when a fai
 Id of resource group where the VM should be created when a failover is done.
 
 <h3 class="pdoc-module-header" id="ReplicationPolicyArgs" data-link-title="ReplicationPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L164">
         interface <strong>ReplicationPolicyArgs</strong>
     </a>
 </h3>
@@ -2779,7 +2779,7 @@ Id of resource group where the VM should be created when a failover is done.
 The set of arguments for constructing a ReplicationPolicy resource.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicyArgs-applicationConsistentSnapshotFrequencyInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L168">property <b>applicationConsistentSnapshotFrequencyInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L168">property <b>applicationConsistentSnapshotFrequencyInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationConsistentSnapshotFrequencyInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2787,7 +2787,7 @@ The set of arguments for constructing a ReplicationPolicy resource.
 Specifies the frequency(in minutes) at which to create application consistent recovery points.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2795,7 +2795,7 @@ Specifies the frequency(in minutes) at which to create application consistent re
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicyArgs-recoveryPointRetentionInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L176">property <b>recoveryPointRetentionInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L176">property <b>recoveryPointRetentionInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryPointRetentionInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2803,7 +2803,7 @@ The name of the network mapping.
 Retain the recovery points for given time in minutes.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicyArgs-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L180">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L180">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2811,7 +2811,7 @@ Retain the recovery points for given time in minutes.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L184">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L184">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2819,7 +2819,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h3 class="pdoc-module-header" id="ReplicationPolicyState" data-link-title="ReplicationPolicyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L138">
         interface <strong>ReplicationPolicyState</strong>
     </a>
 </h3>
@@ -2829,7 +2829,7 @@ Name of the resource group where the vault that should be updated is located.
 Input properties used for looking up and filtering ReplicationPolicy resources.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicyState-applicationConsistentSnapshotFrequencyInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L142">property <b>applicationConsistentSnapshotFrequencyInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L142">property <b>applicationConsistentSnapshotFrequencyInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationConsistentSnapshotFrequencyInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2837,7 +2837,7 @@ Input properties used for looking up and filtering ReplicationPolicy resources.
 Specifies the frequency(in minutes) at which to create application consistent recovery points.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2845,7 +2845,7 @@ Specifies the frequency(in minutes) at which to create application consistent re
 The name of the network mapping.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicyState-recoveryPointRetentionInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L150">property <b>recoveryPointRetentionInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L150">property <b>recoveryPointRetentionInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryPointRetentionInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2853,7 +2853,7 @@ The name of the network mapping.
 Retain the recovery points for given time in minutes.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicyState-recoveryVaultName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L154">property <b>recoveryVaultName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L154">property <b>recoveryVaultName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recoveryVaultName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2861,7 +2861,7 @@ Retain the recovery points for given time in minutes.
 The name of the vault that should be updated.
 
 <h4 class="pdoc-member-header" id="ReplicationPolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/replicationPolicy.ts#L158">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/replicationPolicy.ts#L158">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2869,7 +2869,7 @@ The name of the vault that should be updated.
 Name of the resource group where the vault that should be updated is located.
 
 <h3 class="pdoc-module-header" id="VaultArgs" data-link-title="VaultArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L151">
         interface <strong>VaultArgs</strong>
     </a>
 </h3>
@@ -2879,7 +2879,7 @@ Name of the resource group where the vault that should be updated is located.
 The set of arguments for constructing a Vault resource.
 
 <h4 class="pdoc-member-header" id="VaultArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L155">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L155">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2887,7 +2887,7 @@ The set of arguments for constructing a Vault resource.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VaultArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L159">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L159">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2895,7 +2895,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Recovery Services Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VaultArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L163">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L163">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2903,7 +2903,7 @@ Specifies the name of the Recovery Services Vault. Changing this forces a new re
 The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VaultArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L167">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L167">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2911,7 +2911,7 @@ The name of the resource group in which to create the Recovery Services Vault. C
 Sets the vault's SKU. Possible values include: `Standard`, `RS0`.
 
 <h4 class="pdoc-member-header" id="VaultArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L171">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L171">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2919,7 +2919,7 @@ Sets the vault's SKU. Possible values include: `Standard`, `RS0`.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="VaultState" data-link-title="VaultState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L125">
         interface <strong>VaultState</strong>
     </a>
 </h3>
@@ -2929,7 +2929,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Vault resources.
 
 <h4 class="pdoc-member-header" id="VaultState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L129">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L129">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2937,7 +2937,7 @@ Input properties used for looking up and filtering Vault resources.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VaultState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L133">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2945,7 +2945,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Recovery Services Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VaultState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L137">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L137">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2953,7 +2953,7 @@ Specifies the name of the Recovery Services Vault. Changing this forces a new re
 The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VaultState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L141">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L141">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2961,7 +2961,7 @@ The name of the resource group in which to create the Recovery Services Vault. C
 Sets the vault's SKU. Possible values include: `Standard`, `RS0`.
 
 <h4 class="pdoc-member-header" id="VaultState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/780519586a137ef6221cfbc89345513e8159cfa2/sdk/nodejs/recoveryservices/vault.ts#L145">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/recoveryservices/vault.ts#L145">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
