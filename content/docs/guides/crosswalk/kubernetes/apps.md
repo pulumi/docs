@@ -54,8 +54,8 @@ Check out how to:
   * [Deploy Wordpress](#deploy-wordpress)
   * [Create a Deployment with a Secret](#create-a-deployment-with-a-secret)
   * [Perform a ConfigMap Rollout on a Deployment](#perform-a-configmap-rollout-on-a-deployment)
-  * [Deploy a DaemonSet](#deploy-a-daemonset)
   * [Deploy a Job](#deploy-a-job)
+  * [Deploy a DaemonSet](#deploy-a-daemonset)
   * [Deploy a CronJob](#deploy-a-cronjob)
   * [Deploy a StatefulSet](#deploy-a-statefulset)
   * [Learn More](#learn-more)
@@ -72,6 +72,10 @@ Kubernetes.
 The full code for this app stack is on [GitHub][gh-aws-deploy-stack].
 [gh-aws-deploy-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/06-apps/deploy-container
 
+{{< k8s-language noyaml >}}
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 ```ts
 import * as awsx from "@pulumi/awsx";
 import * as k8s from "@pulumi/kubernetes";
@@ -111,6 +115,45 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 ```
 {{% /md %}}
 </div>
+<div class="k8s-language-prologue-typescript-kx"></div>
+<div class="mt">
+{{% md %}}
+```ts
+import * as awsx from "@pulumi/awsx";
+import * as k8s from "@pulumi/kubernetes";
+import * as kx from "@pulumi/kubernetesx";
+
+// Create a repository.
+const repo = new awsx.ecr.Repository("my-repo");
+
+// Build a Docker image from a local Dockerfile context in the
+// './node-app' directory, and push it to the registry.
+const customImage = "node-app";
+const appImage = repo.buildAndPushImage(`./${customImage}`);
+
+// Create a k8s provider.
+const provider = new k8s.Provider("provider", {
+    kubeconfig: config.kubeconfig,
+    namespace: config.appsNamespaceName,
+});
+
+// Define the Pod for the Deployment.
+const pb = new kx.PodBuilder({
+    containers: [{
+        image: appImage,
+        ports: { "http": 80 },
+    }],
+});
+
+// Create a Deployment of the Pod defined by the PodBuilder.
+const appDeploymentKx = new kx.Deployment("app-kx", {
+    spec: pb.asDeploymentSpec(),
+}, { provider: provider });
+```
+{{% /md %}}
+</div>
+{{% /md %}}
+</div>
 
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
@@ -119,6 +162,10 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 The full code for this app stack is on [GitHub][gh-azure-deploy-stack].
 [gh-azure-deploy-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/06-apps/deploy-container
 
+{{< k8s-language noyaml >}}
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 ```ts
 import * as azure from "@pulumi/azure";
 import * as docker from "@pulumi/docker";
@@ -175,7 +222,65 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
     }
 }, { provider: provider });
 ```
+{{% /md %}}
+</div>
 
+<div class="k8s-language-prologue-typescript-kx"></div>
+<div class="mt">
+{{% md %}}
+```ts
+import * as azure from "@pulumi/azure";
+import * as k8s from "@pulumi/kubernetes";
+import * as kx from "@pulumi/kubernetesx";
+import * as docker from "@pulumi/docker";
+import * as pulumi from "@pulumi/pulumi";
+
+// Create an Azure Resource Group
+const resourceGroup = new azure.core.ResourceGroup("samples");
+
+// Create a registry in ACR.
+const registry = new azure.containerservice.Registry("myregistry", {
+    resourceGroupName: resourceGroup.name,
+    sku: "Basic",
+    adminEnabled: true,
+});
+
+// Build a Docker image from a local Dockerfile context in the
+// './node-app' directory, and push it to the registry.
+const customImage = "node-app";
+const appImage = new docker.Image(customImage, {
+    imageName: pulumi.interpolate`${registry.loginServer}/${customImage}:v1.0.0`,
+    build: {
+        context: `./${customImage}`,
+    },
+    registry: {
+        server: registry.loginServer,
+        username: registry.adminUsername,
+        password: registry.adminPassword,
+    },
+});
+
+// Create a k8s provider.
+const provider = new k8s.Provider("provider", {
+    kubeconfig: config.kubeconfig,
+    namespace: config.appsNamespaceName,
+});
+
+// Define the Pod for the Deployment.
+const pb = new kx.PodBuilder({
+    containers: [{
+        image: appImage.imageName,
+        ports: { "http": 80 },
+    }],
+});
+
+// Create a Deployment of the Pod defined by the PodBuilder.
+const appDeploymentKx = new kx.Deployment("app-kx", {
+    spec: pb.asDeploymentSpec(),
+}, { provider: provider });
+```
+{{% /md %}}
+</div>
 {{% /md %}}
 </div>
 
@@ -186,6 +291,10 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 The full code for this app stack is on [GitHub][gh-gcp-deploy-stack].
 [gh-gcp-deploy-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/06-apps/deploy-container
 
+{{< k8s-language noyaml >}}
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 ```ts
 import * as docker from "@pulumi/docker";
 import * as gcp from "@pulumi/gcp";
@@ -230,6 +339,53 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
     }
 }, { provider: provider });
 ```
+{{% /md %}}
+</div>
+
+<div class="k8s-language-prologue-typescript-kx"></div>
+<div class="mt">
+{{% md %}}
+```ts
+import * as docker from "@pulumi/docker";
+import * as gcp from "@pulumi/gcp";
+import * as k8s from "@pulumi/kubernetes";
+import * as kx from "@pulumi/kubernetesx";
+import * as pulumi from "@pulumi/pulumi";
+
+// Get the GCP project registry repository.
+const registry = gcp.container.getRegistryRepository();
+
+// Build a Docker image from a local Dockerfile context in the
+// './node-app' directory, and push it to the registry.
+const customImage = "node-app";
+const appImage = new docker.Image(customImage, {
+    imageName: pulumi.interpolate`${registry.repositoryUrl}/${customImage}:v1.0.0`,
+    build: {
+        context: `./${customImage}`,
+    },
+});
+
+// Create a k8s provider.
+const provider = new k8s.Provider("provider", {
+    kubeconfig: config.kubeconfig,
+    namespace: config.appsNamespaceName,
+});
+
+// Define the Pod for the Deployment.
+const pb = new kx.PodBuilder({
+    containers: [{
+        image: appImage.imageName,
+        ports: { "http": 80 },
+    }],
+});
+
+// Create a Deployment of the Pod defined by the PodBuilder.
+const appDeploymentKx = new kx.Deployment("app-kx", {
+    spec: pb.asDeploymentSpec(),
+}, { provider: provider });
+```
+{{% /md %}}
+</div>
 
 {{% /md %}}
 </div>
@@ -331,27 +487,13 @@ import * as k8s from "@pulumi/kubernetes";
 
 const wordpress = new k8s.apps.v1.Deployment("wordpress", {
     spec: {
-        selector: {
-            matchLabels: {
-                app: "wordpress",
-                release: "example"
-            }
-        },
-        strategy: {
-            type: "RollingUpdate"
-        },
+        selector: { matchLabels: { app: "wordpress", release: "example" } },
+        strategy: { type: "RollingUpdate" },
         replicas: 1,
         template: {
             metadata: { labels: { app: "wordpress", release: "example" } },
             spec: {
-                hostAliases: [
-                    {
-                        ip: "127.0.0.1",
-                        hostnames: [
-                            "status.localhost"
-                        ]
-                    }
-                ],
+                hostAliases: [ { ip: "127.0.0.1", hostnames: [ "status.localhost"] } ],
                 containers: [
                     {
                         name: "wordpress",
@@ -383,12 +525,7 @@ const wordpress = new k8s.apps.v1.Deployment("wordpress", {
                                 subPath: "wordpress"
                             }
                         ],
-                        resources: {
-                            requests: {
-                                cpu: "300m",
-                                memory: "512Mi"
-                            }
-                        }
+                        resources: { requests: { cpu: "300m", memory: "512Mi" } }
                         ...
                     }
                 ],
@@ -406,10 +543,9 @@ Create a [Deployment][k8s-deploy] NGINX that uses a [Secret][k8s-secret].
 The full code for this app stack is on [GitHub][gh-deploy-secret-stack].
 [gh-deploy-secret-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/deployment-secret
 [k8s-deploy]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-[k8s-secret]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment://kubernetes.io/docs/concepts/configuration/secret/ 
+[k8s-secret]: https://kubernetes.io/docs/concepts/configuration/secret/
 
 {{< k8s-language noyaml >}}
-
 <div class="k8s-language-prologue-typescript"></div>
 <div class="mt">
 {{% md %}}
@@ -470,7 +606,6 @@ const nginx = new k8s.apps.v1.Deployment(appName, {
 ```
 {{% /md %}}
 </div>
-
 <div class="k8s-language-prologue-typescript-kx"></div>
 <div class="mt">
 {{% md %}}
@@ -509,10 +644,70 @@ const nginxDeployment = new kx.Deployment(appName, {
 
 ## Perform a ConfigMap Rollout on a Deployment
 
-For a complete example, check out the [Graceful App Rollout][tutorial-app-rollout] tutorial for more details
-on how to update a Deployment automatically when it's ConfigMap changes.
+For a complete example, check out the [Graceful App Rollout][tutorial-app-rollout]
+tutorial for more details on how to update a Deployment automatically
+when it's ConfigMap changes.
 
 [tutorial-app-rollout]: {{< relref "/docs/tutorials/kubernetes/configmap-rollout" >}}
+
+## Deploy a Job
+
+Deploy a [Job][k8s-job] of a Perl program.
+
+The full code for this app stack is on [GitHub][gh-job-stack].
+[gh-job-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/job
+[k8s-job]: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion
+
+{{< k8s-language noyaml >}}
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
+```ts
+import * as k8s from "@pulumi/kubernetes";
+
+// Create an example Job.
+const exampleJob = new k8s.batch.v1.Job("example-job", {
+    spec: {
+        template: {
+            spec: {
+                containers: [
+                    {
+                        name: "pi",
+                        image: "perl",
+                        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"],
+                    }
+                ],
+                restartPolicy: "Never"
+            }
+        },
+    }
+}, { provider: provider });
+```
+{{% /md %}}
+</div>
+<div class="k8s-language-prologue-typescript-kx"></div>
+<div class="mt">
+{{% md %}}
+```ts
+import * as kx from "@pulumi/kubernetesx";
+
+// Create the PodBuilder for the Job.
+const pb = new kx.PodBuilder({
+    containers: [{
+        name: "pi",
+        image: "perl",
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"],
+    }],
+    restartPolicy: "Never",
+});
+
+// Create a Job using the Pod defined by the PodBuilder.
+const exampleJobKx = new kx.Job("example-job-kx", {
+    spec: pb.asJobSpec(),
+}, { provider: provider });
+```
+{{% /md %}}
+</div>
 
 ## Deploy a DaemonSet
 
@@ -522,6 +717,10 @@ The full code for this app stack is on [GitHub][gh-ds-stack].
 [gh-ds-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/daemonset
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 
+{{< k8s-language noyaml >}}
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -548,32 +747,12 @@ const nginx = new k8s.apps.v1.DaemonSet(appName, {
     },
 }, { provider: provider });
 ```
-
-## Deploy a Job
-
-Deploy a [Job][k8s-job] of a Perl program.
-
-The full code for this app stack is on [GitHub][gh-job-stack].
-[gh-job-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/job
-[k8s-job]: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
-
-{{< k8s-language noyaml >}}
-
-<div class="k8s-language-prologue-typescript"></div>
-<div class="mt">
-{{% md %}}
-```ts
-TS TODO
-```
 {{% /md %}}
 </div>
-
 <div class="k8s-language-prologue-typescript-kx"></div>
 <div class="mt">
 {{% md %}}
-```ts
-KX TODO
-```
+Coming Soon.
 {{% /md %}}
 </div>
 
@@ -585,6 +764,10 @@ The full code for this app stack is on [GitHub][gh-cronjob-stack].
 [gh-cronjob-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/apps/cronjob
 [k8s-cj]: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 
+{{< k8s-language noyaml >}}
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -611,6 +794,14 @@ const exampleCronJob = new k8s.batch.v1beta1.CronJob("example-cronjob", {
     }
 }, { provider: provider });
 ```
+{{% /md %}}
+</div>
+<div class="k8s-language-prologue-typescript-kx"></div>
+<div class="mt">
+{{% md %}}
+Coming Soon.
+{{% /md %}}
+</div>
 
 ## Deploy a StatefulSet
 
@@ -621,6 +812,10 @@ The full code for this app stack is on [GitHub][gh-ss-stack].
 [k8s-ss]: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 [mariadb]: https://mariadb.org/
 
+{{< k8s-language noyaml >}}
+<div class="k8s-language-prologue-typescript"></div>
+<div class="mt">
+{{% md %}}
 ```ts
 import * as k8s from "@pulumi/kubernetes";
 
@@ -769,6 +964,14 @@ const mariadb = new k8s.apps.v1.StatefulSet("mariadb", {
     }
 }, { provider: provider });
 ```
+{{% /md %}}
+</div>
+<div class="k8s-language-prologue-typescript-kx"></div>
+<div class="mt">
+{{% md %}}
+Coming Soon.
+{{% /md %}}
+</div>
 
 ## Learn More
 
