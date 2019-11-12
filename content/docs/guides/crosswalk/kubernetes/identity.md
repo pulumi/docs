@@ -474,6 +474,14 @@ const admins = new azuread.Group("admins", {
 Create a developer group in Azure. This group will be mapped into a limited
 developer role in Kubernetes RBAC.
 
+> Note: On deletion of this Pulumi stack you **cannot** use the
+> ServicePrincipal to delete the Group, as [ActiveDirectory][so-ad-no-apps] does not allow
+> Application registrations to delete AD Groups. Instead, you must authenticate as a
+> user, and ensure that the user has `admin` rights in AD to be able to
+> delete the group.
+
+[so-ad-no-apps]: https://stackoverflow.com/questions/46604721/azure-ad-delete-user-group-unauthorized
+
 ```typescript
 import * as azuread from "@pulumi/azuread";
 
