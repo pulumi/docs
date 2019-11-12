@@ -84,7 +84,7 @@ In [Crosswalk for AWS][crosswalk-aws] we showcase how to define networking:
 
 ### Create a New VPC for Kubernetes
 
-Create a new VPC to use with the cluster that uses custom settings and
+Create a new VPC to use with the cluster with custom settings and
 best-practice defaults.
 
 ```typescript
@@ -120,7 +120,7 @@ TODO
 
 ### Create a New VPC for Kubernetes
 
-Create a new VPC to use with the cluster that uses custom settings and
+Create a new VPC to use with the cluster with custom settings and
 best-practice defaults.
 
 ```typescript
@@ -138,7 +138,7 @@ TODO
 
 ### Create a New VPC for Kubernetes
 
-Create a new VPC to use with the cluster that uses custom settings and
+Create a new VPC to use with the cluster with custom settings and
 best-practice defaults.
 
 ```typescript
