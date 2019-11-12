@@ -152,7 +152,7 @@ export const appsNamespaceName = appsNamespace.metadata.name;
 
 ### Quotas
 
-Create [quotas][k8s-quotas] to restrict the amount of resources that can be consumed across
+Create [quotas][k8s-quotas] to restrict the number of resources that can be consumed across
 all Pods in a namespace.
 
 [k8s-quotas]: https://kubernetes.io/docs/concepts/policy/resource-quotas/#compute-resource-quota

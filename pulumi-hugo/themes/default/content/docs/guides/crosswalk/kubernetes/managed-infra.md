@@ -109,7 +109,7 @@ In [Crosswalk for AWS][crosswalk-aws] we showcase how to define networking:
 
 ### Create a New VPC for Kubernetes
 
-Create a new VPC to use with the cluster that uses custom settings and
+Create a new VPC to use with the cluster with custom settings and
 best-practice defaults.
 
 ```typescript
@@ -143,7 +143,7 @@ export const privateSubnetIds = vpc.privateSubnetIds;
 
 ### Create a New Virtual Network for Kubernetes
 
-Create a new Virtual Network to use with the cluster that uses custom settings and
+Create a new Virtual Network to use with the cluster with custom settings and
 best-practice defaults.
 
 ```typescript
@@ -170,7 +170,7 @@ const subnet = new azure.network.Subnet(name, {
 
 ### Create a New VPC for Kubernetes
 
-Create a new network to use with the cluster that uses custom settings and
+Create a new network to use with the cluster with custom settings and
 best-practice defaults.
 
 ```typescript
