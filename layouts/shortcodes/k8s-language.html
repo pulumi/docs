@@ -1,8 +1,8 @@
 <div class="mdl-tabs k8s-language-tab-tabs">
     <div class="mdl-tabs__tab-dir k8s-language-tab-tabstrip">
-        <a class="mdl-tabs__tab k8s-language-tab">typescript</a>
+        <a class="mdl-tabs__tab k8s-language-tab is-active">typescript</a>
         {{ if not (eq (.Get 0) "typescript-only") }}
-            {{ if not (eq (.Get 0) "noyaml") }}<a class="mdl-tabs__tab k8s-language-tab is-active">yaml</a>{{ end }}
+            {{ if not (eq (.Get 0) "noyaml") }}<a class="mdl-tabs__tab k8s-language-tab">yaml</a>{{ end }}
             {{ if not (eq (.Get 0) "nokx") }}<a class="mdl-tabs__tab k8s-language-tab">typescript-kx</a>{{ end }}
         {{ end }}
     </div>
