@@ -129,38 +129,8 @@ Deploy applications and workloads into the cluster.
 
 ## Frequently Asked Questions (FAQ)
 
-1. **What does Crosswalk for Kubernetes include?**
+See the [FAQ][crosswalk-faq] for more details.
 
-    Crosswalk for Kubernetes is a set of tasks to configure, deploy, and manage
-    Kubernetes in production.
-
-    Tasks are segmented by operations, and belong to one of the 6 stacks outlined above.
-    The Pulumi code for each stack is available and linked at the top of each task.
-
-    Together, the docs and stack code provide a reference architecture to operate
-    and use Kubernetes in production across a team using industry best-practices.
-
-1. **Where is the code located?**
-
-    You can find the Crosswalk reference architecture on [GitHub][ktpw-gh].
-
-1. **Where can I suggest a change or open an issue with the docs?**
-
-    You can open an issue in [`pulumi/docs`][pulumi-docs] for any changes to the
-    Crosswalk documentation.
-
-1. **Where can I suggest a change or open an issue with the stack code?**
-
-    You can open an issue in [`pulumi/kubernetes-the-prod-way`][pulumi-ktpw] for
-    any changes to the Crosswalk code.
-
-1. **Where can I ask for assistance on Crosswalk for Kubernetes?**
-
-    You can find us in the [community Slack][pulumi-slack] channel.
-
-[pulumi-slack]: https://slack.pulumi.com/
-[pulumi-docs]: https://github.com/pulumi/docs
-[pulumi-ktpw]: https://github.com/pulumi/kubernetes-the-prod-way
 [ktpw-gh]: https://github.com/pulumi/kubernetes-the-prod-way
 [aws-iam]: https://aws.amazon.com/iam/
 [gcp-iam]: https://cloud.google.com/iam/
@@ -174,6 +144,7 @@ Deploy applications and workloads into the cluster.
 [k8s-get-started]: {{< relref "/docs/get-started/kubernetes" >}}
 [k8s-api-resources]: https://kubernetes.io/docs/reference/kubernetes-api/
 [aws-sqs]: https://aws.amazon.com/sqs/
+[crosswalk-faq]: {{< relref "/docs/guides/crosswalk/kubernetes/faq.md" >}}
 [crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
 [crosswalk-worker-nodes]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
 [crosswalk-try-out-the-cluster]: {{< relref "/docs/guides/crosswalk/kubernetes/try-out-the-cluster" >}}
