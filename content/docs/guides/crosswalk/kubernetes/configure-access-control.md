@@ -75,10 +75,10 @@ We'll examine how to:
 Access control is not configured by default for **non-admins** with Kubernetes RBAC.
 
 In [Identity][crosswalk-identity] developers can **authenticate** into the cluster
-using the kubeconfig, but it is not yet **authorized** to do work in the cluster.
+using the kubeconfig, but they are not yet **authorized** to do work in the cluster.
 
 This means that the user cannot perform any operations in the cluster by
-default such as retrieve information, as shown in the `Error from server (Forbidden)`
+default, such as retrieve information, as shown in the `Error from server (Forbidden)`
 messages.
 
 ```bash

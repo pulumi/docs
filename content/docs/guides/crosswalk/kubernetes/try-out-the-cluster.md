@@ -60,7 +60,7 @@ We'll explore how to:
 {{% md %}}
 In EKS, the account caller will be placed into the
 `system:masters` Kubernetes RBAC group by default. The `kubeconfig`
-generated will cater to this primary cluster creator use-case, and it must be
+generated will be specific to this primary cluster creator use-case, and it must be
 copied, and reconfigured to use with other IAM roles the caller assumes, as
 demonstrated in [Configure Access Control][crosswalk-configure-access].
 
@@ -93,7 +93,7 @@ $ pulumi stack output adminsIamRoleArn
 arn:aws:iam::000000000000:role/admins-eksClusterAdmin-0627674
 ```
 
-Make a copy of the kubeconfig that will be edited for the `admins` to use the
+Make a copy of the kubeconfig file that will be edited for the `admins` to use the
 `adminsIamRoleArn` output.
 
 ```bash
@@ -154,7 +154,7 @@ $ pulumi stack output devsIamRoleArn
 arn:aws:iam::000000000000:role/devs-eksClusterDeveloper-e332028
 ```
 
-Make a copy of the kubeconfig that will be edited for the `devs` to use the
+Make a copy of the kubeconfig file that will be edited for the `devs` to use the
 `devsIamRoleArn` output.
 
 ```bash
@@ -198,7 +198,7 @@ Edit `kubeconfig-devs.json` to use a role for authentication in the
 {{% md %}}
 In AKS, the account caller will be placed into the
 `system:masters` Kubernetes RBAC group by default. Two `kubeconfig` files will
-be generated that will cater to the admin and cluster user [use-cases][aks-cluster-roles].
+be generated that will be specific to the admin and cluster user [use-cases][aks-cluster-roles].
 
 To configure the cluster for use with IAM roles, check out
 [Configure Access Control][crosswalk-configure-access].
@@ -240,7 +240,7 @@ $ export KUBECONFIG=`pwd`/kubeconfig-devs.json
 {{% md %}}
 In GCP, the account caller will be placed into the
 `system:masters` Kubernetes RBAC group by default. The `kubeconfig`
-generated will cater to this primary cluster creator use-case.
+generated will be specific to this primary cluster creator use-case.
 
 GCP authentication will use tokens to operate as Members such as Users or ServiceAccounts,
 and with certain permissions as detailed in [Configure Access Control][crosswalk-configure-access].
@@ -325,7 +325,7 @@ Imperatively deploy a NGINX Pod and public load-balanced service:
 $ kubectl run --generator=run-pod/v1 nginx --image=nginx --port=80 --expose --service-overrides='{"spec":{"type":"LoadBalancer"}}'
 ```
 
-After a few moments, visit the load balancer URL.
+After a few moments once it is deployed, visit the load balancer URL.
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">

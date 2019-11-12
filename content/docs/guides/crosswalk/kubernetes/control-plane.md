@@ -62,8 +62,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 ## Overview
 
-The [control plane][k8s-concepts] is a collection of processes that coordinate and
-manage the cluster's state, segmented by responsibilities. It also makes
+The [control plane][k8s-concepts] is a collection of processes that coordinates and
+manages the cluster's state, segmented by responsibilities. It also makes
 scheduling decisions to facilitate the applications and cloud workflows that
 the worker nodes will be responsible for running.
 
@@ -75,7 +75,7 @@ We'll configure and deploy:
   * [Identity](#identity): For authentication and authorization of
   cluster users and worker nodes.
   * [Managed Infrastructure](#managed-infrastructure): To provide managed services for the cluster.
-  At a minimum, this includes a virtual network for the cluster to use.
+  At a minimum, this includes a virtual network for the cluster.
   * [Storage](#storage): To provide data stores for the cluster and its
     workloads.
   * [Recommended Settings](#recommended-settings): To apply helpful features
@@ -86,7 +86,7 @@ We'll configure and deploy:
 In [Identity][crosswalk-identity] we demonstrate how to create typical IAM resources for use in Kubernetes. You'll want to create the Identity stack first.
 
 Separation of identities is important for several reasons: it can be used to
-limit the blast radius if a given group is compromised, can regulate the number
+limit the scope of damage if a given group is compromised, can regulate the number
 of API requests originating from a certain group, and can also help scope
 privileges to specific workloads.
 <div class="cloud-prologue-azure"></div>
@@ -256,12 +256,12 @@ to use for the cluster.
   * Private subnets for use as the default subnets for workers to run in.
   * Managed [Pod networking][k8s-pod-networking].
 
-Kubernetes requires that all subnets you intend to use be [properly tagged][eks-subnet-tagging],
-in order to know which subnets it can provision load balancers within.
+Kubernetes requires that all subnets you used to be [properly tagged][eks-subnet-tagging],
+in order to determine which subnets it can provision load balancers within.
 
-To ensure proper functionality, pass in **any** public and/or private subnets you
+To ensure proper function, pass in **any** public and/or private subnets you
 intend to use into the cluster definition. If these need to be updated to include more subnets, or
-if some need to be removed, the change is straightforward with a Pulumi update.
+if some need to be removed, the change is accomplished with a Pulumi update.
 
 By default, [`pulumi/eks`][pulumi-eks] will deploy workers into the private subnets, if
 specified, if not into the public subnets provided. Using private subnets for
@@ -269,10 +269,10 @@ workers without associating a public IP address is highly recommended - it
 creates workers that will not be publicly accessible from the Internet,
 and they'll typically be shielded within your VPC.
 
-EKS will automatically manage Kubernetes Pod networking for us through
+EKS will automatically manage Kubernetes Pod networking through
 the use of the [AWS CNI Plugin][aws-k8s-cni]. This plugin is deployed by
 default on worker nodes as a [DaemonSet][k8s-ds] named `aws-node` in all clusters
-provisioned with `pulumi/eks`, and is capable of being [configured][configure-cni].
+provisioned with `pulumi/eks` and is capable of being [configured][configure-cni].
 
 ```typescript
 import * as eks from "@pulumi/eks";
@@ -390,12 +390,12 @@ export const subnetworkName = subnet.name;
 Kubernetes [storage][k8s-storage] provides data persistence for
 the cluster with shared storage, and/or volumes for Pods.
 
-The volume classes are extensive and vary by cloud provider, but
+The volume classes are extensive and vary by cloud provider, but they
 typically they include volume types for mechanical drives and
 SSDs, along with network backed storage such as [NFS][nfs], [iSCSI][iscsi], and [CephFS][ceph-fs].
 
-To provision a [PersistentVolume][k8s-pvs], we have to ensure we have the
-desired storage classes created in the cluster.
+To provision a [PersistentVolume][k8s-pvs], we have to ensure that the
+desired storage classes have been created in the cluster.
 
 > Note: At most one storage class should be marked as default.
 If two or more of them are marked as default, a [`PersistentVolumeClaim`][k8s-pvs] without `storageClassName` explicitly specified
@@ -748,9 +748,9 @@ general best-practices and recommendations to configure in the cluster.
 
   * Use a specific version of Kubernetes for the control plane. This pins the
     cluster to a particular release in a declarative manner, instead of
-    implicitly using the latest available version, or using a smart default
+    implicitly using the latest available version, or use a smart default
     where both can be updated at any moment.
-  * Instead of [reaching for][kube-dash-security] `kube-dashboard`, try [VMware's Octant][octant].
+  * Instead of [use][kube-dash-security] `kube-dashboard`, try [VMware's Octant][octant].
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -762,7 +762,7 @@ general best-practices and recommendations to configure in the cluster.
     metadata to resources to make it easier to manage, search, and filter them.
   * Skip enabling the default node group in favor of managing them separately from
     the control plane, as demonstrated in [Create the Worker Nodes][nodegroups].
-  * Enable control plane logging to have diagnostics of the control
+  * Enable control plane logging for diagnostics of the control
     plane's actions, and for use in debugging and auditing.
   * (Optional) Configure private accessibility of the control plane /
     API Server endpoint to prevent it from being publicly exposed on the

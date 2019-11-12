@@ -9,8 +9,8 @@ menu:
 
 {{< cloudchoose >}}
 
-The [worker nodes][k8s-concepts] are hosts that are responsible for
-running the apps and workloads of the cluster after the control plane has
+The [worker nodes][k8s-concepts] are hosts that
+run the apps and workloads of the cluster after the control plane has
 scheduled its work. It also typically facilitates virtual networking using an
 overlay or integrated network depending on setup.
 
@@ -49,15 +49,15 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 ## Overview
 
-Given that apps and workloads will vary in quantity, and in the resources they
-require, it's wise to offer differing pools of nodes for Pods to use.
+Given that apps and workloads will vary in number, and in the resources they
+require, it's best practice to make differing pools of nodes for Pods to use.
 
 Pools, also known as Node Groups, can vary by instance type, sizing, capacity,
 scaling group, or other properties like the version of the [Kubelet][k8s-kubelet] to run.
 
 How you segment and configure your node groups will vary by preferences and
-requirements. Generally, there are at least a few classes of worker node
-groups for starters: a standard pool of nodes that offers a base for
+requirements. Generally, there are at minimum a few classes of worker node
+groups, for example: a standard pool of nodes that offers a base for
 medium-sized use, and a performant pool of nodes with higher capacity and capability.
 
 <div class="cloud-prologue-aws"></div>
@@ -78,7 +78,7 @@ We'll configure and deploy:
 
 When creating node groups, it is recommended to use separate identities between
 node groups, as separation of roles creates many functions: it can be used to
-limit the blast radius if a given group is compromised, can regulate the number
+limit the scope of damage if a given group is compromised, can regulate the number
 of API requests originating from a certain group, and can also help scope
 privileges to specific node types and related workloads.
 
@@ -149,7 +149,7 @@ We'll configure and deploy:
 Node groups in EKS can also have their node security group be configured to a
 new or existing security group.
 
-To [create a custom security group][crosswalk-sgs], grab the cluster's ingress
+To [create a custom security group][crosswalk-sgs], update the cluster's ingress
 rule to correctly configure the ingress and egress rules.
 
 ```typescript
@@ -221,7 +221,7 @@ These groups provide automatic scaling and management of a logical
 collection of hosts through health checks and policies, and are an effective
 means of ensuring node groups are adequately provisioned as intended.
 
-We can configure the scaling group to run a specific quantity of nodes.
+We can configure the scaling group to run a specific number of nodes.
 
 Size the node groups accordingly to known or approximate usage and bursting
 expectations.
@@ -331,7 +331,7 @@ const performantNodes = new gcp.container.NodePool("performant-nodes", {
 
 If necessary, consider installing the [Kubernetes Cluster
 Autoscaler][k8s-cluster-autoscaler] to automatically adjust the size of the
-cluster when there are either insufficient resources for Pods, or if nodes are
+cluster when there are either insufficient resources for Pods or if nodes are
 underutilized. You'll need to set up the appropriate tags on the node groups for
 the `cluster-autoscaler` to run properly. See the [Recommended Worker
 Settings](#recommended-worker-settings) below to configure the tags of
@@ -451,7 +451,7 @@ const performantNodes = new gcp.container.NodePool("performant-nodes", {
 
   * Use a specific version of Kubernetes for each node group. This pins the nodes
   to a particular release in a declarative manner, instead of implicitly
-  using the latest available version, or using a smart default where both
+  using the latest available version or using a smart default where both
   can be updated at any moment.
   * Tag resources under management to provide the ability to assign
   metadata to resources to make it easier to manage, search, and filter them.
