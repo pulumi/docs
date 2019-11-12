@@ -16,7 +16,7 @@ with Pulumi and Kubernetes, the [Get Started][k8s-get-started] guide is a better
 
 ## Overview
 
-The primary steps to follow include how to:
+The steps to follow include:
 
   * [Create the Control Plane][crosswalk-control-plane]
   * [Create the Worker Nodes][crosswalk-worker-nodes]
@@ -30,18 +30,18 @@ The primary steps to follow include how to:
 
 ## Production Architecture for Teams
 
-Infrastructure misconfiguration accounts for the most significant subset of serious
+Misconfigured infrastructure accounts are the source of a significant number of serious
 production outages in major systems. Many of these failure modes are preventable.
 
 The primary objective of this reference architecture is to create sensible
 defaults that reduces the likelihood of these errors. Modern infrastructure as
-code tools, such as Pulumi, are effective means of accomplishing
+code tools, such as Pulumi, are an effective means of accomplishing
 this goal.
 
-These tools allow engineering teams to share specifications for what their
-infrastructure should look like and allow teams to reliably provision and manage
+Pulumi tools allow engineering teams to share specifications for their
+infrastructure and allow teams to reliably provision and manage
 infrastructure. Changes to infrastructure can be audited as part of
-code review, and they allow teams to detect drift.
+code review and they allow teams to detect drift.
 
 This architecture is meant to show how these tools can be used within a team
 to employ and understand:
@@ -52,8 +52,8 @@ to employ and understand:
 
 ## Production Infrastructure as Code
 
-At the heart of this architecture is a simple idea: that we should separate resources into
-loosely-coupled, independently-managable sets, based on risk and functionality.
+At the core of this architecture is a simple idea: that we should separate resources into
+loosely-coupled, independently-manageable sets, based on risk and functionality.
 
 We suggest splitting infrastructure up into (roughly) 6 [Pulumi
 stack]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) of resources.
@@ -62,18 +62,17 @@ stack]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) of reso
 
 ### 1. Identity
 
-Identities and role definitions for organizations and CI/CD are required before anyone can provision
-anything. This is a requirement for every production Kubernetes deployment.
+Identities and role definitions for organizations and CI/CD are required before provisioning. This is a requirement for every production Kubernetes deployment.
 
 By isolating resources into loosely-coupled stacks we
-have the opportunity to grant minimal permissions based on the [principle of least
+can grant minimal permissions based on the [principle of least
 privilege](https://en.m.wikipedia.org/wiki/Principleofleastprivilege).
 
 The identity stack typically looks like:
 
 * Identities and roles for the team e.g. [AWS IAM][aws-iam], [GCP IAM][gcp-iam], [Azure AD][azure-ad].
 
-    For example, the databases team typically gets only administrative permissions for the datastores, while an app team might only get cluster developer permissions.
+    For example, the database team typically gets only administrative permissions for the data stores, while an app team might only get cluster developer permissions.
 * Service Accounts for bots and CI/CD.
 
     While IAM roles and Active Directory accounts describe identity of users,
@@ -85,26 +84,23 @@ The identity stack typically looks like:
 Provisioning shared, managed infrastructure is required to configure the
 cluster.
 
-At a minimum, this typically this includes networking infrastructure,
+At a minimum, this typically this includes networking infrastructure
 and can often include storage backends along with other cloud services such as
 VMs, registries, data pipelines, and data warehouses.
 
 ### 3. Kubernetes Cluster 
 
-Configure and provision the Kubernetes cluster with the desired settings and defaults.
-
-Typically this also involves provisioning Kubernetes cluster infrastructure
-with [API resources][k8s-api-resources] such as `Namespaces`, `Roles` , `RoleBindings`, and `Quotas`.
+Configuring and provisioning the Kubernetes cluster with the desired settings and defaults, typically involves provisioning Kubernetes cluster infrastructure with [API resources][k8s-api-resources] such as `Namespaces`, `Roles` , `RoleBindings`, and `Quotas`.
 
 Using a managed Kubernetes cluster on [EKS][eks], [GKE][gke], or [AKS][aks] is
 the easiest recommended way to get started with deploying a cluster.
 
 ### 4. Cluster Services
 
-With a running, vanilla cluster you should install any Kubernetes cluster-scoped
+With a running, vanilla cluster you can install any Kubernetes cluster-scoped
 services that will be shared by a subset or all cluster users.
 
-At a minimum, services include centralized cluster and app-based logging, and often
+At a minimum, services that should be installed include centralized cluster and app-based logging, and often
 include monitoring, policies, registries, and service meshes.
 
 ### 5. App Services
@@ -113,7 +109,7 @@ Configure any Kubernetes app-scoped services that will be shared
 by a subset or all users with deployment permissions.
 
 App services tend to include ingress controllers, DNS managers, TLS
-certificate managers, app pipelines, and managed datastores (e.g. [Aurora][aurora],
+certificate managers, app pipelines, and managed data stores (e.g. [Aurora][aurora],
 [Cloud SQL][cloud-sql], [SQS][aws-sqs], and [CosmosDB][cosmos-db]).
 
 ### 6. Apps
