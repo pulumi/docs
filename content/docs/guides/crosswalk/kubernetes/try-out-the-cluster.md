@@ -53,7 +53,7 @@ We'll explore how to:
   * [Deploy a Workload](#deploy-a-workload)
   * [Learn More](#learn-more)
 
-### Access the Cluster
+## Access the Cluster
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -279,7 +279,7 @@ $ export KUBECONFIG=`pwd`/kubeconfig.json
 {{% /md %}}
 </div>
 
-### Query the Cluster
+## Query the Cluster
 
 Get cluster information.
 
@@ -312,7 +312,7 @@ Get the ConfigMaps of the `kube-system` Namespace.
 $ kubectl get cm -n kube-system
 ```
 
-### Deploy a Workload
+## Deploy a Workload
 
 {{< k8s-language nokx >}}
 
@@ -463,7 +463,7 @@ To tear down NGINX, delete its definition in the Pulumi program and run a Pulumi
 {{% /md %}}
 </div>
 
-### Learn More
+## Learn More
 
 See the official [Kubernetes Basics][k8s-basics] tutorial for more details.
 

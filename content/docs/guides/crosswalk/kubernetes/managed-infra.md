@@ -107,7 +107,7 @@ In [Crosswalk for AWS][crosswalk-aws] we showcase how to define networking:
   - [Internet & NAT Gateways][vpc-gw]
   - [Security Groups][vpc-sg]
 
-### Create a New VPC for Kubernetes
+#### Create a New VPC for Kubernetes
 
 Create a new VPC to use with the cluster with custom settings and
 best-practice defaults.
@@ -141,7 +141,7 @@ export const privateSubnetIds = vpc.privateSubnetIds;
 <div class="mt">
 {{% md %}}
 
-### Create a New Virtual Network for Kubernetes
+#### Create a New Virtual Network for Kubernetes
 
 Create a new Virtual Network to use with the cluster with custom settings and
 best-practice defaults.
@@ -168,7 +168,7 @@ const subnet = new azure.network.Subnet(name, {
 <div class="mt">
 {{% md %}}
 
-### Create a New VPC for Kubernetes
+#### Create a New VPC for Kubernetes
 
 Create a new network to use with the cluster with custom settings and
 best-practice defaults.
@@ -204,7 +204,7 @@ export const subnetworkName = subnet.name;
 <div class="mt">
 {{% md %}}
 
-### Use the Default VPC with Kubernetes
+#### Use the Default VPC with Kubernetes
 
 Use the account's default VPC.
 
@@ -227,7 +227,7 @@ export const defaultPrivateSubnetIds = defaultVpc.privateSubnetIds;
 <div class="mt">
 {{% md %}}
 
-### Use an Existing VPC with Kubernetes
+#### Use an Existing VPC with Kubernetes
 
 To use an existing VPC, provide the IDs of the VPC and its resources.
 
@@ -251,7 +251,7 @@ export const existingPrivateSubnetIds = existingVpc.privateSubnetIds;
 {{% /md %}}
 </div>
 
-### Requirements & Recommendations
+#### Requirements & Recommendations
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -305,15 +305,15 @@ needs of your complete architecture.
 <div class="mt">
 {{% md %}}
 
-## Amazon Simple Storage Service (S3)
+#### Amazon Simple Storage Service (S3)
 
 See [Crosswalk AWS S3][pulumi-s3] and the [AWS S3 docs][aws-s3] for more details.
 
-## Elastic Container Registry (ECR)
+#### Elastic Container Registry (ECR)
 
 See [Crosswalk AWS ECR][crosswalk-ecr] and the [AWS ECR docs][aws-ecr] for more details.
 
-## Amazon Elastic File System (EFS)
+#### Amazon Elastic File System (EFS)
 
 See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] and the
 [AWS EFS docs][aws-efs] for more details.
@@ -331,7 +331,7 @@ See [Persisting Kubernetes Workloads with Amazon EFS][pulumi-efs] and the
 <div class="mt">
 {{% md %}}
 
-## Azure Blob Storage
+#### Azure Blob Storage
 
 Create a new blob storage with a data source of a local directory and files.
 
@@ -364,7 +364,8 @@ const storageAccount = new azure.storage.Account("websitesa", {
     }),
 );
 ```
-## Azure Container Registry (ACR)
+
+#### Azure Container Registry (ACR)
 
 Create a new registry, build a local Docker image, and push it to the registry.
 
@@ -413,7 +414,7 @@ const appImage = new docker.Image(customImage, {
 <div class="mt">
 {{% md %}}
 
-## Google Container Registry (GCR)
+#### Google Container Registry (GCR)
 
 Fetch the URL to use for the Debian container image.
 
@@ -449,7 +450,7 @@ const appImage = new docker.Image(customImage, {
 });
 ```
 
-## GCP Object Storage
+#### GCP Object Storage
 
 Create a new bucket with a data source of a local file.
 

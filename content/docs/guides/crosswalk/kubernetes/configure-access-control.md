@@ -66,7 +66,7 @@ We'll examine how to:
 
   * [Configure RBAC Authorization](#configure-rbac-authorization)
 
-### Configure RBAC Authorization
+## Configure RBAC Authorization
 
 <div class="cloud-prologue-azure"></div>
 <div class="mt">

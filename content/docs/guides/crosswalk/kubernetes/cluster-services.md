@@ -1,5 +1,6 @@
 ---
 title: Deploy Cluster Services
+no_on_this_page: true
 menu:
   userguides:
     parent: crosswalk-kubernetes

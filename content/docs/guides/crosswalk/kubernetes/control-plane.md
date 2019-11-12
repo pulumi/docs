@@ -103,7 +103,7 @@ We configure applications and service principals using the `@pulumi/azuread` pac
 {{% /md %}}
 </div>
 
-### Users
+#### Users
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -208,7 +208,7 @@ By authenticating with the ServiceAccount using `gcloud`, as outlined in [Identi
 <div class="mt">
 {{% md %}}
 
-### Worker Node Groups
+#### Worker Node Groups
 
 We configure the worker identities using `instanceRoles` in the cluster.
 Later on, when we [define the node groups][nodegroups], we'll use an [instance
@@ -385,7 +385,7 @@ export const subnetworkName = subnet.name;
 {{% /md %}}
 </div>
 
-## Storage
+### Storage
 
 Kubernetes [storage][k8s-storage] provides data persistence for
 the cluster with shared storage, and/or volumes for Pods.
