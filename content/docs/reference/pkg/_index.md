@@ -52,6 +52,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**Google Cloud** (`@pulumi/gcp`)]({{< relref "nodejs/pulumi/gcp" >}})
 * [**Kubernetes** (`@pulumi/kubernetes`)]({{< relref "nodejs/pulumi/kubernetes" >}})
 
+* [**Aiven** (`@pulumi/aiven`)]({{< relref "nodejs/pulumi/aiven" >}})
 * [**Cloudflare** (`@pulumi/cloudflare`)]({{< relref "nodejs/pulumi/cloudflare" >}})
 * [**HashiCorp Consul** (`@pulumi/consul`)]({{< relref "nodejs/pulumi/consul" >}})
 * [**Datadog** (`@pulumi/datadog`)]({{< relref "nodejs/pulumi/datadog" >}})
@@ -81,6 +82,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**Google Cloud** (`pulumi_gcp`)]({{< relref "python/pulumi_gcp" >}})
 * [**Kubernetes** (`pulumi_kubernetes`)]({{< relref "python/pulumi_kubernetes" >}})
 
+* [**Aiven** (`pulumi_aiven`)]({{< relref "python/pulumi_aiven" >}})
 * [**Cloudflare** (`pulumi_cloudflare`)]({{< relref "python/pulumi_cloudflare" >}})
 * [**HashiCorp Consul** (`pulumi_consul`)]({{< relref "python/pulumi_consul" >}})
 * [**Datadog** (`pulumi_datadog`)]({{< relref "python/pulumi_datadog" >}})

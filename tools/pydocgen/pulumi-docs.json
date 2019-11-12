@@ -8,6 +8,12 @@
   },
   "providers": [
     {
+      "name": "Pulumi Aiven",
+      "package_name": "pulumi_aiven",
+      "pulumi_provider_name": "aiven",
+      "terraform_provider_name": ""
+    },
+    {
       "name": "Pulumi Random",
       "package_name": "pulumi_random",
       "pulumi_provider_name": "random",
