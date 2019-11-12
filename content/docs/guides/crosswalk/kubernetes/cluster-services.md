@@ -226,7 +226,7 @@ Cluster Defaults][crosswalk-k8s-defaults] .
 import * as k8s from "@pulumi/kubernetes";
 
 // Create a new provider to the cluster using the cluster's kubeconfig.
-const eksProvider = new k8s.Provider("eksProvider", {kubeconfig: config.kubeconfig.apply(JSON.stringify)});
+const provider = new k8s.Provider("provider", {kubeconfig: config.kubeconfig});
 
 // Create a new CloudWatch Log group for fluentd-cloudwatch.
 const fluentdCloudWatchLogGroup = new aws.cloudwatch.LogGroup(name);
@@ -256,7 +256,7 @@ const fluentdCloudwatch = new k8s.helm.v2.Chart(name,
             },
         ],
     },
-    {providers: { kubernetes: eksProvider }},
+    {providers: { kubernetes: provider }},
 );
 ```
 
