@@ -182,7 +182,7 @@ used by the CLI for authentication that works with the server component. We
 will create both in the sections below.
 
 > Note: The Server and Client Application registrations will be created with the desired accesses, but an administrator
-**will need** to grant consent before they can be used in proceeding stacks.
+**will need** to grant the Server Application consent before they can be used in proceeding stacks.
 
 See the official [docs][azure-ad-aks] for more details.
 
@@ -282,9 +282,6 @@ export const adServerAppSecret = spPasswordServer.value;
 
 Create an Azure client Application and ServicePrincipal, and attach it AD
 permissions.
-
-> Note: The Application registration will be created with the desired accesses, but an administrator
-**will need** to grant consent before they can be used in proceeding stacks.
 
 ```typescript
 import * as azuread from "@pulumi/azuread";
@@ -473,6 +470,8 @@ const admins = new azuread.Group("admins", {
 
 Create a developer group in Azure. This group will be mapped into a limited
 developer role in Kubernetes RBAC.
+
+Add a new user in AD, or get an existing user to add to the new AD group.
 
 > Note: On deletion of this Pulumi stack you **cannot** use the
 > ServicePrincipal to delete the Group, as [ActiveDirectory][so-ad-no-apps] does not allow
