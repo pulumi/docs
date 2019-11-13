@@ -89,6 +89,7 @@ pulumi.export('bucket_name',  bucket.url)
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Pulumi;
 using Gcp = Pulumi.Gcp;
 
 class Program
