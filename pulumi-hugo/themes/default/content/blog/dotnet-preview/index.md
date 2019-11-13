@@ -13,15 +13,15 @@ tags:
     - "Visual Basic"
 ---
 
-Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because .NET Core is available on Windows, Linux, and macOS, you have a choice of platforms to use. You can create cloud resources by writing Microsoft .NET Core programs to build and deploy AKS Clusters, Functions, Azure App Services, Virtual Machines, Cosmos DBs, KeyVaults, and much, much more.
+Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because .NET Core is available on Windows, Linux, and macOS, you have a choice of platforms to use. You can create cloud resources by writing Microsoft .NET Core programs to build and deploy cloud resources to a wide variety of clouds, including Azure, AWS, GCP and more.  On Azure, you can manage resources like AKS Clusters, Functions, Azure App Services, Virtual Machines, Cosmos DBs, KeyVaults, and much, much more.
 
 ## What Does Pulumi Enable?
 
-With Pulumi, .NET developers can declare infrastructure using C#, F#, or Visual Basic .NET. This results in increased productivity for developers because they can use the features of their IDEs such as auto-completion, error checking with red markers, build error messages, refactoring tools, and package managers. Developers can reference any NuGet library compatible with .NET Core 3.0.
+With Pulumi, .NET developers can create, deploy and manage cloud infrastructure using C#, F#, or Visual Basic .NET. This results in increased productivity for developers because they can use the features of their IDEs such as auto-completion, error checking with red markers, build error messages, refactoring tools, and package managers. Developers can reference any NuGet library compatible with .NET Core 3.0.
 
-Operators can use the Pulumi CLI or CI/CD integrations to maintain and version infrastructure in a repository resulting in predictable and reliable deployments. Regardless of your cloud architecture, whether it includes containers, serverless function or static websites, Pulumi lets you build modern, reliable, and scalable applications. Your pipeline is part of your product.
+Operators can use the `pulumi` CLI or CI/CD integrations to maintain and version infrastructure in a repository resulting in predictable and reliable deployments. Regardless of your cloud architecture, whether it includes containers, serverless function or static websites, Pulumi lets you build modern, reliable, and scalable applications. Your pipeline is part of your product.
 
-You can accomplish all of this without having to learn a DSL or script CLI commands. With Pulumi, developers and operators have a shared foundation for building modern applications.
+You can accomplish all of this without having to learn a JSON or YAML DSL or script low-level CLI commands. With Pulumi, developers and operators have a shared foundation for building modern applications.
 
 ## How Pulumi .NET Works
 
@@ -76,13 +76,13 @@ There are four files in the Pulumi project, the `Azure.Appservice.csproj` which 
     $ pulumi config set azure:location centralus
     ```
 
-1. Define the SQL Server password (make it complex enough to satisfy Azure policy):
+1. Define the SQL Server password (make it complex enough to satisfy [Azure policy](https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts)):
 
     ``` bash
     pulumi config set --secret sqlPassword <value>
     ```
 
-1. Run `pulumi up` to preview and deploy changes:
+1. Run `pulumi up`. Pulumi will display a preview of the updates to the stack and ask if you would like to deploy by updating.
 
     ``` bash
     $ pulumi up
@@ -106,7 +106,7 @@ ___
 
 ### Test Your Stack
 
-Check the deployed website endpoint by querying the stack and using curl to retrieve the web page.
+The endpoint is one of the outputs that the stack returns. Check the deployed website endpoint by querying the stack and using curl to retrieve the web page.
 
 ``` bash
 $ pulumi stack output endpoint
@@ -127,7 +127,7 @@ $ pulumi destroy --yes
 $ pulumi stack rm --yes
 ```
 
-## Summary
+## Code Review
 
 In this post, we've shown how to use Pulumi to deploy a modern application to Azure. The example code performs a number of tasks.
 
@@ -227,5 +227,7 @@ var app = new AppService("app", new AppServiceArgs
        },
 });
 ```
+
+## Summary
 
 In this example, we declared resources for a website and a database using C# and the Pulumi engine deployed them to Azure. To get started with infrastructure as code, download [Pulumi](https://www.pulumi.com/docs/get-started/install/) to build and deploy modern applications using .NET Core.
