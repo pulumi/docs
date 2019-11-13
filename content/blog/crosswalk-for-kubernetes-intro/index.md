@@ -2,7 +2,7 @@
 title: "Introducing Crosswalk for Kubernetes"
 date: "2019-11-19"
 meta_desc: "Introduction to Crosswalk for Kubernetes by Pulumi. A collection of best practices for Kubernetes in code."
-meta_image: "meta.png"
+meta_image: ""
 authors: ["sophia-parafina"]
 tags: ["Kubernetes","Crosswalk"]
 ---
