@@ -69,8 +69,8 @@ examples:
               .getResource("v1/Service", "wpdev-wordpress")
               .status.apply(status => status.loadBalancer.ingress[0].ip);
       cta:
-          url: /docs/get-started
-          label: GET STARTED
+          url: /docs/get-started/kubernetes/
+          label: NEXT STEP
 
     - title: Provision Kubernetes clusters in any cloud
       body: >
@@ -101,6 +101,6 @@ examples:
           });
 
       cta:
-          url: /docs/get-started
-          label: GET STARTED
+          url: /docs/get-started/kubernetes/
+          label: NEXT STEP
 ---

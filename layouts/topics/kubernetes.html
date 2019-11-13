@@ -4,7 +4,7 @@
             <div class="header-hero-item pr-20">
                 <h1>{{ .Params.hero.title }}</h1>
                 {{ .Params.hero.body | markdownify }}
-                <h3 class="text-white">Get Started Today</h3>
+                <h3 class="text-white">Create an Account</h3>
                 <div>
                     <div class="flex flex-row max-w-full">
                         <a class="btn bg-gray-300 border border-gray-300 hover:bg-gray-200 mb-5 flex justify-center w-1/2 mr-4"
@@ -26,6 +26,7 @@
                         </a>
                         <a class="btn bg-gray-300 border border-gray-300 hover:bg-gray-200 mb-5 flex justify-center w-1/2 mr-4"
                             href="https://app.pulumi.com/signup/email">
+                            <i class="h-10 my-auto mr-4 text-black text-4xl fa fa-envelope"></i>
                             <p class="hero--registration-button my-auto">Email</p>
                         </a>
                     </div>
@@ -76,13 +77,12 @@
                 </p>
                 <ul>
                     <li>Provision self-managed (open source) and managed Kubernetes clusters from the major cloud providers.</li>
-                    <li>Apply standard software development practices to Kubernetes applications.</li>
                     <li>Increase productivity using the power of dev tools such as IDE auto-completion, type & error checking, linting, refactoring,
                         and testing frameworks to validate Kubernetes clusters, app workloads, or both.</li>
                     <li>And more...</li>
                 </ul>
-                <a class="btn inline-block" href=#>
-                    Some Cta
+                <a class="btn inline-block" href="#contact">
+                    REQUEST MORE INFORMATION
                 </a>
             </div>
             <div class="md:w-1/2 split-section--right">
@@ -166,7 +166,7 @@
                 <div class="md:w-1/2">
                     <h3 class="text-black">
                         See why the world’s best engineering teams use Pulumi to enable true collaboration between
-                        Developers and Operators.
+                        developers and operators.
                     </h3>
                     <div class="relative contact-form--customer-quote">
                         <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
@@ -188,10 +188,13 @@
                     </div>
                 </div>
                 <div class="md:w-1/2 md:ml-8">
-                    <h2 class="text-black">Need help with Kubernetes?</h2>
+                    <h2 class="text-black">Demo Request</h2>
                     <div class="hs-form hs-form-fg-light text-black">
-                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "212ce93d-e081-4998-b14b-f26a974da4fb") }}
+                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "8ffce4b8-9eb1-4c9d-804b-2d9054806aa2") }}
                     </div>
+                    <p class="text-black text-right text-base">
+                        ...or <a href="https://app.pulumi.com/signup">Start Free Trial</a>
+                    </p>
                 </div>
             </div>
         </div>
