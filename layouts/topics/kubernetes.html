@@ -81,7 +81,7 @@
                         and testing frameworks to validate Kubernetes clusters, app workloads, or both.</li>
                     <li>And more...</li>
                 </ul>
-                <a class="btn inline-block" href="#contact">
+                <a class="btn inline-block split-section--cta-btn" href="#contact">
                     REQUEST MORE INFORMATION
                 </a>
             </div>
@@ -91,23 +91,35 @@
         </div>
     </section>
 
+    <section id="k8s-crosswalk" class="py-16 bg-white px-4 md:px-0">
+        <div class="container md:mx-auto md:flex split-section--container">
+            <div class="md:w-1/2 split-section--left">
+                <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" />
+            </div>
+            <div class="md:w-1/2 split-section--right">
+                <h2>Crosswalk for Kubernetes</h2>
+                <p>
+                    Misconfigured infrastructure accounts are the source of a significant number of serious production outages. 
+                    Many of these failure modes are preventable. Pulumi Crosswalk for Kubernetes is a collection of industry 
+                    standard best-practices for managing Kubernetes, and its infrastructure in production. Crosswalk for Kubernetes 
+                    can be used within a team to employ and understand:
+                </p>
+                <ul>
+                    <li><strong>Security:</strong> Who has access to what, and how is this policy enforced?</li>
+                    <li><strong>Governance:</strong> How do we ensure the blast radius of changes is as small as possible?</li>
+                    <li><strong>Engineering:</strong> How do we automate this with CI/CD?</li>
+                </ul>
+                <a class="btn inline-block split-section--cta-btn" href="/docs/guides/crosswalk/kubernetes/">
+                    LEARN MORE
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section id="code" class="py-16 bg-gray-200 px-4 md:px-0">
         {{ range $index, $val := .Params.examples }}
             <div id="{{ $val.id }}" class="container md:mx-auto md:flex split-section--container">
                 {{ if not (modBool $index 2) }}
-                    <div class="md:w-2/5 split-section--left">
-                        <h2>{{ $val.title }}</h2>
-                        <p>
-                            {{ $val.body | safeHTML }}
-                        </p>
-                        <a class="btn inline-block" href="{{ $val.cta.url }}">
-                            {{ $val.cta.label }}
-                        </a>
-                    </div>
-                    <div class="md:w-3/5 split-section--right">
-                        {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
-                    </div>
-                {{ else }}
                     <div class="md:w-3/5 split-section--left">
                         {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
                     </div>
@@ -116,9 +128,22 @@
                         <p>
                             {{ $val.body | safeHTML }}
                         </p>
-                        <a class="btn inline-block" href="{{ $val.cta.url }}">
+                        <a class="btn inline-block split-section--cta-btn" href="{{ $val.cta.url }}">
                             {{ $val.cta.label }}
                         </a>
+                    </div>
+                {{ else }}
+                    <div class="md:w-2/5 split-section--left">
+                        <h2>{{ $val.title }}</h2>
+                        <p>
+                            {{ $val.body | safeHTML }}
+                        </p>
+                        <a class="btn inline-block split-section--cta-btn" href="{{ $val.cta.url }}">
+                            {{ $val.cta.label }}
+                        </a>
+                    </div>
+                    <div class="md:w-3/5 split-section--right">
+                        {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
                     </div>
                 {{ end }}
             </div>

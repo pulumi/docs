@@ -12,4 +12,9 @@
         padding-left: 35px;
     }
 
+    &--cta-btn {
+        margin-top: 35px;
+        @apply text-xl;
+    }
+
 }
