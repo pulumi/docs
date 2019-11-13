@@ -20,7 +20,7 @@ policy enforcement and service meshes.
 {{% md %}}
 
 The full code for the AWS cluster services is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/04-cluster-services
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/04-cluster-services
 {{% /md %}}
 </div>
 
@@ -29,7 +29,7 @@ The full code for the AWS cluster services is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for the Azure cluster services is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/04-cluster-services
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/04-cluster-services
 
 {{% /md %}}
 </div>
@@ -42,14 +42,14 @@ GKE logging and monitoring is managed by GCP through StackDriver.
 
 The repo for the GCP cluster services is on [GitHub][gh-repo-stack], but it is empty since no extra steps are required after cluster and Node Pool creation in the [Cluster Configuration][crosswalk-k8s-cluster] stack.
 
-[crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/04-cluster-services
+[crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/04-cluster-services
 
 {{% /md %}}
 </div>
 
 The full code for the general cluster services is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/general-cluster-services
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/general-cluster-services
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -386,8 +386,8 @@ See the official [AKS docs][aks-kubelet-logs] for more details.
 [aks-kubelet-logs]: https://docs.microsoft.com/en-us/azure/aks/kubelet-logs
 [azure-monitor-overview]: https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview
 [aks-logs]: https://docs.microsoft.com/en-us/azure/aks/view-master-logs
-[crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/03-cluster-configuration
-[crosswalk-aks-cluster-svcs]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/04-cluster-services
+[crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/03-cluster-configuration
+[crosswalk-aks-cluster-svcs]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/04-cluster-services
 {{% /md %}}
 </div>
 
@@ -446,7 +446,7 @@ const standardNodes = new gcp.container.NodePool("standard-nodes", {
 [gke-sd]: https://app.google.stackdriver.com/
 [gke-logs]: https://cloud.google.com/monitoring/kubernetes-engine/
 [gke-sd-observe]: https://cloud.google.com/monitoring/kubernetes-engine/observing
-[crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
+[crosswalk-k8s-cluster]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/03-cluster-configuration
 </div>
 
 <div class="cloud-prologue-aws"></div>
@@ -528,7 +528,7 @@ $ kubectl delete ns amazon-cloudwatch
 Deploy [Datadog][k8s-datadog] as a DaemonSet to aggregate Kubernetes, node, and container metrics and events, in addition to provider managed logging and monitoring.
 
 The full code for this app stack is on [GitHub][gh-dd-stack].
-[gh-dd-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/general-cluster-services/datadog-daemonset
+[gh-dd-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/general-cluster-services/datadog-daemonset
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";

@@ -21,7 +21,7 @@ Zones][aws-azs] to use, alongwith [Route Tables][aws-rts], [Subnets][aws-subnets
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/02-managed-infra
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/02-managed-infra
 [crosswalk-aws]: {{< relref "/docs/guides/crosswalk/aws" >}}
 [aws-managed-svcs]: https://aws.amazon.com/products/
 [aws-vpc]: https://aws.amazon.com/vpc/
@@ -56,7 +56,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [azure-rts]: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#user-defined
 [azure-sgs]: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm#security
 [azure-vpn-gw]: https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/02-managed-infra
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/02-managed-infra
 {{% /md %}}
 </div>
 
@@ -82,7 +82,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [gcp-vpc]: https://cloud.google.com/vpc/docs/overview
 [gcp-rts]: https://cloud.google.com/vpc/docs/routes
 [gcp-fw-rules]: https://cloud.google.com/vpc/docs/firewalls
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/02-managed-infra
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/02-managed-infra
 {{% /md %}}
 </div>
 
