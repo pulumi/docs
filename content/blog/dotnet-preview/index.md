@@ -1,10 +1,16 @@
 ---
 title: "Infrastructure as Code with .NET and Pulumi"
-authors: ["sophia-parafina"]
-tags: [".NET", "C#", "F#", "Visual Basic"]
-meta_image: "meta.png"
+date: 2019-11-13T11:23:04-06:00
+draft: true
 meta_desc: "Pulumi supports .NET Core languages for Infrastructure as Code"
-date: "2019-11-13"
+meta_image: meta.png
+authors:
+    - sophia-parafina
+tags:
+    - ".Net Core"
+    - "C#"
+    - "F#"
+    - "Visual Basic"
 ---
 
 We are excited to announce the preview of Pulumi .NET support. Pulumi lets you declare infrastructure using general purpose programming languages. Our goal is to automate applications at all layers and help developers and operators work better together by eliminating the silos that separate them.
