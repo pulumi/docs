@@ -71,7 +71,7 @@ Kubernetes.
 {{% md %}}
 
 The full code for this app stack is on [GitHub][gh-aws-deploy-stack].
-[gh-aws-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/06-apps/deploy-container
+[gh-aws-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/06-apps/build-deploy-container
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
@@ -161,7 +161,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 {{% md %}}
 
 The full code for this app stack is on [GitHub][gh-azure-deploy-stack].
-[gh-azure-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/06-apps/deploy-container
+[gh-azure-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/06-apps/build-deploy-container
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
@@ -290,7 +290,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 {{% md %}}
 
 The full code for this app stack is on [GitHub][gh-gcp-deploy-stack].
-[gh-gcp-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/06-apps/deploy-container
+[gh-gcp-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/06-apps/build-deploy-container
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
