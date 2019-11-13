@@ -2,7 +2,7 @@
 title: "Infrastructure as Code with .NET and Pulumi"
 authors: ["sophia-parafina"]
 tags: [".NET", "C#", "F#", "Visual Basic"]
-meta_image: "dotnet_core.png"
+meta_image: "dotnet-core.png"
 meta_desc: "Pulumi supports .NET Core languages for Infrastructure as Code"
 date: "2019-11-13"
 ---
