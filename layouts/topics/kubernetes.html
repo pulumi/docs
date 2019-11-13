@@ -67,9 +67,9 @@
         </div>
     </section>
 
-    <section id="kubernetes-cake" class="py-16 bg-white px-4 md:px-0">
-        <div class="container md:mx-auto md:flex split-section--container">
-            <div class="md:w-1/2 split-section--left">
+    <section id="kubernetes-cake" class="py-8 bg-white px-4 md:px-0">
+        <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row split-section--container">
+            <div class="w1/1 order-last mt-16 md:w-1/2 md:order-none split-section--left">
                 <h2>Pulumi's Kubernetes Platform</h2>
                 <p>
                     The various SDKs allow Kubernetes users to leverage Pulumi for novel forms of cluster management, and 
@@ -85,18 +85,18 @@
                     REQUEST MORE INFORMATION
                 </a>
             </div>
-            <div class="md:w-1/2 split-section--right">
+            <div class="w1/1 order-first md:w-1/2 md:order-none split-section--right">
                 <img src="/images/docs/quickstart/kubernetes/cake.svg" />
             </div>
         </div>
     </section>
 
-    <section id="k8s-crosswalk" class="py-16 bg-white px-4 md:px-0">
-        <div class="container md:mx-auto md:flex split-section--container">
-            <div class="md:w-1/2 split-section--left">
+    <section id="k8s-crosswalk" class="py-8 bg-white px-4 md:px-0">
+        <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row split-section--container">
+            <div class="w1/1 order-last mt-16 md:w-1/2 md:order-none split-section--left">
                 <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" />
             </div>
-            <div class="md:w-1/2 split-section--right">
+            <div class="w1/1 order-first md:w-1/2 md:order-none split-section--right">
                 <h2>Crosswalk for Kubernetes</h2>
                 <p>
                     Misconfigured infrastructure accounts are the source of a significant number of serious production outages. 
@@ -116,14 +116,14 @@
         </div>
     </section>
 
-    <section id="code" class="py-16 bg-gray-200 px-4 md:px-0">
+    <section id="code" class="py-8 bg-gray-200 px-4 md:px-0">
         {{ range $index, $val := .Params.examples }}
-            <div id="{{ $val.id }}" class="container md:mx-auto md:flex split-section--container">
+            <div id="{{ $val.id }}" class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row split-section--container">
                 {{ if not (modBool $index 2) }}
-                    <div class="md:w-3/5 split-section--left">
+                    <div class="w1/1 order-last md:w-3/5 md:order-none split-section--left">
                         {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
                     </div>
-                    <div class="md:w-2/5 split-section--right">
+                    <div class="w1/1 order-first md:w-2/5 md:order-none split-section--right">
                         <h2>{{ $val.title }}</h2>
                         <p>
                             {{ $val.body | safeHTML }}
@@ -133,7 +133,7 @@
                         </a>
                     </div>
                 {{ else }}
-                    <div class="md:w-2/5 split-section--left">
+                    <div class="w1/1 order-first md:w-2/5 md:order-none split-section--left">
                         <h2>{{ $val.title }}</h2>
                         <p>
                             {{ $val.body | safeHTML }}
@@ -142,7 +142,7 @@
                             {{ $val.cta.label }}
                         </a>
                     </div>
-                    <div class="md:w-3/5 split-section--right">
+                    <div class="w1/1 order-last md:w-3/5 md:order-none split-section--right">
                         {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
                     </div>
                 {{ end }}
@@ -212,9 +212,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="md:w-1/2 md:ml-8">
-                    <h2 class="text-black">Demo Request</h2>
-                    <div class="hs-form hs-form-fg-light text-black">
+                <div class="mt-16 mx-auto md:w-1/2 md:ml-8">
+                    <h2 class="text-black text-center">Demo Request</h2>
+                    <div class="hs-form hs-form-fg-light hs-demo-form text-black">
                         {{ partial "hubspot-form.html" (dict "hubspotFormID" "8ffce4b8-9eb1-4c9d-804b-2d9054806aa2") }}
                     </div>
                     <p class="text-black text-right text-base">

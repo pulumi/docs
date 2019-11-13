@@ -17,4 +17,27 @@
         @apply text-xl;
     }
 
+    @media (max-width: 768px) {
+        &--left {
+            padding-right: 0;
+        }
+    
+        &--right {
+            padding-left: 0;
+        }
+
+        &--cta-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &--container {
+        @media (max-width: 530px) {
+            .language-js {
+                font-size: .5rem;
+            }
+        }
+    }
+
 }

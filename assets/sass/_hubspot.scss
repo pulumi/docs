@@ -1,6 +1,11 @@
 .hs-form {
     @apply text-sm;
 
+    &.hs-demo-form {
+        max-width: 500px;
+        @apply mx-auto;
+    }
+
     fieldset {
         @apply block;
         margin: 1rem 0 !important;
