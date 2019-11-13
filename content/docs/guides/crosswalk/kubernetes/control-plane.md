@@ -13,8 +13,8 @@ menu:
 <div class="mt">
 {{% md %}}
 In order to run container workloads, you will need a Kubernetes cluster.
-It is possible to provision and manage a cluster manually on AWS.
-The managed offering [Elastic Kubernetes Service (EKS)][eks] offers an
+While it is possible to provision and manage a cluster manually on AWS,
+their managed offering [Elastic Kubernetes Service (EKS)][eks] offers an
 easier way to get up and running.
 
 See the [official Kubernetes docs][k8s-docs] for more details.
@@ -30,8 +30,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="mt">
 {{% md %}}
 In order to run container workloads, you will need a Kubernetes cluster.
-It is possible to provision and manage a cluster manually on Azure.
-The managed offering, [Azure Kubernetes Service (AKS)][aks], offers an
+While it is possible to provision and manage a cluster manually on Azure,
+their managed offering, [Azure Kubernetes Service (AKS)][aks], offers an
 easier way to get up and running.
 
 See the [official Kubernetes docs][k8s-docs] for more details.
@@ -47,8 +47,8 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 <div class="mt">
 {{% md %}}
 In order to run container workloads, you will need a Kubernetes cluster.
-It is possible to provision and manage a cluster manually on GCP.
-The managed offering, [Google Kubernetes Engine (GKE)][gke], offers an
+While it is possible to provision and manage a cluster manually on GCP,
+their managed offering, [Google Kubernetes Engine (GKE)][gke], offers an
 easier way to get up and running.
 
 See the [official Kubernetes docs][k8s-docs] for more details.
@@ -62,13 +62,10 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 ## Overview
 
-The [control plane][k8s-concepts] is a collection of processes that coordinates and
-manages the cluster's state, segmented by responsibilities. It also makes
+The [control plane][k8s-concepts] is a collection of processes that coordinate and
+manage the cluster's state, segmented by responsibilities. It also makes
 scheduling decisions to facilitate the applications and cloud workflows that
-the worker nodes will be responsible for running.
-
-Kubernetes clusters require a certain architecture of cloud resources in order
-to successfully run.
+the worker nodes run.
 
 We'll configure and deploy:
 
@@ -97,7 +94,7 @@ Azure Kubernetes Service can be configured to use Azure Active Directory (Azure 
 
 To provide Azure AD authentication for an AKS cluster, two Azure AD applications are created. The first application is a server component that provides user authentication. The second application is a client component that uses the server application for the actual authentication of the credentials provided by the client.
 
-We configure applications and service principals using the `@pulumi/azuread` package. After the applications are created, there is manual step required to [grant admin concent](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-user-consent#grant-admin-consent-when-registering-an-app-in-the-azure-portal) for API permissions.
+We configure applications and service principals using the `@pulumi/azuread` package. After the applications are created, there is manual step required to [grant admin consent](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-user-consent#grant-admin-consent-when-registering-an-app-in-the-azure-portal) for API permissions.
 
 [crosswalk-identity]: {{< relref "/docs/guides/crosswalk/kubernetes/identity" >}}
 {{% /md %}}
@@ -109,19 +106,20 @@ We configure applications and service principals using the `@pulumi/azuread` pac
 <div class="mt">
 {{% md %}}
 
-For **users**, we created an `admins` role for cluster administrators with
+For **users**, we create an `admins` role for cluster administrators with
 root privileges, and a limited scope `devs` role for general purpose
 execution of workloads. Both roles will be tied into Kubernetes RBAC in
 [Configure Access Control][crosswalk-configure-access].
 
-For **worker nodes**, we created separate roles for a few typical
+For **worker nodes**, we create separate roles for a few typical
 classes of worker node groups: a standard pool of nodes, and a performant
 pool of nodes that differ by instance type.
 
-We configure the user identities using `roleMappings` in the cluster since
-we created roles for the users, and map it into Kubernetes RBAC as defined in the [docs][k8s-rbac-docs].
+Now that we have created roles for the users, we configure user identities
+using roleMappings, and map it into Kubernetes RBAC as shown in the
+[docs][k8s-rbac-docs].
 
-The following interfaces are available in Pulumi to map IAM into Kubernetes: [`RoleMapping`][role-mapping] and
+Pulumi provides the following interfaces to map IAM into Kubernetes: [`RoleMapping`][role-mapping] and
 [`UserMapping`][user-mapping]. Below we demonstrate using a `RoleMapping`.
 
 ```typescript
@@ -155,7 +153,7 @@ const cluster = new eks.Cluster(`${projectName}`, {
 <div class="cloud-prologue-azure"></div>
 <div class="mt">
 {{% md %}}
-For users, we created and use a ServicePrincipal for cluster administrators with
+For users, we create and use a ServicePrincipal for cluster administrators with
 root privileges, and a limited scope `devs` user group for general purpose
 execution of workloads. Both identities will be tied into Kubernetes RBAC in
 [Configure Access Control][crosswalk-configure-access].
@@ -192,7 +190,7 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
 <div class="cloud-prologue-gcp"></div>
 <div class="mt">
 {{% md %}}
-For users, we created and use a ServiceAccount for cluster administrators with
+For users, we create and use a ServiceAccount for cluster administrators with
 root privileges, and a limited scope `devs` ServiceAccount for general purpose
 execution of workloads. Both identities will be tied into Kubernetes RBAC in
 [Configure Access Control][crosswalk-configure-access].
@@ -235,7 +233,8 @@ const cluster = new eks.Cluster(`${projectName}`, {
 
 ## Managed Infrastructure
 
-In [Managed Infrastructure][crosswalk-infra] we demonstrate deploying managed services and how to create or use an existing virtual network for use with Kubernetes.
+In [Managed Infrastructure][crosswalk-infra] we demonstrate deploying managed services
+and how to create or use an existing virtual network with Kubernetes.
 
 You'll want to create the Managed Infrastructure stack next, before the Cluster
 Configuration stack.
@@ -248,23 +247,24 @@ Configuration stack.
 
 How you create the network will vary on your permissions and preferences.
 
-Typical setups will want to provide Kubernetes with the following resources
+Typical setups will provide Kubernetes with the following resources
 to use for the cluster.
 
-  * Public subnets for use with provisioning public load balancers.
-  * Private subnets for use with provisioning private load balancers.
+  * Public subnets for provisioning public load balancers.
+  * Private subnets for provisioning private load balancers.
   * Private subnets for use as the default subnets for workers to run in.
   * Managed [Pod networking][k8s-pod-networking].
 
-Kubernetes requires that all subnets you used to be [properly tagged][eks-subnet-tagging],
-in order to determine which subnets it can provision load balancers within.
+Kubernetes requires that all subnets be [properly tagged][eks-subnet-tagging],
+in order to determine which subnets it can provision load balancers in.
 
-To ensure proper function, pass in **any** public and/or private subnets you
+To ensure proper function, pass in **all** public and/or private subnets you
 intend to use into the cluster definition. If these need to be updated to include more subnets, or
 if some need to be removed, the change is accomplished with a Pulumi update.
 
 By default, [`pulumi/eks`][pulumi-eks] will deploy workers into the private subnets, if
-specified, if not into the public subnets provided. Using private subnets for
+specified. If no private subnets are specified, workers will be deployed into the public
+subnets that were provided. Using private subnets for
 workers without associating a public IP address is highly recommended - it
 creates workers that will not be publicly accessible from the Internet,
 and they'll typically be shielded within your VPC.
@@ -272,7 +272,7 @@ and they'll typically be shielded within your VPC.
 EKS will automatically manage Kubernetes Pod networking through
 the use of the [AWS CNI Plugin][aws-k8s-cni]. This plugin is deployed by
 default on worker nodes as a [DaemonSet][k8s-ds] named `aws-node` in all clusters
-provisioned with `pulumi/eks` and is capable of being [configured][configure-cni].
+provisioned with `pulumi/eks` and is [configurable][configure-cni].
 
 ```typescript
 import * as eks from "@pulumi/eks";
@@ -302,10 +302,10 @@ const cluster = new eks.Cluster(`${projectName}`, {
 
 How you create the network will vary on your permissions and preferences.
 
-Typical setups will want to provide Kubernetes with the following resources
+Typical setups will provide Kubernetes with the following resources
 to use for the cluster.
 
-  * Private subnets for use with provisioning private load balancers.
+  * Private subnets for provisioning private load balancers.
   * Private subnets for use as the default subnets for workers to run in.
   * Managed [Pod networking][k8s-pod-networking].
 
@@ -350,7 +350,7 @@ const subnet = new azure.network.Subnet(name, {
 
 How you create the network will vary on your permissions and preferences.
 
-Typical setups will want to provide Kubernetes with the following resources
+Typical setups will provide Kubernetes with the following resources
 to use for the cluster.
 
   * Private subnets for use as the default subnets for workers to run in.
@@ -391,15 +391,15 @@ Kubernetes [storage][k8s-storage] provides data persistence for
 the cluster with shared storage, and/or volumes for Pods.
 
 The volume classes are extensive and vary by cloud provider, but they
-typically they include volume types for mechanical drives and
+typically include volume types for mechanical drives and
 SSDs, along with network backed storage such as [NFS][nfs], [iSCSI][iscsi], and [CephFS][ceph-fs].
 
-To provision a [PersistentVolume][k8s-pvs], we have to ensure that the
+To provision [PersistentVolumes][k8s-pvs], we have to ensure that the
 desired storage classes have been created in the cluster.
 
 > Note: At most one storage class should be marked as default.
-If two or more of them are marked as default, a [`PersistentVolumeClaim`][k8s-pvs] without `storageClassName` explicitly specified
-cannot be created.
+If two or more are marked as default, each [`PersistentVolumeClaim`][k8s-pvs] must explicitly
+specify the `storageClassName`
 
 See the [Kubernetes docs][k8s-storage-classes] for more details.
 
@@ -408,7 +408,7 @@ See the [Kubernetes docs][k8s-storage-classes] for more details.
 {{% md %}}
 
 As of Kubernetes v1.11+ on EKS, a default `gp2`
-storage class will always be created automatically for the cluster by EKS.
+storage class will be created automatically by EKS.
 
 See the [official EKS docs][eks-storage-classes] for more details.
 
@@ -493,8 +493,8 @@ const cluster = new eks.Cluster(`${projectName}`, {
     ...
 }
 ```
-With the desired storage classes created in the cluster, we can create any
-necessary persistent volumes in the cluster.
+With storage classes created in the cluster, we can now create
+persistent volumes in the cluster.
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
@@ -538,8 +538,8 @@ See the [official AKS docs][aks-storage-classes] for more details.
 <div class="mt">
 {{% md %}}
 
-After the cluster is provisioned and running, create an example StorageClass to
-provision GCP disks.
+After the cluster is provisioned and running, create a StorageClass to
+provision Azure disks.
 
 Create the storage classes using `kubectl`.
 
@@ -607,8 +607,8 @@ const sc = new k8s.storage.v1.StorageClass("premium",
 );
 ```
 
-With the desired storage classes created in the cluster, we can create any
-necessary persistent volumes in the cluster.
+With storage classes created in the cluster, we can now create
+persistent volumes in the cluster.
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
@@ -645,7 +645,7 @@ See the [official GKE docs][gke-storage-classes] for more details.
 <div class="mt">
 {{% md %}}
 
-After the cluster is provisioned and running, create an example StorageClass to
+After the cluster is provisioned and running, create a StorageClass to
 provision GCP disks.
 
 Create the storage classes using `kubectl`.
@@ -714,8 +714,8 @@ const sc = new k8s.storage.v1.StorageClass("standard",
 );
 ```
 
-With the desired storage classes created in the cluster, we can create any
-necessary persistent volumes in the cluster.
+With storage classes created in the cluster, we can now create
+persistent volumes in the cluster.
 
 Create the persistent volume with a persistent volume claim and Pulumi.
 
@@ -747,10 +747,10 @@ general best-practices and recommendations to configure in the cluster.
 **General:**
 
   * Use a specific version of Kubernetes for the control plane. This pins the
-    cluster to a particular release in a declarative manner, instead of
-    implicitly using the latest available version, or use a smart default
-    where both can be updated at any moment.
-  * Instead of [use][kube-dash-security] `kube-dashboard`, try [VMware's Octant][octant].
+    cluster to a particular release in a declarative manner rather than
+    implicitly using the latest available version or a smart default
+    that could be updated at any time.
+  * Instead of [using][kube-dash-security] `kube-dashboard`, try [VMware's Octant][octant].
 
 <div class="cloud-prologue-aws"></div>
 <div class="mt">
@@ -758,15 +758,15 @@ general best-practices and recommendations to configure in the cluster.
 
 **EKS:**
 
-  * Tag resources under management to provide the ability to assign
-    metadata to resources to make it easier to manage, search, and filter them.
+  * Tag resources under management, which makes it easier to manage, search and 
+    filter them.
   * Skip enabling the default node group in favor of managing them separately from
     the control plane, as demonstrated in [Create the Worker Nodes][nodegroups].
   * Enable control plane logging for diagnostics of the control
     plane's actions, and for use in debugging and auditing.
   * (Optional) Configure private accessibility of the control plane /
     API Server endpoint to prevent it from being publicly exposed on the
-    Internet. Note, to enable this feature, additional networking is required,
+    Internet. To enable this feature, additional networking is required,
     and a [bastion host][aws-bastion] would be needed to access the control
     plane.
 
@@ -843,7 +843,7 @@ const cluster = new azure.containerservice.KubernetesCluster(`${name}`, {
     plane's actions, and for use in debugging and auditing.
   * (Optional) Configure private accessibility of the control plane /
     API Server endpoint to prevent it from being publicly exposed on the
-    Internet. Note, to enable this feature, [additional
+    Internet. To enable this feature, [additional
     networking][gke-private-cluster] is required,
     and a [bastion host][gke-bastion] would be needed to access the control
     plane.
@@ -856,7 +856,7 @@ const cluster = new gcp.container.Cluster("cluster", {
         minMasterVersion: "1.14.7-gke.10",
         podSecurityPolicyConfig: { enabled: true },
         nodeConfig: {
-            // We can't create a cluster with no node pool defined, but we want to
+            // We can't create a cluster without a node pool defined, but we want to
             // only use separately managed node pools. So we create the smallest
             // possible default node pool and immediately delete it.
             removeDefaultNodePool: true,
