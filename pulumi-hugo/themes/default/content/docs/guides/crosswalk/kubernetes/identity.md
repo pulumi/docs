@@ -36,7 +36,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [iam-groups]: {{< relref "/docs/guides/crosswalk/aws/iam#iam-groups" >}}
 [iam-roles]: {{< relref "/docs/guides/crosswalk/aws/iam#iam-roles" >}}
 [iam-policies]: {{< relref "/docs/guides/crosswalk/aws/iam#using-the-policydocument-interface" >}}
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/01-identity
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/01-identity
 {{% /md %}}
 </div>
 
@@ -59,7 +59,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [azure-roles]: https://docs.microsoft.com/en-us/azure/role-based-access-control/rbac-and-directory-admin-roles?context=azure/active-directory/users-groups-roles/context/ugr-context
 [azure-permissions]: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/users-default-permissions?context=azure/active-directory/users-groups-roles/context/ugr-context
 [azure-sp]: https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/01-identity
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/01-identity
 {{% /md %}}
 </div>
 
@@ -81,7 +81,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 [gcp-roles]: https://cloud.google.com/iam/docs/understanding-roles
 [gcp-members]: https://cloud.google.com/iam/docs/overview
 [gcp-sa]: https://cloud.google.com/iam/docs/service-accounts
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/01-identity
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/01-identity
 {{% /md %}}
 </div>
 
