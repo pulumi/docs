@@ -76,6 +76,9 @@
 
                 p {
                     @apply text-xl text-purple-100 leading-relaxed;
+                    &.hero--registration-button {
+                        color: black;
+                    }
                 }
 
                 .header-hero-actions {
@@ -102,6 +105,7 @@
                     @apply pr-0;
                 }
             }
+
         }
     }
 }

@@ -1,9 +1,35 @@
 {{ define "hero" }}
     <header class="header-hero header-hero-glow">
         <div class="header-hero-items container mx-auto">
-            <div class="header-hero-item">
+            <div class="header-hero-item pr-20">
                 <h1>{{ .Params.hero.title }}</h1>
                 {{ .Params.hero.body | markdownify }}
+                <h3 class="text-white">Get Started Today</h3>
+                <div>
+                    <div class="flex flex-row max-w-full">
+                        <a class="btn bg-gray-300 border border-gray-300 hover:bg-gray-200 mb-5 flex justify-center w-1/2 mr-4"
+                            href="https://app.pulumi.com/signup?reason=pass_through&type=github.com">
+                            <img class="h-10 my-auto mr-4" src="/logos/tech/github.svg" alt="GitHub">
+                            <p class="hero--registration-button my-auto">GitHub</p>
+                        </a>
+                        <a class="btn bg-gray-300 border border-gray-300 hover:bg-gray-200 mb-5 flex justify-center w-1/2 mr-4"
+                            href="https://app.pulumi.com/signup?reason=pass_through&type=gitlab.com">
+                            <img class="h-10 my-auto mr-4" src="/logos/tech/gitlab.svg" alt="GitLab">
+                            <p class="hero--registration-button my-auto">GitLab</p>
+                        </a>
+                    </div>
+                    <div class="flex flex-row max-w-full">
+                        <a class="btn bg-gray-300 border border-gray-300 hover:bg-gray-200 mb-5 flex justify-center w-1/2 mr-4"
+                            href="https://app.pulumi.com/signup?reason=pass_through&type=bitbucket.com">
+                            <img class="h-10 my-auto mr-4" src="/logos/tech/atlassian.svg" alt="BitBucket">
+                            <p class="hero--registration-button my-auto">BitBucket</p>
+                        </a>
+                        <a class="btn bg-gray-300 border border-gray-300 hover:bg-gray-200 mb-5 flex justify-center w-1/2 mr-4"
+                            href="https://app.pulumi.com/signup/email">
+                            <p class="hero--registration-button my-auto">Email</p>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="header-hero-item">
                 {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
@@ -13,93 +39,162 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ partial "section-nav" (dict "sections" .Params.sections) }}
 
-    <section id="what-is-kubernetes" class="py-16 bg-gray-200 px-4 md:px-0">
-        <div class="container md:mx-auto">
-            <div class="max-w-4xl">
-                <h2>What is Kubernetes?</h2>
-                <p>
-                    Kubernetes is a system for automating the deployment, scaling, and
-                    management of containerized applications.
-                </p>
-                <p>
-                    As an open-source system, it is becoming widely deployed in on-premises
-                    data centers, self-hosted on cloud infrastructure, or as a cloud managed
-                    service, such as Google GKE, Azure AKS, and Amazon EKS.
-                </p>
+    <section id="logos" class="py-16 bg-gray-200 px-4 md:px-0">
+        <h2 class="text-center">Powering top engineering teams</h2>
+        <div class="container mx-auto">
+            <div class="lg:flex items-center justify-center my-4">
+                <a href="https://www.tableau.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                </a>
+                <a href="https://mbrdna.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                </a>
+                <a href="https://www.mindbodyonline.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                </a>
+                <a href="https://www.nih.gov/" target="_blank">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                </a>
+                <a href="https://www.snopes.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
+                </a>
+                <a href="https://www.lemonade.com/" target="_blank">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
+                </a>
             </div>
         </div>
     </section>
-    <section id="kubernetes-everywhere" class="py-16 px-4 md:px-0">
-        <div class="container md:mx-auto ">
-            <div class="max-w-4xl">
-                <h2>Kubernetes Everywhere</h2>
+
+    <section id="kubernetes-cake" class="py-16 bg-white px-4 md:px-0">
+        <div class="container md:mx-auto md:flex split-section--container">
+            <div class="md:w-1/2 split-section--left">
+                <h2>Pulumi's Kubernetes Platform</h2>
                 <p>
-                    Pulumi's Cloud Native SDK makes it easy to target any Kubernetes
-                    environment to provision a cluster, configure and deploy applications, and
-                    update them as required.
+                    The various SDKs allow Kubernetes users to leverage Pulumi for novel forms of cluster management, and 
+                    deployment of app workloads to clusters. Users of Kubernetes and Pulumi can:
                 </p>
-                <p>
-                    Pulumi uses real code which makes it easy, and efficient, for the
-                    development inner loop, at the same time as unlocking more complicated,
-                    real-world DevOps scenarios.
-                </p>
-                <p>
-                    Pulumi works with Minikube, on-premises and cloud-hosted custom Kubernetes
-                    clusters, and the managed services from Google (GKE), Azure (AKS), and
-                    Amazon (EKS).
-                </p>
-                <ul class="flex list-none mt-8 p-0">
-                    <li><img class="h-8 mr-6" src="/logos/tech/logo-minikube.png" alt="MiniKube" title="MiniKube"></li>
-                    <li><img class="h-8 mx-6" src="/logos/tech/logo-kubernetes.png" alt="Kubernetes" title="Kubernetes"></li>
-                    <li><img class="h-8 mx-6" src="/logos/tech/logo-aws.png" alt="AWS" title="Amazon Web Services"></li>
-                    <li><img class="h-8 mx-6" src="/logos/tech/logo-azure.png" alt="Azure" title="Azure"></li>
-                    <li><img class="h-8 mx-6" src="/logos/tech/logo-gd.png" alt="GCP" title="Google Cloud Platform"></li>
+                <ul>
+                    <li>Provision self-managed (open source) and managed Kubernetes clusters from the major cloud providers.</li>
+                    <li>Apply standard software development practices to Kubernetes applications.</li>
+                    <li>Increase productivity using the power of dev tools such as IDE auto-completion, type & error checking, linting, refactoring,
+                        and testing frameworks to validate Kubernetes clusters, app workloads, or both.</li>
+                    <li>And more...</li>
                 </ul>
+                <a class="btn inline-block" href=#>
+                    Some Cta
+                </a>
+            </div>
+            <div class="md:w-1/2 split-section--right">
+                <img src="/images/docs/quickstart/kubernetes/cake.svg" />
             </div>
         </div>
     </section>
+
     <section id="code" class="py-16 bg-gray-200 px-4 md:px-0">
-        {{ range .Params.examples }}
-            <div id="{{ .id }}" class="container md:mx-auto md:flex">
-                <div class="md:w-1/2">
-                    <h2>{{ .title }}</h2>
-                    <p>
-                        {{ .body | safeHTML }}
-                    </p>
-                    <a class="btn inline-block" href="{{ .cta.url }}">
-                        {{ .cta.label }}
-                    </a>
-                </div>
-                <div class="md:w-1/2">
-                    {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
-                </div>
+        {{ range $index, $val := .Params.examples }}
+            <div id="{{ $val.id }}" class="container md:mx-auto md:flex split-section--container">
+                {{ if not (modBool $index 2) }}
+                    <div class="md:w-2/5 split-section--left">
+                        <h2>{{ $val.title }}</h2>
+                        <p>
+                            {{ $val.body | safeHTML }}
+                        </p>
+                        <a class="btn inline-block" href="{{ $val.cta.url }}">
+                            {{ $val.cta.label }}
+                        </a>
+                    </div>
+                    <div class="md:w-3/5 split-section--right">
+                        {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
+                    </div>
+                {{ else }}
+                    <div class="md:w-3/5 split-section--left">
+                        {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
+                    </div>
+                    <div class="md:w-2/5 split-section--right">
+                        <h2>{{ $val.title }}</h2>
+                        <p>
+                            {{ $val.body | safeHTML }}
+                        </p>
+                        <a class="btn inline-block" href="{{ $val.cta.url }}">
+                            {{ $val.cta.label }}
+                        </a>
+                    </div>
+                {{ end }}
             </div>
         {{ end }}
     </section>
 
-    {{ partial "how-pulumi-works.html" . }}
+    {{ partial "how-pulumi-works-lite.html" . }}
 
-    {{ partial "get-started.html" . }}
-
-    <section id="contact" class="bg-purple-500 mb-0 py-16 text-white px-4 md:px-0">
-        <div class="container mx-auto max-w-5xl">
-            <div class="md:flex my-8 md:max-w-32 align-top">
-                <div class="md:w-1/2">
-                    <h2 class="text-white">Need help with Kubernetes?</h2>
-                    <p>
-                        Drop us a line.
+    <section id="get-started" class="bg-white py-16 px-4 md:px-0">
+            <div class="container mx-auto max-w-5xl md:flex my-8 align-top justify-center text-center">
+                <div class="md:w3-/12 mr-4">
+                    <h2>Get Started with Pulumi</h2>
+                    <p class="text-xl">
+                        Use Pulumi's open source SDK to create, deploy, and manage infrastructure on any cloud.
                     </p>
                 </div>
+            </div>
+            <div class="container mx-auto max-w-5xl">
+                <div class="flex flex-row max-w-full">
+                    <a class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
+                        href="{{ relref . "/docs/get-started/aws" }}">
+                        <img class="h-10" src="/logos/tech/aws.svg" alt="AWS">
+                    </a>
+                    <a class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
+                        href="{{ relref . "/docs/get-started/azure" }}">
+                        <img class="h-10" src="/logos/tech/azure.svg" alt="Azure">
+                    </a>
+                </div>
+                <div class="flex flex-row max-w-full">
+                    <a class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
+                        href="{{ relref . "/docs/get-started/gcp" }}">
+                        <img class="h-10" src="/logos/tech/gcp.svg" alt="Google Cloud">
+                    </a>
+                    <a class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
+                        href="{{ relref . "/docs/get-started/kubernetes" }}">
+                        <img class="h-10" src="/logos/tech/k8s.svg" alt="Kubernetes">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <section id="contact" class="bg-gray-200 mb-0 py-16 text-white px-4 md:px-0">
+        <div class="container mx-auto max-w-5xl bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
+            <div class="md:flex my-8 md:max-w-32 align-top">
+                <div class="md:w-1/2">
+                    <h3 class="text-black">
+                        See why the world’s best engineering teams use Pulumi to enable true collaboration between
+                        Developers and Operators.
+                    </h3>
+                    <div class="relative contact-form--customer-quote">
+                        <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
+                        <p class="leading-loose mt-0 z-10 relative text-gray-800">
+                            I needed a solution that cut across silos and gave our developers a tool they could use
+                            themselves to provision infrastructure to suit their own immediate needs. The way Pulumi
+                            solves the multi-cloud problem is exactly what I was looking for.
+                        </p>
+                        <div class="leading-relaxed flex items-start">
+                            <div>
+                                <div class="text-blue-700 font-semibold text-xl">
+                                    Dinesh Ramamurthy,
+                                </div>
+                                <div class="text-blue-500">
+                                    Engineering Manager, Mercedes-Benz Research and Development North America
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="md:w-1/2 md:ml-8">
-                    <div class="hs-form hs-form-fg-light">
+                    <h2 class="text-black">Need help with Kubernetes?</h2>
+                    <div class="hs-form hs-form-fg-light text-black">
                         {{ partial "hubspot-form.html" (dict "hubspotFormID" "212ce93d-e081-4998-b14b-f26a974da4fb") }}
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    {{ partial "more-from-pulumi.html" . }}
+    
 {{ end }}
