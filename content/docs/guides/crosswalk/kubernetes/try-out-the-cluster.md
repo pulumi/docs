@@ -19,7 +19,7 @@ contents, and its cluster name for reference.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
 {{% /md %}}
 </div>
 
@@ -29,7 +29,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
 {{% /md %}}
 </div>
 
@@ -39,7 +39,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
 
 {{% /md %}}
 </div>
@@ -189,7 +189,7 @@ Edit `kubeconfig-devs.json` to use a role for authentication in the
 [aws-iam-auth]: https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
 [aws-admin-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-admins" >}}
 [aws-devs-identity-stack]: {{< relref "/docs/guides/crosswalk/kubernetes/identity#create-an-iam-role-for-developers" >}}
-[aws-cluster-config-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/03-cluster-configuration
+[aws-cluster-config-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
 [crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
 {{% /md %}}
 </div>

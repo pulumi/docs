@@ -17,7 +17,7 @@ segment the cluster as needed.
 {{% md %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
 
 {{% /md %}}
 </div>
@@ -27,7 +27,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
 
 {{% /md %}}
 </div>
@@ -37,7 +37,7 @@ The full code for this stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
 
 {{% /md %}}
 </div>
