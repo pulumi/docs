@@ -5,6 +5,7 @@ menu:
   userguides:
     parent: guides
     identifier: crosswalk-kubernetes
+aliases: ["/docs/guides/k8s-the-prod-way/app", "/docs/guides/k8s-the-prod-way/architecture"]
 ---
 
 <a href="{{< relref "_index.md" >}}">
