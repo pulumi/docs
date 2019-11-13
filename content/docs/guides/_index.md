@@ -49,11 +49,25 @@ Pulumi’s approach to infrastructure as code is great for continuous delivery, 
                 <a class="btn btn-secondary" href="{{< relref "crosswalk/aws" >}}">View More</a>
             </p>
     </div>
+    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+        <a href="{{< relref "crosswalk/kubernetes" >}}"><img class="h-auto w-32 center pt-6" src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" alt="Pulumi Crosswalk for Kubernetes"></a>
+        <p>
+        <p>
+            Use Pulumi's automatic well-architected best practices for common infrastructure-as-code tasks in Kubernetes, and its underyling infrastructure.
+        </p>
+        <ul class="p2">
+            <li><a href="{{< relref "crosswalk/kubernetes/control-plane" >}}">Create the Control Plane</a></li>
+            <li><a href="{{< relref "crosswalk/kubernetes/worker-nodes" >}}">Create the Worker Nodes</a></li>
+            <li><a href="{{< relref "crosswalk/kubernetes/configure-access-control" >}}">Configure Access Control</a></li>
+            <li><a href="{{< relref "crosswalk/kubernetes/apps" >}}">Deploy Apps</a></li>
+        </ul>
+            <p class="mt-6">
+                <a class="btn btn-secondary" href="{{< relref "crosswalk/kubernetes" >}}">View More</a>
+            </p>
+    </div>
 </div>
 <div>
     <p>
         If you’d like to see additional guides, please <a href="https://github.com/pulumi/docs/issues/new?title=New Guide Request">request one</a>. Pull requests are also welcome!
     </p>
 </div>
-
-
