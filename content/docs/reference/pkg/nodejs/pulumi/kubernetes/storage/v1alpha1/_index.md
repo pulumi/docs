@@ -21,7 +21,7 @@ meta_desc: "Explore members of the v1alpha1 module in the @pulumi/kubernetes pac
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="VolumeAttachment" data-link-title="VolumeAttachment">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L16">
         Resource <strong>VolumeAttachment</strong>
     </a>
 </h3>
@@ -34,7 +34,7 @@ specified node.
 VolumeAttachment objects are non-namespaced.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -48,7 +48,7 @@ Create a storage.v1alpha1.VolumeAttachment resource with the given unique name, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -62,14 +62,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -80,7 +80,7 @@ Returns true if the given object is an instance of VolumeAttachment.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L23">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L23">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -91,7 +91,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -100,7 +100,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L31">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L31">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"VolumeAttachment"</span>&gt;;</code></pre>
@@ -111,7 +111,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L37">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L37">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
@@ -120,7 +120,7 @@ Standard object metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L43">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L43">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeAttachmentSpec'>outputs.storage.v1alpha1.VolumeAttachmentSpec</a>&gt;;</code></pre>
@@ -129,7 +129,7 @@ Specification of the desired attach/detach volume behavior. Populated by the Kub
 system.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L49">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L49">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeAttachmentStatus'>outputs.storage.v1alpha1.VolumeAttachmentStatus</a>&gt;;</code></pre>
@@ -138,7 +138,7 @@ Status of the VolumeAttachment request. Populated by the entity completing the a
 detach operation, i.e. the external-attacher.
 
 <h4 class="pdoc-member-header" id="VolumeAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -147,7 +147,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VolumeAttachmentList" data-link-title="VolumeAttachmentList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L13">
         Resource <strong>VolumeAttachmentList</strong>
     </a>
 </h3>
@@ -157,7 +157,7 @@ deployments.
 VolumeAttachmentList is a collection of VolumeAttachment objects.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -171,7 +171,7 @@ Create a storage.v1alpha1.VolumeAttachmentList resource with the given unique na
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -185,14 +185,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -203,7 +203,7 @@ Returns true if the given object is an instance of VolumeAttachmentList.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -214,7 +214,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -223,7 +223,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeAttachment'>outputs.storage.v1alpha1.VolumeAttachment</a>[]&gt;;</code></pre>
@@ -231,7 +231,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is the list of VolumeAttachments
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"VolumeAttachmentList"</span>&gt;;</code></pre>
@@ -242,7 +242,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L39">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
@@ -251,7 +251,7 @@ Standard list metadata More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="VolumeAttachmentList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/4ea649c81eefb7803feddb22c1dc2a3e5d26c154/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
