@@ -1,0 +1,41 @@
+.split-section {
+
+    &--container {
+        @apply pt-8 px-0;
+    }
+
+    &--left {
+        @apply pr-8;
+    }
+
+    &--right {
+        @apply pl-8;
+    }
+
+    &--cta-btn {
+        @apply mt-8 text-xl;
+    }
+
+    @media (max-width: 768px) {
+        &--left {
+            @apply pr-0;
+        }
+
+        &--right {
+            @apply pl-0;
+        }
+
+        &--cta-btn {
+            @apply w-full text-center;
+        }
+    }
+
+    &--container {
+        @media (max-width: 530px) {
+            .language-js {
+                font-size: .5rem;
+            }
+        }
+    }
+
+}
