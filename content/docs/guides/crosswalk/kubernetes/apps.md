@@ -17,7 +17,7 @@ resources, and typical apps and workloads.
 {{% md %}}
 
 The full code for the AWS apps stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/06-apps
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/06-apps
 
 {{% /md %}}
 </div>
@@ -27,7 +27,7 @@ The full code for the AWS apps stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for the Azure apps stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/06-apps
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/06-apps
 
 {{% /md %}}
 </div>
@@ -37,13 +37,13 @@ The full code for the Azure apps stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for the GCP apps stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/06-apps
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/06-apps
 
 {{% /md %}}
 </div>
 
 The full code for the apps is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/apps
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps
 
 ## Overview
 
@@ -71,7 +71,7 @@ Kubernetes.
 {{% md %}}
 
 The full code for this app stack is on [GitHub][gh-aws-deploy-stack].
-[gh-aws-deploy-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/06-apps/deploy-container
+[gh-aws-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/06-apps/deploy-container
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
@@ -161,7 +161,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 {{% md %}}
 
 The full code for this app stack is on [GitHub][gh-azure-deploy-stack].
-[gh-azure-deploy-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/06-apps/deploy-container
+[gh-azure-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/06-apps/deploy-container
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
@@ -290,7 +290,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 {{% md %}}
 
 The full code for this app stack is on [GitHub][gh-gcp-deploy-stack].
-[gh-gcp-deploy-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/06-apps/deploy-container
+[gh-gcp-deploy-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/06-apps/deploy-container
 
 {{< k8s-language noyaml >}}
 <div class="k8s-language-prologue-typescript"></div>
@@ -394,7 +394,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 ## Deploy a Pod with a Sidecar
 
 The full code for this app stack is on [GitHub][gh-wp-stack].
-[gh-wp-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/apps/pod-sidecar
+[gh-wp-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/pod-sidecar
 
 Create a NGINX Pod with a Debian sidecar that prints to a file in a shared
 volume of the Pod.
@@ -481,7 +481,7 @@ const nginx = new k8s.helm.v2.Chart("nginx",
 Create a Deployment of Wordpress.
 
 The full code for this app stack is on [GitHub][gh-deploy-wp-stack].
-[gh-deploy-wp-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/apps/wordpress
+[gh-deploy-wp-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/wordpress
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -542,7 +542,7 @@ const wordpress = new k8s.apps.v1.Deployment("wordpress", {
 Create a [Deployment][k8s-deploy] NGINX that uses a [Secret][k8s-secret]. 
 
 The full code for this app stack is on [GitHub][gh-deploy-secret-stack].
-[gh-deploy-secret-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/apps/deployment-secret
+[gh-deploy-secret-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/deployment-secret
 [k8s-deploy]: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 [k8s-secret]: https://kubernetes.io/docs/concepts/configuration/secret/
 
@@ -656,7 +656,7 @@ when it's ConfigMap changes.
 Deploy a [Job][k8s-job] of a Perl program.
 
 The full code for this app stack is on [GitHub][gh-job-stack].
-[gh-job-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/apps/job
+[gh-job-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/job
 [k8s-job]: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion
 
 {{< k8s-language noyaml >}}
@@ -715,7 +715,7 @@ const exampleJobKx = new kx.Job("example-job-kx", {
 Deploy a [DaemonSet][k8s-ds] of NGINX across all nodes in the cluster.
 
 The full code for this app stack is on [GitHub][gh-ds-stack].
-[gh-ds-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/apps/daemonset
+[gh-ds-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/daemonset
 [k8s-ds]: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 
 {{< k8s-language noyaml >}}
@@ -762,7 +762,7 @@ Coming Soon.
 Deploy a [CronJob][k8s-cj] of a command that runs every minute.
 
 The full code for this app stack is on [GitHub][gh-cronjob-stack].
-[gh-cronjob-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/apps/cronjob
+[gh-cronjob-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/cronjob
 [k8s-cj]: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 
 {{< k8s-language noyaml >}}
@@ -809,7 +809,7 @@ Coming Soon.
 Deploy a [StatefulSet][k8s-ss] of [MariaDB][mariadb].
 
 The full code for this app stack is on [GitHub][gh-ss-stack].
-[gh-ss-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/apps/statefulset
+[gh-ss-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/apps/statefulset
 [k8s-ss]: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 [mariadb]: https://mariadb.org/
 

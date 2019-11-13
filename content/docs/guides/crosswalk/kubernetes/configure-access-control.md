@@ -21,7 +21,7 @@ will have a particular binding into the cluster's auth to determine how it works
 with the cluster.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/aws/03-cluster-configuration
 
 {{% /md %}}
 </div>
@@ -38,7 +38,7 @@ will have a particular binding into the cluster's auth to determine how it works
 with the cluster.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/azure/03-cluster-configuration
 
 {{% /md %}}
 </div>
@@ -55,7 +55,7 @@ ServiceAccount will have a particular binding into the cluster's auth to determi
 with the cluster.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-guides/tree/master/gcp/03-cluster-configuration
 
 {{% /md %}}
 </div>
