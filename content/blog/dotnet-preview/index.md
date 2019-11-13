@@ -60,43 +60,43 @@ There are four files in the Pulumi project, the `Azure.Appservice.csproj` which 
 
 1. Create a new stack:
 
-``` bash
-$ pulumi stack init dev
-```
+    ``` bash
+    $ pulumi stack init dev
+    ```
 
 1. Login to Azure CLI (you will be prompted to do this during deployment if you forget this step):
 
-``` bash
-$ az login
-```
+    ``` bash
+    $ az login
+    ```
 
 1. Configure the location to deploy the resources to:
 
-``` bash
-$ pulumi config set azure:location centralus
-```
+    ``` bash
+    $ pulumi config set azure:location centralus
+    ```
 
 1. Define the SQL Server password (make it complex enough to satisfy Azure policy):
 
-``` bash
-pulumi config set --secret sqlPassword <value>
-```
+    ``` bash
+    pulumi config set --secret sqlPassword <value>
+    ```
 
 1. Run `pulumi up` to preview and deploy changes:
 
-``` bash
-$ pulumi up
-Previewing changes:
-...
+    ``` bash
+    $ pulumi up
+    Previewing changes:
+    ...
 
-Performing changes:
-...
-info: 10 changes performed:
+    Performing changes:
+    ...
+    info: 10 changes performed:
 
-    + 10 resources created
+        + 10 resources created
 
-Update duration: 1m14.59910109s
-```
+    Update duration: 1m14.59910109s
+    ```
 
 ___
 **NOTE:**
