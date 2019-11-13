@@ -29,7 +29,7 @@ menu:
     Once you're done editing your Policy Pack, run `pulumi policy publish <org-name>/<policy-pack-name>` to publish the pack.
     ```
 
-1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. A Policy Pack can contain up to 25 Policies. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateTypedResource` that allows us to validate S3 Bucket resources.
+2. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateTypedResource` that allows us to validate S3 Bucket resources.
 
     ```typescript
     // Create a new Policy Pack.

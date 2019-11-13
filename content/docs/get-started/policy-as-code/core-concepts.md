@@ -13,7 +13,7 @@ menu:
 
 A Policy contains specific logic you would like to enforce. For example, you may want to restrict the creation of public S3 buckets or you may disallow resource provisioning without tags. You can refer to other examples [here](https://github.com/pulumi/examples/tree/master/policy-packs).
 
-Policies are written as validation functions that are evaluated against all resources in your Pulumi stack. If the validation function calls `reportViolation`, the associated resource will be considered in violation of the policy.
+Policies are written as validation functions that are evaluated against all resources in your Pulumi stack. If the validation function calls `reportViolation`, the associated resource will be considered in violation of the policy. `reportViolation` can be called multiple times to report multiple violations.
 
 Policies validation functions are executed during `pulumi preview` and `pulumi update`, asserting that cloud resource definitions comply with the policy immediately before they are created or updated.
 
