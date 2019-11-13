@@ -41,7 +41,7 @@ The steps to follow include:
 ## Production Architecture for Teams
 
 Misconfigured infrastructure accounts are the source of a significant number of serious
-production outages in major systems. Many of these failure modes are preventable.
+production outages. Many of these failure modes are preventable.
 
 The primary objective of this reference architecture is to create sensible
 defaults that reduce the likelihood of these errors. Modern infrastructure as
@@ -56,7 +56,7 @@ code review and they allow teams to detect drift.
 This architecture is meant to show how these tools can be used within a team
 to employ and understand:
 
-* **Security:** Who has access to what, and how are things ensured?
+* **Security:** Who has access to what, and how is this policy enforced?
 * **Governance:** How do we ensure the blast radius of changes is as small as possible?
 * **Engineering:**  How do we automate this with CI/CD?
 
@@ -85,7 +85,7 @@ The identity stack typically contains:
 * Service Accounts for bots and CI/CD.
 
     While IAM roles and Active Directory accounts describe identity of users,
-    service accounts grant an identity for workloads, e.g. Storage
+    service accounts grant an identity for workloads, e.g., Storage
     CI/CD.
 
 ### 2. Managed Infrastructure
@@ -99,18 +99,18 @@ VMs, registries, data pipelines, and data warehouses.
 
 ### 3. Kubernetes Cluster
 
-Configuring and provision the Kubernetes cluster with the desired settings and defaults.
+Configure and provision the Kubernetes cluster with the desired settings and defaults.
 
 This also typically involves provisioning the Kubernetes cluster infrastructure
 with [API resources][k8s-api-resources] such as Namespaces, Roles , RoleBindings, and Quotas.
 
 Using a managed Kubernetes cluster on [EKS][eks], [GKE][gke], or [AKS][aks] is
-the easiest recommended way to get started with deploying a cluster.
+the easiest way to deploy a cluster.
 
 ### 4. Cluster Services
 
-With a running, vanilla cluster you can install any Kubernetes cluster-scoped
-services that will be shared by a subset or all cluster users.
+With a vanilla cluster running, you can install any Kubernetes cluster-scoped
+services that will be shared by some or all cluster users.
 
 At a minimum, services that should be installed include centralized cluster and app-based logging, and often
 include monitoring, policies, and service meshes.
@@ -118,7 +118,7 @@ include monitoring, policies, and service meshes.
 ### 5. App Services
 
 Configure any Kubernetes app-scoped services that will be shared
-by a subset or all users with deployment permissions.
+with users using deployment permissions.
 
 App services tend to include managed datastores (e.g. [RDS][aws-rds],
 [Cloud SQL][cloud-sql], and [CosmosDB][cosmos-db]), ingress controllers,
