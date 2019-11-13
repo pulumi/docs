@@ -19,7 +19,7 @@ usually a mix of cloud provider and custom services.
 {{% md %}}
 
 The full code for the AWS app services stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/05-app-services
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/05-app-services
 
 {{% /md %}}
 </div>
@@ -29,7 +29,7 @@ The full code for the AWS app services stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for the Azure app services stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/05-app-services
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/05-app-services
 
 {{% /md %}}
 </div>
@@ -39,13 +39,13 @@ The full code for the Azure app services stack is on [GitHub][gh-repo-stack].
 {{% md %}}
 
 The full code for the GCP app services stack is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/05-app-services
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/05-app-services
 
 {{% /md %}}
 </div>
 
 The full code for the general app services is on [GitHub][gh-repo-stack].
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/general-app-services
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/general-app-services
 
 
 ## Overview

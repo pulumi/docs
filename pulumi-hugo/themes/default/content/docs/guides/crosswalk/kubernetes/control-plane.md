@@ -21,7 +21,7 @@ See the [official Kubernetes docs][k8s-docs] for more details.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 [eks]: https://aws.amazon.com/eks/
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/aws/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/aws/03-cluster-configuration
 [k8s-docs]: https://kubernetes.io/docs/reference/
 {{% /md %}}
 </div>
@@ -38,7 +38,7 @@ See the [official Kubernetes docs][k8s-docs] for more details.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 [aks]: https://azure.microsoft.com/en-us/services/kubernetes-service/
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/azure/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/03-cluster-configuration
 [k8s-docs]: https://kubernetes.io/docs/reference/
 {{% /md %}}
 </div>
@@ -55,7 +55,7 @@ See the [official Kubernetes docs][k8s-docs] for more details.
 
 The full code for this stack is on [GitHub][gh-repo-stack].
 [gke]: https://cloud.google.com/kubernetes-engine/
-[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/crosswalk/gcp/03-cluster-configuration
+[gh-repo-stack]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/03-cluster-configuration
 [k8s-docs]: https://kubernetes.io/docs/reference/
 {{% /md %}}
 </div>
