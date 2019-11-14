@@ -13,7 +13,7 @@ If you want to dive straight in, [browse to the documentation](/docs/guides/cros
 
 ## Applying infrastructure as code to Kubernetes
 
-A little over a year ago, we launched support for managing Kubernetes resources using Pulumi’s open source infrastructure as code tools. The entire Kubernetes object model across all supported versions is available in your language of choice &mdash; including JavaScript, TypeScript, and Python &mdash; in addition to the entire ecosystem of Helm Charts. This offers 100% API resource compatibility, and same-day support for newly released Kubernetes releases.
+A little over a year ago, we launched support for managing Kubernetes resources using Pulumi’s open source infrastructure as code tools. The entire Kubernetes object model across all supported versions is available in your language of choice &mdash; including JavaScript, TypeScript, and Python &mdash; in addition to the entire ecosystem of Helm Charts. This offers 100% API resource compatibility, and same-day support for newly released Kubernetes versions.
 
 By leveraging general purpose languages, you get rich capabilities like for loops, functions, and classes, the ability to share and reuse best practices &mdash; eliminating copy and paste &mdash; as well as access to your favorite tools, including editors, test frameworks, and static analysis tools.
 
@@ -41,7 +41,7 @@ We experienced this first hand with many customers over the past year. There are
 
 * Infrastructure playbooks
 * Making Kubernetes more accessible to developers
-* Operationalizing delivery at-scale
+* Operationalizing delivery and observability insights at-scale
 
 Let me tell you about each of these in turn.
 
@@ -209,7 +209,7 @@ After you’ve mastered the infrastructure and application authoring challenges,
 
 Since our initial launch last year, we have added many different CI/CD integrations, including support for GitLab, Codefresh, Azure DevOps, Octopus Deploy, GitHub Actions, and more. This enables delivery at global scale. In fact, one of our customers continuously deploys to 80 different environments across their development and infrastructure operations teams.
 
-Finally, we are excited to release a new technology today, [Cloud Query Language (CQL) for Kubernetes](https://github.com/pulumi/pulumi-query-kubernetes), that leverages the Pulumi object model to ask operational queries about your cluster and its applications. This includes queries like “How many distinct versions of MySQL are running in my cluster?”, “Which Pods are exposed to the Internet via a load-balanced Service?”, and so on.
+Finally, we are excited to release a new technology in preview today, a new `query` command, and library of Kubernetes queries, that leverages the Pulumi object model to ask operational queries about your cluster and its applications. This includes queries like “How many distinct versions of MySQL are running in my cluster?”, “Which Pods are exposed to the Internet via a load-balanced Service?”, and so on.
 
 For instance, this query shows the distinct versions of MySQL inside your cluster:
 
@@ -227,7 +227,7 @@ const mySqlVersions = kq
 mySqlVersions.forEach(console.log);
 ```
 
-CQL also supports live streaming queries, which the CLI will display results from in real time.
+CQL also supports live streaming queries, which the CLI will display results from in real time. [Read more and get started with Pulumi Query for Kubernetes here](https://github.com/pulumi/pulumi-query-kubernetes).
 
 ## Join a growing community
 
