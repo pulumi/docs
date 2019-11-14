@@ -29,7 +29,7 @@ menu:
     Once you're done editing your Policy Pack, run `pulumi policy publish <org-name>/<policy-pack-name>` to publish the pack.
     ```
 
-1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. A Policy Pack can contain up to 25 Policies. Each Policy must have a unique name, an enforcement level and at least one rule. Here we use a `typeRule` that allows us to create an assertion against all S3 resources.
+2. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateTypedResource` that allows us to validate S3 Bucket resources.
 
     ```typescript
     // Create a new Policy Pack.
@@ -40,22 +40,21 @@ menu:
             name: "s3-no-public-read",
 
             // The description should document what the Policy does and why it exists.
-            description: "Prohibits setting the publicRead or publicReadWrite   permission on AWS S3 buckets.",
+            description: "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
 
-            // The enforcement level can either be "advisory" or "mandatory". An    "advisory" enforcement level
-            // simply prints a warning for users, while a "mandatory" policy will block     an update from proceeding.
+            // The enforcement level can either be "advisory" or "mandatory". An "advisory" enforcement level
+            // simply prints a warning for users, while a "mandatory" policy will block an update from proceeding.
             enforcementLevel: "mandatory",
 
-            // One or more rules can be specified as part of a Policy.
-            rules: [
-                // The typedRule function allows you to filter resources. In this case,     the rule only
-                // applies to S3 buckets and asserts that the acl is not "public-read"  nor "public-read-write".
-                // If the assertion fails, the custom assertion message will be     displayed to users.
-                typedRule(aws.s3.Bucket.isInstance, it => assert.ok(it.acl !==  "public-read"
-                    && it.acl !== "public-read-write",
-                    "You cannot set public-read or public-read-write on an S3 bucket. "     +
-                    "Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/   latest/dev/acl-overview.html")),
-            ],
+            // The validateTypedResource function allows you to filter resources. In this case, the rule only
+            // applies to S3 buckets and reports a violation if the acl is "public-read" or "public-read-write".
+            validateResource: validateTypedResource(aws.s3.Bucket, (bucket, args, reportViolation) => {
+                if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
+                    reportViolation(
+                        "You cannot set public-read or public-read-write on an S3 bucket. " +
+                        "Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html");
+                }
+            }),
         }],
     });
     ```
@@ -118,8 +117,8 @@ Diagnostics:
     error: preview failed
 
   aws:s3:Bucket (my-bucket):
-    mandatory: [s3-no-public-read] Prohibits setting the publicRead or  publicReadWrite permission on AWS S3 buckets.
-    expected value 'true' to == 'false'
+    mandatory: [s3-no-public-read] Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.
+    You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html
 
 Permalink:
 ...

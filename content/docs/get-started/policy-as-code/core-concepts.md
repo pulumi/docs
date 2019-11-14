@@ -13,17 +13,17 @@ menu:
 
 A Policy contains specific logic you would like to enforce. For example, you may want to restrict the creation of public S3 buckets or you may disallow resource provisioning without tags. You can refer to other examples [here](https://github.com/pulumi/examples/tree/master/policy-packs).
 
-Policy rules are written as functions that are evaluated against all resources in your Pulumi stack. If the function throws an `AssertionError` (via the assert package), the rule will consider the associated resource to be in violation of the policy.
+Policies are written as validation functions that are evaluated against all resources in your Pulumi stack. If the validation function calls `reportViolation`, the associated resource will be considered in violation of the policy. `reportViolation` can be called multiple times to report multiple violations.
 
-Policy rules are executed during `pulumi preview` and `pulumi update`, asserting that cloud resource definitions comply with the policy immediately before they are created or updated.
+Policies validation functions are executed during `pulumi preview` and `pulumi update`, asserting that cloud resource definitions comply with the policy immediately before they are created or updated.
 
-During `preview`, every rule is run on every resource, and policy violations are batched up into a final report. During the `update`, the first policy violation will halt the deployment.
+During `preview`, every resource is checked for policy violations, which are batched up into a final report. During the `update`, the first policy violation will halt the deployment.
 
 When authoring a policy, you must specify an Enforcement Level: `advisory` or `mandatory`. An enforcement level of `advisory` simply prints a warning message to users. A `mandatory` enforcement level means that an update will halt before creating a resource that violates that policy.
 
 ## Policy Pack
 
-A Policy Pack can contain one or more policies to enforce. Packs provide a way to group together similar policies. For example, you may decide to have one pack with AWS policies and another with Kubernetes-specific policies. That being said, there are no restrictions on which rules you combine within a pack, and you should pack them however makes sense for your organization. Currently, there is a limitation of 25 policies per pack.
+A Policy Pack can contain one or more policies to enforce. Packs provide a way to group together similar policies. For example, you may decide to have one pack with AWS policies and another with Kubernetes-specific policies. That being said, there are no restrictions on which policies you combine within a pack, and you should pack them however makes sense for your organization. Currently, there is a limitation of 25 policies per pack.
 
 Organization admins can author and publish Policy Packs to the Pulumi service.
 
