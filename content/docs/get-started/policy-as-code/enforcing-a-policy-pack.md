@@ -14,32 +14,34 @@ Once you’ve validated the behavior of your policies, an organization administr
 1. From within the Policy Pack directory, run the following command to publish your pack:
 
     ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi policy publish <org-name>/<policy-pack-name>
+    $ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
     ```
+
+    The `[org-name]` is optional. If not specified, the pack will be published to your user account.
 
     The `<policy-pack-name>` is the name you’d like to see used to reference the pack in the Pulumi Console.
 
     The output will tell you what version of the Policy Pack you just published. The Pulumi service provides a monotonic version number for Policy Packs.
 
     ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi policy publish pulumi/policy-pack-typescript
+    $ PULUMI_EXPERIMENTAL=true pulumi policy publish myorg
     Obtaining policy metadata from policy plugin
     Compressing policy pack
     Uploading policy pack to Pulumi service
-    Publishing as policy-pack-typescript
+    Publishing policy-pack-typescript to myorg
     Published as version 1
     ```
 
 1. You can apply this Policy Pack to your organization’s default Policy Group by running:
 
     ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi policy apply <organization>/<policy-pack-name> <version>
+    $ PULUMI_EXPERIMENTAL=true pulumi policy apply <org-name>/<policy-pack-name> <version>
     ```
 
     For example, to apply the Policy Pack created in the previous step:
 
     ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi policy apply pulumi/policy-pack-typescript 1
+    $ PULUMI_EXPERIMENTAL=true pulumi policy apply pulumi/policy-pack-typescript 1
     ```
 
     The CLI can only be used to apply the Policy Pack to your default Policy Group. If you would like to add the Policy Pack to a different Policy Group, you can do so via the Pulumi Console.
