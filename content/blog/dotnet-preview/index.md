@@ -1,19 +1,20 @@
 ---
 title: "Infrastructure as Code with .NET and Pulumi"
 date: 2019-11-13T11:23:04-06:00
-draft: false
+draft: true
 meta_desc: "Pulumi launches supports .NET Core languages for Infrastructure as Code"
 meta_image: "meta.png"
 authors:
     - sophia-parafina
 tags:
-    - ".NET Core"
+    - ".NET"
     - "C#"
     - "F#"
     - "Visual Basic"
 ---
+With the release of [Pulumi for .NET preview](https://www.pulumi.com/blog/pulumi-dotnet-core/), we've open the doors to infrastructure as code to even more developers and operators. Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because .NET Core is available on Windows, Linux, and macOS, you have a choice of platforms to use.
 
-Millions of .NET developers can now use their favorite languages and open source ecosystems to build modern, cloud native applications. We've added support for C#, F#, and Visual Basic. Because .NET Core is available on Windows, Linux, and macOS, you have a choice of platforms to use. You can create cloud resources by writing Microsoft .NET Core programs to build and deploy cloud resources to a wide variety of clouds, including Azure, AWS, GCP and more.  On Azure, you can manage resources like AKS Clusters, Functions, Azure App Services, Virtual Machines, Cosmos DBs, KeyVaults, and much, much more.
+You can create cloud resources by writing Microsoft .NET Core programs to build and deploy cloud resources to a wide variety of clouds, including Azure, AWS, GCP and more.  On Azure, you can manage resources like AKS Clusters, Functions, Azure App Services, Virtual Machines, Cosmos DBs, KeyVaults, and much, much more. Let's take a first look at Pulumi for .NET by deploying an application on Azure.
 
 ## What Does Pulumi Enable?
 
@@ -23,7 +24,7 @@ Operators can use the `pulumi` CLI or CI/CD integrations to maintain and version
 
 You can accomplish all of this without having to learn a JSON or YAML DSL or script low-level CLI commands. With Pulumi, developers and operators have a shared foundation for building modern applications.
 
-## How Pulumi .NET Works
+## How Pulumi for .NET Works
 
 Pulumi is declarative even though it uses general purpose programming languages. It does this by specifying a set of resources, and the Pulumi engine orchestrates the CRUD operations to build and deploy infrastructure.
 
@@ -35,7 +36,7 @@ A Pulumi project uses a .NET Core console application to build infrastructure. T
 
 1. [Install .NET Core SDK 3.0+](https://dotnet.microsoft.com/download)
 
-1. [A Microsoft Azure account](https://azure.microsoft.com/en-us/free/)
+1. [Configure a Microsoft Azure account](https://azure.microsoft.com/en-us/free/)
 
 1. [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
