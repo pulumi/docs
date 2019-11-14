@@ -1,4 +1,10 @@
 [[releases]]
+date = "14th November 2019"
+title = "Pulumi Crosswalk for Kubernetes Accelerates Production-ready Infrastructure as Code for Developer and Operations Teams Working Together"
+summary = "Pulumi announces Pulumi Crosswalk for Kubernetes, an open source collection of frameworks, tools, and user guides to help developers and operators go into production with Kubernetes."
+url = "https://info.pulumi.com/press-release/pulumi-crosswalk-for-kubernetes"
+
+[[releases]]
 date = "5th September 2019"
 title = "Pulumi 1.0 Brings Developers and Operators Together with Modern Infrastructure as Code"
 summary = "Pulumi announces the general availability of Pulumi 1.0, a modern Infrastructure as Code platform that supports many languages and many clouds."
