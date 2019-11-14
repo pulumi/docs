@@ -132,7 +132,6 @@ Deploy applications and workloads into the cluster.
 
 See the [FAQ][crosswalk-faq] for more details.
 
-[ktpw-gh]: https://github.com/pulumi/kubernetes-the-prod-way
 [aws-iam]: https://aws.amazon.com/iam/
 [gcp-iam]: https://cloud.google.com/iam/
 [azure-ad]: https://azure.microsoft.com/en-us/services/active-directory/
