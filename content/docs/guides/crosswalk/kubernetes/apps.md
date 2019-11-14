@@ -622,16 +622,14 @@ const databaseSecretKx = new kx.Secret("db-secret", {
 }, { provider: provider });
 
 // Create a KX PodBuilder for the demo app.
-const nginxPB = new kx.PodBuilder(appName, {
-    spec: {
-        containers: [{
-            image: "nginx",
-            env: {
-                "DATABASE_USERNAME": databaseSecretKx.asEnvValue("database-username"),
-                "DATABASE_PASSWORD": databaseSecretKx.asEnvValue("database-password"),
-            }
-        }]
-    }
+const nginxPB = new kx.PodBuilder({
+    containers: [{
+        image: "nginx",
+        env: {
+            "DATABASE_USERNAME": databaseSecretKx.asEnvValue("database-username"),
+            "DATABASE_PASSWORD": databaseSecretKx.asEnvValue("database-password"),
+        }
+    }]
 });
 
 // Create a KX Deployment from the KX PodBuilder by transforming it into a DeploymentSpec.
