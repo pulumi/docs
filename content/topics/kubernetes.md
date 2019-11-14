@@ -39,6 +39,36 @@ sections:
     - id: contact
       label: Contact Us
 
+kubernetes_crosswalk:
+    code: |
+        import * as gcp from "@pulumi/gcp";
+        import * as k8s from "@pulumi/kubernetes";
+
+        // Create a GKE cluster.
+        const cluster = new gcp.container.Cluster("gke-cluster");
+
+        // Create a performant node pool in the cluster.
+        const performantNodes = new gcp.container.NodePool("performant-nodes", {
+            cluster: cluster.name,
+            nodeConfig: { machineType: "n1-standard-16"}
+        });
+
+        // Create an Apps namespace.
+        const appsNamespace = new k8s.core.v1.Namespace("apps");
+
+        // Create a quota.
+        const quotaAppNamespace = new k8s.core.v1.ResourceQuota("apps", {
+            spec: {hard: {cpu: "200", memory: "1Gi", pods: "10"}},
+        })
+
+        // Create a restrictive PodSecurityPolicy.
+        const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", {
+            spec: { privileged: false,
+                runAsUser: { rule: "RunAsAny" }, fsGroup: { rule: "RunAsAny" },
+                seLinux: { rule: "RunAsAny" }, supplementalGroups: { rule: "RunAsAny" },
+            }
+        });
+
 examples:
     - title: Use existing YAML and Helm Charts
       body: >
@@ -70,7 +100,7 @@ examples:
               .status.apply(status => status.loadBalancer.ingress[0].ip);
       cta:
           url: /docs/get-started/kubernetes/
-          label: NEXT STEP
+          label: TRY IT NOW
 
     - title: Provision Kubernetes clusters in any cloud
       body: >
@@ -102,5 +132,5 @@ examples:
 
       cta:
           url: /docs/get-started/kubernetes/
-          label: NEXT STEP
+          label: GET STARTED
 ---

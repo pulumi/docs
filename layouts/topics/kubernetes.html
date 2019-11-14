@@ -5,32 +5,7 @@
                 <h1>{{ .Params.hero.title }}</h1>
                 {{ .Params.hero.body | markdownify }}
                 <h3 class="text-white">Create an Account</h3>
-                <div>
-                    <div class="flex flex-row max-w-full">
-                        <a class="btn bg-gray-300 border border-gray-300 hover:bg-gray-200 mb-5 flex justify-center w-1/2 mr-4"
-                            href="https://app.pulumi.com/signup?reason=pass_through&type=github.com">
-                            <img class="h-10 my-auto mr-4" src="/logos/tech/github.svg" alt="GitHub">
-                            <p class="hero--registration-button my-auto">GitHub</p>
-                        </a>
-                        <a class="btn bg-gray-300 border border-gray-300 hover:bg-gray-200 mb-5 flex justify-center w-1/2 mr-4"
-                            href="https://app.pulumi.com/signup?reason=pass_through&type=gitlab.com">
-                            <img class="h-10 my-auto mr-4" src="/logos/tech/gitlab.svg" alt="GitLab">
-                            <p class="hero--registration-button my-auto">GitLab</p>
-                        </a>
-                    </div>
-                    <div class="flex flex-row max-w-full">
-                        <a class="btn bg-gray-300 border border-gray-300 hover:bg-gray-200 mb-5 flex justify-center w-1/2 mr-4"
-                            href="https://app.pulumi.com/signup?reason=pass_through&type=bitbucket.org">
-                            <img class="h-10 my-auto mr-4" src="/logos/tech/atlassian.svg" alt="BitBucket">
-                            <p class="hero--registration-button my-auto">Bitbucket</p>
-                        </a>
-                        <a class="btn bg-gray-300 border border-gray-300 hover:bg-gray-200 mb-5 flex justify-center w-1/2 mr-4"
-                            href="https://app.pulumi.com/signup/email">
-                            <i class="h-10 my-auto mr-4 text-black text-4xl fa fa-envelope"></i>
-                            <p class="hero--registration-button my-auto">Email</p>
-                        </a>
-                    </div>
-                </div>
+                {{ partial "create-account-cta" }}
             </div>
             <div class="header-hero-item">
                 {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
@@ -69,7 +44,7 @@
 
     <section id="kubernetes-cake" class="py-8 bg-white px-4 md:px-0">
         <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row split-section--container">
-            <div class="w1/1 order-last mt-16 md:w-1/2 md:order-none split-section--left">
+            <div class="w1/1 order-last mt-16 md:w-2/5 md:order-none split-section--left">
                 <h2>Pulumi's Kubernetes Platform</h2>
                 <p>
                     The various SDKs allow Kubernetes users to leverage Pulumi for novel forms of cluster management, and 
@@ -85,7 +60,7 @@
                     REQUEST MORE INFORMATION
                 </a>
             </div>
-            <div class="w1/1 order-first md:w-1/2 md:order-none split-section--right">
+            <div class="w1/1 order-first md:w-3/5 md:order-none split-section--right">
                 <img src="/images/docs/quickstart/kubernetes/cake.svg" />
             </div>
         </div>
@@ -93,22 +68,21 @@
 
     <section id="k8s-crosswalk" class="py-8 bg-white px-4 md:px-0">
         <div class="container mx-auto flex flex-col md:mx-auto md:flex md:flex-row split-section--container">
-            <div class="w1/1 order-last mt-16 md:w-1/2 md:order-none split-section--left">
-                <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" />
+            <div class="w1/1 order-last mt-16 md:mt-0 md:w-3/5 md:order-none split-section--left">
+                {{ partial "code" (dict "code" .Params.kubernetes_crosswalk.code "lang" "js" "mode" "dark") }}
             </div>
-            <div class="w1/1 order-first md:w-1/2 md:order-none split-section--right">
-                <h2>Crosswalk for Kubernetes</h2>
+            <div class="w1/1 order-first md:w-2/5 md:order-none split-section--right">
+                <h2>Crosswalk for Kubernetes - Playbooks for Infrastructure</h2>
                 <p>
-                    Misconfigured infrastructure accounts are the source of a significant number of serious production outages. 
-                    Many of these failure modes are preventable. Pulumi Crosswalk for Kubernetes is a collection of industry 
-                    standard best-practices for managing Kubernetes, and its infrastructure in production. Crosswalk for Kubernetes 
-                    can be used within a team to employ and understand:
+                    Create, deploy, and manage production-ready infrastructure leveraging hosted Kubernetes offerings 
+                    such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes 
+                    Engine (GKE). Benefit from tried-and-true Day Two and beyond integrations and playbooks, improving your 
+                    organization's security, manageability, and cost effectiveness.
                 </p>
-                <ul>
-                    <li><strong>Security:</strong> Who has access to what, and how is this policy enforced?</li>
-                    <li><strong>Governance:</strong> How do we ensure the blast radius of changes is as small as possible?</li>
-                    <li><strong>Engineering:</strong> How do we automate this with CI/CD?</li>
-                </ul>
+                <p>
+                    With Pulumi's unique approach to infrastructure as code, you'll focus more on code and business logic, 
+                    and less on YAML or DSL configuration languages.
+                </p>
                 <a class="btn inline-block split-section--cta-btn" href="/docs/guides/crosswalk/kubernetes/">
                     LEARN MORE
                 </a>
@@ -142,7 +116,7 @@
                             {{ $val.cta.label }}
                         </a>
                     </div>
-                    <div class="w1/1 order-last md:w-3/5 md:order-none split-section--right">
+                    <div class="w1/1 order-last md:text-base md:w-3/5 md:order-none split-section--right">
                         {{ partial "code" (dict "code" .code "lang" "js" "mode" "dark") }}
                     </div>
                 {{ end }}
@@ -196,24 +170,27 @@
                     <div class="relative contact-form--customer-quote">
                         <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
                         <p class="leading-loose mt-0 z-10 relative text-gray-800">
-                            I needed a solution that cut across silos and gave our developers a tool they could use
-                            themselves to provision infrastructure to suit their own immediate needs. The way Pulumi
-                            solves the multi-cloud problem is exactly what I was looking for.
+                            Pulumi enables our teams to deploy, scale and manage Kubernetes clusters in a fraction of the time 
+                            that it took them previously, by giving them the ability to work with the languages they already know, 
+                            bypassing YAML and unwieldy DSLs. It helps bring together application and infrastructure developers by 
+                            eliminating silos and reducing friction in their workflows and interactions. We're excited that Pulumi 
+                            Crosswalk for Kubernetes will simplify our infrastructure provisioning even further, advancing application 
+                            lifecycle management throughout our organization.
                         </p>
                         <div class="leading-relaxed flex items-start">
                             <div>
                                 <div class="text-blue-700 font-semibold text-xl">
-                                    Dinesh Ramamurthy,
+                                        Fernando Carletti
                                 </div>
                                 <div class="text-blue-500">
-                                    Engineering Manager, Mercedes-Benz Research and Development North America
+                                        Head of DevOps, Credijusto
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="mt-16 mx-auto md:w-1/2 md:ml-8">
-                    <h2 class="text-black text-center">Demo Request</h2>
+                <div class="mt-16 mx-auto md:w-1/2 md:ml-8 md:mt-0">
+                    <h2 class="text-black text-center md:text-left">Demo Request</h2>
                     <div class="hs-form hs-form-fg-light hs-demo-form text-black">
                         {{ partial "hubspot-form.html" (dict "hubspotFormID" "8ffce4b8-9eb1-4c9d-804b-2d9054806aa2") }}
                     </div>
