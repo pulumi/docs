@@ -20,22 +20,22 @@
         <h2 class="text-center">Powering top engineering teams</h2>
         <div class="container mx-auto">
             <div class="lg:flex items-center justify-center my-4">
-                <a href="https://www.tableau.com/" target="_blank">
+                <a id="lemonade-logo" href="https://www.tableau.com/" target="_blank" track-click>
                     <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
                 </a>
-                <a href="https://mbrdna.com/" target="_blank">
+                <a id="mercedes-logo" href="https://mbrdna.com/" target="_blank" track-click>
                     <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
                 </a>
-                <a href="https://www.mindbodyonline.com/" target="_blank">
+                <a id="mindbody-logo" href="https://www.mindbodyonline.com/" target="_blank" track-click>
                     <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
                 </a>
-                <a href="https://www.nih.gov/" target="_blank">
+                <a id="nih-logo" href="https://www.nih.gov/" target="_blank" track-click>
                     <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
                 </a>
-                <a href="https://www.snopes.com/" target="_blank">
+                <a id="snopes-logo" href="https://www.snopes.com/" target="_blank" track-click>
                     <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
                 </a>
-                <a href="https://www.lemonade.com/" target="_blank">
+                <a id="lemonade-logo" href="https://www.lemonade.com/" target="_blank" track-click>
                     <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
                 </a>
             </div>
@@ -47,7 +47,7 @@
             <div class="w1/1 order-last mt-16 md:w-2/5 md:order-none split-section--left">
                 <h2>Pulumi's Kubernetes Platform</h2>
                 <p>
-                    The various SDKs allow Kubernetes users to leverage Pulumi for novel forms of cluster management, and 
+                    The various SDKs allow Kubernetes users to leverage Pulumi for novel forms of cluster management, and
                     deployment of app workloads to clusters. Users of Kubernetes and Pulumi can:
                 </p>
                 <ul>
@@ -56,7 +56,7 @@
                         and testing frameworks to validate Kubernetes clusters, app workloads, or both.</li>
                     <li>And more...</li>
                 </ul>
-                <a class="btn inline-block split-section--cta-btn" href="#contact">
+                <a id="kubernetes-request-more-information" class="btn inline-block split-section--cta-btn" href="#contact" track-click>
                     REQUEST MORE INFORMATION
                 </a>
             </div>
@@ -74,16 +74,17 @@
             <div class="w1/1 order-first md:w-2/5 md:order-none split-section--right">
                 <h2>Crosswalk for Kubernetes - Playbooks for Infrastructure</h2>
                 <p>
-                    Create, deploy, and manage production-ready infrastructure leveraging hosted Kubernetes offerings 
-                    such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes 
-                    Engine (GKE). Benefit from tried-and-true Day Two and beyond integrations and playbooks, improving your 
+                    Create, deploy, and manage production-ready infrastructure leveraging hosted Kubernetes offerings
+                    such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), or Google Kubernetes
+                    Engine (GKE). Benefit from tried-and-true Day Two and beyond integrations and playbooks, improving your
                     organization's security, manageability, and cost effectiveness.
                 </p>
                 <p>
-                    With Pulumi's unique approach to infrastructure as code, you'll focus more on code and business logic, 
+                    With Pulumi's unique approach to infrastructure as code, you'll focus more on code and business logic,
                     and less on YAML or DSL configuration languages.
                 </p>
-                <a class="btn inline-block split-section--cta-btn" href="/docs/guides/crosswalk/kubernetes/">
+                <a id="kubernetes-crosswalk-learn-more" class="btn inline-block split-section--cta-btn"
+                   href="/docs/guides/crosswalk/kubernetes/" track-click>
                     LEARN MORE
                 </a>
             </div>
@@ -102,7 +103,7 @@
                         <p>
                             {{ $val.body | safeHTML }}
                         </p>
-                        <a class="btn inline-block split-section--cta-btn" href="{{ $val.cta.url }}">
+                        <a id="{{ $val.cta.id }}" class="btn inline-block split-section--cta-btn" href="{{ $val.cta.url }}" track-click>
                             {{ $val.cta.label }}
                         </a>
                     </div>
@@ -112,7 +113,7 @@
                         <p>
                             {{ $val.body | safeHTML }}
                         </p>
-                        <a class="btn inline-block split-section--cta-btn" href="{{ $val.cta.url }}">
+                        <a id="{{ $val.cta.id }}" class="btn inline-block split-section--cta-btn" href="{{ $val.cta.url }}" track-click>
                             {{ $val.cta.label }}
                         </a>
                     </div>
@@ -137,22 +138,22 @@
             </div>
             <div class="container mx-auto max-w-5xl">
                 <div class="flex flex-row max-w-full">
-                    <a class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
-                        href="{{ relref . "/docs/get-started/aws" }}">
+                    <a id="get-started-aws" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
+                        href="{{ relref . "/docs/get-started/aws" }}" track-click>
                         <img class="h-10" src="/logos/tech/aws.svg" alt="AWS">
                     </a>
-                    <a class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
-                        href="{{ relref . "/docs/get-started/azure" }}">
+                    <a id="get-started-azure" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
+                        href="{{ relref . "/docs/get-started/azure" }}" track-click>
                         <img class="h-10" src="/logos/tech/azure.svg" alt="Azure">
                     </a>
                 </div>
                 <div class="flex flex-row max-w-full">
-                    <a class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
-                        href="{{ relref . "/docs/get-started/gcp" }}">
+                    <a id="get-started-gcp" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 mr-4"
+                        href="{{ relref . "/docs/get-started/gcp" }}" track-click>
                         <img class="h-10" src="/logos/tech/gcp.svg" alt="Google Cloud">
                     </a>
-                    <a class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
-                        href="{{ relref . "/docs/get-started/kubernetes" }}">
+                    <a id="get-started-kubernetes" class="btn bg-transparent border border-gray-300 hover:bg-gray-200 p-5 mb-5 flex justify-center w-1/2 ml-4"
+                        href="{{ relref . "/docs/get-started/kubernetes" }}" track-click>
                         <img class="h-10" src="/logos/tech/k8s.svg" alt="Kubernetes">
                     </a>
                 </div>
@@ -170,11 +171,11 @@
                     <div class="relative contact-form--customer-quote">
                         <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
                         <p class="leading-loose mt-0 z-10 relative text-gray-800">
-                            Pulumi enables our teams to deploy, scale and manage Kubernetes clusters in a fraction of the time 
-                            that it took them previously, by giving them the ability to work with the languages they already know, 
-                            bypassing YAML and unwieldy DSLs. It helps bring together application and infrastructure developers by 
-                            eliminating silos and reducing friction in their workflows and interactions. We're excited that Pulumi 
-                            Crosswalk for Kubernetes will simplify our infrastructure provisioning even further, advancing application 
+                            Pulumi enables our teams to deploy, scale and manage Kubernetes clusters in a fraction of the time
+                            that it took them previously, by giving them the ability to work with the languages they already know,
+                            bypassing YAML and unwieldy DSLs. It helps bring together application and infrastructure developers by
+                            eliminating silos and reducing friction in their workflows and interactions. We're excited that Pulumi
+                            Crosswalk for Kubernetes will simplify our infrastructure provisioning even further, advancing application
                             lifecycle management throughout our organization.
                         </p>
                         <div class="leading-relaxed flex items-start">
@@ -195,11 +196,11 @@
                         {{ partial "hubspot-form.html" (dict "hubspotFormID" "8ffce4b8-9eb1-4c9d-804b-2d9054806aa2") }}
                     </div>
                     <p class="text-black text-right text-base">
-                        ...or <a href="https://app.pulumi.com/signup">Start Free Trial</a>
+                        ...or <a id="start-free-trial-text" href="https://app.pulumi.com/signup/" track-click>Start Free Trial</a>
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    
+
 {{ end }}

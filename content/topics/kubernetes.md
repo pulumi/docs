@@ -99,6 +99,7 @@ examples:
               .getResource("v1/Service", "wpdev-wordpress")
               .status.apply(status => status.loadBalancer.ingress[0].ip);
       cta:
+          id: get-started-kubernetes-yaml-helm
           url: /docs/get-started/kubernetes/
           label: TRY IT NOW
 
@@ -131,6 +132,7 @@ examples:
           });
 
       cta:
+          id: get-started-kubernetes-multi-cloud
           url: /docs/get-started/kubernetes/
           label: GET STARTED
 ---
