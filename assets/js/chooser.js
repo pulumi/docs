@@ -114,7 +114,20 @@ function hideShowChoices(kind, selector, defaultChoice) {
 
         // For every language tab, inject a handler and make the correct one hidden.
         e.addEventListener("click", function() {
-            selector(choice);
+
+            // Choosing a tab currently affects the selection state of all of the other
+            // tabs on the page, which can cause unpredictable reflows, so we note the
+            // current position of the clicked element relative to the upper edge of the
+            // viewport, do the selection, then scroll to the same relative location once
+            // the reflow is complete.
+            var el = $(this).get(0);
+            var distanctFromViewportTop = el.getBoundingClientRect().top;
+
+            selector(choice, e);
+
+            requestAnimationFrame(function() {
+                window.scroll(0, el.offsetTop - distanctFromViewportTop);
+            });
         });
     });
 
@@ -137,7 +150,7 @@ function hideShowChoices(kind, selector, defaultChoice) {
     }
 }
 
-// The first time the DOM is finished loading, select the right language and OS. 
+// The first time the DOM is finished loading, select the right language and OS.
 $(function() {
     // If no language is chosen yet, default to TypeScript.
     hideShowChoices("language", selectLanguage, "typescript");
