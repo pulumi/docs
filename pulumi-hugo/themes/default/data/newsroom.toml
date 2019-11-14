@@ -35,6 +35,12 @@ summary = "Company funded by Madrona Venture Group and Tola Capital to help comp
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
 
 [[coverage]]
+date = "12th Nov 2019"
+title = "Pulumi infrastructure-as-code tool adds .NET language support"
+img = "/logos/press/infoworld.png"
+url = "https://www.infoworld.com/article/3453236/pulumi-infrastructure-as-code-tool-adds-net-language-support.html"
+
+[[coverage]]
 date = "24th July 2019"
 title = "Programming the Cloud with TypeScript"
 img = "/logos/press/infoq.png"
