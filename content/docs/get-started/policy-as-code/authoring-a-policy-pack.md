@@ -9,16 +9,22 @@ menu:
 ---
 {{% pac-preview %}}
 
+1. Verify your version of the Pulumi CLI
+
+    ```sh
+    $ pulumi version # should be v1.5.2 or later
+    ```
+
 1. Create a directory for your new Policy Pack, and change into it.
 
     ```sh
     $ mkdir policypack && cd policypack
     ```
 
-1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_DEBUG_COMMANDS=true` as an environment variable or simply pre-append it to your commands as shown. (Note: Pulumi 1.4.1 or later is required to use `pulumi policy new` command.)
+1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_EXPERIMENTAL=true` as an environment variable or simply pre-append it to your commands as shown.
 
     ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi policy new aws-typescript
+    $ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
     Created Policy Pack!
     Installing dependencies...
     ...
@@ -26,10 +32,10 @@ menu:
 
     Your new Policy Pack is ready to go! ✨
 
-    Once you're done editing your Policy Pack, run `pulumi policy publish <org-name>/<policy-pack-name>` to publish the pack.
+    Once you're done editing your Policy Pack, run `pulumi policy publish [org-name]` to publish the pack.
     ```
 
-2. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateTypedResource` that allows us to validate S3 Bucket resources.
+1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateTypedResource` that allows us to validate S3 Bucket resources.
 
     ```typescript
     // Create a new Policy Pack.
@@ -74,13 +80,13 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
     In the Pulumi project's directory run:
 
     ```sh
-    PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack <path-to-policy-pack-directory>
+    $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
     ```
 
     If the stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
 
     {{< highlight sh >}}
-$ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack policy-pack-typescript
+$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack policy-pack-typescript
 Previewing update (dev):
 
      Type                 Name          Plan
@@ -105,7 +111,7 @@ Permalink:
 1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
 
     {{< highlight sh >}}
-$ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack ~/policy-pack-typescript
+$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack ~/policy-pack-typescript
 Previewing update (dev):
 
      Type                 Name          Plan       Info
