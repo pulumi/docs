@@ -44,7 +44,7 @@ meta_desc: "Explore members of the keymanager module in the @pulumi/openstack pa
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ContainerV1" data-link-title="ContainerV1">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L69">
         Resource <strong>ContainerV1</strong>
     </a>
 </h3>
@@ -111,7 +111,7 @@ const listener1 = new openstack.loadbalancer.Listener("listener1", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_container_v1.html.markdown.
 
 <h4 class="pdoc-member-header" id="ContainerV1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L140"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L140"> <b>constructor</b></a>
 </h4>
 
 
@@ -125,7 +125,7 @@ Create a ContainerV1 resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ContainerV1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L78">method <b>get</b></a>
 </h4>
 
 
@@ -136,14 +136,14 @@ Get an existing ContainerV1 resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ContainerV1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L69">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L69">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ContainerV1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L89">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L89">method <b>isInstance</b></a>
 </h4>
 
 
@@ -154,7 +154,7 @@ Returns true if the given object is an instance of ContainerV1.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ContainerV1-consumers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L99">property <b>consumers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L99">property <b>consumers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>consumers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ContainerV1Consumer'>outputs.keymanager.ContainerV1Consumer</a>[]&gt;;</code></pre>
@@ -162,7 +162,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The list of the container consumers. The structure is described below.
 
 <h4 class="pdoc-member-header" id="ContainerV1-containerRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L103">property <b>containerRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L103">property <b>containerRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerRef: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ The list of the container consumers. The structure is described below.
 The container reference / where to find the container.
 
 <h4 class="pdoc-member-header" id="ContainerV1-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L107">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L107">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ The container reference / where to find the container.
 The date the container was created.
 
 <h4 class="pdoc-member-header" id="ContainerV1-creatorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L111">property <b>creatorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L111">property <b>creatorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creatorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ The date the container was created.
 The creator of the container.
 
 <h4 class="pdoc-member-header" id="ContainerV1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -195,7 +195,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ContainerV1-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ Human-readable name for the Container. Does not have
 to be unique.
 
 <h4 class="pdoc-member-header" id="ContainerV1-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L123">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L123">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ A KeyManager client is needed to create a container. If omitted, the
 V1 container.
 
 <h4 class="pdoc-member-header" id="ContainerV1-secretRefs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L128">property <b>secretRefs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L128">property <b>secretRefs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretRefs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ContainerV1SecretRef'>outputs.keymanager.ContainerV1SecretRef</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ A set of dictionaries containing references to secrets. The structure is describ
 below.
 
 <h4 class="pdoc-member-header" id="ContainerV1-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L132">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L132">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -232,7 +232,7 @@ below.
 The status of the container.
 
 <h4 class="pdoc-member-header" id="ContainerV1-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L136">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L136">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -240,7 +240,7 @@ The status of the container.
 Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
 
 <h4 class="pdoc-member-header" id="ContainerV1-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L140">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L140">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -248,7 +248,7 @@ Used to indicate the type of container. Must be one of `generic`, `rsa` or `cert
 The date the container was last updated.
 
 <h4 class="pdoc-member-header" id="ContainerV1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L69">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L69">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -257,7 +257,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretV1" data-link-title="SecretV1">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L12">
         Resource <strong>SecretV1</strong>
     </a>
 </h3>
@@ -267,7 +267,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_secret_v1.html.markdown.
 
 <h4 class="pdoc-member-header" id="SecretV1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L115"> <b>constructor</b></a>
 </h4>
 
 
@@ -281,7 +281,7 @@ Create a SecretV1 resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretV1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -292,14 +292,14 @@ Get an existing SecretV1 resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretV1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretV1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -310,7 +310,7 @@ Returns true if the given object is an instance of SecretV1.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretV1-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L42">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L42">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -318,7 +318,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Metadata provided by a user or system for informational purposes.
 
 <h4 class="pdoc-member-header" id="SecretV1-allMetadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L47">property <b>allMetadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L47">property <b>allMetadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allMetadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -327,7 +327,7 @@ The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
 
 <h4 class="pdoc-member-header" id="SecretV1-bitLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L51">property <b>bitLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L51">property <b>bitLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bitLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -335,7 +335,7 @@ explicitly and implicitly added.
 Metadata provided by a user or system for informational purposes.
 
 <h4 class="pdoc-member-header" id="SecretV1-contentTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L55">property <b>contentTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L55">property <b>contentTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -343,7 +343,7 @@ Metadata provided by a user or system for informational purposes.
 The map of the content types, assigned on the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L59">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L59">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -351,7 +351,7 @@ The map of the content types, assigned on the secret.
 The date the secret was created.
 
 <h4 class="pdoc-member-header" id="SecretV1-creatorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L63">property <b>creatorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L63">property <b>creatorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creatorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ The date the secret was created.
 The creator of the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L67">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L67">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -367,7 +367,7 @@ The creator of the secret.
 The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
 
 <h4 class="pdoc-member-header" id="SecretV1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -376,7 +376,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretV1-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L71">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L71">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -384,7 +384,7 @@ deployments and may be missing (undefined) during planning phases.
 Additional Metadata for the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L75">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L75">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -392,7 +392,7 @@ Additional Metadata for the secret.
 Metadata provided by a user or system for informational purposes.
 
 <h4 class="pdoc-member-header" id="SecretV1-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ Human-readable name for the Secret. Does not have
 to be unique.
 
 <h4 class="pdoc-member-header" id="SecretV1-payload">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L84">property <b>payload</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L84">property <b>payload</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payload: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ to be unique.
 The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
 
 <h4 class="pdoc-member-header" id="SecretV1-payloadContentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L88">property <b>payloadContentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L88">property <b>payloadContentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payloadContentEncoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -417,7 +417,7 @@ The secret's data to be stored. **payload\_content\_type** must also be supplied
 (required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
 
 <h4 class="pdoc-member-header" id="SecretV1-payloadContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L92">property <b>payloadContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L92">property <b>payloadContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payloadContentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ The secret's data to be stored. **payload\_content\_type** must also be supplied
 (required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
 
 <h4 class="pdoc-member-header" id="SecretV1-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L99">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L99">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -436,7 +436,7 @@ A KeyManager client is needed to create a secret. If omitted, the
 V1 secret.
 
 <h4 class="pdoc-member-header" id="SecretV1-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L103">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L103">property <b>secretRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretRef: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -444,7 +444,7 @@ V1 secret.
 The secret reference / where to find the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1-secretType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L107">property <b>secretType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L107">property <b>secretType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -452,7 +452,7 @@ The secret reference / where to find the secret.
 Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
 
 <h4 class="pdoc-member-header" id="SecretV1-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L111">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L111">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -460,7 +460,7 @@ Used to indicate the type of secret being stored. For more information see [Secr
 The status of the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L115">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L115">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ The status of the secret.
 The date the secret was last updated.
 
 <h4 class="pdoc-member-header" id="SecretV1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -479,7 +479,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getContainer" data-link-title="getContainer">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L25">
         Data Source <strong>getContainer</strong>
     </a>
 </h3>
@@ -504,7 +504,7 @@ const example = openstack.keymanager.getContainer({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/keymanager_container_v1.html.markdown.
 
 <h3 class="pdoc-module-header" id="getSecret" data-link-title="getSecret">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L12">
         Data Source <strong>getSecret</strong>
     </a>
 </h3>
@@ -518,7 +518,7 @@ const example = openstack.keymanager.getContainer({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ContainerV1Args" data-link-title="ContainerV1Args">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L245">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L245">
         interface <strong>ContainerV1Args</strong>
     </a>
 </h3>
@@ -528,7 +528,7 @@ const example = openstack.keymanager.getContainer({
 The set of arguments for constructing a ContainerV1 resource.
 
 <h4 class="pdoc-member-header" id="ContainerV1Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L250">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L250">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -537,7 +537,7 @@ Human-readable name for the Container. Does not have
 to be unique.
 
 <h4 class="pdoc-member-header" id="ContainerV1Args-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L257">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L257">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -548,7 +548,7 @@ A KeyManager client is needed to create a container. If omitted, the
 V1 container.
 
 <h4 class="pdoc-member-header" id="ContainerV1Args-secretRefs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L262">property <b>secretRefs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L262">property <b>secretRefs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretRefs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerV1SecretRef'>inputs.keymanager.ContainerV1SecretRef</a>&gt;[]&gt;;</code></pre>
@@ -557,7 +557,7 @@ A set of dictionaries containing references to secrets. The structure is describ
 below.
 
 <h4 class="pdoc-member-header" id="ContainerV1Args-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L266">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L266">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -565,7 +565,7 @@ below.
 Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
 
 <h3 class="pdoc-module-header" id="ContainerV1State" data-link-title="ContainerV1State">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L194">
         interface <strong>ContainerV1State</strong>
     </a>
 </h3>
@@ -575,7 +575,7 @@ Used to indicate the type of container. Must be one of `generic`, `rsa` or `cert
 Input properties used for looking up and filtering ContainerV1 resources.
 
 <h4 class="pdoc-member-header" id="ContainerV1State-consumers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L198">property <b>consumers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L198">property <b>consumers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerV1Consumer'>inputs.keymanager.ContainerV1Consumer</a>&gt;[]&gt;;</code></pre>
@@ -583,7 +583,7 @@ Input properties used for looking up and filtering ContainerV1 resources.
 The list of the container consumers. The structure is described below.
 
 <h4 class="pdoc-member-header" id="ContainerV1State-containerRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L202">property <b>containerRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L202">property <b>containerRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -591,7 +591,7 @@ The list of the container consumers. The structure is described below.
 The container reference / where to find the container.
 
 <h4 class="pdoc-member-header" id="ContainerV1State-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L206">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L206">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ The container reference / where to find the container.
 The date the container was created.
 
 <h4 class="pdoc-member-header" id="ContainerV1State-creatorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L210">property <b>creatorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L210">property <b>creatorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creatorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ The date the container was created.
 The creator of the container.
 
 <h4 class="pdoc-member-header" id="ContainerV1State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L215">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ Human-readable name for the Container. Does not have
 to be unique.
 
 <h4 class="pdoc-member-header" id="ContainerV1State-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L222">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L222">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -627,7 +627,7 @@ A KeyManager client is needed to create a container. If omitted, the
 V1 container.
 
 <h4 class="pdoc-member-header" id="ContainerV1State-secretRefs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L227">property <b>secretRefs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L227">property <b>secretRefs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretRefs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ContainerV1SecretRef'>inputs.keymanager.ContainerV1SecretRef</a>&gt;[]&gt;;</code></pre>
@@ -636,7 +636,7 @@ A set of dictionaries containing references to secrets. The structure is describ
 below.
 
 <h4 class="pdoc-member-header" id="ContainerV1State-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L231">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L231">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ below.
 The status of the container.
 
 <h4 class="pdoc-member-header" id="ContainerV1State-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L235">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L235">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -652,7 +652,7 @@ The status of the container.
 Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
 
 <h4 class="pdoc-member-header" id="ContainerV1State-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/containerV1.ts#L239">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/containerV1.ts#L239">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -660,7 +660,7 @@ Used to indicate the type of container. Must be one of `generic`, `rsa` or `cert
 The date the container was last updated.
 
 <h3 class="pdoc-module-header" id="GetContainerArgs" data-link-title="GetContainerArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L45">
         interface <strong>GetContainerArgs</strong>
     </a>
 </h3>
@@ -670,7 +670,7 @@ The date the container was last updated.
 A collection of arguments for invoking getContainer.
 
 <h4 class="pdoc-member-header" id="GetContainerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -678,7 +678,7 @@ A collection of arguments for invoking getContainer.
 The Container name.
 
 <h4 class="pdoc-member-header" id="GetContainerArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L55">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L55">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -688,7 +688,7 @@ A KeyManager client is needed to fetch a container. If omitted, the `region`
 argument of the provider is used.
 
 <h3 class="pdoc-module-header" id="GetContainerResult" data-link-title="GetContainerResult">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L61">
         interface <strong>GetContainerResult</strong>
     </a>
 </h3>
@@ -698,7 +698,7 @@ argument of the provider is used.
 A collection of values returned by getContainer.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-consumers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L66">property <b>consumers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L66">property <b>consumers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumers: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetContainerConsumer'>outputs.keymanager.GetContainerConsumer</a>[];</code></pre>
@@ -707,7 +707,7 @@ The list of the container consumers. The structure is described
 below.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-containerRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L70">property <b>containerRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L70">property <b>containerRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerRef: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -715,7 +715,7 @@ below.
 The container reference / where to find the container.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L74">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L74">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -723,7 +723,7 @@ The container reference / where to find the container.
 The date the container was created.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-creatorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L78">property <b>creatorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L78">property <b>creatorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creatorId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -731,7 +731,7 @@ The date the container was created.
 The creator of the container.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L107">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L107">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -739,7 +739,7 @@ The creator of the container.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -747,7 +747,7 @@ id is the provider-assigned unique ID for this managed resource.
 The name of the consumer.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L86">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L86">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -755,7 +755,7 @@ The name of the consumer.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-secretRefs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L91">property <b>secretRefs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L91">property <b>secretRefs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretRefs: <a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetContainerSecretRef'>outputs.keymanager.GetContainerSecretRef</a>[];</code></pre>
@@ -764,7 +764,7 @@ A set of dictionaries containing references to secrets. The
 structure is described below.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L95">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L95">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -772,7 +772,7 @@ structure is described below.
 The status of the container.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L99">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L99">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -780,7 +780,7 @@ The status of the container.
 The container type.
 
 <h4 class="pdoc-member-header" id="GetContainerResult-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getContainer.ts#L103">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getContainer.ts#L103">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -788,7 +788,7 @@ The container type.
 The date the container was last updated.
 
 <h3 class="pdoc-module-header" id="GetSecretArgs" data-link-title="GetSecretArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L40">
         interface <strong>GetSecretArgs</strong>
     </a>
 </h3>
@@ -798,7 +798,7 @@ The date the container was last updated.
 A collection of arguments for invoking getSecret.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-aclOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L45">property <b>aclOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L45">property <b>aclOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -807,7 +807,7 @@ Select the Secret with an ACL that contains the user.
 Project scope is ignored. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L49">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L49">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -815,7 +815,7 @@ Project scope is ignored. Defaults to `false`.
 The Secret algorithm.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-bitLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L53">property <b>bitLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L53">property <b>bitLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bitLength?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -823,7 +823,7 @@ The Secret algorithm.
 The Secret bit length.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-createdAtFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L59">property <b>createdAtFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L59">property <b>createdAtFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAtFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -833,7 +833,7 @@ created matching the specified criteria. See Date Filters below for more
 detail.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-expirationFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L65">property <b>expirationFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L65">property <b>expirationFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -843,7 +843,7 @@ expiration matching the specified criteria. See Date Filters below for more
 detail.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L69">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L69">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -851,7 +851,7 @@ detail.
 The Secret mode.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -859,7 +859,7 @@ The Secret mode.
 The Secret name.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L79">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L79">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -869,7 +869,7 @@ A KeyManager client is needed to fetch a secret. If omitted, the `region`
 argument of the provider is used.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-secretType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L84">property <b>secretType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L84">property <b>secretType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -878,7 +878,7 @@ The Secret type. For more information see
 [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-updatedAtFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L90">property <b>updatedAtFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L90">property <b>updatedAtFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAtFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -888,7 +888,7 @@ updated matching the specified criteria. See Date Filters below for more
 detail.
 
 <h3 class="pdoc-module-header" id="GetSecretResult" data-link-title="GetSecretResult">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L96">
         interface <strong>GetSecretResult</strong>
     </a>
 </h3>
@@ -898,7 +898,7 @@ detail.
 A collection of values returned by getSecret.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-aclOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L100">property <b>aclOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L100">property <b>aclOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aclOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -906,7 +906,7 @@ A collection of values returned by getSecret.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L104">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L104">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -914,7 +914,7 @@ See Argument Reference above.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-bitLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L108">property <b>bitLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L108">property <b>bitLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bitLength?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -922,7 +922,7 @@ See Argument Reference above.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-contentTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L112">property <b>contentTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L112">property <b>contentTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentTypes: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -930,7 +930,7 @@ See Argument Reference above.
 The map of the content types, assigned on the secret.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L116">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L116">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -938,7 +938,7 @@ The map of the content types, assigned on the secret.
 The date the secret was created.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-createdAtFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L120">property <b>createdAtFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L120">property <b>createdAtFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAtFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -946,7 +946,7 @@ The date the secret was created.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-creatorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L124">property <b>creatorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L124">property <b>creatorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creatorId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -954,7 +954,7 @@ See Argument Reference above.
 The creator of the secret.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L128">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L128">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -962,7 +962,7 @@ The creator of the secret.
 The date the secret will expire.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-expirationFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L132">property <b>expirationFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L132">property <b>expirationFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -970,7 +970,7 @@ The date the secret will expire.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L185">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L185">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -978,7 +978,7 @@ See Argument Reference above.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L137">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L137">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -987,7 +987,7 @@ The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L141">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L141">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -995,7 +995,7 @@ explicitly and implicitly added.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L145">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1003,7 +1003,7 @@ See Argument Reference above.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-payload">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L149">property <b>payload</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L149">property <b>payload</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payload: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1011,7 +1011,7 @@ See Argument Reference above.
 The secret payload.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-payloadContentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L153">property <b>payloadContentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L153">property <b>payloadContentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payloadContentEncoding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1019,7 +1019,7 @@ The secret payload.
 The Secret encoding.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-payloadContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L157">property <b>payloadContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L157">property <b>payloadContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payloadContentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1027,7 +1027,7 @@ The Secret encoding.
 The Secret content type.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L161">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L161">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1035,7 +1035,7 @@ The Secret content type.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L165">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L165">property <b>secretRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretRef: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1043,7 +1043,7 @@ See Argument Reference above.
 The secret reference / where to find the secret.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-secretType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L169">property <b>secretType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L169">property <b>secretType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1051,7 +1051,7 @@ The secret reference / where to find the secret.
 See Argument Reference above.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L173">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L173">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1059,7 +1059,7 @@ See Argument Reference above.
 The status of the secret.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L177">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L177">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1067,7 +1067,7 @@ The status of the secret.
 The date the secret was last updated.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-updatedAtFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/getSecret.ts#L181">property <b>updatedAtFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/getSecret.ts#L181">property <b>updatedAtFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAtFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1075,7 +1075,7 @@ The date the secret was last updated.
 See Argument Reference above.
 
 <h3 class="pdoc-module-header" id="SecretV1Args" data-link-title="SecretV1Args">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L265">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L265">
         interface <strong>SecretV1Args</strong>
     </a>
 </h3>
@@ -1085,7 +1085,7 @@ See Argument Reference above.
 The set of arguments for constructing a SecretV1 resource.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L269">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L269">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1093,7 +1093,7 @@ The set of arguments for constructing a SecretV1 resource.
 Metadata provided by a user or system for informational purposes.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-bitLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L273">property <b>bitLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L273">property <b>bitLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bitLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1101,7 +1101,7 @@ Metadata provided by a user or system for informational purposes.
 Metadata provided by a user or system for informational purposes.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L277">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L277">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1109,7 +1109,7 @@ Metadata provided by a user or system for informational purposes.
 The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L281">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L281">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1117,7 +1117,7 @@ The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03
 Additional Metadata for the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L285">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L285">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1125,7 +1125,7 @@ Additional Metadata for the secret.
 Metadata provided by a user or system for informational purposes.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L290">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L290">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1134,7 +1134,7 @@ Human-readable name for the Secret. Does not have
 to be unique.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-payload">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L294">property <b>payload</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L294">property <b>payload</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payload?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1142,7 +1142,7 @@ to be unique.
 The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-payloadContentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L298">property <b>payloadContentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L298">property <b>payloadContentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payloadContentEncoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1150,7 +1150,7 @@ The secret's data to be stored. **payload\_content\_type** must also be supplied
 (required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-payloadContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L302">property <b>payloadContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L302">property <b>payloadContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payloadContentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1158,7 +1158,7 @@ The secret's data to be stored. **payload\_content\_type** must also be supplied
 (required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L309">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L309">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1169,7 +1169,7 @@ A KeyManager client is needed to create a secret. If omitted, the
 V1 secret.
 
 <h4 class="pdoc-member-header" id="SecretV1Args-secretType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L313">property <b>secretType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L313">property <b>secretType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1177,7 +1177,7 @@ V1 secret.
 Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
 
 <h3 class="pdoc-module-header" id="SecretV1State" data-link-title="SecretV1State">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L182">
         interface <strong>SecretV1State</strong>
     </a>
 </h3>
@@ -1187,7 +1187,7 @@ Used to indicate the type of secret being stored. For more information see [Secr
 Input properties used for looking up and filtering SecretV1 resources.
 
 <h4 class="pdoc-member-header" id="SecretV1State-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L186">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L186">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1195,7 +1195,7 @@ Input properties used for looking up and filtering SecretV1 resources.
 Metadata provided by a user or system for informational purposes.
 
 <h4 class="pdoc-member-header" id="SecretV1State-allMetadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L191">property <b>allMetadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L191">property <b>allMetadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1204,7 +1204,7 @@ The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
 
 <h4 class="pdoc-member-header" id="SecretV1State-bitLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L195">property <b>bitLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L195">property <b>bitLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bitLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1212,7 +1212,7 @@ explicitly and implicitly added.
 Metadata provided by a user or system for informational purposes.
 
 <h4 class="pdoc-member-header" id="SecretV1State-contentTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L199">property <b>contentTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L199">property <b>contentTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1220,7 +1220,7 @@ Metadata provided by a user or system for informational purposes.
 The map of the content types, assigned on the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1State-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L203">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L203">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1228,7 +1228,7 @@ The map of the content types, assigned on the secret.
 The date the secret was created.
 
 <h4 class="pdoc-member-header" id="SecretV1State-creatorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L207">property <b>creatorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L207">property <b>creatorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creatorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1236,7 +1236,7 @@ The date the secret was created.
 The creator of the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1State-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L211">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L211">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1244,7 +1244,7 @@ The creator of the secret.
 The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
 
 <h4 class="pdoc-member-header" id="SecretV1State-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L215">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L215">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1252,7 +1252,7 @@ The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03
 Additional Metadata for the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1State-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L219">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L219">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1260,7 +1260,7 @@ Additional Metadata for the secret.
 Metadata provided by a user or system for informational purposes.
 
 <h4 class="pdoc-member-header" id="SecretV1State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L224">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L224">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1269,7 +1269,7 @@ Human-readable name for the Secret. Does not have
 to be unique.
 
 <h4 class="pdoc-member-header" id="SecretV1State-payload">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L228">property <b>payload</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L228">property <b>payload</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payload?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1277,7 +1277,7 @@ to be unique.
 The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
 
 <h4 class="pdoc-member-header" id="SecretV1State-payloadContentEncoding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L232">property <b>payloadContentEncoding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L232">property <b>payloadContentEncoding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payloadContentEncoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1285,7 +1285,7 @@ The secret's data to be stored. **payload\_content\_type** must also be supplied
 (required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
 
 <h4 class="pdoc-member-header" id="SecretV1State-payloadContentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L236">property <b>payloadContentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L236">property <b>payloadContentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payloadContentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1293,7 +1293,7 @@ The secret's data to be stored. **payload\_content\_type** must also be supplied
 (required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
 
 <h4 class="pdoc-member-header" id="SecretV1State-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L243">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L243">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1304,7 +1304,7 @@ A KeyManager client is needed to create a secret. If omitted, the
 V1 secret.
 
 <h4 class="pdoc-member-header" id="SecretV1State-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L247">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L247">property <b>secretRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1312,7 +1312,7 @@ V1 secret.
 The secret reference / where to find the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1State-secretType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L251">property <b>secretType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L251">property <b>secretType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1320,7 +1320,7 @@ The secret reference / where to find the secret.
 Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
 
 <h4 class="pdoc-member-header" id="SecretV1State-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L255">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L255">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1328,7 +1328,7 @@ Used to indicate the type of secret being stored. For more information see [Secr
 The status of the secret.
 
 <h4 class="pdoc-member-header" id="SecretV1State-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/39bb95cfa64100eec4b7c9bc44e5e280563b2d37/sdk/nodejs/keymanager/secretV1.ts#L259">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/keymanager/secretV1.ts#L259">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
