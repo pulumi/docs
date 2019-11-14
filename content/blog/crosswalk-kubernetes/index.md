@@ -4,6 +4,7 @@ authors: ["joe-duffy"]
 tags: ["Pulumi-News", "Kubernetes"]
 meta_desc: "Today we announced Pulumi Crosswalk for Kubernetes, a collection of open source technologies to help developers and operators bring Kubernetes into their organizations."
 date: "2019-11-14"
+meta_image: "pulumi-crosswalk-k8s.png"
 ---
 
 Today we announced Pulumi Crosswalk for Kubernetes, a collection of open source technologies to help developers and operators work together to bring Kubernetes into their organizations &mdash; from the underlying cloud and cluster infrastructure to cloud native applications themselves. These tools, libraries, and playbooks capture the lessons we learned over the past year working with organizations to go from zero to Kubernetes in production for their infrastructure and application workloads.
