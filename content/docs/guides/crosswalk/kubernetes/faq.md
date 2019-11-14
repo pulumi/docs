@@ -16,7 +16,7 @@ linktitle: FAQ
 
 1. **Where is the code located?**
 
-    You can find the Crosswalk reference architecture on [GitHub][ktpw-gh].
+    You can find the Crosswalk reference architecture on [GitHub][pulumi-guides].
 
 1. **Where can I suggest a change or open an issue with the docs?**
 
@@ -25,7 +25,7 @@ linktitle: FAQ
 
 1. **Where can I suggest a change or open an issue with the stack code?**
 
-    You can open an issue in [`pulumi/kubernetes-the-prod-way`][pulumi-ktpw] for
+    You can open an issue in [`pulumi/kubernetes-guides`][pulumi-guides] for
     any changes to the Crosswalk code.
 
 1. **Where can I ask for assistance on Crosswalk for Kubernetes?**
@@ -36,7 +36,7 @@ linktitle: FAQ
 
     Support for on-prem environments, and other clouds is an area we'd love
     to build out. Please open an issue in either [`pulumi/docs`][pulumi-docs]
-    or [`pulumi/kubernetes-the-prod-way`][pulumi-ktpw] to describe your
+    or [`pulumi/kubernetes-guides`][pulumi-guides] to describe your
     Crosswalk use case.
 
     * **Digital Ocean**: Check out [Managing DigitalOcean and Kubernetes with Pulumi][k8s-do] for more details.
@@ -44,5 +44,4 @@ linktitle: FAQ
 [k8s-do]: https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi
 [pulumi-slack]: https://slack.pulumi.com/
 [pulumi-docs]: https://github.com/pulumi/docs
-[pulumi-ktpw]: https://github.com/pulumi/kubernetes-the-prod-way
-[ktpw-gh]: https://github.com/pulumi/kubernetes-the-prod-way
+[pulumi-guides]: https://github.com/pulumi/kubernetes-guides
