@@ -66,7 +66,6 @@ test:
 		--exclude "https://ksonnet.io/" \
 		--exclude "https://www.latlong.net/" \
 		--exclude "https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_web_01.pdf" \
-		--exclude "https://github.com/pulumi/kubernetes-the-prod-way/"
 
 .PHONY: validate
 validate:
