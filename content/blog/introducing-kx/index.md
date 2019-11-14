@@ -1,137 +1,86 @@
 ---
-title: "Introducing kx: Kubernetes the Easy Way"
+title: "Introducing kx: Kubernetes for Everyone"
 authors: ["levi-blackstone"]
 tags: ["Kubernetes"]
-meta_desc: "todo"
-date: "2019-11-01"
+meta_desc: "The Kubernetes Extensions (kx) library for Pulumi is designed to simplify the declaration of Kubernetes resources, and make the API easier to use."
+date: "2019-11-14"
 
+meta_image: "feature.png"
 ---
 
-# Introducing kx: Kubernetes the Easy Way
+Using the Kubernetes API to deploy and manage workloads often feels heavy and
+repetitive today. Many of the API fields are deeply nested and require users
+to specify the same values redundantly across different resources. While this
+explicit specification is necessary for Kubernetes to operate, it’s not friendly
+to the people writing it.
 
-With great power comes great complexity. The sheer number of configuration
-options can be overwhelming to users. YAML wasn't designed for programming, yet
-that's exactly where most Kubernetes users spend their time. Templating tools
-and YAML-transpilers add useful flexibility, but at the cost of even greater
-complexity. We are often distracted by this complexity from the real problems we
-are trying to solve. Helm charts are a pain to write, and even worse to maintain
-because they do not meaningfully raise the level of abstraction. Kubernetes' API
-is vast and verbose. 
+Today, as part of our [Crosswalk for Kubernetes announcement][crosswalk-announce-blog],
+we’re introducing the [Kubernetes Extensions (kx) library][kx-repo]. kx is designed
+to simplify the declaration of Kubernetes resources, and make the API easier for
+everyone to use.
 
-In this post, we introduce the kx library, designed to make it easier to write
-and maintain applications on Kubernetes. 
+## Kubernetes YAML: The cloud assembly language
 
-## Express yourself
+With great power comes great complexity. The sheer number of Kubernetes configuration
+options can be overwhelming to users. YAML was not designed for programming, yet
+Kubernetes users often joke about being “YAML architects.” 
 
-YAML is the common language of Kubernetes. Most users either write YAML
-directly, or use tools that indirectly produce YAML. The Kubernetes API is
-powerful and well specified, but ease of use is not one of its strengths.
-Kubernetes YAML has been compared to assembly language. I find this analogy to
-be particularly apt: it gives users complete control over the system, but is
-closely tied to low-level implementation details. Most Kubernetes applications
-require users to define several different resource types, and then manually tie
-them together with text strings using labels and selectors. The API for each of
-these resource types is complex and deeply nested, so users often rely on
-copy-pasted examples and frequent references to the API spec. Wouldn't it be
-nice if there was a way to ignore these low-level implementation details and get
-back to thinking about your application?
+Kubernetes YAML has been compared to an assembly language. We find this analogy to
+be particularly apt: it gives users complete control over the system, but it is
+closely tied to low-level implementation details.
 
-Enter kx: Kubernetes configuration built for humans rather than machines! Two
-primary goals for kx are streamlined resource declarations, and the ability to
-easily compose different resources to build all the required infrastructure for
-an application.
+Most Kubernetes applications require users to define several different resource
+types, and then manually tie them together with text string references. The API
+for each of these resource types is complex and deeply nested, so users often
+rely on copy-pasted examples and frequent examination of the API spec. Wouldn't
+it be nice if there was a way to go above these low-level implementation details,
+and get back to thinking about your application?
 
-In just a few lines of code, we can create everything we need to deploy a real
-application on Kubernetes.
+The advent of high level programming languages completely changed the face of
+computing. Rather than being closely tied to the details of the underlying
+hardware, programmers could now focus on higher level concerns, like solving
+business problems.
 
-```ts
-// Define the application configuration and secrets.
-const configs = new kx.ConfigMap("appConfig", {
-    file: "./my.cnf"
-});
-const secrets = new kx.Secret("appSecrets", {
-    stringData: {
-        "app-password": new kx.RandomPassword("app-password"),
-        "database-password": config.databasePassword
-    }
-});
+## Raising the Bar
 
-// Define the application Pod.
-const appConfigPath = "/app/config";
-const appPod = new kx.PodBuilder({
-    containers: [
-        {
-            image: "app:1.0.0",
-            env: {
-                "APP_CONFIG_PATH": appConfigPath,
-                "APP_USER": config.user,
-                "APP_PASSWORD": secrets.asEnvValue("app-password"),
-                "APP_DATABASE_PASSWORD": secrets.asEnvValue("database-password"),
-            },
-            volumeMounts: [
-                configs.mount(appConfigPath)
-            ],
-        }
-    ]
-});
+kx mirrors the advantages of high-level programming languages, abstracting away
+the low-level details so that you can focus on more important things!
 
-// Create the application Pod as a Deployment and a load-balanced Service.
-const app = kx.LoadBalancerWorkload("app", {
-    metadata: {
-        labels: {
-            wordpressLabels
-        }
-    },
-    spec: appPod.asDeploymentSpec({
-        replicas: 3,
-    })
-});
-```
+kx is designed to reduce complexity, with the ability to drop down to the raw API
+when necessary. This design provides a simple interface for the majority of cases,
+while still providing access to the full set of tools required for production apps.
 
-Let's break this down and see how it compares to writing the raw YAML.
+Two primary goals for kx are terse resource declarations, and the ability to compose
+resources effortlessly as you build out applications on Kubernetes.
 
-First, we start off by defining configuration and secrets for our application.
-In Kubernetes, this generally means creating ConfigMap and Secret resources that
-can be used by application containers.
+To illustrate this point, let’s check out a representative example of a real Kubernetes
+application, including a ConfigMap, Secret, Deployment, and Service.
 
-// TODO: finalize syntax and compare to kubectl and writing the raw YAML
+| kx                    | raw provider                      |
+| :-------------------: | :-------------------------------: |
+| ![kx example](kx.png) | ![raw provider example](yaml.png) |
 
-Next, we define the core of the application: the Pod managing our application
-container. Notice that this is a "builder" class for defining what the resource
-looks like, but we're not creating a Pod on the cluster yet. The PodBuilder
-class still gives you complete access to the Pod API, but simplifies the
-required syntax in several important ways:
 
-1. Metadata is not needed here. This will be added later when we decide how to
-   deploy this Pod to the cluster.
-1. Lists of objects have been flattened into maps where possible, so you don't
-   have to repeatedly specify `name: "key", value: "value"`.
-1. It's easier to refer to other resources in the cluster. This is a key area
-   where a general purpose programming language enables completely new ways of
-   writing Kubernetes config. Rather than managing labels, selectors, and
-   resource names directly, you can refer to the objects themselves. This
-   dramatically simplifies the syntax for declaring the environment variables
-   and volumes used by the Pod. Compare this to the equivalent YAML declaration.
+Needless to say, it requires significantly more effort to understand and maintain the
+YAML version. Even including comments, the kx version is 50% shorter by only including
+information that is relevant to the application.
 
-// TODO: add comparison snippets
-
-Finally, we need to deploy our Pod to the cluster, and expose it to the
-internet. This is a very common pattern, so we created a new class, the
-`LoadBalancerWorkload` that handles the details for us. Kubernetes includes
-several resource types to manage Pods, including the Deployment, StatefulSet,
-and DaemonSet. Any of these are supported by calling the related function on the
-PodBuilder class. Notice that we only need to specify the relevant details for
-the deployed workload: the metadata and number of replicas. From this
-information, the kx library is able to infer all of the other API fields and
-create a Deployment and matching Service resource. This is a huge benefit, both
-in terms of understanding, and also of maintainance. Compare this to the
-equivalent YAML that would be required.
-
-// TODO: add comparison snippets
-
-We're excited to share the kx library with you today, and invite you to try it
-out and let us know what you think!
+kx is [available today][kx-repo] in developer preview. We invite you to try it out and
+let us know what you think!
 
 ## Learn more
 
-// TODO: add links, etc
+If you'd like to learn about Pulumi and how to manage your
+infrastructure and Kubernetes through code,
+[click here to get started today]({{< ref "/docs/get-started" >}}). Pulumi is open
+source and free to use.
+
+As always, you can check out our code on
+[GitHub](https://github.com/pulumi), follow us on
+[Twitter](https://twitter.com/pulumicorp), subscribe to our
+[YouTube channel](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw), or
+join our [Community Slack](https://slack.pulumi.com/) channel if you have
+any questions, need support, or just want to say hello.
+
+[crosswalk-announce-blog]: https://www.pulumi.com/blog/crosswalk-kubernetes/ 
+[kx-repo]: https://github.com/pulumi/pulumi-kubernetesx
