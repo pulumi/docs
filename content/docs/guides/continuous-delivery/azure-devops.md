@@ -110,7 +110,7 @@ You can get your Pulumi access token from https://app.pulumi.com/account/tokens.
 # Lines omitted for brevity.
 ...
 ...
-  - task: Pulumi@0
+  - task: Pulumi@1
     condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
     inputs:
       azureSubscription: "My Service Connection"
@@ -134,14 +134,14 @@ jobs:
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
-  - task: Pulumi@0
+  - task: Pulumi@1
     condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
     inputs:
       azureSubscription: 'My Service Connection'
       command: 'preview'
       cwd: 'infra/'
       stack: 'acmeCorp/acmeProject/acme-ui'
-  - task: Pulumi@0
+  - task: Pulumi@1
     condition: or(eq(variables['Build.Reason'], 'IndividualCI'), eq(variables['Build.Reason'], 'BatchedCI'))
     inputs:
       azureSubscription: 'My Service Connection'
