@@ -56,10 +56,11 @@ resources effortlessly as you build out applications on Kubernetes.
 To illustrate this point, let’s check out a representative example of a real Kubernetes
 application, including a ConfigMap, Secret, Deployment, and Service.
 
-| kx                    | raw provider                      |
+| Using kx              | Equivalent YAML                   |
 | :-------------------: | :-------------------------------: |
 | ![kx example](kx.png) | ![raw provider example](yaml.png) |
 
+> This code is available [here](https://gist.github.com/lblackstone/ae56b7a5c58986b51a2e7f3e595b6a56)
 
 Needless to say, it requires significantly more effort to understand and maintain the
 YAML version. Even including comments, the kx version is 50% shorter by only including
