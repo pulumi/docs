@@ -116,5 +116,5 @@ the friction caused by multiple deployment tools and models across
 complex architectures.
 
 - Find out more about our [Azure]({{< ref "/azure" >}}) and
-  [Kubernetes]({{< ref "/kubernetes" >}}) support
+  [Kubernetes](/kubernetes) support
 - Join the Slack community at <https://slack.pulumi.com> 

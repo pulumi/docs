@@ -20,7 +20,7 @@ resources in addition to Kubernetes ones.
 In this post, we will see how [Pulumi](/) can help you
 tame these issues and make Kubernetes more accessible, using familiar
 languages and your favorite tools. It's simply
-[Kubernetes made easy]({{< relref "/kubernetes" >}})!
+[Kubernetes made easy](/kubernetes)!
 <!--more-->
 
 ## Clusters as code
