@@ -165,14 +165,18 @@ const restrictivePSP = new k8s.policy.v1beta1.PodSecurityPolicy("restrictive", {
                     </p>
                 </div>
                 <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `// Define a Pod.
+                    {{ $code := `import * as kx from "@pulumi/kubernetesx";
+
+// Define a Pod.
 const pb = new kx.PodBuilder({
     containers: [{ image: "nginx" }]
 });
+
 // Create a Kubernetes Deployment using the previous Pod definition.
 const deployment = new kx.Deployment("nginx", {
     spec: pb.asDeploymentSpec()
 });
+
 // Expose the Deployment using a load balanced Kubernetes Service.
 const service = deployment.createService({
     type: kx.types.ServiceType.LoadBalancer,

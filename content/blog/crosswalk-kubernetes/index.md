@@ -7,15 +7,17 @@ date: "2019-11-14"
 meta_image: "pulumi-crosswalk-k8s.png"
 ---
 
-Today we announced Pulumi Crosswalk for Kubernetes, a collection of open source technologies to help developers and operators work together to bring Kubernetes into their organizations &mdash; from the underlying cloud and cluster infrastructure to cloud native applications themselves. These tools, libraries, and playbooks capture the lessons we learned over the past year working with organizations to go from zero to Kubernetes in production for their infrastructure and application workloads.
+Today we announced [Pulumi Crosswalk for Kubernetes](/crosswalk/kubernetes/), a collection of open source technologies to help developers and operators work together to bring Kubernetes into their organizations &mdash; from the underlying cloud and cluster infrastructure to cloud native applications themselves. These tools, libraries, and playbooks capture the lessons we learned over the past year working with organizations to go from zero to Kubernetes in production for their infrastructure and application workloads.
 
-If you want a synopsis of just what’s new, jump straight to the press release or [product documentation](/docs/guides/crosswalk/kubernetes/). Below is the backstory and why we’re so excited about this release.
+If you want to dive straight in, [browse to the documentation](/docs/guides/crosswalk/kubernetes/). Below is the backstory and why we’re so excited about this release.
 
 ## Applying infrastructure as code to Kubernetes
 
 A little over a year ago, we launched support for managing Kubernetes resources using Pulumi’s open source infrastructure as code tools. The entire Kubernetes object model across all supported versions is available in your language of choice &mdash; including JavaScript, TypeScript, and Python &mdash; in addition to the entire ecosystem of Helm Charts. This offers 100% API resource compatibility, and same-day support for newly released Kubernetes releases.
 
 By leveraging general purpose languages, you get rich capabilities like for loops, functions, and classes, the ability to share and reuse best practices &mdash; eliminating copy and paste &mdash; as well as access to your favorite tools, including editors, test frameworks, and static analysis tools.
+
+![Use Your Favorite Tools](k8s-ide.png)
 
 This is exciting for any of us who have struggled with “walls of YAML or JSON” &mdash; but this alone isn’t the whole story.
 
@@ -207,7 +209,7 @@ After you’ve mastered the infrastructure and application authoring challenges,
 
 Since our initial launch last year, we have added many different CI/CD integrations, including support for GitLab, Codefresh, Azure DevOps, Octopus Deploy, GitHub Actions, and more. This enables delivery at global scale. In fact, one of our customers continuously deploys to 80 different environments across their development and infrastructure operations teams.
 
-Finally, we are excited to release a new technology today, Cloud Query Language (CQL), that leverages the Pulumi object model to ask operational queries about your cluster and its applications. This includes queries like “How many distinct versions of MySQL are running in my cluster?”, “Which Pods are exposed to the Internet via a load-balanced Service?”, and so on.
+Finally, we are excited to release a new technology today, [Cloud Query Language (CQL) for Kubernetes](https://github.com/pulumi/pulumi-query-kubernetes), that leverages the Pulumi object model to ask operational queries about your cluster and its applications. This includes queries like “How many distinct versions of MySQL are running in my cluster?”, “Which Pods are exposed to the Internet via a load-balanced Service?”, and so on.
 
 For instance, this query shows the distinct versions of MySQL inside your cluster:
 
@@ -229,7 +231,7 @@ CQL also supports live streaming queries, which the CLI will display results fro
 
 ## Join a growing community
 
-Everything above is open source and has been battle-tested with many end users and organizations over the last year &mdash; all the way from startups to ISVs to the largest enterprises in the world. We are excited to share these best practices in reusable forms, leveraging the foundation uniquely provided by Pulumi’s infrastructure as code platform using real languages.
+Everything above is [open source](https://github.com/pulumi) and has been battle-tested with many end users and organizations over the last year &mdash; all the way from startups to ISVs to the largest enterprises in the world. We are excited to share these best practices in reusable forms, leveraging the foundation uniquely provided by Pulumi’s infrastructure as code platform using real languages.
 
 To get started, check out the [documentation](/docs/guides/crosswalk/kubernetes/), or [get started with the open source SDK now](/docs/get-started/kubernetes/).
 
