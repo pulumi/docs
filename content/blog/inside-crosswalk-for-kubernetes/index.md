@@ -15,7 +15,7 @@ tags:
 
 Running Kubernetes in production can be challenging. However, there are common patterns of usage informed by best practices that we can use to successfully run applications on Kubernetes in production. Pulumi has collected these common patterns into playbooks. Crosswalk for Kubernetes is a collection of playbooks to configure, deploy, and manage Kubernetes in production.
 
-## Kubernetes is Vast and Full of Complexity
+## Kubernetes is Vast and Complex
 
 ![Kubernetes has multiple audiences](cindy1.png)
 ![Kubernetes is complex](cindy2.png)
@@ -54,7 +54,7 @@ The guide demonstrates how to create names for [cluster services](https://www.pu
 
 ### Cluster Services
 
-![Kubernetes Cluster Services](kubernetes_cluster.svg)
+![Kubernetes Cluster Services](crosswalk_for_kubernetes.svg)
 
 Cluster services are scoped at the [Kubernetes cluster](https://kubernetes.io/docs/concepts/cluster-administration/cluster-administration-overview/) level. Common cluster services are logging, monitoring, policy enforcement, container registries and service meshes. The [guide](https://www.pulumi.com/docs/guides/crosswalk/kubernetes/cluster-services/) provides an example of how to configure logging and monitoring, including how to setup Datadog to aggregate node and container metrics and events. Examples are also provided on how to configure native cloud provider logging solutions. Full examples are available for [AWS](https://github.com/pulumi/kubernetes-guides/tree/master/aws/04-cluster-services) and [Azure](https://github.com/pulumi/kubernetes-guides/tree/master/azure/04-cluster-services) on Github.
 
@@ -110,3 +110,6 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 
 There are many more [application examples](https://www.pulumi.com/docs/guides/crosswalk/kubernetes/apps/#overview) in the Guide. Complete [code examples](https://github.com/pulumi/kubernetes-guides) for building and deploying a container in a Kubernetes cluster are available on Github. Additional application examples for other [common application tasks](https://github.com/pulumi/kubernetes-guides/tree/master/apps) are also available on Github.
 
+## Playbooks for Multiple Audiences
+
+Crosswalk for Kubernetes was informed by our experience working with developers and operators. We have grouped common tasks in playbooks that make deploying applications on Kubernetes accessible regardless of what part of the deployment you are working on. If you work with Kubernetes, we invite you try infrastructure as code using [Crosswalk for Kubernetes](https://www.pulumi.com/docs/guides/crosswalk/kubernetes/).
