@@ -138,7 +138,7 @@ use.
 If you'd like to go deeper on certain topics, here are some additional
 resources to check out:
 
-- [Overview of Pulumi Kubernetes Scenarios](/kubernetes)
+- [Overview of Pulumi Kubernetes Scenarios]({{< relref "/topics/kubernetes" >}})
 - Tutorial: Create a Kubernetes cluster on a cloud provider
   [Amazon EKS]({{< ref "/docs/tutorials/kubernetes/eks" >}}),
   [Google GKE]({{< ref "/docs/tutorials/kubernetes/gke" >}}), or
