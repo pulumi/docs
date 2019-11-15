@@ -44,7 +44,7 @@ meta_desc: "Explore members of the synthetics module in the @pulumi/newrelic pac
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AlertCondition" data-link-title="AlertCondition">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L26">
         Resource <strong>AlertCondition</strong>
     </a>
 </h3>
@@ -70,7 +70,7 @@ const fooAlertCondition = new newrelic.synthetics.AlertCondition("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_alert_condition.html.markdown.
 
 <h4 class="pdoc-member-header" id="AlertCondition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Create a AlertCondition resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlertCondition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -95,14 +95,14 @@ Get an existing AlertCondition resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlertCondition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlertCondition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -113,7 +113,7 @@ Returns true if the given object is an instance of AlertCondition.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlertCondition-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L56">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L56">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -121,7 +121,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Set whether to enable the alert condition. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AlertCondition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -130,7 +130,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlertCondition-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L60">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L60">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -138,7 +138,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Synthetics monitor to be referenced in the alert condition.
 
 <h4 class="pdoc-member-header" id="AlertCondition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ The ID of the Synthetics monitor to be referenced in the alert condition.
 The title of this condition.
 
 <h4 class="pdoc-member-header" id="AlertCondition-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L68">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L68">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ The title of this condition.
 The ID of the policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="AlertCondition-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L72">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L72">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runbookUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ The ID of the policy where this condition should be used.
 Runbook URL to display in notifications.
 
 <h4 class="pdoc-member-header" id="AlertCondition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -171,7 +171,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Monitor" data-link-title="Monitor">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L26">
         Resource <strong>Monitor</strong>
     </a>
 </h3>
@@ -197,7 +197,7 @@ const foo = new newrelic.synthetics.Monitor("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor.html.markdown.
 
 <h4 class="pdoc-member-header" id="Monitor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -211,7 +211,7 @@ Create a Monitor resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Monitor-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -222,14 +222,14 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Monitor-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Monitor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -240,7 +240,7 @@ Returns true if the given object is an instance of Monitor.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Monitor-bypassHeadRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L56">property <b>bypassHeadRequest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L56">property <b>bypassHeadRequest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bypassHeadRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -248,7 +248,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Bypass HEAD request.
 
 <h4 class="pdoc-member-header" id="Monitor-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L60">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L60">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -256,7 +256,7 @@ Bypass HEAD request.
 The interval (in minutes) at which this monitor should run.
 
 <h4 class="pdoc-member-header" id="Monitor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -265,7 +265,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Monitor-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L64">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L64">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -273,7 +273,7 @@ deployments and may be missing (undefined) during planning phases.
 The locations in which this monitor should be run.
 
 <h4 class="pdoc-member-header" id="Monitor-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ The locations in which this monitor should be run.
 The title of this monitor.
 
 <h4 class="pdoc-member-header" id="Monitor-slaThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L72">property <b>slaThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L72">property <b>slaThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slaThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ The title of this monitor.
 The base threshold for the SLA report.
 
 <h4 class="pdoc-member-header" id="Monitor-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L76">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L76">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,12 +297,15 @@ The base threshold for the SLA report.
 The monitor status (i.e. ENABLED, MUTED, DISABLED)
 
 <h4 class="pdoc-member-header" id="Monitor-treatRedirectAsFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L77">property <b>treatRedirectAsFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L80">property <b>treatRedirectAsFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>treatRedirectAsFailure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Fail the monitor check if redirected.
+
 <h4 class="pdoc-member-header" id="Monitor-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L81">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L84">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -310,7 +313,7 @@ The monitor status (i.e. ENABLED, MUTED, DISABLED)
 The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).
 
 <h4 class="pdoc-member-header" id="Monitor-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L85">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L88">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -318,7 +321,7 @@ The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).
 The URI for the monitor to hit.
 
 <h4 class="pdoc-member-header" id="Monitor-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -327,7 +330,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Monitor-validationString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L89">property <b>validationString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L92">property <b>validationString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validationString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -335,7 +338,7 @@ deployments.
 The string to validate against in the response.
 
 <h4 class="pdoc-member-header" id="Monitor-verifySsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L93">property <b>verifySsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L96">property <b>verifySsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>verifySsl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -343,7 +346,7 @@ The string to validate against in the response.
 Verify SSL.
 
 <h3 class="pdoc-module-header" id="MonitorScript" data-link-title="MonitorScript">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L10">
         Resource <strong>MonitorScript</strong>
     </a>
 </h3>
@@ -353,7 +356,7 @@ Verify SSL.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown.
 
 <h4 class="pdoc-member-header" id="MonitorScript-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L44"> <b>constructor</b></a>
 </h4>
 
 
@@ -367,7 +370,7 @@ Create a MonitorScript resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MonitorScript-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -378,14 +381,14 @@ Get an existing MonitorScript resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MonitorScript-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MonitorScript-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -396,7 +399,7 @@ Returns true if the given object is an instance of MonitorScript.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MonitorScript-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -405,7 +408,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MonitorScript-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L40">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L40">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -413,7 +416,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the monitor to attach the script to.
 
 <h4 class="pdoc-member-header" id="MonitorScript-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L44">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L44">property <b>text</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>text: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -421,7 +424,7 @@ The ID of the monitor to attach the script to.
 plaintext of the monitor script.
 
 <h4 class="pdoc-member-header" id="MonitorScript-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -432,7 +435,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getMonitor" data-link-title="getMonitor">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/getMonitor.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/getMonitor.ts#L28">
         Data Source <strong>getMonitor</strong>
     </a>
 </h3>
@@ -464,7 +467,7 @@ const baz = new newrelic.synthetics.AlertCondition("baz", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AlertConditionArgs" data-link-title="AlertConditionArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L145">
         interface <strong>AlertConditionArgs</strong>
     </a>
 </h3>
@@ -474,7 +477,7 @@ const baz = new newrelic.synthetics.AlertCondition("baz", {
 The set of arguments for constructing a AlertCondition resource.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L149">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L149">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -482,7 +485,7 @@ The set of arguments for constructing a AlertCondition resource.
 Set whether to enable the alert condition. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L153">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L153">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -490,7 +493,7 @@ Set whether to enable the alert condition. Defaults to `true`.
 The ID of the Synthetics monitor to be referenced in the alert condition.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L157">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -498,7 +501,7 @@ The ID of the Synthetics monitor to be referenced in the alert condition.
 The title of this condition.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L161">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L161">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -506,7 +509,7 @@ The title of this condition.
 The ID of the policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L165">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L165">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -514,7 +517,7 @@ The ID of the policy where this condition should be used.
 Runbook URL to display in notifications.
 
 <h3 class="pdoc-module-header" id="AlertConditionState" data-link-title="AlertConditionState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L119">
         interface <strong>AlertConditionState</strong>
     </a>
 </h3>
@@ -524,7 +527,7 @@ Runbook URL to display in notifications.
 Input properties used for looking up and filtering AlertCondition resources.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L123">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L123">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -532,7 +535,7 @@ Input properties used for looking up and filtering AlertCondition resources.
 Set whether to enable the alert condition. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L127">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L127">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +543,7 @@ Set whether to enable the alert condition. Defaults to `true`.
 The ID of the Synthetics monitor to be referenced in the alert condition.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -548,7 +551,7 @@ The ID of the Synthetics monitor to be referenced in the alert condition.
 The title of this condition.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L135">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L135">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -556,7 +559,7 @@ The title of this condition.
 The ID of the policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/alertCondition.ts#L139">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/alertCondition.ts#L139">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -564,7 +567,7 @@ The ID of the policy where this condition should be used.
 Runbook URL to display in notifications.
 
 <h3 class="pdoc-module-header" id="GetMonitorArgs" data-link-title="GetMonitorArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/getMonitor.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/getMonitor.ts#L46">
         interface <strong>GetMonitorArgs</strong>
     </a>
 </h3>
@@ -574,7 +577,7 @@ Runbook URL to display in notifications.
 A collection of arguments for invoking getMonitor.
 
 <h4 class="pdoc-member-header" id="GetMonitorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/getMonitor.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/getMonitor.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -582,7 +585,7 @@ A collection of arguments for invoking getMonitor.
 The name of the synthetics monitor in New Relic.
 
 <h3 class="pdoc-module-header" id="GetMonitorResult" data-link-title="GetMonitorResult">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/getMonitor.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/getMonitor.ts#L56">
         interface <strong>GetMonitorResult</strong>
     </a>
 </h3>
@@ -592,7 +595,7 @@ The name of the synthetics monitor in New Relic.
 A collection of values returned by getMonitor.
 
 <h4 class="pdoc-member-header" id="GetMonitorResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/getMonitor.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/getMonitor.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -600,17 +603,17 @@ A collection of values returned by getMonitor.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetMonitorResult-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/getMonitor.ts#L57">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/getMonitor.ts#L57">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetMonitorResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/getMonitor.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/getMonitor.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="MonitorArgs" data-link-title="MonitorArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L205">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L211">
         interface <strong>MonitorArgs</strong>
     </a>
 </h3>
@@ -620,7 +623,7 @@ id is the provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Monitor resource.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-bypassHeadRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L209">property <b>bypassHeadRequest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L215">property <b>bypassHeadRequest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bypassHeadRequest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -628,7 +631,7 @@ The set of arguments for constructing a Monitor resource.
 Bypass HEAD request.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L213">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L219">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -636,7 +639,7 @@ Bypass HEAD request.
 The interval (in minutes) at which this monitor should run.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L217">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L223">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -644,7 +647,7 @@ The interval (in minutes) at which this monitor should run.
 The locations in which this monitor should be run.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L227">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -652,7 +655,7 @@ The locations in which this monitor should be run.
 The title of this monitor.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-slaThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L225">property <b>slaThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L231">property <b>slaThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slaThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -660,7 +663,7 @@ The title of this monitor.
 The base threshold for the SLA report.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L229">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L235">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -668,12 +671,15 @@ The base threshold for the SLA report.
 The monitor status (i.e. ENABLED, MUTED, DISABLED)
 
 <h4 class="pdoc-member-header" id="MonitorArgs-treatRedirectAsFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L230">property <b>treatRedirectAsFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L239">property <b>treatRedirectAsFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>treatRedirectAsFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Fail the monitor check if redirected.
+
 <h4 class="pdoc-member-header" id="MonitorArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L234">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L243">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +687,7 @@ The monitor status (i.e. ENABLED, MUTED, DISABLED)
 The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).
 
 <h4 class="pdoc-member-header" id="MonitorArgs-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L238">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L247">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -689,7 +695,7 @@ The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).
 The URI for the monitor to hit.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-validationString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L242">property <b>validationString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L251">property <b>validationString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validationString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,7 +703,7 @@ The URI for the monitor to hit.
 The string to validate against in the response.
 
 <h4 class="pdoc-member-header" id="MonitorArgs-verifySsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L246">property <b>verifySsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L255">property <b>verifySsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verifySsl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -705,7 +711,7 @@ The string to validate against in the response.
 Verify SSL.
 
 <h3 class="pdoc-module-header" id="MonitorScriptArgs" data-link-title="MonitorScriptArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L99">
         interface <strong>MonitorScriptArgs</strong>
     </a>
 </h3>
@@ -715,7 +721,7 @@ Verify SSL.
 The set of arguments for constructing a MonitorScript resource.
 
 <h4 class="pdoc-member-header" id="MonitorScriptArgs-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L103">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L103">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +729,7 @@ The set of arguments for constructing a MonitorScript resource.
 The ID of the monitor to attach the script to.
 
 <h4 class="pdoc-member-header" id="MonitorScriptArgs-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L107">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L107">property <b>text</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>text: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -731,7 +737,7 @@ The ID of the monitor to attach the script to.
 plaintext of the monitor script.
 
 <h3 class="pdoc-module-header" id="MonitorScriptState" data-link-title="MonitorScriptState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L85">
         interface <strong>MonitorScriptState</strong>
     </a>
 </h3>
@@ -741,7 +747,7 @@ plaintext of the monitor script.
 Input properties used for looking up and filtering MonitorScript resources.
 
 <h4 class="pdoc-member-header" id="MonitorScriptState-monitorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L89">property <b>monitorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L89">property <b>monitorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -749,7 +755,7 @@ Input properties used for looking up and filtering MonitorScript resources.
 The ID of the monitor to attach the script to.
 
 <h4 class="pdoc-member-header" id="MonitorScriptState-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitorScript.ts#L93">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitorScript.ts#L93">property <b>text</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>text?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -757,7 +763,7 @@ The ID of the monitor to attach the script to.
 plaintext of the monitor script.
 
 <h3 class="pdoc-module-header" id="MonitorState" data-link-title="MonitorState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L161">
         interface <strong>MonitorState</strong>
     </a>
 </h3>
@@ -767,7 +773,7 @@ plaintext of the monitor script.
 Input properties used for looking up and filtering Monitor resources.
 
 <h4 class="pdoc-member-header" id="MonitorState-bypassHeadRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L162">property <b>bypassHeadRequest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L165">property <b>bypassHeadRequest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bypassHeadRequest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -775,7 +781,7 @@ Input properties used for looking up and filtering Monitor resources.
 Bypass HEAD request.
 
 <h4 class="pdoc-member-header" id="MonitorState-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L166">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L169">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -783,7 +789,7 @@ Bypass HEAD request.
 The interval (in minutes) at which this monitor should run.
 
 <h4 class="pdoc-member-header" id="MonitorState-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L170">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L173">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -791,7 +797,7 @@ The interval (in minutes) at which this monitor should run.
 The locations in which this monitor should be run.
 
 <h4 class="pdoc-member-header" id="MonitorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L174">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -799,7 +805,7 @@ The locations in which this monitor should be run.
 The title of this monitor.
 
 <h4 class="pdoc-member-header" id="MonitorState-slaThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L178">property <b>slaThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L181">property <b>slaThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slaThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -807,7 +813,7 @@ The title of this monitor.
 The base threshold for the SLA report.
 
 <h4 class="pdoc-member-header" id="MonitorState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L182">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L185">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -815,12 +821,15 @@ The base threshold for the SLA report.
 The monitor status (i.e. ENABLED, MUTED, DISABLED)
 
 <h4 class="pdoc-member-header" id="MonitorState-treatRedirectAsFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L183">property <b>treatRedirectAsFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L189">property <b>treatRedirectAsFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>treatRedirectAsFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Fail the monitor check if redirected.
+
 <h4 class="pdoc-member-header" id="MonitorState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L187">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L193">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -828,7 +837,7 @@ The monitor status (i.e. ENABLED, MUTED, DISABLED)
 The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).
 
 <h4 class="pdoc-member-header" id="MonitorState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L191">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L197">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -836,7 +845,7 @@ The monitor type (i.e. SIMPLE, BROWSER, SCRIPT_API, SCRIPT_BROWSER).
 The URI for the monitor to hit.
 
 <h4 class="pdoc-member-header" id="MonitorState-validationString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L195">property <b>validationString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L201">property <b>validationString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validationString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -844,7 +853,7 @@ The URI for the monitor to hit.
 The string to validate against in the response.
 
 <h4 class="pdoc-member-header" id="MonitorState-verifySsl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/3d3f7382842e05379f030e39845da424ce682713/sdk/nodejs/synthetics/monitor.ts#L199">property <b>verifySsl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/synthetics/monitor.ts#L205">property <b>verifySsl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verifySsl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

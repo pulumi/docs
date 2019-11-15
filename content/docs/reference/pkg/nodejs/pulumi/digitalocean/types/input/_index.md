@@ -18,6 +18,8 @@ meta_desc: "Explore members of the input module in the @pulumi/digitalocean pack
     <li><a href="#FirewallInboundRule"><span class="symbol api"></span>FirewallInboundRule</a></li>
     <li><a href="#FirewallOutboundRule"><span class="symbol api"></span>FirewallOutboundRule</a></li>
     <li><a href="#FirewallPendingChange"><span class="symbol api"></span>FirewallPendingChange</a></li>
+    <li><a href="#GetSizesFilter"><span class="symbol api"></span>GetSizesFilter</a></li>
+    <li><a href="#GetSizesSort"><span class="symbol api"></span>GetSizesSort</a></li>
     <li><a href="#KubernetesClusterKubeConfig"><span class="symbol api"></span>KubernetesClusterKubeConfig</a></li>
     <li><a href="#KubernetesClusterNodePool"><span class="symbol api"></span>KubernetesClusterNodePool</a></li>
     <li><a href="#KubernetesClusterNodePoolNode"><span class="symbol api"></span>KubernetesClusterNodePoolNode</a></li>
@@ -25,6 +27,7 @@ meta_desc: "Explore members of the input module in the @pulumi/digitalocean pack
     <li><a href="#LoadBalancerForwardingRule"><span class="symbol api"></span>LoadBalancerForwardingRule</a></li>
     <li><a href="#LoadBalancerHealthcheck"><span class="symbol api"></span>LoadBalancerHealthcheck</a></li>
     <li><a href="#LoadBalancerStickySessions"><span class="symbol api"></span>LoadBalancerStickySessions</a></li>
+    <li><a href="#SpacesBucketCorsRule"><span class="symbol api"></span>SpacesBucketCorsRule</a></li>
 </ul>
 
 
@@ -32,14 +35,14 @@ meta_desc: "Explore members of the input module in the @pulumi/digitalocean pack
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="DatabaseClusterMaintenanceWindow" data-link-title="DatabaseClusterMaintenanceWindow">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L7">
         interface <strong>DatabaseClusterMaintenanceWindow</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DatabaseClusterMaintenanceWindow</span></code></pre>
 <h4 class="pdoc-member-header" id="DatabaseClusterMaintenanceWindow-day">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L11">property <b>day</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L11">property <b>day</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>day: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -47,7 +50,7 @@ meta_desc: "Explore members of the input module in the @pulumi/digitalocean pack
 The day of the week on which to apply maintenance updates.
 
 <h4 class="pdoc-member-header" id="DatabaseClusterMaintenanceWindow-hour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L15">property <b>hour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L15">property <b>hour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hour: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -55,14 +58,14 @@ The day of the week on which to apply maintenance updates.
 The hour in UTC at which maintenance updates will be applied in 24 hour format.
 
 <h3 class="pdoc-module-header" id="FirewallInboundRule" data-link-title="FirewallInboundRule">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L18">
         interface <strong>FirewallInboundRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>FirewallInboundRule</span></code></pre>
 <h4 class="pdoc-member-header" id="FirewallInboundRule-portRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L25">property <b>portRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L25">property <b>portRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -73,7 +76,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
 
 <h4 class="pdoc-member-header" id="FirewallInboundRule-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L30">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L30">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -82,7 +85,7 @@ The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
 
 <h4 class="pdoc-member-header" id="FirewallInboundRule-sourceAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L36">property <b>sourceAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L36">property <b>sourceAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -92,7 +95,7 @@ addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs from which the
 inbound traffic will be accepted.
 
 <h4 class="pdoc-member-header" id="FirewallInboundRule-sourceDropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L41">property <b>sourceDropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L41">property <b>sourceDropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceDropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -101,7 +104,7 @@ An array containing the IDs of
 the Droplets from which the inbound traffic will be accepted.
 
 <h4 class="pdoc-member-header" id="FirewallInboundRule-sourceLoadBalancerUids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L46">property <b>sourceLoadBalancerUids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L46">property <b>sourceLoadBalancerUids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceLoadBalancerUids?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -110,7 +113,7 @@ An array containing the IDs
 of the Load Balancers from which the inbound traffic will be accepted.
 
 <h4 class="pdoc-member-header" id="FirewallInboundRule-sourceTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L52">property <b>sourceTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L52">property <b>sourceTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -120,14 +123,14 @@ corresponding to groups of Droplets from which the inbound traffic
 will be accepted.
 
 <h3 class="pdoc-module-header" id="FirewallOutboundRule" data-link-title="FirewallOutboundRule">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L55">
         interface <strong>FirewallOutboundRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>FirewallOutboundRule</span></code></pre>
 <h4 class="pdoc-member-header" id="FirewallOutboundRule-destinationAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L61">property <b>destinationAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L61">property <b>destinationAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -137,7 +140,7 @@ addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the
 outbound traffic will be allowed.
 
 <h4 class="pdoc-member-header" id="FirewallOutboundRule-destinationDropletIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L66">property <b>destinationDropletIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L66">property <b>destinationDropletIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationDropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -146,7 +149,7 @@ An array containing the IDs of
 the Droplets to which the outbound traffic will be allowed.
 
 <h4 class="pdoc-member-header" id="FirewallOutboundRule-destinationLoadBalancerUids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L71">property <b>destinationLoadBalancerUids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L71">property <b>destinationLoadBalancerUids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationLoadBalancerUids?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -155,7 +158,7 @@ An array containing the IDs
 of the Load Balancers to which the outbound traffic will be allowed.
 
 <h4 class="pdoc-member-header" id="FirewallOutboundRule-destinationTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L78">property <b>destinationTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L78">property <b>destinationTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -166,7 +169,7 @@ be allowed.
 traffic.
 
 <h4 class="pdoc-member-header" id="FirewallOutboundRule-portRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L85">property <b>portRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L85">property <b>portRange</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +180,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
 
 <h4 class="pdoc-member-header" id="FirewallOutboundRule-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L90">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L90">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,24 +189,24 @@ The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
 
 <h3 class="pdoc-module-header" id="FirewallPendingChange" data-link-title="FirewallPendingChange">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L93">
         interface <strong>FirewallPendingChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>FirewallPendingChange</span></code></pre>
 <h4 class="pdoc-member-header" id="FirewallPendingChange-dropletId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L94">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L94">property <b>dropletId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirewallPendingChange-removing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L95">property <b>removing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L95">property <b>removing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirewallPendingChange-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L100">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L100">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -211,65 +214,134 @@ This may be one of "tcp", "udp", or "icmp".
 A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
 
+<h3 class="pdoc-module-header" id="GetSizesFilter" data-link-title="GetSizesFilter">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L103">
+        interface <strong>GetSizesFilter</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetSizesFilter</span></code></pre>
+<h4 class="pdoc-member-header" id="GetSizesFilter-key">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L108">property <b>key</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Sort the sizes by this key. This may be one of `slug`,
+`memory`, `vcpus`, `disk`, `transfer`, `priceMonthly`, or `priceHourly`.
+
+<h4 class="pdoc-member-header" id="GetSizesFilter-values">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L113">property <b>values</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+
+Only retrieves images which keys has value that matches
+one of the values provided here.
+
+<h3 class="pdoc-module-header" id="GetSizesSort" data-link-title="GetSizesSort">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L116">
+        interface <strong>GetSizesSort</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetSizesSort</span></code></pre>
+<h4 class="pdoc-member-header" id="GetSizesSort-direction">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L120">property <b>direction</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>direction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The sort direction. This may be either `asc` or `desc`.
+
+<h4 class="pdoc-member-header" id="GetSizesSort-key">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L125">property <b>key</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Sort the sizes by this key. This may be one of `slug`,
+`memory`, `vcpus`, `disk`, `transfer`, `priceMonthly`, or `priceHourly`.
+
 <h3 class="pdoc-module-header" id="KubernetesClusterKubeConfig" data-link-title="KubernetesClusterKubeConfig">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L128">
         interface <strong>KubernetesClusterKubeConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KubernetesClusterKubeConfig</span></code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterKubeConfig-clientCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L104">property <b>clientCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L129">property <b>clientCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterKubeConfig-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L105">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L130">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterKubeConfig-clusterCaCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L106">property <b>clusterCaCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L131">property <b>clusterCaCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCaCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterKubeConfig-expiresAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L107">property <b>expiresAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L132">property <b>expiresAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiresAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterKubeConfig-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L108">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L133">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterKubeConfig-rawConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L109">property <b>rawConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L134">property <b>rawConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rawConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterKubeConfig-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L110">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L135">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="KubernetesClusterNodePool" data-link-title="KubernetesClusterNodePool">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L138">
         interface <strong>KubernetesClusterNodePool</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KubernetesClusterNodePool</span></code></pre>
+<h4 class="pdoc-member-header" id="KubernetesClusterNodePool-actualNodeCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L139">property <b>actualNodeCount</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>actualNodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="KubernetesClusterNodePool-autoScale">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L140">property <b>autoScale</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L117">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L144">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 A unique ID that can be used to identify and reference a Kubernetes cluster.
 
+<h4 class="pdoc-member-header" id="KubernetesClusterNodePool-maxNodes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L145">property <b>maxNodes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>maxNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="KubernetesClusterNodePool-minNodes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L146">property <b>minNodes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>minNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L121">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -277,22 +349,22 @@ A unique ID that can be used to identify and reference a Kubernetes cluster.
 A name for the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L122">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L151">property <b>nodeCount</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L123">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L152">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterNodePoolNode'>inputs.KubernetesClusterNodePoolNode</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L124">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L153">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePool-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L128">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L157">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -300,14 +372,14 @@ A name for the Kubernetes cluster.
 A list of tag names to be applied to the Kubernetes cluster.
 
 <h3 class="pdoc-module-header" id="KubernetesClusterNodePoolNode" data-link-title="KubernetesClusterNodePoolNode">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L160">
         interface <strong>KubernetesClusterNodePoolNode</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KubernetesClusterNodePoolNode</span></code></pre>
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolNode-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L135">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L164">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -315,7 +387,7 @@ A list of tag names to be applied to the Kubernetes cluster.
 The date and time when the Kubernetes cluster was created.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolNode-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L139">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L168">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -323,7 +395,7 @@ The date and time when the Kubernetes cluster was created.
 A unique ID that can be used to identify and reference a Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolNode-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L143">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -331,7 +403,7 @@ A unique ID that can be used to identify and reference a Kubernetes cluster.
 A name for the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolNode-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L147">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L176">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -339,7 +411,7 @@ A name for the Kubernetes cluster.
 A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
 
 <h4 class="pdoc-member-header" id="KubernetesClusterNodePoolNode-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L159">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L188">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -355,19 +427,19 @@ The date and time when the Kubernetes cluster was last updated.
 - `expiresAt` - The date and time when the credentials will expire and need to be regenerated.
 
 <h3 class="pdoc-module-header" id="KubernetesNodePoolNode" data-link-title="KubernetesNodePoolNode">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L191">
         interface <strong>KubernetesNodePoolNode</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KubernetesNodePoolNode</span></code></pre>
 <h4 class="pdoc-member-header" id="KubernetesNodePoolNode-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L163">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L192">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesNodePoolNode-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L167">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L196">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -375,7 +447,7 @@ The date and time when the Kubernetes cluster was last updated.
 A unique ID that can be used to identify and reference the node pool.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolNode-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L171">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L200">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,24 +455,24 @@ A unique ID that can be used to identify and reference the node pool.
 A name for the node pool.
 
 <h4 class="pdoc-member-header" id="KubernetesNodePoolNode-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L172">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L201">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesNodePoolNode-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L173">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L202">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="LoadBalancerForwardingRule" data-link-title="LoadBalancerForwardingRule">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L205">
         interface <strong>LoadBalancerForwardingRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LoadBalancerForwardingRule</span></code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerForwardingRule-certificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L180">property <b>certificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L209">property <b>certificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -408,7 +480,7 @@ A name for the node pool.
 The ID of the TLS certificate to be used for SSL termination.
 
 <h4 class="pdoc-member-header" id="LoadBalancerForwardingRule-entryPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L184">property <b>entryPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L213">property <b>entryPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -416,7 +488,7 @@ The ID of the TLS certificate to be used for SSL termination.
 An integer representing the port on which the Load Balancer instance will listen.
 
 <h4 class="pdoc-member-header" id="LoadBalancerForwardingRule-entryProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L188">property <b>entryProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L217">property <b>entryProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -424,7 +496,7 @@ An integer representing the port on which the Load Balancer instance will listen
 The protocol used for traffic to the Load Balancer. The possible values are: `http`, `https`, `http2` or `tcp`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerForwardingRule-targetPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L192">property <b>targetPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L221">property <b>targetPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -432,7 +504,7 @@ The protocol used for traffic to the Load Balancer. The possible values are: `ht
 An integer representing the port on the backend Droplets to which the Load Balancer will send traffic.
 
 <h4 class="pdoc-member-header" id="LoadBalancerForwardingRule-targetProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L196">property <b>targetProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L225">property <b>targetProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -440,7 +512,7 @@ An integer representing the port on the backend Droplets to which the Load Balan
 The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerForwardingRule-tlsPassthrough">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L200">property <b>tlsPassthrough</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L229">property <b>tlsPassthrough</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsPassthrough?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -448,14 +520,14 @@ The protocol used for traffic from the Load Balancer to the backend Droplets. Th
 A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets. The default value is `false`.
 
 <h3 class="pdoc-module-header" id="LoadBalancerHealthcheck" data-link-title="LoadBalancerHealthcheck">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L232">
         interface <strong>LoadBalancerHealthcheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LoadBalancerHealthcheck</span></code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerHealthcheck-checkIntervalSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L207">property <b>checkIntervalSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L236">property <b>checkIntervalSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkIntervalSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -463,7 +535,7 @@ A boolean value indicating whether SSL encrypted traffic will be passed through 
 The number of seconds between between two consecutive health checks. If not specified, the default value is `10`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerHealthcheck-healthyThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L211">property <b>healthyThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L240">property <b>healthyThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -471,7 +543,7 @@ The number of seconds between between two consecutive health checks. If not spec
 The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool. If not specified, the default value is `5`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerHealthcheck-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L215">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L244">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +551,7 @@ The number of times a health check must pass for a backend Droplet to be marked 
 The path on the backend Droplets to which the Load Balancer instance will send a request.
 
 <h4 class="pdoc-member-header" id="LoadBalancerHealthcheck-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L219">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L248">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -487,7 +559,7 @@ The path on the backend Droplets to which the Load Balancer instance will send a
 An integer representing the port on the backend Droplets on which the health check will attempt a connection.
 
 <h4 class="pdoc-member-header" id="LoadBalancerHealthcheck-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L223">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L252">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -495,7 +567,7 @@ An integer representing the port on the backend Droplets on which the health che
 The protocol used for health checks sent to the backend Droplets. The possible values are `http` or `tcp`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerHealthcheck-responseTimeoutSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L227">property <b>responseTimeoutSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L256">property <b>responseTimeoutSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseTimeoutSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -503,7 +575,7 @@ The protocol used for health checks sent to the backend Droplets. The possible v
 The number of seconds the Load Balancer instance will wait for a response until marking a health check as failed. If not specified, the default value is `5`.
 
 <h4 class="pdoc-member-header" id="LoadBalancerHealthcheck-unhealthyThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L231">property <b>unhealthyThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L260">property <b>unhealthyThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unhealthyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -511,14 +583,14 @@ The number of seconds the Load Balancer instance will wait for a response until 
 The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool. If not specified, the default value is `3`.
 
 <h3 class="pdoc-module-header" id="LoadBalancerStickySessions" data-link-title="LoadBalancerStickySessions">
-    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L234">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L263">
         interface <strong>LoadBalancerStickySessions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LoadBalancerStickySessions</span></code></pre>
 <h4 class="pdoc-member-header" id="LoadBalancerStickySessions-cookieName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L238">property <b>cookieName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L267">property <b>cookieName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cookieName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +598,7 @@ The number of times a health check must fail for a backend Droplet to be marked 
 The name to be used for the cookie sent to the client. This attribute is required when using `cookies` for the sticky sessions type.
 
 <h4 class="pdoc-member-header" id="LoadBalancerStickySessions-cookieTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L242">property <b>cookieTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L271">property <b>cookieTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cookieTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -534,10 +606,49 @@ The name to be used for the cookie sent to the client. This attribute is require
 The number of seconds until the cookie set by the Load Balancer expires. This attribute is required when using `cookies` for the sticky sessions type.
 
 <h4 class="pdoc-member-header" id="LoadBalancerStickySessions-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/4f78296806513a614f3a278f3788caf8ed22b90d/sdk/nodejs/types/input.ts#L246">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L275">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`. If not specified, the default value is `none`.
+
+<h3 class="pdoc-module-header" id="SpacesBucketCorsRule" data-link-title="SpacesBucketCorsRule">
+    <a href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L278">
+        interface <strong>SpacesBucketCorsRule</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SpacesBucketCorsRule</span></code></pre>
+<h4 class="pdoc-member-header" id="SpacesBucketCorsRule-allowedHeaders">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L282">property <b>allowedHeaders</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowedHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
+
+<h4 class="pdoc-member-header" id="SpacesBucketCorsRule-allowedMethods">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L286">property <b>allowedMethods</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowedMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+A list of HTTP methods (e.g. `GET`) which are allowed from the specified origin.
+
+<h4 class="pdoc-member-header" id="SpacesBucketCorsRule-allowedOrigins">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L290">property <b>allowedOrigins</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowedOrigins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. http://*.example.com).
+
+<h4 class="pdoc-member-header" id="SpacesBucketCorsRule-maxAgeSeconds">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-digitalocean/blob/ef5d1f8b03e2b327148683bd418772268d260560/sdk/nodejs/types/input.ts#L294">property <b>maxAgeSeconds</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>maxAgeSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The time in seconds that browser can cache the response for a preflight request.
 
