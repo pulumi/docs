@@ -13,6 +13,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/issues">terraform-providers/terraform-provider-digitalocean repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_digitalocean"></span><dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetAccountResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetAccountResult</code><span class="sig-paren">(</span><em class="sig-param">droplet_limit=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">email_verified=None</em>, <em class="sig-param">floating_ip_limit=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_message=None</em>, <em class="sig-param">uuid=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetCertificateResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetCertificateResult</code><span class="sig-paren">(</span><em class="sig-param">domains=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">not_after=None</em>, <em class="sig-param">sha1_fingerprint=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetCertificateResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -60,6 +65,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetRecordResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetRecordResult</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">flags=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">weight=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetRecordResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetSizesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetSizesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">sizes=None</em>, <em class="sig-param">sorts=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetSizesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -575,6 +585,256 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseConnectionPool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">db_name=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a DigitalOcean database connection pool resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the source database cluster. Note: This must be a PostgreSQL cluster.</p></li>
+<li><p><strong>db_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database for use with the connection pool.</p></li>
+<li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the database connection pool.</p></li>
+<li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The desired size of the PGBouncer connection pool.</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database user for use with the connection pool.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_connection_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_connection_pool.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.cluster_id">
+<code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.cluster_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the source database cluster. Note: This must be a PostgreSQL cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.db_name">
+<code class="sig-name descname">db_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.db_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The database for use with the connection pool.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.host">
+<code class="sig-name descname">host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname used to connect to the database connection pool.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.mode">
+<code class="sig-name descname">mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for the database connection pool.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.password">
+<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password for the connection pool’s user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.port">
+<code class="sig-name descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Network port that the database connection pool is listening on.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.private_host">
+<code class="sig-name descname">private_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.private_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <code class="docutils literal notranslate"><span class="pre">host</span></code>, but only accessible from resources within the account and in the same region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.private_uri">
+<code class="sig-name descname">private_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.private_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <code class="docutils literal notranslate"><span class="pre">uri</span></code>, but only accessible from resources within the account and in the same region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.size">
+<code class="sig-name descname">size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The desired size of the PGBouncer connection pool.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.uri">
+<code class="sig-name descname">uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full URI for connecting to the database connection pool.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.user">
+<code class="sig-name descname">user</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.user" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the database user for use with the connection pool.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">db_name=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DatabaseConnectionPool resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the source database cluster. Note: This must be a PostgreSQL cluster.</p></li>
+<li><p><strong>db_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database for use with the connection pool.</p></li>
+<li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname used to connect to the database connection pool.</p></li>
+<li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PGBouncer transaction mode for the connection pool. The allowed values are session, transaction, and statement.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the database connection pool.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for the connection pool’s user.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Network port that the database connection pool is listening on.</p></li>
+<li><p><strong>private_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Same as <code class="docutils literal notranslate"><span class="pre">host</span></code>, but only accessible from resources within the account and in the same region.</p></li>
+<li><p><strong>private_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Same as <code class="docutils literal notranslate"><span class="pre">uri</span></code>, but only accessible from resources within the account and in the same region.</p></li>
+<li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The desired size of the PGBouncer connection pool.</p></li>
+<li><p><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full URI for connecting to the database connection pool.</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database user for use with the connection pool.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_connection_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_connection_pool.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.DatabaseConnectionPool.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.DatabaseDb">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseDb</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseDb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a DigitalOcean database resource. When creating a new database cluster, a default database with name <code class="docutils literal notranslate"><span class="pre">defaultdb</span></code> will be created. Then, this resource can be used to provide additional database inside the cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the original source database cluster.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the database.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_db.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_db.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseDb.cluster_id">
+<code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseDb.cluster_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the original source database cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseDb.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseDb.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.DatabaseDb.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseDb.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DatabaseDb resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the original source database cluster.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the database.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_db.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_db.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.DatabaseDb.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseDb.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.DatabaseDb.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseDb.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_digitalocean.DatabaseReplica">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseReplica</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database replica resource.</p>
@@ -717,6 +977,111 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_digitalocean.DatabaseReplica.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.DatabaseUser">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseUser</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a DigitalOcean database user resource. When creating a new database cluster, a default admin user with name <code class="docutils literal notranslate"><span class="pre">doadmin</span></code> will be created. Then, this resource can be used to provide additional normal users inside the cluster.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Any new users created will always have <code class="docutils literal notranslate"><span class="pre">normal</span></code> role, only the default user that comes with database cluster creation has <code class="docutils literal notranslate"><span class="pre">primary</span></code> role. Additional permissions must be managed manually.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the original source database cluster.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the database user.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_user.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_user.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseUser.cluster_id">
+<code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.cluster_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the original source database cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseUser.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for the database user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseUser.password">
+<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password for the database user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseUser.role">
+<code class="sig-name descname">role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Role for the database user. The value will be either “primary” or “normal”.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.DatabaseUser.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DatabaseUser resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the original source database cluster.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the database user.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for the database user.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Role for the database user. The value will be either “primary” or “normal”.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_user.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_user.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.DatabaseUser.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.DatabaseUser.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseUser.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1875,6 +2240,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_digitalocean.GetAccountResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetAccountResult</code><span class="sig-paren">(</span><em class="sig-param">droplet_limit=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">email_verified=None</em>, <em class="sig-param">floating_ip_limit=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">status_message=None</em>, <em class="sig-param">uuid=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAccount.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetAccountResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetAccountResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_digitalocean.GetCertificateResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetCertificateResult</code><span class="sig-paren">(</span><em class="sig-param">domains=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">not_after=None</em>, <em class="sig-param">sha1_fingerprint=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetCertificateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCertificate.</p>
@@ -2277,6 +2654,10 @@ snapshots and backups and are only available within your account.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - The name of the node pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> - The slug identifier for the type of Droplet used as workers in the node pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> - The number of Droplet instances in the node pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual_node_count</span></code> - The actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> - A boolean indicating whether auto-scaling is enabled on the node pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_nodes</span></code> - If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_nodes</span></code> - If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - A list of tag names applied to the node pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> - A list of nodes in the pool. Each node exports the following attributes:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> -  A unique ID that can be used to identify and reference the node.</p></li>
@@ -2360,6 +2741,18 @@ snapshots and backups and are only available within your account.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetRecordResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetRecordResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.GetSizesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetSizesResult</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">sizes=None</em>, <em class="sig-param">sorts=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetSizesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSizes.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetSizesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetSizesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -2489,7 +2882,10 @@ snapshots and backups and are only available within your account.</p>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- `name` - (Required) A name for the node pool.
 - `size` - (Required) The slug identifier for the type of Droplet to be used as workers in the node pool.
-- `node_count` - (Required) The number of Droplet instances in the node pool.
+- `node_count` - (Optional) The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
+- `auto_scale` - (Optional) Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
+- `min_nodes` - (Optional) If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
+- `max_nodes` - (Optional) If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 - `tags` - (Optional) A list of tag names to be applied to the Kubernetes cluster.
 </pre></div>
 </div>
@@ -2498,13 +2894,17 @@ snapshots and backups and are only available within your account.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the region where the Kubernetes cluster will be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag names to be applied to the Kubernetes cluster.</p></li>
-<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>. (<strong>Note:</strong> A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>node_pool</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">actual_node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique ID that can be used to identify and reference a Kubernetes cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the Kubernetes cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
@@ -2570,10 +2970,17 @@ snapshots and backups and are only available within your account.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) A name for the node pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> - (Required) The slug identifier for the type of Droplet to be used as workers in the node pool.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> - (Required) The number of Droplet instances in the node pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> - (Optional) The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> - (Optional) Enable auto-scaling of the number of nodes in the node pool within the given min/max range.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_nodes</span></code> - (Optional) If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_nodes</span></code> - (Optional) If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - (Optional) A list of tag names to be applied to the Kubernetes cluster.</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actual_node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique ID that can be used to identify and reference a Kubernetes cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name for the Kubernetes cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
@@ -2646,7 +3053,7 @@ snapshots and backups and are only available within your account.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.KubernetesCluster.version">
 <code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster.version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>.</p>
+<dd><p>The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>. (<strong>Note:</strong> A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)</p>
 </dd></dl>
 
 <dl class="method">
@@ -2671,7 +3078,10 @@ properties used to qualify the lookup.</p>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- `name` - (Required) A name for the node pool.
 - `size` - (Required) The slug identifier for the type of Droplet to be used as workers in the node pool.
-- `node_count` - (Required) The number of Droplet instances in the node pool.
+- `node_count` - (Optional) The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
+- `auto_scale` - (Optional) Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
+- `min_nodes` - (Optional) If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
+- `max_nodes` - (Optional) If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
 - `tags` - (Optional) A list of tag names to be applied to the Kubernetes cluster.
 </pre></div>
 </div>
@@ -2698,7 +3108,7 @@ properties used to qualify the lookup.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>.</p>
+<dd class="field-odd"><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>. (<strong>Note:</strong> A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)</p>
 </p>
 </dd>
 </dl>
@@ -2714,7 +3124,11 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>node_pool</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">actual_node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique ID that can be used to identify and reference a Kubernetes cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the Kubernetes cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
@@ -2785,16 +3199,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.KubernetesNodePool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesNodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesNodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_scale=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">max_nodes=None</em>, <em class="sig-param">min_nodes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the <code class="docutils literal notranslate"><span class="pre">.KubernetesCluster</span></code> resource, this resource can be used to add additional ones to a cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_scale</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable auto-scaling of the number of nodes in the node pool within the given min/max range.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Kubernetes cluster to which the node pool is associated.</p></li>
+<li><p><strong>max_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.</p></li>
+<li><p><strong>min_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the node pool.</p></li>
-<li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Droplet instances in the node pool.</p></li>
+<li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the type of Droplet to be used as workers in the node pool.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag names to be applied to the Kubernetes cluster.</p></li>
 </ul>
@@ -2804,9 +3221,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_digitalocean.KubernetesNodePool.actual_node_count">
+<code class="sig-name descname">actual_node_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.actual_node_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.KubernetesNodePool.auto_scale">
+<code class="sig-name descname">auto_scale</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.auto_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable auto-scaling of the number of nodes in the node pool within the given min/max range.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_digitalocean.KubernetesNodePool.cluster_id">
 <code class="sig-name descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.cluster_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Kubernetes cluster to which the node pool is associated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.KubernetesNodePool.max_nodes">
+<code class="sig-name descname">max_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.max_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.KubernetesNodePool.min_nodes">
+<code class="sig-name descname">min_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.min_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2818,7 +3259,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_digitalocean.KubernetesNodePool.node_count">
 <code class="sig-name descname">node_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.node_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of Droplet instances in the node pool.</p>
+<dd><p>The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2856,7 +3297,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_digitalocean.KubernetesNodePool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actual_node_count=None</em>, <em class="sig-param">auto_scale=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">max_nodes=None</em>, <em class="sig-param">min_nodes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KubernetesNodePool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2865,9 +3306,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>actual_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.</p></li>
+<li><p><strong>auto_scale</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable auto-scaling of the number of nodes in the node pool within the given min/max range.</p></li>
 <li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Kubernetes cluster to which the node pool is associated.</p></li>
+<li><p><strong>max_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.</p></li>
+<li><p><strong>min_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the node pool.</p></li>
-<li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Droplet instances in the node pool.</p></li>
+<li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.</p></li>
 <li><p><strong>nodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of nodes in the pool. Each node exports the following attributes:</p></li>
 </ul>
 </dd>
@@ -3427,7 +3872,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.SpacesBucket">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">SpacesBucket</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">SpacesBucket</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">cors_rules=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a bucket resource for Spaces, DigitalOcean’s object storage product.</p>
 <p>The <a class="reference external" href="https://developers.digitalocean.com/documentation/spaces/">Spaces API</a> was
 designed to be interoperable with Amazon’s AWS S3 API. This allows users to
@@ -3452,6 +3897,13 @@ example:</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>cors_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of headers that will be included in the CORS preflight request’s <code class="docutils literal notranslate"><span class="pre">Access-Control-Request-Headers</span></code>. A header may contain one wildcard (e.g. <code class="docutils literal notranslate"><span class="pre">x-amz-*</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of HTTP methods (e.g. <code class="docutils literal notranslate"><span class="pre">GET</span></code>) which are allowed from the specified origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. <a class="reference external" href="http://">http://</a><a href="#id9"><span class="problematic" id="id10">*</span></a>.example.com).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time in seconds that browser can cache the response for a preflight request.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown</a>.</p>
 </div></blockquote>
@@ -3493,7 +3945,7 @@ example:</p>
 
 <dl class="method">
 <dt id="pulumi_digitalocean.SpacesBucket.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket_domain_name=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket_domain_name=None</em>, <em class="sig-param">cors_rules=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpacesBucket resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3511,6 +3963,13 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>cors_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of headers that will be included in the CORS preflight request’s <code class="docutils literal notranslate"><span class="pre">Access-Control-Request-Headers</span></code>. A header may contain one wildcard (e.g. <code class="docutils literal notranslate"><span class="pre">x-amz-*</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of HTTP methods (e.g. <code class="docutils literal notranslate"><span class="pre">GET</span></code>) which are allowed from the specified origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. <a class="reference external" href="http://">http://</a><a href="#id11"><span class="problematic" id="id12">*</span></a>.example.com).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time in seconds that browser can cache the response for a preflight request.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown</a>.</p>
 </div></blockquote>
@@ -4096,6 +4555,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_digitalocean.get_account">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on your DigitalOcean account.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/account.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/account.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_digitalocean.get_certificate">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_certificate</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
@@ -4248,6 +4716,38 @@ resources.</p>
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/record.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/record.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_sizes">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_sizes</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">sorts=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_sizes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves information about droplet sizes that DigitalOcean supports. This data source provides all of droplet size properties, with the ability to filter and sort the results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Filter the results.
+The <code class="docutils literal notranslate"><span class="pre">filter</span></code> block is documented below.</p></li>
+<li><p><strong>sorts</strong> (<em>list</em>) – Sort the results.
+The <code class="docutils literal notranslate"><span class="pre">sort</span></code> block is documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the sizes by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">slug</span></code>,
+<code class="docutils literal notranslate"><span class="pre">memory</span></code>, <code class="docutils literal notranslate"><span class="pre">vcpus</span></code>, <code class="docutils literal notranslate"><span class="pre">disk</span></code>, <code class="docutils literal notranslate"><span class="pre">transfer</span></code>, <code class="docutils literal notranslate"><span class="pre">price_monthly</span></code>, or <code class="docutils literal notranslate"><span class="pre">price_hourly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Only retrieves images which keys has value that matches
+one of the values provided here.</p></li>
+</ul>
+<p>The <strong>sorts</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The sort direction. This may be either <code class="docutils literal notranslate"><span class="pre">asc</span></code> or <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the sizes by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">slug</span></code>,
+<code class="docutils literal notranslate"><span class="pre">memory</span></code>, <code class="docutils literal notranslate"><span class="pre">vcpus</span></code>, <code class="docutils literal notranslate"><span class="pre">disk</span></code>, <code class="docutils literal notranslate"><span class="pre">transfer</span></code>, <code class="docutils literal notranslate"><span class="pre">price_monthly</span></code>, or <code class="docutils literal notranslate"><span class="pre">price_hourly</span></code>.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/sizes.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/sizes.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
