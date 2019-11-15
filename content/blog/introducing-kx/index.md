@@ -19,6 +19,8 @@ we’re introducing the [Kubernetes Extensions (kx) library][kx-repo]. kx is des
 to simplify the declaration of Kubernetes resources, and make the API easier for
 everyone to use.
 
+![kx + watch mode](kx.gif)
+
 ## Kubernetes YAML: The cloud assembly language
 
 With great power comes great complexity. The sheer number of Kubernetes configuration
