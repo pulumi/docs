@@ -8,8 +8,9 @@ linktitle: FAQ
     Crosswalk for Kubernetes is a set of tasks to configure, deploy, and manage
     Kubernetes in production.
 
-    Tasks are segmented by operations, and belong to one of the 6 stacks outlined above.
-    The Pulumi code for each stack is available and linked at the top of each task.
+    Tasks are segmented by operations, and belong to one of the 6 stacks
+    outlined in [Production Architecture for Teams][cw-teams]. The Pulumi code
+    for each stack is available and linked at the top of each task.
 
     Together, the docs and stack code provide a reference architecture to operate
     and use Kubernetes in production across a team using industry best-practices.
@@ -45,3 +46,4 @@ linktitle: FAQ
 [pulumi-slack]: https://slack.pulumi.com/
 [pulumi-docs]: https://github.com/pulumi/docs
 [pulumi-guides]: https://github.com/pulumi/kubernetes-guides
+[cw-teams]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
