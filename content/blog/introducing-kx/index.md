@@ -28,7 +28,7 @@ options can be overwhelming to users. YAML was not designed for programming, yet
 Kubernetes users often joke about being “YAML architects.” 
 
 Kubernetes YAML has been compared to an assembly language. We find this analogy to
-be particularly apt: it gives users complete control over the system, but it is
+be particularly apt: it gives users complete control over the system, although it is
 closely tied to low-level implementation details.
 
 Most Kubernetes applications require users to define several different resource
