@@ -21,10 +21,10 @@ menu:
     $ mkdir policypack && cd policypack
     ```
 
-1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_EXPERIMENTAL=true` as an environment variable or simply pre-append it to your commands as shown.
+1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_DEBUG_COMMANDS=true` as an environment variable or simply pre-append it to your commands as shown.
 
     ```sh
-    $ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
+    $ PULUMI_DEBUG_COMMANDS=true pulumi policy new aws-typescript
     Created Policy Pack!
     Installing dependencies...
     ...
@@ -80,13 +80,13 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
     In the Pulumi project's directory run:
 
     ```sh
-    $ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
+    $ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack <path-to-policy-pack-directory>
     ```
 
     If the stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
 
     {{< highlight sh >}}
-$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack policy-pack-typescript
+$ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack policy-pack-typescript
 Previewing update (dev):
 
      Type                 Name          Plan
@@ -111,7 +111,7 @@ Permalink:
 1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
 
     {{< highlight sh >}}
-$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack ~/policy-pack-typescript
+$ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack ~/policy-pack-typescript
 Previewing update (dev):
 
      Type                 Name          Plan       Info
