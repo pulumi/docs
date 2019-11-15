@@ -38,7 +38,7 @@ meta_desc: "Explore members of the aws module in the @pulumi/signalfx package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ExternalIntegration" data-link-title="ExternalIntegration">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L51">
         Resource <strong>ExternalIntegration</strong>
     </a>
 </h3>
@@ -89,7 +89,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown.
 
 <h4 class="pdoc-member-header" id="ExternalIntegration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -103,7 +103,7 @@ Create a ExternalIntegration resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ExternalIntegration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L60">method <b>get</b></a>
 </h4>
 
 
@@ -114,14 +114,14 @@ Get an existing ExternalIntegration resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ExternalIntegration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ExternalIntegration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L71">method <b>isInstance</b></a>
 </h4>
 
 
@@ -132,7 +132,7 @@ Returns true if the given object is an instance of ExternalIntegration.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ExternalIntegration-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L81">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L81">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The external ID to use with your IAM role and with `signalfx.aws.Integration`.
 
 <h4 class="pdoc-member-header" id="ExternalIntegration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -149,7 +149,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ExternalIntegration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of this integration
 
 <h4 class="pdoc-member-header" id="ExternalIntegration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -166,7 +166,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Integration" data-link-title="Integration">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L57">
         Resource <strong>Integration</strong>
     </a>
 </h3>
@@ -221,7 +221,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
 > This content is derived from https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown.
 
 <h4 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L139"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L139"> <b>constructor</b></a>
 </h4>
 
 
@@ -235,7 +235,7 @@ Create a Integration resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -246,14 +246,14 @@ Get an existing Integration resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L57">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -264,7 +264,7 @@ Returns true if the given object is an instance of Integration.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Integration-customCloudwatchNamespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L87">property <b>customCloudwatchNamespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L87">property <b>customCloudwatchNamespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customCloudwatchNamespaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -272,7 +272,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 
 <h4 class="pdoc-member-header" id="Integration-customNamespaceSyncRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L91">property <b>customNamespaceSyncRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L91">property <b>customNamespaceSyncRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customNamespaceSyncRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationCustomNamespaceSyncRule'>outputs.aws.IntegrationCustomNamespaceSyncRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain c
 Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `customCloudwatchNamespaces` property.
 
 <h4 class="pdoc-member-header" id="Integration-enableAwsUsage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L95">property <b>enableAwsUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L95">property <b>enableAwsUsage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableAwsUsage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -288,7 +288,7 @@ Each element controls the data collected by SignalFx for the specified namespace
 Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 
 <h4 class="pdoc-member-header" id="Integration-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L99">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L99">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ Flag that controls how SignalFx imports usage metrics from AWS to use with AWS C
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="Integration-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L103">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L103">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ Whether the integration is enabled.
 The `externalId` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 
 <h4 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -313,7 +313,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Integration-importCloudWatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L107">property <b>importCloudWatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L107">property <b>importCloudWatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>importCloudWatch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -321,7 +321,7 @@ deployments and may be missing (undefined) during planning phases.
 Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 
 <h4 class="pdoc-member-header" id="Integration-integrationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L111">property <b>integrationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L111">property <b>integrationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -329,7 +329,7 @@ Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx i
 The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 
 <h4 class="pdoc-member-header" id="Integration-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L115">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L115">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -337,7 +337,7 @@ The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenInte
 If you specify `authMethod = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 
 <h4 class="pdoc-member-header" id="Integration-namespaceSyncRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L119">property <b>namespaceSyncRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L119">property <b>namespaceSyncRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceSyncRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationNamespaceSyncRule'>outputs.aws.IntegrationNamespaceSyncRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -345,7 +345,7 @@ If you specify `authMethod = \"SecurityToken\"` in your request to create an AWS
 Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 
 <h4 class="pdoc-member-header" id="Integration-pollRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L123">property <b>pollRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L123">property <b>pollRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pollRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -353,7 +353,7 @@ Each element in the array is an object that contains an AWS namespace name and a
 AWS poll rate (in seconds). One of `60` or `300`.
 
 <h4 class="pdoc-member-header" id="Integration-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L127">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L127">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -361,7 +361,7 @@ AWS poll rate (in seconds). One of `60` or `300`.
 List of AWS regions that SignalFx should monitor.
 
 <h4 class="pdoc-member-header" id="Integration-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L131">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L131">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -369,7 +369,7 @@ List of AWS regions that SignalFx should monitor.
 Role ARN that you add to an existing AWS integration object.
 
 <h4 class="pdoc-member-header" id="Integration-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L135">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L135">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>services: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -377,7 +377,7 @@ Role ARN that you add to an existing AWS integration object.
 List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespaceSyncRule`.
 
 <h4 class="pdoc-member-header" id="Integration-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L139">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L139">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -385,7 +385,7 @@ List of AWS services that you want SignalFx to monitor. Each element is a string
 Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 
 <h4 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L57">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -394,7 +394,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TokenIntegration" data-link-title="TokenIntegration">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L52">
         Resource <strong>TokenIntegration</strong>
     </a>
 </h3>
@@ -444,7 +444,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown.
 
 <h4 class="pdoc-member-header" id="TokenIntegration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -458,7 +458,7 @@ Create a TokenIntegration resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TokenIntegration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -469,14 +469,14 @@ Get an existing TokenIntegration resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TokenIntegration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TokenIntegration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -487,7 +487,7 @@ Returns true if the given object is an instance of TokenIntegration.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TokenIntegration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -496,7 +496,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TokenIntegration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -504,7 +504,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of this integration
 
 <h4 class="pdoc-member-header" id="TokenIntegration-tokenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L86">property <b>tokenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L86">property <b>tokenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ The name of this integration
 The SignalFx-generated AWS account ID to use with an AWS integration.
 
 <h4 class="pdoc-member-header" id="TokenIntegration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -524,7 +524,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ExternalIntegrationArgs" data-link-title="ExternalIntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L134">
         interface <strong>ExternalIntegrationArgs</strong>
     </a>
 </h3>
@@ -534,7 +534,7 @@ deployments.
 The set of arguments for constructing a ExternalIntegration resource.
 
 <h4 class="pdoc-member-header" id="ExternalIntegrationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ The set of arguments for constructing a ExternalIntegration resource.
 The name of this integration
 
 <h3 class="pdoc-module-header" id="ExternalIntegrationState" data-link-title="ExternalIntegrationState">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L120">
         interface <strong>ExternalIntegrationState</strong>
     </a>
 </h3>
@@ -552,7 +552,7 @@ The name of this integration
 Input properties used for looking up and filtering ExternalIntegration resources.
 
 <h4 class="pdoc-member-header" id="ExternalIntegrationState-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L124">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L124">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -560,7 +560,7 @@ Input properties used for looking up and filtering ExternalIntegration resources
 The external ID to use with your IAM role and with `signalfx.aws.Integration`.
 
 <h4 class="pdoc-member-header" id="ExternalIntegrationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/externalIntegration.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/externalIntegration.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +568,7 @@ The external ID to use with your IAM role and with `signalfx.aws.Integration`.
 The name of this integration
 
 <h3 class="pdoc-module-header" id="IntegrationArgs" data-link-title="IntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L266">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L266">
         interface <strong>IntegrationArgs</strong>
     </a>
 </h3>
@@ -578,7 +578,7 @@ The name of this integration
 The set of arguments for constructing a Integration resource.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-customCloudwatchNamespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L270">property <b>customCloudwatchNamespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L270">property <b>customCloudwatchNamespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customCloudwatchNamespaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -586,7 +586,7 @@ The set of arguments for constructing a Integration resource.
 List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-customNamespaceSyncRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L274">property <b>customNamespaceSyncRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L274">property <b>customNamespaceSyncRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customNamespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationCustomNamespaceSyncRule'>inputs.aws.IntegrationCustomNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
@@ -594,7 +594,7 @@ List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain c
 Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `customCloudwatchNamespaces` property.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-enableAwsUsage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L278">property <b>enableAwsUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L278">property <b>enableAwsUsage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableAwsUsage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -602,7 +602,7 @@ Each element controls the data collected by SignalFx for the specified namespace
 Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L282">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L282">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -610,7 +610,7 @@ Flag that controls how SignalFx imports usage metrics from AWS to use with AWS C
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L286">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L286">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -618,7 +618,7 @@ Whether the integration is enabled.
 The `externalId` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-importCloudWatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L290">property <b>importCloudWatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L290">property <b>importCloudWatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importCloudWatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -626,7 +626,7 @@ The `externalId` property from one of a `signalfx.aws.ExternalIntegration` or `s
 Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-integrationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L294">property <b>integrationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L294">property <b>integrationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,7 +634,7 @@ Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx i
 The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L298">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L298">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -642,7 +642,7 @@ The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenInte
 If you specify `authMethod = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-namespaceSyncRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L302">property <b>namespaceSyncRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L302">property <b>namespaceSyncRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationNamespaceSyncRule'>inputs.aws.IntegrationNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
@@ -650,7 +650,7 @@ If you specify `authMethod = \"SecurityToken\"` in your request to create an AWS
 Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-pollRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L306">property <b>pollRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L306">property <b>pollRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pollRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -658,7 +658,7 @@ Each element in the array is an object that contains an AWS namespace name and a
 AWS poll rate (in seconds). One of `60` or `300`.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L310">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L310">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -666,7 +666,7 @@ AWS poll rate (in seconds). One of `60` or `300`.
 List of AWS regions that SignalFx should monitor.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L314">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L314">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -674,7 +674,7 @@ List of AWS regions that SignalFx should monitor.
 Role ARN that you add to an existing AWS integration object.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L318">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L318">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -682,7 +682,7 @@ Role ARN that you add to an existing AWS integration object.
 List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespaceSyncRule`.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L322">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L322">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +690,7 @@ List of AWS services that you want SignalFx to monitor. Each element is a string
 Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 
 <h3 class="pdoc-module-header" id="IntegrationState" data-link-title="IntegrationState">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L204">
         interface <strong>IntegrationState</strong>
     </a>
 </h3>
@@ -700,7 +700,7 @@ Used with `signalfx_aws_token_integration`. Use this property to specify the tok
 Input properties used for looking up and filtering Integration resources.
 
 <h4 class="pdoc-member-header" id="IntegrationState-customCloudwatchNamespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L208">property <b>customCloudwatchNamespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L208">property <b>customCloudwatchNamespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customCloudwatchNamespaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -708,7 +708,7 @@ Input properties used for looking up and filtering Integration resources.
 List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 
 <h4 class="pdoc-member-header" id="IntegrationState-customNamespaceSyncRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L212">property <b>customNamespaceSyncRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L212">property <b>customNamespaceSyncRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customNamespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationCustomNamespaceSyncRule'>inputs.aws.IntegrationCustomNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
@@ -716,7 +716,7 @@ List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain c
 Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `customCloudwatchNamespaces` property.
 
 <h4 class="pdoc-member-header" id="IntegrationState-enableAwsUsage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L216">property <b>enableAwsUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L216">property <b>enableAwsUsage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableAwsUsage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ Each element controls the data collected by SignalFx for the specified namespace
 Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 
 <h4 class="pdoc-member-header" id="IntegrationState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L220">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L220">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -732,7 +732,7 @@ Flag that controls how SignalFx imports usage metrics from AWS to use with AWS C
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationState-externalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L224">property <b>externalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L224">property <b>externalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -740,7 +740,7 @@ Whether the integration is enabled.
 The `externalId` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 
 <h4 class="pdoc-member-header" id="IntegrationState-importCloudWatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L228">property <b>importCloudWatch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L228">property <b>importCloudWatch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importCloudWatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -748,7 +748,7 @@ The `externalId` property from one of a `signalfx.aws.ExternalIntegration` or `s
 Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 
 <h4 class="pdoc-member-header" id="IntegrationState-integrationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L232">property <b>integrationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L232">property <b>integrationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -756,7 +756,7 @@ Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx i
 The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 
 <h4 class="pdoc-member-header" id="IntegrationState-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L236">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L236">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -764,7 +764,7 @@ The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenInte
 If you specify `authMethod = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 
 <h4 class="pdoc-member-header" id="IntegrationState-namespaceSyncRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L240">property <b>namespaceSyncRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L240">property <b>namespaceSyncRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceSyncRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationNamespaceSyncRule'>inputs.aws.IntegrationNamespaceSyncRule</a>&gt;[]&gt;;</code></pre>
@@ -772,7 +772,7 @@ If you specify `authMethod = \"SecurityToken\"` in your request to create an AWS
 Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 
 <h4 class="pdoc-member-header" id="IntegrationState-pollRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L244">property <b>pollRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L244">property <b>pollRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pollRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -780,7 +780,7 @@ Each element in the array is an object that contains an AWS namespace name and a
 AWS poll rate (in seconds). One of `60` or `300`.
 
 <h4 class="pdoc-member-header" id="IntegrationState-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L248">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L248">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -788,7 +788,7 @@ AWS poll rate (in seconds). One of `60` or `300`.
 List of AWS regions that SignalFx should monitor.
 
 <h4 class="pdoc-member-header" id="IntegrationState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L252">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L252">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -796,7 +796,7 @@ List of AWS regions that SignalFx should monitor.
 Role ARN that you add to an existing AWS integration object.
 
 <h4 class="pdoc-member-header" id="IntegrationState-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L256">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L256">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -804,7 +804,7 @@ Role ARN that you add to an existing AWS integration object.
 List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespaceSyncRule`.
 
 <h4 class="pdoc-member-header" id="IntegrationState-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/integration.ts#L260">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/integration.ts#L260">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ List of AWS services that you want SignalFx to monitor. Each element is a string
 Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 
 <h3 class="pdoc-module-header" id="TokenIntegrationArgs" data-link-title="TokenIntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L135">
         interface <strong>TokenIntegrationArgs</strong>
     </a>
 </h3>
@@ -822,7 +822,7 @@ Used with `signalfx_aws_token_integration`. Use this property to specify the tok
 The set of arguments for constructing a TokenIntegration resource.
 
 <h4 class="pdoc-member-header" id="TokenIntegrationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L139">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L139">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -830,7 +830,7 @@ The set of arguments for constructing a TokenIntegration resource.
 The name of this integration
 
 <h3 class="pdoc-module-header" id="TokenIntegrationState" data-link-title="TokenIntegrationState">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L121">
         interface <strong>TokenIntegrationState</strong>
     </a>
 </h3>
@@ -840,7 +840,7 @@ The name of this integration
 Input properties used for looking up and filtering TokenIntegration resources.
 
 <h4 class="pdoc-member-header" id="TokenIntegrationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L125">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L125">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -848,7 +848,7 @@ Input properties used for looking up and filtering TokenIntegration resources.
 The name of this integration
 
 <h4 class="pdoc-member-header" id="TokenIntegrationState-tokenId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/aws/tokenIntegration.ts#L129">property <b>tokenId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/aws/tokenIntegration.ts#L129">property <b>tokenId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
