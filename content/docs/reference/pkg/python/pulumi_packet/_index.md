@@ -14,7 +14,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_packet"></span><dl class="class">
 <dt id="pulumi_packet.AwaitableGetDeviceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetDeviceResult</code><span class="sig-paren">(</span><em class="sig-param">access_private_ipv4=None</em>, <em class="sig-param">access_public_ipv4=None</em>, <em class="sig-param">access_public_ipv6=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">ssh_key_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetDeviceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetDeviceResult</code><span class="sig-paren">(</span><em class="sig-param">access_private_ipv4=None</em>, <em class="sig-param">access_public_ipv4=None</em>, <em class="sig-param">access_public_ipv6=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">ssh_key_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetDeviceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_packet.AwaitableGetIpBlockRangesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetIpBlockRangesResult</code><span class="sig-paren">(</span><em class="sig-param">facility=None</em>, <em class="sig-param">global_ipv4s=None</em>, <em class="sig-param">ipv6s=None</em>, <em class="sig-param">private_ipv4s=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_ipv4s=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetIpBlockRangesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -23,13 +28,33 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_packet.AwaitableGetOrganizationResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">logo=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization_id=None</em>, <em class="sig-param">project_ids=None</em>, <em class="sig-param">twitter=None</em>, <em class="sig-param">website=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_packet.AwaitableGetPrecreatedIpBlockResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetPrecreatedIpBlockResult</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">address_family=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">cidr_notation=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">global_=None</em>, <em class="sig-param">manageable=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">netmask=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetPrecreatedIpBlockResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_packet.AwaitableGetProjectResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">backend_transfer=None</em>, <em class="sig-param">bgp_config=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization_id=None</em>, <em class="sig-param">payment_method_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">updated=None</em>, <em class="sig-param">user_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_packet.AwaitableGetSpotMarketPriceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetSpotMarketPriceResult</code><span class="sig-paren">(</span><em class="sig-param">facility=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">price=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetSpotMarketPriceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_packet.AwaitableGetSpotMarketRequestResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetSpotMarketRequestResult</code><span class="sig-paren">(</span><em class="sig-param">device_ids=None</em>, <em class="sig-param">request_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetSpotMarketRequestResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_packet.AwaitableGetVolumeResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetVolumeResult</code><span class="sig-paren">(</span><em class="sig-param">billing_cycle=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_ids=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_policies=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">updated=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetVolumeResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -671,7 +696,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.GetDeviceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">GetDeviceResult</code><span class="sig-paren">(</span><em class="sig-param">access_private_ipv4=None</em>, <em class="sig-param">access_public_ipv4=None</em>, <em class="sig-param">access_public_ipv6=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">ssh_key_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetDeviceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">GetDeviceResult</code><span class="sig-paren">(</span><em class="sig-param">access_private_ipv4=None</em>, <em class="sig-param">access_public_ipv4=None</em>, <em class="sig-param">access_public_ipv6=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">ssh_key_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetDeviceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDevice.</p>
 <dl class="attribute">
 <dt id="pulumi_packet.GetDeviceResult.access_private_ipv4">
@@ -713,12 +738,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.GetDeviceResult.hardware_reservation_id">
 <code class="sig-name descname">hardware_reservation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.hardware_reservation_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The id of hardware reservation which this device occupies</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_packet.GetDeviceResult.id">
-<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>ID of the port</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -782,6 +801,48 @@ The fields of the network attributes are:</p></li>
 <dd><p>Tags attached to the device</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_packet.GetIpBlockRangesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">GetIpBlockRangesResult</code><span class="sig-paren">(</span><em class="sig-param">facility=None</em>, <em class="sig-param">global_ipv4s=None</em>, <em class="sig-param">ipv6s=None</em>, <em class="sig-param">private_ipv4s=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_ipv4s=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetIpBlockRangesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getIpBlockRanges.</p>
+<dl class="attribute">
+<dt id="pulumi_packet.GetIpBlockRangesResult.global_ipv4s">
+<code class="sig-name descname">global_ipv4s</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetIpBlockRangesResult.global_ipv4s" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of CIDR expressions for Global IPv4 blocks in the project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetIpBlockRangesResult.ipv6s">
+<code class="sig-name descname">ipv6s</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetIpBlockRangesResult.ipv6s" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of CIDR expressions for IPv6 blocks in the project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetIpBlockRangesResult.private_ipv4s">
+<code class="sig-name descname">private_ipv4s</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetIpBlockRangesResult.private_ipv4s" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of CIDR expressions for Private IPv4 blocks in the project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetIpBlockRangesResult.public_ipv4s">
+<code class="sig-name descname">public_ipv4s</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetIpBlockRangesResult.public_ipv4s" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of CIDR expressions for Public IPv4 blocks in the project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetIpBlockRangesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetIpBlockRangesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -797,6 +858,48 @@ The fields of the network attributes are:</p></li>
 <dl class="attribute">
 <dt id="pulumi_packet.GetOperatingSystemResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetOperatingSystemResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_packet.GetOrganizationResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">GetOrganizationResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">logo=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization_id=None</em>, <em class="sig-param">project_ids=None</em>, <em class="sig-param">twitter=None</em>, <em class="sig-param">website=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getOrganization.</p>
+<dl class="attribute">
+<dt id="pulumi_packet.GetOrganizationResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetOrganizationResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description string</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetOrganizationResult.logo">
+<code class="sig-name descname">logo</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetOrganizationResult.logo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logo URL</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetOrganizationResult.project_ids">
+<code class="sig-name descname">project_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetOrganizationResult.project_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>UUIDs of project resources which belong to this organization</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetOrganizationResult.twitter">
+<code class="sig-name descname">twitter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetOrganizationResult.twitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Twitter handle</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetOrganizationResult.website">
+<code class="sig-name descname">website</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetOrganizationResult.website" title="Permalink to this definition">¶</a></dt>
+<dd><p>Website link</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetOrganizationResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetOrganizationResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -821,6 +924,60 @@ The fields of the network attributes are:</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_packet.GetProjectResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param">backend_transfer=None</em>, <em class="sig-param">bgp_config=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization_id=None</em>, <em class="sig-param">payment_method_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">updated=None</em>, <em class="sig-param">user_ids=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getProject.</p>
+<dl class="attribute">
+<dt id="pulumi_packet.GetProjectResult.backend_transfer">
+<code class="sig-name descname">backend_transfer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetProjectResult.backend_transfer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether Backend Transfer is enabled for this project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetProjectResult.bgp_config">
+<code class="sig-name descname">bgp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetProjectResult.bgp_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetProjectResult.created">
+<code class="sig-name descname">created</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetProjectResult.created" title="Permalink to this definition">¶</a></dt>
+<dd><p>The timestamp for when the project was created</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetProjectResult.organization_id">
+<code class="sig-name descname">organization_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetProjectResult.organization_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The UUID of this project’s parent organization</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetProjectResult.payment_method_id">
+<code class="sig-name descname">payment_method_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetProjectResult.payment_method_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The UUID of payment method for this project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetProjectResult.updated">
+<code class="sig-name descname">updated</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetProjectResult.updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>The timestamp for the last time the project was updated</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetProjectResult.user_ids">
+<code class="sig-name descname">user_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetProjectResult.user_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of UUIDs of user accounts which beling to this project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetProjectResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetProjectResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_packet.GetSpotMarketPriceResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">GetSpotMarketPriceResult</code><span class="sig-paren">(</span><em class="sig-param">facility=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">price=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetSpotMarketPriceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSpotMarketPrice.</p>
@@ -833,6 +990,87 @@ The fields of the network attributes are:</p></li>
 <dl class="attribute">
 <dt id="pulumi_packet.GetSpotMarketPriceResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetSpotMarketPriceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_packet.GetSpotMarketRequestResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">GetSpotMarketRequestResult</code><span class="sig-paren">(</span><em class="sig-param">device_ids=None</em>, <em class="sig-param">request_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetSpotMarketRequestResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSpotMarketRequest.</p>
+<dl class="attribute">
+<dt id="pulumi_packet.GetSpotMarketRequestResult.device_ids">
+<code class="sig-name descname">device_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetSpotMarketRequestResult.device_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of IDs of devices spawned by the referenced Spot Market Request</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetSpotMarketRequestResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetSpotMarketRequestResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_packet.GetVolumeResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">GetVolumeResult</code><span class="sig-paren">(</span><em class="sig-param">billing_cycle=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">device_ids=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_policies=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">updated=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetVolumeResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getVolume.</p>
+<dl class="attribute">
+<dt id="pulumi_packet.GetVolumeResult.billing_cycle">
+<code class="sig-name descname">billing_cycle</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetVolumeResult.billing_cycle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The billing cycle, defaults to hourly</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetVolumeResult.device_ids">
+<code class="sig-name descname">device_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetVolumeResult.device_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>UUIDs of devices to which this volume is attached</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetVolumeResult.facility">
+<code class="sig-name descname">facility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetVolumeResult.facility" title="Permalink to this definition">¶</a></dt>
+<dd><p>The facility slug the volume resides in</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetVolumeResult.locked">
+<code class="sig-name descname">locked</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetVolumeResult.locked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the volume is locked or not</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetVolumeResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetVolumeResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the volume</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code> - The project id the volume is in</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetVolumeResult.plan">
+<code class="sig-name descname">plan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetVolumeResult.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performance plan the volume is on</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetVolumeResult.size">
+<code class="sig-name descname">size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetVolumeResult.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size in GB of the volume</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetVolumeResult.state">
+<code class="sig-name descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetVolumeResult.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of the volume</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetVolumeResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetVolumeResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -1224,7 +1462,8 @@ in your projects.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>backend_transfer</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or disable <a class="reference external" href="https://support.packet.com/kb/articles/backend-transfer">Backend Transfer</a>, default is false</p></li>
-<li><p><strong>bgp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.</p></li>
+<li><p><strong>bgp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.</p>
+</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project</p></li>
 <li><p><strong>organization_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.</p></li>
 <li><p><strong>payment_method_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with <code class="docutils literal notranslate"><span class="pre">organization_id</span></code>, or default).</p></li>
@@ -1403,6 +1642,12 @@ Project SSH keys will only be populated onto servers that belong to that project
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_packet.ProjectSshKey.owner_id">
+<code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.ProjectSshKey.owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of parent project (same as project_id)</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_packet.ProjectSshKey.project_id">
 <code class="sig-name descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.ProjectSshKey.project_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of parent project</p>
@@ -1422,7 +1667,7 @@ Project SSH keys will only be populated onto servers that belong to that project
 
 <dl class="method">
 <dt id="pulumi_packet.ProjectSshKey.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ProjectSshKey.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ProjectSshKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ProjectSshKey resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1434,6 +1679,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for when the SSH key was created</p></li>
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint of the SSH key</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSH key for identification</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of parent project (same as project_id)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of parent project</p></li>
 <li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key. If this is a file, it can be read using the file interpolation function</p></li>
 <li><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the SSH key was updated</p></li>
@@ -1672,7 +1918,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – length of CIDR prefix of the block as integer</p></li>
 <li><p><strong>cidr_notation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Address and mask in CIDR notation, e.g. “147.229.15.30/31”</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Arbitrary description</p></li>
-<li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global<a href="#id17"><span class="problematic" id="id18">*</span></a>ipv4</p></li>
+<li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global<a href="#id18"><span class="problematic" id="id19">*</span></a>ipv4</p></li>
 </ul>
 </dd>
 </dl>
@@ -1937,6 +2183,12 @@ can be read using the file interpolation function</p></li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_packet.SshKey.owner_id">
+<code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.SshKey.owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The UUID of the Packet API User who owns this key</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_packet.SshKey.public_key">
 <code class="sig-name descname">public_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.SshKey.public_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The public key. If this is a file, it
@@ -1951,7 +2203,7 @@ can be read using the file interpolation function</p>
 
 <dl class="method">
 <dt id="pulumi_packet.SshKey.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SshKey.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SshKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SshKey resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1963,6 +2215,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for when the SSH key was created</p></li>
 <li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint of the SSH key</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSH key for identification</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of the Packet API User who owns this key</p></li>
 <li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key. If this is a file, it
 can be read using the file interpolation function</p></li>
 <li><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the SSH key was updated</p></li>
@@ -2402,7 +2655,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_packet.get_device">
-<code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_device</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_device" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_device</code><span class="sig-paren">(</span><em class="sig-param">device_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet device datasource.</p>
 <blockquote>
 <div><dl class="simple">
@@ -2414,6 +2667,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>device_id</strong> (<em>str</em>) – Device ID</p></li>
 <li><p><strong>hostname</strong> (<em>str</em>) – The device name</p></li>
 <li><p><strong>project_id</strong> (<em>str</em>) – The id of the project in which the devices exists</p></li>
 </ul>
@@ -2421,6 +2675,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/device.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/device.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_packet.get_ip_block_ranges">
+<code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_ip_block_ranges</code><span class="sig-paren">(</span><em class="sig-param">facility=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_ip_block_ranges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this datasource to get CIDR expressions for allocated IP blocks of all the types in a project, optionally filtered by facility.</p>
+<p>There are four types of IP blocks in Packet: global IPv4, public IPv4, private IPv4 and IPv6. Both global and public IPv4 are routable from the Internet. Public IPv4 block is allocated in a facility, and addresses from it can only be assigned to devices in that facility. Addresses from Global IPv4 block can be assigned to a device in any facility.</p>
+<p>The datasource has 4 list attributes: <code class="docutils literal notranslate"><span class="pre">global_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code> and <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>, each listing CIDR notation (<code class="docutils literal notranslate"><span class="pre">&lt;network&gt;/&lt;mask&gt;</span></code>) of respective blocks from the project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>facility</strong> (<em>str</em>) – Facility code filtering the IP blocks. Global IPv4 blcoks will be listed anyway. If you omit this, all the block from the project will be listed.</p></li>
+<li><p><strong>project_id</strong> (<em>str</em>) – ID of the project from which to list the blocks.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/ip_block_ranges.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/ip_block_ranges.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -2440,6 +2713,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/operating_system.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/operating_system.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_packet.get_organization">
+<code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_organization</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">organization_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_organization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Packet organization datasource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The organization name</p></li>
+<li><p><strong>organization_id</strong> (<em>str</em>) – The UUID of the organization resource</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/organization.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/organization.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -2466,6 +2756,23 @@ You can then use the cidrsubnet TF builtin function to derive subnets.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_packet.get_project">
+<code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this datasource to retrieve attributes of the Project API resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name which is used to look up the project</p></li>
+<li><p><strong>project_id</strong> (<em>str</em>) – The UUID by which to look up the project</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/project.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/project.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_packet.get_spot_market_price">
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_spot_market_price</code><span class="sig-paren">(</span><em class="sig-param">facility=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_spot_market_price" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get Packet Spot Market Price.</p>
@@ -2479,6 +2786,37 @@ You can then use the cidrsubnet TF builtin function to derive subnets.</p>
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_price.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_price.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_packet.get_spot_market_request">
+<code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_spot_market_request</code><span class="sig-paren">(</span><em class="sig-param">request_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_spot_market_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Packet spot_market_request datasource. The datasource will contain list of device IDs created by referenced Spot Market Request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request_id</strong> (<em>str</em>) – The id of the Spot Market Request</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_request.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_request.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_packet.get_volume">
+<code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_volume</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Packet Block Storage Volume datasource to allow you to read existing volumes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name of volume for lookup</p></li>
+<li><p><strong>project_id</strong> (<em>str</em>) – The ID the parent Packet project (for lookup by name)</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/volume.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
