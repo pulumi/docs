@@ -28,7 +28,7 @@ Managed Kubernetes clusters, such as AWS Elastic Kubernetes Services (EKS), Azur
 
 ## How Crosswalk for Kubernetes Is Organized
 
-Over the course of a year, the Pulumi team has been working with customers and open source users of our infrastructure as code tools for Kubernetes. What we’ve seen are common patterns that we’ve distilled into six distinct playbooks realized as [stacks]({{ relref "intro/concepts/stack/" }}).
+Over the course of a year, the Pulumi team has been working with customers and open source users of our infrastructure as code tools for Kubernetes. What we’ve seen are common patterns that we’ve distilled into six distinct playbooks realized as [stacks](https://www.pulumi.com/docs/intro/concepts/stack/).
 
 ![Managed Infrastructure](infrastructure_resources.svg)
 
