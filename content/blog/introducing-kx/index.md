@@ -8,15 +8,15 @@ date: "2019-11-14"
 meta_image: "feature.png"
 ---
 
-Using the Kubernetes API to deploy and manage workloads often feels heavy and
-repetitive today. Many of the API fields are deeply nested and require users
+Kubernetes provides a rich, stardards-based API that works across cloud and on-premise
+infrastructure. However, many of the API fields are deeply nested and require users
 to specify the same values redundantly across different resources. While this
-explicit specification is necessary for Kubernetes to operate, it’s not friendly
-to the people writing it.
+explicit specification is necessary for Kubernetes to operate, this often leads users to
+copy-paste existing code to manage the boilerplate.
 
 Today, as part of our [Crosswalk for Kubernetes announcement][crosswalk-announce-blog],
-we’re introducing the [Kubernetes Extensions (kx) library][kx-repo]. kx is designed
-to simplify the declaration of Kubernetes resources, and make the API easier for
+we’re introducing the [Kubernetes Extensions (kx) library][kx-repo] for Pulumi. kx is
+designed to simplify the declaration of Kubernetes resources, and make the API easier for
 everyone to use.
 
 ![kx + watch mode](kx.gif)
