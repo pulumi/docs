@@ -4,7 +4,7 @@ menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-defaults
-    weight: 4
+    weight: 5
 ---
 
 {{< cloudchoose >}}

@@ -4,7 +4,7 @@ menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-control-plane
-    weight: 1
+    weight: 2
 ---
 
 {{< cloudchoose >}}
