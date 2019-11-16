@@ -909,7 +909,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or Amazon Resource Name (ARN) of the SES Identity.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the policy.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON string of the policy.</p></li>
 </ul>
 </dd>
 </dl>
@@ -928,12 +927,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Name of the policy.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.ses.IdentityPolicy.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.IdentityPolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>JSON string of the policy.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_aws.ses.IdentityPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityPolicy.get" title="Permalink to this definition">¶</a></dt>
@@ -947,7 +940,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or Amazon Resource Name (ARN) of the SES Identity.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the policy.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON string of the policy.</p></li>
 </ul>
 </dd>
 </dl>

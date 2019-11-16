@@ -124,7 +124,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the container.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the policy.</p></li>
 </ul>
 </dd>
 </dl>
@@ -135,12 +134,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.mediastore.ContainerPolicy.container_name">
 <code class="sig-name descname">container_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediastore.ContainerPolicy.container_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the container.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.mediastore.ContainerPolicy.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediastore.ContainerPolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The contents of the policy.</p>
 </dd></dl>
 
 <dl class="method">
@@ -155,7 +148,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the container.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the policy.</p></li>
 </ul>
 </dd>
 </dl>

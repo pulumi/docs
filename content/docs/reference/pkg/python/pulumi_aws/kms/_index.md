@@ -712,7 +712,6 @@ is enabled. Defaults to false.</p></li>
 <li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Defaults to true.</p></li>
 <li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key.
 Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid policy JSON document.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
 </ul>
 </dd>
@@ -766,12 +765,6 @@ Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are su
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.kms.Key.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A valid policy JSON document.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_aws.kms.Key.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the object.</p>
@@ -799,7 +792,6 @@ is enabled. Defaults to false.</p>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The globally unique identifier for the key.</p></li>
 <li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key.
 Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid policy JSON document.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
 </ul>
 </dd>

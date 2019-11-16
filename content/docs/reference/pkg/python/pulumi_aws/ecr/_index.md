@@ -118,7 +118,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string. See more details about <a class="reference external" href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters">Policy Parameters</a> in the official AWS docs.</p></li>
 <li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository to apply the policy.</p></li>
 </ul>
 </dd>
@@ -126,12 +125,6 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_lifecycle_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_lifecycle_policy.html.markdown</a>.</p>
 </div></blockquote>
-<dl class="attribute">
-<dt id="pulumi_aws.ecr.LifecyclePolicy.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.LifecyclePolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string. See more details about <a class="reference external" href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters">Policy Parameters</a> in the official AWS docs.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.LifecyclePolicy.registry_id">
 <code class="sig-name descname">registry_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.LifecyclePolicy.registry_id" title="Permalink to this definition">¶</a></dt>
@@ -155,8 +148,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy document. This is a JSON formatted string. See more details about <a class="reference external" href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters">Policy Parameters</a> in the official AWS docs.</p>
-</p></li>
 <li><p><strong>registry_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The registry ID where the repository was created.</p></li>
 <li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository to apply the policy.</p></li>
 </ul>
@@ -207,19 +198,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecr.Repository">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">Repository</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">image_tag_mutability=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.Repository" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">Repository</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">image_scanning_configuration=None</em>, <em class="sig-param">image_tag_mutability=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.Repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Container Registry Repository.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>image_scanning_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">ECR User Guide</a> for more information about image scanning.</p></li>
 <li><p><strong>image_tag_mutability</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tag mutability setting for the repository. Must be one of: <code class="docutils literal notranslate"><span class="pre">MUTABLE</span></code> or <code class="docutils literal notranslate"><span class="pre">IMMUTABLE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">MUTABLE</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>image_scanning_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scanOnPush</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown</a>.</p>
 </div></blockquote>
@@ -227,6 +223,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecr.Repository.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.Repository.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Full ARN of the repository.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecr.Repository.image_scanning_configuration">
+<code class="sig-name descname">image_scanning_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.Repository.image_scanning_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">ECR User Guide</a> for more information about image scanning.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scanOnPush</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -261,7 +266,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.ecr.Repository.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">image_tag_mutability=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_url=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.Repository.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">image_scanning_configuration=None</em>, <em class="sig-param">image_tag_mutability=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_url=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.Repository.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Repository resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -271,6 +276,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Full ARN of the repository.</p></li>
+<li><p><strong>image_scanning_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">ECR User Guide</a> for more information about image scanning.</p>
+</p></li>
 <li><p><strong>image_tag_mutability</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tag mutability setting for the repository. Must be one of: <code class="docutils literal notranslate"><span class="pre">MUTABLE</span></code> or <code class="docutils literal notranslate"><span class="pre">IMMUTABLE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">MUTABLE</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository.</p></li>
 <li><p><strong>registry_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The registry ID where the repository was created.</p></li>
@@ -279,6 +286,10 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>image_scanning_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scanOnPush</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown</a>.</p>
 </div></blockquote>
@@ -332,7 +343,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
 <li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository to apply the policy.</p></li>
 </ul>
 </dd>
@@ -340,12 +350,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown</a>.</p>
 </div></blockquote>
-<dl class="attribute">
-<dt id="pulumi_aws.ecr.RepositoryPolicy.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.RepositoryPolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.RepositoryPolicy.registry_id">
 <code class="sig-name descname">registry_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.RepositoryPolicy.registry_id" title="Permalink to this definition">¶</a></dt>
@@ -369,7 +373,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
 <li><p><strong>registry_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The registry ID where the repository was created.</p></li>
 <li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository to apply the policy.</p></li>
 </ul>

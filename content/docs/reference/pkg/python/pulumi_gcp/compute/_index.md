@@ -353,7 +353,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.AwaitableGetInstanceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">AwaitableGetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disks=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">cpu_platform=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_fingerprint=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schedulings=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">service_accounts=None</em>, <em class="sig-param">shielded_instance_configs=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_fingerprint=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AwaitableGetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">AwaitableGetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disks=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">cpu_platform=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">enable_display=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_fingerprint=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schedulings=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">service_accounts=None</em>, <em class="sig-param">shielded_instance_configs=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_fingerprint=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AwaitableGetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -394,6 +394,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.AwaitableGetResourcePolicyResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">AwaitableGetResourcePolicyResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AwaitableGetResourcePolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.AwaitableGetRouterResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">AwaitableGetRouterResult</code><span class="sig-paren">(</span><em class="sig-param">bgps=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AwaitableGetRouterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1896,7 +1901,7 @@ that protects this image.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetInstanceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">GetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disks=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">cpu_platform=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_fingerprint=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schedulings=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">service_accounts=None</em>, <em class="sig-param">shielded_instance_configs=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_fingerprint=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">GetInstanceResult</code><span class="sig-paren">(</span><em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disks=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">cpu_platform=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">enable_display=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_fingerprint=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">schedulings=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">service_accounts=None</em>, <em class="sig-param">shielded_instance_configs=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_fingerprint=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstance.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetInstanceResult.attached_disks">
@@ -2225,6 +2230,18 @@ that protects this image.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetResourcePolicyResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GetResourcePolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.GetRouterResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">GetRouterResult</code><span class="sig-paren">(</span><em class="sig-param">bgps=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetRouterResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRouter.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GetRouterResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GetRouterResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -3166,7 +3183,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Instance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disk=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disk=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_display=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VM instance resource within GCE. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/instances">the official documentation</a>
 and
@@ -3187,6 +3204,8 @@ This defaults to false.</p></li>
 <li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable deletion protection on this instance. Defaults to false.
 <strong>Note:</strong> you must disable deletion protection before removing the resource, or the instance cannot be deleted and the deployment will not complete successfully.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A brief description of this resource.</p></li>
+<li><p><strong>enable_display</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable <a class="reference external" href="https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver">Virtual Displays</a> on this instance.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true in order to update this field.</p></li>
 <li><p><strong>guest_accelerators</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the type and count of accelerator cards attached to the instance. Structure documented below.
 <strong>Note:</strong> GPU accelerators can only be used with <code class="docutils literal notranslate"><span class="pre">on_host_maintenance</span></code> option set to TERMINATE.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
@@ -3381,6 +3400,13 @@ This defaults to false.</p>
 <dt id="pulumi_gcp.compute.Instance.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Instance.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A brief description of this resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.Instance.enable_display">
+<code class="sig-name descname">enable_display</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Instance.enable_display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable <a class="reference external" href="https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver">Virtual Displays</a> on this instance.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true in order to update this field.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3579,7 +3605,7 @@ Structure is documented below.
 
 <dl class="method">
 <dt id="pulumi_gcp.compute.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disk=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">cpu_platform=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_fingerprint=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_fingerprint=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disk=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">cpu_platform=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_display=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_fingerprint=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_fingerprint=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3600,6 +3626,9 @@ This defaults to false.</p></li>
 <li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable deletion protection on this instance. Defaults to false.
 <strong>Note:</strong> you must disable deletion protection before removing the resource, or the instance cannot be deleted and the deployment will not complete successfully.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A brief description of this resource.</p></li>
+<li><p><strong>enable_display</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Enable <a class="reference external" href="https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver">Virtual Displays</a> on this instance.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true in order to update this field.</p>
+</p></li>
 <li><p><strong>guest_accelerators</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the type and count of accelerator cards attached to the instance. Structure documented below.
 <strong>Note:</strong> GPU accelerators can only be used with <code class="docutils literal notranslate"><span class="pre">on_host_maintenance</span></code> option set to TERMINATE.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
@@ -3772,7 +3801,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceFromTemplate">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceFromTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disk=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">source_instance_template=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceFromTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disk=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_display=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">source_instance_template=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VM instance resource within GCE. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/instances">the official documentation</a>
 and
@@ -3902,7 +3931,7 @@ set, the provider zone is used.</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.compute.InstanceFromTemplate.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disk=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">cpu_platform=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_fingerprint=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">source_instance_template=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_fingerprint=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_stopping_for_update=None</em>, <em class="sig-param">attached_disks=None</em>, <em class="sig-param">boot_disk=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">cpu_platform=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_display=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">label_fingerprint=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_fingerprint=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">scratch_disks=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">source_instance_template=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_fingerprint=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InstanceFromTemplate resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4265,7 +4294,7 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) The autohealing policies for this managed instance
+<li><p><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">official documentation</a>.</p></li>
 <li><p><strong>base_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The base instance name to use for
 instances in this group. The value must be a valid
@@ -4291,7 +4320,7 @@ not affect existing instances.</p></li>
 <li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target number of running instances for this managed
 instance group. This value should always be explicitly set unless this resource is attached to
 an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
-<li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
+<li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
 </p></li>
 </ul>
 </dd>
@@ -4302,9 +4331,11 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ) Application versions managed by this instance group. Each
+<li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
-Structure is documented below.</p></li>
+Structure is documented below.
+Until <code class="docutils literal notranslate"><span class="pre">instance_template</span></code> is removed this field will be Optional to allow for a
+graceful upgrade. In the Beta provider and as of 3.0.0 it will be Required.</p></li>
 <li><p><strong>wait_for_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.</p></li>
@@ -4338,9 +4369,10 @@ include lowercase letters, numbers, and hyphens.</p></li>
 </ul>
 <p>The <strong>versions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ) The
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The
 full URL to an instance template from which all new instances
-will be created. This field is only present in the <code class="docutils literal notranslate"><span class="pre">google</span></code> provider.</p></li>
+will be created. This field is replaced by <code class="docutils literal notranslate"><span class="pre">version.instance_template</span></code>. You must
+specify at least one <code class="docutils literal notranslate"><span class="pre">version</span></code> block with an <code class="docutils literal notranslate"><span class="pre">instance_template</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
 characters long and comply with
 <a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
@@ -4360,7 +4392,7 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceGroupManager.auto_healing_policies">
 <code class="sig-name descname">auto_healing_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.auto_healing_policies" title="Permalink to this definition">¶</a></dt>
-<dd><p>) The autohealing policies for this managed instance
+<dd><p>The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">official documentation</a>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -4453,7 +4485,7 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceGroupManager.update_policy">
 <code class="sig-name descname">update_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.update_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>) The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
+<dd><p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxSurgePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -4468,13 +4500,16 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceGroupManager.versions">
 <code class="sig-name descname">versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager.versions" title="Permalink to this definition">¶</a></dt>
-<dd><p>) Application versions managed by this instance group. Each
+<dd><p>Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
-Structure is documented below.</p>
+Structure is documented below.
+Until <code class="docutils literal notranslate"><span class="pre">instance_template</span></code> is removed this field will be Optional to allow for a
+graceful upgrade. In the Beta provider and as of 3.0.0 it will be Required.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ) The
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The
 full URL to an instance template from which all new instances
-will be created. This field is only present in the <code class="docutils literal notranslate"><span class="pre">google</span></code> provider.</p></li>
+will be created. This field is replaced by <code class="docutils literal notranslate"><span class="pre">version.instance_template</span></code>. You must
+specify at least one <code class="docutils literal notranslate"><span class="pre">version</span></code> block with an <code class="docutils literal notranslate"><span class="pre">instance_template</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the instance group manager. Must be 1-63
 characters long and comply with
 <a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
@@ -4516,7 +4551,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) The autohealing policies for this managed instance
+<li><p><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">official documentation</a>.</p>
 </p></li>
 <li><p><strong>base_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The base instance name to use for
@@ -4546,7 +4581,7 @@ not affect existing instances.</p></li>
 <li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target number of running instances for this managed
 instance group. This value should always be explicitly set unless this resource is attached to
 an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
-<li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
+<li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/instanceGroupManagers/patch">API</a></p>
 </p></li>
 </ul>
 </dd>
@@ -4557,9 +4592,11 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ) Application versions managed by this instance group. Each
+<li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
-Structure is documented below.</p></li>
+Structure is documented below.
+Until <code class="docutils literal notranslate"><span class="pre">instance_template</span></code> is removed this field will be Optional to allow for a
+graceful upgrade. In the Beta provider and as of 3.0.0 it will be Required.</p></li>
 <li><p><strong>wait_for_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.</p></li>
@@ -4593,9 +4630,10 @@ include lowercase letters, numbers, and hyphens.</p></li>
 </ul>
 <p>The <strong>versions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ) The
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The
 full URL to an instance template from which all new instances
-will be created. This field is only present in the <code class="docutils literal notranslate"><span class="pre">google</span></code> provider.</p></li>
+will be created. This field is replaced by <code class="docutils literal notranslate"><span class="pre">version.instance_template</span></code>. You must
+specify at least one <code class="docutils literal notranslate"><span class="pre">version</span></code> block with an <code class="docutils literal notranslate"><span class="pre">instance_template</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
 characters long and comply with
 <a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
@@ -4654,53 +4692,61 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceIAMBinding">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceIAMBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for GCE instance. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</p></li>
-</ul>
-<blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</div></blockquote>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceIAMBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a InstanceIAMBinding resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
+<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone of the instance. If
-unspecified, this defaults to the zone configured in the provider.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+zone is specified, it is taken from the provider configuration.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_binding.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_gcp.compute.InstanceIAMBinding.condition">
+<code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding.condition" title="Permalink to this definition">¶</a></dt>
+<dd><elided><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMBinding.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding.etag" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) The etag of the instance’s IAM policy.</p>
+<dd><p>(Computed) The etag of the IAM policy.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMBinding.instance_name">
 <code class="sig-name descname">instance_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding.instance_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance.</p>
+<dd><p>Used to find the parent resource to bind the IAM policy to</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMBinding.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4714,13 +4760,14 @@ is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMBinding.zone">
 <code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding.zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>The zone of the instance. If
-unspecified, this defaults to the zone configured in the provider.</p>
+<dd><p>A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+zone is specified, it is taken from the provider configuration.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_gcp.compute.InstanceIAMBinding.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMBinding.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InstanceIAMBinding resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4729,18 +4776,25 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the instance’s IAM policy.</p></li>
-<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
+<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone of the instance. If
-unspecified, this defaults to the zone configured in the provider.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+zone is specified, it is taken from the provider configuration.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_binding.html.markdown</a>.</p>
 </div></blockquote>
@@ -4786,53 +4840,61 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceIAMMember">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceIAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for GCE instance. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</p></li>
-</ul>
-<blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</div></blockquote>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceIAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a InstanceIAMMember resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
+<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone of the instance. If
-unspecified, this defaults to the zone configured in the provider.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+zone is specified, it is taken from the provider configuration.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_member.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_gcp.compute.InstanceIAMMember.condition">
+<code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember.condition" title="Permalink to this definition">¶</a></dt>
+<dd><elided><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMMember.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember.etag" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) The etag of the instance’s IAM policy.</p>
+<dd><p>(Computed) The etag of the IAM policy.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMMember.instance_name">
 <code class="sig-name descname">instance_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember.instance_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance.</p>
+<dd><p>Used to find the parent resource to bind the IAM policy to</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMMember.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4846,13 +4908,14 @@ is not provided, the provider project is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMMember.zone">
 <code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember.zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>The zone of the instance. If
-unspecified, this defaults to the zone configured in the provider.</p>
+<dd><p>A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+zone is specified, it is taken from the provider configuration.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_gcp.compute.InstanceIAMMember.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMMember.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InstanceIAMMember resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4861,18 +4924,25 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the instance’s IAM policy.</p></li>
-<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
+<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone of the instance. If
-unspecified, this defaults to the zone configured in the provider.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+zone is specified, it is taken from the provider configuration.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance_iam_member.html.markdown</a>.</p>
 </div></blockquote>
@@ -4919,28 +4989,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceIAMPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceIAMPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Three different resources help you manage your IAM policy for GCE instance. Each of these resources serves a different use case:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the instance are preserved.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the instance are preserved.</p></li>
-</ul>
-<blockquote>
-<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> or they will fight over what your policy should be.</p>
-<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">compute.InstanceIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-</div></blockquote>
+<dd><p>Create a InstanceIAMPolicy resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance.</p></li>
+<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 <li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
 a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone of the instance. If
-unspecified, this defaults to the zone configured in the provider.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+zone is specified, it is taken from the provider configuration.</p></li>
 </ul>
 </dd>
 </dl>
@@ -4950,13 +5012,13 @@ unspecified, this defaults to the zone configured in the provider.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMPolicy.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMPolicy.etag" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) The etag of the instance’s IAM policy.</p>
+<dd><p>(Computed) The etag of the IAM policy.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMPolicy.instance_name">
 <code class="sig-name descname">instance_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMPolicy.instance_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance.</p>
+<dd><p>Used to find the parent resource to bind the IAM policy to</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4969,15 +5031,16 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMPolicy.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMPolicy.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceIAMPolicy.zone">
 <code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceIAMPolicy.zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>The zone of the instance. If
-unspecified, this defaults to the zone configured in the provider.</p>
+<dd><p>A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+zone is specified, it is taken from the provider configuration.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4991,14 +5054,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the instance’s IAM policy.</p></li>
-<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
+<li><p><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 <li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
 a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
-<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone of the instance. If
-unspecified, this defaults to the zone configured in the provider.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no zone is provided in the parent identifier and no
+zone is specified, it is taken from the provider configuration.</p></li>
 </ul>
 </dd>
 </dl>
@@ -5047,7 +5111,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceTemplate">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">instance_description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">InstanceTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">enable_display=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">instance_description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VM instance template resource within GCE. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/instance-templates">the official documentation</a>
 and
@@ -5063,6 +5127,9 @@ packets with non-matching source or destination IPs. This defaults to false.</p>
 <li><p><strong>disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
 documented below.</p></li>
+<li><p><strong>enable_display</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Enable <a class="reference external" href="https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver">Virtual Displays</a> on this instance.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true in order to update this field.</p>
+</p></li>
 <li><p><strong>guest_accelerators</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the type and count of accelerator cards attached to the instance. Structure documented below.</p></li>
 <li><p><strong>instance_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A brief description to use for instances
 created from this template.</p></li>
@@ -5214,6 +5281,13 @@ created from this template,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceImage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.InstanceTemplate.enable_display">
+<code class="sig-name descname">enable_display</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate.enable_display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable <a class="reference external" href="https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver">Virtual Displays</a> on this instance.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true in order to update this field.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5394,7 +5468,7 @@ this configuration option are detailed below.</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.compute.InstanceTemplate.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">instance_description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_fingerprint=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_fingerprint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">can_ip_forward=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">enable_display=None</em>, <em class="sig-param">guest_accelerators=None</em>, <em class="sig-param">instance_description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">metadata_fingerprint=None</em>, <em class="sig-param">metadata_startup_script=None</em>, <em class="sig-param">min_cpu_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">service_account=None</em>, <em class="sig-param">shielded_instance_config=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tags_fingerprint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InstanceTemplate resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5409,6 +5483,9 @@ packets with non-matching source or destination IPs. This defaults to false.</p>
 <li><p><strong>disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
 documented below.</p></li>
+<li><p><strong>enable_display</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Enable <a class="reference external" href="https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver">Virtual Displays</a> on this instance.
+<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">allow_stopping_for_update</span></code> must be set to true in order to update this field.</p>
+</p></li>
 <li><p><strong>guest_accelerators</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of the type and count of accelerator cards attached to the instance. Structure documented below.</p></li>
 <li><p><strong>instance_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A brief description to use for instances
 created from this template.</p></li>
@@ -6863,7 +6940,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RegionBackendService">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionBackendService</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backends=None</em>, <em class="sig-param">connection_draining_timeout_sec=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">failover_policy=None</em>, <em class="sig-param">health_checks=None</em>, <em class="sig-param">load_balancing_scheme=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">session_affinity=None</em>, <em class="sig-param">timeout_sec=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">RegionBackendService</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">affinity_cookie_ttl_sec=None</em>, <em class="sig-param">backends=None</em>, <em class="sig-param">circuit_breakers=None</em>, <em class="sig-param">connection_draining_timeout_sec=None</em>, <em class="sig-param">consistent_hash=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">failover_policy=None</em>, <em class="sig-param">health_checks=None</em>, <em class="sig-param">load_balancing_scheme=None</em>, <em class="sig-param">locality_lb_policy=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">outlier_detection=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">session_affinity=None</em>, <em class="sig-param">timeout_sec=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a RegionBackendService resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -6877,15 +6954,84 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>backends</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">balancingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityScaler</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">failover</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRatePerEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRatePerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>circuit_breakers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPendingRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRequestsPerConnection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>consistent_hash</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">httpCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpHeaderName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumRingSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 <p>The <strong>failover_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">disableConnectionDrainOnFailover</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dropTrafficIfUnhealthy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">failover_ratio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>log_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleRate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>outlier_detection</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">baseEjectionTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consecutiveErrors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consecutiveGatewayFailure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enforcingConsecutiveErrors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enforcingConsecutiveGatewayFailure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enforcingSuccessRate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxEjectionPercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successRateMinimumHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successRateRequestVolume</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successRateStdevFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_backend_service.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_backend_service.html.markdown</a>.</p>
@@ -6905,7 +7051,7 @@ If it is not provided, the provider project is used.</p>
 
 <dl class="method">
 <dt id="pulumi_gcp.compute.RegionBackendService.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backends=None</em>, <em class="sig-param">connection_draining_timeout_sec=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">failover_policy=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">health_checks=None</em>, <em class="sig-param">load_balancing_scheme=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">session_affinity=None</em>, <em class="sig-param">timeout_sec=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">affinity_cookie_ttl_sec=None</em>, <em class="sig-param">backends=None</em>, <em class="sig-param">circuit_breakers=None</em>, <em class="sig-param">connection_draining_timeout_sec=None</em>, <em class="sig-param">consistent_hash=None</em>, <em class="sig-param">creation_timestamp=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">failover_policy=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">health_checks=None</em>, <em class="sig-param">load_balancing_scheme=None</em>, <em class="sig-param">locality_lb_policy=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">outlier_detection=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">session_affinity=None</em>, <em class="sig-param">timeout_sec=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RegionBackendService resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -6922,15 +7068,84 @@ If it is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>backends</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">balancingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityScaler</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">failover</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRatePerEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRatePerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUtilization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>circuit_breakers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnections</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPendingRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRequestsPerConnection</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>consistent_hash</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">httpCookie</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpHeaderName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumRingSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 <p>The <strong>failover_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">disableConnectionDrainOnFailover</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dropTrafficIfUnhealthy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">failover_ratio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>log_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sampleRate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>outlier_detection</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">baseEjectionTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consecutiveErrors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consecutiveGatewayFailure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enforcingConsecutiveErrors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enforcingConsecutiveGatewayFailure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enforcingSuccessRate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nanos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxEjectionPercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successRateMinimumHosts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successRateRequestVolume</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successRateStdevFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_backend_service.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_backend_service.html.markdown</a>.</p>
@@ -7290,7 +7505,7 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) The autohealing policies for this managed instance
+<li><p><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">official documentation</a>.</p>
 </p></li>
 <li><p><strong>base_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The base instance name to use for
@@ -7330,11 +7545,13 @@ not affect existing instances.</p></li>
 <li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target number of running instances for this managed
 instance group. This value should always be explicitly set unless this resource is attached to
 an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
-<li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch">API</a></p>
+<li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch">API</a></p>
 </p></li>
-<li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ) Application versions managed by this instance group. Each
+<li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
-Structure is documented below.</p></li>
+Structure is documented below.
+Until <code class="docutils literal notranslate"><span class="pre">instance_template</span></code> is removed this field will be Optional to allow for a
+graceful upgrade. In the Beta provider and as of 3.0.0 it will be Required.</p></li>
 <li><p><strong>wait_for_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.</p></li>
@@ -7367,9 +7584,10 @@ include lowercase letters, numbers, and hyphens.</p></li>
 </ul>
 <p>The <strong>versions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ) The full URL to an instance template from
-which all new instances will be created. This field is only present in the
-<code class="docutils literal notranslate"><span class="pre">google</span></code> provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The
+full URL to an instance template from which all new instances
+will be created. This field is replaced by <code class="docutils literal notranslate"><span class="pre">version.instance_template</span></code>. You must
+specify at least one <code class="docutils literal notranslate"><span class="pre">version</span></code> block with an <code class="docutils literal notranslate"><span class="pre">instance_template</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
 characters long and comply with
 <a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
@@ -7389,7 +7607,7 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager.auto_healing_policies">
 <code class="sig-name descname">auto_healing_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.auto_healing_policies" title="Permalink to this definition">¶</a></dt>
-<dd><p>) The autohealing policies for this managed instance
+<dd><p>The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">official documentation</a>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">healthCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -7495,7 +7713,7 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager.update_policy">
 <code class="sig-name descname">update_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.update_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>) The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch">API</a></p>
+<dd><p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch">API</a></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">instanceRedistributionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxSurgeFixed</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -7511,13 +7729,16 @@ an autoscaler, in which case it should never be set. Defaults to <code class="do
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager.versions">
 <code class="sig-name descname">versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager.versions" title="Permalink to this definition">¶</a></dt>
-<dd><p>) Application versions managed by this instance group. Each
+<dd><p>Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
-Structure is documented below.</p>
+Structure is documented below.
+Until <code class="docutils literal notranslate"><span class="pre">instance_template</span></code> is removed this field will be Optional to allow for a
+graceful upgrade. In the Beta provider and as of 3.0.0 it will be Required.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ) The full URL to an instance template from
-which all new instances will be created. This field is only present in the
-<code class="docutils literal notranslate"><span class="pre">google</span></code> provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The
+full URL to an instance template from which all new instances
+will be created. This field is replaced by <code class="docutils literal notranslate"><span class="pre">version.instance_template</span></code>. You must
+specify at least one <code class="docutils literal notranslate"><span class="pre">version</span></code> block with an <code class="docutils literal notranslate"><span class="pre">instance_template</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the instance group manager. Must be 1-63
 characters long and comply with
 <a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
@@ -7552,7 +7773,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) The autohealing policies for this managed instance
+<li><p><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">official documentation</a>.</p>
 </p></li>
 <li><p><strong>base_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The base instance name to use for
@@ -7595,11 +7816,13 @@ not affect existing instances.</p></li>
 <li><p><strong>target_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target number of running instances for this managed
 instance group. This value should always be explicitly set unless this resource is attached to
 an autoscaler, in which case it should never be set. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
-<li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch">API</a></p>
+<li><p><strong>update_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The update policy for this managed instance group. Structure is documented below. For more information, see the <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups">official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch">API</a></p>
 </p></li>
-<li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ) Application versions managed by this instance group. Each
+<li><p><strong>versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
-Structure is documented below.</p></li>
+Structure is documented below.
+Until <code class="docutils literal notranslate"><span class="pre">instance_template</span></code> is removed this field will be Optional to allow for a
+graceful upgrade. In the Beta provider and as of 3.0.0 it will be Required.</p></li>
 <li><p><strong>wait_for_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.</p></li>
@@ -7632,9 +7855,10 @@ include lowercase letters, numbers, and hyphens.</p></li>
 </ul>
 <p>The <strong>versions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ) The full URL to an instance template from
-which all new instances will be created. This field is only present in the
-<code class="docutils literal notranslate"><span class="pre">google</span></code> provider.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The
+full URL to an instance template from which all new instances
+will be created. This field is replaced by <code class="docutils literal notranslate"><span class="pre">version.instance_template</span></code>. You must
+specify at least one <code class="docutils literal notranslate"><span class="pre">version</span></code> block with an <code class="docutils literal notranslate"><span class="pre">instance_template</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance group manager. Must be 1-63
 characters long and comply with
 <a class="reference external" href="https://www.ietf.org/rfc/rfc1035.txt">RFC1035</a>. Supported characters
@@ -10014,45 +10238,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">SubnetworkIAMBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">SubnetworkIAMBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SubnetworkIAMBinding resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the subnetwork. If
-unspecified, this defaults to the region configured in the provider.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+region is specified, it is taken from the provider configuration.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnetwork.</p></li>
+<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_binding.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding.etag" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) The etag of the subnetwork’s IAM policy.</p>
+<dd><p>(Computed) The etag of the IAM policy.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The region of the subnetwork. If
-unspecified, this defaults to the region configured in the provider.</p>
+<dd><p>URL of the GCP region for this subnetwork.
+Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+region is specified, it is taken from the provider configuration.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10066,12 +10300,12 @@ unspecified, this defaults to the region configured in the provider.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding.subnetwork">
 <code class="sig-name descname">subnetwork</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding.subnetwork" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the subnetwork.</p>
+<dd><p>Used to find the parent resource to bind the IAM policy to</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">subnetwork=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">subnetwork=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SubnetworkIAMBinding resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -10080,18 +10314,26 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the subnetwork’s IAM policy.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the subnetwork. If
-unspecified, this defaults to the region configured in the provider.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+region is specified, it is taken from the provider configuration.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnetwork.</p></li>
+<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_binding.html.markdown</a>.</p>
 </div></blockquote>
@@ -10137,45 +10379,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">SubnetworkIAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">SubnetworkIAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a SubnetworkIAMMember resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the subnetwork. If
-unspecified, this defaults to the region configured in the provider.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+region is specified, it is taken from the provider configuration.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnetwork.</p></li>
+<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_member.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember.etag" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) The etag of the subnetwork’s IAM policy.</p>
+<dd><p>(Computed) The etag of the IAM policy.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The region of the subnetwork. If
-unspecified, this defaults to the region configured in the provider.</p>
+<dd><p>URL of the GCP region for this subnetwork.
+Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+region is specified, it is taken from the provider configuration.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10189,12 +10441,12 @@ unspecified, this defaults to the region configured in the provider.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember.subnetwork">
 <code class="sig-name descname">subnetwork</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember.subnetwork" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the subnetwork.</p>
+<dd><p>Used to find the parent resource to bind the IAM policy to</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">subnetwork=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">subnetwork=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SubnetworkIAMMember resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -10203,18 +10455,26 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the subnetwork’s IAM policy.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the subnetwork. If
-unspecified, this defaults to the region configured in the provider.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+region is specified, it is taken from the provider configuration.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">compute.SubnetworkIAMBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
-<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnetwork.</p></li>
+<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_subnetwork_iam_member.html.markdown</a>.</p>
 </div></blockquote>
@@ -10269,11 +10529,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
 a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the subnetwork. If
-unspecified, this defaults to the region configured in the provider.</p></li>
-<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnetwork.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+region is specified, it is taken from the provider configuration.</p></li>
+<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 </ul>
 </dd>
 </dl>
@@ -10283,7 +10545,7 @@ unspecified, this defaults to the region configured in the provider.</p></li>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMPolicy.etag">
 <code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMPolicy.etag" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Computed) The etag of the subnetwork’s IAM policy.</p>
+<dd><p>(Computed) The etag of the IAM policy.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10296,21 +10558,23 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMPolicy.project">
 <code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMPolicy.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMPolicy.region">
 <code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMPolicy.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The region of the subnetwork. If
-unspecified, this defaults to the region configured in the provider.</p>
+<dd><p>URL of the GCP region for this subnetwork.
+Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+region is specified, it is taken from the provider configuration.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SubnetworkIAMPolicy.subnetwork">
 <code class="sig-name descname">subnetwork</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMPolicy.subnetwork" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the subnetwork.</p>
+<dd><p>Used to find the parent resource to bind the IAM policy to</p>
 </dd></dl>
 
 <dl class="method">
@@ -10324,14 +10588,16 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the subnetwork’s IAM policy.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
 <li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
 a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
-<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the subnetwork. If
-unspecified, this defaults to the region configured in the provider.</p></li>
-<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnetwork.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the GCP region for this subnetwork.
+Used to find the parent resource to bind the IAM policy to. If not specified,
+the value will be parsed from the identifier of the parent resource. If no region is provided in the parent identifier and no
+region is specified, it is taken from the provider configuration.</p></li>
+<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 </ul>
 </dd>
 </dl>
@@ -11645,6 +11911,12 @@ Defaults to no filtering (all available regions - both <code class="docutils lit
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_resource_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/compute_resource_policy.html.markdown</a>.</p>
 </div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.compute.get_router">
+<code class="sig-prename descclassname">pulumi_gcp.compute.</code><code class="sig-name descname">get_router</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_router" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 <dl class="function">

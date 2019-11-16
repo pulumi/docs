@@ -597,7 +597,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketIAMBinding">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketIAMBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketIAMBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Three different resources help you manage your IAM policy for storage bucket. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">storage.BucketIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the storage bucket are preserved.</p></li>
@@ -618,6 +618,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_binding.html.markdown</a>.</p>
 </div></blockquote>
@@ -642,7 +648,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_gcp.storage.BucketIAMBinding.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMBinding.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMBinding.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing BucketIAMBinding resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -658,6 +664,12 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_binding.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_binding.html.markdown</a>.</p>
 </div></blockquote>
@@ -703,7 +715,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketIAMMember">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketIAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMMember" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.storage.</code><code class="sig-name descname">BucketIAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>Three different resources help you manage your IAM policy for storage bucket. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">storage.BucketIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the storage bucket are preserved.</p></li>
@@ -724,6 +736,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_member.html.markdown</a>.</p>
 </div></blockquote>
@@ -748,7 +766,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_gcp.storage.BucketIAMMember.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMMember.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMMember.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing BucketIAMMember resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -764,6 +782,12 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_member.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_iam_member.html.markdown</a>.</p>
 </div></blockquote>
@@ -1491,6 +1515,12 @@ i.e. <code class="docutils literal notranslate"><span class="pre">projects/my-gc
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.storage.Notification.notification_id">
+<code class="sig-name descname">notification_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Notification.notification_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the created notification.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.storage.Notification.object_name_prefix">
 <code class="sig-name descname">object_name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Notification.object_name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.</p>
@@ -1518,7 +1548,7 @@ i.e. <code class="docutils literal notranslate"><span class="pre">projects/my-gc
 
 <dl class="method">
 <dt id="pulumi_gcp.storage.Notification.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">event_types=None</em>, <em class="sig-param">object_name_prefix=None</em>, <em class="sig-param">payload_format=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">topic=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Notification.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">event_types=None</em>, <em class="sig-param">notification_id=None</em>, <em class="sig-param">object_name_prefix=None</em>, <em class="sig-param">payload_format=None</em>, <em class="sig-param">self_link=None</em>, <em class="sig-param">topic=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Notification.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Notification resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1530,6 +1560,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</p></li>
 <li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription</p></li>
 <li><p><strong>event_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: <code class="docutils literal notranslate"><span class="pre">&quot;OBJECT_FINALIZE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;OBJECT_METADATA_UPDATE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;OBJECT_DELETE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;OBJECT_ARCHIVE&quot;</span></code></p></li>
+<li><p><strong>notification_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the created notification.</p></li>
 <li><p><strong>object_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.</p></li>
 <li><p><strong>payload_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The desired content of the Payload. One of <code class="docutils literal notranslate"><span class="pre">&quot;JSON_API_V1&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code>.</p></li>
 <li><p><strong>self_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the created resource.</p></li>
@@ -2189,12 +2220,12 @@ and
 Typically retrieved from <code class="docutils literal notranslate"><span class="pre">google_storage_bucket_object.object.md5hash</span></code> attribute.
 If you provide this in the datasource, the client (e.g. browser, curl) must provide the <code class="docutils literal notranslate"><span class="pre">Content-MD5</span></code> HTTP header with this same value in its request.</p></li>
 <li><p><strong>content_type</strong> (<em>str</em>) – If you specify this in the datasource, the client must provide the <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> HTTP header with the same value in its request.</p></li>
-<li><p><strong>credentials</strong> (<em>str</em>) – What Google service account credentials json should be used to sign the URL. 
+<li><p><strong>credentials</strong> (<em>str</em>) – What Google service account credentials json should be used to sign the URL.
 This data source checks the following locations for credentials, in order of preference: data source <code class="docutils literal notranslate"><span class="pre">credentials</span></code> attribute, provider <code class="docutils literal notranslate"><span class="pre">credentials</span></code> attribute and finally the GOOGLE_APPLICATION_CREDENTIALS environment variable.</p></li>
-<li><p><strong>duration</strong> (<em>str</em>) – <p>For how long shall the signed URL be valid (defaults to 1 hour - i.e. <code class="docutils literal notranslate"><span class="pre">1h</span></code>). 
+<li><p><strong>duration</strong> (<em>str</em>) – <p>For how long shall the signed URL be valid (defaults to 1 hour - i.e. <code class="docutils literal notranslate"><span class="pre">1h</span></code>).
 See <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">here</a> for info on valid duration formats.</p>
 </p></li>
-<li><p><strong>extension_headers</strong> (<em>dict</em>) – As needed. The server checks to make sure that the client provides matching values in requests using the signed URL. 
+<li><p><strong>extension_headers</strong> (<em>dict</em>) – As needed. The server checks to make sure that the client provides matching values in requests using the signed URL.
 Any header starting with <code class="docutils literal notranslate"><span class="pre">x-goog-</span></code> is accepted but see the <a class="reference external" href="https://cloud.google.com/storage/docs/xml-api/reference-headers">Google Docs</a> for list of headers that are supported by Google.</p></li>
 <li><p><strong>http_method</strong> (<em>str</em>) – What HTTP Method will the signed URL allow (defaults to <code class="docutils literal notranslate"><span class="pre">GET</span></code>)</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – The full path to the object inside the bucket</p></li>
