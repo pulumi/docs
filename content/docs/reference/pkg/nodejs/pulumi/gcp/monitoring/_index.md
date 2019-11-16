@@ -41,7 +41,7 @@ meta_desc: "Explore members of the monitoring module in the @pulumi/gcp package.
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AlertPolicy" data-link-title="AlertPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L12">
         Resource <strong>AlertPolicy</strong>
     </a>
 </h3>
@@ -51,7 +51,7 @@ meta_desc: "Explore members of the monitoring module in the @pulumi/gcp package.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_alert_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L49"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -65,7 +65,7 @@ Create a AlertPolicy resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -76,14 +76,14 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlertPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -94,37 +94,61 @@ Returns true if the given object is an instance of AlertPolicy.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-combiner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L39">property <b>combiner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L42">property <b>combiner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>combiner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+How to combine the results of multiple conditions to determine if an incident should be opened.
+
 <h4 class="pdoc-member-header" id="AlertPolicy-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L40">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L47">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyCondition'>outputs.monitoring.AlertPolicyCondition</a>[]&gt;;</code></pre>
+
+A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If
+the combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+
 <h4 class="pdoc-member-header" id="AlertPolicy-creationRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L41">property <b>creationRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L52">property <b>creationRecord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationRecord: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyCreationRecord'>outputs.monitoring.AlertPolicyCreationRecord</a>&gt;;</code></pre>
+
+A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field
+will be ignored.
+
 <h4 class="pdoc-member-header" id="AlertPolicy-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L42">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L58">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
+don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
+characters.
+
 <h4 class="pdoc-member-header" id="AlertPolicy-documentation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L43">property <b>documentation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L64">property <b>documentation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>documentation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AlertPolicyDocumentation'>outputs.monitoring.AlertPolicyDocumentation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
+don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
+characters.
+
 <h4 class="pdoc-member-header" id="AlertPolicy-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L44">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L68">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Whether or not the policy is enabled. The default is true.
+
 <h4 class="pdoc-member-header" id="AlertPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -133,27 +157,36 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L45">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L69">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+
 <h4 class="pdoc-member-header" id="AlertPolicy-notificationChannels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L47">property <b>notificationChannels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L80">property <b>notificationChannels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationChannels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Identifies the notification channels to which notifications should be sent when incidents are opened or closed or
+when new violations occur on an already opened incident. Each element of this array corresponds to the name field in
+each of the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of
+the entries in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+
 <h4 class="pdoc-member-header" id="AlertPolicy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L48">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L81">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -162,12 +195,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-userLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L49">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L87">property <b>userLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userLabels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to
+64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and
+values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+
 <h3 class="pdoc-module-header" id="Group" data-link-title="Group">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L12">
         Resource <strong>Group</strong>
     </a>
 </h3>
@@ -177,7 +215,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -191,7 +229,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -202,14 +240,14 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -220,17 +258,23 @@ Returns true if the given object is an instance of Group.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Group-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L39">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L42">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A user-assigned name for this group, used only for display purposes.
+
 <h4 class="pdoc-member-header" id="Group-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L40">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L46">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The filter used to determine which monitored resources belong to this group.
+
 <h4 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -239,22 +283,33 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Group-isCluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L41">property <b>isCluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L51">property <b>isCluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isCluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+If true, the members of this group are considered to be a cluster. The system can perform additional analysis on
+groups that are clusters.
+
 <h4 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A unique identifier for this group. The format is "projects/{project_id_or_number}/groups/{group_id}".
+
 <h4 class="pdoc-member-header" id="Group-parentName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L43">property <b>parentName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L60">property <b>parentName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parentName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}".
+For groups with no parent, parentName is the empty string, "".
+
 <h4 class="pdoc-member-header" id="Group-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L48">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L65">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -263,7 +318,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -272,7 +327,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NotificationChannel" data-link-title="NotificationChannel">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L12">
         Resource <strong>NotificationChannel</strong>
     </a>
 </h3>
@@ -282,7 +337,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_notification_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="NotificationChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L51"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -296,7 +351,7 @@ Create a NotificationChannel resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NotificationChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -307,14 +362,14 @@ Get an existing NotificationChannel resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NotificationChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NotificationChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -325,22 +380,37 @@ Returns true if the given object is an instance of NotificationChannel.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NotificationChannel-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L39">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L43">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+An optional human-readable description of this notification channel. This description may provide additional
+details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
+
 <h4 class="pdoc-member-header" id="NotificationChannel-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L40">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L49">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and
+unique name in order to make it easier to identify the channels in your project, though this is not enforced. The
+display name is limited to 512 Unicode characters.
+
 <h4 class="pdoc-member-header" id="NotificationChannel-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L41">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L56">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of
+notifications to a particular channel without removing the channel from all alerting policies that reference the
+channel. This is a more convenient approach when the change is temporary and you want to receive notifications from
+the same set of alerting policies on the channel at some point in the future.
+
 <h4 class="pdoc-member-header" id="NotificationChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -349,17 +419,30 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NotificationChannel-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L42">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L66">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Configuration fields that define the channel and its behavior. The permissible and required labels are specified in
+the NotificationChannelDescriptor corresponding to the type field. **Note**: Some NotificationChannelDescriptor
+labels are sensitive and the API will return an partially-obfuscated value. For example, for '"type": "slack"'
+channels, an 'auth_token' label with value "SECRET" will be obfuscated as "**CRET". In order to avoid a diff,
+Terraform will use the state value if it appears that the obfuscated value matches the state value in
+length/unobfuscated characters. However, Terraform will not detect a a diff if the obfuscated portion of the value
+was changed outside of Terraform.
+
 <h4 class="pdoc-member-header" id="NotificationChannel-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The full REST resource name for this channel. The syntax is: projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]
+The [CHANNEL_ID] is automatically assigned by the server on creation.
+
 <h4 class="pdoc-member-header" id="NotificationChannel-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L48">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L76">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -368,12 +451,17 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="NotificationChannel-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L49">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L82">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field.
+See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the
+list of valid values such as "email", "slack", etc...
+
 <h4 class="pdoc-member-header" id="NotificationChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -382,17 +470,33 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="NotificationChannel-userLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L50">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L90">property <b>userLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userLabels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's
+schema, unlike the labels field. This field is intended to be used for organizing and identifying the
+NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode
+characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals,
+underscores, and dashes. Keys must begin with a letter.
+
 <h4 class="pdoc-member-header" id="NotificationChannel-verificationStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L51">property <b>verificationStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L100">property <b>verificationStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>verificationStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Indicates whether this channel has been verified or not. On a ListNotificationChannels or GetNotificationChannel
+operation, this field is expected to be populated.If the value is UNVERIFIED, then it indicates that the channel is
+non-functioning (it both requires verification and lacks verification); otherwise, it is assumed that the channel
+works.If the channel is neither VERIFIED nor UNVERIFIED, it implies that the channel is of a type that does not
+require verification or that this specific channel has been exempted from verification because it was created prior
+to verification being required for channels of this type.This field cannot be modified using a standard
+UpdateNotificationChannel operation. To change the value of this field, you must call VerifyNotificationChannel.
+
 <h3 class="pdoc-module-header" id="UptimeCheckConfig" data-link-title="UptimeCheckConfig">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L12">
         Resource <strong>UptimeCheckConfig</strong>
     </a>
 </h3>
@@ -402,7 +506,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_uptime_check_config.html.markdown.
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -416,7 +520,7 @@ Create a UptimeCheckConfig resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -427,14 +531,14 @@ Get an existing UptimeCheckConfig resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -445,22 +549,34 @@ Returns true if the given object is an instance of UptimeCheckConfig.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-contentMatchers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L39">property <b>contentMatchers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L44">property <b>contentMatchers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentMatchers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigContentMatcher'>outputs.monitoring.UptimeCheckConfigContentMatcher</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The expected content on the page the check is run against. Currently, only the first entry in the list is supported,
+and other entries will be ignored. The server will look for an exact match of the string in the page response's
+content. This field is optional and should only be specified if a content match is required.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L40">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L49">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver
+Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-httpCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L41">property <b>httpCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L53">property <b>httpCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigHttpCheck'>outputs.monitoring.UptimeCheckConfigHttpCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Contains information needed to make an HTTP or HTTPS check.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -469,32 +585,45 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-internalCheckers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L42">property <b>internalCheckers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L54">property <b>internalCheckers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internalCheckers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigInternalChecker'>outputs.monitoring.UptimeCheckConfigInternalChecker</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-isInternal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L43">property <b>isInternal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L55">property <b>isInternal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isInternal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-monitoredResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L44">property <b>monitoredResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L61">property <b>monitoredResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoredResource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigMonitoredResource'>outputs.monitoring.UptimeCheckConfigMonitoredResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The
+following monitored resource types are supported for uptime checks: uptime_url gce_instance gae_app aws_ec2_instance
+aws_elb_load_balancer
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A unique resource name for this UptimeCheckConfig. The format is
+projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L46">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L71">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s
+(5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L51">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L76">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -503,32 +632,50 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L52">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L80">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigResourceGroup'>outputs.monitoring.UptimeCheckConfigResourceGroup</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The group resource associated with the configuration.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-selectedRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L53">property <b>selectedRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L86">property <b>selectedRegions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selectedRegions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The list of regions from which the check will be run. Some regions contain one location, and others contain more
+than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an
+error message is returned. Not specifying this field will result in uptime checks running from all regions.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-tcpCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L54">property <b>tcpCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L90">property <b>tcpCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tcpCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#UptimeCheckConfigTcpCheck'>outputs.monitoring.UptimeCheckConfigTcpCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Contains information needed to make a TCP check.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L55">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L95">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats
+https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-uptimeCheckId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L56">property <b>uptimeCheckId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L99">property <b>uptimeCheckId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uptimeCheckId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of the uptime check
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -540,7 +687,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AlertPolicyArgs" data-link-title="AlertPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L204">
         interface <strong>AlertPolicyArgs</strong>
     </a>
 </h3>
@@ -550,52 +697,83 @@ deployments.
 The set of arguments for constructing a AlertPolicy resource.
 
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-combiner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L129">property <b>combiner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L208">property <b>combiner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>combiner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+How to combine the results of multiple conditions to determine if an incident should be opened.
+
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L130">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L213">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyCondition'>inputs.monitoring.AlertPolicyCondition</a>&gt;[]&gt;;</code></pre>
+
+A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If
+the combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L131">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L219">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
+don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
+characters.
+
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-documentation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L132">property <b>documentation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L225">property <b>documentation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyDocumentation'>inputs.monitoring.AlertPolicyDocumentation</a>&gt;;</code></pre>
+
+A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
+don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
+characters.
+
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L133">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L229">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether or not the policy is enabled. The default is true.
+
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L134">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L230">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-notificationChannels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L135">property <b>notificationChannels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L237">property <b>notificationChannels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationChannels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+Identifies the notification channels to which notifications should be sent when incidents are opened or closed or
+when new violations occur on an already opened incident. Each element of this array corresponds to the name field in
+each of the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of
+the entries in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L136">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L238">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-userLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L137">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L244">property <b>userLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to
+64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and
+values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+
 <h3 class="pdoc-module-header" id="AlertPolicyState" data-link-title="AlertPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L149">
         interface <strong>AlertPolicyState</strong>
     </a>
 </h3>
@@ -605,62 +783,100 @@ The set of arguments for constructing a AlertPolicy resource.
 Input properties used for looking up and filtering AlertPolicy resources.
 
 <h4 class="pdoc-member-header" id="AlertPolicyState-combiner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L112">property <b>combiner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L153">property <b>combiner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>combiner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+How to combine the results of multiple conditions to determine if an incident should be opened.
+
 <h4 class="pdoc-member-header" id="AlertPolicyState-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L113">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L158">property <b>conditions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyCondition'>inputs.monitoring.AlertPolicyCondition</a>&gt;[]&gt;;</code></pre>
+
+A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If
+the combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
+
 <h4 class="pdoc-member-header" id="AlertPolicyState-creationRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L114">property <b>creationRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L163">property <b>creationRecord</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationRecord?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyCreationRecord'>inputs.monitoring.AlertPolicyCreationRecord</a>&gt;;</code></pre>
+
+A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field
+will be ignored.
+
 <h4 class="pdoc-member-header" id="AlertPolicyState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L115">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L169">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
+don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
+characters.
+
 <h4 class="pdoc-member-header" id="AlertPolicyState-documentation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L116">property <b>documentation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L175">property <b>documentation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>documentation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AlertPolicyDocumentation'>inputs.monitoring.AlertPolicyDocumentation</a>&gt;;</code></pre>
+
+A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
+don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
+characters.
+
 <h4 class="pdoc-member-header" id="AlertPolicyState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L117">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L179">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether or not the policy is enabled. The default is true.
+
 <h4 class="pdoc-member-header" id="AlertPolicyState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L118">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L180">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L119">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
+
 <h4 class="pdoc-member-header" id="AlertPolicyState-notificationChannels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L120">property <b>notificationChannels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L191">property <b>notificationChannels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationChannels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+Identifies the notification channels to which notifications should be sent when incidents are opened or closed or
+when new violations occur on an already opened incident. Each element of this array corresponds to the name field in
+each of the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of
+the entries in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
+
 <h4 class="pdoc-member-header" id="AlertPolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L121">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L192">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertPolicyState-userLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/alertPolicy.ts#L122">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/alertPolicy.ts#L198">property <b>userLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to
+64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and
+values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
+
 <h3 class="pdoc-module-header" id="GroupArgs" data-link-title="GroupArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L147">
         interface <strong>GroupArgs</strong>
     </a>
 </h3>
@@ -670,27 +886,41 @@ Input properties used for looking up and filtering AlertPolicy resources.
 The set of arguments for constructing a Group resource.
 
 <h4 class="pdoc-member-header" id="GroupArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L114">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L151">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A user-assigned name for this group, used only for display purposes.
+
 <h4 class="pdoc-member-header" id="GroupArgs-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L115">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L155">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The filter used to determine which monitored resources belong to this group.
+
 <h4 class="pdoc-member-header" id="GroupArgs-isCluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L116">property <b>isCluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L160">property <b>isCluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+If true, the members of this group are considered to be a cluster. The system can perform additional analysis on
+groups that are clusters.
+
 <h4 class="pdoc-member-header" id="GroupArgs-parentName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L117">property <b>parentName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L165">property <b>parentName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}".
+For groups with no parent, parentName is the empty string, "".
+
 <h4 class="pdoc-member-header" id="GroupArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L122">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L170">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -699,7 +929,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GroupState" data-link-title="GroupState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L114">
         interface <strong>GroupState</strong>
     </a>
 </h3>
@@ -709,32 +939,49 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering Group resources.
 
 <h4 class="pdoc-member-header" id="GroupState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L98">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L118">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A user-assigned name for this group, used only for display purposes.
+
 <h4 class="pdoc-member-header" id="GroupState-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L99">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L122">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The filter used to determine which monitored resources belong to this group.
+
 <h4 class="pdoc-member-header" id="GroupState-isCluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L100">property <b>isCluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L127">property <b>isCluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+If true, the members of this group are considered to be a cluster. The system can perform additional analysis on
+groups that are clusters.
+
 <h4 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A unique identifier for this group. The format is "projects/{project_id_or_number}/groups/{group_id}".
+
 <h4 class="pdoc-member-header" id="GroupState-parentName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L102">property <b>parentName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L136">property <b>parentName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the group's parent, if it has one. The format is "projects/{project_id_or_number}/groups/{group_id}".
+For groups with no parent, parentName is the empty string, "".
+
 <h4 class="pdoc-member-header" id="GroupState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/group.ts#L107">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/group.ts#L141">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -743,7 +990,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="NotificationChannelArgs" data-link-title="NotificationChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L223">
         interface <strong>NotificationChannelArgs</strong>
     </a>
 </h3>
@@ -753,27 +1000,51 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a NotificationChannel resource.
 
 <h4 class="pdoc-member-header" id="NotificationChannelArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L126">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L228">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional human-readable description of this notification channel. This description may provide additional
+details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
+
 <h4 class="pdoc-member-header" id="NotificationChannelArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L127">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L234">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and
+unique name in order to make it easier to identify the channels in your project, though this is not enforced. The
+display name is limited to 512 Unicode characters.
+
 <h4 class="pdoc-member-header" id="NotificationChannelArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L128">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L241">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of
+notifications to a particular channel without removing the channel from all alerting policies that reference the
+channel. This is a more convenient approach when the change is temporary and you want to receive notifications from
+the same set of alerting policies on the channel at some point in the future.
+
 <h4 class="pdoc-member-header" id="NotificationChannelArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L129">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L251">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+Configuration fields that define the channel and its behavior. The permissible and required labels are specified in
+the NotificationChannelDescriptor corresponding to the type field. **Note**: Some NotificationChannelDescriptor
+labels are sensitive and the API will return an partially-obfuscated value. For example, for '"type": "slack"'
+channels, an 'auth_token' label with value "SECRET" will be obfuscated as "**CRET". In order to avoid a diff,
+Terraform will use the state value if it appears that the obfuscated value matches the state value in
+length/unobfuscated characters. However, Terraform will not detect a a diff if the obfuscated portion of the value
+was changed outside of Terraform.
+
 <h4 class="pdoc-member-header" id="NotificationChannelArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L134">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L256">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -782,17 +1053,29 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="NotificationChannelArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L135">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L262">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field.
+See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the
+list of valid values such as "email", "slack", etc...
+
 <h4 class="pdoc-member-header" id="NotificationChannelArgs-userLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L136">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L270">property <b>userLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's
+schema, unlike the labels field. This field is intended to be used for organizing and identifying the
+NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode
+characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals,
+underscores, and dashes. Keys must begin with a letter.
+
 <h3 class="pdoc-module-header" id="NotificationChannelState" data-link-title="NotificationChannelState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L155">
         interface <strong>NotificationChannelState</strong>
     </a>
 </h3>
@@ -802,32 +1085,60 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering NotificationChannel resources.
 
 <h4 class="pdoc-member-header" id="NotificationChannelState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L107">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L160">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional human-readable description of this notification channel. This description may provide additional
+details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
+
 <h4 class="pdoc-member-header" id="NotificationChannelState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L108">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L166">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and
+unique name in order to make it easier to identify the channels in your project, though this is not enforced. The
+display name is limited to 512 Unicode characters.
+
 <h4 class="pdoc-member-header" id="NotificationChannelState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L109">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L173">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of
+notifications to a particular channel without removing the channel from all alerting policies that reference the
+channel. This is a more convenient approach when the change is temporary and you want to receive notifications from
+the same set of alerting policies on the channel at some point in the future.
+
 <h4 class="pdoc-member-header" id="NotificationChannelState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L110">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L183">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+Configuration fields that define the channel and its behavior. The permissible and required labels are specified in
+the NotificationChannelDescriptor corresponding to the type field. **Note**: Some NotificationChannelDescriptor
+labels are sensitive and the API will return an partially-obfuscated value. For example, for '"type": "slack"'
+channels, an 'auth_token' label with value "SECRET" will be obfuscated as "**CRET". In order to avoid a diff,
+Terraform will use the state value if it appears that the obfuscated value matches the state value in
+length/unobfuscated characters. However, Terraform will not detect a a diff if the obfuscated portion of the value
+was changed outside of Terraform.
+
 <h4 class="pdoc-member-header" id="NotificationChannelState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L111">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The full REST resource name for this channel. The syntax is: projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]
+The [CHANNEL_ID] is automatically assigned by the server on creation.
+
 <h4 class="pdoc-member-header" id="NotificationChannelState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L116">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L193">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -836,22 +1147,43 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="NotificationChannelState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L117">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L199">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field.
+See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the
+list of valid values such as "email", "slack", etc...
+
 <h4 class="pdoc-member-header" id="NotificationChannelState-userLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L118">property <b>userLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L207">property <b>userLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's
+schema, unlike the labels field. This field is intended to be used for organizing and identifying the
+NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode
+characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals,
+underscores, and dashes. Keys must begin with a letter.
+
 <h4 class="pdoc-member-header" id="NotificationChannelState-verificationStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/notificationChannel.ts#L119">property <b>verificationStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/notificationChannel.ts#L217">property <b>verificationStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verificationStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Indicates whether this channel has been verified or not. On a ListNotificationChannels or GetNotificationChannel
+operation, this field is expected to be populated.If the value is UNVERIFIED, then it indicates that the channel is
+non-functioning (it both requires verification and lacks verification); otherwise, it is assumed that the channel
+works.If the channel is neither VERIFIED nor UNVERIFIED, it implies that the channel is of a type that does not
+require verification or that this specific channel has been exempted from verification because it was created prior
+to verification being required for channels of this type.This field cannot be modified using a standard
+UpdateNotificationChannel operation. To change the value of this field, you must call VerifyNotificationChannel.
+
 <h3 class="pdoc-module-header" id="UptimeCheckConfigArgs" data-link-title="UptimeCheckConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L231">
         interface <strong>UptimeCheckConfigArgs</strong>
     </a>
 </h3>
@@ -861,42 +1193,63 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a UptimeCheckConfig resource.
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-contentMatchers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L146">property <b>contentMatchers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L237">property <b>contentMatchers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigContentMatcher'>inputs.monitoring.UptimeCheckConfigContentMatcher</a>&gt;[]&gt;;</code></pre>
+
+The expected content on the page the check is run against. Currently, only the first entry in the list is supported,
+and other entries will be ignored. The server will look for an exact match of the string in the page response's
+content. This field is optional and should only be specified if a content match is required.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L147">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L242">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver
+Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-httpCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L148">property <b>httpCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L246">property <b>httpCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigHttpCheck'>inputs.monitoring.UptimeCheckConfigHttpCheck</a>&gt;;</code></pre>
+
+Contains information needed to make an HTTP or HTTPS check.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-internalCheckers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L149">property <b>internalCheckers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L247">property <b>internalCheckers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internalCheckers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigInternalChecker'>inputs.monitoring.UptimeCheckConfigInternalChecker</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-isInternal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L150">property <b>isInternal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L248">property <b>isInternal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isInternal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-monitoredResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L151">property <b>monitoredResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L254">property <b>monitoredResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoredResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigMonitoredResource'>inputs.monitoring.UptimeCheckConfigMonitoredResource</a>&gt;;</code></pre>
+
+The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The
+following monitored resource types are supported for uptime checks: uptime_url gce_instance gae_app aws_ec2_instance
+aws_elb_load_balancer
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L152">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L259">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s
+(5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L157">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L264">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -905,27 +1258,42 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L158">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L268">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigResourceGroup'>inputs.monitoring.UptimeCheckConfigResourceGroup</a>&gt;;</code></pre>
+
+The group resource associated with the configuration.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-selectedRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L159">property <b>selectedRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L274">property <b>selectedRegions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selectedRegions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+The list of regions from which the check will be run. Some regions contain one location, and others contain more
+than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an
+error message is returned. Not specifying this field will result in uptime checks running from all regions.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-tcpCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L160">property <b>tcpCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L278">property <b>tcpCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tcpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigTcpCheck'>inputs.monitoring.UptimeCheckConfigTcpCheck</a>&gt;;</code></pre>
+
+Contains information needed to make a TCP check.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L161">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L283">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats
+https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
+
 <h3 class="pdoc-module-header" id="UptimeCheckConfigState" data-link-title="UptimeCheckConfigState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L164">
         interface <strong>UptimeCheckConfigState</strong>
     </a>
 </h3>
@@ -935,47 +1303,72 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering UptimeCheckConfig resources.
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-contentMatchers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L122">property <b>contentMatchers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L170">property <b>contentMatchers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentMatchers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigContentMatcher'>inputs.monitoring.UptimeCheckConfigContentMatcher</a>&gt;[]&gt;;</code></pre>
+
+The expected content on the page the check is run against. Currently, only the first entry in the list is supported,
+and other entries will be ignored. The server will look for an exact match of the string in the page response's
+content. This field is optional and should only be specified if a content match is required.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L123">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L175">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver
+Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-httpCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L124">property <b>httpCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L179">property <b>httpCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigHttpCheck'>inputs.monitoring.UptimeCheckConfigHttpCheck</a>&gt;;</code></pre>
+
+Contains information needed to make an HTTP or HTTPS check.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-internalCheckers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L125">property <b>internalCheckers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L180">property <b>internalCheckers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internalCheckers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigInternalChecker'>inputs.monitoring.UptimeCheckConfigInternalChecker</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-isInternal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L126">property <b>isInternal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L181">property <b>isInternal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isInternal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-monitoredResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L127">property <b>monitoredResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L187">property <b>monitoredResource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoredResource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigMonitoredResource'>inputs.monitoring.UptimeCheckConfigMonitoredResource</a>&gt;;</code></pre>
+
+The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The
+following monitored resource types are supported for uptime checks: uptime_url gce_instance gae_app aws_ec2_instance
+aws_elb_load_balancer
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A unique resource name for this UptimeCheckConfig. The format is
+projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L129">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L197">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s
+(5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L134">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L202">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -984,27 +1377,45 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L135">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L206">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigResourceGroup'>inputs.monitoring.UptimeCheckConfigResourceGroup</a>&gt;;</code></pre>
+
+The group resource associated with the configuration.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-selectedRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L136">property <b>selectedRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L212">property <b>selectedRegions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selectedRegions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+The list of regions from which the check will be run. Some regions contain one location, and others contain more
+than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an
+error message is returned. Not specifying this field will result in uptime checks running from all regions.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-tcpCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L137">property <b>tcpCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L216">property <b>tcpCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tcpCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#UptimeCheckConfigTcpCheck'>inputs.monitoring.UptimeCheckConfigTcpCheck</a>&gt;;</code></pre>
+
+Contains information needed to make a TCP check.
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L138">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L221">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats
+https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
+
 <h4 class="pdoc-member-header" id="UptimeCheckConfigState-uptimeCheckId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L139">property <b>uptimeCheckId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/monitoring/uptimeCheckConfig.ts#L225">property <b>uptimeCheckId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uptimeCheckId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of the uptime check
+

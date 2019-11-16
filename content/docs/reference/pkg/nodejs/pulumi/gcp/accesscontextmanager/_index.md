@@ -38,7 +38,7 @@ meta_desc: "Explore members of the accesscontextmanager module in the @pulumi/gc
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AccessLevel" data-link-title="AccessLevel">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L49">
         Resource <strong>AccessLevel</strong>
     </a>
 </h3>
@@ -84,7 +84,7 @@ const accessPolicy = new gcp.accesscontextmanager.AccessPolicy("access-policy", 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_level.html.markdown.
 
 <h4 class="pdoc-member-header" id="AccessLevel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -98,7 +98,7 @@ Create a AccessLevel resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccessLevel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -109,14 +109,14 @@ Get an existing AccessLevel resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccessLevel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccessLevel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -127,17 +127,23 @@ Returns true if the given object is an instance of AccessLevel.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccessLevel-basic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L76">property <b>basic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L79">property <b>basic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>basic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AccessLevelBasic'>outputs.accesscontextmanager.AccessLevelBasic</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A set of predefined conditions for the access level and a combining function.
+
 <h4 class="pdoc-member-header" id="AccessLevel-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L77">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L83">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Description of the AccessLevel and its use. Does not affect behavior.
+
 <h4 class="pdoc-member-header" id="AccessLevel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -146,22 +152,32 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccessLevel-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric
+and '_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+
 <h4 class="pdoc-member-header" id="AccessLevel-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L79">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L92">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+
 <h4 class="pdoc-member-header" id="AccessLevel-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L80">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L96">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human readable title. Must be unique within the Policy.
+
 <h4 class="pdoc-member-header" id="AccessLevel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -170,7 +186,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AccessPolicy" data-link-title="AccessPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L38">
         Resource <strong>AccessPolicy</strong>
     </a>
 </h3>
@@ -205,7 +221,7 @@ const accessPolicy = new gcp.accesscontextmanager.AccessPolicy("access-policy", 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -219,7 +235,7 @@ Create a AccessPolicy resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -230,14 +246,14 @@ Get an existing AccessPolicy resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccessPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -248,12 +264,15 @@ Returns true if the given object is an instance of AccessPolicy.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L65">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L68">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Time the AccessPolicy was created in UTC.
+
 <h4 class="pdoc-member-header" id="AccessPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -262,27 +281,39 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Resource name of the AccessPolicy. Format: {policy_id}
+
 <h4 class="pdoc-member-header" id="AccessPolicy-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L67">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L76">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}
+
 <h4 class="pdoc-member-header" id="AccessPolicy-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L68">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L80">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human readable title. Does not affect behavior.
+
 <h4 class="pdoc-member-header" id="AccessPolicy-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L69">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L84">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Time the AccessPolicy was updated in UTC.
+
 <h4 class="pdoc-member-header" id="AccessPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -291,7 +322,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServicePerimeter" data-link-title="ServicePerimeter">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L63">
         Resource <strong>ServicePerimeter</strong>
     </a>
 </h3>
@@ -351,7 +382,7 @@ const accessPolicy = new gcp.accesscontextmanager.AccessPolicy("access-policy", 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter.html.markdown.
 
 <h4 class="pdoc-member-header" id="ServicePerimeter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L130"> <b>constructor</b></a>
 </h4>
 
 
@@ -365,7 +396,7 @@ Create a ServicePerimeter resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServicePerimeter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L72">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L72">method <b>get</b></a>
 </h4>
 
 
@@ -376,14 +407,14 @@ Get an existing ServicePerimeter resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServicePerimeter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L63">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L63">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServicePerimeter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L83">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L83">method <b>isInstance</b></a>
 </h4>
 
 
@@ -394,17 +425,23 @@ Returns true if the given object is an instance of ServicePerimeter.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServicePerimeter-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L90">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L93">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Time the AccessPolicy was created in UTC.
+
 <h4 class="pdoc-member-header" id="ServicePerimeter-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L91">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L97">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Description of the ServicePerimeter and its use. Does not affect behavior.
+
 <h4 class="pdoc-member-header" id="ServicePerimeter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -413,37 +450,64 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServicePerimeter-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include
+alphanumeric and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+
 <h4 class="pdoc-member-header" id="ServicePerimeter-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L93">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L106">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+
 <h4 class="pdoc-member-header" id="ServicePerimeter-perimeterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L94">property <b>perimeterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L117">property <b>perimeterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>perimeterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
+resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A
+perimeter bridge only contains resources. Cross project operations are permitted if all effected resources share
+some perimeter (whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are
+governed entirely by the regular perimeter that resource is in. Perimeter Bridges are typically useful when building
+more complex topologies with many independent perimeters that need to share some data with a common perimeter, but
+should not be able to share data among themselves.
+
 <h4 class="pdoc-member-header" id="ServicePerimeter-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L95">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L122">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServicePerimeterStatus'>outputs.accesscontextmanager.ServicePerimeterStatus</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
+perimeter content and boundaries.
+
 <h4 class="pdoc-member-header" id="ServicePerimeter-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L96">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L126">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human readable title. Must be unique within the Policy.
+
 <h4 class="pdoc-member-header" id="ServicePerimeter-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L97">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L130">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Time the AccessPolicy was updated in UTC.
+
 <h4 class="pdoc-member-header" id="ServicePerimeter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L63">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L63">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -455,7 +519,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccessLevelArgs" data-link-title="AccessLevelArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L170">
         interface <strong>AccessLevelArgs</strong>
     </a>
 </h3>
@@ -465,32 +529,48 @@ deployments.
 The set of arguments for constructing a AccessLevel resource.
 
 <h4 class="pdoc-member-header" id="AccessLevelArgs-basic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L139">property <b>basic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L174">property <b>basic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>basic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccessLevelBasic'>inputs.accesscontextmanager.AccessLevelBasic</a>&gt;;</code></pre>
+
+A set of predefined conditions for the access level and a combining function.
+
 <h4 class="pdoc-member-header" id="AccessLevelArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L140">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L178">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Description of the AccessLevel and its use. Does not affect behavior.
+
 <h4 class="pdoc-member-header" id="AccessLevelArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L141">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L183">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric
+and '_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+
 <h4 class="pdoc-member-header" id="AccessLevelArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L142">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L187">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+
 <h4 class="pdoc-member-header" id="AccessLevelArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L143">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L191">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human readable title. Must be unique within the Policy.
+
 <h3 class="pdoc-module-header" id="AccessLevelState" data-link-title="AccessLevelState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L143">
         interface <strong>AccessLevelState</strong>
     </a>
 </h3>
@@ -500,32 +580,48 @@ The set of arguments for constructing a AccessLevel resource.
 Input properties used for looking up and filtering AccessLevel resources.
 
 <h4 class="pdoc-member-header" id="AccessLevelState-basic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L128">property <b>basic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L147">property <b>basic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>basic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AccessLevelBasic'>inputs.accesscontextmanager.AccessLevelBasic</a>&gt;;</code></pre>
+
+A set of predefined conditions for the access level and a combining function.
+
 <h4 class="pdoc-member-header" id="AccessLevelState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L129">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L151">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Description of the AccessLevel and its use. Does not affect behavior.
+
 <h4 class="pdoc-member-header" id="AccessLevelState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Resource name for the Access Level. The short_name component must begin with a letter and only include alphanumeric
+and '_'. Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+
 <h4 class="pdoc-member-header" id="AccessLevelState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L131">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L160">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AccessPolicy this AccessLevel lives in. Format: accessPolicies/{policy_id}
+
 <h4 class="pdoc-member-header" id="AccessLevelState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessLevel.ts#L132">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessLevel.ts#L164">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human readable title. Must be unique within the Policy.
+
 <h3 class="pdoc-module-header" id="AccessPolicyArgs" data-link-title="AccessPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L157">
         interface <strong>AccessPolicyArgs</strong>
     </a>
 </h3>
@@ -535,17 +631,23 @@ Input properties used for looking up and filtering AccessLevel resources.
 The set of arguments for constructing a AccessPolicy resource.
 
 <h4 class="pdoc-member-header" id="AccessPolicyArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L128">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L161">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}
+
 <h4 class="pdoc-member-header" id="AccessPolicyArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L129">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L165">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human readable title. Does not affect behavior.
+
 <h3 class="pdoc-module-header" id="AccessPolicyState" data-link-title="AccessPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L131">
         interface <strong>AccessPolicyState</strong>
     </a>
 </h3>
@@ -555,32 +657,47 @@ The set of arguments for constructing a AccessPolicy resource.
 Input properties used for looking up and filtering AccessPolicy resources.
 
 <h4 class="pdoc-member-header" id="AccessPolicyState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L117">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L135">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Time the AccessPolicy was created in UTC.
+
 <h4 class="pdoc-member-header" id="AccessPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L139">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Resource name of the AccessPolicy. Format: {policy_id}
+
 <h4 class="pdoc-member-header" id="AccessPolicyState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L119">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L143">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}
+
 <h4 class="pdoc-member-header" id="AccessPolicyState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L120">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L147">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human readable title. Does not affect behavior.
+
 <h4 class="pdoc-member-header" id="AccessPolicyState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L121">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/accessPolicy.ts#L151">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Time the AccessPolicy was updated in UTC.
+
 <h3 class="pdoc-module-header" id="ServicePerimeterArgs" data-link-title="ServicePerimeterArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L230">
         interface <strong>ServicePerimeterArgs</strong>
     </a>
 </h3>
@@ -590,37 +707,64 @@ Input properties used for looking up and filtering AccessPolicy resources.
 The set of arguments for constructing a ServicePerimeter resource.
 
 <h4 class="pdoc-member-header" id="ServicePerimeterArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L165">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L234">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Description of the ServicePerimeter and its use. Does not affect behavior.
+
 <h4 class="pdoc-member-header" id="ServicePerimeterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L239">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include
+alphanumeric and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+
 <h4 class="pdoc-member-header" id="ServicePerimeterArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L167">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L243">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+
 <h4 class="pdoc-member-header" id="ServicePerimeterArgs-perimeterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L168">property <b>perimeterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L254">property <b>perimeterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>perimeterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
+resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A
+perimeter bridge only contains resources. Cross project operations are permitted if all effected resources share
+some perimeter (whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are
+governed entirely by the regular perimeter that resource is in. Perimeter Bridges are typically useful when building
+more complex topologies with many independent perimeters that need to share some data with a common perimeter, but
+should not be able to share data among themselves.
+
 <h4 class="pdoc-member-header" id="ServicePerimeterArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L169">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L259">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServicePerimeterStatus'>inputs.accesscontextmanager.ServicePerimeterStatus</a>&gt;;</code></pre>
+
+ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
+perimeter content and boundaries.
+
 <h4 class="pdoc-member-header" id="ServicePerimeterArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L170">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L263">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human readable title. Must be unique within the Policy.
+
 <h3 class="pdoc-module-header" id="ServicePerimeterState" data-link-title="ServicePerimeterState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L183">
         interface <strong>ServicePerimeterState</strong>
     </a>
 </h3>
@@ -630,42 +774,75 @@ The set of arguments for constructing a ServicePerimeter resource.
 Input properties used for looking up and filtering ServicePerimeter resources.
 
 <h4 class="pdoc-member-header" id="ServicePerimeterState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L151">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L187">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Time the AccessPolicy was created in UTC.
+
 <h4 class="pdoc-member-header" id="ServicePerimeterState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L152">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L191">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Description of the ServicePerimeter and its use. Does not affect behavior.
+
 <h4 class="pdoc-member-header" id="ServicePerimeterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Resource name for the ServicePerimeter. The short_name component must begin with a letter and only include
+alphanumeric and '_'. Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
+
 <h4 class="pdoc-member-header" id="ServicePerimeterState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L154">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L200">property <b>parent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The AccessPolicy this ServicePerimeter lives in. Format: accessPolicies/{policy_id}
+
 <h4 class="pdoc-member-header" id="ServicePerimeterState-perimeterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L155">property <b>perimeterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L211">property <b>perimeterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>perimeterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the type of the Perimeter. There are two types: regular and bridge. Regular Service Perimeter contains
+resources, access levels, and restricted services. Every resource can be in at most ONE regular Service Perimeter.
+In addition to being in a regular service perimeter, a resource can also be in zero or more perimeter bridges. A
+perimeter bridge only contains resources. Cross project operations are permitted if all effected resources share
+some perimeter (whether bridge or regular). Perimeter Bridge does not contain access levels or services: those are
+governed entirely by the regular perimeter that resource is in. Perimeter Bridges are typically useful when building
+more complex topologies with many independent perimeters that need to share some data with a common perimeter, but
+should not be able to share data among themselves.
+
 <h4 class="pdoc-member-header" id="ServicePerimeterState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L156">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L216">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServicePerimeterStatus'>inputs.accesscontextmanager.ServicePerimeterStatus</a>&gt;;</code></pre>
+
+ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine
+perimeter content and boundaries.
+
 <h4 class="pdoc-member-header" id="ServicePerimeterState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L157">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L220">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Human readable title. Must be unique within the Policy.
+
 <h4 class="pdoc-member-header" id="ServicePerimeterState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L158">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/accesscontextmanager/servicePerimeter.ts#L224">property <b>updateTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Time the AccessPolicy was updated in UTC.
+
