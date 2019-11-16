@@ -14,7 +14,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azuread"></span><dl class="class">
 <dt id="pulumi_azuread.Application">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_roles=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">public_client=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Application" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_roles=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">public_client=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">owned</span> <span class="pre">by</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -185,7 +185,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_azuread.Application.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">public_client=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Application.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">public_client=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.Application.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Application resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -409,7 +409,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azuread.AwaitableGetApplicationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetApplicationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetApplicationResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -434,17 +434,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azuread.AwaitableGetUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">mail=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">user_principal_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">mail=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">usage_location=None</em>, <em class="sig-param">user_principal_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.AwaitableGetUsersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">object_ids=None</em>, <em class="sig-param">user_principal_names=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetUsersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">AwaitableGetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">mail_nicknames=None</em>, <em class="sig-param">object_ids=None</em>, <em class="sig-param">user_principal_names=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.AwaitableGetUsersResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_azuread.GetApplicationResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetApplicationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetApplicationResult</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">available_to_other_tenants=None</em>, <em class="sig-param">group_membership_claims=None</em>, <em class="sig-param">homepage=None</em>, <em class="sig-param">identifier_uris=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_allow_implicit_flow=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">reply_urls=None</em>, <em class="sig-param">required_resource_accesses=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetApplicationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getApplication.</p>
 <dl class="attribute">
 <dt id="pulumi_azuread.GetApplicationResult.app_roles">
@@ -594,7 +594,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azuread.GetUserResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">mail=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">user_principal_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetUserResult</code><span class="sig-paren">(</span><em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">mail=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">usage_location=None</em>, <em class="sig-param">user_principal_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUser.</p>
 <dl class="attribute">
 <dt id="pulumi_azuread.GetUserResult.account_enabled">
@@ -621,6 +621,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azuread.GetUserResult.usage_location">
+<code class="sig-name descname">usage_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetUserResult.usage_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The usage location of the Azure AD User.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azuread.GetUserResult.user_principal_name">
 <code class="sig-name descname">user_principal_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetUserResult.user_principal_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The User Principal Name of the Azure AD User.</p>
@@ -636,8 +642,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azuread.GetUsersResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">object_ids=None</em>, <em class="sig-param">user_principal_names=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetUsersResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">GetUsersResult</code><span class="sig-paren">(</span><em class="sig-param">mail_nicknames=None</em>, <em class="sig-param">object_ids=None</em>, <em class="sig-param">user_principal_names=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.GetUsersResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUsers.</p>
+<dl class="attribute">
+<dt id="pulumi_azuread.GetUsersResult.mail_nicknames">
+<code class="sig-name descname">mail_nicknames</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetUsersResult.mail_nicknames" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email aliases of the Azure AD Users.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azuread.GetUsersResult.object_ids">
 <code class="sig-name descname">object_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.GetUsersResult.object_ids" title="Permalink to this definition">¶</a></dt>
@@ -1089,7 +1101,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p></li>
-<li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Password is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Password is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Valid time units are “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Key. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>service_principal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Service Principal for which this password should be created. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p></li>
@@ -1109,7 +1121,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azuread.ServicePrincipalPassword.end_date_relative">
 <code class="sig-name descname">end_date_relative</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.ServicePrincipalPassword.end_date_relative" title="Permalink to this definition">¶</a></dt>
-<dd><p>A relative duration for which the Password is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Changing this field forces a new resource to be created.</p>
+<dd><p>A relative duration for which the Password is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Valid time units are “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”. Changing this field forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1148,7 +1160,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p></li>
-<li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Password is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Changing this field forces a new resource to be created.</p></li>
+<li><p><strong>end_date_relative</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A relative duration for which the Password is valid until, for example <code class="docutils literal notranslate"><span class="pre">240h</span></code> (10 days) or <code class="docutils literal notranslate"><span class="pre">2400h30m</span></code>. Valid time units are “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Key. If not specified a GUID will be created. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>service_principal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Service Principal for which this password should be created. Changing this field forces a new resource to be created.</p></li>
 <li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p></li>
@@ -1201,7 +1213,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azuread.User">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">force_password_change=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">user_principal_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">force_password_change=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">usage_location=None</em>, <em class="sig-param">user_principal_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a User within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Directory.ReadWrite.All</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -1224,6 +1236,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to display in the address book for the user.</p></li>
 <li><p><strong>force_password_change</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">true</span></code> if the User is forced to change the password during the next sign-in. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters.</p></li>
+<li><p><strong>usage_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The usage location of the User. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: <code class="docutils literal notranslate"><span class="pre">NO</span></code>, <code class="docutils literal notranslate"><span class="pre">JP</span></code>, and <code class="docutils literal notranslate"><span class="pre">GB</span></code>. Cannot be reset to null once set.</p></li>
 <li><p><strong>user_principal_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The User Principal Name of the Azure AD User.</p></li>
 </ul>
 </dd>
@@ -1271,6 +1284,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azuread.User.usage_location">
+<code class="sig-name descname">usage_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.User.usage_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The usage location of the User. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: <code class="docutils literal notranslate"><span class="pre">NO</span></code>, <code class="docutils literal notranslate"><span class="pre">JP</span></code>, and <code class="docutils literal notranslate"><span class="pre">GB</span></code>. Cannot be reset to null once set.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azuread.User.user_principal_name">
 <code class="sig-name descname">user_principal_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.User.user_principal_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The User Principal Name of the Azure AD User.</p>
@@ -1278,7 +1297,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azuread.User.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">force_password_change=None</em>, <em class="sig-param">mail=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">user_principal_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.User.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_enabled=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">force_password_change=None</em>, <em class="sig-param">mail=None</em>, <em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">usage_location=None</em>, <em class="sig-param">user_principal_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.User.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing User resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1302,6 +1321,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>mail</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The primary email address of the Azure AD User.</p></li>
 <li><p><strong>object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Object ID of the Azure AD User.</p></li>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters.</p></li>
+<li><p><strong>usage_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The usage location of the User. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: <code class="docutils literal notranslate"><span class="pre">NO</span></code>, <code class="docutils literal notranslate"><span class="pre">JP</span></code>, and <code class="docutils literal notranslate"><span class="pre">GB</span></code>. Cannot be reset to null once set.</p></li>
 <li><p><strong>user_principal_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The User Principal Name of the Azure AD User.</p></li>
 </ul>
 </dd>
@@ -1351,7 +1371,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azuread.get_application">
-<code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_application</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_application" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_application</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">(or</span> <span class="pre">owned</span> <span class="pre">by)</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -1364,15 +1384,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<p>The <strong>app_roles</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMemberTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: <code class="docutils literal notranslate"><span class="pre">User</span></code> and <code class="docutils literal notranslate"><span class="pre">Application</span></code>, or both.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Permission help text that appears in the admin app assignment and consent experiences.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Display name for the permission that appears in the admin consent and app assignment experiences.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Determines if the app role is enabled.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
-</ul>
 <p>The <strong>oauth2_permissions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the admin consent</p></li>
@@ -1452,7 +1463,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azuread.get_service_principal">
-<code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_service_principal</code><span class="sig-paren">(</span><em class="sig-param">app_roles=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_service_principal" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_service_principal</code><span class="sig-paren">(</span><em class="sig-param">application_id=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">oauth2_permissions=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_service_principal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about an existing Service Principal associated with an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -1460,7 +1471,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>app_roles</strong> (<em>list</em>) – A collection of <code class="docutils literal notranslate"><span class="pre">app_role</span></code> blocks as documented below. For more information <a class="reference external" href="https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles">https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles</a></p></li>
 <li><p><strong>application_id</strong> (<em>str</em>) – The ID of the Azure AD Application.</p></li>
 <li><p><strong>display_name</strong> (<em>str</em>) – The Display Name of the Azure AD Application associated with this Service Principal.</p></li>
 <li><p><strong>oauth2_permissions</strong> (<em>list</em>) – A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a <code class="docutils literal notranslate"><span class="pre">oauth2_permission</span></code> block as documented below.</p></li>
@@ -1468,15 +1478,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<p>The <strong>app_roles</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMemberTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: <code class="docutils literal notranslate"><span class="pre">User</span></code> and <code class="docutils literal notranslate"><span class="pre">Application</span></code>, or both.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Permission help text that appears in the admin app assignment and consent experiences.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Display Name of the Azure AD Application associated with this Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Determines if the app role is enabled.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
-</ul>
 <p>The <strong>oauth2_permissions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the admin consent</p></li>
@@ -1495,7 +1496,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azuread.get_user">
-<code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param">object_id=None</em>, <em class="sig-param">user_principal_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_user" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param">mail_nickname=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">user_principal_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about an Azure Active Directory user.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">directory</span> <span class="pre">data</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -1503,6 +1504,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>mail_nickname</strong> (<em>str</em>) – The email alias of the Azure AD User.</p></li>
 <li><p><strong>object_id</strong> (<em>str</em>) – Specifies the Object ID of the Application within Azure Active Directory.</p></li>
 <li><p><strong>user_principal_name</strong> (<em>str</em>) – The User Principal Name of the Azure AD User.</p></li>
 </ul>
@@ -1515,7 +1517,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azuread.get_users">
-<code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_users</code><span class="sig-paren">(</span><em class="sig-param">object_ids=None</em>, <em class="sig-param">user_principal_names=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_users" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_users</code><span class="sig-paren">(</span><em class="sig-param">mail_nicknames=None</em>, <em class="sig-param">object_ids=None</em>, <em class="sig-param">user_principal_names=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets Object IDs or UPNs for multiple Azure Active Directory users.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">directory</span> <span class="pre">data</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
@@ -1523,6 +1525,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>mail_nicknames</strong> (<em>list</em>) – The email aliases of the Azure AD Users.</p></li>
 <li><p><strong>object_ids</strong> (<em>list</em>) – The Object IDs of the Azure AD Users.</p></li>
 <li><p><strong>user_principal_names</strong> (<em>list</em>) – The User Principal Names of the Azure AD Users.</p></li>
 </ul>
