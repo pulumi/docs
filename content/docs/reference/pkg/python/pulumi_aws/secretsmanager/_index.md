@@ -132,7 +132,6 @@ anything, please consult the source <a class="reference external" href="https://
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: <cite>/*+=.&#64;-``Conflicts with`</cite>name_prefix<a href="#id3"><span class="problematic" id="id4">``</span></a>.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with``name<a href="#id5"><span class="problematic" id="id6">``</span></a>.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid JSON document representing a [resource policy](<a class="reference external" href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html">https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html</a>).</p></li>
 <li><p><strong>recovery_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be``0<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">force</span> <span class="pre">deletion</span> <span class="pre">without</span> <span class="pre">recovery</span> <span class="pre">or</span> <span class="pre">range</span> <span class="pre">from</span></code>7<code class="docutils literal notranslate"><span class="pre">to</span></code>30<code class="docutils literal notranslate"><span class="pre">days.</span> <span class="pre">The</span> <span class="pre">default</span> <span class="pre">value</span> <span class="pre">is</span></code>30`.</p></li>
 <li><p><strong>rotation_lambda_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ARN of the Lambda function that can rotate the secret.</p></li>
 <li><p><strong>rotation_rules</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A structure that defines the rotation configuration for this secret. Defined below.</p></li>
@@ -175,12 +174,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.secretsmanager.Secret.name_prefix">
 <code class="sig-name descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.secretsmanager.Secret.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A valid JSON document representing a <a class="reference external" href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html">resource policy</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -233,7 +226,6 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: <cite>/*+=.&#64;-``Conflicts with`</cite>name_prefix<a href="#id9"><span class="problematic" id="id10">``</span></a>.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with``name<a href="#id11"><span class="problematic" id="id12">``</span></a>.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid JSON document representing a [resource policy](<a class="reference external" href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html">https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html</a>).</p></li>
 <li><p><strong>recovery_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be``0<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">force</span> <span class="pre">deletion</span> <span class="pre">without</span> <span class="pre">recovery</span> <span class="pre">or</span> <span class="pre">range</span> <span class="pre">from</span></code>7<code class="docutils literal notranslate"><span class="pre">to</span></code>30<code class="docutils literal notranslate"><span class="pre">days.</span> <span class="pre">The</span> <span class="pre">default</span> <span class="pre">value</span> <span class="pre">is</span></code>30`.</p></li>
 <li><p><strong>rotation_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether automatic rotation is enabled for this secret.</p></li>
 <li><p><strong>rotation_lambda_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ARN of the Lambda function that can rotate the secret.</p></li>

@@ -473,7 +473,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.waf.RateBasedRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.waf.</code><code class="sig-name descname">RateBasedRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicates=None</em>, <em class="sig-param">rate_key=None</em>, <em class="sig-param">rate_limit=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.RateBasedRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.waf.</code><code class="sig-name descname">RateBasedRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicates=None</em>, <em class="sig-param">rate_key=None</em>, <em class="sig-param">rate_limit=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.RateBasedRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Rate Based Rule Resource</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -485,6 +485,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>predicates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The objects to include in a rule (documented below).</p></li>
 <li><p><strong>rate_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid value is IP.</p></li>
 <li><p><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 100.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -500,6 +501,12 @@ If set to <code class="docutils literal notranslate"><span class="pre">true</spa
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_rate_based_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_rate_based_rule.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.waf.RateBasedRule.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.RateBasedRule.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN)</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.waf.RateBasedRule.metric_name">
 <code class="sig-name descname">metric_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.RateBasedRule.metric_name" title="Permalink to this definition">¶</a></dt>
@@ -538,9 +545,15 @@ If set to <code class="docutils literal notranslate"><span class="pre">true</spa
 <dd><p>The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 100.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.waf.RateBasedRule.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.RateBasedRule.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.waf.RateBasedRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicates=None</em>, <em class="sig-param">rate_key=None</em>, <em class="sig-param">rate_limit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.RateBasedRule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicates=None</em>, <em class="sig-param">rate_key=None</em>, <em class="sig-param">rate_limit=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.RateBasedRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RateBasedRule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -549,11 +562,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN)</p></li>
 <li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description for the Amazon CloudWatch metric of this rule.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the rule.</p></li>
 <li><p><strong>predicates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The objects to include in a rule (documented below).</p></li>
 <li><p><strong>rate_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid value is IP.</p></li>
 <li><p><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 100.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -870,6 +885,12 @@ If set to <code class="docutils literal notranslate"><span class="pre">true</spa
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_aws.waf.Rule.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.Rule.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the WAF rule.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.waf.Rule.metric_name">
 <code class="sig-name descname">metric_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.Rule.metric_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can’t contain whitespace.</p>
@@ -903,7 +924,7 @@ If set to <code class="docutils literal notranslate"><span class="pre">true</spa
 
 <dl class="method">
 <dt id="pulumi_aws.waf.Rule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicates=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.Rule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicates=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.Rule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Rule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -912,6 +933,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the WAF rule.</p></li>
 <li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can’t contain whitespace.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the rule.</p></li>
 <li><p><strong>predicates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The objects to include in a rule (documented below).</p></li>
@@ -1018,6 +1040,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.waf.RuleGroup.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.RuleGroup.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the WAF rule group.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.waf.RuleGroup.metric_name">
 <code class="sig-name descname">metric_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.RuleGroup.metric_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A friendly name for the metrics from the rule group</p>
@@ -1037,7 +1065,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.waf.RuleGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">activated_rules=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.RuleGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">activated_rules=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.RuleGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RuleGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1047,6 +1075,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>activated_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of activated rules, see below</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the WAF rule group.</p></li>
 <li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for the metrics from the rule group</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name of the rule group</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
@@ -1464,6 +1493,12 @@ Rules with a lower value are evaluated before rules with a higher value.</p></li
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_web_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_web_acl.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
+<dt id="pulumi_aws.waf.WebAcl.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.WebAcl.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the WAF WebACL.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.waf.WebAcl.default_action">
 <code class="sig-name descname">default_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.WebAcl.default_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block with action that you want AWS WAF to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL. Detailed below.</p>
@@ -1542,6 +1577,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the WAF WebACL.</p></li>
 <li><p><strong>default_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with action that you want AWS WAF to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL. Detailed below.</p></li>
 <li><p><strong>logging_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to enable WAF logging. Detailed below.</p></li>
 <li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description for the Amazon CloudWatch metric of this web ACL.</p></li>
@@ -1815,7 +1851,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_aws.waf.get_web_acl">
 <code class="sig-prename descclassname">pulumi_aws.waf.</code><code class="sig-name descname">get_web_acl</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.get_web_acl" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">waf.Rule</span></code> Retrieves a WAF Web ACL Resource Id.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">waf.WebAcl</span></code> Retrieves a WAF Web ACL Resource Id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Web ACL.</p>

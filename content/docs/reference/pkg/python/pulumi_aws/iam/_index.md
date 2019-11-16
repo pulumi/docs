@@ -420,7 +420,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.AwaitableGetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">AwaitableGetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AwaitableGetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -473,12 +473,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GetGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">GetGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetGroupResult.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetGroupResult.arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Amazon Resource Name (ARN) specifying the group.</p>
+<dd><p>The Amazon Resource Name (ARN) specifying the iam user.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -490,7 +490,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetGroupResult.path">
 <code class="sig-name descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetGroupResult.path" title="Permalink to this definition">¶</a></dt>
-<dd><p>The path to the group.</p>
+<dd><p>The path to the iam user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.iam.GetGroupResult.users">
+<code class="sig-name descname">users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetGroupResult.users" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of objects containing group member information. See supported fields below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -947,7 +953,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
 </ul>
 </dd>
 </dl>
@@ -974,12 +979,6 @@ assign a random, unique name.</p>
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.iam.GroupPolicy.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GroupPolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_aws.iam.GroupPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupPolicy.get" title="Permalink to this definition">¶</a></dt>
@@ -996,7 +995,6 @@ properties used to qualify the lookup.</p>
 assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1387,7 +1385,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path in which to create the policy.
 See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1425,12 +1422,6 @@ See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/U
 See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.iam.Policy.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.Policy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_aws.iam.Policy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Policy.get" title="Permalink to this definition">¶</a></dt>
@@ -1449,7 +1440,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Path in which to create the policy.
 See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
 </p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1798,7 +1788,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role to attach to the policy.</p></li>
 </ul>
 </dd>
@@ -1818,12 +1807,6 @@ assign a random, unique name.</p>
 <code class="sig-name descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.RolePolicy.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.iam.RolePolicy.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.RolePolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1847,7 +1830,6 @@ properties used to qualify the lookup.</p>
 assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role to attach to the policy.</p></li>
 </ul>
 </dd>
@@ -2862,7 +2844,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
 <li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM user to which to attach this policy.</p></li>
 </ul>
 </dd>
@@ -2880,12 +2861,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.UserPolicy.name_prefix">
 <code class="sig-name descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserPolicy.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.iam.UserPolicy.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserPolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2907,7 +2882,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
 <li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM user to which to attach this policy.</p></li>
 </ul>
 </dd>
@@ -3106,25 +3080,7 @@ IAM policy.</p>
 <dl class="function">
 <dt id="pulumi_aws.iam.get_policy_document">
 <code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">get_policy_document</code><span class="sig-paren">(</span><em class="sig-param">override_json=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">source_json=None</em>, <em class="sig-param">statements=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_policy_document" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generates an IAM policy document in JSON format.</p>
-<p>This is a data source which can be used to construct a JSON representation of
-an IAM policy document, for use with resources which expect policy documents,
-such as the <code class="docutils literal notranslate"><span class="pre">iam.Policy</span></code> resource.</p>
-<p>Using this data source to generate policy documents is <em>optional</em>. It is also
-valid to use literal JSON strings within your configuration, or to use the
-<code class="docutils literal notranslate"><span class="pre">file</span></code> interpolation function to read a raw JSON policy document from a file.</p>
-<p>The IAM policy document format allows context variables to be interpolated
-into various strings within a statement. The native IAM policy document format
-uses <code class="docutils literal notranslate"><span class="pre">${...}</span></code>-style syntax that is in conflict with interpolation
-syntax, so this data source instead uses <code class="docutils literal notranslate"><span class="pre">&amp;{...}</span></code> syntax for interpolations that
-should be processed by AWS rather than by this provider.</p>
-<p>In order to define wildcard principal (a.k.a. anonymous user) use <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;*&quot;</span></code> and
-<code class="docutils literal notranslate"><span class="pre">identifiers</span> <span class="pre">=</span> <span class="pre">[&quot;*&quot;]</span></code>. In that case the rendered json will contain <code class="docutils literal notranslate"><span class="pre">&quot;Principal&quot;:</span> <span class="pre">&quot;*&quot;</span></code>.
-Note, that even though the <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html">IAM Documentation</a>
-states that <code class="docutils literal notranslate"><span class="pre">&quot;Principal&quot;:</span> <span class="pre">&quot;*&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;Principal&quot;:</span> <span class="pre">{&quot;AWS&quot;:</span> <span class="pre">&quot;*&quot;}</span></code> are equivalent,
-those principals have different behavior for IAM Role Trust Policy. Therefore
-this provider will normalize the principal field only in above-mentioned case and principals
-like <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;AWS&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">identifiers</span> <span class="pre">=</span> <span class="pre">[&quot;*&quot;]</span></code> will be rendered as <code class="docutils literal notranslate"><span class="pre">&quot;Principal&quot;:</span> <span class="pre">{&quot;AWS&quot;:</span> <span class="pre">&quot;*&quot;}</span></code>.</p>
+<dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

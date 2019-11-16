@@ -1800,7 +1800,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.Rule</span></code> Retrieves a WAF Regional Rule Resource Id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF rule.</p>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional rule.</p>
 </dd>
 </dl>
 <blockquote>
@@ -1814,7 +1814,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.WebAcl</span></code> Retrieves a WAF Regional Web ACL Resource Id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Web ACL.</p>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional Web ACL.</p>
 </dd>
 </dl>
 <blockquote>

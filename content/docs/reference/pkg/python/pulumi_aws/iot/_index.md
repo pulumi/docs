@@ -181,7 +181,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string. Use the <a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html">IoT Developer Guide</a> for more information on IoT Policies.</p></li>
 </ul>
 </dd>
 </dl>
@@ -206,12 +205,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of the policy.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pulumi_aws.iot.Policy.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.Policy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string. Use the <a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html">IoT Developer Guide</a> for more information on IoT Policies.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_aws.iot.Policy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">default_version_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.Policy.get" title="Permalink to this definition">¶</a></dt>
@@ -226,8 +219,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS to this policy.</p></li>
 <li><p><strong>default_version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default version of this policy.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy document. This is a JSON formatted string. Use the <a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html">IoT Developer Guide</a> for more information on IoT Policies.</p>
-</p></li>
 </ul>
 </dd>
 </dl>
