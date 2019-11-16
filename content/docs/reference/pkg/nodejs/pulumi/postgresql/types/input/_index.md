@@ -22,34 +22,34 @@ meta_desc: "Explore members of the input module in the @pulumi/postgresql packag
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="SchemaPolicy" data-link-title="SchemaPolicy">
-    <a href="https://github.com/pulumi/pulumi-postgresql/blob/7bfd7c17fe18226297a597d250a492f527515bc1/sdk/nodejs/types/input.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/3be30469724b1312d115e9a6dbe1882389528482/sdk/nodejs/types/input.ts#L7">
         interface <strong>SchemaPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SchemaPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="SchemaPolicy-create">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/7bfd7c17fe18226297a597d250a492f527515bc1/sdk/nodejs/types/input.ts#L8">property <b>create</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/3be30469724b1312d115e9a6dbe1882389528482/sdk/nodejs/types/input.ts#L8">property <b>create</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>create?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SchemaPolicy-createWithGrant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/7bfd7c17fe18226297a597d250a492f527515bc1/sdk/nodejs/types/input.ts#L9">property <b>createWithGrant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/3be30469724b1312d115e9a6dbe1882389528482/sdk/nodejs/types/input.ts#L9">property <b>createWithGrant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createWithGrant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SchemaPolicy-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/7bfd7c17fe18226297a597d250a492f527515bc1/sdk/nodejs/types/input.ts#L10">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/3be30469724b1312d115e9a6dbe1882389528482/sdk/nodejs/types/input.ts#L10">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SchemaPolicy-usage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/7bfd7c17fe18226297a597d250a492f527515bc1/sdk/nodejs/types/input.ts#L11">property <b>usage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/3be30469724b1312d115e9a6dbe1882389528482/sdk/nodejs/types/input.ts#L11">property <b>usage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SchemaPolicy-usageWithGrant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/7bfd7c17fe18226297a597d250a492f527515bc1/sdk/nodejs/types/input.ts#L12">property <b>usageWithGrant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/3be30469724b1312d115e9a6dbe1882389528482/sdk/nodejs/types/input.ts#L12">property <b>usageWithGrant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usageWithGrant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
