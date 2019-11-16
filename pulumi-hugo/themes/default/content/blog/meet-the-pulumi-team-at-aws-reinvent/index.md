@@ -15,7 +15,7 @@ Whatever the reason, the Pulumi team will be there all week at **Booth
 [AWS and Pulumi]({{< ref "/crosswalk/aws" >}}).
 
 Catch up with us on serverless functions, [containers]({{< ref "/containers" >}}) and
-[Kubernetes](/kubernetes), managed services and
+[Kubernetes]({{< relref "/topics/kubernetes" >}}), managed services and
 any other cloud native infrastructure as code, and see how you can more
 productively manage your AWS cloud resources with general purpose
 programming languages. We can even help you

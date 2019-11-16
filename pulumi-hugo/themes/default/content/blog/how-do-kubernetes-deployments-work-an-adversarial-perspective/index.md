@@ -147,5 +147,5 @@ field with the Kubernetes `Watch` API and a bit of terminal UI
 programming, you're most of your way to `kubespy trace deployment`.
 
 If you enjoyed this post, or are curious to see how this lifecycle is
-baked into the Pulumi CLI, please [give us a shot](/kubernetes)!
+baked into the Pulumi CLI, please [give us a shot]({{< relref "/topics/kubernetes" >}})!
 We'd love to hear your feedback.
