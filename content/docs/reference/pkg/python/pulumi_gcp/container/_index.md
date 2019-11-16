@@ -177,8 +177,8 @@ To update nodes in other node pools, use the <code class="docutils literal notra
 <li><p><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
 Structure is documented below.</p></li>
-<li><p><strong>private_cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of options for creating
-a private cluster. Structure is documented below.</p></li>
+<li><p><strong>private_cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration for <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters">private clusters</a>,
+clusters with private nodes. Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
 <li><p><strong>release_channel</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) Configuration options for the
@@ -279,6 +279,13 @@ has been deprecated in favour of <code class="docutils literal notranslate"><spa
 <li><p><code class="docutils literal notranslate"><span class="pre">dailyMaintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurringWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
@@ -711,6 +718,13 @@ documented below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurringWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 
@@ -995,8 +1009,8 @@ Structure is documented below.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.private_cluster_config">
 <code class="sig-name descname">private_cluster_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.private_cluster_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of options for creating
-a private cluster. Structure is documented below.</p>
+<dd><p>Configuration for <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters">private clusters</a>,
+clusters with private nodes. Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enablePrivateNodes</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
@@ -1253,8 +1267,9 @@ To update nodes in other node pools, use the <code class="docutils literal notra
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
 Structure is documented below.</p>
 </p></li>
-<li><p><strong>private_cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of options for creating
-a private cluster. Structure is documented below.</p></li>
+<li><p><strong>private_cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters">private clusters</a>,
+clusters with private nodes. Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
 <li><p><strong>release_channel</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) Configuration options for the
@@ -1362,6 +1377,13 @@ has been deprecated in favour of <code class="docutils literal notranslate"><spa
 <li><p><code class="docutils literal notranslate"><span class="pre">dailyMaintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurringWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">endTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>

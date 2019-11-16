@@ -44,7 +44,7 @@ meta_desc: "Explore members of the dns module in the @pulumi/gcp package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ManagedZone" data-link-title="ManagedZone">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L12">
         Resource <strong>ManagedZone</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ meta_desc: "Explore members of the dns module in the @pulumi/gcp package."
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_managed_zone.html.markdown.
 
 <h4 class="pdoc-member-header" id="ManagedZone-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -68,7 +68,7 @@ Create a ManagedZone resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ManagedZone-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -79,14 +79,14 @@ Get an existing ManagedZone resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ManagedZone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ManagedZone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -97,27 +97,40 @@ Returns true if the given object is an instance of ManagedZone.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ManagedZone-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L39">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L42">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A textual description field. Defaults to 'Managed by Terraform'.
+
 <h4 class="pdoc-member-header" id="ManagedZone-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L40">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L46">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The DNS name of this managed zone, for instance "example.com.".
+
 <h4 class="pdoc-member-header" id="ManagedZone-dnssecConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L41">property <b>dnssecConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L50">property <b>dnssecConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnssecConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneDnssecConfig'>outputs.dns.ManagedZoneDnssecConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+DNSSEC configuration
+
 <h4 class="pdoc-member-header" id="ManagedZone-forwardingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L42">property <b>forwardingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L55">property <b>forwardingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forwardingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneForwardingConfig'>outputs.dns.ManagedZoneForwardingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+
 <h4 class="pdoc-member-header" id="ManagedZone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -126,32 +139,48 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ManagedZone-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L43">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L59">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A set of key/value label pairs to assign to this ManagedZone.
+
 <h4 class="pdoc-member-header" id="ManagedZone-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L63">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+User assigned name for this resource. Must be unique within the project.
+
 <h4 class="pdoc-member-header" id="ManagedZone-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L45">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L67">property <b>nameServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nameServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
+
+Delegate your managed_zone to these virtual name servers; defined by the server
+
 <h4 class="pdoc-member-header" id="ManagedZone-peeringConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L46">property <b>peeringConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L72">property <b>peeringConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>peeringConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePeeringConfig'>outputs.dns.ManagedZonePeeringConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+
 <h4 class="pdoc-member-header" id="ManagedZone-privateVisibilityConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L47">property <b>privateVisibilityConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L76">property <b>privateVisibilityConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateVisibilityConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePrivateVisibilityConfig'>outputs.dns.ManagedZonePrivateVisibilityConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+
 <h4 class="pdoc-member-header" id="ManagedZone-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L52">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L81">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +189,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ManagedZone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -169,12 +198,16 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ManagedZone-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L53">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L86">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>visibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual
+Private Cloud resources. Must be one of: 'public', 'private'.
+
 <h3 class="pdoc-module-header" id="Policy" data-link-title="Policy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L12">
         Resource <strong>Policy</strong>
     </a>
 </h3>
@@ -184,7 +217,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L49"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -198,7 +231,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -209,14 +242,14 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -227,27 +260,41 @@ Returns true if the given object is an instance of Policy.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Policy-alternativeNameServerConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L39">property <b>alternativeNameServerConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L43">property <b>alternativeNameServerConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alternativeNameServerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyAlternativeNameServerConfig'>outputs.dns.PolicyAlternativeNameServerConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
+server that you choose. Names such as .internal are not available when an alternative name server is specified.
+
 <h4 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L40">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L47">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A textual description field. Defaults to 'Managed by Terraform'.
+
 <h4 class="pdoc-member-header" id="Policy-enableInboundForwarding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L41">property <b>enableInboundForwarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L52">property <b>enableInboundForwarding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableInboundForwarding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
+enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+
 <h4 class="pdoc-member-header" id="Policy-enableLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L42">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L56">property <b>enableLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableLogging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+
 <h4 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -256,17 +303,23 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L60">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+User assigned name for this policy.
+
 <h4 class="pdoc-member-header" id="Policy-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L44">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L64">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyNetwork'>outputs.dns.PolicyNetwork</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+List of network names specifying networks to which this policy is applied.
+
 <h4 class="pdoc-member-header" id="Policy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L49">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L69">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -275,7 +328,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -284,7 +337,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RecordSet" data-link-title="RecordSet">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L127">
         Resource <strong>RecordSet</strong>
     </a>
 </h3>
@@ -409,7 +462,7 @@ const cname = new gcp.dns.RecordSet("cname", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_record_set.html.markdown.
 
 <h4 class="pdoc-member-header" id="RecordSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L180"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L180"> <b>constructor</b></a>
 </h4>
 
 
@@ -423,7 +476,7 @@ Create a RecordSet resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RecordSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L136">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L136">method <b>get</b></a>
 </h4>
 
 
@@ -434,14 +487,14 @@ Get an existing RecordSet resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RecordSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L127">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L127">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RecordSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L147">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L147">method <b>isInstance</b></a>
 </h4>
 
 
@@ -452,7 +505,7 @@ Returns true if the given object is an instance of RecordSet.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RecordSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L127">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L127">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -461,7 +514,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RecordSet-managedZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L158">property <b>managedZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L158">property <b>managedZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -470,7 +523,7 @@ The name of the zone in which this record set will
 reside.
 
 <h4 class="pdoc-member-header" id="RecordSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -478,7 +531,7 @@ reside.
 The DNS name this record set will apply to.
 
 <h4 class="pdoc-member-header" id="RecordSet-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L167">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L167">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -487,7 +540,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RecordSet-rrdatas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L172">property <b>rrdatas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L172">property <b>rrdatas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rrdatas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -496,7 +549,7 @@ The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside this provider's configuration string (e.g. `"first255characters\"\"morecharacters"`).
 
 <h4 class="pdoc-member-header" id="RecordSet-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L176">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L176">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -504,7 +557,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 The time-to-live of this record set (seconds).
 
 <h4 class="pdoc-member-header" id="RecordSet-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L180">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L180">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -512,7 +565,7 @@ The time-to-live of this record set (seconds).
 The DNS record set type.
 
 <h4 class="pdoc-member-header" id="RecordSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L127">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L127">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -523,7 +576,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getManagedZone" data-link-title="getManagedZone">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L33">
         Data Source <strong>getManagedZone</strong>
     </a>
 </h3>
@@ -558,7 +611,7 @@ const dns = new gcp.dns.RecordSet("dns", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetManagedZoneArgs" data-link-title="GetManagedZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L52">
         interface <strong>GetManagedZoneArgs</strong>
     </a>
 </h3>
@@ -568,7 +621,7 @@ const dns = new gcp.dns.RecordSet("dns", {
 A collection of arguments for invoking getManagedZone.
 
 <h4 class="pdoc-member-header" id="GetManagedZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L56">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -576,7 +629,7 @@ A collection of arguments for invoking getManagedZone.
 A unique name for the resource.
 
 <h4 class="pdoc-member-header" id="GetManagedZoneArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L60">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L60">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -584,7 +637,7 @@ A unique name for the resource.
 The ID of the project for the Google Cloud DNS zone.
 
 <h3 class="pdoc-module-header" id="GetManagedZoneResult" data-link-title="GetManagedZoneResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L66">
         interface <strong>GetManagedZoneResult</strong>
     </a>
 </h3>
@@ -594,7 +647,7 @@ The ID of the project for the Google Cloud DNS zone.
 A collection of values returned by getManagedZone.
 
 <h4 class="pdoc-member-header" id="GetManagedZoneResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -602,7 +655,7 @@ A collection of values returned by getManagedZone.
 A textual description field.
 
 <h4 class="pdoc-member-header" id="GetManagedZoneResult-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L74">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L74">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -610,7 +663,7 @@ A textual description field.
 The fully qualified DNS name of this zone, e.g. `example.com.`.
 
 <h4 class="pdoc-member-header" id="GetManagedZoneResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -618,12 +671,12 @@ The fully qualified DNS name of this zone, e.g. `example.com.`.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetManagedZoneResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetManagedZoneResult-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L81">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L81">property <b>nameServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -633,12 +686,12 @@ domain. Use NS records to redirect from your DNS provider to these names,
 thus making Google Cloud DNS authoritative for this zone.
 
 <h4 class="pdoc-member-header" id="GetManagedZoneResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/getManagedZone.ts#L82">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/getManagedZone.ts#L82">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ManagedZoneArgs" data-link-title="ManagedZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L196">
         interface <strong>ManagedZoneArgs</strong>
     </a>
 </h3>
@@ -648,47 +701,73 @@ thus making Google Cloud DNS authoritative for this zone.
 The set of arguments for constructing a ManagedZone resource.
 
 <h4 class="pdoc-member-header" id="ManagedZoneArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L131">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L200">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A textual description field. Defaults to 'Managed by Terraform'.
+
 <h4 class="pdoc-member-header" id="ManagedZoneArgs-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L132">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L204">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The DNS name of this managed zone, for instance "example.com.".
+
 <h4 class="pdoc-member-header" id="ManagedZoneArgs-dnssecConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L133">property <b>dnssecConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L208">property <b>dnssecConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnssecConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfig'>inputs.dns.ManagedZoneDnssecConfig</a>&gt;;</code></pre>
+
+DNSSEC configuration
+
 <h4 class="pdoc-member-header" id="ManagedZoneArgs-forwardingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L134">property <b>forwardingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L213">property <b>forwardingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfig'>inputs.dns.ManagedZoneForwardingConfig</a>&gt;;</code></pre>
+
+The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+
 <h4 class="pdoc-member-header" id="ManagedZoneArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L135">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L217">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+A set of key/value label pairs to assign to this ManagedZone.
+
 <h4 class="pdoc-member-header" id="ManagedZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L221">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+User assigned name for this resource. Must be unique within the project.
+
 <h4 class="pdoc-member-header" id="ManagedZoneArgs-peeringConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L137">property <b>peeringConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L226">property <b>peeringConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfig'>inputs.dns.ManagedZonePeeringConfig</a>&gt;;</code></pre>
+
+The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+
 <h4 class="pdoc-member-header" id="ManagedZoneArgs-privateVisibilityConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L138">property <b>privateVisibilityConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L230">property <b>privateVisibilityConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateVisibilityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfig'>inputs.dns.ManagedZonePrivateVisibilityConfig</a>&gt;;</code></pre>
+
+For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+
 <h4 class="pdoc-member-header" id="ManagedZoneArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L143">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L235">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,12 +776,16 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ManagedZoneArgs-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L144">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L240">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual
+Private Cloud resources. Must be one of: 'public', 'private'.
+
 <h3 class="pdoc-module-header" id="ManagedZoneState" data-link-title="ManagedZoneState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L142">
         interface <strong>ManagedZoneState</strong>
     </a>
 </h3>
@@ -712,52 +795,81 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering ManagedZone resources.
 
 <h4 class="pdoc-member-header" id="ManagedZoneState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L110">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L146">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A textual description field. Defaults to 'Managed by Terraform'.
+
 <h4 class="pdoc-member-header" id="ManagedZoneState-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L111">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L150">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The DNS name of this managed zone, for instance "example.com.".
+
 <h4 class="pdoc-member-header" id="ManagedZoneState-dnssecConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L112">property <b>dnssecConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L154">property <b>dnssecConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnssecConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfig'>inputs.dns.ManagedZoneDnssecConfig</a>&gt;;</code></pre>
+
+DNSSEC configuration
+
 <h4 class="pdoc-member-header" id="ManagedZoneState-forwardingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L113">property <b>forwardingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L159">property <b>forwardingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfig'>inputs.dns.ManagedZoneForwardingConfig</a>&gt;;</code></pre>
+
+The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+
 <h4 class="pdoc-member-header" id="ManagedZoneState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L114">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L163">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
+
+A set of key/value label pairs to assign to this ManagedZone.
+
 <h4 class="pdoc-member-header" id="ManagedZoneState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L167">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+User assigned name for this resource. Must be unique within the project.
+
 <h4 class="pdoc-member-header" id="ManagedZoneState-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L116">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L171">property <b>nameServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+Delegate your managed_zone to these virtual name servers; defined by the server
+
 <h4 class="pdoc-member-header" id="ManagedZoneState-peeringConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L117">property <b>peeringConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L176">property <b>peeringConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfig'>inputs.dns.ManagedZonePeeringConfig</a>&gt;;</code></pre>
+
+The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+
 <h4 class="pdoc-member-header" id="ManagedZoneState-privateVisibilityConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L118">property <b>privateVisibilityConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L180">property <b>privateVisibilityConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateVisibilityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfig'>inputs.dns.ManagedZonePrivateVisibilityConfig</a>&gt;;</code></pre>
+
+For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+
 <h4 class="pdoc-member-header" id="ManagedZoneState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L123">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L185">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -766,12 +878,16 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="ManagedZoneState-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/managedZone.ts#L124">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/managedZone.ts#L190">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual
+Private Cloud resources. Must be one of: 'public', 'private'.
+
 <h3 class="pdoc-module-header" id="PolicyArgs" data-link-title="PolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L151">
         interface <strong>PolicyArgs</strong>
     </a>
 </h3>
@@ -781,37 +897,57 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a Policy resource.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-alternativeNameServerConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L112">property <b>alternativeNameServerConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L156">property <b>alternativeNameServerConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alternativeNameServerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAlternativeNameServerConfig'>inputs.dns.PolicyAlternativeNameServerConfig</a>&gt;;</code></pre>
+
+Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
+server that you choose. Names such as .internal are not available when an alternative name server is specified.
+
 <h4 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L113">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L160">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A textual description field. Defaults to 'Managed by Terraform'.
+
 <h4 class="pdoc-member-header" id="PolicyArgs-enableInboundForwarding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L114">property <b>enableInboundForwarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L165">property <b>enableInboundForwarding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableInboundForwarding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
+enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+
 <h4 class="pdoc-member-header" id="PolicyArgs-enableLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L115">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L169">property <b>enableLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+
 <h4 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L173">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+User assigned name for this policy.
+
 <h4 class="pdoc-member-header" id="PolicyArgs-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L117">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L177">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyNetwork'>inputs.dns.PolicyNetwork</a>&gt;[]&gt;;</code></pre>
+
+List of network names specifying networks to which this policy is applied.
+
 <h4 class="pdoc-member-header" id="PolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L122">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L182">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -820,7 +956,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="PolicyState" data-link-title="PolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L114">
         interface <strong>PolicyState</strong>
     </a>
 </h3>
@@ -830,37 +966,57 @@ If it is not provided, the provider project is used.
 Input properties used for looking up and filtering Policy resources.
 
 <h4 class="pdoc-member-header" id="PolicyState-alternativeNameServerConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L95">property <b>alternativeNameServerConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L119">property <b>alternativeNameServerConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alternativeNameServerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAlternativeNameServerConfig'>inputs.dns.PolicyAlternativeNameServerConfig</a>&gt;;</code></pre>
+
+Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name
+server that you choose. Names such as .internal are not available when an alternative name server is specified.
+
 <h4 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L96">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L123">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+A textual description field. Defaults to 'Managed by Terraform'.
+
 <h4 class="pdoc-member-header" id="PolicyState-enableInboundForwarding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L97">property <b>enableInboundForwarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L128">property <b>enableInboundForwarding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableInboundForwarding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When
+enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.
+
 <h4 class="pdoc-member-header" id="PolicyState-enableLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L98">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L132">property <b>enableLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+
 <h4 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L99">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+User assigned name for this policy.
+
 <h4 class="pdoc-member-header" id="PolicyState-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L100">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L140">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyNetwork'>inputs.dns.PolicyNetwork</a>&gt;[]&gt;;</code></pre>
+
+List of network names specifying networks to which this policy is applied.
+
 <h4 class="pdoc-member-header" id="PolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/policy.ts#L105">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/policy.ts#L145">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -869,7 +1025,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="RecordSetArgs" data-link-title="RecordSetArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L268">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L268">
         interface <strong>RecordSetArgs</strong>
     </a>
 </h3>
@@ -879,7 +1035,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a RecordSet resource.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-managedZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L273">property <b>managedZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L273">property <b>managedZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -888,7 +1044,7 @@ The name of the zone in which this record set will
 reside.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L277">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L277">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -896,7 +1052,7 @@ reside.
 The DNS name this record set will apply to.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L282">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L282">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -905,7 +1061,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-rrdatas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L287">property <b>rrdatas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L287">property <b>rrdatas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rrdatas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -914,7 +1070,7 @@ The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside this provider's configuration string (e.g. `"first255characters\"\"morecharacters"`).
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L291">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L291">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -922,7 +1078,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 The time-to-live of this record set (seconds).
 
 <h4 class="pdoc-member-header" id="RecordSetArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L295">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L295">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -930,7 +1086,7 @@ The time-to-live of this record set (seconds).
 The DNS record set type.
 
 <h3 class="pdoc-module-header" id="RecordSetState" data-link-title="RecordSetState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L235">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L235">
         interface <strong>RecordSetState</strong>
     </a>
 </h3>
@@ -940,7 +1096,7 @@ The DNS record set type.
 Input properties used for looking up and filtering RecordSet resources.
 
 <h4 class="pdoc-member-header" id="RecordSetState-managedZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L240">property <b>managedZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L240">property <b>managedZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -949,7 +1105,7 @@ The name of the zone in which this record set will
 reside.
 
 <h4 class="pdoc-member-header" id="RecordSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L244">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L244">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -957,7 +1113,7 @@ reside.
 The DNS name this record set will apply to.
 
 <h4 class="pdoc-member-header" id="RecordSetState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L249">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L249">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -966,7 +1122,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RecordSetState-rrdatas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L254">property <b>rrdatas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L254">property <b>rrdatas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rrdatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -975,7 +1131,7 @@ The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside this provider's configuration string (e.g. `"first255characters\"\"morecharacters"`).
 
 <h4 class="pdoc-member-header" id="RecordSetState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L258">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L258">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -983,7 +1139,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 The time-to-live of this record set (seconds).
 
 <h4 class="pdoc-member-header" id="RecordSetState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/2d7762322f1d9d9f2616c55cb6b530cbe91bc60f/sdk/nodejs/dns/recordSet.ts#L262">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/dns/recordSet.ts#L262">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
