@@ -113,5 +113,5 @@ practices we've accumulated, and describe how we solved the problem of
 repeatable `Pod` deployments in Pulumi.
 
 If you enjoyed this post, or are curious to see how this lifecycle is
-baked into the Pulumi CLI, [give us a shot](/kubernetes)!
+baked into the Pulumi CLI, [give us a shot]({{< relref "/topics/kubernetes" >}})!
 We'd love to have your feedback.
