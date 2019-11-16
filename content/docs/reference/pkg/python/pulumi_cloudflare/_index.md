@@ -776,6 +776,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_cloudflare.AwaitableGetWafRulesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetWafRulesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetWafRulesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_cloudflare.AwaitableGetZonesResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1280,6 +1285,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetWafPackagesResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.GetWafPackagesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_cloudflare.GetWafRulesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetWafRulesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetWafRulesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getWafRules.</p>
+<dl class="attribute">
+<dt id="pulumi_cloudflare.GetWafRulesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.GetWafRulesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -3590,6 +3607,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_cloudflare.Zone.verification_key">
+<code class="sig-name descname">verification_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Zone.verification_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains the TXT record value to validate domain ownership. This is only populated for zones of type <code class="docutils literal notranslate"><span class="pre">partial</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_cloudflare.Zone.zone">
 <code class="sig-name descname">zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Zone.zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS zone name which will be added.</p>
@@ -3597,7 +3620,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_cloudflare.Zone.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">jump_start=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">paused=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vanity_name_servers=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Zone.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">jump_start=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">paused=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vanity_name_servers=None</em>, <em class="sig-param">verification_key=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Zone.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Zone resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3622,7 +3645,10 @@ properties used to qualify the lookup.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone name which will be added.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verification_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Contains the TXT record value to validate domain ownership. This is only populated for zones of type <code class="docutils literal notranslate"><span class="pre">partial</span></code>.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone name which will be added.</p></li>
+</ul>
 </dd>
 </dl>
 <p>The <strong>meta</strong> object supports the following:</p>
@@ -4304,6 +4330,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_packages.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_packages.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_cloudflare.get_waf_rules">
+<code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_waf_rules</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_waf_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to look up [WAF Rules][1].</p>
+<p>The <strong>filter</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_rules.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
