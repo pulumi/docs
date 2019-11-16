@@ -12,147 +12,94 @@ aliases: ["/docs/guides/k8s-the-prod-way/app", "/docs/guides/k8s-the-prod-way/ar
     <img src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
-[Pulumi Crosswalk for Kubernetes][crosswalk-k8s] is a collection of industry standard
-best-practices for managing Kubernetes, and its infrastructure in production.
-
-This guide is for provisioning and configuring production-grade Kubernetes
-clusters, and deploying workloads into the clusters.
+[Pulumi Crosswalk for Kubernetes][cw-index] is production-ready Kubernetes
+for teams. Work together to deliver Kubernetes to any cloud, AWS, Azure, Google
+Cloud, or private.
 
 If you are just getting started with Pulumi and Kubernetes, the [Get Started][k8s-get-started] guide is a better place to start.
 
-<a href="/images/docs/quickstart/kubernetes/cake.svg">
-<img src="/images/docs/quickstart/kubernetes/cake.svg">
-</a>
+## Playbooks for Kubernetes
 
-## Overview
+Manage production-ready infrastructure leveraging hosted
+Kubernetes offerings such as [Amazon Elastic Kubernetes Service (EKS)][eks], [Azure
+Kubernetes Service (AKS)][aks], or [Google Kubernetes Engine (GKE)][gke].
 
-The steps to follow include:
+Discover solutions to the hardest Kubernetes problems to avoid mitigating
+pitfalls around infrastructure, security, governance, reliablity, and
+maintainability of the cluster, it's workloads, and underlying resources.
 
-  * [Create the Control Plane][crosswalk-control-plane]
-  * [Create the Worker Nodes][crosswalk-worker-nodes]
-  * [Try Out the Cluster][crosswalk-try-out-the-cluster]
-  * [Configure Cluster Defaults][crosswalk-configure-defaults]
-  * [Configure Access Control][crosswalk-configure-access]
-  * [Deploy Cluster Services][crosswalk-cluster-svcs]
-  * [Deploy App Services][crosswalk-app-svcs]
-  * [Deploy Apps][crosswalk-apps]
-  * [Update the Worker Nodes][crosswalk-update-worker-nodes]
+[Get started][cw-playbooks] with the playbooks to manage Kubernetes in production with your team.
 
-## Production Architecture for Teams
+## Making Kubernetes Accessible to Everyone
 
-Misconfigured infrastructure accounts are the source of a significant number of serious
-production outages. Many of these failure modes are preventable.
+Pulumi exposes 100% of the Kubernetes API in [`pulumi/kubernetes`][pulumi-k8s],
+which means you use modern programming practices to reduce YAML/JSON complexity,
+repetition, and encapsulate workloads effectively.
 
-The primary objective of this reference architecture is to create sensible
-defaults that reduce the likelihood of these errors. Modern infrastructure as
-code tools, such as Pulumi, are an effective means of accomplishing
-this goal.
+Through the new Crosswalk library extensions, the authorship experience has
+improved to make the API more accessible and approachable to operators
+and developers.
 
-Pulumi tools allow engineering teams to share specifications for what their
-infrastructure should look like and allow teams to reliably provision and manage
-infrastructure. Changes to infrastructure can be audited as part of
-code review and they allow teams to detect drift.
+By reducing the Kubernetes API syntax used, including sane
+defaults where possible, and maintaining idiomatic Kubernetes, it is
+easier to work with the API and deploy resources. Crosswalk revamps the Kubernetes API resource
+composition, but produces the exact semantic API output type. The ability to 
+drop into and inject a given API type's raw spec is maintained through out.
 
-This architecture is meant to show how these tools can be used within a team
-to employ and understand:
+[Get started][pulumi-kx] with `pulumi/kubernetesx` to manage Kubernetes
+workloads using constructs built for everyone.
 
-* **Security:** Who has access to what, and how is this policy enforced?
-* **Governance:** How do we ensure the blast radius of changes is as small as possible?
-* **Engineering:**  How do we automate this with CI/CD?
+## Query for Kubernetes
 
-## Production Infrastructure as Code
+Maintaining and understanding Kubernetes clusters requires coordination
+and delivery of continuous changes. The API surface area is complex and highly
+disjointed when you want to make sense of what is taking place in the cluster, and why it is occuring.
 
-At the core of this architecture is a simple idea: that we should separate resources into
-loosely-coupled, independently-manageable sets, based on risk and functionality.
+Common choices for these assessments include a mix of `kubectl`
+and [`client-go`][k8s-clientgo], and require the user to form manual joins
+across resources, and perform a reactive series of queries to understand what is taking place.
 
-We suggest splitting infrastructure up into (roughly) six [Pulumi
-stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) of resources.
+To gain detailed insights, we've released a new tool called [Pulumi Query](#pulumi-query) that
+helps you understand your clusters passively or in real-time.
+By exposing Kubernetes through a library of streaming queries, it becomes easy
+to write apps that can tail API resources, discover distinct versions of a
+given Pod, or even inform you of which Services are publicly exposed to the
+Internet.
 
-### 1. Identity
+[Get started][pulumi-kq] with `pulumi/query` to understand Kubernetes
+clusters and workloads through a new lens.
 
-Identities and role definitions for organizations and CI/CD are required before anyone can provision
-anything. This is a requirement for every production Kubernetes deployment.
+## Join the Community
 
-By isolating resources into loosely-coupled stacks, we
-can grant minimal permissions based on the [principle of least
-privilege][least-privileged].
+With Pulumi's unique approach to open source [infrastructure as code][gh-pulumi], you'll focus more on
+code and business logic, and less on resource templates, YAML or DSL configuration languages.
 
-The identity stack typically contains:
+Leverage Pulumi's collection of open source [tools][gh-pulumi],
+Kubernetes [frameworks][pulumi-cloud-k8s], [continuous delivery integrations][pulumi-cd],
+and [playbooks][cw-playbooks] to help you deliver production-ready Kubernetes.
 
-* Identities and roles for the team e.g. [AWS IAM][aws-iam], [GCP IAM][gcp-iam], [Azure AD][azure-ad].
-
-    For example, the database team typically gets only administrative permissions for the datastores, while an app team might only get cluster developer permissions.
-* Service Accounts for bots and CI/CD.
-
-    While IAM roles and Active Directory accounts describe identity of users,
-    service accounts grant an identity for workloads, e.g., Storage
-    CI/CD.
-
-### 2. Managed Infrastructure
-
-Provisioning shared, managed infrastructure is required to configure the
-cluster.
-
-At a minimum, this typically includes networking infrastructure,
-and can often include storage backends along with other cloud services such as
-VMs, registries, data pipelines, and data warehouses.
-
-### 3. Kubernetes Cluster
-
-Configure and provision the Kubernetes cluster with the desired settings and defaults.
-
-This also typically involves provisioning the Kubernetes cluster infrastructure
-with [API resources][k8s-api-resources] such as Namespaces, Roles , RoleBindings, and Quotas.
-
-Using a managed Kubernetes cluster on [EKS][eks], [GKE][gke], or [AKS][aks] is
-the easiest way to deploy a cluster.
-
-### 4. Cluster Services
-
-With a vanilla cluster running, you can install any Kubernetes cluster-scoped
-services that will be shared by some or all cluster users.
-
-At a minimum, services that should be installed include centralized cluster and app-based logging, and often
-include monitoring, policies, and service meshes.
-
-### 5. App Services
-
-Configure any Kubernetes app-scoped services that will be shared
-with users using deployment permissions.
-
-App services tend to include managed datastores (e.g. [RDS][aws-rds],
-[Cloud SQL][cloud-sql], and [CosmosDB][cosmos-db]), ingress controllers,
-DNS managers, TLS certificate managers, and app pipelines.
-
-### 6. Apps
-
-Deploy applications and workloads into the cluster.
+Join the Pulumi team and thousands of practioners in our
+[Community Slack][pulumi-slack] for questions and support, follow us on [Twitter][pulumi-twitter] for our latest news, and subscribe to our [YouTube channel][pulumi-yt] to access educational content.
 
 ## Frequently Asked Questions (FAQ)
 
 See the [FAQ][crosswalk-faq] for more details.
 
-[aws-iam]: https://aws.amazon.com/iam/
-[gcp-iam]: https://cloud.google.com/iam/
-[azure-ad]: https://azure.microsoft.com/en-us/services/active-directory/
-[eks]: https://aws.amazon.com/eks/
-[gke]: https://cloud.google.com/kubernetes-engine/
-[aks]: https://docs.microsoft.com/en-us/azure/aks/
-[aws-rds]: https://aws.amazon.com/rds
-[cloud-sql]: https://cloud.google.com/sql/
-[cosmos-db]: https://azure.microsoft.com/en-us/services/cosmos-db/
-[k8s-get-started]: {{< relref "/docs/get-started/kubernetes" >}}
-[k8s-api-resources]: https://kubernetes.io/docs/reference/kubernetes-api/
-[aws-sqs]: https://aws.amazon.com/sqs/
 [crosswalk-faq]: {{< relref "/docs/guides/crosswalk/kubernetes/faq.md" >}}
-[crosswalk-control-plane]: {{< relref "/docs/guides/crosswalk/kubernetes/control-plane" >}}
-[crosswalk-worker-nodes]: {{< relref "/docs/guides/crosswalk/kubernetes/worker-nodes" >}}
-[crosswalk-try-out-the-cluster]: {{< relref "/docs/guides/crosswalk/kubernetes/try-out-the-cluster" >}}
-[crosswalk-configure-defaults]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-defaults" >}}
-[crosswalk-configure-access]: {{< relref "/docs/guides/crosswalk/kubernetes/configure-access-control" >}}
-[crosswalk-cluster-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/cluster-services" >}}
-[crosswalk-app-svcs]: {{< relref "/docs/guides/crosswalk/kubernetes/app-services" >}}
-[crosswalk-apps]: {{< relref "/docs/guides/crosswalk/kubernetes/apps" >}}
-[crosswalk-update-worker-nodes]: {{< relref "/docs/guides/crosswalk/kubernetes/update-worker-nodes" >}}
-[least-privileged]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
-[crosswalk-k8s]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
+[cw-index]: {{< relref "/docs/guides/crosswalk/kubernetes" >}}
+[cw-playbooks]: {{< relref "/docs/guides/crosswalk/kubernetes/playbooks" >}}
+[k8s-get-started]: {{< relref "/docs/get-started/kubernetes" >}}
+[eks]: https://aws.amazon.com/eks/
+[aks]: https://azure.microsoft.com/en-us/services/kubernetes-service/
+[gke]: https://cloud.google.com/kubernetes-engine/
+[pulumi-k8s]: https://github.com/pulumi/pulumi-kubernetes
+[pulumi-kx]: https://github.com/pulumi/pulumi-kubernetesx
+[pulumi-kq]: https://github.com/pulumi/pulumi-query
+[k8s-clientgo]: https://github.com/kubernetes/client-go
+[gh-pulumi]: https://github.com/pulumi
+[pulumi-cloud-k8s]: /docs/intro/cloud-providers/kubernetes
+[pulumi-cloud-k8s]: {{< relref "/docs/intro/cloud-providers/kubernetes" >}}
+[pulumi-cd]: {{< relref "/docs/guides/continuous-delivery" >}}
+[pulumi-slack]: https://slack.pulumi.com/
+[pulumi-twitter]: https://twitter.com/pulumicorp
+[pulumi-yt]: https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw

@@ -4,7 +4,7 @@ menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-configure-authorization
-    weight: 5
+    weight: 6
 ---
 
 {{< cloudchoose >}}
