@@ -3,7 +3,7 @@ heading: Modern Infrastructure as Code.
 
 subhead: >
     Declare cloud infrastructure using real languages. Enable
-    developers and operators to work better together.
+    developers and operators to work better together. Ooh yeah...!
 
 ctas:
     - |
