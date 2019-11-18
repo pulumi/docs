@@ -8,28 +8,31 @@ meta_desc: Pulumi provides a cloud native programming model for Kubernetes deplo
 hero:
     title: Kubernetes with Pulumi
     body: >
-        Pulumi provides a cloud native programming model for kubernetes
+        Pulumi provides a cloud native programming model for Kubernetes
         deployments and orchestration: from on-premises to AWS EKS, Microsoft
         AKS, and Google GKE.
 
 
         Any code, any cloud, any language.
     code: |
-        import * as k8sjs from "./k8sjs";
+        import * as kx from "@pulumi/kubernetesx";
 
-        let redis = new k8sjs.ServiceDeployment("redis", {
-            image: "k8s.gcr.io/redis:e2e",
-            ports: [ 6379 ]
+        const pb = new kx.PodBuilder({
+            containers: [{ 
+                image: "nginx", 
+                ports: { http: 80 } 
+            }]
         });
 
-        let web = new k8sjs.ServiceDeployment("web", {
-            replicas: 3,
-            image: "gcr.io/google-samples/gb-frontend:v4",
-            ports: [ 80 ],
-            loadBalancer: true,
+        const deployment = new kx.Deployment("nginx", {
+            spec: pb.asDeploymentSpec({ replicas: 3 })
         });
 
-        export let frontendIp = web.ipAddress;
+        const service = deployment.createService({
+            type: kx.types.ServiceType.LoadBalancer
+        });
+
+        export const serviceIP = service.ip;
 
 sections:
     - id: what-is-kubernetes
