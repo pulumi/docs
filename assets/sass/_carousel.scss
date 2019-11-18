@@ -1,37 +1,24 @@
 .homepage-carousel--container {
-	overflow: hidden;
-	.carousel-text--container {
-		height: 520px;
-		@media (min-width: 769px) and (max-width: 1030px) {
-			height: 365px;
-		}
-		@media (min-width: 600px) and (max-width: 768px) {
-			height: 440px;
-		}
-	}
-	@media (max-width: 1030px) {
-		max-width: 1023px;
-		padding: 0 25px;
-	}
-	@media (max-width: 1030px) {
-		.carousel-content--container {
-			display: flex;
-			flex-direction: column;
-			.carousel-text--container, .carousel-media--container {
-				width: 100%;
-			}
-			.carousel-text--container {
-				@include order(9999);
-			}
-			.carousel-media--container {
-				@include order(-9999);
-			}
-		}
+	@apply max-w-5xl;
+	@screen md {
+		max-width: 1280px;
 	}
 	@media (max-width: 390px) {
-		padding: 0;
+		@apply p-0;
 		.carousel-ide {
-			font-size: 11px;
+			@include font-size(11px);
+		}
+	}
+	.carousel-text--container {
+		height: 520px;
+		@screen sm {
+			height: 440px;
+		}
+		@screen md {
+			height: 365px;
+		}
+		@screen lg {
+			height: 520px;
 		}
 	}
 	.home-carousel-ide--popup-group {
@@ -43,12 +30,12 @@
 			.ide-popup--container {
 				width: 292px;
 			}
-			@media (min-width: 1030px) and (max-width: 1280px) {
+			@screen md {
+				top: 38px;
+			}
+			@screen lg {
 				top: 25px;
 				left: 115px;
-			}
-			@media (min-width: 769px) and (max-width: 1029px) {
-				top: 38px;
 			}
 			@media (max-width: 768px) {
 				top: 40px;
@@ -72,18 +59,18 @@
 	.home-carousel-cli--text-container {
 		height: 400px;
 		@media (max-width: 500px) {
-			font-size: 10px;
+			@include font-size(10px);
 		}
 		@media (max-width: 430px) {
-			font-size: 8px;
+			@include font-size(8px);
 		}
 	}
 	.home-carousel--console-content {
 		@media (max-width: 480px) {
-			font-size: 9px;
+			@include font-size(9px);
 		}
 		@media (max-width: 380px) {
-			font-size: 8px;
+			@include font-size(8px);
 		}
 	}
 }

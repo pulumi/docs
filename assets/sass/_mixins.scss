@@ -1,3 +1,8 @@
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+
 @mixin transition($scope: all, $duration: 100ms, $fn: linear) {
     transition: $scope $duration $fn;
 }
@@ -6,10 +11,7 @@
     background-image: radial-gradient($radius at $center-x $center-y, $from-color, $to-color);
 }
 
-@mixin order($number) {
-	-webkit-box-ordinal-group: $number;
-	-moz-box-ordinal-group: $number;
-	-ms-flex-order: $number;
-	-webkit-order: $number;
-	order: $number;
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
 }
