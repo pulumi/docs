@@ -26,7 +26,7 @@ meta_desc: "Explore members of the v2 module in the @pulumi/kubernetes package."
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="Chart" data-link-title="Chart">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L121">
         class <strong>Chart</strong>
     </a>
 </h3>
@@ -45,7 +45,7 @@ manifests. Any values that would be retrieved in-cluster are assigned fake value
 none of Tiller's server-side validity testing is executed.
 
 <h4 class="pdoc-member-header" id="Chart-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L121"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L121"> <b>constructor</b></a>
 </h4>
 
 
@@ -59,7 +59,7 @@ Create an instance of the specified Helm chart.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Chart-getCustomResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/yaml/yaml.ts#L2331">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/yaml/yaml.ts#L2331">method <b>getCustomResource</b></a>
 </h4>
 
 
@@ -75,14 +75,14 @@ For example:
 <pre class="highlight"><code><span class='kd'>public </span>getCustomResource&lt;T&gt;(groupVersionKind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;T&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Chart-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L121">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L121">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Chart-getResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/yaml/yaml.ts#L213">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/yaml/yaml.ts#L213">method <b>getResource</b></a>
 </h4>
 
 
@@ -155,7 +155,7 @@ For example:
 <pre class="highlight"><code>+ 350 additional overloads</code></pre>
 
 <h4 class="pdoc-member-header" id="Chart-getResourceProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/yaml/yaml.ts#L593">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/yaml/yaml.ts#L593">method <b>getResourceProperty</b></a>
 </h4>
 
 
@@ -228,7 +228,7 @@ For example:
 <pre class="highlight"><code>+ 1706 additional overloads</code></pre>
 
 <h4 class="pdoc-member-header" id="Chart-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L121">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L121">method <b>isInstance</b></a>
 </h4>
 
 
@@ -239,26 +239,26 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Chart-parseTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L210">method <b>parseTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L213">method <b>parseTemplate</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>parseTemplate(yamlStream: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, transformations: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, resourcePrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, dependsOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>[]): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>pulumi.CustomResource</a>}&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Chart-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L121">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L121">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Chart-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/yaml/yaml.ts#L199">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/yaml/yaml.ts#L199">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>pulumi.CustomResource</a>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Chart-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L121">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L121">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -267,14 +267,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ChartOpts" data-link-title="ChartOpts">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L69">
         interface <strong>ChartOpts</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ChartOpts</span> <span class='kr'>extends</span> <a href='#BaseChartOpts'>BaseChartOpts</a></code></pre>
 <h4 class="pdoc-member-header" id="ChartOpts-chart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L81">property <b>chart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L81">property <b>chart</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>chart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -284,7 +284,7 @@ Example: repo: "stable", chart: "nginx-ingress" -> "stable/nginx-ingress"
 Example: chart: "stable/nginx-ingress" -> "stable/nginx-ingress"
 
 <h4 class="pdoc-member-header" id="ChartOpts-fetchOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L91">property <b>fetchOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L91">property <b>fetchOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fetchOpts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FetchOpts'>FetchOpts</a>&gt;;</code></pre>
@@ -292,7 +292,7 @@ Example: chart: "stable/nginx-ingress" -> "stable/nginx-ingress"
 Additional options to customize the fetching of the Helm chart.
 
 <h4 class="pdoc-member-header" id="ChartOpts-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L32">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L32">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ Additional options to customize the fetching of the Helm chart.
 The optional namespace to install chart resources into.
 
 <h4 class="pdoc-member-header" id="ChartOpts-repo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L74">property <b>repo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L74">property <b>repo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -309,7 +309,7 @@ The repository name of the chart to deploy.
 Example: "stable"
 
 <h4 class="pdoc-member-header" id="ChartOpts-resourcePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L66">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L66">property <b>resourcePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourcePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -318,7 +318,7 @@ An optional prefix for the auto-generated resource names.
 Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".
 
 <h4 class="pdoc-member-header" id="ChartOpts-transformations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L60">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L60">property <b>transformations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</code></pre>
@@ -327,7 +327,7 @@ Optional array of transformations to apply to resources that will be created by 
 creation. Allows customization of the chart behaviour without directly modifying the chart itself.
 
 <h4 class="pdoc-member-header" id="ChartOpts-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L36">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L36">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>pulumi.Inputs</a>;</code></pre>
@@ -335,7 +335,7 @@ creation. Allows customization of the chart behaviour without directly modifying
 Overrides for chart values.
 
 <h4 class="pdoc-member-header" id="ChartOpts-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L86">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L86">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -343,7 +343,7 @@ Overrides for chart values.
 The version of the chart to deploy. If not provided, the latest version will be deployed.
 
 <h3 class="pdoc-module-header" id="fetch" data-link-title="fetch">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L388">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L391">
         function <strong>fetch</strong>
     </a>
 </h3>
@@ -365,7 +365,7 @@ pass the verification process. Failure in any part of this will result in an err
 will not be saved locally.
 
 <h3 class="pdoc-module-header" id="FetchOpts" data-link-title="FetchOpts">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L301">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L304">
         interface <strong>FetchOpts</strong>
     </a>
 </h3>
@@ -375,7 +375,7 @@ will not be saved locally.
 Additional options to customize the fetching of the Helm chart.
 
 <h4 class="pdoc-member-header" id="FetchOpts-caFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L306">property <b>caFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L309">property <b>caFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,7 +383,7 @@ Additional options to customize the fetching of the Helm chart.
 Verify certificates of HTTPS-enabled servers using this CA bundle.
 
 <h4 class="pdoc-member-header" id="FetchOpts-certFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L309">property <b>certFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L312">property <b>certFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ Verify certificates of HTTPS-enabled servers using this CA bundle.
 Identify HTTPS client using this SSL certificate file.
 
 <h4 class="pdoc-member-header" id="FetchOpts-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L318">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L321">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -400,7 +400,7 @@ Location to write the chart. If this and tardir are specified, tardir is appende
 (default ".").
 
 <h4 class="pdoc-member-header" id="FetchOpts-devel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L345">property <b>devel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L348">property <b>devel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>devel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ Use development versions, too. Equivalent to version '>0.0.0-0'. If --version is
 ignored.
 
 <h4 class="pdoc-member-header" id="FetchOpts-home">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L339">property <b>home</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L342">property <b>home</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>home?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -417,7 +417,7 @@ ignored.
 Location of your Helm config. Overrides $HELM_HOME (default "/Users/alex/.helm").
 
 <h4 class="pdoc-member-header" id="FetchOpts-keyFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L312">property <b>keyFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L315">property <b>keyFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ Location of your Helm config. Overrides $HELM_HOME (default "/Users/alex/.helm")
 Identify HTTPS client using this SSL key file.
 
 <h4 class="pdoc-member-header" id="FetchOpts-keyring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L321">property <b>keyring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L324">property <b>keyring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ Identify HTTPS client using this SSL key file.
 Keyring containing public keys (default "/Users/alex/.gnupg/pubring.gpg").
 
 <h4 class="pdoc-member-header" id="FetchOpts-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L324">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L327">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -441,7 +441,7 @@ Keyring containing public keys (default "/Users/alex/.gnupg/pubring.gpg").
 Chart repository password.
 
 <h4 class="pdoc-member-header" id="FetchOpts-prov">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L348">property <b>prov</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L351">property <b>prov</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prov?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -449,7 +449,7 @@ Chart repository password.
 Fetch the provenance file, but don't perform verification.
 
 <h4 class="pdoc-member-header" id="FetchOpts-repo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L327">property <b>repo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L330">property <b>repo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -457,7 +457,7 @@ Fetch the provenance file, but don't perform verification.
 Chart repository url where to locate the requested chart.
 
 <h4 class="pdoc-member-header" id="FetchOpts-untar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L351">property <b>untar</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L354">property <b>untar</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>untar?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -465,7 +465,7 @@ Chart repository url where to locate the requested chart.
 If set to false, will leave the chart as a tarball after downloading.
 
 <h4 class="pdoc-member-header" id="FetchOpts-untardir">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L333">property <b>untardir</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L336">property <b>untardir</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>untardir?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -474,7 +474,7 @@ If untar is specified, this flag specifies the name of the directory into which 
 expanded (default ".").
 
 <h4 class="pdoc-member-header" id="FetchOpts-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L336">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L339">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -482,7 +482,7 @@ expanded (default ".").
 Chart repository username.
 
 <h4 class="pdoc-member-header" id="FetchOpts-verify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L354">property <b>verify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L357">property <b>verify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verify?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -490,7 +490,7 @@ Chart repository username.
 Verify the package against its signature.
 
 <h4 class="pdoc-member-header" id="FetchOpts-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L303">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L306">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -498,14 +498,14 @@ Verify the package against its signature.
 Specific version of a chart. Without this, the latest version is fetched.
 
 <h3 class="pdoc-module-header" id="LocalChartOpts" data-link-title="LocalChartOpts">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L98">
         interface <strong>LocalChartOpts</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LocalChartOpts</span> <span class='kr'>extends</span> <a href='#BaseChartOpts'>BaseChartOpts</a></code></pre>
 <h4 class="pdoc-member-header" id="LocalChartOpts-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L32">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L32">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -513,7 +513,7 @@ Specific version of a chart. Without this, the latest version is fetched.
 The optional namespace to install chart resources into.
 
 <h4 class="pdoc-member-header" id="LocalChartOpts-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L102">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L102">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -521,7 +521,7 @@ The optional namespace to install chart resources into.
 The path to the chart directory which contains the `Chart.yaml` file.
 
 <h4 class="pdoc-member-header" id="LocalChartOpts-resourcePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L66">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L66">property <b>resourcePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourcePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -530,7 +530,7 @@ An optional prefix for the auto-generated resource names.
 Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".
 
 <h4 class="pdoc-member-header" id="LocalChartOpts-transformations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L60">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L60">property <b>transformations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</code></pre>
@@ -539,7 +539,7 @@ Optional array of transformations to apply to resources that will be created by 
 creation. Allows customization of the chart behaviour without directly modifying the chart itself.
 
 <h4 class="pdoc-member-header" id="LocalChartOpts-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/helm/v2/helm.ts#L36">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/helm/v2/helm.ts#L36">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>pulumi.Inputs</a>;</code></pre>

@@ -20,7 +20,7 @@ meta_desc: "Explore members of the v1 module in the @pulumi/kubernetes package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Status" data-link-title="Status">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L13">
         Resource <strong>Status</strong>
     </a>
 </h3>
@@ -30,7 +30,7 @@ meta_desc: "Explore members of the v1 module in the @pulumi/kubernetes package."
 Status is a return value for calls that don't return other objects.
 
 <h4 class="pdoc-member-header" id="Status-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -44,7 +44,7 @@ Create a meta.v1.Status resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Status-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L77">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L77">method <b>get</b></a>
 </h4>
 
 
@@ -58,14 +58,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="Status-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Status-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L88">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L88">method <b>isInstance</b></a>
 </h4>
 
 
@@ -76,7 +76,7 @@ Returns true if the given object is an instance of Status.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Status-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</code></pre>
@@ -87,7 +87,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="Status-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L25">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L25">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>code: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -95,7 +95,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Suggested HTTP return code for this status, 0 if not set.
 
 <h4 class="pdoc-member-header" id="Status-details">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L32">property <b>details</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L32">property <b>details</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>details: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#StatusDetails'>outputs.meta.v1.StatusDetails</a>&gt;;</code></pre>
@@ -105,7 +105,7 @@ This field is optional and the data returned is not guaranteed to conform to any
 except that defined by the reason type.
 
 <h4 class="pdoc-member-header" id="Status-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -114,7 +114,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Status-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L40">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L40">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Status"</span>&gt;;</code></pre>
@@ -125,7 +125,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Status-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L45">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L45">property <b>message</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>message: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -133,7 +133,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 A human-readable description of the status of this operation.
 
 <h4 class="pdoc-member-header" id="Status-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L51">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L51">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
@@ -142,7 +142,7 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Status-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L58">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L58">property <b>reason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ value is empty there is no information available. A Reason clarifies an HTTP sta
 but does not override it.
 
 <h4 class="pdoc-member-header" id="Status-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L64">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L64">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ Status of the operation. One of: "Success" or "Failure". More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Status-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/0a18b87fd1b4fa5778542dbb0e82a08a2e91ab88/sdk/nodejs/meta/v1/Status.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/meta/v1/Status.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
