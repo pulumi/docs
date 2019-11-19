@@ -76,9 +76,12 @@
 
                 p {
                     @apply text-xl text-purple-100 leading-relaxed;
-                    &.hero--registration-button {
-                        color: black;
-                    }
+                }
+
+                // We have reapply the text-black class otherwise Tailwind will ignore
+                // in favor of the above defined "p" style.
+                p.text-black {
+                    @apply text-black;
                 }
 
                 .header-hero-actions {

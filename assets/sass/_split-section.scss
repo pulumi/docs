@@ -1,34 +1,32 @@
 .split-section {
 
     &--container {
-        padding: 30px 0;
+        @apply pt-8 px-0;
     }
 
     &--left {
-        padding-right: 35px;
+        @apply pr-8;
     }
 
     &--right {
-        padding-left: 35px;
+        @apply pl-8;
     }
 
     &--cta-btn {
-        margin-top: 35px;
-        @apply text-xl;
+        @apply mt-8 text-xl;
     }
 
     @media (max-width: 768px) {
         &--left {
-            padding-right: 0;
+            @apply pr-0;
         }
-    
+
         &--right {
-            padding-left: 0;
+            @apply pl-0;
         }
 
         &--cta-btn {
-            width: 100%;
-            text-align: center;
+            @apply w-full text-center;
         }
     }
 
