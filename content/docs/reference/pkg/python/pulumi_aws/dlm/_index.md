@@ -14,7 +14,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.dlm"></span><dl class="class">
 <dt id="pulumi_aws.dlm.LifecyclePolicy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dlm.</code><code class="sig-name descname">LifecyclePolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">policy_details=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dlm.</code><code class="sig-name descname">LifecyclePolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">policy_details=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html">Data Lifecycle Manager (DLM) lifecycle policy</a> for managing snapshots.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -25,6 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM role that is able to be assumed by the DLM service.</p></li>
 <li><p><strong>policy_details</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See the <code class="docutils literal notranslate"><span class="pre">policy_details</span></code> configuration block. Max of 1.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the lifecycle policy should be enabled or disabled. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> are valid values. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -55,6 +56,12 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dlm_lifecycle_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dlm_lifecycle_policy.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.dlm.LifecyclePolicy.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the DLM Lifecycle Policy.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.dlm.LifecyclePolicy.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy.description" title="Permalink to this definition">¶</a></dt>
@@ -102,9 +109,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Whether the lifecycle policy should be enabled or disabled. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> are valid values. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.dlm.LifecyclePolicy.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.dlm.LifecyclePolicy.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">policy_details=None</em>, <em class="sig-param">state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">policy_details=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LifecyclePolicy resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -113,10 +126,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the DLM Lifecycle Policy.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the DLM lifecycle policy.</p></li>
 <li><p><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM role that is able to be assumed by the DLM service.</p></li>
 <li><p><strong>policy_details</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See the <code class="docutils literal notranslate"><span class="pre">policy_details</span></code> configuration block. Max of 1.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the lifecycle policy should be enabled or disabled. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> are valid values. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
 </ul>
 </dd>
 </dl>

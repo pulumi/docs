@@ -759,7 +759,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Crawler">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Crawler</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Crawler</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Crawler. More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html">AWS Glue Developer Guide</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -779,6 +779,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>schema_change_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy for the crawler’s update and deletion behavior.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of Security Configuration to be used by the crawler</p></li>
 <li><p><strong>table_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The table prefix used for catalog tables that are created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -910,9 +911,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The table prefix used for catalog tables that are created.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Crawler.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.glue.Crawler.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Crawler resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -936,6 +943,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>schema_change_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy for the crawler’s update and deletion behavior.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of Security Configuration to be used by the crawler</p></li>
 <li><p><strong>table_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The table prefix used for catalog tables that are created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>

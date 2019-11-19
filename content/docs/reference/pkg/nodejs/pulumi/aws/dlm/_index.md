@@ -32,7 +32,7 @@ meta_desc: "Explore members of the dlm module in the @pulumi/aws package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="LifecyclePolicy" data-link-title="LifecyclePolicy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L90">
         Resource <strong>LifecyclePolicy</strong>
     </a>
 </h3>
@@ -120,7 +120,7 @@ const example = new aws.dlm.LifecyclePolicy("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dlm_lifecycle_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L132"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L140"> <b>constructor</b></a>
 </h4>
 
 
@@ -134,7 +134,7 @@ Create a LifecyclePolicy resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L99">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L99">method <b>get</b></a>
 </h4>
 
 
@@ -145,14 +145,14 @@ Get an existing LifecyclePolicy resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L90">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L90">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LifecyclePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L110">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L110">method <b>isInstance</b></a>
 </h4>
 
 
@@ -162,8 +162,16 @@ properties used to qualify the lookup.
 Returns true if the given object is an instance of LifecyclePolicy.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
+<h4 class="pdoc-member-header" id="LifecyclePolicy-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L120">property <b>arn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
+
 <h4 class="pdoc-member-header" id="LifecyclePolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L120">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L124">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -171,7 +179,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description for the DLM lifecycle policy.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicy-executionRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L124">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L128">property <b>executionRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>executionRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -179,7 +187,7 @@ A description for the DLM lifecycle policy.
 The ARN of an IAM role that is able to be assumed by the DLM service.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -188,7 +196,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicy-policyDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L128">property <b>policyDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L132">property <b>policyDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LifecyclePolicyPolicyDetails'>outputs.dlm.LifecyclePolicyPolicyDetails</a>&gt;;</code></pre>
@@ -196,15 +204,23 @@ deployments and may be missing (undefined) during planning phases.
 See the `policyDetails` configuration block. Max of 1.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicy-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L132">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L136">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
 
+<h4 class="pdoc-member-header" id="LifecyclePolicy-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L140">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Key-value mapping of resource tags.
+
 <h4 class="pdoc-member-header" id="LifecyclePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L90">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L90">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -216,7 +232,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="LifecyclePolicyArgs" data-link-title="LifecyclePolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L222">
         interface <strong>LifecyclePolicyArgs</strong>
     </a>
 </h3>
@@ -226,7 +242,7 @@ deployments.
 The set of arguments for constructing a LifecyclePolicy resource.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L206">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L226">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +250,7 @@ The set of arguments for constructing a LifecyclePolicy resource.
 A description for the DLM lifecycle policy.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicyArgs-executionRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L210">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L230">property <b>executionRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -242,7 +258,7 @@ A description for the DLM lifecycle policy.
 The ARN of an IAM role that is able to be assumed by the DLM service.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicyArgs-policyDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L214">property <b>policyDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L234">property <b>policyDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LifecyclePolicyPolicyDetails'>inputs.dlm.LifecyclePolicyPolicyDetails</a>&gt;;</code></pre>
@@ -250,15 +266,23 @@ The ARN of an IAM role that is able to be assumed by the DLM service.
 See the `policyDetails` configuration block. Max of 1.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicyArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L218">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L238">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
 
+<h4 class="pdoc-member-header" id="LifecyclePolicyArgs-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L242">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+
+Key-value mapping of resource tags.
+
 <h3 class="pdoc-module-header" id="LifecyclePolicyState" data-link-title="LifecyclePolicyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L192">
         interface <strong>LifecyclePolicyState</strong>
     </a>
 </h3>
@@ -267,8 +291,16 @@ Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABL
 
 Input properties used for looking up and filtering LifecyclePolicy resources.
 
+<h4 class="pdoc-member-header" id="LifecyclePolicyState-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L196">property <b>arn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
+
 <h4 class="pdoc-member-header" id="LifecyclePolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L200">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -276,7 +308,7 @@ Input properties used for looking up and filtering LifecyclePolicy resources.
 A description for the DLM lifecycle policy.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicyState-executionRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L188">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L204">property <b>executionRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -284,7 +316,7 @@ A description for the DLM lifecycle policy.
 The ARN of an IAM role that is able to be assumed by the DLM service.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicyState-policyDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L192">property <b>policyDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L208">property <b>policyDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LifecyclePolicyPolicyDetails'>inputs.dlm.LifecyclePolicyPolicyDetails</a>&gt;;</code></pre>
@@ -292,10 +324,18 @@ The ARN of an IAM role that is able to be assumed by the DLM service.
 See the `policyDetails` configuration block. Max of 1.
 
 <h4 class="pdoc-member-header" id="LifecyclePolicyState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/dlm/lifecyclePolicy.ts#L196">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L212">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
+
+<h4 class="pdoc-member-header" id="LifecyclePolicyState-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dlm/lifecyclePolicy.ts#L216">property <b>tags</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+
+Key-value mapping of resource tags.
 

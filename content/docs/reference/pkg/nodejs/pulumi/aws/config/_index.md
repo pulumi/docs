@@ -49,7 +49,7 @@ meta_desc: "Explore members of the config module in the @pulumi/aws package."
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="accessKey" data-link-title="accessKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L14">
         let <strong>accessKey</strong>
     </a>
 </h3>
@@ -59,14 +59,14 @@ meta_desc: "Explore members of the config module in the @pulumi/aws package."
 The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
 
 <h3 class="pdoc-module-header" id="allowedAccountIds" data-link-title="allowedAccountIds">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L15">
         let <strong>allowedAccountIds</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> allowedAccountIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;string[]&gt;(&#34;allowedAccountIds&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="assumeRole" data-link-title="assumeRole">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L16">
         let <strong>assumeRole</strong>
     </a>
 </h3>
@@ -78,7 +78,7 @@ The access key for API operations. You can retrieve this from the 'Security & Cr
     sessionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;{ externalId?: string, policy?: string, roleArn?: string, sessionName?: string }&gt;(&#34;assumeRole&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="endpoints" data-link-title="endpoints">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L17">
         let <strong>endpoints</strong>
     </a>
 </h3>
@@ -145,6 +145,7 @@ The access key for API operations. You can retrieve this from the 'Security & Cr
     glacier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     globalaccelerator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     glue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    greengrass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     guardduty: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     iam: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     inspector: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
@@ -211,16 +212,16 @@ The access key for API operations. You can retrieve this from the 'Security & Cr
     worklink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     workspaces: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     xray: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;{ acm?: string, acmpca?: string, amplify?: string, apigateway?: string, applicationautoscaling?: string, applicationinsights?: string, appmesh?: string, appstream?: string, appsync?: string, athena?: string, autoscaling?: string, autoscalingplans?: string, backup?: string, batch?: string, budgets?: string, cloud9?: string, cloudformation?: string, cloudfront?: string, cloudhsm?: string, cloudsearch?: string, cloudtrail?: string, cloudwatch?: string, cloudwatchevents?: string, cloudwatchlogs?: string, codebuild?: string, codecommit?: string, codedeploy?: string, codepipeline?: string, cognitoidentity?: string, cognitoidp?: string, configservice?: string, cur?: string, datapipeline?: string, datasync?: string, dax?: string, devicefarm?: string, directconnect?: string, dlm?: string, dms?: string, docdb?: string, ds?: string, dynamodb?: string, ec2?: string, ecr?: string, ecs?: string, efs?: string, eks?: string, elasticache?: string, elasticbeanstalk?: string, elastictranscoder?: string, elb?: string, emr?: string, es?: string, firehose?: string, fms?: string, forecast?: string, fsx?: string, gamelift?: string, glacier?: string, globalaccelerator?: string, glue?: string, guardduty?: string, iam?: string, inspector?: string, iot?: string, iotanalytics?: string, iotevents?: string, kafka?: string, kinesis?: string, kinesisAnalytics?: string, kinesisanalytics?: string, kinesisvideo?: string, kms?: string, lakeformation?: string, lambda?: string, lexmodels?: string, licensemanager?: string, lightsail?: string, macie?: string, managedblockchain?: string, mediaconnect?: string, mediaconvert?: string, medialive?: string, mediapackage?: string, mediastore?: string, mediastoredata?: string, mq?: string, neptune?: string, opsworks?: string, organizations?: string, personalize?: string, pinpoint?: string, pricing?: string, qldb?: string, quicksight?: string, r53?: string, ram?: string, rds?: string, redshift?: string, resourcegroups?: string, route53?: string, route53resolver?: string, s3?: string, s3control?: string, sagemaker?: string, sdb?: string, secretsmanager?: string, securityhub?: string, serverlessrepo?: string, servicecatalog?: string, servicediscovery?: string, servicequotas?: string, ses?: string, shield?: string, sns?: string, sqs?: string, ssm?: string, stepfunctions?: string, storagegateway?: string, sts?: string, swf?: string, transfer?: string, waf?: string, wafregional?: string, worklink?: string, workspaces?: string, xray?: string }[]&gt;(&#34;endpoints&#34;)</span>;</code></pre>
+}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;{ acm?: string, acmpca?: string, amplify?: string, apigateway?: string, applicationautoscaling?: string, applicationinsights?: string, appmesh?: string, appstream?: string, appsync?: string, athena?: string, autoscaling?: string, autoscalingplans?: string, backup?: string, batch?: string, budgets?: string, cloud9?: string, cloudformation?: string, cloudfront?: string, cloudhsm?: string, cloudsearch?: string, cloudtrail?: string, cloudwatch?: string, cloudwatchevents?: string, cloudwatchlogs?: string, codebuild?: string, codecommit?: string, codedeploy?: string, codepipeline?: string, cognitoidentity?: string, cognitoidp?: string, configservice?: string, cur?: string, datapipeline?: string, datasync?: string, dax?: string, devicefarm?: string, directconnect?: string, dlm?: string, dms?: string, docdb?: string, ds?: string, dynamodb?: string, ec2?: string, ecr?: string, ecs?: string, efs?: string, eks?: string, elasticache?: string, elasticbeanstalk?: string, elastictranscoder?: string, elb?: string, emr?: string, es?: string, firehose?: string, fms?: string, forecast?: string, fsx?: string, gamelift?: string, glacier?: string, globalaccelerator?: string, glue?: string, greengrass?: string, guardduty?: string, iam?: string, inspector?: string, iot?: string, iotanalytics?: string, iotevents?: string, kafka?: string, kinesis?: string, kinesisAnalytics?: string, kinesisanalytics?: string, kinesisvideo?: string, kms?: string, lakeformation?: string, lambda?: string, lexmodels?: string, licensemanager?: string, lightsail?: string, macie?: string, managedblockchain?: string, mediaconnect?: string, mediaconvert?: string, medialive?: string, mediapackage?: string, mediastore?: string, mediastoredata?: string, mq?: string, neptune?: string, opsworks?: string, organizations?: string, personalize?: string, pinpoint?: string, pricing?: string, qldb?: string, quicksight?: string, r53?: string, ram?: string, rds?: string, redshift?: string, resourcegroups?: string, route53?: string, route53resolver?: string, s3?: string, s3control?: string, sagemaker?: string, sdb?: string, secretsmanager?: string, securityhub?: string, serverlessrepo?: string, servicecatalog?: string, servicediscovery?: string, servicequotas?: string, ses?: string, shield?: string, sns?: string, sqs?: string, ssm?: string, stepfunctions?: string, storagegateway?: string, sts?: string, swf?: string, transfer?: string, waf?: string, wafregional?: string, worklink?: string, workspaces?: string, xray?: string }[]&gt;(&#34;endpoints&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="forbiddenAccountIds" data-link-title="forbiddenAccountIds">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L18">
         let <strong>forbiddenAccountIds</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> forbiddenAccountIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;string[]&gt;(&#34;forbiddenAccountIds&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ignoreTagPrefixes" data-link-title="ignoreTagPrefixes">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L22">
         let <strong>ignoreTagPrefixes</strong>
     </a>
 </h3>
@@ -230,7 +231,7 @@ The access key for API operations. You can retrieve this from the 'Security & Cr
 Resource tag key prefixes to ignore across all resources.
 
 <h3 class="pdoc-module-header" id="ignoreTags" data-link-title="ignoreTags">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L26">
         let <strong>ignoreTags</strong>
     </a>
 </h3>
@@ -240,7 +241,7 @@ Resource tag key prefixes to ignore across all resources.
 Resource tag keys to ignore across all resources.
 
 <h3 class="pdoc-module-header" id="insecure" data-link-title="insecure">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L30">
         let <strong>insecure</strong>
     </a>
 </h3>
@@ -250,7 +251,7 @@ Resource tag keys to ignore across all resources.
 Explicitly allow the provider to perform "insecure" SSL requests. If omitted,default value is `false`
 
 <h3 class="pdoc-module-header" id="maxRetries" data-link-title="maxRetries">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L34">
         let <strong>maxRetries</strong>
     </a>
 </h3>
@@ -260,7 +261,7 @@ Explicitly allow the provider to perform "insecure" SSL requests. If omitted,def
 The maximum number of times an AWS API request is being executed. If the API request still fails, an error is thrown.
 
 <h3 class="pdoc-module-header" id="profile" data-link-title="profile">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L38">
         let <strong>profile</strong>
     </a>
 </h3>
@@ -270,7 +271,7 @@ The maximum number of times an AWS API request is being executed. If the API req
 The profile for API operations. If not set, the default profile created with `aws configure` will be used.
 
 <h3 class="pdoc-module-header" id="region" data-link-title="region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L42">
         let <strong>region</strong>
     </a>
 </h3>
@@ -280,7 +281,7 @@ The profile for API operations. If not set, the default profile created with `aw
 The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
 
 <h3 class="pdoc-module-header" id="requireRegion" data-link-title="requireRegion">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/require.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/require.ts#L21">
         function <strong>requireRegion</strong>
     </a>
 </h3>
@@ -292,7 +293,7 @@ The region where AWS operations will take place. Examples are us-east-1, us-west
 requireRegion fetches the AWS region, requiring that it exists; if it has not been configured, an error is thrown.
 
 <h3 class="pdoc-module-header" id="s3ForcePathStyle" data-link-title="s3ForcePathStyle">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L48">
         let <strong>s3ForcePathStyle</strong>
     </a>
 </h3>
@@ -304,7 +305,7 @@ default, the S3 client will use virtual hosted bucket addressing when possible (
 Specific to the Amazon S3 service.
 
 <h3 class="pdoc-module-header" id="secretKey" data-link-title="secretKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L52">
         let <strong>secretKey</strong>
     </a>
 </h3>
@@ -314,7 +315,7 @@ Specific to the Amazon S3 service.
 The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
 
 <h3 class="pdoc-module-header" id="sharedCredentialsFile" data-link-title="sharedCredentialsFile">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L56">
         let <strong>sharedCredentialsFile</strong>
     </a>
 </h3>
@@ -324,7 +325,7 @@ The secret key for API operations. You can retrieve this from the 'Security & Cr
 The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
 
 <h3 class="pdoc-module-header" id="skipCredentialsValidation" data-link-title="skipCredentialsValidation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L61">
         let <strong>skipCredentialsValidation</strong>
     </a>
 </h3>
@@ -335,7 +336,7 @@ Skip the credentials validation via STS API. Used for AWS API implementations th
 available/implemented.
 
 <h3 class="pdoc-module-header" id="skipGetEc2Platforms" data-link-title="skipGetEc2Platforms">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L65">
         let <strong>skipGetEc2Platforms</strong>
     </a>
 </h3>
@@ -345,14 +346,14 @@ available/implemented.
 Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.
 
 <h3 class="pdoc-module-header" id="skipMetadataApiCheck" data-link-title="skipMetadataApiCheck">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L66">
         let <strong>skipMetadataApiCheck</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> skipMetadataApiCheck: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;skipMetadataApiCheck&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="skipRegionValidation" data-link-title="skipRegionValidation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L71">
         let <strong>skipRegionValidation</strong>
     </a>
 </h3>
@@ -363,7 +364,7 @@ Skip static validation of region name. Used by users of alternative AWS-like API
 not public (yet).
 
 <h3 class="pdoc-module-header" id="skipRequestingAccountId" data-link-title="skipRequestingAccountId">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L75">
         let <strong>skipRequestingAccountId</strong>
     </a>
 </h3>
@@ -373,7 +374,7 @@ not public (yet).
 Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a113b17652528591ccee845ea27058de57265066/sdk/nodejs/config/vars.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/config/vars.ts#L79">
         let <strong>token</strong>
     </a>
 </h3>
