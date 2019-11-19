@@ -1048,6 +1048,11 @@ given domain name which is an alias (either Route53 alias or traditional CNAME) 
 the <code class="docutils literal notranslate"><span class="pre">regional_domain_name</span></code> attribute.</p>
 <blockquote>
 <div><p><strong>Note:</strong> API Gateway requires the use of AWS Certificate Manager (ACM) certificates instead of Identity and Access Management (IAM) certificates in regions that support ACM. Regions that support ACM can be found in the <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#acm_region">Regions and Endpoints Documentation</a>. To import an existing private key and certificate into ACM or request an ACM certificate, see the <cite>``acm.Certificate`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html</a>&gt;`_.</p>
+<p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">apigateway.DomainName</span></code> resource expects dependency on the <code class="docutils literal notranslate"><span class="pre">acm.CertificateValidation</span></code> as 
+only verified certificates can be used. This can be made either explicitly by adding the 
+<code class="docutils literal notranslate"><span class="pre">depends_on</span> <span class="pre">=</span> <span class="pre">[aws_acm_certificate_validation.cert]</span></code> attribute. Or implicitly by referring certificate ARN 
+from the validation resource where it will be available after the resource creation: 
+<code class="docutils literal notranslate"><span class="pre">regional_certificate_arn</span> <span class="pre">=</span> <span class="pre">aws_acm_certificate_validation.cert.certificate_arn</span></code>.</p>
 <p><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 </div></blockquote>
@@ -2610,7 +2615,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.RestApi">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">RestApi</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_key_source=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configuration=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.RestApi" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigateway.</code><code class="sig-name descname">RestApi</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_key_source=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configuration=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.RestApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an API Gateway REST API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2624,6 +2629,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>endpoint_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument defining API endpoint configuration including endpoint type. Defined below.</p></li>
 <li><p><strong>minimum_compression_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum response size to compress for the REST API. Integer between -1 and 10485760 (10MB). Setting a value greater than -1 will enable compression, -1 disables compression (default).</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the REST API</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -2638,6 +2644,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.apigateway.RestApi.api_key_source">
 <code class="sig-name descname">api_key_source</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.RestApi.api_key_source" title="Permalink to this definition">¶</a></dt>
 <dd><p>The source of the API key for requests. Valid values are HEADER (default) and AUTHORIZER.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.RestApi.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.RestApi.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2699,9 +2711,15 @@ e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execut
 <dd><p>The resource ID of the REST API’s root</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.RestApi.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.RestApi.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.apigateway.RestApi.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_key_source=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configuration=None</em>, <em class="sig-param">execution_arn=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">root_resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.RestApi.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_key_source=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">binary_media_types=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">endpoint_configuration=None</em>, <em class="sig-param">execution_arn=None</em>, <em class="sig-param">minimum_compression_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">root_resource_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.RestApi.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RestApi resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2711,6 +2729,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>api_key_source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source of the API key for requests. Valid values are HEADER (default) and AUTHORIZER.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN)</p></li>
 <li><p><strong>binary_media_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of binary media types supported by the RestApi. By default, the RestApi supports only UTF-8-encoded text payloads.</p></li>
 <li><p><strong>body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An OpenAPI specification that defines the set of routes and integrations to create as part of the REST API.</p></li>
 <li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the REST API</p></li>
@@ -2722,6 +2741,7 @@ e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:execut
 <li><p><strong>minimum_compression_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum response size to compress for the REST API. Integer between -1 and 10485760 (10MB). Setting a value greater than -1 will enable compression, -1 disables compression (default).</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the REST API</p></li>
 <li><p><strong>root_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource ID of the REST API’s root</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>

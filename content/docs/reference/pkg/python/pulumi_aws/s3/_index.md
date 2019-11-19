@@ -1933,13 +1933,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket configuration where inventory results are published (documented below).</p></li>
-<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Destination bucket where inventory list files are written (documented below).</p></li>
+<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Contains information about where to publish the inventory results (documented below).</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the inventory is enabled or disabled.</p></li>
-<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Object filtering that accepts a prefix (documented below).</p></li>
-<li><p><strong>included_object_versions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Object filtering that accepts a prefix (documented below). Can be <code class="docutils literal notranslate"><span class="pre">All</span></code> or <code class="docutils literal notranslate"><span class="pre">Current</span></code>.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies an inventory filter. The inventory only includes objects that meet the filter’s criteria (documented below).</p></li>
+<li><p><strong>included_object_versions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Object versions to include in the inventory list. Valid values: <code class="docutils literal notranslate"><span class="pre">All</span></code>, <code class="docutils literal notranslate"><span class="pre">Current</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the inventory configuration for the bucket.</p></li>
-<li><p><strong>optional_fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Contains the optional fields that are included in the inventory results.</p></li>
-<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Contains the frequency for generating inventory results (documented below).</p></li>
+<li><p><strong>optional_fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of optional fields that are included in the inventory results.
+Valid values: <code class="docutils literal notranslate"><span class="pre">Size</span></code>, <code class="docutils literal notranslate"><span class="pre">LastModifiedDate</span></code>, <code class="docutils literal notranslate"><span class="pre">StorageClass</span></code>, <code class="docutils literal notranslate"><span class="pre">ETag</span></code>, <code class="docutils literal notranslate"><span class="pre">IsMultipartUploaded</span></code>, <code class="docutils literal notranslate"><span class="pre">ReplicationStatus</span></code>, <code class="docutils literal notranslate"><span class="pre">EncryptionStatus</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjectLockRetainUntilDate</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjectLockMode</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjectLockLegalHoldStatus</span></code>, <code class="docutils literal notranslate"><span class="pre">IntelligentTieringAccessTier</span></code>.</p></li>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the schedule for generating inventory results (documented below).</p></li>
 </ul>
 </dd>
 </dl>
@@ -1970,7 +1971,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>schedule</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how frequently inventory results are produced. Can be <code class="docutils literal notranslate"><span class="pre">Daily</span></code> or <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how frequently inventory results are produced. Valid values: <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown</a>.</p>
@@ -1984,7 +1985,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Inventory.destination">
 <code class="sig-name descname">destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Inventory.destination" title="Permalink to this definition">¶</a></dt>
-<dd><p>Destination bucket where inventory list files are written (documented below).</p>
+<dd><p>Contains information about where to publish the inventory results (documented below).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The S3 bucket configuration where inventory results are published (documented below).</p>
 <ul>
@@ -2016,7 +2017,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Inventory.filter">
 <code class="sig-name descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Inventory.filter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Object filtering that accepts a prefix (documented below).</p>
+<dd><p>Specifies an inventory filter. The inventory only includes objects that meet the filter’s criteria (documented below).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that is prepended to all inventory results.</p></li>
 </ul>
@@ -2025,7 +2026,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Inventory.included_object_versions">
 <code class="sig-name descname">included_object_versions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Inventory.included_object_versions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Object filtering that accepts a prefix (documented below). Can be <code class="docutils literal notranslate"><span class="pre">All</span></code> or <code class="docutils literal notranslate"><span class="pre">Current</span></code>.</p>
+<dd><p>Object versions to include in the inventory list. Valid values: <code class="docutils literal notranslate"><span class="pre">All</span></code>, <code class="docutils literal notranslate"><span class="pre">Current</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2037,15 +2038,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Inventory.optional_fields">
 <code class="sig-name descname">optional_fields</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Inventory.optional_fields" title="Permalink to this definition">¶</a></dt>
-<dd><p>Contains the optional fields that are included in the inventory results.</p>
+<dd><p>List of optional fields that are included in the inventory results.
+Valid values: <code class="docutils literal notranslate"><span class="pre">Size</span></code>, <code class="docutils literal notranslate"><span class="pre">LastModifiedDate</span></code>, <code class="docutils literal notranslate"><span class="pre">StorageClass</span></code>, <code class="docutils literal notranslate"><span class="pre">ETag</span></code>, <code class="docutils literal notranslate"><span class="pre">IsMultipartUploaded</span></code>, <code class="docutils literal notranslate"><span class="pre">ReplicationStatus</span></code>, <code class="docutils literal notranslate"><span class="pre">EncryptionStatus</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjectLockRetainUntilDate</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjectLockMode</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjectLockLegalHoldStatus</span></code>, <code class="docutils literal notranslate"><span class="pre">IntelligentTieringAccessTier</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Inventory.schedule">
 <code class="sig-name descname">schedule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Inventory.schedule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Contains the frequency for generating inventory results (documented below).</p>
+<dd><p>Specifies the schedule for generating inventory results (documented below).</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how frequently inventory results are produced. Can be <code class="docutils literal notranslate"><span class="pre">Daily</span></code> or <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how frequently inventory results are produced. Valid values: <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2061,13 +2063,14 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket configuration where inventory results are published (documented below).</p></li>
-<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Destination bucket where inventory list files are written (documented below).</p></li>
+<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Contains information about where to publish the inventory results (documented below).</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the inventory is enabled or disabled.</p></li>
-<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Object filtering that accepts a prefix (documented below).</p></li>
-<li><p><strong>included_object_versions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Object filtering that accepts a prefix (documented below). Can be <code class="docutils literal notranslate"><span class="pre">All</span></code> or <code class="docutils literal notranslate"><span class="pre">Current</span></code>.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies an inventory filter. The inventory only includes objects that meet the filter’s criteria (documented below).</p></li>
+<li><p><strong>included_object_versions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Object versions to include in the inventory list. Valid values: <code class="docutils literal notranslate"><span class="pre">All</span></code>, <code class="docutils literal notranslate"><span class="pre">Current</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the inventory configuration for the bucket.</p></li>
-<li><p><strong>optional_fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Contains the optional fields that are included in the inventory results.</p></li>
-<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Contains the frequency for generating inventory results (documented below).</p></li>
+<li><p><strong>optional_fields</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of optional fields that are included in the inventory results.
+Valid values: <code class="docutils literal notranslate"><span class="pre">Size</span></code>, <code class="docutils literal notranslate"><span class="pre">LastModifiedDate</span></code>, <code class="docutils literal notranslate"><span class="pre">StorageClass</span></code>, <code class="docutils literal notranslate"><span class="pre">ETag</span></code>, <code class="docutils literal notranslate"><span class="pre">IsMultipartUploaded</span></code>, <code class="docutils literal notranslate"><span class="pre">ReplicationStatus</span></code>, <code class="docutils literal notranslate"><span class="pre">EncryptionStatus</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjectLockRetainUntilDate</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjectLockMode</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjectLockLegalHoldStatus</span></code>, <code class="docutils literal notranslate"><span class="pre">IntelligentTieringAccessTier</span></code>.</p></li>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the schedule for generating inventory results (documented below).</p></li>
 </ul>
 </dd>
 </dl>
@@ -2098,7 +2101,7 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>schedule</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how frequently inventory results are produced. Can be <code class="docutils literal notranslate"><span class="pre">Daily</span></code> or <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how frequently inventory results are produced. Valid values: <code class="docutils literal notranslate"><span class="pre">Daily</span></code>, <code class="docutils literal notranslate"><span class="pre">Weekly</span></code>.</p></li>
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown</a>.</p>
