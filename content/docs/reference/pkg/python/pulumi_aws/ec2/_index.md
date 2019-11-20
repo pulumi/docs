@@ -988,7 +988,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetVpcEndpointResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetVpcEndpointResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">dns_entries=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">prefix_list_id=None</em>, <em class="sig-param">private_dns_enabled=None</em>, <em class="sig-param">requester_managed=None</em>, <em class="sig-param">route_table_ids=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_endpoint_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetVpcEndpointResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetVpcEndpointResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">dns_entries=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">prefix_list_id=None</em>, <em class="sig-param">private_dns_enabled=None</em>, <em class="sig-param">requester_managed=None</em>, <em class="sig-param">route_table_ids=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_endpoint_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetVpcEndpointResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -3011,7 +3011,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.FlowLog">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">FlowLog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eni_id=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">log_destination=None</em>, <em class="sig-param">log_destination_type=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">FlowLog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eni_id=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">log_destination=None</em>, <em class="sig-param">log_destination_type=None</em>, <em class="sig-param">log_format=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network
 interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucket.</p>
 <dl class="field-list simple">
@@ -3023,6 +3023,7 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 <li><p><strong>iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the IAM role that’s used to post flow logs to a CloudWatch Logs log group</p></li>
 <li><p><strong>log_destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the logging destination.</p></li>
 <li><p><strong>log_destination_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the logging destination. Valid values: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>, <code class="docutils literal notranslate"><span class="pre">s3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>.</p></li>
+<li><p><strong>log_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fields to include in the flow log record, in the order in which they should appear.</p></li>
 <li><p><strong>log_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">log_destination</span></code> instead. The name of the CloudWatch log group.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to attach to</p></li>
 <li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of traffic to capture. Valid values: <code class="docutils literal notranslate"><span class="pre">ACCEPT</span></code>,<code class="docutils literal notranslate"><span class="pre">REJECT</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span></code>.</p></li>
@@ -3058,6 +3059,12 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.FlowLog.log_format">
+<code class="sig-name descname">log_format</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.log_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fields to include in the flow log record, in the order in which they should appear.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.FlowLog.log_group_name">
 <code class="sig-name descname">log_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.log_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p><em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">log_destination</span></code> instead. The name of the CloudWatch log group.</p>
@@ -3083,7 +3090,7 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 
 <dl class="method">
 <dt id="pulumi_aws.ec2.FlowLog.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eni_id=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">log_destination=None</em>, <em class="sig-param">log_destination_type=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eni_id=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">log_destination=None</em>, <em class="sig-param">log_destination_type=None</em>, <em class="sig-param">log_format=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing FlowLog resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3096,6 +3103,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the IAM role that’s used to post flow logs to a CloudWatch Logs log group</p></li>
 <li><p><strong>log_destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the logging destination.</p></li>
 <li><p><strong>log_destination_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the logging destination. Valid values: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>, <code class="docutils literal notranslate"><span class="pre">s3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>.</p></li>
+<li><p><strong>log_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fields to include in the flow log record, in the order in which they should appear.</p></li>
 <li><p><strong>log_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">log_destination</span></code> instead. The name of the CloudWatch log group.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to attach to</p></li>
 <li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of traffic to capture. Valid values: <code class="docutils literal notranslate"><span class="pre">ACCEPT</span></code>,<code class="docutils literal notranslate"><span class="pre">REJECT</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span></code>.</p></li>
@@ -4069,7 +4077,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetVpcEndpointResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">dns_entries=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">prefix_list_id=None</em>, <em class="sig-param">private_dns_enabled=None</em>, <em class="sig-param">requester_managed=None</em>, <em class="sig-param">route_table_ids=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_endpoint_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetVpcEndpointResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">dns_entries=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">prefix_list_id=None</em>, <em class="sig-param">private_dns_enabled=None</em>, <em class="sig-param">requester_managed=None</em>, <em class="sig-param">route_table_ids=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_endpoint_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcEndpoint.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.cidr_blocks">
@@ -4135,12 +4143,6 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.subnet_ids">
 <code class="sig-name descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more subnets in which the VPC Endpoint is located. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.GetVpcEndpointResult.tags">
-<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10443,7 +10445,6 @@ Doing so will cause a conflict of associations and will overwrite the associatio
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A policy to attach to the endpoint that controls access to the service. Defaults to full access. All <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> and some <code class="docutils literal notranslate"><span class="pre">Interface</span></code> endpoints support policies - see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html">relevant AWS documentation</a> for more details.</p></li>
 <li><p><strong>private_dns_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>route_table_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more route table IDs. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p></li>
@@ -10491,12 +10492,6 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <dt id="pulumi_aws.ec2.VpcEndpoint.owner_id">
 <code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the AWS account that owns the VPC endpoint.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.VpcEndpoint.policy">
-<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A policy to attach to the endpoint that controls access to the service. Defaults to full access. All <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> and some <code class="docutils literal notranslate"><span class="pre">Interface</span></code> endpoints support policies - see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html">relevant AWS documentation</a> for more details.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -10582,8 +10577,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>dns_entries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The DNS entries for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. DNS blocks are documented below.</p></li>
 <li><p><strong>network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the VPC endpoint.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A policy to attach to the endpoint that controls access to the service. Defaults to full access. All <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> and some <code class="docutils literal notranslate"><span class="pre">Interface</span></code> endpoints support policies - see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html">relevant AWS documentation</a> for more details.</p>
-</p></li>
 <li><p><strong>prefix_list_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix list ID of the exposed AWS service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p></li>
 <li><p><strong>private_dns_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -12897,19 +12890,29 @@ A VPC will be selected if any one of the given values matches.</p></li>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc_endpoint">
-<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_endpoint</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_endpoint</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint data source provides details about
 a specific VPC endpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The ID of the specific VPC Endpoint to retrieve.</p></li>
 <li><p><strong>service_name</strong> (<em>str</em>) – The AWS service name of the specific VPC Endpoint to retrieve.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – The state of the specific VPC Endpoint to retrieve.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the specific VPC Endpoint to retrieve.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The ID of the VPC in which the specific VPC Endpoint is used.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcPeeringConnections.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A VPC Endpoint will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown</a>.</p>
 </div></blockquote>

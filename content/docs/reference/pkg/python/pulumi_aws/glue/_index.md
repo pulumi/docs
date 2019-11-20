@@ -759,7 +759,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Crawler">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Crawler</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Crawler</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Crawler. More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html">AWS Glue Developer Guide</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -779,6 +779,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>schema_change_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy for the crawler’s update and deletion behavior.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of Security Configuration to be used by the crawler</p></li>
 <li><p><strong>table_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The table prefix used for catalog tables that are created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -910,9 +911,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The table prefix used for catalog tables that are created.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Crawler.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.glue.Crawler.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Crawler resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -936,6 +943,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>schema_change_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy for the crawler’s update and deletion behavior.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of Security Configuration to be used by the crawler</p></li>
 <li><p><strong>table_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The table prefix used for catalog tables that are created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 </ul>
 </dd>
 </dl>
@@ -1033,7 +1041,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Job">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">glue_version=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Job resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1046,6 +1054,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>default_arguments</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html">Calling AWS Glue APIs in Python</a> topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the developer guide.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the job.</p></li>
 <li><p><strong>execution_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Execution property of the job. Defined below.</p></li>
+<li><p><strong>glue_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of glue to use, for example “1.0”. For information about available versions, see the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/release-notes.html">AWS Glue Release Notes</a>.</p></li>
 <li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</p></li>
 <li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
@@ -1113,6 +1122,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.glue.Job.glue_version">
+<code class="sig-name descname">glue_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.glue_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of glue to use, for example “1.0”. For information about available versions, see the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/release-notes.html">AWS Glue Release Notes</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.glue.Job.max_capacity">
 <code class="sig-name descname">max_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.max_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</p>
@@ -1150,7 +1165,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.glue.Job.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">glue_version=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1166,6 +1181,8 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the job.</p></li>
 <li><p><strong>execution_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Execution property of the job. Defined below.</p></li>
+<li><p><strong>glue_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The version of glue to use, for example “1.0”. For information about available versions, see the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/release-notes.html">AWS Glue Release Notes</a>.</p>
+</p></li>
 <li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</p></li>
 <li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>

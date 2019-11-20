@@ -57,14 +57,14 @@ meta_desc: "Explore members of the input module in the @pulumi/signalfx package.
 
 <h2 id="aws" data-link-title="aws">namespace <strong>aws</strong></h2>
 <h3 class="pdoc-module-header" id="IntegrationCustomNamespaceSyncRule" data-link-title="IntegrationCustomNamespaceSyncRule">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L600">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L600">
         interface <strong>IntegrationCustomNamespaceSyncRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IntegrationCustomNamespaceSyncRule</span></code></pre>
 <h4 class="pdoc-member-header" id="IntegrationCustomNamespaceSyncRule-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L604">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L604">property <b>defaultAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -72,7 +72,7 @@ meta_desc: "Explore members of the input module in the @pulumi/signalfx package.
 Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 
 <h4 class="pdoc-member-header" id="IntegrationCustomNamespaceSyncRule-filterAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L608">property <b>filterAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L608">property <b>filterAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -80,7 +80,7 @@ Controls the SignalFx default behavior for processing data from an AWS namespace
 Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 
 <h4 class="pdoc-member-header" id="IntegrationCustomNamespaceSyncRule-filterSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L612">property <b>filterSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L612">property <b>filterSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -88,7 +88,7 @@ Controls how SignalFx processes data from a custom AWS namespace. The available 
 Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 
 <h4 class="pdoc-member-header" id="IntegrationCustomNamespaceSyncRule-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L616">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L616">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -96,14 +96,14 @@ Expression that selects the data that SignalFx should sync for the custom namesp
 An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 
 <h3 class="pdoc-module-header" id="IntegrationNamespaceSyncRule" data-link-title="IntegrationNamespaceSyncRule">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L619">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L619">
         interface <strong>IntegrationNamespaceSyncRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IntegrationNamespaceSyncRule</span></code></pre>
 <h4 class="pdoc-member-header" id="IntegrationNamespaceSyncRule-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L623">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L623">property <b>defaultAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -111,7 +111,7 @@ An AWS custom namespace having custom AWS metrics that you want to sync with Sig
 Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 
 <h4 class="pdoc-member-header" id="IntegrationNamespaceSyncRule-filterAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L627">property <b>filterAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L627">property <b>filterAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -119,7 +119,7 @@ Controls the SignalFx default behavior for processing data from an AWS namespace
 Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 
 <h4 class="pdoc-member-header" id="IntegrationNamespaceSyncRule-filterSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L631">property <b>filterSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L631">property <b>filterSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -127,7 +127,7 @@ Controls how SignalFx processes data from a custom AWS namespace. The available 
 Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 
 <h4 class="pdoc-member-header" id="IntegrationNamespaceSyncRule-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L635">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L635">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -136,19 +136,19 @@ An AWS custom namespace having custom AWS metrics that you want to sync with Sig
 
 <h2 id="gcp" data-link-title="gcp">namespace <strong>gcp</strong></h2>
 <h3 class="pdoc-module-header" id="IntegrationProjectServiceKey" data-link-title="IntegrationProjectServiceKey">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L640">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L640">
         interface <strong>IntegrationProjectServiceKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IntegrationProjectServiceKey</span></code></pre>
 <h4 class="pdoc-member-header" id="IntegrationProjectServiceKey-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L641">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L641">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationProjectServiceKey-projectKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L642">property <b>projectKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L642">property <b>projectKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -157,14 +157,14 @@ An AWS custom namespace having custom AWS metrics that you want to sync with Sig
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="DashboardChart" data-link-title="DashboardChart">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L7">
         interface <strong>DashboardChart</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardChart</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardChart-chartId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L11">property <b>chartId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L11">property <b>chartId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>chartId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ An AWS custom namespace having custom AWS metrics that you want to sync with Sig
 ID of the chart to display.
 
 <h4 class="pdoc-member-header" id="DashboardChart-column">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L15">property <b>column</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L15">property <b>column</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>column?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ ID of the chart to display.
 Column number for the layout.
 
 <h4 class="pdoc-member-header" id="DashboardChart-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L19">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L19">property <b>height</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>height?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ Column number for the layout.
 How many rows every chart should take up (greater than or equal to 1). 1 by default.
 
 <h4 class="pdoc-member-header" id="DashboardChart-row">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L23">property <b>row</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L23">property <b>row</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>row?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ How many rows every chart should take up (greater than or equal to 1). 1 by defa
 The row to show the chart in (zero-based); if `height > 1`, this value represents the topmost row of the chart (greater than or equal to `0`).
 
 <h4 class="pdoc-member-header" id="DashboardChart-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L27">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L27">property <b>width</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>width?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -204,14 +204,14 @@ The row to show the chart in (zero-based); if `height > 1`, this value represent
 How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
 
 <h3 class="pdoc-module-header" id="DashboardColumn" data-link-title="DashboardColumn">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L30">
         interface <strong>DashboardColumn</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardColumn</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardColumn-chartIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L34">property <b>chartIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L34">property <b>chartIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>chartIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -219,7 +219,7 @@ How many columns (out of a total of `12`) every chart should take up (between `1
 List of IDs of the charts to display.
 
 <h4 class="pdoc-member-header" id="DashboardColumn-column">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L38">property <b>column</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L38">property <b>column</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>column?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -227,7 +227,7 @@ List of IDs of the charts to display.
 Column number for the layout.
 
 <h4 class="pdoc-member-header" id="DashboardColumn-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L42">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L42">property <b>height</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>height?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -235,7 +235,7 @@ Column number for the layout.
 How many rows every chart should take up (greater than or equal to 1). 1 by default.
 
 <h4 class="pdoc-member-header" id="DashboardColumn-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L46">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L46">property <b>width</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>width?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -243,14 +243,14 @@ How many rows every chart should take up (greater than or equal to 1). 1 by defa
 How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
 
 <h3 class="pdoc-module-header" id="DashboardEventOverlay" data-link-title="DashboardEventOverlay">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L49">
         interface <strong>DashboardEventOverlay</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardEventOverlay</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardEventOverlay-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L53">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L53">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ How many columns (out of a total of `12`) every chart should take up (between `1
 Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 
 <h4 class="pdoc-member-header" id="DashboardEventOverlay-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L57">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L57">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pi
 Text shown in the dropdown when selecting this overlay from the menu.
 
 <h4 class="pdoc-member-header" id="DashboardEventOverlay-line">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L61">property <b>line</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L61">property <b>line</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>line?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -274,7 +274,7 @@ Text shown in the dropdown when selecting this overlay from the menu.
 Show a vertical line for the event. `false` by default.
 
 <h4 class="pdoc-member-header" id="DashboardEventOverlay-signal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L65">property <b>signal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L65">property <b>signal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -282,7 +282,7 @@ Show a vertical line for the event. `false` by default.
 Search term used to choose the events shown in the overlay.
 
 <h4 class="pdoc-member-header" id="DashboardEventOverlay-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L69">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L69">property <b>sources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardEventOverlaySource'>inputs.DashboardEventOverlaySource</a>&gt;[]&gt;;</code></pre>
@@ -290,7 +290,7 @@ Search term used to choose the events shown in the overlay.
 Each element specifies a filter to use against the signal specified in the `signal`.
 
 <h4 class="pdoc-member-header" id="DashboardEventOverlay-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L73">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L73">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,14 +298,14 @@ Each element specifies a filter to use against the signal specified in the `sign
 Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
 
 <h3 class="pdoc-module-header" id="DashboardEventOverlaySource" data-link-title="DashboardEventOverlaySource">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L76">
         interface <strong>DashboardEventOverlaySource</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardEventOverlaySource</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardEventOverlaySource-negated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L80">property <b>negated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L80">property <b>negated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>negated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -313,7 +313,7 @@ Can be set to `eventTimeSeries` (the default) to refer to externally reported ev
 If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="DashboardEventOverlaySource-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L84">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L84">property <b>property</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>property: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -321,7 +321,7 @@ If true,  only data that does not match the specified value of the specified pro
 The name of a dimension to filter against.
 
 <h4 class="pdoc-member-header" id="DashboardEventOverlaySource-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L88">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L88">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -329,14 +329,14 @@ The name of a dimension to filter against.
 A list of values to be used with the `property`, they will be combined via `OR`.
 
 <h3 class="pdoc-module-header" id="DashboardFilter" data-link-title="DashboardFilter">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L91">
         interface <strong>DashboardFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardFilter-applyIfExist">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L95">property <b>applyIfExist</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L95">property <b>applyIfExist</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyIfExist?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -344,7 +344,7 @@ A list of values to be used with the `property`, they will be combined via `OR`.
 If true, this variable will also match data that doesn't have this property at all.
 
 <h4 class="pdoc-member-header" id="DashboardFilter-negated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L99">property <b>negated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L99">property <b>negated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>negated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -352,7 +352,7 @@ If true, this variable will also match data that doesn't have this property at a
 If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="DashboardFilter-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L103">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L103">property <b>property</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>property: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -360,7 +360,7 @@ If true,  only data that does not match the specified value of the specified pro
 The name of a dimension to filter against.
 
 <h4 class="pdoc-member-header" id="DashboardFilter-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L107">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L107">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -368,14 +368,14 @@ The name of a dimension to filter against.
 A list of values to be used with the `property`, they will be combined via `OR`.
 
 <h3 class="pdoc-module-header" id="DashboardGrid" data-link-title="DashboardGrid">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L110">
         interface <strong>DashboardGrid</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardGrid</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardGrid-chartIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L114">property <b>chartIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L114">property <b>chartIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>chartIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -383,7 +383,7 @@ A list of values to be used with the `property`, they will be combined via `OR`.
 List of IDs of the charts to display.
 
 <h4 class="pdoc-member-header" id="DashboardGrid-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L118">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L118">property <b>height</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>height?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ List of IDs of the charts to display.
 How many rows every chart should take up (greater than or equal to 1). 1 by default.
 
 <h4 class="pdoc-member-header" id="DashboardGrid-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L122">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L122">property <b>width</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>width?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -399,14 +399,14 @@ How many rows every chart should take up (greater than or equal to 1). 1 by defa
 How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
 
 <h3 class="pdoc-module-header" id="DashboardGroupDashboard" data-link-title="DashboardGroupDashboard">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L125">
         interface <strong>DashboardGroupDashboard</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardGroupDashboard</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardGroupDashboard-dashboardId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L129">property <b>dashboardId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L129">property <b>dashboardId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -414,7 +414,7 @@ How many columns (out of a total of `12`) every chart should take up (between `1
 The dashboard id to mirror
 
 <h4 class="pdoc-member-header" id="DashboardGroupDashboard-descriptionOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L133">property <b>descriptionOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L133">property <b>descriptionOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriptionOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -422,7 +422,7 @@ The dashboard id to mirror
 The description that will override the original dashboards's description.
 
 <h4 class="pdoc-member-header" id="DashboardGroupDashboard-filterOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L137">property <b>filterOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L137">property <b>filterOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGroupDashboardFilterOverride'>inputs.DashboardGroupDashboardFilterOverride</a>&gt;[]&gt;;</code></pre>
@@ -430,7 +430,7 @@ The description that will override the original dashboards's description.
 The description that will override the original dashboards's description.
 
 <h4 class="pdoc-member-header" id="DashboardGroupDashboard-nameOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L141">property <b>nameOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L141">property <b>nameOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -438,19 +438,19 @@ The description that will override the original dashboards's description.
 The name that will override the original dashboards's name.
 
 <h4 class="pdoc-member-header" id="DashboardGroupDashboard-variableOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L142">property <b>variableOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L142">property <b>variableOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variableOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGroupDashboardVariableOverride'>inputs.DashboardGroupDashboardVariableOverride</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="DashboardGroupDashboardFilterOverride" data-link-title="DashboardGroupDashboardFilterOverride">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L145">
         interface <strong>DashboardGroupDashboardFilterOverride</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardGroupDashboardFilterOverride</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardGroupDashboardFilterOverride-negated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L149">property <b>negated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L149">property <b>negated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>negated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -458,7 +458,7 @@ The name that will override the original dashboards's name.
 If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="DashboardGroupDashboardFilterOverride-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L153">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L153">property <b>property</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>property: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -466,7 +466,7 @@ If true,  only data that does not match the specified value of the specified pro
 A metric time series dimension or property name.
 
 <h4 class="pdoc-member-header" id="DashboardGroupDashboardFilterOverride-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L157">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L157">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -474,14 +474,14 @@ A metric time series dimension or property name.
 (Optional) List of of strings (which will be treated as an OR filter on the property).
 
 <h3 class="pdoc-module-header" id="DashboardGroupDashboardVariableOverride" data-link-title="DashboardGroupDashboardVariableOverride">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L160">
         interface <strong>DashboardGroupDashboardVariableOverride</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardGroupDashboardVariableOverride</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardGroupDashboardVariableOverride-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L164">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L164">property <b>property</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>property: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -489,7 +489,7 @@ A metric time series dimension or property name.
 A metric time series dimension or property name.
 
 <h4 class="pdoc-member-header" id="DashboardGroupDashboardVariableOverride-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L168">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L168">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -497,7 +497,7 @@ A metric time series dimension or property name.
 (Optional) List of of strings (which will be treated as an OR filter on the property).
 
 <h4 class="pdoc-member-header" id="DashboardGroupDashboardVariableOverride-valuesSuggesteds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L172">property <b>valuesSuggesteds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L172">property <b>valuesSuggesteds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valuesSuggesteds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -505,14 +505,14 @@ A metric time series dimension or property name.
 A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
 
 <h3 class="pdoc-module-header" id="DashboardSelectedEventOverlay" data-link-title="DashboardSelectedEventOverlay">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L175">
         interface <strong>DashboardSelectedEventOverlay</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardSelectedEventOverlay</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardSelectedEventOverlay-signal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L179">property <b>signal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L179">property <b>signal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -520,7 +520,7 @@ A list of strings of suggested values for this variable; these suggestions will 
 Search term used to choose the events shown in the overlay.
 
 <h4 class="pdoc-member-header" id="DashboardSelectedEventOverlay-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L183">property <b>sources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L183">property <b>sources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardSelectedEventOverlaySource'>inputs.DashboardSelectedEventOverlaySource</a>&gt;[]&gt;;</code></pre>
@@ -528,7 +528,7 @@ Search term used to choose the events shown in the overlay.
 Each element specifies a filter to use against the signal specified in the `signal`.
 
 <h4 class="pdoc-member-header" id="DashboardSelectedEventOverlay-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L187">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L187">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -536,14 +536,14 @@ Each element specifies a filter to use against the signal specified in the `sign
 Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
 
 <h3 class="pdoc-module-header" id="DashboardSelectedEventOverlaySource" data-link-title="DashboardSelectedEventOverlaySource">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L190">
         interface <strong>DashboardSelectedEventOverlaySource</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardSelectedEventOverlaySource</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardSelectedEventOverlaySource-negated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L194">property <b>negated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L194">property <b>negated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>negated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -551,7 +551,7 @@ Can be set to `eventTimeSeries` (the default) to refer to externally reported ev
 If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="DashboardSelectedEventOverlaySource-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L198">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L198">property <b>property</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>property: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +559,7 @@ If true,  only data that does not match the specified value of the specified pro
 The name of a dimension to filter against.
 
 <h4 class="pdoc-member-header" id="DashboardSelectedEventOverlaySource-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L202">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L202">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -567,14 +567,14 @@ The name of a dimension to filter against.
 A list of values to be used with the `property`, they will be combined via `OR`.
 
 <h3 class="pdoc-module-header" id="DashboardVariable" data-link-title="DashboardVariable">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L205">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L205">
         interface <strong>DashboardVariable</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardVariable</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardVariable-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L209">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L209">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -582,7 +582,7 @@ A list of values to be used with the `property`, they will be combined via `OR`.
 An alias for the dashboard variable. This text will appear as the label for the dropdown field on the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardVariable-applyIfExist">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L213">property <b>applyIfExist</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L213">property <b>applyIfExist</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyIfExist?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ An alias for the dashboard variable. This text will appear as the label for the 
 If true, this variable will also match data that doesn't have this property at all.
 
 <h4 class="pdoc-member-header" id="DashboardVariable-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L217">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L217">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -598,7 +598,7 @@ If true, this variable will also match data that doesn't have this property at a
 Variable description.
 
 <h4 class="pdoc-member-header" id="DashboardVariable-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L221">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L221">property <b>property</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>property: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -606,7 +606,7 @@ Variable description.
 The name of a dimension to filter against.
 
 <h4 class="pdoc-member-header" id="DashboardVariable-replaceOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L225">property <b>replaceOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L225">property <b>replaceOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replaceOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -614,7 +614,7 @@ The name of a dimension to filter against.
 If `true`, this variable will only apply to charts that have a filter for the property.
 
 <h4 class="pdoc-member-header" id="DashboardVariable-restrictedSuggestions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L229">property <b>restrictedSuggestions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L229">property <b>restrictedSuggestions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restrictedSuggestions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -622,7 +622,7 @@ If `true`, this variable will only apply to charts that have a filter for the pr
 If `true`, this variable may only be set to the values listed in `valuesSuggested` and only these values will appear in autosuggestion menus. `false` by default.
 
 <h4 class="pdoc-member-header" id="DashboardVariable-valueRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L233">property <b>valueRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L233">property <b>valueRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -630,7 +630,7 @@ If `true`, this variable may only be set to the values listed in `valuesSuggeste
 Determines whether a value is required for this variable (and therefore whether it will be possible to view this dashboard without this filter applied). `false` by default.
 
 <h4 class="pdoc-member-header" id="DashboardVariable-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L237">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L237">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -638,7 +638,7 @@ Determines whether a value is required for this variable (and therefore whether 
 A list of values to be used with the `property`, they will be combined via `OR`.
 
 <h4 class="pdoc-member-header" id="DashboardVariable-valuesSuggesteds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L241">property <b>valuesSuggesteds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L241">property <b>valuesSuggesteds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valuesSuggesteds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -646,14 +646,14 @@ A list of values to be used with the `property`, they will be combined via `OR`.
 A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
 
 <h3 class="pdoc-module-header" id="DetectorRule" data-link-title="DetectorRule">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L244">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L244">
         interface <strong>DetectorRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DetectorRule</span></code></pre>
 <h4 class="pdoc-member-header" id="DetectorRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L248">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L248">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -661,7 +661,7 @@ A list of strings of suggested values for this variable; these suggestions will 
 Description of the detector.
 
 <h4 class="pdoc-member-header" id="DetectorRule-detectLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L252">property <b>detectLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L252">property <b>detectLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -669,7 +669,7 @@ Description of the detector.
 A detect label which matches a detect label within `programText`.
 
 <h4 class="pdoc-member-header" id="DetectorRule-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L256">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L256">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -677,7 +677,7 @@ A detect label which matches a detect label within `programText`.
 When true, notifications and events will not be generated for the detect label. `false` by default.
 
 <h4 class="pdoc-member-header" id="DetectorRule-notifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L260">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L260">property <b>notifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -685,7 +685,7 @@ When true, notifications and events will not be generated for the detect label. 
 List of strings specifying where notifications will be sent when an incident occurs. See <https://developers.signalfx.com/detectors_reference.html#operation/Create%20Single%20Detector> for more info.
 
 <h4 class="pdoc-member-header" id="DetectorRule-parameterizedBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L264">property <b>parameterizedBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L264">property <b>parameterizedBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterizedBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -693,7 +693,7 @@ List of strings specifying where notifications will be sent when an incident occ
 Custom notification message body when an alert is triggered. See <https://docs.signalfx.com/en/latest/detect-alert/set-up-detectors.html#about-detectors#alert-settings> for more info.
 
 <h4 class="pdoc-member-header" id="DetectorRule-parameterizedSubject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L268">property <b>parameterizedSubject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L268">property <b>parameterizedSubject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterizedSubject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -701,7 +701,7 @@ Custom notification message body when an alert is triggered. See <https://docs.s
 Custom notification message subject when an alert is triggered. See <https://docs.signalfx.com/en/latest/detect-alert/set-up-detectors.html#about-detectors#alert-settings> for more info.
 
 <h4 class="pdoc-member-header" id="DetectorRule-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L272">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L272">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ Custom notification message subject when an alert is triggered. See <https://doc
 URL of page to consult when an alert is triggered. This can be used with custom notification messages.
 
 <h4 class="pdoc-member-header" id="DetectorRule-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L276">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L276">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -717,7 +717,7 @@ URL of page to consult when an alert is triggered. This can be used with custom 
 The severity of the rule, must be one of: `"Critical"`, `"Major"`, `"Minor"`, `"Warning"`, `"Info"`.
 
 <h4 class="pdoc-member-header" id="DetectorRule-tip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L280">property <b>tip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L280">property <b>tip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -725,14 +725,14 @@ The severity of the rule, must be one of: `"Critical"`, `"Major"`, `"Minor"`, `"
 Plain text suggested first course of action, such as a command line to execute. This can be used with custom notification messages.
 
 <h3 class="pdoc-module-header" id="HeatmapChartColorRange" data-link-title="HeatmapChartColorRange">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L283">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L283">
         interface <strong>HeatmapChartColorRange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>HeatmapChartColorRange</span></code></pre>
 <h4 class="pdoc-member-header" id="HeatmapChartColorRange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L287">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L287">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -740,7 +740,7 @@ Plain text suggested first course of action, such as a command line to execute. 
 The color range to use. Must be either gray, blue, navy, orange, yellow, magenta, purple, violet, lilac, green, aquamarine.
 
 <h4 class="pdoc-member-header" id="HeatmapChartColorRange-maxValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L291">property <b>maxValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L291">property <b>maxValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -748,7 +748,7 @@ The color range to use. Must be either gray, blue, navy, orange, yellow, magenta
 The maximum value within the coloring range.
 
 <h4 class="pdoc-member-header" id="HeatmapChartColorRange-minValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L295">property <b>minValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L295">property <b>minValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -756,14 +756,14 @@ The maximum value within the coloring range.
 The minimum value within the coloring range.
 
 <h3 class="pdoc-module-header" id="HeatmapChartColorScale" data-link-title="HeatmapChartColorScale">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L298">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L298">
         interface <strong>HeatmapChartColorScale</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>HeatmapChartColorScale</span></code></pre>
 <h4 class="pdoc-member-header" id="HeatmapChartColorScale-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L302">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L302">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -771,7 +771,7 @@ The minimum value within the coloring range.
 The color range to use. Must be either gray, blue, navy, orange, yellow, magenta, purple, violet, lilac, green, aquamarine.
 
 <h4 class="pdoc-member-header" id="HeatmapChartColorScale-gt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L306">property <b>gt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L306">property <b>gt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -779,7 +779,7 @@ The color range to use. Must be either gray, blue, navy, orange, yellow, magenta
 Indicates the lower threshold non-inclusive value for this range.
 
 <h4 class="pdoc-member-header" id="HeatmapChartColorScale-gte">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L310">property <b>gte</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L310">property <b>gte</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gte?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -787,7 +787,7 @@ Indicates the lower threshold non-inclusive value for this range.
 Indicates the lower threshold inclusive value for this range.
 
 <h4 class="pdoc-member-header" id="HeatmapChartColorScale-lt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L314">property <b>lt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L314">property <b>lt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -795,7 +795,7 @@ Indicates the lower threshold inclusive value for this range.
 Indicates the upper threshold non-inculsive value for this range.
 
 <h4 class="pdoc-member-header" id="HeatmapChartColorScale-lte">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L318">property <b>lte</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L318">property <b>lte</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lte?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -803,14 +803,14 @@ Indicates the upper threshold non-inculsive value for this range.
 Indicates the upper threshold inclusive value for this range.
 
 <h3 class="pdoc-module-header" id="ListChartColorScale" data-link-title="ListChartColorScale">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L321">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L321">
         interface <strong>ListChartColorScale</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ListChartColorScale</span></code></pre>
 <h4 class="pdoc-member-header" id="ListChartColorScale-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L325">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L325">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -818,7 +818,7 @@ Indicates the upper threshold inclusive value for this range.
 The color range to use. Must be either gray, blue, navy, orange, yellow, magenta, purple, violet, lilac, green, aquamarine.
 
 <h4 class="pdoc-member-header" id="ListChartColorScale-gt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L329">property <b>gt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L329">property <b>gt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -826,7 +826,7 @@ The color range to use. Must be either gray, blue, navy, orange, yellow, magenta
 Indicates the lower threshold non-inclusive value for this range.
 
 <h4 class="pdoc-member-header" id="ListChartColorScale-gte">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L333">property <b>gte</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L333">property <b>gte</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gte?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -834,7 +834,7 @@ Indicates the lower threshold non-inclusive value for this range.
 Indicates the lower threshold inclusive value for this range.
 
 <h4 class="pdoc-member-header" id="ListChartColorScale-lt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L337">property <b>lt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L337">property <b>lt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -842,7 +842,7 @@ Indicates the lower threshold inclusive value for this range.
 Indicates the upper threshold non-inculsive value for this range.
 
 <h4 class="pdoc-member-header" id="ListChartColorScale-lte">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L341">property <b>lte</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L341">property <b>lte</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lte?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -850,31 +850,31 @@ Indicates the upper threshold non-inculsive value for this range.
 Indicates the upper threshold inclusive value for this range.
 
 <h3 class="pdoc-module-header" id="ListChartLegendOptionsField" data-link-title="ListChartLegendOptionsField">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L344">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L344">
         interface <strong>ListChartLegendOptionsField</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ListChartLegendOptionsField</span></code></pre>
 <h4 class="pdoc-member-header" id="ListChartLegendOptionsField-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L345">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L345">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListChartLegendOptionsField-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L346">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L346">property <b>property</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>property: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ListChartVizOption" data-link-title="ListChartVizOption">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L349">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L349">
         interface <strong>ListChartVizOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ListChartVizOption</span></code></pre>
 <h4 class="pdoc-member-header" id="ListChartVizOption-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L353">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L353">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -882,7 +882,7 @@ Indicates the upper threshold inclusive value for this range.
 The color range to use. Must be either gray, blue, navy, orange, yellow, magenta, purple, violet, lilac, green, aquamarine.
 
 <h4 class="pdoc-member-header" id="ListChartVizOption-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L357">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L357">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -890,7 +890,7 @@ The color range to use. Must be either gray, blue, navy, orange, yellow, magenta
 Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 
 <h4 class="pdoc-member-header" id="ListChartVizOption-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L361">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L361">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -898,17 +898,17 @@ Specifies an alternate value for the Plot Name column of the Data Table associat
 Label used in the publish statement that displays the plot (metric time series data) you want to customize.
 
 <h4 class="pdoc-member-header" id="ListChartVizOption-valuePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L362">property <b>valuePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L362">property <b>valuePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valuePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListChartVizOption-valueSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L363">property <b>valueSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L363">property <b>valueSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSuffix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ListChartVizOption-valueUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L368">property <b>valueUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L368">property <b>valueUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -917,14 +917,14 @@ A unit to attach to this plot. Units support automatic scaling (eg thousands of 
 * `valuePrefix`, `valueSuffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
 
 <h3 class="pdoc-module-header" id="OrgTokenDpmLimits" data-link-title="OrgTokenDpmLimits">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L371">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L371">
         interface <strong>OrgTokenDpmLimits</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OrgTokenDpmLimits</span></code></pre>
 <h4 class="pdoc-member-header" id="OrgTokenDpmLimits-dpmLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L375">property <b>dpmLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L375">property <b>dpmLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dpmLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -932,7 +932,7 @@ A unit to attach to this plot. Units support automatic scaling (eg thousands of 
 The datapoints per minute (dpm) limit for this token. If you exceed this limit, SignalFx sends out an alert.
 
 <h4 class="pdoc-member-header" id="OrgTokenDpmLimits-dpmNotificationThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L379">property <b>dpmNotificationThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L379">property <b>dpmNotificationThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dpmNotificationThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -940,14 +940,14 @@ The datapoints per minute (dpm) limit for this token. If you exceed this limit, 
 DPM level at which SignalFx sends the notification for this token. If you don't specify a notification, SignalFx sends the generic notification.
 
 <h3 class="pdoc-module-header" id="OrgTokenHostOrUsageLimits" data-link-title="OrgTokenHostOrUsageLimits">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L382">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L382">
         interface <strong>OrgTokenHostOrUsageLimits</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>OrgTokenHostOrUsageLimits</span></code></pre>
 <h4 class="pdoc-member-header" id="OrgTokenHostOrUsageLimits-containerLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L386">property <b>containerLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L386">property <b>containerLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -955,7 +955,7 @@ DPM level at which SignalFx sends the notification for this token. If you don't 
 Max number of Docker containers that can use this token
 
 <h4 class="pdoc-member-header" id="OrgTokenHostOrUsageLimits-containerNotificationThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L390">property <b>containerNotificationThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L390">property <b>containerNotificationThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerNotificationThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -963,7 +963,7 @@ Max number of Docker containers that can use this token
 Notification threshold for Docker containers
 
 <h4 class="pdoc-member-header" id="OrgTokenHostOrUsageLimits-customMetricsLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L394">property <b>customMetricsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L394">property <b>customMetricsLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customMetricsLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -971,7 +971,7 @@ Notification threshold for Docker containers
 Max number of custom metrics that can be sent with this token
 
 <h4 class="pdoc-member-header" id="OrgTokenHostOrUsageLimits-customMetricsNotificationThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L398">property <b>customMetricsNotificationThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L398">property <b>customMetricsNotificationThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customMetricsNotificationThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -979,7 +979,7 @@ Max number of custom metrics that can be sent with this token
 Notification threshold for custom metrics
 
 <h4 class="pdoc-member-header" id="OrgTokenHostOrUsageLimits-highResMetricsLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L402">property <b>highResMetricsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L402">property <b>highResMetricsLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>highResMetricsLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -987,7 +987,7 @@ Notification threshold for custom metrics
 Max number of hi-res metrics that can be sent with this toke
 
 <h4 class="pdoc-member-header" id="OrgTokenHostOrUsageLimits-highResMetricsNotificationThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L406">property <b>highResMetricsNotificationThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L406">property <b>highResMetricsNotificationThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>highResMetricsNotificationThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -995,7 +995,7 @@ Max number of hi-res metrics that can be sent with this toke
 Notification threshold for hi-res metrics
 
 <h4 class="pdoc-member-header" id="OrgTokenHostOrUsageLimits-hostLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L410">property <b>hostLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L410">property <b>hostLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1003,7 +1003,7 @@ Notification threshold for hi-res metrics
 Max number of hosts that can use this token
 
 <h4 class="pdoc-member-header" id="OrgTokenHostOrUsageLimits-hostNotificationThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L414">property <b>hostNotificationThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L414">property <b>hostNotificationThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostNotificationThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1011,14 +1011,14 @@ Max number of hosts that can use this token
 Notification threshold for hosts
 
 <h3 class="pdoc-module-header" id="SingleValueChartColorScale" data-link-title="SingleValueChartColorScale">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L417">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L417">
         interface <strong>SingleValueChartColorScale</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SingleValueChartColorScale</span></code></pre>
 <h4 class="pdoc-member-header" id="SingleValueChartColorScale-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L421">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L421">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1026,7 +1026,7 @@ Notification threshold for hosts
 Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 
 <h4 class="pdoc-member-header" id="SingleValueChartColorScale-gt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L425">property <b>gt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L425">property <b>gt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1034,7 +1034,7 @@ Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pi
 Indicates the lower threshold non-inclusive value for this range.
 
 <h4 class="pdoc-member-header" id="SingleValueChartColorScale-gte">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L429">property <b>gte</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L429">property <b>gte</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gte?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1042,7 +1042,7 @@ Indicates the lower threshold non-inclusive value for this range.
 Indicates the lower threshold inclusive value for this range.
 
 <h4 class="pdoc-member-header" id="SingleValueChartColorScale-lt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L433">property <b>lt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L433">property <b>lt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1050,7 +1050,7 @@ Indicates the lower threshold inclusive value for this range.
 Indicates the upper threshold non-inculsive value for this range.
 
 <h4 class="pdoc-member-header" id="SingleValueChartColorScale-lte">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L437">property <b>lte</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L437">property <b>lte</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lte?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1058,14 +1058,14 @@ Indicates the upper threshold non-inculsive value for this range.
 Indicates the upper threshold inclusive value for this range.
 
 <h3 class="pdoc-module-header" id="SingleValueChartVizOption" data-link-title="SingleValueChartVizOption">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L440">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L440">
         interface <strong>SingleValueChartVizOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SingleValueChartVizOption</span></code></pre>
 <h4 class="pdoc-member-header" id="SingleValueChartVizOption-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L444">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L444">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1073,7 +1073,7 @@ Indicates the upper threshold inclusive value for this range.
 Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 
 <h4 class="pdoc-member-header" id="SingleValueChartVizOption-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L448">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L448">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pi
 Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 
 <h4 class="pdoc-member-header" id="SingleValueChartVizOption-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L452">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L452">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1089,17 +1089,17 @@ Specifies an alternate value for the Plot Name column of the Data Table associat
 Label used in the publish statement that displays the plot (metric time series data) you want to customize.
 
 <h4 class="pdoc-member-header" id="SingleValueChartVizOption-valuePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L453">property <b>valuePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L453">property <b>valuePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valuePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SingleValueChartVizOption-valueSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L454">property <b>valueSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L454">property <b>valueSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSuffix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SingleValueChartVizOption-valueUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L459">property <b>valueUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L459">property <b>valueUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1108,14 +1108,14 @@ A unit to attach to this plot. Units support automatic scaling (eg thousands of 
 * `valuePrefix`, `valueSuffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
 
 <h3 class="pdoc-module-header" id="TimeChartAxisLeft" data-link-title="TimeChartAxisLeft">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L462">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L462">
         interface <strong>TimeChartAxisLeft</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TimeChartAxisLeft</span></code></pre>
 <h4 class="pdoc-member-header" id="TimeChartAxisLeft-highWatermark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L466">property <b>highWatermark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L466">property <b>highWatermark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>highWatermark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1123,7 +1123,7 @@ A unit to attach to this plot. Units support automatic scaling (eg thousands of 
 A line to draw as a high watermark.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisLeft-highWatermarkLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L470">property <b>highWatermarkLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L470">property <b>highWatermarkLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>highWatermarkLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1131,7 +1131,7 @@ A line to draw as a high watermark.
 A label to attach to the high watermark line.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisLeft-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L474">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L474">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1139,7 +1139,7 @@ A label to attach to the high watermark line.
 Label used in the publish statement that displays the event query you want to customize.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisLeft-lowWatermark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L478">property <b>lowWatermark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L478">property <b>lowWatermark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lowWatermark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ Label used in the publish statement that displays the event query you want to cu
 A line to draw as a low watermark.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisLeft-lowWatermarkLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L482">property <b>lowWatermarkLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L482">property <b>lowWatermarkLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lowWatermarkLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ A line to draw as a low watermark.
 A label to attach to the low watermark line.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisLeft-maxValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L486">property <b>maxValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L486">property <b>maxValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ A label to attach to the low watermark line.
 The maximum value for the right axis.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisLeft-minValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L490">property <b>minValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L490">property <b>minValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1171,19 +1171,19 @@ The maximum value for the right axis.
 The minimum value for the right axis.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisLeft-watermarks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L491">property <b>watermarks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L491">property <b>watermarks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>watermarks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisLeftWatermark'>inputs.TimeChartAxisLeftWatermark</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeChartAxisLeftWatermark" data-link-title="TimeChartAxisLeftWatermark">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L494">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L494">
         interface <strong>TimeChartAxisLeftWatermark</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TimeChartAxisLeftWatermark</span></code></pre>
 <h4 class="pdoc-member-header" id="TimeChartAxisLeftWatermark-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L498">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L498">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1191,19 +1191,19 @@ The minimum value for the right axis.
 Label used in the publish statement that displays the event query you want to customize.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisLeftWatermark-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L499">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L499">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeChartAxisRight" data-link-title="TimeChartAxisRight">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L502">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L502">
         interface <strong>TimeChartAxisRight</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TimeChartAxisRight</span></code></pre>
 <h4 class="pdoc-member-header" id="TimeChartAxisRight-highWatermark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L506">property <b>highWatermark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L506">property <b>highWatermark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>highWatermark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1211,7 +1211,7 @@ Label used in the publish statement that displays the event query you want to cu
 A line to draw as a high watermark.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisRight-highWatermarkLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L510">property <b>highWatermarkLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L510">property <b>highWatermarkLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>highWatermarkLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1219,7 +1219,7 @@ A line to draw as a high watermark.
 A label to attach to the high watermark line.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisRight-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L514">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L514">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1227,7 +1227,7 @@ A label to attach to the high watermark line.
 Label used in the publish statement that displays the event query you want to customize.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisRight-lowWatermark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L518">property <b>lowWatermark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L518">property <b>lowWatermark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lowWatermark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1235,7 +1235,7 @@ Label used in the publish statement that displays the event query you want to cu
 A line to draw as a low watermark.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisRight-lowWatermarkLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L522">property <b>lowWatermarkLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L522">property <b>lowWatermarkLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lowWatermarkLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1243,7 +1243,7 @@ A line to draw as a low watermark.
 A label to attach to the low watermark line.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisRight-maxValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L526">property <b>maxValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L526">property <b>maxValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1251,7 +1251,7 @@ A label to attach to the low watermark line.
 The maximum value for the right axis.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisRight-minValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L530">property <b>minValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L530">property <b>minValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1259,19 +1259,19 @@ The maximum value for the right axis.
 The minimum value for the right axis.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisRight-watermarks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L531">property <b>watermarks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L531">property <b>watermarks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>watermarks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisRightWatermark'>inputs.TimeChartAxisRightWatermark</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeChartAxisRightWatermark" data-link-title="TimeChartAxisRightWatermark">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L534">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L534">
         interface <strong>TimeChartAxisRightWatermark</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TimeChartAxisRightWatermark</span></code></pre>
 <h4 class="pdoc-member-header" id="TimeChartAxisRightWatermark-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L538">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L538">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1279,19 +1279,19 @@ The minimum value for the right axis.
 Label used in the publish statement that displays the event query you want to customize.
 
 <h4 class="pdoc-member-header" id="TimeChartAxisRightWatermark-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L539">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L539">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeChartEventOption" data-link-title="TimeChartEventOption">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L542">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L542">
         interface <strong>TimeChartEventOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TimeChartEventOption</span></code></pre>
 <h4 class="pdoc-member-header" id="TimeChartEventOption-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L546">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L546">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1299,7 +1299,7 @@ Label used in the publish statement that displays the event query you want to cu
 Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 
 <h4 class="pdoc-member-header" id="TimeChartEventOption-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L550">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L550">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1307,7 +1307,7 @@ Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pi
 Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 
 <h4 class="pdoc-member-header" id="TimeChartEventOption-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L554">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L554">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1315,14 +1315,14 @@ Specifies an alternate value for the Plot Name column of the Data Table associat
 Label used in the publish statement that displays the event query you want to customize.
 
 <h3 class="pdoc-module-header" id="TimeChartHistogramOption" data-link-title="TimeChartHistogramOption">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L557">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L557">
         interface <strong>TimeChartHistogramOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TimeChartHistogramOption</span></code></pre>
 <h4 class="pdoc-member-header" id="TimeChartHistogramOption-colorTheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L561">property <b>colorTheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L561">property <b>colorTheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>colorTheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1330,31 +1330,31 @@ Label used in the publish statement that displays the event query you want to cu
 Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine, red, gold, greenyellow, chartreuse, jade
 
 <h3 class="pdoc-module-header" id="TimeChartLegendOptionsField" data-link-title="TimeChartLegendOptionsField">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L564">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L564">
         interface <strong>TimeChartLegendOptionsField</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TimeChartLegendOptionsField</span></code></pre>
 <h4 class="pdoc-member-header" id="TimeChartLegendOptionsField-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L565">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L565">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeChartLegendOptionsField-property">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L566">property <b>property</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L566">property <b>property</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>property: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="TimeChartVizOption" data-link-title="TimeChartVizOption">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L569">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L569">
         interface <strong>TimeChartVizOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TimeChartVizOption</span></code></pre>
 <h4 class="pdoc-member-header" id="TimeChartVizOption-axis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L573">property <b>axis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L573">property <b>axis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>axis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1362,7 +1362,7 @@ Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pi
 Y-axis associated with values for this plot. Must be either `right` or `left`.
 
 <h4 class="pdoc-member-header" id="TimeChartVizOption-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L577">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L577">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1370,7 +1370,7 @@ Y-axis associated with values for this plot. Must be either `right` or `left`.
 Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 
 <h4 class="pdoc-member-header" id="TimeChartVizOption-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L581">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L581">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1378,7 +1378,7 @@ Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pi
 Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 
 <h4 class="pdoc-member-header" id="TimeChartVizOption-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L585">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L585">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1386,7 +1386,7 @@ Specifies an alternate value for the Plot Name column of the Data Table associat
 Label used in the publish statement that displays the event query you want to customize.
 
 <h4 class="pdoc-member-header" id="TimeChartVizOption-plotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L589">property <b>plotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L589">property <b>plotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plotType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1394,17 +1394,17 @@ Label used in the publish statement that displays the event query you want to cu
 The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plotType` by default.
 
 <h4 class="pdoc-member-header" id="TimeChartVizOption-valuePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L590">property <b>valuePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L590">property <b>valuePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valuePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeChartVizOption-valueSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L591">property <b>valueSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L591">property <b>valueSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSuffix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TimeChartVizOption-valueUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/4780ba6a04a3970e40584e80deb78768f6f7b4c9/sdk/nodejs/types/input.ts#L596">property <b>valueUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/060f08392a935583cd8cf8587c5706dcf597f159/sdk/nodejs/types/input.ts#L596">property <b>valueUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

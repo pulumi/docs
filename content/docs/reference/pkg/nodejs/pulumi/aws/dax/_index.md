@@ -38,7 +38,7 @@ meta_desc: "Explore members of the dax module in the @pulumi/aws package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L28">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ const bar = new aws.dax.Cluster("bar", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_cluster.html.markdown.
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L144"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L144"> <b>constructor</b></a>
 </h4>
 
 
@@ -78,7 +78,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -89,14 +89,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L58">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -115,7 +115,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the DAX cluster
 
 <h4 class="pdoc-member-header" id="Cluster-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L63">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L63">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ List of Availability Zones in which the
 nodes will be created
 
 <h4 class="pdoc-member-header" id="Cluster-clusterAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L67">property <b>clusterAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L67">property <b>clusterAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -132,7 +132,7 @@ nodes will be created
 The DNS name of the DAX cluster without the port appended
 
 <h4 class="pdoc-member-header" id="Cluster-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L72">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L72">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ Group identifier. DAX converts this name to
 lowercase
 
 <h4 class="pdoc-member-header" id="Cluster-configurationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L77">property <b>configurationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L77">property <b>configurationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configurationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
 
 <h4 class="pdoc-member-header" id="Cluster-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L81">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ consisting of a DNS name and a port number
 Description for the cluster
 
 <h4 class="pdoc-member-header" id="Cluster-iamRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L87">property <b>iamRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L87">property <b>iamRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -177,7 +177,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L94">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L94">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 `sun:05:00-sun:09:00`
 
 <h4 class="pdoc-member-header" id="Cluster-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L99">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L99">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +197,7 @@ The compute and memory capacity of the nodes. See
 [Nodes][1] for supported node types
 
 <h4 class="pdoc-member-header" id="Cluster-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L105">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L105">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterNode'>outputs.dax.ClusterNode</a>[]&gt;;</code></pre>
@@ -207,7 +207,7 @@ List of node objects including `id`, `address`, `port` and
 `${aws_dax_cluster.test.nodes.0.address}`
 
 <h4 class="pdoc-member-header" id="Cluster-notificationTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L111">property <b>notificationTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L111">property <b>notificationTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h4 class="pdoc-member-header" id="Cluster-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L116">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L116">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameterGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ Name of the parameter group to associate
 with this DAX cluster
 
 <h4 class="pdoc-member-header" id="Cluster-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L120">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L120">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ with this DAX cluster
 The port used by the configuration endpoint
 
 <h4 class="pdoc-member-header" id="Cluster-replicationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L126">property <b>replicationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L126">property <b>replicationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationFactor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -244,7 +244,7 @@ replication factor of 1 will create a single-node cluster, without any read
 replicas
 
 <h4 class="pdoc-member-header" id="Cluster-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L131">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L131">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -253,7 +253,7 @@ One or more VPC security groups associated
 with the cluster
 
 <h4 class="pdoc-member-header" id="Cluster-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L135">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L135">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverSideEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterServerSideEncryption'>outputs.dax.ClusterServerSideEncryption</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ with the cluster
 Encrypt at rest options
 
 <h4 class="pdoc-member-header" id="Cluster-subnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L140">property <b>subnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L140">property <b>subnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -270,7 +270,7 @@ Name of the subnet group to be used for the
 cluster
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L144">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L144">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ cluster
 A mapping of tags to assign to the resource
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -287,7 +287,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ParameterGroup" data-link-title="ParameterGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L41">
         Resource <strong>ParameterGroup</strong>
     </a>
 </h3>
@@ -326,7 +326,7 @@ const example = new aws.dax.ParameterGroup("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_parameter_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -340,7 +340,7 @@ Create a ParameterGroup resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -351,14 +351,14 @@ Get an existing ParameterGroup resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ParameterGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -369,7 +369,7 @@ Returns true if the given object is an instance of ParameterGroup.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L71">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L71">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -377,7 +377,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description of the parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -386,7 +386,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -394,7 +394,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L79">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L79">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ParameterGroupParameter'>outputs.dax.ParameterGroupParameter</a>[]&gt;;</code></pre>
@@ -402,7 +402,7 @@ The name of the parameter group.
 The parameters of the parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -411,7 +411,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SubnetGroup" data-link-title="SubnetGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L28">
         Resource <strong>SubnetGroup</strong>
     </a>
 </h3>
@@ -437,7 +437,7 @@ const example = new aws.dax.SubnetGroup("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_subnet_group.html.markdown.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -451,7 +451,7 @@ Create a SubnetGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -462,14 +462,14 @@ Get an existing SubnetGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SubnetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -480,7 +480,7 @@ Returns true if the given object is an instance of SubnetGroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L58">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L58">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -488,7 +488,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A description of the subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -497,7 +497,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -505,7 +505,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L66">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L66">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -513,7 +513,7 @@ The name of the subnet group.
 A list of VPC subnet IDs for the subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -522,7 +522,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L70">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L70">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ VPC ID of the subnet group.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L319">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L319">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -543,7 +543,7 @@ VPC ID of the subnet group.
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L324">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L324">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -552,7 +552,7 @@ List of Availability Zones in which the
 nodes will be created
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L329">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L329">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -561,7 +561,7 @@ Group identifier. DAX converts this name to
 lowercase
 
 <h4 class="pdoc-member-header" id="ClusterArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L333">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L333">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -569,7 +569,7 @@ lowercase
 Description for the cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-iamRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L339">property <b>iamRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L339">property <b>iamRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -579,7 +579,7 @@ an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
 
 <h4 class="pdoc-member-header" id="ClusterArgs-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L346">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L346">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 `sun:05:00-sun:09:00`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L351">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L351">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ The compute and memory capacity of the nodes. See
 [Nodes][1] for supported node types
 
 <h4 class="pdoc-member-header" id="ClusterArgs-notificationTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L357">property <b>notificationTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L357">property <b>notificationTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -609,7 +609,7 @@ SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L362">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L362">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -618,7 +618,7 @@ Name of the parameter group to associate
 with this DAX cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-replicationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L368">property <b>replicationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L368">property <b>replicationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationFactor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -628,7 +628,7 @@ replication factor of 1 will create a single-node cluster, without any read
 replicas
 
 <h4 class="pdoc-member-header" id="ClusterArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L373">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L373">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -637,7 +637,7 @@ One or more VPC security groups associated
 with the cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L377">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L377">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterServerSideEncryption'>inputs.dax.ClusterServerSideEncryption</a>&gt;;</code></pre>
@@ -645,7 +645,7 @@ with the cluster
 Encrypt at rest options
 
 <h4 class="pdoc-member-header" id="ClusterArgs-subnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L382">property <b>subnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L382">property <b>subnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -654,7 +654,7 @@ Name of the subnet group to be used for the
 cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L386">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L386">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -662,7 +662,7 @@ cluster
 A mapping of tags to assign to the resource
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L223">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -672,7 +672,7 @@ A mapping of tags to assign to the resource
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L227">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L227">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -680,7 +680,7 @@ Input properties used for looking up and filtering Cluster resources.
 The ARN of the DAX cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L232">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L232">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -689,7 +689,7 @@ List of Availability Zones in which the
 nodes will be created
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L236">property <b>clusterAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L236">property <b>clusterAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,7 +697,7 @@ nodes will be created
 The DNS name of the DAX cluster without the port appended
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L241">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L241">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -706,7 +706,7 @@ Group identifier. DAX converts this name to
 lowercase
 
 <h4 class="pdoc-member-header" id="ClusterState-configurationEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L246">property <b>configurationEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L246">property <b>configurationEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -715,7 +715,7 @@ The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
 
 <h4 class="pdoc-member-header" id="ClusterState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L250">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L250">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +723,7 @@ consisting of a DNS name and a port number
 Description for the cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-iamRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L256">property <b>iamRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L256">property <b>iamRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -733,7 +733,7 @@ an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
 
 <h4 class="pdoc-member-header" id="ClusterState-maintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L263">property <b>maintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L263">property <b>maintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -744,7 +744,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 `sun:05:00-sun:09:00`
 
 <h4 class="pdoc-member-header" id="ClusterState-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L268">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L268">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -753,7 +753,7 @@ The compute and memory capacity of the nodes. See
 [Nodes][1] for supported node types
 
 <h4 class="pdoc-member-header" id="ClusterState-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L274">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L274">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterNode'>inputs.dax.ClusterNode</a>&gt;[]&gt;;</code></pre>
@@ -763,7 +763,7 @@ List of node objects including `id`, `address`, `port` and
 `${aws_dax_cluster.test.nodes.0.address}`
 
 <h4 class="pdoc-member-header" id="ClusterState-notificationTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L280">property <b>notificationTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L280">property <b>notificationTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h4 class="pdoc-member-header" id="ClusterState-parameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L285">property <b>parameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L285">property <b>parameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -782,7 +782,7 @@ Name of the parameter group to associate
 with this DAX cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L289">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L289">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -790,7 +790,7 @@ with this DAX cluster
 The port used by the configuration endpoint
 
 <h4 class="pdoc-member-header" id="ClusterState-replicationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L295">property <b>replicationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L295">property <b>replicationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationFactor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -800,7 +800,7 @@ replication factor of 1 will create a single-node cluster, without any read
 replicas
 
 <h4 class="pdoc-member-header" id="ClusterState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L300">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L300">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -809,7 +809,7 @@ One or more VPC security groups associated
 with the cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L304">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L304">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterServerSideEncryption'>inputs.dax.ClusterServerSideEncryption</a>&gt;;</code></pre>
@@ -817,7 +817,7 @@ with the cluster
 Encrypt at rest options
 
 <h4 class="pdoc-member-header" id="ClusterState-subnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L309">property <b>subnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L309">property <b>subnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -826,7 +826,7 @@ Name of the subnet group to be used for the
 cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/cluster.ts#L313">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/cluster.ts#L313">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -834,7 +834,7 @@ cluster
 A mapping of tags to assign to the resource
 
 <h3 class="pdoc-module-header" id="ParameterGroupArgs" data-link-title="ParameterGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L134">
         interface <strong>ParameterGroupArgs</strong>
     </a>
 </h3>
@@ -844,7 +844,7 @@ A mapping of tags to assign to the resource
 The set of arguments for constructing a ParameterGroup resource.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L138">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L138">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -852,7 +852,7 @@ The set of arguments for constructing a ParameterGroup resource.
 A description of the parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -860,7 +860,7 @@ A description of the parameter group.
 The name of the parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L146">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L146">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>inputs.dax.ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -868,7 +868,7 @@ The name of the parameter group.
 The parameters of the parameter group.
 
 <h3 class="pdoc-module-header" id="ParameterGroupState" data-link-title="ParameterGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L116">
         interface <strong>ParameterGroupState</strong>
     </a>
 </h3>
@@ -878,7 +878,7 @@ The parameters of the parameter group.
 Input properties used for looking up and filtering ParameterGroup resources.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L120">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L120">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -886,7 +886,7 @@ Input properties used for looking up and filtering ParameterGroup resources.
 A description of the parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L124">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -894,7 +894,7 @@ A description of the parameter group.
 The name of the parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/parameterGroup.ts#L128">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/parameterGroup.ts#L128">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>inputs.dax.ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -902,7 +902,7 @@ The name of the parameter group.
 The parameters of the parameter group.
 
 <h3 class="pdoc-module-header" id="SubnetGroupArgs" data-link-title="SubnetGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L134">
         interface <strong>SubnetGroupArgs</strong>
     </a>
 </h3>
@@ -912,7 +912,7 @@ The parameters of the parameter group.
 The set of arguments for constructing a SubnetGroup resource.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L138">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L138">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -920,7 +920,7 @@ The set of arguments for constructing a SubnetGroup resource.
 A description of the subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -928,7 +928,7 @@ A description of the subnet group.
 The name of the subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L146">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L146">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -936,7 +936,7 @@ The name of the subnet group.
 A list of VPC subnet IDs for the subnet group.
 
 <h3 class="pdoc-module-header" id="SubnetGroupState" data-link-title="SubnetGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L112">
         interface <strong>SubnetGroupState</strong>
     </a>
 </h3>
@@ -946,7 +946,7 @@ A list of VPC subnet IDs for the subnet group.
 Input properties used for looking up and filtering SubnetGroup resources.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L116">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L116">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -954,7 +954,7 @@ Input properties used for looking up and filtering SubnetGroup resources.
 A description of the subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L120">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -962,7 +962,7 @@ A description of the subnet group.
 The name of the subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L124">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L124">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -970,7 +970,7 @@ The name of the subnet group.
 A list of VPC subnet IDs for the subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/732c49b357a97cb28dc2fd01bb99654173c2ab8c/sdk/nodejs/dax/subnetGroup.ts#L128">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/dax/subnetGroup.ts#L128">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

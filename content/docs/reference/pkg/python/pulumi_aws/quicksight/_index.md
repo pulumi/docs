@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_aws.quicksight"></span><dl class="class">
 <dt id="pulumi_aws.quicksight.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.quicksight.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aws_account_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.quicksight.Group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resource for managing Quick Sight Group</p>
+<dd><p>Resource for managing QuickSight Group</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

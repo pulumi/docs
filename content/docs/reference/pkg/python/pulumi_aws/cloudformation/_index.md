@@ -622,7 +622,7 @@ exports specified in the <a class="reference external" href="http://docs.aws.ama
 
 <dl class="function">
 <dt id="pulumi_aws.cloudformation.get_stack">
-<code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">get_stack</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">get_stack</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.</p>
 <dl class="field-list simple">

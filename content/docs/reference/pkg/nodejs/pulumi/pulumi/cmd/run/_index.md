@@ -23,14 +23,14 @@ meta_desc: "Explore members of the run module in the @pulumi/pulumi package."
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="nodeJSProcessExitedAfterLoggingUserActionableMessage" data-link-title="nodeJSProcessExitedAfterLoggingUserActionableMessage">
-    <a href="https://github.com/pulumi/pulumi/blob/bbc61b86af9e748c11c5c14489ad06b78c45f62a/sdk/nodejs/cmd/run/index.ts#L47">
+    <a href="https://github.com/pulumi/pulumi/blob/35b32f20c3054e2d13d359ce568c7fce9aa59acc/sdk/nodejs/cmd/run/index.ts#L47">
         const <strong>nodeJSProcessExitedAfterLoggingUserActionableMessage</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> nodeJSProcessExitedAfterLoggingUserActionableMessage: 32 = <span class='s2'>32</span>;</code></pre>
 <h3 class="pdoc-module-header" id="run" data-link-title="run">
-    <a href="https://github.com/pulumi/pulumi/blob/bbc61b86af9e748c11c5c14489ad06b78c45f62a/sdk/nodejs/cmd/run/run.ts#L133">
+    <a href="https://github.com/pulumi/pulumi/blob/35b32f20c3054e2d13d359ce568c7fce9aa59acc/sdk/nodejs/cmd/run/run.ts#L133">
         function <strong>run</strong>
     </a>
 </h3>

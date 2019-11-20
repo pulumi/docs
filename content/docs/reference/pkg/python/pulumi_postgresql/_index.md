@@ -593,7 +593,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_postgresql.Role">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Role</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypass_row_level_security=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">create_database=None</em>, <em class="sig-param">create_role=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">encrypted_password=None</em>, <em class="sig-param">inherit=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">replication=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">skip_drop_role=None</em>, <em class="sig-param">skip_reassign_owned=None</em>, <em class="sig-param">superuser=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Role" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Role</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypass_row_level_security=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">create_database=None</em>, <em class="sig-param">create_role=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">encrypted_password=None</em>, <em class="sig-param">inherit=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">replication=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">search_paths=None</em>, <em class="sig-param">skip_drop_role=None</em>, <em class="sig-param">skip_reassign_owned=None</em>, <em class="sig-param">superuser=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Role" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Role</span></code> resource creates and manages a role on a PostgreSQL
 server.</p>
 <p>When a <code class="docutils literal notranslate"><span class="pre">.Role</span></code> resource is removed, the PostgreSQL ROLE will
@@ -642,6 +642,9 @@ for roles having the <code class="docutils literal notranslate"><span class="pre
 streaming replication or put the system in and out of backup mode.  Default
 value is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
 <li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Defines list of roles which will be granted to this new role.</p></li>
+<li><p><strong>search_paths</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Alters the search path of this new role. Note that
+due to limitations in the implementation, values cannot contain the substring
+<code class="docutils literal notranslate"><span class="pre">&quot;,</span> <span class="pre">&quot;</span></code>.</p></li>
 <li><p><strong>skip_drop_role</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When a PostgreSQL ROLE exists in multiple
 databases and the ROLE is dropped, the
 <a class="reference external" href="https://www.postgresql.org/docs/current/static/role-removal.html">cleanup of ownership of objects</a>
@@ -755,6 +758,14 @@ value is <code class="docutils literal notranslate"><span class="pre">false</spa
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_postgresql.Role.search_paths">
+<code class="sig-name descname">search_paths</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Role.search_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alters the search path of this new role. Note that
+due to limitations in the implementation, values cannot contain the substring
+<code class="docutils literal notranslate"><span class="pre">&quot;,</span> <span class="pre">&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_postgresql.Role.skip_drop_role">
 <code class="sig-name descname">skip_drop_role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_postgresql.Role.skip_drop_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>When a PostgreSQL ROLE exists in multiple
@@ -799,7 +810,7 @@ set to <code class="docutils literal notranslate"><span class="pre">infinity</sp
 
 <dl class="method">
 <dt id="pulumi_postgresql.Role.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypass_row_level_security=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">create_database=None</em>, <em class="sig-param">create_role=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">encrypted_password=None</em>, <em class="sig-param">inherit=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">replication=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">skip_drop_role=None</em>, <em class="sig-param">skip_reassign_owned=None</em>, <em class="sig-param">superuser=None</em>, <em class="sig-param">valid_until=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Role.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bypass_row_level_security=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">create_database=None</em>, <em class="sig-param">create_role=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">encrypted_password=None</em>, <em class="sig-param">inherit=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">replication=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">search_paths=None</em>, <em class="sig-param">skip_drop_role=None</em>, <em class="sig-param">skip_reassign_owned=None</em>, <em class="sig-param">superuser=None</em>, <em class="sig-param">valid_until=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Role.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Role resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -836,6 +847,9 @@ for roles having the <code class="docutils literal notranslate"><span class="pre
 streaming replication or put the system in and out of backup mode.  Default
 value is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
 <li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Defines list of roles which will be granted to this new role.</p></li>
+<li><p><strong>search_paths</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Alters the search path of this new role. Note that
+due to limitations in the implementation, values cannot contain the substring
+<code class="docutils literal notranslate"><span class="pre">&quot;,</span> <span class="pre">&quot;</span></code>.</p></li>
 <li><p><strong>skip_drop_role</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>When a PostgreSQL ROLE exists in multiple
 databases and the ROLE is dropped, the
 <a class="reference external" href="https://www.postgresql.org/docs/current/static/role-removal.html">cleanup of ownership of objects</a>

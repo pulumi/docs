@@ -63,7 +63,7 @@ One of our major goals in this work was to make deploying an application
 to Kubernetes as simple as possible, by presenting a concise summary of
 this information in the CLI experience. See
 [my tweetstorm](https://twitter.com/hausdorff_space/status/1039940379301179392)
-on the subject, or [try it out](/kubernetes) for
+on the subject, or [try it out]({{< relref "/topics/kubernetes" >}}) for
 yourself!
 
 ![status-rich](./status-rich.gif)
@@ -135,5 +135,5 @@ enough tools to really dig into what is happening when you roll out your
 app.
 
 In the mean time, if you enjoyed this post, or are curious to see how
-this lifecycle is baked into the Pulumi CLI, [give it a spin](/kubernetes)!
+this lifecycle is baked into the Pulumi CLI, [give it a spin]({{< relref "/topics/kubernetes" >}})!
 We'd love to have your feedback.

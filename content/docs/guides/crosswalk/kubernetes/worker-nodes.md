@@ -5,8 +5,7 @@ menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-worker-nodes
-    weight: 2
-
+    weight: 3
 ---
 
 {{< cloudchoose >}}

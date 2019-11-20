@@ -333,6 +333,219 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_aws.eks.NodeGroup">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.eks.</code><code class="sig-name descname">NodeGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ami_type=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">disk_size=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">node_group_name=None</em>, <em class="sig-param">node_role_arn=None</em>, <em class="sig-param">release_version=None</em>, <em class="sig-param">remote_access=None</em>, <em class="sig-param">scaling_config=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.NodeGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an EKS Node Group, which can provision and optionally update an Auto Scaling Group of Kubernetes worker nodes compatible with EKS. Additional documentation about this functionality can be found in the <a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">EKS User Guide</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the EKS Cluster.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.</p></li>
+<li><p><strong>node_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the EKS Node Group.</p></li>
+<li><p><strong>node_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.</p></li>
+<li><p><strong>release_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.</p></li>
+<li><p><strong>remote_access</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with remote access settings. Detailed below.</p></li>
+<li><p><strong>scaling_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with scaling settings. Detailed below.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: <code class="docutils literal notranslate"><span class="pre">kubernetes.io/cluster/CLUSTER_NAME</span></code> (where <code class="docutils literal notranslate"><span class="pre">CLUSTER_NAME</span></code> is replaced with the name of the EKS Cluster).</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>remote_access</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ec2SshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify <code class="docutils literal notranslate"><span class="pre">source_security_group_ids</span></code> when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes. If you specify <code class="docutils literal notranslate"><span class="pre">ec2_ssh_key</span></code>, but do not specify this configuration when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).</p></li>
+</ul>
+<p>The <strong>scaling_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">desiredSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Desired number of worker nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of worker nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of worker nodes.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eks_node_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eks_node_group.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the EKS Node Group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.cluster_name">
+<code class="sig-name descname">cluster_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.cluster_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the EKS Cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.labels">
+<code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.node_group_name">
+<code class="sig-name descname">node_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.node_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the EKS Node Group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.node_role_arn">
+<code class="sig-name descname">node_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.node_role_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.release_version">
+<code class="sig-name descname">release_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.release_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.remote_access">
+<code class="sig-name descname">remote_access</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.remote_access" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block with remote access settings. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ec2SshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify <code class="docutils literal notranslate"><span class="pre">source_security_group_ids</span></code> when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes. If you specify <code class="docutils literal notranslate"><span class="pre">ec2_ssh_key</span></code>, but do not specify this configuration when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.resources">
+<code class="sig-name descname">resources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of objects containing information about underlying resources.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscaling_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of objects containing information about AutoScaling Groups.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the AutoScaling Group.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteAccessSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of the remote access EC2 Security Group.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.scaling_config">
+<code class="sig-name descname">scaling_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.scaling_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block with scaling settings. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">desiredSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Desired number of worker nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum number of worker nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum number of worker nodes.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the EKS Node Group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.subnet_ids">
+<code class="sig-name descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.subnet_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: <code class="docutils literal notranslate"><span class="pre">kubernetes.io/cluster/CLUSTER_NAME</span></code> (where <code class="docutils literal notranslate"><span class="pre">CLUSTER_NAME</span></code> is replaced with the name of the EKS Cluster).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.NodeGroup.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.eks.NodeGroup.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ami_type=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">disk_size=None</em>, <em class="sig-param">instance_types=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">node_group_name=None</em>, <em class="sig-param">node_role_arn=None</em>, <em class="sig-param">release_version=None</em>, <em class="sig-param">remote_access=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">scaling_config=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NodeGroup resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the EKS Node Group.</p></li>
+<li><p><strong>cluster_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the EKS Cluster.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.</p></li>
+<li><p><strong>node_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the EKS Node Group.</p></li>
+<li><p><strong>node_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.</p></li>
+<li><p><strong>release_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.</p></li>
+<li><p><strong>remote_access</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with remote access settings. Detailed below.</p></li>
+<li><p><strong>resources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of objects containing information about underlying resources.</p></li>
+<li><p><strong>scaling_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with scaling settings. Detailed below.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the EKS Node Group.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: <code class="docutils literal notranslate"><span class="pre">kubernetes.io/cluster/CLUSTER_NAME</span></code> (where <code class="docutils literal notranslate"><span class="pre">CLUSTER_NAME</span></code> is replaced with the name of the EKS Cluster).</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>remote_access</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ec2SshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify <code class="docutils literal notranslate"><span class="pre">source_security_group_ids</span></code> when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes. If you specify <code class="docutils literal notranslate"><span class="pre">ec2_ssh_key</span></code>, but do not specify this configuration when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).</p></li>
+</ul>
+<p>The <strong>resources</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscaling_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of objects containing information about AutoScaling Groups.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the AutoScaling Group.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteAccessSecurityGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of the remote access EC2 Security Group.</p></li>
+</ul>
+<p>The <strong>scaling_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">desiredSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Desired number of worker nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum number of worker nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum number of worker nodes.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eks_node_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eks_node_group.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.eks.NodeGroup.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.eks.NodeGroup.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.NodeGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pulumi_aws.eks.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.eks.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.get_cluster" title="Permalink to this definition">¶</a></dt>
