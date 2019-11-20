@@ -91,16 +91,19 @@
 
     &.pricing {
         label {
-            @apply font-normal text-base;
+            @apply font-normal;
         }
         input, textarea {
-            @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight text-xl;
+            @apply appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight text-xl;
             &:focus {
-                @apply outline-none shadow-outline;
+                @apply outline-none shadow-input-outline;
             }
         }
         .hs-button {
-            @apply text-white;
+            @apply text-white btn-orange;
+            &:hover {
+                @apply bg-orange-600 border-orange-700;
+            }
         }
     }
 }

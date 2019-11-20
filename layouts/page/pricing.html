@@ -594,7 +594,7 @@
         </div>
     </section>
 
-    {{ partial "form-section" (dict "sectionId" .Params.form.sectionId "formHeader" .Params.form.header "quoteJobTitle" .Params.form.quoteJobTitle "quoteName" .Params.form.quoteName "customerQuote" .Params.form.customerQuote "quoteTitle" .Params.form.quoteTitle "hubspotFormID" .Params.form.hubspotFormId "formClassNames" .Params.form.classNames )}}
+    {{ partial "form-section" (dict "form" .Params.form  )}}
 
     {{ partial "newsletter.html" . }}
 {{ end }}
