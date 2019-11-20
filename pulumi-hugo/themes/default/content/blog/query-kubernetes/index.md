@@ -19,8 +19,7 @@ resources of each type, and manually parsing the output to join it together into
 Today, we're introducing Pulumi Query for Kubernetes, which aims to simplify scenarios like this.
 
 Pulumi Query is a tool and SDK for querying live Kubernetes resources. Pulumi Query supports both
-batch and streaming query modes. Batch queries run to completion, generating a fixed report. But
-streaming queries watch Kubernetes resources in real time, and to take action when specific events
+batch and streaming query modes. Batch queries run to completion, generating a fixed report. Streaming queries watch Kubernetes resources in real-time and take action when specific events
 occur. For example:
 
 * Post a slack notification when we run out of disk space.
@@ -99,7 +98,7 @@ scales down the old one.
 
 For streaming queries over multiple resources, we expose a `ResourceSet`, which is a convenience
 data structure that simplifies the code. `ResourceSet` observes a sequence of resource updates
-published by `watch`, and uses those updates to keep track of which resources currently exist. It
+published by `watch`, and uses those updates to keep track of which resources currently exists. It
 exposes an `onUpdate` function, which will run when this set is updated; i.e., whenever a resource
 is added, modified, or deleted from the set entirely.
 
@@ -126,13 +125,13 @@ new kq.ResourceSet([kq.watch("v1", "Event")]).onUpdate(([events]) => {
 ```
 
 Running this code with `pulumi query` results in an infinite stream of events telling us about this
-Deployment—when it's rolling out, when it's scaling down a ReplicaSet, and so on.
+Deployment, i.e. when it's rolling out, when it's scaling down a ReplicaSet, and so on.
 
 ## Conclusion
 
 Pulumi Query provides powerful primitives for introspecting and reacting to changes in the state
 of Kubernetes resources. These primitives make it simpler to build tools that facilitate
-observability and helps to understand Kubernetes applications, and to integrate event-based systems
+observability and helps to understand Kubernetes applications and to integrate event-based systems
 in response to them.
 
 One of our hopes for Pulumi Query is that by building these simple integrations that it will lead to a
