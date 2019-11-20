@@ -2,7 +2,7 @@
 title: Introducing Pulumi Query
 authors: ["joe-duffy"]
 tags: ["Pulumi-News", "Kubernetes"]
-meta_desc: "Today we announced Pulumi Pulumi Query, an SDK for programmatically querying cloud resources."
+meta_desc: "Today we announced Pulumi Query, an SDK for programmatically querying cloud resources."
 date: "2019-11-14"
 meta_image: "pulumi-crosswalk-k8s.png"
 ---
@@ -13,7 +13,7 @@ It is too hard to answer simple questions about Kubernetes resources. Questions 
 * Which Pods are scheduled on nodes with high memory pressure?
 * Which Pods are publicly exposed to the internet via a load-balanced Service?
 
-Each of these questions would normally be answered by invoking `kubectl` multiple teams to list
+Each of these questions would normally be answered by invoking `kubectl` multiple times to list
 resources of each type, and manually parsing the output to join it together into a single report.
 
 Today, we're introducing Pulumi Query for Kubernetes, which aims to simplify scenarios like this.
