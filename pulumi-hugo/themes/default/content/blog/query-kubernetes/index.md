@@ -7,7 +7,7 @@ date: "2019-11-14"
 meta_image: "pulumi-crosswalk-k8s.png"
 ---
 
-It is too hard to answer simple questions about Kubernetes resouces. Questions like:
+It is too hard to answer simple questions about Kubernetes resources. Questions like:
 
 * How many distinct versions of MySQL are running in my cluster?
 * Which Pods are scheduled on nodes with high memory pressure?
@@ -130,7 +130,7 @@ Deployment—when it's rolling out, when it's scaling down a ReplicaSet, and so 
 
 ## Conclusion
 
-Pulumi Query provides powerful primitives for introspecting on, and reacting to, changes in the state
+Pulumi Query provides powerful primitives for introspecting and reacting to changes in the state
 of Kubernetes resources. These primitives make it simpler to build tools that facilitate
 observability and helps to understand Kubernetes applications, and to integrate event-based systems
 in response to them.
