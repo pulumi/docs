@@ -17,6 +17,7 @@ TOOLS_REPOS=(
     "pulumi-dnsimple"
     "pulumi-docker"
     "pulumi-eks"
+    "pulumi-fastly"
     "pulumi-f5bigip"
     "pulumi-gcp"
     "pulumi-gitlab"
