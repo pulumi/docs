@@ -2,7 +2,7 @@
 title: Introducing Pulumi Query
 authors: ["joe-duffy"]
 tags: ["Pulumi-News", "Kubernetes"]
-meta_desc: ""Announcing Pulumi Pulumi Query, an SDK for programmatically querying cloud resources."
+meta_desc: "Announcing Pulumi Pulumi Query, an SDK for programmatically querying cloud resources."
 date: "2019-11-20"
 meta_image: "pulumi-crosswalk-k8s.png"
 ---
