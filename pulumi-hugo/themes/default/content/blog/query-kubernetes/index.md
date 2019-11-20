@@ -27,7 +27,7 @@ occur. For example:
 * Page someone when a rollout fails.
 
 In this post, we'll look at both batch and streaming query modes by showing examples of each. The
-(Pulumi Query for Kubernetes)[https://github.com/pulumi/pulumi-query-kubernetes] also contains a set
+[Pulumi Query for Kubernetes SDK](https://github.com/pulumi/pulumi-query-kubernetes) also contains a set
 of example queries and how to run them.
 
 ## Batch queries
@@ -67,10 +67,10 @@ that reference some Secret." For more examples, check out the examples in the SD
 ## Streaming queries
 
 The streaming query SDK continuously observes changes to any set of Kubernetes resources
-and take action as a result.
+and takes action as a result.
 
 The core primitive of the streaming SDK is `watch`. In the following example, we use `watch` to
-watch all Events related to a Deployment, which we then print to the console. Unlike `list`, which
+observe all Events related to a Deployment, which we then print to the console. Unlike `list`, which
 produces a set of live Kubernetes resources, `watch` publishes a stream of resource updates. Users
 get notified if a resource is `ADDED`, `MODIFIED`, or `UPDATED`.
 
@@ -137,6 +137,6 @@ in response to them.
 
 One of our hopes for Pulumi Query is that by building these simple integrations that it will lead to a
 groundswell of tooling that makes it easier to operate Kubernetes clusters by automating away
-tedious tasks that would normally be scripted. With this toolkit, teams can, with minimal effort
+tedious tasks that would normally be scripted. With this toolkit, teams can
 write linters, pre- and post-flight deployment checks, and to improve governance and security
-operations.
+operations with minimal effort.
