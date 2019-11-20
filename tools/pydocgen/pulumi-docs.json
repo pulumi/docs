@@ -122,6 +122,12 @@
       "terraform_provider_name": "f5bigip"
     },
     {
+      "name": "Pulumi Fastly",
+      "package_name": "pulumi_fastly",
+      "pulumi_provider_name": "fastly",
+      "terraform_provider_name": "fastly"
+    },
+    {
       "name": "Pulumi Packet",
       "package_name": "pulumi_packet",
       "pulumi_provider_name": "packet",

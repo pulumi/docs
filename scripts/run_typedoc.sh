@@ -87,6 +87,7 @@ REPOS=(
     "dnsimple,pulumi-dnsimple,sdk/nodejs"
     "docker,pulumi-docker,sdk/nodejs"
     "eks,pulumi-eks/nodejs/eks"
+    "fastly,pulumi-fastly,sdk/nodejs"
     "f5bigip,pulumi-f5bigip,sdk/nodejs"
     "gcp,pulumi-gcp,sdk/nodejs"
     "gitlab,pulumi-gitlab,sdk/nodejs"
