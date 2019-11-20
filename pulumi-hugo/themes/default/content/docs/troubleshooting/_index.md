@@ -367,6 +367,26 @@ It is recommended that Pulumi apps be updated to prevent breakage.
 
 To address the issue update your app to use one of the following forms:
 
+### Globally opt out of synchronous calls
+
+Set the following config variable for your application:
+
+```bash
+pulumi config set pulumi:noSyncCalls true
+```
+
+```ts
+const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider })); // or
+const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent }));
+```
+
+This is the preferred way to solve this issue. In this form all resource function calls will always execute asynchronously,
+returning their result through a `Promise<...>`.  The result of the call is then wrapped into an `Output` so it can easily be
+passed as a resource input and to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
+
+If you do not want to change all calls to be `async` (perhaps because only one is encountering a problem), you can alternatively
+update only specific problematic calls to be asynchronous like so:
+
 ### Invoke the resource function asynchronously
 
 ```ts
@@ -374,11 +394,11 @@ const ids = pulumi.output(aws.ec2.getSubnetIds(..., { provider, async: true }));
 const ids = pulumi.output(aws.ec2.getSubnetIds(..., { parent, async: true }));
 ```
 
-This is the preferred way to solve this issue. In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always
-execute asynchronously.  The result of the call is then wrapped into an `Output` so it can easily be passed as a resource input and
-to make it [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
+In this form, the `async: true` flag is passed in which forces `getSubnetIds` to always execute asynchronously.  The result
+of the call is then wrapped into an `Output` so it can easily be passed as a resource input and to make it
+[simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
 
-Sometimes, however, this approach is not possible because the call to the resource functio happens a deeper layer (possibly in a
+Sometimes, however, this approach is not possible because the call to the resource function happens a deeper layer (possibly in a
 component not under your control).  In that case, we recommend the solution in the next section:
 
 ### Register the provider first
@@ -399,3 +419,52 @@ results can be used immediately, without needing to operate on them as promises 
 
 This approach makes it possible to safely perform these resource function calls synchronously.  However, it may require refactoring
 some code due to the need to potentially use `async`/`await` code in areas of a program that are currently synchronous.
+
+## StackReference.getOutputSync/requireOutputSync called on a StackReference whose name is a Promise/Output {#stackreference-sync}
+
+The warning occurs when calling `getOutputSync` or `requireOutputSync` on a `StackReference` whose name is not a simple string.
+For example:
+
+```ts
+const stackReference = new StackReference("...", { name: otherResource.outputValue });
+const val = stackReference.getOutputSync("outputName");
+```
+
+This warning may be benign. However, if you are experiencing crashes or hangs in Pulumi (especially in Node.js version 12.11.0 and
+above) and you see this warning, then it is likely that this is the source.
+
+Currently, a warning is issued so as to not break existing code that is functionality properly. However, the root cause of this problem
+pertains to undefined behavior in the Node.js runtime, so apparently-working code today may begin crashing or hanging tomorrow. As such,
+we recommend updating your code In a future version, Pulumi *may* be updated to throw instead of producing a warning when this happens.
+It is recommended that Pulumi apps be updated to prevent breakage.
+
+There are only two ways supported to avoid this issue:
+
+### Use getOutput/requireOutput instead {#use-getoutput}
+
+```ts
+const stackReference = new StackReference("...", { name: otherResource.outputValue });
+const val = stackReference.getOutput("outputName");
+```
+
+In this form the result of the call is an `Output` (which internally asynchronously retrieves the stack output value).  This can
+easily be passed as a resource input and supports [simple to access properties](https://www.pulumi.com/docs/intro/concepts/programming-model/#lifting) off of it.
+
+However, because the value is not known synchronously, it is not possible to have the value affect the flow of your application.
+For example if the output value is an array, there is no way to know the length of the array in order to make specific resources
+corresponding to it.  If the exact value is needed for this purpose the only way to get it is like so:
+
+### Pass the stack reference name in as a string
+
+```ts
+const stackReference = new StackReference("...", { name: "explicitly-provided-name" });
+const values: string[] = stackReference.getOutput("outputName");
+for (const e of values) {
+   ...
+```
+
+This approach requires you to pass in the name as a string either explicitly as a literal like above, or just as some string
+value defined elsewhere in your application. If the value is known, it can be copied into your application and used directly.
+
+If the stack-reference-name truly is dynamic and cannot be known ahead of time to supply directly into the app, then this 
+approach will not work, and the only way to workaround the issue is to follow the steps in [Use getOutput/requireOutput](#use-getoutput).

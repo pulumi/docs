@@ -4,7 +4,7 @@ menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-apps
-    weight: 8
+    weight: 9
 ---
 
 The following are examples of how to create and use various types of Kubernetes

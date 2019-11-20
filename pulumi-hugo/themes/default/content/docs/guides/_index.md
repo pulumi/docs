@@ -53,7 +53,7 @@ Pulumi’s approach to infrastructure as code is great for continuous delivery, 
         <a href="{{< relref "crosswalk/kubernetes" >}}"><img class="h-auto w-32 center pt-6" src="/images/docs/reference/crosswalk/kubernetes/crosswalk-for-k8s.svg" alt="Pulumi Crosswalk for Kubernetes"></a>
         <p>
         <p>
-            Kubernetes for Humans. Pulumi encapsulates best practices for common infrastructure-as-code tasks in Kubernetes, and its underyling infrastructure.
+            Kubernetes for Everyone. Pulumi encapsulates best practices for common infrastructure-as-code tasks in Kubernetes, and its underyling infrastructure.
         </p>
         <ul class="p2">
             <li><a href="{{< relref "crosswalk/kubernetes/control-plane" >}}">Managed Kubernetes Clusters</a></li>

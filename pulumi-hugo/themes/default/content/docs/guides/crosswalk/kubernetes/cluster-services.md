@@ -5,7 +5,7 @@ menu:
   userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-cluster-svcs
-    weight: 6
+    weight: 7
 ---
 
 {{< cloudchoose >}}
