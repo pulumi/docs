@@ -796,6 +796,36 @@ record = aws.route53.Record("validation",
 
 This helps the clarity of the final code, while not losing any important dependency information that is needed for properly creating and maintaining the stack.
 
+##### Optional chaining off of an Output
+
+In JavaScript and TypeScript, a 'lifted' property access on an `Output<T>` that wraps `undefined` will produce another `Output<T>` with the `undefined` value instead of throwing or producing a 'faulted' `Output<T>`.  In this manner 'lifted' property accesses behave like the [`?.` (optional chaining operator)](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) in JavaScript and TypeScript. This makes it much easier to form a chain of property accesses on an `Output<T>`.
+
+{{< langchoose nodeonly >}}
+
+```javascript
+let certValidation = new aws.route53.Record("cert_validation", {
+  records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
+
+// instead of
+
+let certValidation = new aws.route53.Record("cert_validation", {
+  records: [certCertificate.apply(cc => cc ? cc.domainValidationOptions : undefined)
+                           .apply(dvo => dvo ? dvo[0] : undefined)
+                           .apply(o => o ? o.resourceRecordValue : undefined)],
+```
+
+```typescript
+let certValidation = new aws.route53.Record("cert_validation", {
+  records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
+
+// instead of
+
+let certValidation = new aws.route53.Record("cert_validation", {
+  records: [certCertificate.apply(cc => cc ? cc.domainValidationOptions : undefined)
+                           .apply(dvo => dvo ? dvo[0] : undefined)
+                           .apply(o => o ? o.resourceRecordValue : undefined)],
+```
+
 ##### All {#all}
 
 To combine multiple `Output`s into a transformed value, use [pulumi.all].  This allows a new value to be constructed from several inputs, such as concatenating outputs from two different resources together, or constructing a policy document using information from several other resources.
