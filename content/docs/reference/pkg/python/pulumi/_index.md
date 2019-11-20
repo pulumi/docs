@@ -945,7 +945,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 
 <dl class="method">
 <dt id="pulumi.Output.apply">
-<code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param">func: Callable[[T], Union[U, Awaitable[U], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~U][U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param">func: Callable[[T], Union[U, Awaitable[U], Output[T]]], run_with_unknowns: Optional[bool] = None</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~U][U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms the data of the output with the provided func.  The result remains a
 Output so that dependent resources can be properly tracked.</p>
 <p>‘func’ is not allowed to make resources.</p>
