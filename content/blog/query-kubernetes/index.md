@@ -2,12 +2,12 @@
 title: Introducing Pulumi Query
 authors: ["joe-duffy"]
 tags: ["Pulumi-News", "Kubernetes"]
-meta_desc: "Today we announced Pulumi Query, an SDK for programmatically querying cloud resources."
-date: "2019-11-14"
+meta_desc: ""Announcing Pulumi Pulumi Query, an SDK for programmatically querying cloud resources."
+date: "2019-11-20"
 meta_image: "pulumi-crosswalk-k8s.png"
 ---
 
-It is too hard to answer simple questions about Kubernetes resources. Questions like:
+We often need answers to simple questions about Kubernetes resources. Questions like:
 
 * How many distinct versions of MySQL are running in my cluster?
 * Which Pods are scheduled on nodes with high memory pressure?
@@ -16,7 +16,7 @@ It is too hard to answer simple questions about Kubernetes resources. Questions 
 Each of these questions would normally be answered by invoking `kubectl` multiple times to list
 resources of each type, and manually parsing the output to join it together into a single report.
 
-Today, we're introducing Pulumi Query for Kubernetes, which aims to simplify scenarios like this.
+Examples like these motivated us to build Pulumi Query for Kubernetes, which aims to greatly simplify scenarios like the ones mentioned above.
 
 Pulumi Query is a tool and SDK for querying live Kubernetes resources. Pulumi Query supports both
 batch and streaming query modes. Batch queries run to completion, generating a fixed report. Streaming queries watch Kubernetes resources in real-time and take action when specific events
