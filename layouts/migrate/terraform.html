@@ -40,10 +40,7 @@
                 </section>
             </div>
             <div class="header-hero-item">
-                <h2 class="text-gray-300">Need help converting?</h2>
-                <div class="hs-form hs-form-fg-light">
-                    {{ partial "hubspot-form.html" (dict "hubspotFormID" "123cfbdb-9ce4-4d33-a9b7-c30302463d7a") }}
-                </div>
+                {{ partial "form-section" (dict "form" .Params.hero_form) }}
             </div>
         </div>
     </header>
@@ -258,23 +255,7 @@ output "bucket_name" {
 
     {{ partial "get-started.html" . }}
 
-    <section id="contact-us" class="bg-purple-500 mb-0 py-16 text-white">
-        <div class="container mx-auto max-w-5xl">
-            <div class="md:flex my-8 md:max-w-32 align-top">
-                <div class="md:w-1/2">
-                    <h2 class="text-white">Let Pulumi assist with your cloud infrastructure.</h2>
-                    <p>
-                        Need help converting your Terraform templates into Pulumi code? Drop us a line.
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml-8">
-                    <div class="hs-form hs-form-fg-light">
-                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "123cfbdb-9ce4-4d33-a9b7-c30302463d7a") }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{ partial "form-section" (dict "form" .Params.contact_us_form) }}
 
     {{ partial "more-from-pulumi.html" . }}
 {{ end }}

@@ -39,7 +39,10 @@
     }
 
     input[type="submit"] {
-        @apply btn btn-orange-translucent;
+        @apply w-full border-none text-white btn;
+        &:hover {
+            @apply bg-blue-500;
+        }
     }
 
     .hs-error-msgs {
@@ -92,18 +95,6 @@
 
             &:focus {
                 @apply outline-none;
-            }
-        }
-    }
-
-    &.pricing {
-        label {
-            @apply font-normal;
-        }
-        .hs-button {
-            @apply w-full border-none text-white btn;
-            &:hover {
-                @apply bg-blue-500;
             }
         }
     }
