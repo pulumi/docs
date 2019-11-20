@@ -5,7 +5,7 @@ jobs:
     name: Update Live Preview
     runs-on: ubuntu-latest
     steps:
-    - uses: docker://joeduffy/pulumify
+    - uses: docker://pulumi/pulumify:v0.1.2
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
