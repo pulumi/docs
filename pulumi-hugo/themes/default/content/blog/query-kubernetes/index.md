@@ -1,6 +1,6 @@
 ---
 title: Introducing Pulumi Query
-authors: ["joe-duffy"]
+authors: ["alex-clemmer"]
 tags: ["Pulumi-News", "Kubernetes"]
 meta_desc: "Announcing Pulumi Pulumi Query, an SDK for programmatically querying cloud resources."
 date: "2019-11-20"
