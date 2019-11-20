@@ -98,7 +98,7 @@ scales down the old one.
 
 For streaming queries over multiple resources, we expose a `ResourceSet`, which is a convenience
 data structure that simplifies the code. `ResourceSet` observes a sequence of resource updates
-published by `watch`, and uses those updates to keep track of which resources currently exists. It
+published by `watch`, and uses those updates to keep track of which resources currently exist. It
 exposes an `onUpdate` function, which will run when this set is updated; i.e., whenever a resource
 is added, modified, or deleted from the set entirely.
 
