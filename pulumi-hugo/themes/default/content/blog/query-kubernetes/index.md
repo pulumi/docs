@@ -130,7 +130,7 @@ Deployment—when it's rolling out, when it's scaling down a ReplicaSet, and so 
 
 ## Conclusion
 
-Pulumi Query provides powerful primitives for introspecting on, and reacting to, changes in the state
+Pulumi Query provides powerful primitives for introspecting and reacting to changes in the state
 of Kubernetes resources. These primitives make it simpler to build tools that facilitate
 observability and helps to understand Kubernetes applications, and to integrate event-based systems
 in response to them.
