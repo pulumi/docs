@@ -32,6 +32,9 @@
 
         input, textarea {
             @apply border border-gray-300 rounded p-2 bg-white;
+            &:focus {
+                @apply outline-none shadow-outline;
+            }
         }
     }
 
@@ -86,6 +89,10 @@
             &.hs-button {
                 @apply block btn btn-lg btn border-none py-3 px-4 rounded-r rounded-l-none w-auto;
             }
+
+            &:focus {
+                @apply outline-none;
+            }
         }
     }
 
@@ -93,16 +100,10 @@
         label {
             @apply font-normal;
         }
-        input, textarea {
-            @apply appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight text-xl;
-            &:focus {
-                @apply outline-none shadow-input-outline;
-            }
-        }
         .hs-button {
-            @apply text-white btn-orange;
+            @apply w-full border-none text-white btn;
             &:hover {
-                @apply bg-orange-600 border-orange-700;
+                @apply bg-blue-500;
             }
         }
     }

@@ -86,10 +86,6 @@ module.exports = {
                     ...defaultTheme.fontFamily.sans,
                 ],
             },
-
-            boxShadow: {
-                "input-outline": "0 0 0 3px rgba(81, 38, 104, 0.5)"
-            },
         },
 
         colors: {
