@@ -2,25 +2,24 @@
 title: Introducing Pulumi Query
 authors: ["joe-duffy"]
 tags: ["Pulumi-News", "Kubernetes"]
-meta_desc: "Today we announced Pulumi Pulumi Query, an SDK for programmatically querying cloud resources."
-date: "2019-11-14"
+meta_desc: "Announcing Pulumi Pulumi Query, an SDK for programmatically querying cloud resources."
+date: "2019-11-20"
 meta_image: "pulumi-crosswalk-k8s.png"
 ---
 
-It is too hard to answer simple questions about Kubernetes resources. Questions like:
+We often need answers to simple questions about Kubernetes resources. Questions like:
 
 * How many distinct versions of MySQL are running in my cluster?
 * Which Pods are scheduled on nodes with high memory pressure?
 * Which Pods are publicly exposed to the internet via a load-balanced Service?
 
-Each of these questions would normally be answered by invoking `kubectl` multiple teams to list
+Each of these questions would normally be answered by invoking `kubectl` multiple times to list
 resources of each type, and manually parsing the output to join it together into a single report.
 
-Today, we're introducing Pulumi Query for Kubernetes, which aims to simplify scenarios like this.
+Examples like these motivated us to build Pulumi Query for Kubernetes, which aims to greatly simplify scenarios like the ones mentioned above.
 
 Pulumi Query is a tool and SDK for querying live Kubernetes resources. Pulumi Query supports both
-batch and streaming query modes. Batch queries run to completion, generating a fixed report. But
-streaming queries watch Kubernetes resources in real time, and to take action when specific events
+batch and streaming query modes. Batch queries run to completion, generating a fixed report. Streaming queries watch Kubernetes resources in real-time and take action when specific events
 occur. For example:
 
 * Post a slack notification when we run out of disk space.
@@ -99,7 +98,7 @@ scales down the old one.
 
 For streaming queries over multiple resources, we expose a `ResourceSet`, which is a convenience
 data structure that simplifies the code. `ResourceSet` observes a sequence of resource updates
-published by `watch`, and uses those updates to keep track of which resources currently exist. It
+published by `watch`, and uses those updates to keep track of which resources currently exists. It
 exposes an `onUpdate` function, which will run when this set is updated; i.e., whenever a resource
 is added, modified, or deleted from the set entirely.
 
@@ -126,13 +125,13 @@ new kq.ResourceSet([kq.watch("v1", "Event")]).onUpdate(([events]) => {
 ```
 
 Running this code with `pulumi query` results in an infinite stream of events telling us about this
-Deployment—when it's rolling out, when it's scaling down a ReplicaSet, and so on.
+Deployment, i.e. when it's rolling out, when it's scaling down a ReplicaSet, and so on.
 
 ## Conclusion
 
 Pulumi Query provides powerful primitives for introspecting and reacting to changes in the state
 of Kubernetes resources. These primitives make it simpler to build tools that facilitate
-observability and helps to understand Kubernetes applications, and to integrate event-based systems
+observability and helps to understand Kubernetes applications and to integrate event-based systems
 in response to them.
 
 One of our hopes for Pulumi Query is that by building these simple integrations that it will lead to a
