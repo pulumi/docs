@@ -20,7 +20,7 @@ Running Kubernetes in production can be challenging. However, there are common p
 ![Kubernetes has multiple audiences](cindy1.png)
 ![Kubernetes is complex](cindy2.png)
 
-Kubernetes is the platform for modern applications. Kubernetes usage has grown by 50% in just six months according to a [DZone article](https://dzone.com/articles/survey-reveals-rapid-growth-in-kubernetes-usage-se). There also a strong trend for public cloud container adoption shifting to [Kubernetes](https://www.tigera.io/blog/top-6-kubernetes-trends-for-2019/).
+Kubernetes is the platform for modern applications. Usage has grown by 50% in just six months according to a [DZone article](https://dzone.com/articles/survey-reveals-rapid-growth-in-kubernetes-usage-se). There also a strong trend for public cloud container adoption shifting to [Kubernetes](https://www.tigera.io/blog/top-6-kubernetes-trends-for-2019/).
 
 Rapid adoption of a complex platform such as Kubernetes presents challenges. For example, enterprise teams can take six to twelve months to on-ramp to Kubernetes, containers, and the cloud before their application goes into production. Once deployed, misconfigured infrastructure accounts for 40 to 50% of [production outages](https://danluu.com/postmortem-lessons/).
 
@@ -28,15 +28,22 @@ Managed Kubernetes clusters, such as AWS Elastic Kubernetes Services (EKS), Azur
 
 ## How Crosswalk for Kubernetes Is Organized
 
-We have been working with customers and open source users of our infrastructure as code tools for Kubernetes and we’ve seen several common patterns that we’ve distilled into six distinct playbooks realized as [stacks](https://www.pulumi.com/docs/intro/concepts/stack/).
+We have been working with customers and open source users of our infrastructure as code tools for Kubernetes and we’ve seen several common patterns that we’ve distilled into six distinct playbooks realized as [stacks](https://www.pulumi.com/docs/intro/concepts/stack/):
 
-![Managed Infrastructure](infrastructure_resources.svg)
+* Identity
+* Managed Infrastructure
+* Cluster Configuration
+* Cluster Services
+* Application Services
+* Applications
 
-### Identity 
+### Identity
 
 Establishing identities and roles for organizations and CI/CD is a requirement of every production. An identity stack contains identities and roles for the team and service accounts for CI/CD and bots that automate processes. Each cloud provider establishes identity in their own way and the guide provides instructions for [AWS IAM](https://aws.amazon.com/iam/), [GCP IAM](https://cloud.google.com/iam/), and [Azure AD](https://azure.microsoft.com/en-us/services/active-directory/). Example code is available for each cloud provider: [AWS Identity and Access Management](https://github.com/pulumi/kubernetes-guides/tree/master/aws/01-identity), [GCP Identity and Access Management](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/01-identity), [Azure Active Directory](https://github.com/pulumi/kubernetes-guides/tree/master/azure/01-identity).
 
 ### Managed Infrastructure
+
+![Managed Infrastructure](infrastructure_resources.svg)
 
 The current trend is to deploy infrastructure on a managed cloud provider. While there are benefits to using managed infrastructure, provisioning is still required to configure a cluster. At minimum this requires building networking infrastructure, storage backends and any number of resources such as CMS, registries, and data pipelines.’
 
