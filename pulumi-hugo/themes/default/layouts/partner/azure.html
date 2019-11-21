@@ -266,21 +266,5 @@ exports.publicIP = vm.id.apply(_ =>
 
     {{ partial "get-started.html" . }}
 
-    <section id="contact-us" class="bg-purple-500 mb-0 py-16 px-4 md:px-0 text-white">
-        <div class="container mx-auto max-w-5xl">
-            <div class="md:flex my-8 md:max-w-32 align-top">
-                <div class="md:w-1/2">
-                    <h2 class="text-white">Let Pulumi assist with your cloud infrastructure.</h2>
-                    <p>
-                        Need help with cloud-native infrastructure as code on Azure? Drop us a line.
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml-8">
-                    <div class="hs-form hs-form-fg-light">
-                        {{ partial "hubspot-form.html" (dict "hubspotFormID" "826f708b-53a9-4abc-9cb9-950f47362b72") }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{ partial "form-section" (dict "form" .Params.contact_us_form) }}
 {{ end }}

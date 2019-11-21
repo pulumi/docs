@@ -594,14 +594,7 @@
         </div>
     </section>
 
-    <section id="contact" class="py-16 bg-gray-200 px-4 lg:px-0">
-        <h2 class="text-center">Need help with plans and pricing?</h2>
-        <div class="mx-auto flex justify-center">
-            <div class="hs-form hs-form-fg-dark font-normal">
-                {{ partial "hubspot-form.html" (dict "hubspotFormID" "75e5573c-f1fc-4669-8c0a-3815a43f3d83" "classNames" "pricing") }}
-            </div>
-        </div>
-    </section>
+    {{ partial "form-section" (dict "form" .Params.form  )}}
 
     {{ partial "newsletter.html" . }}
 {{ end }}
