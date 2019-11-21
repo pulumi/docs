@@ -39,7 +39,7 @@ meta_desc: "Explore members of the s3 module in the @pulumi/awsx package."
 
 <h2 id="metrics" data-link-title="metrics">namespace <strong>metrics</strong></h2>
 <h3 class="pdoc-module-header" id="allRequests" data-link-title="allRequests">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L197">
         function <strong>allRequests</strong>
     </a>
 </h3>
@@ -57,7 +57,7 @@ Units: Count
 Valid statistics: Sum
 
 <h3 class="pdoc-module-header" id="bucketSizeBytes" data-link-title="bucketSizeBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L170">
         function <strong>bucketSizeBytes</strong>
     </a>
 </h3>
@@ -78,7 +78,7 @@ Units: Bytes
 Valid statistics: Average
 
 <h3 class="pdoc-module-header" id="bytesDownloaded" data-link-title="bytesDownloaded">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L320">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L320">
         function <strong>bytesDownloaded</strong>
     </a>
 </h3>
@@ -95,7 +95,7 @@ Units: Bytes
 Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Count, Min, Max
 
 <h3 class="pdoc-module-header" id="bytesUploaded" data-link-title="bytesUploaded">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L331">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L331">
         function <strong>bytesUploaded</strong>
     </a>
 </h3>
@@ -111,7 +111,7 @@ Units: Bytes
 Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Count, Min, Max
 
 <h3 class="pdoc-module-header" id="deleteRequests" data-link-title="deleteRequests">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L236">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L236">
         function <strong>deleteRequests</strong>
     </a>
 </h3>
@@ -129,7 +129,7 @@ Units: Count
 Valid statistics: Sum
 
 <h3 class="pdoc-module-header" id="errors4xx" data-link-title="errors4xx">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L345">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L345">
         function <strong>errors4xx</strong>
     </a>
 </h3>
@@ -148,7 +148,7 @@ Valid statistics: Average (reports per request), Sum (reports per period), Min, 
 Count
 
 <h3 class="pdoc-module-header" id="errors5xx" data-link-title="errors5xx">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L359">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L359">
         function <strong>errors5xx</strong>
     </a>
 </h3>
@@ -167,7 +167,7 @@ Valid statistics: Average (reports per request), Sum (reports per period), Min, 
 Count
 
 <h3 class="pdoc-module-header" id="firstByteLatency" data-link-title="firstByteLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L371">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L371">
         function <strong>firstByteLatency</strong>
     </a>
 </h3>
@@ -184,7 +184,7 @@ Units: Milliseconds
 Valid statistics: Average, Sum, Min, Max, Sample Count
 
 <h3 class="pdoc-module-header" id="getRequests" data-link-title="getRequests">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L212">
         function <strong>getRequests</strong>
     </a>
 </h3>
@@ -204,7 +204,7 @@ Units: Count
 Valid statistics: Sum
 
 <h3 class="pdoc-module-header" id="headRequests" data-link-title="headRequests">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L247">
         function <strong>headRequests</strong>
     </a>
 </h3>
@@ -220,7 +220,7 @@ Units: Count
 Valid statistics: Sum
 
 <h3 class="pdoc-module-header" id="listRequests" data-link-title="listRequests">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L308">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L308">
         function <strong>listRequests</strong>
     </a>
 </h3>
@@ -236,7 +236,7 @@ Units: Count
 Valid statistics: Sum
 
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L137">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -307,7 +307,7 @@ The following dimensions are used to filter Amazon S3 metrics:
    [Metrics-Configurations-for-Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html).
 
 <h3 class="pdoc-module-header" id="numberOfObjects" data-link-title="numberOfObjects">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L184">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L184">
         function <strong>numberOfObjects</strong>
     </a>
 </h3>
@@ -326,7 +326,7 @@ Units: Count
 Valid statistics: Average
 
 <h3 class="pdoc-module-header" id="postRequests" data-link-title="postRequests">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L261">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L261">
         function <strong>postRequests</strong>
     </a>
 </h3>
@@ -345,7 +345,7 @@ Units: Count
 Valid statistics: Sum
 
 <h3 class="pdoc-module-header" id="putRequests" data-link-title="putRequests">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L223">
         function <strong>putRequests</strong>
     </a>
 </h3>
@@ -361,14 +361,14 @@ Units: Count
 Valid statistics: Sum
 
 <h3 class="pdoc-module-header" id="S3MetricChange" data-link-title="S3MetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L29">
         interface <strong>S3MetricChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>S3MetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="S3MetricChange-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L33">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L33">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket'>aws.s3.Bucket</a>;</code></pre>
@@ -376,7 +376,7 @@ Valid statistics: Sum
 Optional bucket to filter metrics down to.
 
 <h4 class="pdoc-member-header" id="S3MetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="S3MetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -396,7 +396,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="S3MetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -406,7 +406,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="S3MetricChange-filterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L72">property <b>filterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L72">property <b>filterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -417,7 +417,7 @@ configuration. For more information, see
 [Metrics-Configurations-for-Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html).
 
 <h4 class="pdoc-member-header" id="S3MetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -429,7 +429,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="S3MetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -439,7 +439,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="S3MetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -449,7 +449,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="S3MetricChange-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L62">property <b>storageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L62">property <b>storageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageType?: <span class='s2'>"StandardStorage"</span> | <span class='s2'>"IntelligentTieringFAStorage"</span> | <span class='s2'>"IntelligentTieringIAStorage"</span> | <span class='s2'>"StandardIAStorage"</span> | <span class='s2'>"StandardIAStorage"</span> | <span class='s2'>"StandardIASizeOverhead"</span> | <span class='s2'>"OneZoneIAStorage"</span> | <span class='s2'>"OneZoneIASizeOverhead"</span> | <span class='s2'>"ReducedRedundancyStorage"</span> | <span class='s2'>"GlacierStorage"</span> | <span class='s2'>"GlacierStorageOverhead"</span>;</code></pre>
@@ -481,7 +481,7 @@ of storage:
   restore your object. You are charged Glacier rates for this additional storage.
 
 <h4 class="pdoc-member-header" id="S3MetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -491,7 +491,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="S3MetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="S3MetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -512,14 +512,14 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="S3MetricName" data-link-title="S3MetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L21">
         type <strong>S3MetricName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> S3MetricName = <span class='s2'>"BucketSizeBytes"</span> | <span class='s2'>"NumberOfObjects"</span> | <span class='s2'>"AllRequests"</span> | <span class='s2'>"GetRequests"</span> | <span class='s2'>"PutRequests"</span> | <span class='s2'>"DeleteRequests"</span> | <span class='s2'>"HeadRequests"</span> | <span class='s2'>"PostRequests"</span> | <span class='s2'>"SelectRequests"</span> | <span class='s2'>"SelectScannedBytes"</span> | <span class='s2'>"SelectReturnedBytes"</span> | <span class='s2'>"ListRequests"</span> | <span class='s2'>"BytesDownloaded"</span> | <span class='s2'>"BytesUploaded"</span> | <span class='s2'>"4xxErrors"</span> | <span class='s2'>"5xxErrors"</span> | <span class='s2'>"FirstByteLatency"</span> | <span class='s2'>"TotalRequestLatency"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="selectRequests" data-link-title="selectRequests">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L273">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L273">
         function <strong>selectRequests</strong>
     </a>
 </h3>
@@ -536,7 +536,7 @@ Units: Count
 Valid statistics: Sum
 
 <h3 class="pdoc-module-header" id="selectReturnedBytes" data-link-title="selectReturnedBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L297">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L297">
         function <strong>selectReturnedBytes</strong>
     </a>
 </h3>
@@ -553,7 +553,7 @@ Units: Bytes
 Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Count, Min, Max
 
 <h3 class="pdoc-module-header" id="selectScannedBytes" data-link-title="selectScannedBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L285">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L285">
         function <strong>selectScannedBytes</strong>
     </a>
 </h3>
@@ -570,7 +570,7 @@ Units: Bytes
 Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Count, Min, Max
 
 <h3 class="pdoc-module-header" id="totalRequestLatency" data-link-title="totalRequestLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/cd450ace3f3845bb2eb110e6cd6eb2f91ae46c57/nodejs/awsx/s3/metrics.ts#L384">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/s3/metrics.ts#L384">
         function <strong>totalRequestLatency</strong>
     </a>
 </h3>
