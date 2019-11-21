@@ -32,11 +32,17 @@
 
         input, textarea {
             @apply border border-gray-300 rounded p-2 bg-white;
+            &:focus {
+                @apply outline-none shadow-outline;
+            }
         }
     }
 
     input[type="submit"] {
-        @apply btn btn-orange-translucent;
+        @apply w-full border-none text-white btn;
+        &:hover {
+            @apply bg-blue-500;
+        }
     }
 
     .hs-error-msgs {
@@ -86,12 +92,10 @@
             &.hs-button {
                 @apply block btn btn-lg btn border-none py-3 px-4 rounded-r rounded-l-none w-auto;
             }
-        }
-    }
 
-    &.pricing {
-        label {
-            @apply font-normal;
+            &:focus {
+                @apply outline-none;
+            }
         }
     }
 }
