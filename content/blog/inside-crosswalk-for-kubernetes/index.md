@@ -1,6 +1,6 @@
 ---
 title: "Inside Crosswalk for Kubernetes"
-date: 2019-11-18
+date: 2019-11-21
 draft: true
 meta_desc: "Introduction and tour of Crosswalk for Kubernetes"
 meta_image: "meta.png"
@@ -28,7 +28,7 @@ Managed Kubernetes clusters, such as AWS Elastic Kubernetes Services (EKS), Azur
 
 ## How Crosswalk for Kubernetes Is Organized
 
-Over the course of a year, the Pulumi team has been working with customers and open source users of our infrastructure as code tools for Kubernetes. What we’ve seen are common patterns that we’ve distilled into six distinct playbooks realized as [stacks](https://www.pulumi.com/docs/intro/concepts/stack/).
+We have been working with customers and open source users of our infrastructure as code tools for Kubernetes and we’ve seen several common patterns that we’ve distilled into six distinct playbooks realized as [stacks](https://www.pulumi.com/docs/intro/concepts/stack/).
 
 ![Managed Infrastructure](infrastructure_resources.svg)
 
@@ -40,7 +40,7 @@ Establishing identities and roles for organizations and CI/CD is a requirement o
 
 The current trend is to deploy infrastructure on a managed cloud provider. While there are benefits to using managed infrastructure, provisioning is still required to configure a cluster. At minimum this requires building networking infrastructure, storage backends and any number of resources such as CMS, registries, and data pipelines.’
 
-Crosswalk for Kubernetes covers in detail two of the most common tasks: configuring networking and storage. Kubernetes will typically use private subnets for load balances, private subnets for workers and managed Pod networking. Another requirement of Kubernetes is storage which provides data persistence through either shared storage and or volumes for Pods. There are many types of volumes and they vary from cloud provider but can generally be divided into mechanical drives and SSDs and network backed storage such as CephFS or NFS.
+Crosswalk for Kubernetes covers two of the most common tasks, configuring networking and provisioning storage, in detail. Kubernetes will typically use private subnets for load balances, private subnets for workers and managed Pod networking. Another requirement of Kubernetes is storage which provides data persistence through either shared storage and or volumes for Pods. There are many types of volumes and they vary from cloud provider but can generally be divided into mechanical drives and SSDs and network backed storage such as CephFS or NFS.
 
 The guide provides [instructions](https://www.pulumi.com/docs/guides/crosswalk/kubernetes/control-plane/#managed-infrastructure) and full code examples to implement managed infrastructure stacks for both networking for [AWS](https://github.com/pulumi/kubernetes-guides/tree/master/aws/02-managed-infra), [Azure](https://github.com/pulumi/kubernetes-guides/tree/master/azure/02-managed-infra), and [GCP](https://github.com/pulumi/kubernetes-guides/tree/master/gcp/02-managed-infra). 
 
