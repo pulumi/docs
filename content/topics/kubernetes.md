@@ -260,7 +260,7 @@ contact_us_form:
     hubspot_form_id: 212ce93d-e081-4998-b14b-f26a974da4fb
     headline: Need help with Kubernetes?
     quote:
-        title: Lean how top engineering teams are using Pulumi to manage and provision Kubernetes clusters in any cloud.
+        title: Learn how top engineering teams are using Pulumi to manage and provision Kubernetes clusters in any cloud.
         name: Harrison Heck
         name_title: Head of DevOps, Linio
         content: |

@@ -9,7 +9,7 @@ contact_us_form:
     hubspot_form_id: 3eee19cc-77d0-440a-85d9-8979e775b4e5
     headline: Need help with cloud-native infrastructure as code on GCP?
     quote:
-        title: Lean how top engineering teams are using Pulumi's SDK helps create, deploy, and manage GCP resources.
+        title: Learn how top engineering teams are using Pulumi's SDK to create, deploy, and manage GCP resources.
         name: Josh Imhoff
         name_title: Site Reliability Engineer, Cockroach Labs
         content: |

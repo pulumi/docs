@@ -9,7 +9,7 @@ contact_us_form:
     hubspot_form_id: 826f708b-53a9-4abc-9cb9-950f47362b72
     headline: Need help with cloud-native infrastructure as code on Azure?
     quote:
-        title: Lean how top engineering teams are using Pulumi's SDK helps create, deploy, and manage Azure resources.
+        title: Learn how top engineering teams are using Pulumi's SDK to create, deploy, and manage Azure resources.
         name: Josh Imhoff
         name_title: Site Reliability Engineer, Cockroach Labs
         content: |

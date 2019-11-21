@@ -229,7 +229,7 @@ contact_us_form:
     hubspot_form_id: abf0bd4b-5e71-44a9-aad1-b55b5cce561d
     headline: Need help with container management?
     quote:
-        title: Lean how top engineering teams are using Pulumi to manage containers in any cloud.
+        title: Learn how top engineering teams are using Pulumi to manage containers in any cloud.
         name: Josh Imhoff
         name_title: Site Reliability Engineer, Cockroach Labs
         content: |

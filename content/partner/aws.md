@@ -9,7 +9,7 @@ contact_us_form:
     hubspot_form_id: 8a0e0f30-b43e-468e-98cc-6b5d481e8660
     headline: Need help with cloud-native infrastructure as code on AWS?
     quote:
-        title: Lean how top engineering teams are using Pulumi's SDK helps create, deploy, and manage AWS resources.
+        title: Learn how top engineering teams are using Pulumi's SDK to create, deploy, and manage AWS resources.
         name: Josh Imhoff
         name_title: Site Reliability Engineer, Cockroach Labs
         content: |
