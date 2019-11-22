@@ -1,7 +1,7 @@
 ---
 title: "Inside Crosswalk for Kubernetes"
 date: 2019-11-21
-draft: true
+draft: false
 meta_desc: "Introduction and tour of Crosswalk for Kubernetes"
 meta_image: "meta.png"
 authors:
