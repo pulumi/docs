@@ -1,13 +1,13 @@
 ---
-title: Core Concepts (Preview)
+title: Core Concepts
 linktitle: Core Concepts
-weight: 4
+
 menu:
-  getstarted:
-    parent: pac
-    identifier: pac-core-concepts
+  userguides:
+    parent: crossguard
+    identifier: crossguard-core-concepts
 ---
-{{% pac-preview %}}
+{{% crossguard-preview %}}
 
 ## Policy
 
