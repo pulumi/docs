@@ -252,21 +252,21 @@ More complex widget customization is possible.  See the invidual types and argum
 
 <h2 id="metrics.events" data-link-title="metrics.events">namespace <strong>metrics.events</strong></h2>
 <h3 class="pdoc-module-header" id="CloudWatchEventMetricName" data-link-title="CloudWatchEventMetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L22">
         type <strong>CloudWatchEventMetricName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> CloudWatchEventMetricName = <span class='s2'>"DeadLetterInvocations"</span> | <span class='s2'>"Invocations"</span> | <span class='s2'>"FailedInvocations"</span> | <span class='s2'>"TriggeredRules"</span> | <span class='s2'>"MatchedEvents"</span> | <span class='s2'>"ThrottledRules"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchMetricChange" data-link-title="CloudWatchMetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L26">
         interface <strong>CloudWatchMetricChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CloudWatchMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -276,7 +276,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -286,7 +286,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-eventRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L30">property <b>eventRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L30">property <b>eventRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventRule?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventRule'>aws.cloudwatch.EventRule</a>;</code></pre>
@@ -294,7 +294,7 @@ cleared.
 Filters down events to those from the specified [EventRule].
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -326,7 +326,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -336,7 +336,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -346,7 +346,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -357,7 +357,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -367,7 +367,7 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="deadLetterInvocations" data-link-title="deadLetterInvocations">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L70">
         function <strong>deadLetterInvocations</strong>
     </a>
 </h3>
@@ -384,7 +384,7 @@ Valid Dimensions: RuleName
 Units: Count
 
 <h3 class="pdoc-module-header" id="failedInvocations" data-link-title="failedInvocations">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L96">
         function <strong>failedInvocations</strong>
     </a>
 </h3>
@@ -401,7 +401,7 @@ Valid Dimensions: RuleName
 Units: Count
 
 <h3 class="pdoc-module-header" id="invocations" data-link-title="invocations">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L84">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L84">
         function <strong>invocations</strong>
     </a>
 </h3>
@@ -420,7 +420,7 @@ Valid Dimensions: RuleName
 Units: Count
 
 <h3 class="pdoc-module-header" id="matchedEvents" data-link-title="matchedEvents">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L116">
         function <strong>matchedEvents</strong>
     </a>
 </h3>
@@ -435,7 +435,7 @@ Valid Dimensions: None
 Units: Count
 
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L49">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -460,7 +460,7 @@ CloudWatch Events metrics have one dimension:
 1. "RuleName": Filters the available metrics by rule name.
 
 <h3 class="pdoc-module-header" id="throttledRules" data-link-title="throttledRules">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L126">
         function <strong>throttledRules</strong>
     </a>
 </h3>
@@ -475,7 +475,7 @@ Valid Dimensions: RuleName
 Units: Count
 
 <h3 class="pdoc-module-header" id="triggeredRules" data-link-title="triggeredRules">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L106">
         function <strong>triggeredRules</strong>
     </a>
 </h3>
@@ -491,21 +491,21 @@ Units: Count
 
 <h2 id="metrics.logs" data-link-title="metrics.logs">namespace <strong>metrics.logs</strong></h2>
 <h3 class="pdoc-module-header" id="CloudWatchLogMetricName" data-link-title="CloudWatchLogMetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L132">
         type <strong>CloudWatchLogMetricName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> CloudWatchLogMetricName = <span class='s2'>"IncomingBytes"</span> | <span class='s2'>"IncomingLogEvents"</span> | <span class='s2'>"ForwardedBytes"</span> | <span class='s2'>"ForwardedLogEvents"</span> | <span class='s2'>"DeliveryErrors"</span> | <span class='s2'>"DeliveryThrottling"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CloudWatchMetricChange" data-link-title="CloudWatchMetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L136">
         interface <strong>CloudWatchMetricChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CloudWatchMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -515,7 +515,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-destinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L146">property <b>destinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L146">property <b>destinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -524,7 +524,7 @@ The subscription destination for the CloudWatch Logs data, which can be AWS Lamb
 Amazon Kinesis Data Streams, or Amazon Kinesis Data Firehose.
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -534,7 +534,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -544,7 +544,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-filterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L153">property <b>filterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L153">property <b>filterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -554,7 +554,7 @@ destination. The subscription filter name is automatically converted by CloudWat
 ASCII and any unsupported characters get replaced with a question mark (?).
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L140">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L140">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#LogGroup'>aws.cloudwatch.LogGroup</a>;</code></pre>
@@ -574,7 +574,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 Filters down events to those from the specified [LogGroup].
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -584,7 +584,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -594,7 +594,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -604,7 +604,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -615,7 +615,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="CloudWatchMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -625,7 +625,7 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="deliveryErrors" data-link-title="deliveryErrors">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L248">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L248">
         function <strong>deliveryErrors</strong>
     </a>
 </h3>
@@ -642,7 +642,7 @@ Valid Statistic: Sum
 Units: None
 
 <h3 class="pdoc-module-header" id="deliveryThrottling" data-link-title="deliveryThrottling">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L260">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L260">
         function <strong>deliveryThrottling</strong>
     </a>
 </h3>
@@ -659,7 +659,7 @@ Valid Statistic: Sum
 Units: None
 
 <h3 class="pdoc-module-header" id="forwardedBytes" data-link-title="forwardedBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L225">
         function <strong>forwardedBytes</strong>
     </a>
 </h3>
@@ -675,7 +675,7 @@ Valid Statistic: Sum
 Units: Bytes
 
 <h3 class="pdoc-module-header" id="forwardedLogEvents" data-link-title="forwardedLogEvents">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L236">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L236">
         function <strong>forwardedLogEvents</strong>
     </a>
 </h3>
@@ -691,7 +691,7 @@ Valid Statistic: Sum
 Units: None
 
 <h3 class="pdoc-module-header" id="incomingBytes" data-link-title="incomingBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L202">
         function <strong>incomingBytes</strong>
     </a>
 </h3>
@@ -709,7 +709,7 @@ Valid Statistic: Sum
 Units: Bytes
 
 <h3 class="pdoc-module-header" id="incomingLogEvents" data-link-title="incomingLogEvents">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L214">
         function <strong>incomingLogEvents</strong>
     </a>
 </h3>
@@ -726,7 +726,7 @@ Valid Statistic: Sum
 Units: None
 
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metrics.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metrics.ts#L174">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -757,7 +757,7 @@ The dimensions that you can use with CloudWatch Logs metrics are:
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="AlarmAnnotation" data-link-title="AlarmAnnotation">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L35">
         class <strong>AlarmAnnotation</strong>
     </a>
 </h3>
@@ -768,14 +768,14 @@ Adds an alarm annotation to a [MetricWidget], allowing a metric alarm to be disp
 Dashboard.
 
 <h4 class="pdoc-member-header" id="AlarmAnnotation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L35"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L35"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> AlarmAnnotation(alarmArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;)</code></pre>
 
 <h4 class="pdoc-member-header" id="AlarmAnnotation-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L40">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L40">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -785,14 +785,14 @@ Dashboard.
 For internal use only.
 
 <h3 class="pdoc-module-header" id="AlarmArgs" data-link-title="AlarmArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L473">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L473">
         interface <strong>AlarmArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AlarmArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="AlarmArgs-actionsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L478">property <b>actionsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L478">property <b>actionsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -801,7 +801,7 @@ Indicates whether or not actions should be executed during any changes to the al
 Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-alarmActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L483">property <b>alarmActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L483">property <b>alarmActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic'>aws.sns.Topic</a>&gt;[]&gt;;</code></pre>
@@ -810,7 +810,7 @@ The list of actions to execute when this alarm transitions into an ALARM state f
 state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="AlarmArgs-alarmDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L487">property <b>alarmDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L487">property <b>alarmDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -818,7 +818,7 @@ state. Each action is specified as an Amazon Resource Name (ARN).
 The description for the alarm.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-comparisonOperator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L500">property <b>comparisonOperator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L500">property <b>comparisonOperator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comparisonOperator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlarmComparisonOperator'>AlarmComparisonOperator</a>&gt;;</code></pre>
@@ -831,7 +831,7 @@ specified Statistic value is used as the first operand. Either of the following 
 Defaults to [GreaterThanOrEqualToThreshold] if unspecified.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-datapointsToAlarm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L504">property <b>datapointsToAlarm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L504">property <b>datapointsToAlarm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datapointsToAlarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -839,7 +839,7 @@ Defaults to [GreaterThanOrEqualToThreshold] if unspecified.
 The number of datapoints that must be breaching to trigger the alarm.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-evaluateLowSampleCountPercentiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L512">property <b>evaluateLowSampleCountPercentiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L512">property <b>evaluateLowSampleCountPercentiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluateLowSampleCountPercentiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ignore"</span> | <span class='s2'>"evaluate"</span>&gt;;</code></pre>
@@ -851,7 +851,7 @@ change state no matter how many data points are available. The following values 
 supported: `ignore`, and `evaluate`.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L516">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L516">property <b>evaluationPeriods</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationPeriods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -859,7 +859,7 @@ supported: `ignore`, and `evaluate`.
 The number of periods over which data is compared to the specified threshold.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L521">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L521">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -868,7 +868,7 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 p0.0 and p100.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-insufficientDataActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L526">property <b>insufficientDataActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L526">property <b>insufficientDataActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insufficientDataActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic'>aws.sns.Topic</a>&gt;[]&gt;;</code></pre>
@@ -877,7 +877,7 @@ The list of actions to execute when this alarm transitions into an INSUFFICIENT_
 from any other state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="AlarmArgs-metricQueries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L530">property <b>metricQueries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L530">property <b>metricQueries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricQueries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -898,7 +898,7 @@ from any other state. Each action is specified as an Amazon Resource Name (ARN).
 Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L491">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L491">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -906,7 +906,7 @@ Enables you to create an alarm based on a metric math expression. You may specif
 The descriptive name for the alarm. This name must be unique within the user's AWS account
 
 <h4 class="pdoc-member-header" id="AlarmArgs-okActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L535">property <b>okActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L535">property <b>okActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>okActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic'>aws.sns.Topic</a>&gt;[]&gt;;</code></pre>
@@ -915,7 +915,7 @@ The list of actions to execute when this alarm transitions into an OK state from
 state. Each action is specified as an Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="AlarmArgs-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L539">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L539">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -923,7 +923,7 @@ state. Each action is specified as an Amazon Resource Name (ARN).
 The value against which the specified statistic is compared.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-treatMissingData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L544">property <b>treatMissingData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L544">property <b>treatMissingData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>treatMissingData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"missing"</span> | <span class='s2'>"ignore"</span> | <span class='s2'>"breaching"</span> | <span class='s2'>"notBreaching"</span>&gt;;</code></pre>
@@ -932,14 +932,14 @@ Sets how this alarm is to handle missing data points. The following values are s
 `missing`, `ignore`, `breaching` and `notBreaching`. Defaults to `missing`.
 
 <h3 class="pdoc-module-header" id="AlarmComparisonOperator" data-link-title="AlarmComparisonOperator">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L469">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L469">
         type <strong>AlarmComparisonOperator</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> AlarmComparisonOperator = <span class='s2'>"GreaterThanOrEqualToThreshold"</span> | <span class='s2'>"GreaterThanThreshold"</span> | <span class='s2'>"LessThanThreshold"</span> | <span class='s2'>"LessThanOrEqualToThreshold"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ColumnWidget" data-link-title="ColumnWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L97">
         class <strong>ColumnWidget</strong>
     </a>
 </h3>
@@ -953,21 +953,21 @@ The final width of this widget will be the width of the largest item in the colu
 height of this widget will be the sum of all the heights of all the widgets in the column.
 
 <h4 class="pdoc-member-header" id="ColumnWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ColumnWidget(widgets: <a href='#Widget'>Widget</a>[])</code></pre>
 
 <h4 class="pdoc-member-header" id="ColumnWidget-addWidget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L42">method <b>addWidget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L42">method <b>addWidget</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>addWidget(widget: <a href='#Widget'>Widget</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ColumnWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L80">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L80">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -977,33 +977,33 @@ height of this widget will be the sum of all the heights of all the widgets in t
 For internal use only.
 
 <h4 class="pdoc-member-header" id="ColumnWidget-getWidgetRelativePositions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L102">method <b>getWidgetRelativePositions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L102">method <b>getWidgetRelativePositions</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, <a href='#WidgetRelativePosition'>WidgetRelativePosition</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ColumnWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L66">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L66">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ColumnWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L53">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L53">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ColumnWidget-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L34">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L34">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>protected </span>widgets: <a href='#Widget'>Widget</a>[] =  [];</code></pre>
 <h3 class="pdoc-module-header" id="Dashboard" data-link-title="Dashboard">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L85">
         class <strong>Dashboard</strong>
     </a>
 </h3>
@@ -1019,7 +1019,7 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dash
 for more details.
 
 <h4 class="pdoc-member-header" id="Dashboard-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -1031,7 +1031,7 @@ then these will be treated as a sequence of rows to add to the grid.  Otherwise,
 be treated as a single row to add to the grid.
 
 <h4 class="pdoc-member-header" id="Dashboard-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L85">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L85">method <b>get</b></a>
 </h4>
 
 
@@ -1042,14 +1042,14 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Dashboard-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L85">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L85">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Dashboard-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L85">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1060,7 +1060,7 @@ Returns true if the given object is an instance of Dashboard.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L85">property <b>dashboardArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L85">property <b>dashboardArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1068,7 +1068,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L85">property <b>dashboardBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L85">property <b>dashboardBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1076,7 +1076,7 @@ The Amazon Resource Name (ARN) of the dashboard.
 The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L85">property <b>dashboardName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L85">property <b>dashboardName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1084,7 +1084,7 @@ The detailed information about the dashboard, including what widgets are include
 The name of the dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1093,7 +1093,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Dashboard-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L89">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L89">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1101,7 +1101,7 @@ deployments and may be missing (undefined) during planning phases.
 The url this [Dashboard] is published at.
 
 <h4 class="pdoc-member-header" id="Dashboard-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L85">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L85">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1110,14 +1110,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DashboardArgs" data-link-title="DashboardArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L24">
         interface <strong>DashboardArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DashboardArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="DashboardArgs-end">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L42">property <b>end</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L42">property <b>end</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>end?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1128,7 +1128,7 @@ values, specify an absolute time in the ISO 8601 format. For example,
 2018-12-17T06:00:00.000Z.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L28">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L28">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1136,7 +1136,7 @@ values, specify an absolute time in the ISO 8601 format. For example,
 The name of the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-periodOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L66">property <b>periodOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L66">property <b>periodOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>periodOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"auto"</span> | <span class='s2'>"inherit"</span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ the dashboard. Specifying inherit ensures that the period set for each graph is 
 obeyed.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L34">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L34">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;;</code></pre>
@@ -1156,7 +1156,7 @@ The region that widgets can say they're associated with.  If not provided, the r
 inferred by whatever provider the [Dashboard] ends up using.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-start">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L58">property <b>start</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L58">property <b>start</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>start?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1175,7 +1175,7 @@ specifying an absolute time range, use the ISO 8601 format. For example,
 If you omit start, the dashboard shows the default time range when it loads.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/dashboard.ts#L73">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/dashboard.ts#L73">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>widgets?: <a href='#Widget'>Widget</a>[];</code></pre>
@@ -1185,7 +1185,7 @@ this will be treated as a sequence of rows.  If not, then this will be treated a
 of widgets to make a single row out of.
 
 <h3 class="pdoc-module-header" id="ExpressionWidgetMetric" data-link-title="ExpressionWidgetMetric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L332">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L332">
         class <strong>ExpressionWidgetMetric</strong>
     </a>
 </h3>
@@ -1199,7 +1199,7 @@ https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-search-expr
 more details.
 
 <h4 class="pdoc-member-header" id="ExpressionWidgetMetric-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L332"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L332"> <b>constructor</b></a>
 </h4>
 
 
@@ -1210,7 +1210,7 @@ more details.
 * `id` The id of this time series. This id can be used as part of a math expression.
 
 <h4 class="pdoc-member-header" id="ExpressionWidgetMetric-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L344">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L344">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -1220,7 +1220,7 @@ more details.
 For internal use only.
 
 <h3 class="pdoc-module-header" id="FlowWidget" data-link-title="FlowWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L33">
         class <strong>FlowWidget</strong>
     </a>
 </h3>
@@ -1232,21 +1232,21 @@ must wrap after 24 grid columns.  There is no effective vertical limit on widget
 vertically.
 
 <h4 class="pdoc-member-header" id="FlowWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L34"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L34"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> FlowWidget(widgets: <a href='#Widget'>Widget</a>[])</code></pre>
 
 <h4 class="pdoc-member-header" id="FlowWidget-addWidget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L42">method <b>addWidget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L42">method <b>addWidget</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>addWidget(widget: <a href='#Widget'>Widget</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FlowWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L80">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L80">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -1256,7 +1256,7 @@ vertically.
 For internal use only.
 
 <h4 class="pdoc-member-header" id="FlowWidget-getWidgetRelativePositions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L51">method <b>getWidgetRelativePositions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L51">method <b>getWidgetRelativePositions</b></a>
 </h4>
 
 
@@ -1268,26 +1268,26 @@ Position' tells us where the widget should be placed relative to the upper-left 
 FlowWidget.
 
 <h4 class="pdoc-member-header" id="FlowWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L66">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L66">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FlowWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L53">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L53">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FlowWidget-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L34">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L34">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>protected </span>widgets: <a href='#Widget'>Widget</a>[] =  [];</code></pre>
 <h3 class="pdoc-module-header" id="GraphMetricWidget" data-link-title="GraphMetricWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L52">
         class <strong>GraphMetricWidget</strong>
     </a>
 </h3>
@@ -1300,14 +1300,14 @@ See https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/graph_metrics
 details.
 
 <h4 class="pdoc-member-header" id="GraphMetricWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L52"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L52"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> GraphMetricWidget(graphArgs: <a href='#GraphMetricWidgetArgs'>GraphMetricWidgetArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="GraphMetricWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -1317,63 +1317,63 @@ details.
 For internal use only.
 
 <h4 class="pdoc-member-header" id="GraphMetricWidget-computeProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L253">method <b>computeProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L253">method <b>computeProperties</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): MetricWidgetPropertiesJson | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;MetricWidgetPropertiesJson&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;MetricWidgetPropertiesJson&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="GraphMetricWidget-computeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L251">method <b>computeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L251">method <b>computeType</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='s2'>"metric"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="GraphMetricWidget-computeView">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L57">method <b>computeView</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L57">method <b>computeView</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeView(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="GraphMetricWidget-computeYAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L58">method <b>computeYAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L58">method <b>computeYAxis</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeYAxis(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#YAxis'>YAxis</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#YAxis'>YAxis</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#YAxis'>YAxis</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="GraphMetricWidget-computedStacked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L248">method <b>computedStacked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L248">method <b>computedStacked</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computedStacked(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="GraphMetricWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GraphMetricWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GraphMetricWidgetArgs" data-link-title="GraphMetricWidgetArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L22">
         interface <strong>GraphMetricWidgetArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GraphMetricWidgetArgs</span> <span class='kr'>extends</span> <a href='#MetricWidgetArgs'>MetricWidgetArgs</a></code></pre>
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-alarm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L159">property <b>alarm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L159">property <b>alarm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='#WidgetAlarm'>WidgetAlarm</a>;</code></pre>
@@ -1384,7 +1384,7 @@ graphs to show the trigger point of an alarm, then add the alarm to [annotations
 At least one of [alarm], [annotations] or [metrics] must be supplied.
 
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L173">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L173">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='#WidgetAnnotation'>WidgetAnnotation</a> | <a href='#WidgetAnnotation'>WidgetAnnotation</a>[];</code></pre>
@@ -1401,7 +1401,7 @@ Instances of this interface include [aws.cloudwatch.Alarm], [AlarmAnnotation],
 At least one of [alarm], [annotations] or [metrics] must be supplied.
 
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L211">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L211">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1410,7 +1410,7 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 [0.0] and [100].
 
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L41">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L41">property <b>height</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>height?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1420,7 +1420,7 @@ The height of the widget in grid units. The default is 6.
 Valid Values: 1–1000
 
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-metrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L184">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L184">property <b>metrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metrics?: <a href='#WidgetMetric'>WidgetMetric</a> | <a href='#WidgetMetric'>WidgetMetric</a>[];</code></pre>
@@ -1434,7 +1434,7 @@ array.
 At least one of [alarm], [annotations] or [metrics] must be supplied.
 
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L194">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L194">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1444,7 +1444,7 @@ time represented by one data point on the graph. This default can be overridden 
 metric definition. The default is 300.
 
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L199">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L199">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;;</code></pre>
@@ -1452,7 +1452,7 @@ metric definition. The default is 300.
 The region of the metric.  Defaults to the region of the stack if not specified.
 
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L205">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L205">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -1461,7 +1461,7 @@ The default statistic to be displayed for each metric in the array. This default
 overridden within the definition of each individual metric in the metrics array.
 
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L187">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L187">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1469,7 +1469,7 @@ overridden within the definition of each individual metric in the metrics array.
 The title to be displayed for the graph or number.
 
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L34">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L34">property <b>width</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>width?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1479,7 +1479,7 @@ The width of the widget in grid units (in a 24-column grid). The default is 6.
 Valid Values: 1–24
 
 <h4 class="pdoc-member-header" id="GraphMetricWidgetArgs-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L27">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L27">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#YAxis'>YAxis</a>&gt;;</code></pre>
@@ -1488,24 +1488,24 @@ Limits for the minimums and maximums of the y-axis.  This applies to every metri
 graphed, unless specific metrics override it.
 
 <h3 class="pdoc-module-header" id="HorizontalAlarmAnnotationArgs" data-link-title="HorizontalAlarmAnnotationArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L49">
         interface <strong>HorizontalAlarmAnnotationArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>HorizontalAlarmAnnotationArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="HorizontalAlarmAnnotationArgs-alarmDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L50">property <b>alarmDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L50">property <b>alarmDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="HorizontalAlarmAnnotationArgs-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L51">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L51">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="HorizontalAnnotation" data-link-title="HorizontalAnnotation">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L122">
         class <strong>HorizontalAnnotation</strong>
     </a>
 </h3>
@@ -1517,7 +1517,7 @@ annotation line, shading below the annotation line, and "band" shading that appe
 linked annotation lines as part of a single band annotation
 
 <h4 class="pdoc-member-header" id="HorizontalAnnotation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L123"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L123"> <b>constructor</b></a>
 </h4>
 
 
@@ -1527,7 +1527,7 @@ linked annotation lines as part of a single band annotation
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> HorizontalAnnotation(args: <a href='#HorizontalAlarmAnnotationArgs'>HorizontalAlarmAnnotationArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="HorizontalAnnotation-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L143">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L143">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -1537,14 +1537,14 @@ linked annotation lines as part of a single band annotation
 For internal use only.
 
 <h3 class="pdoc-module-header" id="HorizontalAnnotationArgs" data-link-title="HorizontalAnnotationArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L58">
         interface <strong>HorizontalAnnotationArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>HorizontalAnnotationArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="HorizontalAnnotationArgs-aboveEdge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L64">property <b>aboveEdge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L64">property <b>aboveEdge</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aboveEdge: <a href='#HorizontalEdge'>HorizontalEdge</a>;</code></pre>
@@ -1554,7 +1554,7 @@ The metric value in the graph where the horizontal annotation line is to appear.
 should not be provided.
 
 <h4 class="pdoc-member-header" id="HorizontalAnnotationArgs-belowEdge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L69">property <b>belowEdge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L69">property <b>belowEdge</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>belowEdge?: <a href='#HorizontalEdge'>HorizontalEdge</a>;</code></pre>
@@ -1562,7 +1562,7 @@ should not be provided.
 The lower edge when using band shading.
 
 <h4 class="pdoc-member-header" id="HorizontalAnnotationArgs-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L75">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L75">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1571,7 +1571,7 @@ The six-digit HTML hex color code to be used for the annotation. This color is u
 the annotation line and the fill shading.
 
 <h4 class="pdoc-member-header" id="HorizontalAnnotationArgs-fill">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L85">property <b>fill</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L85">property <b>fill</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fill?: <span class='s2'>"above"</span> | <span class='s2'>"below"</span>;</code></pre>
@@ -1584,7 +1584,7 @@ These annotations always have shading between the two values, and any value for 
 ignored.
 
 <h4 class="pdoc-member-header" id="HorizontalAnnotationArgs-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L91">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L91">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1593,7 +1593,7 @@ Set this to true to have the annotation appear in the graph, or false to have it
 The default is true.
 
 <h4 class="pdoc-member-header" id="HorizontalAnnotationArgs-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L98">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L98">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <span class='s2'>"left"</span> | <span class='s2'>"right"</span>;</code></pre>
@@ -1603,14 +1603,14 @@ metric associated with the left Y-axis or the right Y-axis, . Valid values are r
 left.
 
 <h3 class="pdoc-module-header" id="HorizontalEdge" data-link-title="HorizontalEdge">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L101">
         interface <strong>HorizontalEdge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>HorizontalEdge</span></code></pre>
 <h4 class="pdoc-member-header" id="HorizontalEdge-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L114">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L114">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1618,7 +1618,7 @@ left.
 A string that appears on the graph next to the annotation.
 
 <h4 class="pdoc-member-header" id="HorizontalEdge-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L109">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L109">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1630,7 +1630,7 @@ On a graph with horizontal annotations, the graph is scaled so that all visible 
 annotations appear on the graph.
 
 <h3 class="pdoc-module-header" id="LineGraphMetricWidget" data-link-title="LineGraphMetricWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L64">
         class <strong>LineGraphMetricWidget</strong>
     </a>
 </h3>
@@ -1640,14 +1640,14 @@ annotations appear on the graph.
 Displays a set of metrics as a line graph.
 
 <h4 class="pdoc-member-header" id="LineGraphMetricWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> LineGraphMetricWidget(args: <a href='#GraphMetricWidgetArgs'>GraphMetricWidgetArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="LineGraphMetricWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -1657,56 +1657,56 @@ Displays a set of metrics as a line graph.
 For internal use only.
 
 <h4 class="pdoc-member-header" id="LineGraphMetricWidget-computeProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L253">method <b>computeProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L253">method <b>computeProperties</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): MetricWidgetPropertiesJson | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;MetricWidgetPropertiesJson&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;MetricWidgetPropertiesJson&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="LineGraphMetricWidget-computeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L251">method <b>computeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L251">method <b>computeType</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='s2'>"metric"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="LineGraphMetricWidget-computeView">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L57">method <b>computeView</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L57">method <b>computeView</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeView(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="LineGraphMetricWidget-computeYAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L58">method <b>computeYAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L58">method <b>computeYAxis</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeYAxis(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#YAxis'>YAxis</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#YAxis'>YAxis</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#YAxis'>YAxis</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="LineGraphMetricWidget-computedStacked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L69">method <b>computedStacked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L69">method <b>computedStacked</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computedStacked(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LineGraphMetricWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LineGraphMetricWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="Metric" data-link-title="Metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L46">
         class <strong>Metric</strong>
     </a>
 </h3>
@@ -1736,7 +1736,7 @@ see https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_co
 for more details.
 
 <h4 class="pdoc-member-header" id="Metric-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L128"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L128"> <b>constructor</b></a>
 </h4>
 
 
@@ -1747,7 +1747,7 @@ purposes.  i.e. if an [Alarm] is created from this [Metric], then [resource] wil
 the parent of the alarm by default.
 
 <h4 class="pdoc-member-header" id="Metric-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L266">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L266">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -1757,28 +1757,28 @@ the parent of the alarm by default.
 For internal use only.
 
 <h4 class="pdoc-member-header" id="Metric-createAlarm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L242">method <b>createAlarm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L242">method <b>createAlarm</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>createAlarm(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AlarmArgs'>AlarmArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): MetricAlarm</code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-with">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L153">method <b>with</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L153">method <b>with</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>with(change: <a href='#MetricChange'>MetricChange</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-withColor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L204">method <b>withColor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L204">method <b>withColor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>withColor(color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-withDimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L189">method <b>withDimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L189">method <b>withDimensions</b></a>
 </h4>
 
 
@@ -1791,56 +1791,56 @@ dimension, pass in an explicit value of `{ name: undefined }`.  To clear all dim
 in `undefined` for the entire argument.
 
 <h4 class="pdoc-member-header" id="Metric-withExtendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L231">method <b>withExtendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L231">method <b>withExtendedStatistic</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>withExtendedStatistic(extendedStatistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-withLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L208">method <b>withLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L208">method <b>withLabel</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>withLabel(label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-withPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L196">method <b>withPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L196">method <b>withPeriod</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>withPeriod(period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-withStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L220">method <b>withStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L220">method <b>withStatistic</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>withStatistic(statistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-withUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L200">method <b>withUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L200">method <b>withUnit</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>withUnit(unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-withVisible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L212">method <b>withVisible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L212">method <b>withVisible</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>withVisible(visible: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-withYAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L216">method <b>withYAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L216">method <b>withYAxis</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>withYAxis(yAxis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Metric-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L104">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L104">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1850,7 +1850,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="Metric-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L67">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L67">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dimensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1859,7 +1859,7 @@ The dimensions for this metric.  For the list of available dimensions see the AW
 [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="Metric-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L91">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L91">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extendedStatistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1868,7 +1868,7 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 [0.0] and [100].
 
 <h4 class="pdoc-member-header" id="Metric-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L113">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L113">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1880,7 +1880,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="Metric-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1889,7 +1889,7 @@ The name for this metric. See docs for
 [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="Metric-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L57">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L57">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1900,7 +1900,7 @@ See docs for
 [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="Metric-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L79">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L79">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1916,7 +1916,7 @@ See https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_co
 for more details.
 
 <h4 class="pdoc-member-header" id="Metric-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L50">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L50">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
@@ -1924,7 +1924,7 @@ for more details.
 Optional resource this is a metric for.  Used only for parenting purposes when making new alarms.
 
 <h4 class="pdoc-member-header" id="Metric-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L86">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L86">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -1935,7 +1935,7 @@ supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`.
 Defaults to [Average] if [statistic] and [extendedStatistic] is unspecified.
 
 <h4 class="pdoc-member-header" id="Metric-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L97">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L97">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricUnit'>MetricUnit</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1945,7 +1945,7 @@ The unit for this metric.
 See https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html
 
 <h4 class="pdoc-member-header" id="Metric-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L121">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L121">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>visible: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1956,7 +1956,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="Metric-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L128">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L128">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>yAxis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -1966,14 +1966,14 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="MetricArgs" data-link-title="MetricArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L547">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L547">
         interface <strong>MetricArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MetricArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="MetricArgs-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L592">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L592">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1983,7 +1983,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="MetricArgs-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L564">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L564">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1992,7 +1992,7 @@ The dimensions for this metric.  For the list of available dimensions see the AW
 [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricArgs-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L579">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L579">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2001,7 +2001,7 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 [0.0] and [100].
 
 <h4 class="pdoc-member-header" id="MetricArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L601">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L601">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2013,7 +2013,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="MetricArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L559">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L559">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2022,7 +2022,7 @@ The name for this metric. See docs for
 [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L554">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L554">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2033,7 +2033,7 @@ See docs for
 [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 
 <h4 class="pdoc-member-header" id="MetricArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L569">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L569">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2042,7 +2042,7 @@ The period in seconds over which the specified `stat` is applied.  Must be in mu
 Default to [300] if unspecified.
 
 <h4 class="pdoc-member-header" id="MetricArgs-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L574">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L574">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2051,7 +2051,7 @@ The statistic to apply to the alarm's associated metric. Either of the following
 supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
 
 <h4 class="pdoc-member-header" id="MetricArgs-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L585">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L585">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2061,7 +2061,7 @@ The unit for this metric.
 See https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html
 
 <h4 class="pdoc-member-header" id="MetricArgs-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L609">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L609">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2072,7 +2072,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="MetricArgs-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L616">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L616">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2082,7 +2082,7 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="MetricChange" data-link-title="MetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L405">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L405">
         interface <strong>MetricChange</strong>
     </a>
 </h3>
@@ -2092,7 +2092,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 Interface for all the parts of a metric that can be changed.
 
 <h4 class="pdoc-member-header" id="MetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2102,7 +2102,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="MetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -2112,7 +2112,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="MetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2122,7 +2122,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="MetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2134,7 +2134,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="MetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2144,7 +2144,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="MetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -2154,7 +2154,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="MetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -2164,7 +2164,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="MetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2175,7 +2175,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="MetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -2185,21 +2185,21 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="MetricStatistic" data-link-title="MetricStatistic">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L619">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L619">
         type <strong>MetricStatistic</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> MetricStatistic = <span class='s2'>"SampleCount"</span> | <span class='s2'>"Average"</span> | <span class='s2'>"Sum"</span> | <span class='s2'>"Minimum"</span> | <span class='s2'>"Maximum"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="MetricUnit" data-link-title="MetricUnit">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L620">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L620">
         type <strong>MetricUnit</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> MetricUnit = <span class='s2'>"Seconds"</span> | <span class='s2'>"Microseconds"</span> | <span class='s2'>"Milliseconds"</span> | <span class='s2'>"Bytes"</span> | <span class='s2'>"Kilobytes"</span> | <span class='s2'>"Megabytes"</span> | <span class='s2'>"Gigabytes"</span> | <span class='s2'>"Terabytes"</span> | <span class='s2'>"Bits"</span> | <span class='s2'>"Kilobits"</span> | <span class='s2'>"Megabits"</span> | <span class='s2'>"Gigabits"</span> | <span class='s2'>"Terabits"</span> | <span class='s2'>"Percent"</span> | <span class='s2'>"Count"</span> | <span class='s2'>"Bytes/Second"</span> | <span class='s2'>"Kilobytes/Second"</span> | <span class='s2'>"Megabytes/Second"</span> | <span class='s2'>"Gigabytes/Second"</span> | <span class='s2'>"Terabytes/Second"</span> | <span class='s2'>"Bits/Second"</span> | <span class='s2'>"Kilobits/Second"</span> | <span class='s2'>"Megabits/Second"</span> | <span class='s2'>"Gigabits/Second"</span> | <span class='s2'>"Terabits/Second"</span> | <span class='s2'>"Count/Second"</span> | <span class='s2'>"None"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="MetricWidget" data-link-title="MetricWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L223">
         class <strong>MetricWidget</strong>
     </a>
 </h3>
@@ -2211,14 +2211,14 @@ Base type for widgets that display data from a set of [Metric]s.  See [LineGraph
 displaying [Metric]s.
 
 <h4 class="pdoc-member-header" id="MetricWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L225"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L225"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> MetricWidget(metricArgs: <a href='#MetricWidgetArgs'>MetricWidgetArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="MetricWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -2228,63 +2228,63 @@ displaying [Metric]s.
 For internal use only.
 
 <h4 class="pdoc-member-header" id="MetricWidget-computeProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L253">method <b>computeProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L253">method <b>computeProperties</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): MetricWidgetPropertiesJson | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;MetricWidgetPropertiesJson&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;MetricWidgetPropertiesJson&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="MetricWidget-computeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L251">method <b>computeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L251">method <b>computeType</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='s2'>"metric"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="MetricWidget-computeView">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L247">method <b>computeView</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L247">method <b>computeView</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeView(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="MetricWidget-computeYAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L249">method <b>computeYAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L249">method <b>computeYAxis</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeYAxis(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#YAxis'>YAxis</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#YAxis'>YAxis</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#YAxis'>YAxis</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="MetricWidget-computedStacked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L248">method <b>computedStacked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L248">method <b>computedStacked</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computedStacked(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="MetricWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MetricWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="MetricWidgetArgs" data-link-title="MetricWidgetArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L152">
         interface <strong>MetricWidgetArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MetricWidgetArgs</span> <span class='kr'>extends</span> <a href='#SimpleWidgetArgs'>SimpleWidgetArgs</a></code></pre>
 <h4 class="pdoc-member-header" id="MetricWidgetArgs-alarm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L159">property <b>alarm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L159">property <b>alarm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='#WidgetAlarm'>WidgetAlarm</a>;</code></pre>
@@ -2295,7 +2295,7 @@ graphs to show the trigger point of an alarm, then add the alarm to [annotations
 At least one of [alarm], [annotations] or [metrics] must be supplied.
 
 <h4 class="pdoc-member-header" id="MetricWidgetArgs-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L173">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L173">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='#WidgetAnnotation'>WidgetAnnotation</a> | <a href='#WidgetAnnotation'>WidgetAnnotation</a>[];</code></pre>
@@ -2312,7 +2312,7 @@ Instances of this interface include [aws.cloudwatch.Alarm], [AlarmAnnotation],
 At least one of [alarm], [annotations] or [metrics] must be supplied.
 
 <h4 class="pdoc-member-header" id="MetricWidgetArgs-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L211">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L211">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2321,7 +2321,7 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 [0.0] and [100].
 
 <h4 class="pdoc-member-header" id="MetricWidgetArgs-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L41">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L41">property <b>height</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>height?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2331,7 +2331,7 @@ The height of the widget in grid units. The default is 6.
 Valid Values: 1–1000
 
 <h4 class="pdoc-member-header" id="MetricWidgetArgs-metrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L184">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L184">property <b>metrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metrics?: <a href='#WidgetMetric'>WidgetMetric</a> | <a href='#WidgetMetric'>WidgetMetric</a>[];</code></pre>
@@ -2345,7 +2345,7 @@ array.
 At least one of [alarm], [annotations] or [metrics] must be supplied.
 
 <h4 class="pdoc-member-header" id="MetricWidgetArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L194">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L194">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2355,7 +2355,7 @@ time represented by one data point on the graph. This default can be overridden 
 metric definition. The default is 300.
 
 <h4 class="pdoc-member-header" id="MetricWidgetArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L199">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L199">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;;</code></pre>
@@ -2363,7 +2363,7 @@ metric definition. The default is 300.
 The region of the metric.  Defaults to the region of the stack if not specified.
 
 <h4 class="pdoc-member-header" id="MetricWidgetArgs-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L205">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L205">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -2372,7 +2372,7 @@ The default statistic to be displayed for each metric in the array. This default
 overridden within the definition of each individual metric in the metrics array.
 
 <h4 class="pdoc-member-header" id="MetricWidgetArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L187">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L187">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2380,7 +2380,7 @@ overridden within the definition of each individual metric in the metrics array.
 The title to be displayed for the graph or number.
 
 <h4 class="pdoc-member-header" id="MetricWidgetArgs-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L34">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L34">property <b>width</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>width?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2390,14 +2390,14 @@ The width of the widget in grid units (in a 24-column grid). The default is 6.
 Valid Values: 1–24
 
 <h3 class="pdoc-module-header" id="MinMax" data-link-title="MinMax">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L38">
         interface <strong>MinMax</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MinMax</span></code></pre>
 <h4 class="pdoc-member-header" id="MinMax-max">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L42">property <b>max</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L42">property <b>max</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>max?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2405,7 +2405,7 @@ Valid Values: 1–24
 The maximum value for this Y-axis
 
 <h4 class="pdoc-member-header" id="MinMax-min">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L40">property <b>min</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L40">property <b>min</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>min?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2413,7 +2413,7 @@ The maximum value for this Y-axis
 The minimum value for this Y-axis
 
 <h3 class="pdoc-module-header" id="RowWidget" data-link-title="RowWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L131">
         class <strong>RowWidget</strong>
     </a>
 </h3>
@@ -2430,21 +2430,21 @@ The final width of this widget will be the furthest column that a widget is plac
 wrapping. The final height of this widget will be the bottommost row that a widget is placed at.
 
 <h4 class="pdoc-member-header" id="RowWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L131"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L131"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> RowWidget(widgets: <a href='#Widget'>Widget</a>[])</code></pre>
 
 <h4 class="pdoc-member-header" id="RowWidget-addWidget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L42">method <b>addWidget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L42">method <b>addWidget</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>addWidget(widget: <a href='#Widget'>Widget</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RowWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L168">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L168">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -2454,33 +2454,33 @@ wrapping. The final height of this widget will be the bottommost row that a widg
 For internal use only.
 
 <h4 class="pdoc-member-header" id="RowWidget-getWidgetRelativePositions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L136">method <b>getWidgetRelativePositions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L136">method <b>getWidgetRelativePositions</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, <a href='#WidgetRelativePosition'>WidgetRelativePosition</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="RowWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L66">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L66">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RowWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L53">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L53">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RowWidget-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_flow.ts#L34">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_flow.ts#L34">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>protected </span>widgets: <a href='#Widget'>Widget</a>[] =  [];</code></pre>
 <h3 class="pdoc-module-header" id="SimpleWidget" data-link-title="SimpleWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L47">
         class <strong>SimpleWidget</strong>
     </a>
 </h3>
@@ -2490,14 +2490,14 @@ For internal use only.
 Base type of all non-flow Widgets to place in a DashboardGrid.
 
 <h4 class="pdoc-member-header" id="SimpleWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L47"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L47"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> SimpleWidget(args: <a href='#SimpleWidgetArgs'>SimpleWidgetArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="SimpleWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -2507,28 +2507,28 @@ Base type of all non-flow Widgets to place in a DashboardGrid.
 For internal use only.
 
 <h4 class="pdoc-member-header" id="SimpleWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SimpleWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="SimpleWidgetArgs" data-link-title="SimpleWidgetArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L28">
         interface <strong>SimpleWidgetArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SimpleWidgetArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="SimpleWidgetArgs-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L41">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L41">property <b>height</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>height?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2538,7 +2538,7 @@ The height of the widget in grid units. The default is 6.
 Valid Values: 1–1000
 
 <h4 class="pdoc-member-header" id="SimpleWidgetArgs-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L34">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L34">property <b>width</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>width?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2548,7 +2548,7 @@ The width of the widget in grid units (in a 24-column grid). The default is 6.
 Valid Values: 1–24
 
 <h3 class="pdoc-module-header" id="SingleNumberMetricWidget" data-link-title="SingleNumberMetricWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L86">
         class <strong>SingleNumberMetricWidget</strong>
     </a>
 </h3>
@@ -2558,14 +2558,14 @@ Valid Values: 1–24
 Displays a set of metrics as a single number.
 
 <h4 class="pdoc-member-header" id="SingleNumberMetricWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> SingleNumberMetricWidget(args: <a href='#MetricWidgetArgs'>MetricWidgetArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="SingleNumberMetricWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -2575,56 +2575,56 @@ Displays a set of metrics as a single number.
 For internal use only.
 
 <h4 class="pdoc-member-header" id="SingleNumberMetricWidget-computeProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L253">method <b>computeProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L253">method <b>computeProperties</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): MetricWidgetPropertiesJson | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;MetricWidgetPropertiesJson&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;MetricWidgetPropertiesJson&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="SingleNumberMetricWidget-computeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L251">method <b>computeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L251">method <b>computeType</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='s2'>"metric"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="SingleNumberMetricWidget-computeView">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L92">method <b>computeView</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L92">method <b>computeView</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeView(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="SingleNumberMetricWidget-computeYAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L93">method <b>computeYAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L93">method <b>computeYAxis</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeYAxis(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#YAxis'>YAxis</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#YAxis'>YAxis</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#YAxis'>YAxis</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="SingleNumberMetricWidget-computedStacked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L91">method <b>computedStacked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L91">method <b>computedStacked</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computedStacked(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SingleNumberMetricWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SingleNumberMetricWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="SpaceWidget" data-link-title="SpaceWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L92">
         class <strong>SpaceWidget</strong>
     </a>
 </h3>
@@ -2634,7 +2634,7 @@ For internal use only.
 Simple [Widget] that can be used for putting space between other widgets in the [Dashboard].
 
 <h4 class="pdoc-member-header" id="SpaceWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -2644,28 +2644,28 @@ Simple [Widget] that can be used for putting space between other widgets in the 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> SpaceWidget(args: <a href='#SimpleWidgetArgs'>SimpleWidgetArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="SpaceWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L112">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L112">method <b>addWidgetJson</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SpaceWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L110">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L110">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SpaceWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L109">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L109">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="StackedAreaGraphMetricWidget" data-link-title="StackedAreaGraphMetricWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L75">
         class <strong>StackedAreaGraphMetricWidget</strong>
     </a>
 </h3>
@@ -2675,14 +2675,14 @@ Simple [Widget] that can be used for putting space between other widgets in the 
 Displays a set of metrics as a stacked area graph.
 
 <h4 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> StackedAreaGraphMetricWidget(args: <a href='#GraphMetricWidgetArgs'>GraphMetricWidgetArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -2692,56 +2692,56 @@ Displays a set of metrics as a stacked area graph.
 For internal use only.
 
 <h4 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-computeProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L253">method <b>computeProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L253">method <b>computeProperties</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>&gt;): MetricWidgetPropertiesJson | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;MetricWidgetPropertiesJson&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;MetricWidgetPropertiesJson&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-computeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L251">method <b>computeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L251">method <b>computeType</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='s2'>"metric"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-computeView">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L57">method <b>computeView</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L57">method <b>computeView</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeView(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-computeYAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L58">method <b>computeYAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L58">method <b>computeYAxis</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeYAxis(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#YAxis'>YAxis</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#YAxis'>YAxis</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#YAxis'>YAxis</a>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-computedStacked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L80">method <b>computedStacked</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L80">method <b>computedStacked</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computedStacked(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="TextWidget" data-link-title="TextWidget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L127">
         class <strong>TextWidget</strong>
     </a>
 </h3>
@@ -2751,7 +2751,7 @@ For internal use only.
 Simple widget that displays a piece of text in the dashboard grid.
 
 <h4 class="pdoc-member-header" id="TextWidget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L128"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L128"> <b>constructor</b></a>
 </h4>
 
 
@@ -2761,7 +2761,7 @@ Simple widget that displays a piece of text in the dashboard grid.
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TextWidget(args: <a href='#TextWidgetArgs'>TextWidgetArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="TextWidget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L75">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -2771,7 +2771,7 @@ Simple widget that displays a piece of text in the dashboard grid.
 For internal use only.
 
 <h4 class="pdoc-member-header" id="TextWidget-computeProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L143">method <b>computeProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L143">method <b>computeProperties</b></a>
 </h4>
 
 
@@ -2784,35 +2784,35 @@ For internal use only.
 }&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="TextWidget-computeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L139">method <b>computeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L139">method <b>computeType</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>computeType(): <span class='s2'>"text"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"text"</span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='s2'>"text"</span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="TextWidget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TextWidget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L61">method <b>width</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="TextWidgetArgs" data-link-title="TextWidgetArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L117">
         interface <strong>TextWidgetArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TextWidgetArgs</span> <span class='kr'>extends</span> <a href='#SimpleWidgetArgs'>SimpleWidgetArgs</a></code></pre>
 <h4 class="pdoc-member-header" id="TextWidgetArgs-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L41">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L41">property <b>height</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>height?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2822,7 +2822,7 @@ The height of the widget in grid units. The default is 6.
 Valid Values: 1–1000
 
 <h4 class="pdoc-member-header" id="TextWidgetArgs-markdown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L121">property <b>markdown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L121">property <b>markdown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>markdown: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2830,7 +2830,7 @@ Valid Values: 1–1000
 The text to be displayed by the widget.
 
 <h4 class="pdoc-member-header" id="TextWidgetArgs-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L34">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L34">property <b>width</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>width?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2840,7 +2840,7 @@ The width of the widget in grid units (in a 24-column grid). The default is 6.
 Valid Values: 1–24
 
 <h3 class="pdoc-module-header" id="VerticalAnnotation" data-link-title="VerticalAnnotation">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L229">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L229">
         class <strong>VerticalAnnotation</strong>
     </a>
 </h3>
@@ -2852,14 +2852,14 @@ annotation line, shading after the annotation line, and "band" shading that appe
 linked annotation lines as part of a single band annotation
 
 <h4 class="pdoc-member-header" id="VerticalAnnotation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L229"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L229"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> VerticalAnnotation(args: <a href='#VerticalAnnotationArgs'>VerticalAnnotationArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="VerticalAnnotation-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L237">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L237">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -2869,7 +2869,7 @@ linked annotation lines as part of a single band annotation
 For internal use only.
 
 <h3 class="pdoc-module-header" id="VerticalAnnotationArgs" data-link-title="VerticalAnnotationArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L170">
         interface <strong>VerticalAnnotationArgs</strong>
     </a>
 </h3>
@@ -2880,7 +2880,7 @@ For each vertical annotation, you can choose to have fill shading before the ann
 it, or between two vertical lines that are linked as a single band annotation.
 
 <h4 class="pdoc-member-header" id="VerticalAnnotationArgs-afterEdge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L181">property <b>afterEdge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L181">property <b>afterEdge</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>afterEdge?: <a href='#VerticalEdge'>VerticalEdge</a>;</code></pre>
@@ -2888,7 +2888,7 @@ it, or between two vertical lines that are linked as a single band annotation.
 The ending edge when using band shading.
 
 <h4 class="pdoc-member-header" id="VerticalAnnotationArgs-beforeEdge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L176">property <b>beforeEdge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L176">property <b>beforeEdge</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>beforeEdge: <a href='#VerticalEdge'>VerticalEdge</a>;</code></pre>
@@ -2898,7 +2898,7 @@ The metric value in the graph where the vertical annotation line is to appear.  
 should not be provided.
 
 <h4 class="pdoc-member-header" id="VerticalAnnotationArgs-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L187">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L187">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2907,7 +2907,7 @@ The six-digit HTML hex color code to be used for the annotation. This color is u
 the annotation line and the fill shading.
 
 <h4 class="pdoc-member-header" id="VerticalAnnotationArgs-fill">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L196">property <b>fill</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L196">property <b>fill</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fill?: <span class='s2'>"before"</span> | <span class='s2'>"after"</span>;</code></pre>
@@ -2919,7 +2919,7 @@ The exception is an annotation with band shading. These annotations always have 
 between the two values, and any value for [fill] is ignored.
 
 <h4 class="pdoc-member-header" id="VerticalAnnotationArgs-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L202">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L202">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -2928,14 +2928,14 @@ Set this to true to have the annotation appear in the graph, or false to have it
 The default is true.
 
 <h3 class="pdoc-module-header" id="VerticalEdge" data-link-title="VerticalEdge">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L205">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L205">
         interface <strong>VerticalEdge</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VerticalEdge</span></code></pre>
 <h4 class="pdoc-member-header" id="VerticalEdge-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L221">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L221">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2943,7 +2943,7 @@ The default is true.
 A string that appears on the graph next to the annotation.
 
 <h4 class="pdoc-member-header" id="VerticalEdge-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L216">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L216">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2958,7 +2958,7 @@ annotations appear on the graph.
 This is defined as a string in ISO 8601 format. For more information, see ISO 8601.
 
 <h3 class="pdoc-module-header" id="Widget" data-link-title="Widget">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widget.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widget.ts#L34">
         interface <strong>Widget</strong>
     </a>
 </h3>
@@ -2979,7 +2979,7 @@ Base type for all [Widget]s that can be placed in a [DashboardGrid].
    of metric values as a graph.
 
 <h4 class="pdoc-member-header" id="Widget-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widget.ts#L57">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widget.ts#L57">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -2992,7 +2992,7 @@ specify where in the final [Dashboard] grid this [Widget] should be placed.
 For internal use only.
 
 <h4 class="pdoc-member-header" id="Widget-height">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widget.ts#L49">method <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widget.ts#L49">method <b>height</b></a>
 </h4>
 
 
@@ -3004,7 +3004,7 @@ The height of the widget in grid units. The default is 6.
 Valid Values: 1–1000
 
 <h4 class="pdoc-member-header" id="Widget-width">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widget.ts#L42">method <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widget.ts#L42">method <b>width</b></a>
 </h4>
 
 
@@ -3018,19 +3018,19 @@ Valid Values: 1–24
 Type: Integer
 
 <h3 class="pdoc-module-header" id="WidgetAlarm" data-link-title="WidgetAlarm">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L214">
         interface <strong>WidgetAlarm</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>WidgetAlarm</span></code></pre>
 <h4 class="pdoc-member-header" id="WidgetAlarm-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L215">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L215">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="WidgetAnnotation" data-link-title="WidgetAnnotation">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L26">
         interface <strong>WidgetAnnotation</strong>
     </a>
 </h3>
@@ -3042,7 +3042,7 @@ this interface include [aws.cloudwatch.Alarm], [AlarmAnnotation], [HorizontalAnn
 [VerticalAnnotation].
 
 <h4 class="pdoc-member-header" id="WidgetAnnotation-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_annotations.ts#L28">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_annotations.ts#L28">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -3052,7 +3052,7 @@ this interface include [aws.cloudwatch.Alarm], [AlarmAnnotation], [HorizontalAnn
 For internal use only. Only intended to be called by [MetricWidget].
 
 <h3 class="pdoc-module-header" id="WidgetMetric" data-link-title="WidgetMetric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L320">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L320">
         interface <strong>WidgetMetric</strong>
     </a>
 </h3>
@@ -3065,7 +3065,7 @@ See [ExpressionWidgetMetric] and [Metric] to create instances that can be added 
 [MetricWidgetArgs.metrics].
 
 <h4 class="pdoc-member-header" id="WidgetMetric-addWidgetJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_simple.ts#L322">method <b>addWidgetJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_simple.ts#L322">method <b>addWidgetJson</b></a>
 </h4>
 
 
@@ -3075,14 +3075,14 @@ See [ExpressionWidgetMetric] and [Metric] to create instances that can be added 
 For internal use only. Only intended to be called by [MetricWidget].
 
 <h3 class="pdoc-module-header" id="YAxis" data-link-title="YAxis">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L30">
         interface <strong>YAxis</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>YAxis</span></code></pre>
 <h4 class="pdoc-member-header" id="YAxis-left">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L32">property <b>left</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L32">property <b>left</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>left?: <a href='#MinMax'>MinMax</a>;</code></pre>
@@ -3090,7 +3090,7 @@ For internal use only. Only intended to be called by [MetricWidget].
 Optional min and max settings for the left Y-axis.
 
 <h4 class="pdoc-member-header" id="YAxis-right">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/widgets_graph.ts#L35">property <b>right</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/widgets_graph.ts#L35">property <b>right</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>right?: <a href='#MinMax'>MinMax</a>;</code></pre>

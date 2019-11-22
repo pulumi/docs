@@ -29,7 +29,7 @@ meta_desc: "Explore members of the efs module in the @pulumi/awsx package."
 
 <h2 id="metrics" data-link-title="metrics">namespace <strong>metrics</strong></h2>
 <h3 class="pdoc-module-header" id="burstCreditBalance" data-link-title="burstCreditBalance">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L79">
         function <strong>burstCreditBalance</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ Units: Bytes
 Valid statistics: Minimum, Maximum, Average
 
 <h3 class="pdoc-module-header" id="clientConnections" data-link-title="clientConnections">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L94">
         function <strong>clientConnections</strong>
     </a>
 </h3>
@@ -73,7 +73,7 @@ Units: Count of client connections
 Valid statistics: Sum
 
 <h3 class="pdoc-module-header" id="dataReadIOBytes" data-link-title="dataReadIOBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L113">
         function <strong>dataReadIOBytes</strong>
     </a>
 </h3>
@@ -97,7 +97,7 @@ Units:
 Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 
 <h3 class="pdoc-module-header" id="dataWriteIOBytes" data-link-title="dataWriteIOBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L132">
         function <strong>dataWriteIOBytes</strong>
     </a>
 </h3>
@@ -121,14 +121,14 @@ Units:
 Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 
 <h3 class="pdoc-module-header" id="EfsMetricChange" data-link-title="EfsMetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L26">
         interface <strong>EfsMetricChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EfsMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="EfsMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -138,7 +138,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="EfsMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -148,7 +148,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="EfsMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="EfsMetricChange-fileSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L30">property <b>fileSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L30">property <b>fileSystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/efs/#FileSystem'>aws.efs.FileSystem</a>;</code></pre>
@@ -166,7 +166,7 @@ to [undefined] then the value will be set to the default.
 Filters down events to the specified [FileSystem].
 
 <h4 class="pdoc-member-header" id="EfsMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="EfsMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="EfsMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -198,7 +198,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="EfsMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -208,7 +208,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="EfsMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -219,7 +219,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="EfsMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -229,14 +229,14 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="EfsMetricName" data-link-title="EfsMetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L21">
         type <strong>EfsMetricName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> EfsMetricName = <span class='s2'>"BurstCreditBalance"</span> | <span class='s2'>"ClientConnections"</span> | <span class='s2'>"DataReadIOBytes"</span> | <span class='s2'>"DataWriteIOBytes"</span> | <span class='s2'>"MetadataIOBytes"</span> | <span class='s2'>"PercentIOLimit"</span> | <span class='s2'>"PermittedThroughput"</span> | <span class='s2'>"TotalIOBytes"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="metadataIOBytes" data-link-title="metadataIOBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L151">
         function <strong>metadataIOBytes</strong>
     </a>
 </h3>
@@ -260,7 +260,7 @@ Units:
 Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L51">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -287,7 +287,7 @@ Amazon EFS metrics use the EFS namespace and provides metrics for a single dimen
 takes the form of fs-XXXXXXXX.
 
 <h3 class="pdoc-module-header" id="percentIOLimit" data-link-title="percentIOLimit">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L165">
         function <strong>percentIOLimit</strong>
     </a>
 </h3>
@@ -306,7 +306,7 @@ mode.
 Units: Percent
 
 <h3 class="pdoc-module-header" id="permittedThroughput" data-link-title="permittedThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L185">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L185">
         function <strong>permittedThroughput</strong>
     </a>
 </h3>
@@ -331,7 +331,7 @@ Units: Bytes per second
 Valid statistics: Minimum, Maximum, Average
 
 <h3 class="pdoc-module-header" id="totalIOBytes" data-link-title="totalIOBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/efs/metrics.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/efs/metrics.ts#L209">
         function <strong>totalIOBytes</strong>
     </a>
 </h3>
