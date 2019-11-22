@@ -333,6 +333,7 @@ const service = new awsx.ecs.EC2Service("custom", {
 <ul class="api">
     <li><a href="#ClusterArgs"><span class="symbol api"></span>ClusterArgs</a></li>
     <li><a href="#Container"><span class="symbol api"></span>Container</a></li>
+    <li><a href="#ContainerDependency"><span class="symbol api"></span>ContainerDependency</a></li>
     <li><a href="#ContainerImageProvider"><span class="symbol api"></span>ContainerImageProvider</a></li>
     <li><a href="#ContainerLoadBalancer"><span class="symbol api"></span>ContainerLoadBalancer</a></li>
     <li><a href="#ContainerLoadBalancerProvider"><span class="symbol api"></span>ContainerLoadBalancerProvider</a></li>
@@ -357,7 +358,7 @@ const service = new awsx.ecs.EC2Service("custom", {
 
 <h2 id="metrics" data-link-title="metrics">namespace <strong>metrics</strong></h2>
 <h3 class="pdoc-module-header" id="cpuReservation" data-link-title="cpuReservation">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/metrics.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/metrics.ts#L111">
         function <strong>cpuReservation</strong>
     </a>
 </h3>
@@ -381,7 +382,7 @@ Average.
 Unit: Percent.
 
 <h3 class="pdoc-module-header" id="cpuUtilization" data-link-title="cpuUtilization">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/metrics.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/metrics.ts#L136">
         function <strong>cpuUtilization</strong>
     </a>
 </h3>
@@ -411,14 +412,14 @@ Average.
 Unit: Percent.
 
 <h3 class="pdoc-module-header" id="EcsMetricChange" data-link-title="EcsMetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/metrics.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/metrics.ts#L27">
         interface <strong>EcsMetricChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EcsMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="EcsMetricChange-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/metrics.ts#L32">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/metrics.ts#L32">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Cluster'>aws.ecs.Cluster</a> | <a href='#Cluster'>Cluster</a>;</code></pre>
@@ -427,7 +428,7 @@ This dimension filters the data that you request for all resources in a specifie
 All Amazon ECS metrics can be filtered by this.
 
 <h4 class="pdoc-member-header" id="EcsMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -437,7 +438,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="EcsMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -447,7 +448,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="EcsMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -457,7 +458,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="EcsMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -469,7 +470,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="EcsMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -479,7 +480,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="EcsMetricChange-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/metrics.ts#L39">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/metrics.ts#L39">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Service'>aws.ecs.Service</a> | <a href='#Service'>Service</a>;</code></pre>
@@ -489,7 +490,7 @@ within a specified cluster.  If this is an [awsx.ecs.Service] then [cluster] is 
 If this is an [aws.ecs.Service] then [cluster] is required.
 
 <h4 class="pdoc-member-header" id="EcsMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -499,7 +500,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="EcsMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -509,7 +510,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="EcsMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -520,7 +521,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="EcsMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -530,14 +531,14 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="EcsMetricName" data-link-title="EcsMetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/metrics.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/metrics.ts#L24">
         type <strong>EcsMetricName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> EcsMetricName = <span class='s2'>"CPUReservation"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"MemoryReservation"</span> | <span class='s2'>"MemoryUtilization"</span> | <span class='s2'>"GPUReservation"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="gpuReservation" data-link-title="gpuReservation">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/metrics.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/metrics.ts#L197">
         function <strong>gpuReservation</strong>
     </a>
 </h3>
@@ -560,7 +561,7 @@ Average.
 Unit: Percent.
 
 <h3 class="pdoc-module-header" id="memoryReservation" data-link-title="memoryReservation">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/metrics.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/metrics.ts#L155">
         function <strong>memoryReservation</strong>
     </a>
 </h3>
@@ -584,7 +585,7 @@ Average.
 Unit: Percent.
 
 <h3 class="pdoc-module-header" id="memoryUtilization" data-link-title="memoryUtilization">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/metrics.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/metrics.ts#L179">
         function <strong>memoryUtilization</strong>
     </a>
 </h3>
@@ -613,7 +614,7 @@ Average.
 Unit: Percent.
 
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/metrics.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/metrics.ts#L64">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -646,7 +647,7 @@ Amazon ECS metrics use the AWS/ECS namespace and provide metrics for the followi
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L26">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -656,21 +657,21 @@ Amazon ECS metrics use the AWS/ECS namespace and provide metrics for the followi
 A Cluster is a general purpose ECS cluster configured to run in a provided Network.
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L43"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L43"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Cluster(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ClusterArgs'>ClusterArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-addAutoScalingGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L67">method <b>addAutoScalingGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L67">method <b>addAutoScalingGroup</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>addAutoScalingGroup(group: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling/#AutoScalingGroup'>x.autoscaling.AutoScalingGroup</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-createAutoScalingGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L77">method <b>createAutoScalingGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L77">method <b>createAutoScalingGroup</b></a>
 </h4>
 
 
@@ -683,28 +684,28 @@ this cluster as well as using this cluster to initialize both its securityGroups
 launchConfiguration userData.
 
 <h4 class="pdoc-member-header" id="Cluster-createDefaultSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L108">method <b>createDefaultSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L108">method <b>createDefaultSecurityGroup</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>createDefaultSecurityGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpc?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-createDefaultSecurityGroupEgressRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L125">method <b>createDefaultSecurityGroupEgressRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L125">method <b>createDefaultSecurityGroupEgressRules</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>createDefaultSecurityGroupEgressRules(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a>[]</code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-createDefaultSecurityGroupIngressRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L132">method <b>createDefaultSecurityGroupIngressRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L132">method <b>createDefaultSecurityGroupIngressRules</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>createDefaultSecurityGroupIngressRules(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a>[]</code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-getDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L100">method <b>getDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L100">method <b>getDefault</b></a>
 </h4>
 
 
@@ -716,14 +717,14 @@ The cluster will use the default Vpc for the account and will be provisioned wit
 group created by [createDefaultSecurityGroup].
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L26">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L26">method <b>isInstance</b></a>
 </h4>
 
 
@@ -734,34 +735,34 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L26">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L26">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-autoScalingGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L43">property <b>autoScalingGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L43">property <b>autoScalingGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoScalingGroups: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling/#AutoScalingGroup'>x.autoscaling.AutoScalingGroup</a>[] =  [];</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L29">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L29">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cluster: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Cluster'>aws.ecs.Cluster</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-extraBootcmdLines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L41">property <b>extraBootcmdLines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L41">property <b>extraBootcmdLines</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extraBootcmdLines: () => <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/autoscaling/#UserDataLine'>x.autoscaling.UserDataLine</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L39">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L39">property <b>securityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>[];</code></pre>
@@ -769,7 +770,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 Security groups associated with this this ECS Cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -778,7 +779,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L35">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L35">property <b>vpc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
@@ -786,28 +787,28 @@ deployments.
 The network in which to create this cluster.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L22">
         Resource <strong>Service</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Service</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L34"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L34"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Service(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceArgs'>ServiceArgs</a>, isFargate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L22">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L22">method <b>isInstance</b></a>
 </h4>
 
 
@@ -818,24 +819,24 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L22">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L22">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-applicationListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L33">property <b>applicationListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L33">property <b>applicationListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationListener'>x.lb.ApplicationListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L24">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L24">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cluster: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Cluster'>ecs.Cluster</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Service-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L32">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L32">property <b>listeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>&gt;;</code></pre>
@@ -845,22 +846,22 @@ balancer. Only present if a listener was provided in [Container.portMappings] or
 [Container.applicationListener] or [Container.networkListener].
 
 <h4 class="pdoc-member-header" id="Service-networkListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L34">property <b>networkListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L34">property <b>networkListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkListener'>x.lb.NetworkListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Service-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L23">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L23">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Service'>aws.ecs.Service</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Service-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L25">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L25">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskDefinition: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#TaskDefinition'>ecs.TaskDefinition</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -869,21 +870,21 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TaskDefinition" data-link-title="TaskDefinition">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L25">
         Resource <strong>TaskDefinition</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>TaskDefinition</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></code></pre>
 <h4 class="pdoc-member-header" id="TaskDefinition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L50"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TaskDefinition(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, isFargate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, args: <a href='#TaskDefinitionArgs'>TaskDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="TaskDefinition-createExecutionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L117">method <b>createExecutionRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L118">method <b>createExecutionRole</b></a>
 </h4>
 
 
@@ -897,7 +898,7 @@ to create [RolePolicyAttachment]s for the Role.  Otherwise, [defaultExecutionRol
 be used.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-createTaskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L97">method <b>createTaskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L98">method <b>createTaskRole</b></a>
 </h4>
 
 
@@ -911,35 +912,35 @@ to create [RolePolicyAttachment]s for the Role.  Otherwise, [defaultTaskRolePoli
 be used.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-defaultExecutionRolePolicyARNs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L156">method <b>defaultExecutionRolePolicyARNs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L157">method <b>defaultExecutionRolePolicyARNs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>defaultExecutionRolePolicyARNs(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]</code></pre>
 
 <h4 class="pdoc-member-header" id="TaskDefinition-defaultRoleAssumeRolePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L131">method <b>defaultRoleAssumeRolePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L132">method <b>defaultRoleAssumeRolePolicy</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>defaultRoleAssumeRolePolicy(): <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyDocument'>aws.iam.PolicyDocument</a></code></pre>
 
 <h4 class="pdoc-member-header" id="TaskDefinition-defaultTaskRolePolicyARNs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L146">method <b>defaultTaskRolePolicyARNs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L147">method <b>defaultTaskRolePolicyARNs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>defaultTaskRolePolicyARNs(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]</code></pre>
 
 <h4 class="pdoc-member-header" id="TaskDefinition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TaskDefinition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L25">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L25">method <b>isInstance</b></a>
 </h4>
 
 
@@ -950,29 +951,29 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L25">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L25">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TaskDefinition-applicationListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L38">property <b>applicationListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L38">property <b>applicationListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationListener'>x.lb.ApplicationListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaskDefinition-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L28">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L28">property <b>containers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containers: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Container'>ecs.Container</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaskDefinition-executionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L30">property <b>executionRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L30">property <b>executionRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>executionRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TaskDefinition-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L37">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L37">property <b>listeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>&gt;;</code></pre>
@@ -982,17 +983,17 @@ Only present if a listener was provided in [Container.portMappings] or in
 [Container.applicationListener] or [Container.networkListener].
 
 <h4 class="pdoc-member-header" id="TaskDefinition-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L27">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L27">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#LogGroup'>aws.cloudwatch.LogGroup</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TaskDefinition-networkListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L39">property <b>networkListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L39">property <b>networkListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkListener'>x.lb.NetworkListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TaskDefinition-run">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L48">property <b>run</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L48">property <b>run</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>run: (params: <a href='#RunTaskRequest'>RunTaskRequest</a>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;awssdk.ECS.Types.RunTaskResponse&gt;;</code></pre>
@@ -1004,17 +1005,17 @@ This wrapper around `runTask` provides appropriate defaults based on the TaskDef
 This API is designed for use at runtime.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L26">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L26">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskDefinition: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#TaskDefinition'>aws.ecs.TaskDefinition</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TaskDefinition-taskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L29">property <b>taskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L29">property <b>taskRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TaskDefinition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1026,7 +1027,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L174">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -1036,7 +1037,7 @@ deployments.
 Arguments bag for creating infrastructure for a new Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L187">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L187">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Cluster'>aws.ecs.Cluster</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1047,7 +1048,7 @@ awsx.ecs.Cluster.  If not provided, a default one will be created.
 Note: If passing a string, use the *name* of an existing ECS Cluster instead of its *id*.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1055,7 +1056,7 @@ Note: If passing a string, use the *name* of an existing ECS Cluster instead of 
 The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 
 <h4 class="pdoc-member-header" id="ClusterArgs-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L198">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L198">property <b>securityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroupOrId'>x.ec2.SecurityGroupOrId</a>[];</code></pre>
@@ -1064,7 +1065,7 @@ The security group to place new instances into.  If not provided, a default will
 created. Pass an empty array to create no security groups.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L203">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L203">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
@@ -1072,7 +1073,7 @@ created. Pass an empty array to create no security groups.
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/cluster.ts#L179">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/cluster.ts#L179">property <b>vpc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpc?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
@@ -1081,7 +1082,7 @@ The network in which to create this cluster.  If not provided, Vpc.getDefault() 
 used.
 
 <h3 class="pdoc-module-header" id="Container" data-link-title="Container">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L281">
         interface <strong>Container</strong>
     </a>
 </h3>
@@ -1095,7 +1096,7 @@ See https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefin
 more details.
 
 <h4 class="pdoc-member-header" id="Container-applicationListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L631">property <b>applicationListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L779">property <b>applicationListener</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationListener?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationListener'>x.lb.ApplicationListener</a> | <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationListenerArgs'>x.lb.ApplicationListenerArgs</a>;</code></pre>
@@ -1104,7 +1105,7 @@ Alternative to passing in `portMappings`.  If a listener (or args to create a li
 passed in, it will be used instead.
 
 <h4 class="pdoc-member-header" id="Container-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L260">property <b>command</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L294">property <b>command</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>command?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1119,7 +1120,7 @@ information, see https://docs.docker.com/engine/reference/builder/#cmd. If there
 arguments, each argument should be a separated string in the array.
 
 <h4 class="pdoc-member-header" id="Container-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L272">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L306">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1133,8 +1134,31 @@ This parameter maps to `CpuShares` in the
 section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) and the
 `--cpu-shared` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
+<h4 class="pdoc-member-header" id="Container-dependsOn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L326">property <b>dependsOn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>dependsOn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ContainerDependency'>ContainerDependency</a>[]&gt;;</code></pre>
+
+The dependencies defined for container startup and shutdown. A container can contain multiple
+dependencies. When a dependency is defined for container startup, for container shutdown it
+is reversed.
+
+For tasks using the EC2 launch type, the container instances require at least version 1.26.0
+of the container agent to enable container dependencies. However, we recommend using the
+latest container agent version. For information about checking your agent version and
+updating to the latest version, see Updating the Amazon ECS Container Agent in the Amazon
+Elastic Container Service Developer Guide. If you are using an Amazon ECS-optimized Linux
+AMI, your instance needs at least version 1.26.0-1 of the ecs-init package. If your container
+instances are launched from version 20190301 or later, then they contain the required
+versions of the container agent and ecs-init. For more information, see Amazon ECS-optimized
+Linux AMI in the Amazon Elastic Container Service Developer Guide.
+
+For tasks using the Fargate launch type, the task or service requires platform version 1.3.0
+or later.
+
 <h4 class="pdoc-member-header" id="Container-disableNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L283">property <b>disableNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L337">property <b>disableNetworking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableNetworking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1148,7 +1172,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/).
 Note: This parameter is not supported for Windows containers.
 
 <h4 class="pdoc-member-header" id="Container-dnsSearchDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L295">property <b>dnsSearchDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L349">property <b>dnsSearchDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSearchDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1163,7 +1187,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 Note: This parameter is not supported for Windows containers.
 
 <h4 class="pdoc-member-header" id="Container-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L307">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L361">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1178,7 +1202,7 @@ parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 Note: This parameter is not supported for Windows containers.
 
 <h4 class="pdoc-member-header" id="Container-dockerLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L317">property <b>dockerLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L371">property <b>dockerLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerLabels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -1191,7 +1215,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 `--label` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-dockerSecurityOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L328">property <b>dockerSecurityOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L382">property <b>dockerSecurityOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerSecurityOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1205,7 +1229,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 `--security-opt` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-entryPoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L342">property <b>entryPoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L396">property <b>entryPoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryPoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1222,7 +1246,7 @@ parameters. If you have problems using entryPoint, update your container agent o
 commands and arguments as command array items instead.
 
 <h4 class="pdoc-member-header" id="Container-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L355">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L409">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KeyValuePair'>KeyValuePair</a>[]&gt;;</code></pre>
@@ -1238,7 +1262,7 @@ Important: We do not recommend using plaintext environment variables for sensiti
 information, such as credential data.
 
 <h4 class="pdoc-member-header" id="Container-essential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L371">property <b>essential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L425">property <b>essential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>essential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1257,7 +1281,7 @@ definitions. For more information, see
 in the Amazon Elastic Container Service Developer Guide.
 
 <h4 class="pdoc-member-header" id="Container-extraHosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L385">property <b>extraHosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L439">property <b>extraHosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraHosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#HostEntry'>aws.ecs.HostEntry</a>[]&gt;;</code></pre>
@@ -1273,8 +1297,20 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 Note: This parameter is not supported for Windows containers or tasks that use the awsvpc
 network mode.
 
+<h4 class="pdoc-member-header" id="Container-healthCheck">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L448">property <b>healthCheck</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#HealthCheck'>aws.ecs.HealthCheck</a>&gt;;</code></pre>
+
+The health check command and associated configuration parameters for the container. This
+parameter maps to `HealthCheck` in the
+[Create-a-container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) and the
+`HEALTHCHECK` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
+
 <h4 class="pdoc-member-header" id="Container-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L395">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L458">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1287,7 +1323,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 `--hostname` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L593">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L741">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='#ContainerImageProvider'>ContainerImageProvider</a>;</code></pre>
@@ -1298,7 +1334,7 @@ which can do whatever custom work is necessary.  See [Image] for common ways to 
 image from a local docker build.
 
 <h4 class="pdoc-member-header" id="Container-links">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L415">property <b>links</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L478">property <b>links</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>links?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1321,7 +1357,7 @@ communicate with each other without requiring links or host port mappings. Netwo
 is achieved on the container instance using security groups and VPC settings.
 
 <h4 class="pdoc-member-header" id="Container-linuxParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L423">property <b>linuxParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L486">property <b>linuxParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linuxParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#LinuxParameters'>aws.ecs.LinuxParameters</a>&gt;;</code></pre>
@@ -1331,7 +1367,7 @@ capabilities. For more information see
 [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html).
 
 <h4 class="pdoc-member-header" id="Container-logConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L440">property <b>logConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L503">property <b>logConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#LogConfiguration'>aws.ecs.LogConfiguration</a>&gt;;</code></pre>
@@ -1351,7 +1387,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 `--log-driver` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L464">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L527">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1378,7 +1414,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 `--memory` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-memoryReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L493">property <b>memoryReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L556">property <b>memoryReservation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryReservation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1410,7 +1446,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 `--memory-reservation` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-mountPoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L503">property <b>mountPoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L566">property <b>mountPoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountPoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#MountPoint'>aws.ecs.MountPoint</a>[]&gt;;</code></pre>
@@ -1423,7 +1459,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 `--volume` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-networkListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L637">property <b>networkListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L785">property <b>networkListener</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkListener?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkListener'>x.lb.NetworkListener</a> | <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkListenerArgs'>x.lb.NetworkListenerArgs</a>;</code></pre>
@@ -1432,7 +1468,7 @@ Alternative to passing in `portMappings`.  If a listener (or args to create a li
 passed in, it will be used instead.
 
 <h4 class="pdoc-member-header" id="Container-portMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L625">property <b>portMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L773">property <b>portMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portMappings?: PortMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;PortMapping&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;PortMapping&gt; | <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>[];</code></pre>
@@ -1467,7 +1503,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 `--publish` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-privileged">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L517">property <b>privileged</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L580">property <b>privileged</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privileged?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1483,8 +1519,19 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 Note: This parameter is not supported for Windows containers or tasks using the Fargate
 launch type.
 
+<h4 class="pdoc-member-header" id="Container-pseudoTerminal">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L588">property <b>pseudoTerminal</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>pseudoTerminal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+When this parameter is true, a TTY is allocated. This parameter maps to `Tty` in the [Create
+a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of
+the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--tty` option to
+[docker run](https://docs.docker.com/engine/reference/run/).
+
 <h4 class="pdoc-member-header" id="Container-readonlyRootFilesystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L529">property <b>readonlyRootFilesystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L600">property <b>readonlyRootFilesystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readonlyRootFilesystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1498,8 +1545,25 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 
 Note: This parameter is not supported for Windows containers.
 
+<h4 class="pdoc-member-header" id="Container-repositoryCredentials">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L605">property <b>repositoryCredentials</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#RepositoryCredentials'>aws.ecs.RepositoryCredentials</a>&gt;;</code></pre>
+
+The private repository authentication credentials to use.
+
+<h4 class="pdoc-member-header" id="Container-resourceRequirements">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L611">property <b>resourceRequirements</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceRequirements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#ResourceRequirements'>aws.ecs.ResourceRequirements</a>[]&gt;;</code></pre>
+
+The type and amount of a resource to assign to a container. The only supported resource is a
+GPU.
+
 <h4 class="pdoc-member-header" id="Container-secrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L536">property <b>secrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L618">property <b>secrets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Secret'>aws.ecs.Secret</a>[]&gt;;</code></pre>
@@ -1508,8 +1572,83 @@ The secrets to pass to the container. For more information, see
 [Specifying-Sensitive-Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
 in the Amazon Elastic Container Service Developer Guide.
 
+<h4 class="pdoc-member-header" id="Container-startTimeout">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L644">property <b>startTimeout</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>startTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+Time duration (in seconds) to wait before giving up on resolving dependencies for a
+container. For example, you specify two containers in a task definition with containerA
+having a dependency on containerB reaching a `COMPLETE`, `SUCCESS`, or `HEALTHY` status. If a
+startTimeout value is specified for containerB and it does not reach the desired status
+within that time then containerA will give up and not start. This results in the task
+transitioning to a `STOPPED` state.
+
+For tasks using the EC2 launch type, the container instances require at least version 1.26.0
+of the container agent to enable a container start timeout value. However, we recommend using
+the latest container agent version. For information about checking your agent version and
+updating to the latest version, see [Updating the Amazon ECS Container
+Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in
+the Amazon Elastic Container Service Developer Guide. If you are using an Amazon
+ECS-optimized Linux AMI, your instance needs at least version 1.26.0-1 of the ecs-init
+package. If your container instances are launched from version 20190301 or later, then they
+contain the required versions of the container agent and ecs-init. For more information, see
+[Amazon ECS-optimized Linux
+AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in
+the Amazon Elastic Container Service Developer Guide.
+
+For tasks using the Fargate launch type, the task or service requires platform version
+`1.3.0` or later.
+
+<h4 class="pdoc-member-header" id="Container-stopTimeout">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L668">property <b>stopTimeout</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>stopTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+Time duration (in seconds) to wait before the container is forcefully killed if it doesn't
+exit normally on its own.
+
+For tasks using the Fargate launch type, the max `stopTimeout` value is 2 minutes and the
+task or service requires platform version `1.3.0` or later.
+
+For tasks using the EC2 launch type, the stop timeout value for the container takes
+precedence over the `ECS_CONTAINER_STOP_TIMEOUT` container agent configuration parameter, if
+used. Container instances require at least version 1.26.0 of the container agent to enable a
+container stop timeout value. However, we recommend using the latest container agent version.
+For information about checking your agent version and updating to the latest version, see
+[Updating the Amazon ECS Container
+Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in
+the Amazon Elastic Container Service Developer Guide. If you are using an Amazon
+ECS-optimized Linux AMI, your instance needs at least version 1.26.0-1 of the ecs-init
+package. If your container instances are launched from version 20190301 or later, then they
+contain the required versions of the container agent and ecs-init. For more information, see
+[Amazon ECS-optimized Linux
+AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in
+the Amazon Elastic Container Service Developer Guide.
+
+<h4 class="pdoc-member-header" id="Container-systemControls">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L684">property <b>systemControls</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>systemControls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#SystemControl'>aws.ecs.SystemControl</a>[]&gt;;</code></pre>
+
+A list of namespaced kernel parameters to set in the container. This parameter maps to
+`Sysctls` in the [Create a
+container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of
+the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--sysctl` option
+to [`docker run`](https://docs.docker.com/engine/reference/run/).
+
+*Note*: It is not recommended that you specify network-related `systemControls` parameters
+for multiple containers in a single task that also uses either the `awsvpc` or `host` network
+modes. For tasks that use the `awsvpc` network mode, the container that is started last
+determines which `systemControls` parameters take effect. For tasks that use the host network
+mode, it changes the container instance's namespaced kernel parameters as well as the
+containers.
+
 <h4 class="pdoc-member-header" id="Container-ulimits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L553">property <b>ulimits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L701">property <b>ulimits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ulimits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Ulimit'>aws.ecs.Ulimit</a>[]&gt;;</code></pre>
@@ -1529,7 +1668,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 Note: This parameter is not supported for Windows containers.
 
 <h4 class="pdoc-member-header" id="Container-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L563">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L711">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1542,7 +1681,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 `--user` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-volumesFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L573">property <b>volumesFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L721">property <b>volumesFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumesFrom?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#VolumeFrom'>aws.ecs.VolumeFrom</a>[]&gt;;</code></pre>
@@ -1555,7 +1694,7 @@ section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) an
 `--volumes-from` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
 <h4 class="pdoc-member-header" id="Container-workingDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L583">property <b>workingDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L731">property <b>workingDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workingDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1567,100 +1706,136 @@ This parameter maps to `WorkingDir` in the
 section of the [Docker-Remote-API](https://docs.docker.com/engine/api/v1.35/) and the
 `--workdir` parameter to [docker-run](https://docs.docker.com/engine/reference/run/).
 
+<h3 class="pdoc-module-header" id="ContainerDependency" data-link-title="ContainerDependency">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L253">
+        interface <strong>ContainerDependency</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerDependency</span></code></pre>
+
+See https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDependency.html
+for more details.
+
+<h4 class="pdoc-member-header" id="ContainerDependency-condition">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L266">property <b>condition</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"START"</span> | <span class='s2'>"COMPLETE"</span> | <span class='s2'>"SUCCESS"</span> | <span class='s2'>"HEALTHY"</span>&gt;;</code></pre>
+
+The dependency condition of the container. The following are the available conditions and
+   their behavior: START - This condition emulates the behavior of links and volumes today.
+   It validates that a dependent container is started before permitting other containers to
+   start. COMPLETE - This condition validates that a dependent container runs to completion
+   (exits) before permitting other containers to start. This can be useful for nonessential
+   containers that run a script and then exit. SUCCESS - This condition is the same as
+   COMPLETE, but it also requires that the container exits with a zero status. HEALTHY - This
+   condition validates that the dependent container passes its Docker health check before
+   permitting other containers to start. This requires that the dependent container has
+   health checks configured. This condition is confirmed only at task startup.
+
+<h4 class="pdoc-member-header" id="ContainerDependency-containerName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L270">property <b>containerName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>containerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of a container.
+
 <h3 class="pdoc-module-header" id="ContainerImageProvider" data-link-title="ContainerImageProvider">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L640">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L788">
         interface <strong>ContainerImageProvider</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerImageProvider</span></code></pre>
 <h4 class="pdoc-member-header" id="ContainerImageProvider-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L642">method <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L790">method <b>environment</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>environment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KeyValuePair'>KeyValuePair</a>[]&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="ContainerImageProvider-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L641">method <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L789">method <b>image</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>image(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="ContainerLoadBalancer" data-link-title="ContainerLoadBalancer">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L194">
         interface <strong>ContainerLoadBalancer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerLoadBalancer</span></code></pre>
 <h4 class="pdoc-member-header" id="ContainerLoadBalancer-containerPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L193">property <b>containerPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L195">property <b>containerPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerLoadBalancer-elbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L194">property <b>elbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L196">property <b>elbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elbName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerLoadBalancer-targetGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L195">property <b>targetGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L197">property <b>targetGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ContainerLoadBalancerProvider" data-link-title="ContainerLoadBalancerProvider">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L200">
         interface <strong>ContainerLoadBalancerProvider</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerLoadBalancerProvider</span></code></pre>
 <h4 class="pdoc-member-header" id="ContainerLoadBalancerProvider-containerLoadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L199">method <b>containerLoadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L201">method <b>containerLoadBalancer</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>containerLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="ContainerPortMappingProvider" data-link-title="ContainerPortMappingProvider">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L190">
         interface <strong>ContainerPortMappingProvider</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerPortMappingProvider</span></code></pre>
 <h4 class="pdoc-member-header" id="ContainerPortMappingProvider-containerPortMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L189">method <b>containerPortMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L191">method <b>containerPortMapping</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>containerPortMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#PortMapping'>aws.ecs.PortMapping</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="EC2Service" data-link-title="EC2Service">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L65">
         class <strong>EC2Service</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EC2Service</span> <span class='kr'>extends</span> <a href='#Service'>Service</a></code></pre>
 <h4 class="pdoc-member-header" id="EC2Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> EC2Service(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EC2ServiceArgs'>EC2ServiceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="EC2Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L65">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L65">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EC2Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1671,24 +1846,24 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EC2Service-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L65">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L65">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EC2Service-applicationListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L33">property <b>applicationListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L33">property <b>applicationListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationListener'>x.lb.ApplicationListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EC2Service-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L24">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L24">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cluster: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Cluster'>ecs.Cluster</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EC2Service-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L32">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L32">property <b>listeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>&gt;;</code></pre>
@@ -1698,22 +1873,22 @@ balancer. Only present if a listener was provided in [Container.portMappings] or
 [Container.applicationListener] or [Container.networkListener].
 
 <h4 class="pdoc-member-header" id="EC2Service-networkListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L34">property <b>networkListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L34">property <b>networkListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkListener'>x.lb.NetworkListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EC2Service-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L23">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L23">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Service'>aws.ecs.Service</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EC2Service-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L66">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L66">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskDefinition: <a href='#EC2TaskDefinition'>EC2TaskDefinition</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EC2Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L65">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L65">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1722,14 +1897,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EC2ServiceArgs" data-link-title="EC2ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L207">
         interface <strong>EC2ServiceArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EC2ServiceArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L285">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L290">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Cluster'>ecs.Cluster</a>;</code></pre>
@@ -1737,7 +1912,7 @@ deployments.
 Cluster this service will run in.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-deploymentMaximumPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L210">property <b>deploymentMaximumPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L215">property <b>deploymentMaximumPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMaximumPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1747,7 +1922,7 @@ tasks that can be running in a service during a deployment. Not valid when using
 scheduling strategy.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-deploymentMinimumHealthyPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L216">property <b>deploymentMinimumHealthyPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L221">property <b>deploymentMinimumHealthyPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMinimumHealthyPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1756,7 +1931,7 @@ The lower limit (as a percentage of the service's desiredCount) of the number of
 tasks that must remain running and healthy in a service during a deployment.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-desiredCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L291">property <b>desiredCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L296">property <b>desiredCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1765,7 +1940,7 @@ The number of instances of the task definition to place and keep running. Defaul
 not specify if using the `DAEMON` scheduling strategy.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-healthCheckGracePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L222">property <b>healthCheckGracePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L227">property <b>healthCheckGracePeriodSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckGracePeriodSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1774,7 +1949,7 @@ Seconds to ignore failing load balancer health checks on newly instantiated task
 premature shutdown, up to 7200. Only valid for services configured to use load balancers.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-iamRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L232">property <b>iamRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L237">property <b>iamRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1787,7 +1962,7 @@ service-linked role, that role is used by default for your service unless you sp
 here.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-loadBalancers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L237">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L242">property <b>loadBalancers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='#ServiceLoadBalancer'>ServiceLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#ServiceLoadBalancer'>ServiceLoadBalancer</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#ServiceLoadBalancer'>ServiceLoadBalancer</a>&gt; | <a href='#ServiceLoadBalancerProvider'>ServiceLoadBalancerProvider</a>[];</code></pre>
@@ -1795,7 +1970,7 @@ here.
 A load balancer block. Load balancers documented below.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L242">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L247">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1803,7 +1978,7 @@ A load balancer block. Load balancers documented below.
 The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-orderedPlacementStrategies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L262">property <b>orderedPlacementStrategies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L267">property <b>orderedPlacementStrategies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderedPlacementStrategies?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | ServiceOrderedPlacementStrategy | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy&gt;[]&gt;;</code></pre>
@@ -1813,12 +1988,12 @@ from top to bottom in order of precedence. The maximum number of `ordered_placem
 blocks is `5`. Defined below.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-os">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L293">property <b>os</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L298">property <b>os</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>os?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"linux"</span> | <span class='s2'>"windows"</span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L268">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L273">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | ServicePlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint&gt;[]&gt;;</code></pre>
@@ -1827,7 +2002,7 @@ rules that are taken into consideration during task placement. Maximum number of
 `placement_constraints` is `10`. Defined below.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-schedulingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L275">property <b>schedulingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L280">property <b>schedulingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedulingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1837,7 +2012,7 @@ Defaults to `REPLICA`. Note that [*Fargate tasks do not support the `DAEMON` sch
 strategy*](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html).
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L249">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L254">property <b>securityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroupOrId'>x.ec2.SecurityGroupOrId</a>[];</code></pre>
@@ -1847,7 +2022,7 @@ The security groups to use for the instances.
 Defaults to [cluster.securityGroups] if unspecified.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-serviceRegistries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L280">property <b>serviceRegistries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L285">property <b>serviceRegistries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRegistries?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | ServiceServiceRegistries | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceServiceRegistries&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceServiceRegistries&gt;;</code></pre>
@@ -1855,7 +2030,7 @@ Defaults to [cluster.securityGroups] if unspecified.
 The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L255">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L260">property <b>subnets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1864,7 +2039,7 @@ The subnets to connect the instances to.  If unspecified then these will be the 
 subnets of the cluster's vpc.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L319">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L324">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
@@ -1872,7 +2047,7 @@ subnets of the cluster's vpc.
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L308">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L313">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinition?: <a href='#EC2TaskDefinition'>EC2TaskDefinition</a>;</code></pre>
@@ -1881,7 +2056,7 @@ The task definition to create the service from.  Either [taskDefinition] or
 [taskDefinitionArgs] must be provided.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-taskDefinitionArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L314">property <b>taskDefinitionArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L319">property <b>taskDefinitionArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinitionArgs?: <a href='#EC2TaskDefinitionArgs'>EC2TaskDefinitionArgs</a>;</code></pre>
@@ -1890,7 +2065,7 @@ The task definition to create the service from.  Either [taskDefinition] or
 [taskDefinitionArgs] must be provided.
 
 <h4 class="pdoc-member-header" id="EC2ServiceArgs-waitForSteadyState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L300">property <b>waitForSteadyState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L305">property <b>waitForSteadyState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitForSteadyState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1900,21 +2075,21 @@ services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/serv
 before continuing. Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="EC2TaskDefinition" data-link-title="EC2TaskDefinition">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L22">
         class <strong>EC2TaskDefinition</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EC2TaskDefinition</span> <span class='kr'>extends</span> <a href='#TaskDefinition'>TaskDefinition</a></code></pre>
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L22"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L22"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> EC2TaskDefinition(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EC2TaskDefinitionArgs'>EC2TaskDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-createExecutionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L117">method <b>createExecutionRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L118">method <b>createExecutionRole</b></a>
 </h4>
 
 
@@ -1928,7 +2103,7 @@ to create [RolePolicyAttachment]s for the Role.  Otherwise, [defaultExecutionRol
 be used.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-createService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L49">method <b>createService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L49">method <b>createService</b></a>
 </h4>
 
 
@@ -1938,7 +2113,7 @@ be used.
 Creates a service with this as its task definition.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-createTaskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L97">method <b>createTaskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L98">method <b>createTaskRole</b></a>
 </h4>
 
 
@@ -1952,35 +2127,35 @@ to create [RolePolicyAttachment]s for the Role.  Otherwise, [defaultTaskRolePoli
 be used.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-defaultExecutionRolePolicyARNs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L156">method <b>defaultExecutionRolePolicyARNs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L157">method <b>defaultExecutionRolePolicyARNs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>defaultExecutionRolePolicyARNs(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]</code></pre>
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-defaultRoleAssumeRolePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L131">method <b>defaultRoleAssumeRolePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L132">method <b>defaultRoleAssumeRolePolicy</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>defaultRoleAssumeRolePolicy(): <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyDocument'>aws.iam.PolicyDocument</a></code></pre>
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-defaultTaskRolePolicyARNs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L146">method <b>defaultTaskRolePolicyARNs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L147">method <b>defaultTaskRolePolicyARNs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>defaultTaskRolePolicyARNs(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]</code></pre>
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L22">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L22">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1991,29 +2166,29 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L22">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L22">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-applicationListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L38">property <b>applicationListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L38">property <b>applicationListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationListener'>x.lb.ApplicationListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L28">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L28">property <b>containers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containers: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Container'>ecs.Container</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-executionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L30">property <b>executionRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L30">property <b>executionRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>executionRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L37">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L37">property <b>listeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>&gt;;</code></pre>
@@ -2023,17 +2198,17 @@ Only present if a listener was provided in [Container.portMappings] or in
 [Container.applicationListener] or [Container.networkListener].
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L27">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L27">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#LogGroup'>aws.cloudwatch.LogGroup</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-networkListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L39">property <b>networkListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L39">property <b>networkListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkListener'>x.lb.NetworkListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-run">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L48">property <b>run</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L48">property <b>run</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>run: (params: <a href='#RunTaskRequest'>RunTaskRequest</a>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;awssdk.ECS.Types.RunTaskResponse&gt;;</code></pre>
@@ -2045,17 +2220,17 @@ This wrapper around `runTask` provides appropriate defaults based on the TaskDef
 This API is designed for use at runtime.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L26">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L26">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskDefinition: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#TaskDefinition'>aws.ecs.TaskDefinition</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-taskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L29">property <b>taskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L29">property <b>taskRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EC2TaskDefinition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2064,14 +2239,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EC2TaskDefinitionArgs" data-link-title="EC2TaskDefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L123">
         interface <strong>EC2TaskDefinitionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>EC2TaskDefinitionArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L178">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L183">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Container'>ecs.Container</a>;</code></pre>
@@ -2082,7 +2257,7 @@ multiple containers, especially when creating a TaskDefinition to call [run] on.
 Either [container] or [containers] must be provided.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L186">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L191">property <b>containers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containers?: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Container'>ecs.Container</a>&gt;;</code></pre>
@@ -2093,7 +2268,7 @@ Service that will contain many containers within.
 Either [container] or [containers] must be provided.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-executionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L162">property <b>executionRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L167">property <b>executionRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
@@ -2102,8 +2277,16 @@ The execution role that the Amazon ECS container agent and the Docker daemon can
 
 If `undefined`, a default will be created for the task.  If `null` no role will be created.
 
+<h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-family">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L160">property <b>family</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional family name for the Task Definition. If not specified, then a suitable default will be created.
+
 <h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L149">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L149">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#LogGroup'>aws.cloudwatch.LogGroup</a>;</code></pre>
@@ -2112,7 +2295,7 @@ Log group for logging information related to the service.  If `undefined` a defa
 with a one-day retention policy will be created.  If `null` no log group will be created.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L168">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L173">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"none"</span> | <span class='s2'>"bridge"</span> | <span class='s2'>"awsvpc"</span> | <span class='s2'>"host"</span>&gt;;</code></pre>
@@ -2121,7 +2304,7 @@ The Docker networking mode to use for the containers in the task. The valid valu
 `none`, `bridge`, `awsvpc`, and `host`.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L136">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L136">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | TaskDefinitionPlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint&gt;[]&gt;;</code></pre>
@@ -2130,7 +2313,7 @@ A set of placement constraints rules that are taken into consideration during ta
 Maximum number of `placement_constraints` is `10`.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L191">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L196">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
@@ -2138,7 +2321,7 @@ Maximum number of `placement_constraints` is `10`.
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-taskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L155">property <b>taskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L155">property <b>taskRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
@@ -2147,7 +2330,7 @@ IAM role that allows your Amazon ECS container task to make calls to other AWS s
 `undefined`, a default will be created for the task.  If `null` no role will be created.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-volumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L141">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L141">property <b>volumes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | TaskDefinitionVolume | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume&gt;[]&gt;;</code></pre>
@@ -2155,7 +2338,7 @@ IAM role that allows your Amazon ECS container task to make calls to other AWS s
 A set of volume blocks that containers in your task may use.
 
 <h4 class="pdoc-member-header" id="EC2TaskDefinitionArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/ec2Service.ts#L130">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/ec2Service.ts#L130">property <b>vpc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpc?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
@@ -2164,28 +2347,28 @@ The vpc that the service for this task will run in.  Does not normally need to b
 provided as it will be inferred from the cluster the service is associated with.
 
 <h3 class="pdoc-module-header" id="FargateService" data-link-title="FargateService">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L192">
         class <strong>FargateService</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>FargateService</span> <span class='kr'>extends</span> <a href='#Service'>Service</a></code></pre>
 <h4 class="pdoc-member-header" id="FargateService-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L193"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L193"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> FargateService(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FargateServiceArgs'>FargateServiceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="FargateService-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L192">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L192">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FargateService-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L192">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L192">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2196,24 +2379,24 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FargateService-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L192">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L192">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FargateService-applicationListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L33">property <b>applicationListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L33">property <b>applicationListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationListener'>x.lb.ApplicationListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FargateService-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L24">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L24">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cluster: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Cluster'>ecs.Cluster</a>;</code></pre>
 <h4 class="pdoc-member-header" id="FargateService-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L32">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L32">property <b>listeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>&gt;;</code></pre>
@@ -2223,22 +2406,22 @@ balancer. Only present if a listener was provided in [Container.portMappings] or
 [Container.applicationListener] or [Container.networkListener].
 
 <h4 class="pdoc-member-header" id="FargateService-networkListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L34">property <b>networkListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L34">property <b>networkListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkListener'>x.lb.NetworkListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FargateService-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L23">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L23">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Service'>aws.ecs.Service</a>;</code></pre>
 <h4 class="pdoc-member-header" id="FargateService-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L193">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L193">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskDefinition: <a href='#FargateTaskDefinition'>FargateTaskDefinition</a>;</code></pre>
 <h4 class="pdoc-member-header" id="FargateService-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L192">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L192">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2247,14 +2430,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FargateServiceArgs" data-link-title="FargateServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L339">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L344">
         interface <strong>FargateServiceArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>FargateServiceArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="FargateServiceArgs-assignPublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L386">property <b>assignPublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L391">property <b>assignPublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignPublicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2264,7 +2447,7 @@ Whether or not public IPs should be provided for the instances.
 Defaults to [true] if unspecified.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L432">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L437">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Cluster'>ecs.Cluster</a>;</code></pre>
@@ -2272,7 +2455,7 @@ Defaults to [true] if unspecified.
 Cluster this service will run in.  If unspecified, [Cluster.getDefault()] will be used.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-deploymentMaximumPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L347">property <b>deploymentMaximumPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L352">property <b>deploymentMaximumPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMaximumPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2282,7 +2465,7 @@ tasks that can be running in a service during a deployment. Not valid when using
 scheduling strategy.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-deploymentMinimumHealthyPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L353">property <b>deploymentMinimumHealthyPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L358">property <b>deploymentMinimumHealthyPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMinimumHealthyPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2291,7 +2474,7 @@ The lower limit (as a percentage of the service's desiredCount) of the number of
 tasks that must remain running and healthy in a service during a deployment.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-desiredCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L438">property <b>desiredCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L443">property <b>desiredCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2300,7 +2483,7 @@ The number of instances of the task definition to place and keep running. Defaul
 not specify if using the `DAEMON` scheduling strategy.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-healthCheckGracePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L359">property <b>healthCheckGracePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L364">property <b>healthCheckGracePeriodSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckGracePeriodSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2309,7 +2492,7 @@ Seconds to ignore failing load balancer health checks on newly instantiated task
 premature shutdown, up to 7200. Only valid for services configured to use load balancers.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-iamRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L369">property <b>iamRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L374">property <b>iamRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2322,7 +2505,7 @@ service-linked role, that role is used by default for your service unless you sp
 here.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-loadBalancers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L374">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L379">property <b>loadBalancers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='#ServiceLoadBalancer'>ServiceLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#ServiceLoadBalancer'>ServiceLoadBalancer</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#ServiceLoadBalancer'>ServiceLoadBalancer</a>&gt; | <a href='#ServiceLoadBalancerProvider'>ServiceLoadBalancerProvider</a>[];</code></pre>
@@ -2330,7 +2513,7 @@ here.
 A load balancer block. Load balancers documented below.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L379">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L384">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2338,7 +2521,7 @@ A load balancer block. Load balancers documented below.
 The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-orderedPlacementStrategies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L407">property <b>orderedPlacementStrategies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L412">property <b>orderedPlacementStrategies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderedPlacementStrategies?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | ServiceOrderedPlacementStrategy | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy&gt;[]&gt;;</code></pre>
@@ -2348,12 +2531,12 @@ from top to bottom in order of precedence. The maximum number of `ordered_placem
 blocks is `5`. Defined below.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-os">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L440">property <b>os</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L445">property <b>os</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>os?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"linux"</span> | <span class='s2'>"windows"</span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FargateServiceArgs-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L413">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L418">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | ServicePlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint&gt;[]&gt;;</code></pre>
@@ -2362,7 +2545,7 @@ rules that are taken into consideration during task placement. Maximum number of
 `placement_constraints` is `10`. Defined below.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-schedulingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L420">property <b>schedulingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L425">property <b>schedulingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedulingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2372,7 +2555,7 @@ Defaults to `REPLICA`. Note that [*Fargate tasks do not support the `DAEMON` sch
 strategy*](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html).
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L393">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L398">property <b>securityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroupOrId'>x.ec2.SecurityGroupOrId</a>[];</code></pre>
@@ -2382,7 +2565,7 @@ The security groups to use for the instances.
 Defaults to [cluster.securityGroups] if unspecified.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-serviceRegistries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L425">property <b>serviceRegistries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L430">property <b>serviceRegistries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRegistries?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | ServiceServiceRegistries | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceServiceRegistries&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceServiceRegistries&gt;;</code></pre>
@@ -2390,7 +2573,7 @@ Defaults to [cluster.securityGroups] if unspecified.
 The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L400">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L405">property <b>subnets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2400,7 +2583,7 @@ these will be the public subnets of the cluster's vpc.  If unspecified and [assi
 is false, then these will be the private subnets of the cluster's vpc.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L466">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L471">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
@@ -2408,7 +2591,7 @@ is false, then these will be the private subnets of the cluster's vpc.
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L455">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L460">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#FargateTaskDefinition'>ecs.FargateTaskDefinition</a>;</code></pre>
@@ -2417,7 +2600,7 @@ The task definition to create the service from.  Either [taskDefinition] or
 [taskDefinitionArgs] must be provided.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-taskDefinitionArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L461">property <b>taskDefinitionArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L466">property <b>taskDefinitionArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinitionArgs?: <a href='#FargateTaskDefinitionArgs'>FargateTaskDefinitionArgs</a>;</code></pre>
@@ -2426,7 +2609,7 @@ The task definition to create the service from.  Either [taskDefinition] or
 [taskDefinitionArgs] must be provided.
 
 <h4 class="pdoc-member-header" id="FargateServiceArgs-waitForSteadyState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L447">property <b>waitForSteadyState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L452">property <b>waitForSteadyState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitForSteadyState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2436,21 +2619,21 @@ services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/serv
 before continuing. Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="FargateTaskDefinition" data-link-title="FargateTaskDefinition">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L22">
         class <strong>FargateTaskDefinition</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>FargateTaskDefinition</span> <span class='kr'>extends</span> <a href='#TaskDefinition'>TaskDefinition</a></code></pre>
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L22"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L22"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> FargateTaskDefinition(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#FargateTaskDefinitionArgs'>ecs.FargateTaskDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-createExecutionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L117">method <b>createExecutionRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L118">method <b>createExecutionRole</b></a>
 </h4>
 
 
@@ -2464,7 +2647,7 @@ to create [RolePolicyAttachment]s for the Role.  Otherwise, [defaultExecutionRol
 be used.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-createService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L56">method <b>createService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L56">method <b>createService</b></a>
 </h4>
 
 
@@ -2474,7 +2657,7 @@ be used.
 Creates a service with this as its task definition.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-createTaskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L97">method <b>createTaskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L98">method <b>createTaskRole</b></a>
 </h4>
 
 
@@ -2488,35 +2671,35 @@ to create [RolePolicyAttachment]s for the Role.  Otherwise, [defaultTaskRolePoli
 be used.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-defaultExecutionRolePolicyARNs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L156">method <b>defaultExecutionRolePolicyARNs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L157">method <b>defaultExecutionRolePolicyARNs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>defaultExecutionRolePolicyARNs(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]</code></pre>
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-defaultRoleAssumeRolePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L131">method <b>defaultRoleAssumeRolePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L132">method <b>defaultRoleAssumeRolePolicy</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>defaultRoleAssumeRolePolicy(): <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyDocument'>aws.iam.PolicyDocument</a></code></pre>
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-defaultTaskRolePolicyARNs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L146">method <b>defaultTaskRolePolicyARNs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L147">method <b>defaultTaskRolePolicyARNs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public static </span>defaultTaskRolePolicyARNs(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]</code></pre>
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L22">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L22">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2527,29 +2710,29 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L22">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L22">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-applicationListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L38">property <b>applicationListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L38">property <b>applicationListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#ApplicationListener'>x.lb.ApplicationListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L28">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L28">property <b>containers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containers: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Container'>ecs.Container</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-executionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L30">property <b>executionRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L30">property <b>executionRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>executionRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L37">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L37">property <b>listeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#Listener'>x.lb.Listener</a>&gt;;</code></pre>
@@ -2559,17 +2742,17 @@ Only present if a listener was provided in [Container.portMappings] or in
 [Container.applicationListener] or [Container.networkListener].
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L27">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L27">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#LogGroup'>aws.cloudwatch.LogGroup</a>;</code></pre>
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-networkListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L39">property <b>networkListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L39">property <b>networkListeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkListeners: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/lb/#NetworkListener'>x.lb.NetworkListener</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-run">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L48">property <b>run</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L48">property <b>run</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>run: (params: <a href='#RunTaskRequest'>RunTaskRequest</a>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;awssdk.ECS.Types.RunTaskResponse&gt;;</code></pre>
@@ -2581,17 +2764,17 @@ This wrapper around `runTask` provides appropriate defaults based on the TaskDef
 This API is designed for use at runtime.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L26">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L26">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskDefinition: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecs/#TaskDefinition'>aws.ecs.TaskDefinition</a>;</code></pre>
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-taskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L29">property <b>taskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L29">property <b>taskRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
 <h4 class="pdoc-member-header" id="FargateTaskDefinition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2600,14 +2783,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FargateTaskDefinitionArgs" data-link-title="FargateTaskDefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L256">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L256">
         interface <strong>FargateTaskDefinitionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>FargateTaskDefinitionArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L315">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L320">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Container'>ecs.Container</a>;</code></pre>
@@ -2618,7 +2801,7 @@ multiple containers, especially when creating a TaskDefinition to call [run] on.
 Either [container] or [containers] must be provided.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L323">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L328">property <b>containers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containers?: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Container'>ecs.Container</a>&gt;;</code></pre>
@@ -2629,7 +2812,7 @@ contain many containers within.
 Either [container] or [containers] must be provided.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L301">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L306">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2638,7 +2821,7 @@ The number of cpu units used by the task.  If not provided, a default will be co
 based on the cumulative needs specified by [containerDefinitions]
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-executionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L295">property <b>executionRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L300">property <b>executionRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
@@ -2647,8 +2830,16 @@ The execution role that the Amazon ECS container agent and the Docker daemon can
 
  If `undefined`, a default will be created for the task.  If `null` no role will be created.
 
+<h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-family">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L293">property <b>family</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional family name for the Task Definition. If not specified, then a suitable default will be created.
+
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L282">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L282">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#LogGroup'>aws.cloudwatch.LogGroup</a>;</code></pre>
@@ -2657,7 +2848,7 @@ Log group for logging information related to the service.  If `undefined` a defa
 with a one-day retention policy will be created.  If `null` no log group will be created.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L307">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L312">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2666,7 +2857,7 @@ The amount (in MiB) of memory used by the task.  If not provided, a default will
 based on the cumulative needs specified by [containerDefinitions]
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L269">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L269">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | TaskDefinitionPlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint&gt;[]&gt;;</code></pre>
@@ -2675,7 +2866,7 @@ A set of placement constraints rules that are taken into consideration during ta
 Maximum number of `placement_constraints` is `10`.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L328">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L333">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
@@ -2683,7 +2874,7 @@ Maximum number of `placement_constraints` is `10`.
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-taskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L288">property <b>taskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L288">property <b>taskRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
@@ -2692,7 +2883,7 @@ IAM role that allows your Amazon ECS container task to make calls to other AWS s
 `undefined`, a default will be created for the task.  If `null` no role will be created.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-volumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L274">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L274">property <b>volumes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | TaskDefinitionVolume | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume&gt;[]&gt;;</code></pre>
@@ -2700,7 +2891,7 @@ IAM role that allows your Amazon ECS container task to make calls to other AWS s
 A set of volume blocks that containers in your task may use.
 
 <h4 class="pdoc-member-header" id="FargateTaskDefinitionArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/fargateService.ts#L263">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/fargateService.ts#L263">property <b>vpc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpc?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
@@ -2709,21 +2900,21 @@ The vpc that the service for this task will run in.  Does not normally need to b
 provided as it will be inferred from the cluster the service is associated with.
 
 <h3 class="pdoc-module-header" id="Image" data-link-title="Image">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/image.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/image.ts#L22">
         class <strong>Image</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code> <span class='kr'>implements</span> <a href='#ContainerImageProvider'>ContainerImageProvider</a></code></pre>
 <h4 class="pdoc-member-header" id="Image-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/image.ts#L24">method <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/image.ts#L24">method <b>environment</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>environment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#KeyValuePair'>ecs.KeyValuePair</a>[]&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Image-fromDockerBuild">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/image.ts#L50">method <b>fromDockerBuild</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/image.ts#L50">method <b>fromDockerBuild</b></a>
 </h4>
 
 
@@ -2740,7 +2931,7 @@ created on-demand, using the [name] value.
 <pre class="highlight"><code><span class='kd'>public static </span>fromDockerBuild(repository: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecr/#Repository'>aws.ecr.Repository</a>, build: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;docker.DockerBuild&gt;): <a href='#Image'>Image</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Image-fromFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/image.ts#L63">method <b>fromFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/image.ts#L63">method <b>fromFunction</b></a>
 </h4>
 
 
@@ -2750,7 +2941,7 @@ created on-demand, using the [name] value.
 Creates an [Image] given function code to use as the implementation of the container.
 
 <h4 class="pdoc-member-header" id="Image-fromPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/image.ts#L33">method <b>fromPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/image.ts#L33">method <b>fromPath</b></a>
 </h4>
 
 
@@ -2767,14 +2958,14 @@ created on-demand, using the [name] value.
 <pre class="highlight"><code><span class='kd'>public static </span>fromPath(repository: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecr/#Repository'>aws.ecr.Repository</a>, path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='#Image'>Image</a></code></pre>
 
 <h4 class="pdoc-member-header" id="Image-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/image.ts#L23">method <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/image.ts#L23">method <b>image</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span>image(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="KeyValuePair" data-link-title="KeyValuePair">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L236">
         interface <strong>KeyValuePair</strong>
     </a>
 </h3>
@@ -2785,7 +2976,7 @@ See https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KeyValuePair.h
 for more details.
 
 <h4 class="pdoc-member-header" id="KeyValuePair-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L234">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L241">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2794,7 +2985,7 @@ The name of the key-value pair. For environment variables, this is the name of t
 environment variable.
 
 <h4 class="pdoc-member-header" id="KeyValuePair-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/container.ts#L237">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/container.ts#L246">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2803,14 +2994,14 @@ The value of the key-value pair. For environment variables, this is the value of
 environment variable.
 
 <h3 class="pdoc-module-header" id="NetworkConfiguration" data-link-title="NetworkConfiguration">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L152">
         interface <strong>NetworkConfiguration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>NetworkConfiguration</span></code></pre>
 <h4 class="pdoc-member-header" id="NetworkConfiguration-assignPublicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L158">property <b>assignPublicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L158">property <b>assignPublicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assignPublicIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2819,7 +3010,7 @@ Assign a public IP address to the ENI (Fargate launch type only). Valid values a
 false. Default false.
 
 <h4 class="pdoc-member-header" id="NetworkConfiguration-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L164">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L164">property <b>securityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2828,7 +3019,7 @@ The security groups associated with the task or service. If you do not specify a
 group, the default security group for the VPC is used.
 
 <h4 class="pdoc-member-header" id="NetworkConfiguration-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L169">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L169">property <b>subnets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2836,14 +3027,14 @@ group, the default security group for the VPC is used.
 The subnets associated with the task or service.
 
 <h3 class="pdoc-module-header" id="RunTaskRequest" data-link-title="RunTaskRequest">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L162">
         interface <strong>RunTaskRequest</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RunTaskRequest</span></code></pre>
 <h4 class="pdoc-member-header" id="RunTaskRequest-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L165">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L166">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Cluster'>ecs.Cluster</a>;</code></pre>
@@ -2851,7 +3042,7 @@ The subnets associated with the task or service.
 The Cluster to run the Task within.
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-count">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L173">property <b>count</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L174">property <b>count</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>count?: awssdk.ECS.BoxedInteger;</code></pre>
@@ -2859,7 +3050,7 @@ The Cluster to run the Task within.
 The number of instantiations of the specified task to place on your cluster. You can specify up to 10 tasks per call.
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-enableECSManagedTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L205">property <b>enableECSManagedTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L206">property <b>enableECSManagedTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableECSManagedTags?: awssdk.ECS.Boolean;</code></pre>
@@ -2867,7 +3058,7 @@ The number of instantiations of the specified task to place on your cluster. You
 Specifies whether to enable Amazon ECS managed tags for the task. For more information, see Tagging Your Amazon ECS Resources in the Amazon Elastic Container Service Developer Guide.
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L181">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L182">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: awssdk.ECS.String;</code></pre>
@@ -2875,7 +3066,7 @@ Specifies whether to enable Amazon ECS managed tags for the task. For more infor
 The name of the task group to associate with the task. The default value is the family name of the task definition (for example, family:my-family-name).
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-networkConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L197">property <b>networkConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L198">property <b>networkConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConfiguration?: awssdk.ECS.NetworkConfiguration;</code></pre>
@@ -2883,7 +3074,7 @@ The name of the task group to associate with the task. The default value is the 
 The network configuration for the task. This parameter is required for task definitions that use the awsvpc network mode to receive their own elastic network interface, and it is not supported for other network modes. For more information, see Task Networking in the Amazon Elastic Container Service Developer Guide.
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-overrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L169">property <b>overrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L170">property <b>overrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>overrides?: awssdk.ECS.TaskOverride;</code></pre>
@@ -2891,7 +3082,7 @@ The network configuration for the task. This parameter is required for task defi
 A list of container overrides in JSON format that specify the name of a container in the specified task definition and the overrides it should receive. You can override the default command for a container (that is specified in the task definition or Docker image) with a command override. You can also override existing environment variables (that are specified in the task definition or Docker image) on a container or add new environment variables to it with an environment override.  A total of 8192 characters are allowed for overrides. This limit includes the JSON formatting characters of the override structure.
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L185">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L186">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: awssdk.ECS.PlacementConstraints;</code></pre>
@@ -2899,7 +3090,7 @@ A list of container overrides in JSON format that specify the name of a containe
 An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime).
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-placementStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L189">property <b>placementStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L190">property <b>placementStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementStrategy?: awssdk.ECS.PlacementStrategies;</code></pre>
@@ -2907,7 +3098,7 @@ An array of placement constraint objects to use for the task. You can specify up
 The placement strategy objects to use for the task. You can specify a maximum of five strategy rules per task.
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-platformVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L193">property <b>platformVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L194">property <b>platformVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformVersion?: awssdk.ECS.String;</code></pre>
@@ -2915,7 +3106,7 @@ The placement strategy objects to use for the task. You can specify a maximum of
 The platform version the task should run. A platform version is only specified for tasks using the Fargate launch type. If one is not specified, the LATEST platform version is used by default. For more information, see AWS Fargate Platform Versions in the Amazon Elastic Container Service Developer Guide.
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-propagateTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L209">property <b>propagateTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L210">property <b>propagateTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>propagateTags?: awssdk.ECS.PropagateTags;</code></pre>
@@ -2923,7 +3114,7 @@ The platform version the task should run. A platform version is only specified f
 Specifies whether to propagate the tags from the task definition or the service to the task. If no value is specified, the tags are not propagated.
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-startedBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L177">property <b>startedBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L178">property <b>startedBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startedBy?: awssdk.ECS.String;</code></pre>
@@ -2931,7 +3122,7 @@ Specifies whether to propagate the tags from the task definition or the service 
 An optional tag specified when a task is started. For example, if you automatically trigger a task to run a batch process job, you could apply a unique identifier for that job to your task with the startedBy parameter. You can then identify which tasks belong to that job by filtering the results of a ListTasks call with the startedBy value. Up to 36 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed. If a task is started by an Amazon ECS service, then the startedBy parameter contains the deployment ID of the service that starts it.
 
 <h4 class="pdoc-member-header" id="RunTaskRequest-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L201">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L202">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: awssdk.ECS.Tags;</code></pre>
@@ -2939,14 +3130,14 @@ An optional tag specified when a task is started. For example, if you automatica
 The metadata that you apply to the task to help you categorize and organize them. Each tag consists of a key and an optional value, both of which you define. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters.
 
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L172">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceArgs-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L251">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L251">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Cluster'>ecs.Cluster</a>;</code></pre>
@@ -2954,7 +3145,7 @@ The metadata that you apply to the task to help you categorize and organize them
 Cluster this service will run in.  If not specified [Cluster.getDefault()] will be used.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-deploymentMaximumPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L180">property <b>deploymentMaximumPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L180">property <b>deploymentMaximumPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMaximumPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2964,7 +3155,7 @@ tasks that can be running in a service during a deployment. Not valid when using
 scheduling strategy.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-deploymentMinimumHealthyPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L186">property <b>deploymentMinimumHealthyPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L186">property <b>deploymentMinimumHealthyPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMinimumHealthyPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2973,7 +3164,7 @@ The lower limit (as a percentage of the service's desiredCount) of the number of
 tasks that must remain running and healthy in a service during a deployment.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-desiredCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L267">property <b>desiredCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L267">property <b>desiredCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2982,7 +3173,7 @@ The number of instances of the task definition to place and keep running. Defaul
 not specify if using the `DAEMON` scheduling strategy.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-healthCheckGracePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L192">property <b>healthCheckGracePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L192">property <b>healthCheckGracePeriodSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckGracePeriodSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2991,7 +3182,7 @@ Seconds to ignore failing load balancer health checks on newly instantiated task
 premature shutdown, up to 7200. Only valid for services configured to use load balancers.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-iamRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L202">property <b>iamRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L202">property <b>iamRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3004,7 +3195,7 @@ service-linked role, that role is used by default for your service unless you sp
 here.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-launchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L273">property <b>launchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L273">property <b>launchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"EC2"</span> | <span class='s2'>"FARGATE"</span>&gt;;</code></pre>
@@ -3013,7 +3204,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
 Defaults to `EC2`.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-loadBalancers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L207">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L207">property <b>loadBalancers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='#ServiceLoadBalancer'>ServiceLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#ServiceLoadBalancer'>ServiceLoadBalancer</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<a href='#ServiceLoadBalancer'>ServiceLoadBalancer</a>&gt; | <a href='#ServiceLoadBalancerProvider'>ServiceLoadBalancerProvider</a>[];</code></pre>
@@ -3021,7 +3212,7 @@ Defaults to `EC2`.
 A load balancer block. Load balancers documented below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L212">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L212">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3029,7 +3220,7 @@ A load balancer block. Load balancers documented below.
 The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 
 <h4 class="pdoc-member-header" id="ServiceArgs-networkConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L219">property <b>networkConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L219">property <b>networkConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkConfiguration'>NetworkConfiguration</a>&gt;;</code></pre>
@@ -3039,7 +3230,7 @@ that use the `awsvpc` network mode to receive their own Elastic Network Interfac
 not supported for other network modes.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-orderedPlacementStrategies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L226">property <b>orderedPlacementStrategies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L226">property <b>orderedPlacementStrategies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderedPlacementStrategies?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | ServiceOrderedPlacementStrategy | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceOrderedPlacementStrategy&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceOrderedPlacementStrategy&gt;[]&gt;;</code></pre>
@@ -3049,7 +3240,7 @@ from top to bottom in order of precedence. The maximum number of `ordered_placem
 blocks is `5`. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L232">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L232">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | ServicePlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServicePlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServicePlacementConstraint&gt;[]&gt;;</code></pre>
@@ -3058,7 +3249,7 @@ rules that are taken into consideration during task placement. Maximum number of
 `placement_constraints` is `10`. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-schedulingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L239">property <b>schedulingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L239">property <b>schedulingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedulingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3068,7 +3259,7 @@ Defaults to `REPLICA`. Note that [*Fargate tasks do not support the `DAEMON` sch
 strategy*](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html).
 
 <h4 class="pdoc-member-header" id="ServiceArgs-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L261">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L261">property <b>securityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#SecurityGroup'>x.ec2.SecurityGroup</a>[];</code></pre>
@@ -3076,7 +3267,7 @@ strategy*](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/schedulin
 Security groups determining how this service can be reached.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-serviceRegistries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L244">property <b>serviceRegistries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L244">property <b>serviceRegistries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRegistries?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | ServiceServiceRegistries | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ServiceServiceRegistries&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;ServiceServiceRegistries&gt;;</code></pre>
@@ -3084,7 +3275,7 @@ Security groups determining how this service can be reached.
 The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L285">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L285">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
@@ -3092,7 +3283,7 @@ The service discovery registries for the service. The maximum number of `service
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="ServiceArgs-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L256">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L256">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinition: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#TaskDefinition'>ecs.TaskDefinition</a>;</code></pre>
@@ -3100,7 +3291,7 @@ Key-value mapping of resource tags
 The task definition to create the service from.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-waitForSteadyState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L280">property <b>waitForSteadyState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L280">property <b>waitForSteadyState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitForSteadyState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3110,55 +3301,55 @@ services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/serv
 before continuing. Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="ServiceLoadBalancer" data-link-title="ServiceLoadBalancer">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L121">
         interface <strong>ServiceLoadBalancer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceLoadBalancer</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceLoadBalancer-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L122">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L122">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceLoadBalancer-containerPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L123">property <b>containerPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L123">property <b>containerPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceLoadBalancer-elbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L124">property <b>elbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L124">property <b>elbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elbName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceLoadBalancer-targetGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L125">property <b>targetGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L125">property <b>targetGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceLoadBalancerProvider" data-link-title="ServiceLoadBalancerProvider">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L128">
         interface <strong>ServiceLoadBalancerProvider</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceLoadBalancerProvider</span></code></pre>
 <h4 class="pdoc-member-header" id="ServiceLoadBalancerProvider-serviceLoadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/service.ts#L129">method <b>serviceLoadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/service.ts#L129">method <b>serviceLoadBalancer</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>serviceLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceLoadBalancer'>ServiceLoadBalancer</a>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="TaskDefinitionArgs" data-link-title="TaskDefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L288">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L289">
         interface <strong>TaskDefinitionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TaskDefinitionArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L358">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L364">property <b>containers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containers: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ecs/#Container'>ecs.Container</a>&gt;;</code></pre>
@@ -3169,7 +3360,7 @@ ClusterService that will contain many containers within.
 Either [container] or [containers] must be provided.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L333">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L339">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3178,7 +3369,7 @@ The number of cpu units used by the task.  If not provided, a default will be co
 based on the cumulative needs specified by [containerDefinitions]
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-executionRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L327">property <b>executionRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L328">property <b>executionRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
@@ -3187,8 +3378,16 @@ The execution role that the Amazon ECS container agent and the Docker daemon can
 
 If `undefined`, a default will be created for the task.  If `null`, no task will be created.
 
+<h4 class="pdoc-member-header" id="TaskDefinitionArgs-family">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L333">property <b>family</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+An optional family name for the Task Definition. If not specified, then a suitable default will be created.
+
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-logGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L314">property <b>logGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L315">property <b>logGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#LogGroup'>aws.cloudwatch.LogGroup</a>;</code></pre>
@@ -3197,7 +3396,7 @@ Log group for logging information related to the service.  If `undefined` a defa
 with a one-day retention policy will be created.  If `null`, no log group will be created.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L339">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L345">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3206,7 +3405,7 @@ The amount (in MiB) of memory used by the task.  If not provided, a default will
 based on the cumulative needs specified by [containerDefinitions]
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L350">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L356">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"none"</span> | <span class='s2'>"bridge"</span> | <span class='s2'>"awsvpc"</span> | <span class='s2'>"host"</span>&gt;;</code></pre>
@@ -3215,7 +3414,7 @@ The Docker networking mode to use for the containers in the task. The valid valu
 `none`, `bridge`, `awsvpc`, and `host`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L301">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L302">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | TaskDefinitionPlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionPlacementConstraint&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionPlacementConstraint&gt;[]&gt;;</code></pre>
@@ -3224,7 +3423,7 @@ A set of placement constraints rules that are taken into consideration during ta
 Maximum number of `placement_constraints` is `10`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-requiresCompatibilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L344">property <b>requiresCompatibilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L350">property <b>requiresCompatibilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresCompatibilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;[, <span class='s2'>"FARGATE"</span>] | [, <span class='s2'>"EC2"</span>]&gt;;</code></pre>
@@ -3232,7 +3431,7 @@ Maximum number of `placement_constraints` is `10`.
 A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L363">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L369">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#Tags'>aws.Tags</a>&gt;;</code></pre>
@@ -3240,7 +3439,7 @@ A set of launch types required by the task. The valid values are `EC2` and `FARG
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-taskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L320">property <b>taskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L321">property <b>taskRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskRole?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role'>aws.iam.Role</a>;</code></pre>
@@ -3249,7 +3448,7 @@ IAM role that allows your Amazon ECS container task to make calls to other AWS s
 `undefined`, a default will be created for the task.  If `null`, no task will be created.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-volumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L306">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L307">property <b>volumes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | TaskDefinitionVolume | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume&gt;[]&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TaskDefinitionVolume&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;TaskDefinitionVolume&gt;[]&gt;;</code></pre>
@@ -3257,7 +3456,7 @@ IAM role that allows your Amazon ECS container task to make calls to other AWS s
 A set of volume blocks that containers in your task may use.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/b1e19caeee51ce5ab2bb823cf6f61632a520cf81/nodejs/awsx/ecs/taskDefinition.ts#L295">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/5b247e093ed7e8a789c4a34663a5ef8a3a5acef3/nodejs/awsx/ecs/taskDefinition.ts#L296">property <b>vpc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpc?: <a href='/docs/reference/pkg/nodejs/pulumi/awsx/ec2/#Vpc'>x.ec2.Vpc</a>;</code></pre>
