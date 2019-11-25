@@ -373,7 +373,7 @@ precedence over <code class="docutils literal notranslate"><span class="pre">min
 <li><p><code class="docutils literal notranslate"><span class="pre">onDemandAllocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Strategy to use when launching on-demand instances. Valid values: <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onDemandBaseCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Absolute minimum amount of desired capacity that must be fulfilled by on-demand instances. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onDemandPercentageAboveBaseCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spotAllocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to allocate capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotAllocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to allocate capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>, <code class="docutils literal notranslate"><span class="pre">capacity-optimized</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotInstancePools</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotMaxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Maximum price per unit hour that the user is willing to pay for the Spot instances. Default: an empty string which means the on-demand price.</p></li>
 </ul>
@@ -549,7 +549,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 <li><p><code class="docutils literal notranslate"><span class="pre">onDemandAllocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Strategy to use when launching on-demand instances. Valid values: <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onDemandBaseCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Absolute minimum amount of desired capacity that must be fulfilled by on-demand instances. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onDemandPercentageAboveBaseCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spotAllocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - How to allocate capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotAllocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - How to allocate capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>, <code class="docutils literal notranslate"><span class="pre">capacity-optimized</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotInstancePools</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotMaxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Maximum price per unit hour that the user is willing to pay for the Spot instances. Default: an empty string which means the on-demand price.</p></li>
 </ul>
@@ -764,7 +764,7 @@ precedence over <code class="docutils literal notranslate"><span class="pre">min
 <li><p><code class="docutils literal notranslate"><span class="pre">onDemandAllocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Strategy to use when launching on-demand instances. Valid values: <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onDemandBaseCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Absolute minimum amount of desired capacity that must be fulfilled by on-demand instances. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onDemandPercentageAboveBaseCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spotAllocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to allocate capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotAllocationStrategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to allocate capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>, <code class="docutils literal notranslate"><span class="pre">capacity-optimized</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowest-price</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotInstancePools</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Default: <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spotMaxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Maximum price per unit hour that the user is willing to pay for the Spot instances. Default: an empty string which means the on-demand price.</p></li>
 </ul>
@@ -1113,6 +1113,8 @@ or <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/l
 <li><p><strong>scaling_adjustment</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of members by which to
 scale, when the adjustment bounds are breached. A positive value scales
 up. A negative value scales down.</p></li>
+<li><p><strong>step_adjustments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of adjustments that manage
+group scaling. These have the following structure:</p></li>
 <li><p><strong>target_tracking_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A target tracking policy. These have the following structure:</p></li>
 </ul>
 </dd>
@@ -1215,6 +1217,25 @@ up. A negative value scales down.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.autoscaling.Policy.step_adjustments">
+<code class="sig-name descname">step_adjustments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.step_adjustments" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of adjustments that manage
+group scaling. These have the following structure:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">metricIntervalLowerBound</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The lower bound for the
+difference between the alarm threshold and the CloudWatch metric.
+Without a value, AWS will treat this bound as infinity.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricIntervalUpperBound</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The upper bound for the
+difference between the alarm threshold and the CloudWatch metric.
+Without a value, AWS will treat this bound as infinity. The upper bound
+must be greater than the lower bound.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaling_adjustment</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of members by which to
+scale, when the adjustment bounds are breached. A positive value scales
+up. A negative value scales down.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Policy.target_tracking_configuration">
 <code class="sig-name descname">target_tracking_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.target_tracking_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A target tracking policy. These have the following structure:</p>
@@ -1266,6 +1287,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>scaling_adjustment</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of members by which to
 scale, when the adjustment bounds are breached. A positive value scales
 up. A negative value scales down.</p></li>
+<li><p><strong>step_adjustments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of adjustments that manage
+group scaling. These have the following structure:</p></li>
 <li><p><strong>target_tracking_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A target tracking policy. These have the following structure:</p></li>
 </ul>
 </dd>

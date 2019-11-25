@@ -41,7 +41,7 @@ meta_desc: "Explore members of the servicequotas module in the @pulumi/aws packa
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ServiceQuota" data-link-title="ServiceQuota">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L25">
         Resource <strong>ServiceQuota</strong>
     </a>
 </h3>
@@ -66,7 +66,7 @@ const example = new aws.servicequotas.ServiceQuota("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L85"> <b>constructor</b></a>
 </h4>
 
 
@@ -80,7 +80,7 @@ Create a ServiceQuota resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -91,14 +91,14 @@ Get an existing ServiceQuota resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceQuota-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -109,7 +109,7 @@ Returns true if the given object is an instance of ServiceQuota.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-adjustable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L55">property <b>adjustable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L55">property <b>adjustable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adjustable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -117,7 +117,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether the service quota can be increased.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L59">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L59">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -125,7 +125,7 @@ Whether the service quota can be increased.
 Amazon Resource Name (ARN) of the service quota.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-defaultValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L63">property <b>defaultValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L63">property <b>defaultValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -133,7 +133,7 @@ Amazon Resource Name (ARN) of the service quota.
 Default value of the service quota.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -142,7 +142,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-quotaCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L67">property <b>quotaCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L67">property <b>quotaCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>quotaCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ deployments and may be missing (undefined) during planning phases.
 Code of the service quota to track. For example: `L-F678F1CE`. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html).
 
 <h4 class="pdoc-member-header" id="ServiceQuota-quotaName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L71">property <b>quotaName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L71">property <b>quotaName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>quotaName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,17 +158,17 @@ Code of the service quota to track. For example: `L-F678F1CE`. Available values 
 Name of the quota.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-requestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L72">property <b>requestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L72">property <b>requestId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceQuota-requestStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L73">property <b>requestStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L73">property <b>requestStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceQuota-serviceCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L77">property <b>serviceCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L77">property <b>serviceCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ Name of the quota.
 Code of the service to track. For example: `vpc`. Available values can be found with the [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
 
 <h4 class="pdoc-member-header" id="ServiceQuota-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L81">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L81">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ Code of the service to track. For example: `vpc`. Available values can be found 
 Name of the service.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -193,7 +193,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServiceQuota-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L85">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L85">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ Float specifying the desired value for the service quota. If the desired value i
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getService" data-link-title="getService">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getService.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getService.ts#L23">
         Data Source <strong>getService</strong>
     </a>
 </h3>
@@ -228,7 +228,7 @@ const example = aws.servicequotas.getService({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown.
 
 <h3 class="pdoc-module-header" id="getServiceQuota" data-link-title="getServiceQuota">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L28">
         Data Source <strong>getServiceQuota</strong>
     </a>
 </h3>
@@ -260,7 +260,7 @@ const byQuotaName = aws.servicequotas.getServiceQuota({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getService.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getService.ts#L41">
         interface <strong>GetServiceArgs</strong>
     </a>
 </h3>
@@ -270,7 +270,7 @@ const byQuotaName = aws.servicequotas.getServiceQuota({
 A collection of arguments for invoking getService.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getService.ts#L45">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getService.ts#L45">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -278,7 +278,7 @@ A collection of arguments for invoking getService.
 Service name to lookup within Service Quotas. Available values can be found with the [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
 
 <h3 class="pdoc-module-header" id="GetServiceQuotaArgs" data-link-title="GetServiceQuotaArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L48">
         interface <strong>GetServiceQuotaArgs</strong>
     </a>
 </h3>
@@ -288,7 +288,7 @@ Service name to lookup within Service Quotas. Available values can be found with
 A collection of arguments for invoking getServiceQuota.
 
 <h4 class="pdoc-member-header" id="GetServiceQuotaArgs-quotaCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L52">property <b>quotaCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L52">property <b>quotaCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quotaCode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -296,7 +296,7 @@ A collection of arguments for invoking getServiceQuota.
 Quota code within the service. When configured, the data source directly looks up the service quota. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html).
 
 <h4 class="pdoc-member-header" id="GetServiceQuotaArgs-quotaName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L56">property <b>quotaName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L56">property <b>quotaName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quotaName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -304,7 +304,7 @@ Quota code within the service. When configured, the data source directly looks u
 Quota name within the service. When configured, the data source searches through all service quotas to find the matching quota name. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html).
 
 <h4 class="pdoc-member-header" id="GetServiceQuotaArgs-serviceCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L60">property <b>serviceCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L60">property <b>serviceCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -312,7 +312,7 @@ Quota name within the service. When configured, the data source searches through
 Service code for the quota. Available values can be found with the [`aws.servicequotas.getService` data source](https://www.terraform.io/docs/providers/aws/d/servicequotas_service.html) or [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
 
 <h3 class="pdoc-module-header" id="GetServiceQuotaResult" data-link-title="GetServiceQuotaResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L66">
         interface <strong>GetServiceQuotaResult</strong>
     </a>
 </h3>
@@ -322,7 +322,7 @@ Service code for the quota. Available values can be found with the [`aws.service
 A collection of values returned by getServiceQuota.
 
 <h4 class="pdoc-member-header" id="GetServiceQuotaResult-adjustable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L70">property <b>adjustable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L70">property <b>adjustable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -330,7 +330,7 @@ A collection of values returned by getServiceQuota.
 Whether the service quota is adjustable.
 
 <h4 class="pdoc-member-header" id="GetServiceQuotaResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L74">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L74">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -338,7 +338,7 @@ Whether the service quota is adjustable.
 Amazon Resource Name (ARN) of the service quota.
 
 <h4 class="pdoc-member-header" id="GetServiceQuotaResult-defaultValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L78">property <b>defaultValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L78">property <b>defaultValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -346,7 +346,7 @@ Amazon Resource Name (ARN) of the service quota.
 Default value of the service quota.
 
 <h4 class="pdoc-member-header" id="GetServiceQuotaResult-globalQuota">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L82">property <b>globalQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L82">property <b>globalQuota</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>globalQuota: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -354,7 +354,7 @@ Default value of the service quota.
 Whether the service quota is global for the AWS account.
 
 <h4 class="pdoc-member-header" id="GetServiceQuotaResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L97">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L97">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -362,22 +362,22 @@ Whether the service quota is global for the AWS account.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceQuotaResult-quotaCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L83">property <b>quotaCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L83">property <b>quotaCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quotaCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceQuotaResult-quotaName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L84">property <b>quotaName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L84">property <b>quotaName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quotaName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceQuotaResult-serviceCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L85">property <b>serviceCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L85">property <b>serviceCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceQuotaResult-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L89">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L89">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -385,7 +385,7 @@ id is the provider-assigned unique ID for this managed resource.
 Name of the service.
 
 <h4 class="pdoc-member-header" id="GetServiceQuotaResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getServiceQuota.ts#L93">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getServiceQuota.ts#L93">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -393,7 +393,7 @@ Name of the service.
 Current value of the service quota.
 
 <h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getService.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getService.ts#L51">
         interface <strong>GetServiceResult</strong>
     </a>
 </h3>
@@ -403,7 +403,7 @@ Current value of the service quota.
 A collection of values returned by getService.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getService.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getService.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -411,7 +411,7 @@ A collection of values returned by getService.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-serviceCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getService.ts#L55">property <b>serviceCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getService.ts#L55">property <b>serviceCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -419,12 +419,12 @@ id is the provider-assigned unique ID for this managed resource.
 Code of the service.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/getService.ts#L56">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/getService.ts#L56">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ServiceQuotaArgs" data-link-title="ServiceQuotaArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L185">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L185">
         interface <strong>ServiceQuotaArgs</strong>
     </a>
 </h3>
@@ -434,7 +434,7 @@ Code of the service.
 The set of arguments for constructing a ServiceQuota resource.
 
 <h4 class="pdoc-member-header" id="ServiceQuotaArgs-quotaCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L189">property <b>quotaCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L189">property <b>quotaCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quotaCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -442,7 +442,7 @@ The set of arguments for constructing a ServiceQuota resource.
 Code of the service quota to track. For example: `L-F678F1CE`. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html).
 
 <h4 class="pdoc-member-header" id="ServiceQuotaArgs-serviceCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L193">property <b>serviceCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L193">property <b>serviceCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -450,7 +450,7 @@ Code of the service quota to track. For example: `L-F678F1CE`. Available values 
 Code of the service to track. For example: `vpc`. Available values can be found with the [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
 
 <h4 class="pdoc-member-header" id="ServiceQuotaArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L197">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L197">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -458,7 +458,7 @@ Code of the service to track. For example: `vpc`. Available values can be found 
 Float specifying the desired value for the service quota. If the desired value is higher than the current value, a quota increase request is submitted. When a known request is submitted and pending, the value reflects the desired value of the pending request.
 
 <h3 class="pdoc-module-header" id="ServiceQuotaState" data-link-title="ServiceQuotaState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L145">
         interface <strong>ServiceQuotaState</strong>
     </a>
 </h3>
@@ -468,7 +468,7 @@ Float specifying the desired value for the service quota. If the desired value i
 Input properties used for looking up and filtering ServiceQuota resources.
 
 <h4 class="pdoc-member-header" id="ServiceQuotaState-adjustable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L149">property <b>adjustable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L149">property <b>adjustable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ Input properties used for looking up and filtering ServiceQuota resources.
 Whether the service quota can be increased.
 
 <h4 class="pdoc-member-header" id="ServiceQuotaState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L153">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L153">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -484,7 +484,7 @@ Whether the service quota can be increased.
 Amazon Resource Name (ARN) of the service quota.
 
 <h4 class="pdoc-member-header" id="ServiceQuotaState-defaultValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L157">property <b>defaultValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L157">property <b>defaultValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -492,7 +492,7 @@ Amazon Resource Name (ARN) of the service quota.
 Default value of the service quota.
 
 <h4 class="pdoc-member-header" id="ServiceQuotaState-quotaCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L161">property <b>quotaCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L161">property <b>quotaCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quotaCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -500,7 +500,7 @@ Default value of the service quota.
 Code of the service quota to track. For example: `L-F678F1CE`. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html).
 
 <h4 class="pdoc-member-header" id="ServiceQuotaState-quotaName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L165">property <b>quotaName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L165">property <b>quotaName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quotaName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -508,17 +508,17 @@ Code of the service quota to track. For example: `L-F678F1CE`. Available values 
 Name of the quota.
 
 <h4 class="pdoc-member-header" id="ServiceQuotaState-requestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L166">property <b>requestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L166">property <b>requestId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceQuotaState-requestStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L167">property <b>requestStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L167">property <b>requestStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceQuotaState-serviceCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L171">property <b>serviceCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L171">property <b>serviceCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ Name of the quota.
 Code of the service to track. For example: `vpc`. Available values can be found with the [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
 
 <h4 class="pdoc-member-header" id="ServiceQuotaState-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L175">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L175">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ Code of the service to track. For example: `vpc`. Available values can be found 
 Name of the service.
 
 <h4 class="pdoc-member-header" id="ServiceQuotaState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7afe67736e0dd75d07f50b60b0939ee174e81aff/sdk/nodejs/servicequotas/serviceQuota.ts#L179">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/279067ce99dba03389bc485fc56d3f6a7c8a351d/sdk/nodejs/servicequotas/serviceQuota.ts#L179">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

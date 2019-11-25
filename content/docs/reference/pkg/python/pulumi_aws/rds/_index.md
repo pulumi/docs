@@ -666,7 +666,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
 Eg: “04:00-09:00”</p></li>
 <li><p><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The window to perform maintenance in.
 Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</p></li>
-<li><p><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</p></li>
+<li><p><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.</p></li>
 <li><p><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly accessible.
 Default <code class="docutils literal notranslate"><span class="pre">false</span></code>. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.</p></li>
@@ -827,7 +827,7 @@ Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.promotion_tier">
 <code class="sig-name descname">promotion_tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.promotion_tier" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</p>
+<dd><p>Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -902,7 +902,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
 Eg: “04:00-09:00”</p></li>
 <li><p><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The window to perform maintenance in.
 Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</p></li>
-<li><p><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</p></li>
+<li><p><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.</p></li>
 <li><p><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly accessible.
 Default <code class="docutils literal notranslate"><span class="pre">false</span></code>. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.</p></li>

@@ -13,6 +13,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.guardduty"></span><dl class="class">
+<dt id="pulumi_aws.guardduty.AwaitableGetDetectorResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.guardduty.</code><code class="sig-name descname">AwaitableGetDetectorResult</code><span class="sig-paren">(</span><em class="sig-param">finding_publishing_frequency=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">service_role_arn=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.AwaitableGetDetectorResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.guardduty.Detector">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.guardduty.</code><code class="sig-name descname">Detector</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enable=None</em>, <em class="sig-param">finding_publishing_frequency=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.Detector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a GuardDuty detector.</p>
@@ -107,6 +112,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.guardduty.GetDetectorResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.guardduty.</code><code class="sig-name descname">GetDetectorResult</code><span class="sig-paren">(</span><em class="sig-param">finding_publishing_frequency=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">service_role_arn=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.GetDetectorResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDetector.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.guardduty.GetDetectorResult.finding_publishing_frequency">
+<code class="sig-name descname">finding_publishing_frequency</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.guardduty.GetDetectorResult.finding_publishing_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>The frequency of notifications sent about subsequent finding occurrences.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.guardduty.GetDetectorResult.service_role_arn">
+<code class="sig-name descname">service_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.guardduty.GetDetectorResult.service_role_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service-linked role that grants GuardDuty access to the resources in the AWS account.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.guardduty.GetDetectorResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.guardduty.GetDetectorResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current status of the detector.</p>
 </dd></dl>
 
 </dd></dl>
@@ -555,6 +584,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.guardduty.get_detector">
+<code class="sig-prename descclassname">pulumi_aws.guardduty.</code><code class="sig-name descname">get_detector</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.get_detector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve information about a GuardDuty detector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The ID of the detector.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/guardduty_detector.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/guardduty_detector.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

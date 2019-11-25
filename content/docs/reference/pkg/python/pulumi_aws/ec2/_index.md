@@ -7017,8 +7017,8 @@ It can be used to attach a security group to any existing ENI, be it a
 secondary ENI or one attached as the primary interface on an instance.</p>
 <blockquote>
 <div><p><strong>NOTE on instances, interfaces, and security groups:</strong> This provider currently
-provides the capability to assign security groups via the <cite>``ec2.Instance`</cite> &lt;/docs/providers/aws/d/instance.html&gt;`_
-and the <cite>``ec2.NetworkInterface`</cite> &lt;/docs/providers/aws/r/network_interface.html&gt;`_ resources. Using this resource in
+provides the capability to assign security groups via the <cite>``ec2.Instance`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/instance.html">https://www.terraform.io/docs/providers/aws/d/instance.html</a>&gt;`_
+and the <cite>``ec2.NetworkInterface`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/network_interface.html">https://www.terraform.io/docs/providers/aws/r/network_interface.html</a>&gt;`_ resources. Using this resource in
 conjunction with security groups provided in-line in those resources will cause
 conflicts, and will lead to spurious diffs and undefined behavior - please use
 one or the other.</p>
