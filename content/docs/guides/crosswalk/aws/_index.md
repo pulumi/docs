@@ -3,8 +3,8 @@ title: "Pulumi Crosswalk for AWS"
 linktitle: Crosswalk for AWS
 menu:
   userguides:
-    parent: guides
     identifier: crosswalk-aws
+    weight: 5
 
 aliases: ["/docs/reference/crosswalk/aws/"]
 ---

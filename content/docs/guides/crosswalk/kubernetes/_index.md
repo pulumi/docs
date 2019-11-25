@@ -3,8 +3,8 @@ title: "Pulumi Crosswalk for Kubernetes"
 linktitle: Crosswalk for Kubernetes
 menu:
   userguides:
-    parent: guides
     identifier: crosswalk-kubernetes
+    weight: 6
 aliases: ["/docs/guides/k8s-the-prod-way/app", "/docs/guides/k8s-the-prod-way/architecture"]
 ---
 
@@ -43,7 +43,7 @@ and developers.
 By reducing the Kubernetes API syntax used, including sane
 defaults where possible, and maintaining idiomatic Kubernetes, it is
 easier to work with the API and deploy resources. Crosswalk revamps the Kubernetes API resource
-composition, but produces the exact semantic API output type. The ability to 
+composition, but produces the exact semantic API output type. The ability to
 drop into and inject a given API type's raw spec is maintained through out.
 
 [Get started][pulumi-kx] with `pulumi/kubernetesx` to manage Kubernetes
