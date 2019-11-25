@@ -1,9 +1,9 @@
 id = "mikhail-shilkov"
 name = "Mikhail Shilkov"
-title = "Microsoft Azure MVP and early Pulumi user"
+title = "Software Engineer"
+weight = 1
 
-# Makhail guest posted to the Pulumi blog.
-status = "guest"
+status = "active"
 
 [social]
 github = "MikhailShilkov"
