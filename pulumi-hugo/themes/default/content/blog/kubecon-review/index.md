@@ -32,6 +32,6 @@ Addressing a packed room, they showed how to use ephemeral environments (short l
 
 {{< youtube jAQhDZiRzBQ >}}
 
-[Joe Duffy](@funcofjoe) sums up our Kubecon experience and we hope to see you next year at KubeCon 2020.
+[Joe Duffy](https://twitter.com/funcofjoe) sums up our Kubecon experience and we hope to see you next year at KubeCon 2020.
 
 {{< tweet 1197006047027712001 >}}
