@@ -1041,7 +1041,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Job">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">glue_version=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">glue_version=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number_of_workers=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">worker_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Job resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1058,9 +1058,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</p></li>
 <li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><strong>number_of_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers of a defined workerType that are allocated when a job runs.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Security Configuration to be associated with the job.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 <li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The job timeout in minutes. The default is 2880 minutes (48 hours).</p></li>
+<li><p><strong>worker_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1081,6 +1084,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Job.allocated_capacity">
 <code class="sig-name descname">allocated_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.allocated_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>DEPRECATED</strong> (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Job.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of Glue Job</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1146,6 +1155,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.glue.Job.number_of_workers">
+<code class="sig-name descname">number_of_workers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.number_of_workers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of workers of a defined workerType that are allocated when a job runs.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.glue.Job.role_arn">
 <code class="sig-name descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the IAM role associated with this job.</p>
@@ -1158,14 +1173,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.glue.Job.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.glue.Job.timeout">
 <code class="sig-name descname">timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The job timeout in minutes. The default is 2880 minutes (48 hours).</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Job.worker_type">
+<code class="sig-name descname">worker_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.worker_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.glue.Job.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">glue_version=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">glue_version=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">number_of_workers=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">worker_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1175,6 +1202,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>allocated_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <strong>DEPRECATED</strong> (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of Glue Job</p></li>
 <li><p><strong>command</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The command of the job. Defined below.</p></li>
 <li><p><strong>connections</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of connections used for this job.</p></li>
 <li><p><strong>default_arguments</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html">Calling AWS Glue APIs in Python</a> topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the developer guide.</p>
@@ -1186,9 +1214,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</p></li>
 <li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><strong>number_of_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers of a defined workerType that are allocated when a job runs.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</p></li>
 <li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Security Configuration to be associated with the job.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 <li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The job timeout in minutes. The default is 2880 minutes (48 hours).</p></li>
+<li><p><strong>worker_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1397,7 +1428,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Trigger">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Trigger</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicate=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Trigger</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicate=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">workflow_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Trigger resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1411,23 +1442,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>predicate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A predicate to specify when the new trigger should fire. Required when trigger type is <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>. Defined below.</p></li>
 <li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A cron expression used to specify the schedule. <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html">Time-Based Schedules for Jobs and Crawlers</a></p>
 </p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of trigger. Valid values are <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code>.</p></li>
+<li><p><strong>workflow_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (<code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code> type) and can contain multiple additional <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code> triggers.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arguments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the crawler to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawl_state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The job run timeout in minutes. It overrides the timeout value of the job.</p></li>
 </ul>
 <p>The <strong>predicate</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of the conditions that determine when the trigger will fire. Defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The condition crawl state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code>, <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">CANCELLED</span></code>, and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the crawler to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawl_state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logicalOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A logical operator. Defaults to <code class="docutils literal notranslate"><span class="pre">EQUALS</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The condition state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">STOPPED</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMEOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The condition job state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">STOPPED</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMEOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>. If this is specified, <code class="docutils literal notranslate"><span class="pre">job_name</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_state</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logical</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to handle multiple conditions. Defaults to <code class="docutils literal notranslate"><span class="pre">AND</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">AND</span></code> or <code class="docutils literal notranslate"><span class="pre">ANY</span></code>.</p></li>
@@ -1441,9 +1477,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>List of actions initiated by this trigger when it fires. Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arguments</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the crawler to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawl_state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The job run timeout in minutes. It overrides the timeout value of the job.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Trigger.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Trigger.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of Glue Trigger</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1471,9 +1514,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of the conditions that determine when the trigger will fire. Defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlState</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The condition crawl state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code>, <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">CANCELLED</span></code>, and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the crawler to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawl_state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logicalOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A logical operator. Defaults to <code class="docutils literal notranslate"><span class="pre">EQUALS</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The condition state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">STOPPED</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMEOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The condition job state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">STOPPED</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMEOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>. If this is specified, <code class="docutils literal notranslate"><span class="pre">job_name</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_state</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logical</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - How to handle multiple conditions. Defaults to <code class="docutils literal notranslate"><span class="pre">AND</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">AND</span></code> or <code class="docutils literal notranslate"><span class="pre">ANY</span></code>.</p></li>
@@ -1487,14 +1532,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.glue.Trigger.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Trigger.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.glue.Trigger.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Trigger.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of trigger. Valid values are <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code>.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Trigger.workflow_name">
+<code class="sig-name descname">workflow_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Trigger.workflow_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (<code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code> type) and can contain multiple additional <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code> triggers.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.glue.Trigger.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicate=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicate=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">workflow_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Trigger resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1504,29 +1561,35 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of actions initiated by this trigger when it fires. Defined below.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of Glue Trigger</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the new trigger.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Start the trigger. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Not valid to disable for <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> type.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the trigger.</p></li>
 <li><p><strong>predicate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A predicate to specify when the new trigger should fire. Required when trigger type is <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>. Defined below.</p></li>
 <li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A cron expression used to specify the schedule. <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html">Time-Based Schedules for Jobs and Crawlers</a></p>
 </p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of trigger. Valid values are <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code>.</p></li>
+<li><p><strong>workflow_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (<code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> or <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code> type) and can contain multiple additional <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code> triggers.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arguments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the crawler to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawl_state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The job run timeout in minutes. It overrides the timeout value of the job.</p></li>
 </ul>
 <p>The <strong>predicate</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of the conditions that determine when the trigger will fire. Defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlState</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The condition crawl state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">RUNNING</span></code>, <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">CANCELLED</span></code>, and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the crawler to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawl_state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logicalOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A logical operator. Defaults to <code class="docutils literal notranslate"><span class="pre">EQUALS</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The condition state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">STOPPED</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMEOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The condition job state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">STOPPED</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMEOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>. If this is specified, <code class="docutils literal notranslate"><span class="pre">job_name</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_state</span></code>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logical</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to handle multiple conditions. Defaults to <code class="docutils literal notranslate"><span class="pre">AND</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">AND</span></code> or <code class="docutils literal notranslate"><span class="pre">ANY</span></code>.</p></li>
@@ -1557,6 +1620,104 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_aws.glue.Trigger.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.glue.Workflow">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Workflow</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_run_properties=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Glue Workflow resource.
+The workflow graph (DAG) can be build using the <code class="docutils literal notranslate"><span class="pre">glue.Trigger</span></code> resource. 
+See the example below for creating a graph with four nodes (two triggers and two jobs).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_run_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the workflow.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name you assign to this workflow.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Workflow.default_run_properties">
+<code class="sig-name descname">default_run_properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Workflow.default_run_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Workflow.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Workflow.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the workflow.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Workflow.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Workflow.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name you assign to this workflow.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.glue.Workflow.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_run_properties=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Workflow.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Workflow resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_run_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the workflow.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name you assign to this workflow.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.glue.Workflow.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Workflow.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.glue.Workflow.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Workflow.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
