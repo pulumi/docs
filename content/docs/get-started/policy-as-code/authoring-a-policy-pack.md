@@ -1,5 +1,5 @@
 ---
-title: Authoring a Policy Pack (Preview)
+title: Authoring a Policy Pack
 linktitle: Authoring a Policy Pack
 weight: 1
 menu:
@@ -7,7 +7,7 @@ menu:
     parent: pac
     identifier: pac-authoring-a-policy-pack
 ---
-{{% pac-preview %}}
+{{% crossguard-preview %}}
 
 1. Verify your version of the Pulumi CLI
 
@@ -65,7 +65,7 @@ menu:
     });
     ```
 
-    You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). Best practices for writing a Policy Pack can be found [here]({{< relref "best-practices" >}}).
+    You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices]({{< relref "/docs/guides/crossguard/best-practices" >}}) documentation details the best practices for writing a Policy Pack.
 
 ## Testing the Policy Pack Locally
 

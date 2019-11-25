@@ -1,13 +1,13 @@
 ---
-title: Best Practices for Writing Policy Packs (Preview)
+title: Best Practices for Writing Policy Packs
 linktitle: Best Practices
-weight: 4
+
 menu:
-  getstarted:
-    parent: pac
-    identifier: pac-best-practices
+  userguides:
+    parent: crossguard
+    identifier: crossguard-best-practices
 ---
-{{% pac-preview %}}
+{{% crossguard-preview %}}
 
 ## Naming Policies
 

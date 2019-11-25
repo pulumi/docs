@@ -1,5 +1,5 @@
 ---
-title: Enforcing a Policy Pack Across an Organization (Preview)
+title: Enforcing a Policy Pack Across an Organization
 linktitle: Enforcing a Policy Pack
 weight: 2
 menu:
@@ -7,7 +7,7 @@ menu:
     parent: pac
     identifier: pac-enforcing-a-policy-pack
 ---
-{{% pac-preview %}}
+{{% crossguard-preview %}}
 
 Once you’ve validated the behavior of your policies, an organization administrator can publish them to the Pulumi Console to be enforced across your organization. Any Pulumi client (a developer’s workstation, CI/CD tool, etc) that interacts with a stack via the Pulumi Console will have policy enforcement during the execution of `preview` and `update`. Policy Packs are versioned by the Pulumi Console so that updated policies can be published and applied as ready and also reverted to previous versions as needed.
 
