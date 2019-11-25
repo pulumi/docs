@@ -65,7 +65,7 @@ menu:
     });
     ```
 
-    You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). Best practices for writing a Policy Pack can be found [here]({{< relref "/docs/guides/crossguard/best-practices" >}}).
+    You can find more example Policy Packs in the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). [Policy Pack best practices]({{< relref "/docs/guides/crossguard/best-practices" >}}) documentation details the best practices for writing a Policy Pack.
 
 ## Testing the Policy Pack Locally
 

@@ -8,7 +8,7 @@ menu:
 ---
 {{% crossguard-preview %}}
 
-Pulumi has an exciting new product, CrossGuard, which provides gated deployments via Policy as Code.
+Pulumi CrossGuards a product that provides gated deployments via Policy as Code.
 
 Often organizations want to empower developers to manage their infrastructure yet are concerned about giving them full access. CrossGuard allows administrators to provide autonomy to their developers while ensuring compliance to defined organization policies.
 
@@ -20,7 +20,7 @@ Using Policy as Code, users can express business or security rules as functions 
 * **Policy** - an individual policy - i.e. “prohibit use of instances larger than t3.medium”.
 * **Enforcement Level** - the impact of a policy violation - i.e. “mandatory” or “advisory”.
 
-You can learn more about the core concepts of Policy as Code [here]({{< relref "/docs/guides/crossguard/core-concepts" >}}).
+Learn more about [Policy as Code core concepts]({{< relref "/docs/guides/crossguard/core-concepts" >}}).
 
 ## Creating a Policy Pack
 

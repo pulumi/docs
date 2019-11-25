@@ -11,7 +11,7 @@ menu:
 
 ## Policy
 
-A Policy contains specific logic you would like to enforce. For example, you may want to restrict the creation of public S3 buckets or you may disallow resource provisioning without tags. You can refer to other examples [here](https://github.com/pulumi/examples/tree/master/policy-packs).
+A Policy contains specific logic you would like to enforce. For example, you may want to prevent the creation of public, world-readable storage objects. (e.g. on AWS S3, Azure BlobStore, etc.) or prevent the creation of a virtual machine without the proper security groups in-place.
 
 Policies are written as validation functions that are evaluated against all resources in your Pulumi stack. If the validation function calls `reportViolation`, the associated resource will be considered in violation of the policy. `reportViolation` can be called multiple times to report multiple violations.
 
@@ -74,6 +74,8 @@ const elbLoggingPolicy: ResourceValidationPolicy = {
 ### Stack Validation Policy
 
 Policies of `StackValidationPolicy` are run against all the resources in a stack. These policies are run are all stack resources are registered and thus *do not* block an out-of-compliance resource from being created, but do fail the `preview` or `update`. To avoid creating out-of-compliance resources, we recommend always running a `preview` command before an `update`. This allows you to write policies where one resource depends on the state or existence of another resource.
+
+ The [Pulumi Policy Packs examples repository](https://github.com/pulumi/examples/tree/master/policy-packs) provides example `ResourceValidationPolicy` and `StackValidationPolicy` rules for common cloud providers.
 
 ## Policy Pack
 
