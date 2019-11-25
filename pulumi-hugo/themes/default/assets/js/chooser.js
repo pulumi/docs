@@ -152,6 +152,15 @@ function hideShowChoices(kind, selector, defaultChoice) {
 
 // The first time the DOM is finished loading, select the right language and OS.
 $(function() {
+
+    // If a query param's been provided for a tab category, honor that.
+    ["language", "os", "cloud", "k8s-language"].forEach(function(kind) {
+        var val = getQueryVariable(kind);
+        if (val) {
+            selectChoice(kind, val);
+        }
+    });
+
     // If no language is chosen yet, default to TypeScript.
     hideShowChoices("language", selectLanguage, "typescript");
 
