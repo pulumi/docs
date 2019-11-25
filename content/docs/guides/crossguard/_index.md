@@ -26,7 +26,3 @@ If you're looking for some example Policy Packs, take a look at these:
 * [Azure](https://github.com/pulumi/examples/tree/master/policy-packs/azure)
 * [GCP](https://github.com/pulumi/examples/tree/master/policy-packs/gcp)
 * [Kubernetes](https://github.com/pulumi/examples/tree/master/policy-packs/kubernetes)
-
-### AWSGuard
-
-[AWSGuard](https://github.com/pulumi/pulumi-awsguard/) is a comprehensive example Policy Pack and library that can be imported and applied to your organization. These configurable policies ensure your AWS resources comply with best practices.
