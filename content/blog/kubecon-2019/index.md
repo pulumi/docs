@@ -14,7 +14,9 @@ Last week, my colleague Sean and I had the opportunity to present "Are you about
 
 As software engineers, our job is to deliver business value. To do this, we need to be delivering software both quickly and reliably.
 
-The [DORA](https://cloud.google.com/devops/), DevOps Research and Assessment, organization puts out an annual report evaluating the effectiveness of IT organization’s development and deployment processes. Their annual report consistently shows that top performers are deploying more frequently and getting code into production quicker, yet have lower rates of failure and quicker recovery times. The [DORA report](https://cloud.google.com/devops/state-of-devops/) tell us that automated testing allows developers to confidently rely on their test suite for catching issues before they end up in production and confidentially know that a green test suite indicates the code is ready for deployment.
+So the question we ask you is: are you about to break prod? We will all break production at some point because there's things we miss. As Alexandra points out in her tweet, "failures are part of the cost of building and shipping large systems". Building a robust pipeline, allows us to move quickly in the case of failure and gain confidence around making changes to our infrastructure and applications.
+
+{{< tweet 1198373475049623552 >}}
 
 With this in mind, we will use Pulumi and GitLab to build a pipeline that validates both our application, infrastructure, and deployment process.
 
