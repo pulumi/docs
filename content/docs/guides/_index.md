@@ -1,8 +1,5 @@
 ---
 title: Guides
-menu:
-  userguides:
-    identifier: guides
 ---
 
 Pulumi’s approach to infrastructure as code is great for continuous delivery, secure collaboration, and easy management of common cloud services and operations.

@@ -2,9 +2,8 @@
 title: Self-Hosted Pulumi Service
 menu:
     userguides:
-        parent: guides
         identifier: self_hosted
-        weight: 4
+        weight: 3
 meta_desc: Pulumi Enterprise Edition gives you the option to self-host Pulumi within your organization's infrastructure. This document walks you through the components and their configuration.
 ---
 
@@ -84,6 +83,6 @@ If you would like to use Pulumi’s all-in-one solution, you just need to run th
 
 ### Quickstart Option #2 - Provide your own Database
 
-The service is tested against a MySQL version 5.6 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`. If your DB instance uses a different port, be sure to update 
+The service is tested against a MySQL version 5.6 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`. If your DB instance uses a different port, be sure to update
 
 > **Note**: You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance. Your Pulumi sales contact should be able to provide you with this.
