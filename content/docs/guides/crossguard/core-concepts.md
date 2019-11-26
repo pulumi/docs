@@ -100,6 +100,9 @@ const dynamodbTableAutoscalingRequired: StackValidationPolicy = {
 }
 ```
 
+A `StackValidationPolicy` can also be used to make validations against a resource that must already be created to validate. For example, a policy that
+checks whether an Amazon Certificate Manager (ACM) certificate has expired would require the certificate already be created as it relies on its outputs.
+
  The [Pulumi Policy Packs examples repository](https://github.com/pulumi/examples/tree/master/policy-packs) provides example `ResourceValidationPolicy` and `StackValidationPolicy` rules for common cloud providers.
 
 ## Policy Pack
