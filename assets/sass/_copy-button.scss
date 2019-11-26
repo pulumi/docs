@@ -2,7 +2,7 @@
 @import "mixins";
 
 .copy-button-container {
-    @apply absolute top-0 right-0 mt-px mr-px p-1 pt-2 pr-2 rounded bg-gray-100;
+    @apply absolute top-0 right-0 mt-px mr-px pt-1 pb-0 pt-2 pr-2 rounded bg-gray-100;
 
     .code-mode-dark & {
         @apply bg-gray-900;
