@@ -24,7 +24,7 @@ To see both Crosswak and Query for Kubernetes in action, watch the demo video sh
 
 {{< youtube X96EMLi8uJY >}}
 
-Pulumi engineers, [Erin Crengel](https://twitter.com/eckrengel) and Sean Holung, presented `Are You About to Break Prod? Acceptance Testing with Ephemeral Environments `  
+Pulumi engineers, [Erin Krengel](https://twitter.com/eckrengel) and Sean Holung, presented `Are You About to Break Prod? Acceptance Testing with Ephemeral Environments `  
 
 ![Krengel and Holung KubeCon Presentation](krengel-holung.jpg)
 
