@@ -19,7 +19,7 @@ Crosswalk for Kubernetes is a set of common patterns compiled in playbooks. Thes
 
 [Sara Novotny](https://twitter.com/sarahnovotny) defined observability as *“the ability to ask of your system and learn from it”* during her [keynote](https://youtu.be/W_8MHdtrgZE) with [Liz Fong-Jones](https://twitter.com/lizthegrey). Query for Kubernetes enables observability programmatically by exposing resource processes through either batch or streaming queries. Learn more about Query for Kubernetes in our [blog post](https://www.pulumi.com/blog/query-kubernetes/).
 
-To see both Crosswak and Query for Kubernetes in action, watch the demo video showcasing Pulumi watch mode, using the Crosswalk library to reduce Kubernetes boilerplate, and building, deploying and running private containers.
+To see both Crosswalk and Query for Kubernetes in action, watch the demo video!
 
 {{< youtube X96EMLi8uJY >}}
 
