@@ -30,6 +30,7 @@ directly. Additional general purpose packages can be used across all cloud platf
 {{% lang nodejs %}}
 * [**Pulumi SDK** (`@pulumi/pulumi`)]({{< relref "nodejs/pulumi/pulumi" >}})
 * [**Docker** (`@pulumi/docker`)]({{< relref "nodejs/pulumi/docker" >}})
+* [**Policy** (`@pulumi/policy`)]({{< relref "nodejs/pulumi/policy" >}})
 * [**Random** (`@pulumi/random`)]({{< relref "nodejs/pulumi/random" >}})
 {{% /lang %}}
 

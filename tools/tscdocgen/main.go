@@ -441,7 +441,11 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		Name string
 		Link string
 	}
-	for modname := range mod.Modules {
+	for modname, module := range mod.Modules {
+		if len(module.Exports) == 0 && len(module.Modules) == 0 {
+			continue
+		}
+
 		var link string
 		prefix := name + "/"
 		if nix := strings.Index(modname, prefix); nix != -1 {
@@ -530,6 +534,9 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 	// Next up: generate all submodules underneath this one.
 	for sub, module := range mod.Modules {
+		if len(module.Exports) == 0 && len(module.Modules) == 0 {
+			continue
+		}
 		if err = e.emitMarkdownModule(sub, module, false); err != nil {
 			return err
 		}
@@ -1294,8 +1301,12 @@ func (e *emitter) createTypeLabel(t *typeDocType, indent int) string {
 					label += fmt.Sprintf("%s%s;\n",
 						strings.Repeat(" ", indent*4), e.createSignature(child.Signatures[0], decl, false))
 				} else {
+					var childType string
+					if child.Type != nil {
+						childType = e.createTypeLabel(child.Type, indent)
+					}
 					label += fmt.Sprintf("%s%s: %s;\n",
-						strings.Repeat(" ", indent*4), child.Name, e.createTypeLabel(child.Type, indent))
+						strings.Repeat(" ", indent*4), child.Name, childType)
 				}
 			}
 			indent--
