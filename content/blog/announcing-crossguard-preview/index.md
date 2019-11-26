@@ -8,7 +8,7 @@ authors: ["erin-krengel"]
 tags: ["crossguard", "policy-as-code", "New-Features", "Pulumi-News", "Features"]
 ---
 
-Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using the `pulumi-policy` library, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they get applied to your resources.
+Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using the `pulumi-policy` library, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they are applied to your resources.
 
 <!--more-->
 
@@ -16,7 +16,7 @@ You can run policies against any Pulumi stack, independent of the stack's langua
 
 ## Why
 
-Using Pulumi, developers and operators are empowered to self provision their infrastructure and move quickly. One our core goals is to allow you to codify best practices and share them with your team. We often hear from organization leaders that they are concerned about enforce security and compliance best-practices. CrossGuard provides a way to automatically enforce compliance, allowing teams to operate self-sufficiently while still ensuring organization-wide requirements are met.
+Using Pulumi, developers and operators are empowered to self-provision their infrastructure and move quickly. One of our core goals is to allow you to codify best practices and share them with your team. We often hear from organization leaders that they are concerned about enforcing security and compliance best-practices. CrossGuard provides a way to automatically enforce compliance, allowing teams to operate self-sufficiently while still ensuring organization-wide requirements are met.
 
 ## Key Features
 
@@ -42,11 +42,11 @@ There's a lot of complexity to security and often the rest of your organization 
 
 ### For Developers and Operators
 
-There are a ton of moving pieces in our ecosystems today. It is difficult to know everything about the cloud resources we use. Pulumi CrossGuard ensure you do not fall into the trap of insecure or unreasonable defaults.
+There are a ton of moving pieces in our ecosystems today. It is difficult to know everything about the cloud resources we use. Pulumi CrossGuard ensures you do not fall into the trap of insecure or unreasonable defaults.
 
 ## CrossGuard in Action
 
-With an understanding of what CrossGuard enables, let's look at what that means in practice. The following is a policy pack definition that prohibits creating an AWS S3 bucket that is public readable. Our Policy Pack is pretty straightforward. It uses a `validateTypedResource` helper function to filter for the resource type we care about and reports a violation if present.
+With an understanding of what CrossGuard enables, let's look at what that means in practice. The following is a policy pack definition that prohibits creating an AWS S3 bucket that is public readable. Our Policy Pack is not complicated. It uses a `validateTypedResource` helper function to filter for the resource type we care about and reports a violation if present.
 
 ```typescript
 new PolicyPack("aws-typescript", {
@@ -72,7 +72,7 @@ We initially run `pulumi preview` for an S3 bucket that will pass the policy.
 const bucket = new aws.s3.Bucket("my-bucket");
 ```
 
-We then modify the bucket to have it's access control list (ACL) set to `public-read`, which will cause our bucket to be out-of-compliance.
+We then modify the bucket to have its access control list (ACL) set to `public-read`, which will cause our bucket to be out-of-compliance.
 
 ```typescript
 // Create an AWS resource (S3 Bucket)
@@ -83,7 +83,7 @@ const bucket = new aws.s3.Bucket("my-bucket", {
 
 ![Demo of Policy as Code](pac-demo.gif)
 
-While this is a simple demonstration of what you can do with Policy as Code, the framework is very flexible and allows you to write much more complex policies. Our [AWSGuard library](https://github.com/pulumi/pulumi-awsguard) is a great example of how you can use Policy as Code to write configurable policies.
+While this is a simple demonstration of what you can do with Policy as Code, the framework is very flexible and supports much more complex policies. Our [AWSGuard library](https://github.com/pulumi/pulumi-awsguard) is a great example of how you can use Policy as Code to write configurable policies.
 
 ## Try it Today
 
@@ -92,4 +92,4 @@ Pulumi CrossGuard empowers everyone to build better, safer applications and infr
 * If haven't played around with Pulumi yet, here is [Pulumi's Getting Started tutorial](https://www.pulumi.com/docs/get-started/).
 * [Policy as Code Getting Started tutorial](https://www.pulumi.com/docs/get-started/policy-as-code/)
 
-We've led the Policy as Code with TypeScript and plan to add `pulumi-policy` SDKs for the other languages we support. We would love to hear any feedback you have! You can submit feedback via our [Contact Us form](https://www.pulumi.com/contact/) or in our [community slack](https://slack.pulumi.com/).
+We've initially released Policy as Code with TypeScript and plan to add `pulumi-policy` SDKs for the other languages we support. We would love to hear any feedback you have! You can submit feedback via our [Contact Us form](https://www.pulumi.com/contact/) or in our [community slack](https://slack.pulumi.com/).
