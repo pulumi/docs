@@ -1,30 +1,31 @@
 ---
 title: "Announcing Crossguard Preview"
 date: 2019-12-02
+draft: true
 meta_desc: "Today we are announcing Pulumi CrossGuard, a Policy as Code solution, is available all Team Pro and Enterprise customers to preview."
 meta_image: meta.png
 authors: ["erin-krengel"]
-tags: ["crossguard", "policy-as-code", "New-Features", "Pulumi-News","Features"]
+tags: ["crossguard", "policy-as-code", "New-Features", "Pulumi-News", "Features"]
 ---
 
-Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using the `pulumi-policy` library, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks.
+Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using the `pulumi-policy` library, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they get applied to your resources.
 
 <!--more-->
 
-You can run policies against any Pulumi stack, independent of the stack's language. This means you can have policies written in TypeScript and run them against a Python stack. Policies are grouped in Policy Packs and run against a stack during both `pulumi preview` and `pulumi up`. Each resource in a stack is run through the Policy Pack prior to creation, meaning you can block the creation of out-of-compliance resources.
+You can run policies against any Pulumi stack, independent of the stack's language. This means you can have policies written in TypeScript and run them against a Python-based stack. Policies are grouped in *Policy Packs* and run against a stack during both `pulumi preview` and `pulumi up`. Each resource in a stack is run through the Policy Pack prior to creation, meaning you can block the creation of out-of-compliance resources.
 
 ## Why
 
-Using Pulumi, developers and operators are empowered to self provision their infrastructure and move quickly. One our core goals is to allow you to codify best practices and share them with your team. We often hear from organization leaders that they're concerned about how to make sure their team doesn't accidentally go off the rails. CrossGuard provides guardrails your leadership needs to allow your team to continue to operate self-sufficiently.
+Using Pulumi, developers and operators are empowered to self provision their infrastructure and move quickly. One our core goals is to allow you to codify best practices and share them with your team. We often hear from organization leaders that they are concerned about enforce security and compliance best-practices. CrossGuard provides a way to automatically enforce compliance, allowing teams to operate self-sufficiently while still ensuring organization-wide requirements are met.
 
 ## Key Features
 
 The key features available during the CrossGuard preview are:
 
-* TypeScript `pulumi-policy` SDK to express custom policies
-* Run Policy Packs locally using the `--policy-pack` flag
+* TypeScript [pulumi-policy SDK](https://github.com/pulumi/pulumi-policy) to express custom policies
+* [Run Policy Packs locally](https://www.pulumi.com/docs/get-started/policy-as-code/authoring-a-policy-pack/#testing-the-policy-pack-locally) using the `--policy-pack` flag
 * [AWSGuard library](https://github.com/pulumi/pulumi-awsguard) - codifies best practices for AWS
-* Enforce Policy Packs across your organization or particular stacks in the Pulumi Console
+* [Enforce Policy Packs](https://www.pulumi.com/docs/get-started/policy-as-code/enforcing-a-policy-pack/) across your organization or particular stacks in the Pulumi Console
 * View policy errors and Policy Packs for an update in the Pulumi Console
 
 ## Pulumi CrossGuard for Everyone
@@ -35,7 +36,7 @@ Pulumi CrossGuard has something to offer everyone in your organization.
 
 You want your organization to be able to move quickly and deliver business value. To do so, your team needs to be able to self-service their infrastructure. Pulumi CrossGuard gives you the peace of mind that you need to allow your team to work independently. Codify business and security policies to ensure your team meets the requirements you set forth.
 
-### For Security
+### For Security Engineers
 
 There's a lot of complexity to security and often the rest of your organization does not have all the knowledge they need to deliver software securely. Express security policies that allow you to share your knowledge and prevent issues from ending up in production.
 
@@ -43,9 +44,9 @@ There's a lot of complexity to security and often the rest of your organization 
 
 There are a ton of moving pieces in our ecosystems today. It is difficult to know everything about the cloud resources we use. Pulumi CrossGuard ensure you do not fall into the trap of insecure or unreasonable defaults.
 
-## Demo
+## CrossGuard in Action
 
-In the following demo, we will use our `aws-typescript` policy pack template to prohibit creating an AWS S3 bucket that is public readable. Our Policy Pack is pretty straightforward. It uses a `validateTypedResource` helper function to filter for the resource type we care about and reports a violation if present.
+With an understanding of what CrossGuard enables, let's look at what that means in practice. The following is a policy pack definition that prohibits creating an AWS S3 bucket that is public readable. Our Policy Pack is pretty straightforward. It uses a `validateTypedResource` helper function to filter for the resource type we care about and reports a violation if present.
 
 ```typescript
 new PolicyPack("aws-typescript", {
