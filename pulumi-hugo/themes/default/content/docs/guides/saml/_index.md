@@ -3,8 +3,7 @@ title: SAML Single Sign-on (SSO)
 
 menu:
     userguides:
-        parent: guides
-        weight: 4
+        weight: 2
         identifier: saml
 
 aliases:

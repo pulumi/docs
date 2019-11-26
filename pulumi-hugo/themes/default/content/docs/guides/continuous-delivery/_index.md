@@ -3,9 +3,8 @@ title: Continuous Delivery
 
 menu:
     userguides:
-        parent: guides
         identifier: cont_delivery
-        weight: 2
+        weight: 1
 
 aliases:
 - /docs/reference/cd/

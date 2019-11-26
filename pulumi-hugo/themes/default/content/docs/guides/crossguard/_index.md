@@ -3,8 +3,8 @@ title: CrossGuard
 
 menu:
     userguides:
-        parent: guides
         identifier: crossguard
+        weight: 4
 ---
 
 {{% crossguard-preview %}}
