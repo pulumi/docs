@@ -8,7 +8,7 @@ date: "2019-11-14"
 meta_image: "feature.png"
 ---
 
-Kubernetes provides a rich, stardards-based API that works across cloud and on-premise
+Kubernetes provides a rich, standards-based API that works across cloud and on-premise
 infrastructure. However, many of the API fields are deeply nested and require users
 to specify the same values redundantly across different resources. While this
 explicit specification is necessary for Kubernetes to operate, this often leads users to
