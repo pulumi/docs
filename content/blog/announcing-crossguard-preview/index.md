@@ -3,7 +3,7 @@ title: "Announcing Crossguard Preview"
 date: 2019-12-02
 draft: true
 meta_desc: "Today we are announcing Pulumi CrossGuard, a Policy as Code solution, is available to all Team Pro and Enterprise customers to preview."
-meta_image: meta.png
+meta_image: crossguard.svg
 authors: ["erin-krengel"]
 tags: ["crossguard", "policy-as-code", "New-Features", "Pulumi-News", "Features"]
 ---
@@ -24,7 +24,7 @@ The key features available during the CrossGuard preview are:
 
 * [Policy SDK](https://github.com/pulumi/pulumi-policy) to express custom policies using TypeScript or JavaScript
 * [Run Policy Packs locally]({{< relref "/docs/get-started/policy-as-code/authoring-a-policy-pack#testing-the-policy-pack-locally" >}}) using the `--policy-pack` flag
-* [AWSGuard library](https://github.com/pulumi/pulumi-awsguard) - codifies best practices for AWS
+* The [@pulumi/awsguard package](https://github.com/pulumi/pulumi-awsguard) codifies best practices for AWS
 * [Enforce Policy Packs]({{< relref "/docs/get-started/policy-as-code/enforcing-a-policy-pack" >}}) across your organization or particular stacks in the Pulumi Console
 * View policy errors and Policy Packs for an update in the Pulumi Console
 
