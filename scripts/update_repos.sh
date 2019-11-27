@@ -29,6 +29,7 @@ TOOLS_REPOS=(
     "pulumi-okta"
     "pulumi-openstack"
     "pulumi-packet"
+    "pulumi-policy"
     "pulumi-postgresql"
     "pulumi-random"
     "pulumi-signalfx"
