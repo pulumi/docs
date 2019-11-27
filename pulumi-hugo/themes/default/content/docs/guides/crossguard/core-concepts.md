@@ -75,6 +75,46 @@ const elbLoggingPolicy: ResourceValidationPolicy = {
 
 Policies of `StackValidationPolicy` are run against all the resources in a stack. These policies are run are all stack resources are registered and thus *do not* block an out-of-compliance resource from being created, but do fail the `preview` or `update`. To avoid creating out-of-compliance resources, we recommend always running a `preview` command before an `update`. This allows you to write policies where one resource depends on the state or existence of another resource.
 
+The below example requires that all dynamoDB tables have an App Autoscaling Policy associated with it.
+
+```typescript
+const dynamodbTableAutoscalingRequired: StackValidationPolicy = {
+    name: "dynamodb-autoscaling-required",
+    description: "Requires a dynamoDB table to have an associated App Autoscaling policy.",
+    enforcementLevel: enforcementLevel,
+    validateStack: (args: StackValidationArgs, reportViolation: ReportViolation) => {
+        const dynamodbTables = getResolvedResources(aws.dynamodb.Table.isInstance, args);
+        const appScalingPolicies = getResolvedResources(aws.appautoscaling.Policy.isInstance, args);
+
+        const policyResourceIDMap: Record<string, q.ResolvedResource<aws.appautoscaling.Policy>> = {};
+        for (const policy of appScalingPolicies) {
+            policyResourceIDMap[policy.resourceId] = policy;
+        }
+
+        for (const table of dynamodbTables) {
+            if (policyResourceIDMap[table.id] === undefined) {
+                reportViolation(`DynamoDB table ${table.id} missing app autoscaling policy.`);
+            }
+        }
+    },
+}
+
+// Utility method for returning all resources matching the provided type.
+// Pulumi-policy will soon provide similar utility methods. For the meantime, you can
+// use this utility method as an example for creating your own.
+function getResolvedResources<TResource extends Resource>(
+    typeFilter: (o: any) => o is TResource,
+    args: StackValidationArgs,
+): q.ResolvedResource<TResource>[] {
+    return args.resources
+        .map(r => (<unknown>{ ...r.props, __pulumiType: r.type } as q.ResolvedResource<TResource>))
+        .filter(typeFilter);
+}
+```
+
+A `StackValidationPolicy` can also be used to make validations against a resource that must already be created to validate. For example, a policy that
+checks whether an Amazon Certificate Manager (ACM) certificate has expired would require the certificate already be created as it relies on its outputs.
+
  The [Pulumi Policy Packs examples repository](https://github.com/pulumi/examples/tree/master/policy-packs) provides example `ResourceValidationPolicy` and `StackValidationPolicy` rules for common cloud providers.
 
 ## Policy Pack
