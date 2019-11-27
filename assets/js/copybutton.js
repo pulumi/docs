@@ -72,7 +72,6 @@ $(function() {
         '</div>';
 
     $(":not(.no-copy) > div.highlight")
-        .addClass("relative")
         .append(buttonHtml)
         .on("click", "button.copy-button", function() {
             var $b = $(this);
@@ -97,5 +96,5 @@ $(function() {
             setTimeout(function() {
                 $tooltip.fadeOut();
             }, duration);
-        })
+        });
 });

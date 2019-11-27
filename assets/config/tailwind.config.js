@@ -73,9 +73,7 @@ const green = {
 
 module.exports = {
     theme: {
-
         extend: {
-
             fontFamily: {
                 display: [
                     "Ubuntu",
@@ -87,7 +85,6 @@ module.exports = {
                 ],
             },
         },
-
         colors: {
             white,
             black,
@@ -100,6 +97,12 @@ module.exports = {
             green,
             transparent,
         },
+        maxHeight: {
+            '25': '25vh',
+            '50': '50vh',
+            '75': '75vh',
+            '100': '100vh',
+        }
     },
 
     variants: {
