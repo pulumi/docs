@@ -14,34 +14,92 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.monitoring"></span><dl class="class">
 <dt id="pulumi_azure.monitoring.ActionGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ActionGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">email_receivers=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">sms_receivers=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">webhook_receivers=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ActionGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arm_role_receivers=None</em>, <em class="sig-param">automation_runbook_receivers=None</em>, <em class="sig-param">azure_app_push_receivers=None</em>, <em class="sig-param">azure_function_receivers=None</em>, <em class="sig-param">email_receivers=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">itsm_receivers=None</em>, <em class="sig-param">logic_app_receivers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">sms_receivers=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">voice_receivers=None</em>, <em class="sig-param">webhook_receivers=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Action Group within Azure Monitor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arm_role_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">arm_role_receiver</span></code> blocks as defined below.</p></li>
+<li><p><strong>automation_runbook_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">automation_runbook_receiver</span></code> blocks as defined below.</p></li>
+<li><p><strong>azure_app_push_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">azure_app_push_receiver</span></code> blocks as defined below.</p></li>
+<li><p><strong>azure_function_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">azure_function_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>email_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">email_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>itsm_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">itsm_receiver</span></code> blocks as defined below.</p></li>
+<li><p><strong>logic_app_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">logic_app_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Action Group instance.</p></li>
 <li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The short name of the action group. This will be used in SMS messages.</p></li>
 <li><p><strong>sms_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">sms_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>voice_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">voice_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>webhook_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">webhook_receiver</span></code> blocks as defined below.</p></li>
 </ul>
 </dd>
 </dl>
-<p>The <strong>email_receivers</strong> object supports the following:</p>
+<p>The <strong>arm_role_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">roleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The arm role id.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
+<p>The <strong>automation_runbook_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automationAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The automation account ID which holds this runbook and authenticates to Azure resources.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isGlobalRunbook</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether this instance is global runbook.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runbook_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for this runbook.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI where webhooks should be sent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource id for webhook linked to this runbook.</p></li>
+</ul>
+<p>The <strong>azure_app_push_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
 </ul>
+<p>The <strong>azure_function_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">functionAppResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">functionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The function name in the function app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpTriggerUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The http trigger url where http request sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
+<p>The <strong>email_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
+<p>The <strong>itsm_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique connection identifier of the ITSM connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The region of the workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ticketConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Log Analytics workspace ID where this connection is defined.</p></li>
+</ul>
+<p>The <strong>logic_app_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">callbackUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The callback url where http request sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure resource ID of the logic app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
 <p>The <strong>sms_receivers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the SMS receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the voice receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the SMS receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the voice receiver.</p></li>
+</ul>
+<p>The <strong>voice_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the voice receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the voice receiver.</p></li>
 </ul>
 <p>The <strong>webhook_receivers</strong> object supports the following:</p>
 <ul class="simple">
@@ -53,9 +111,35 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_action_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_action_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
-<dt id="pulumi_azure.monitoring.ActionGroup.email_receivers">
-<code class="sig-name descname">email_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.email_receivers" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">email_receiver</span></code> blocks as defined below.</p>
+<dt id="pulumi_azure.monitoring.ActionGroup.arm_role_receivers">
+<code class="sig-name descname">arm_role_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.arm_role_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">arm_role_receiver</span></code> blocks as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">roleId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The arm role id.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.ActionGroup.automation_runbook_receivers">
+<code class="sig-name descname">automation_runbook_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.automation_runbook_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">automation_runbook_receiver</span></code> blocks as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automationAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The automation account ID which holds this runbook and authenticates to Azure resources.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isGlobalRunbook</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether this instance is global runbook.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runbook_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name for this runbook.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URI where webhooks should be sent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the common alert schema.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The resource id for webhook linked to this runbook.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.ActionGroup.azure_app_push_receivers">
+<code class="sig-name descname">azure_app_push_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.azure_app_push_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">azure_app_push_receiver</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email address of this receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
@@ -63,9 +147,58 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.monitoring.ActionGroup.azure_function_receivers">
+<code class="sig-name descname">azure_function_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.azure_function_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">azure_function_receiver</span></code> blocks as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">functionAppResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">functionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The function name in the function app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpTriggerUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The http trigger url where http request sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.ActionGroup.email_receivers">
+<code class="sig-name descname">email_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.email_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">email_receiver</span></code> blocks as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email address of this receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.monitoring.ActionGroup.enabled">
 <code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.ActionGroup.itsm_receivers">
+<code class="sig-name descname">itsm_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.itsm_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">itsm_receiver</span></code> blocks as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique connection identifier of the ITSM connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The region of the workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ticketConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Log Analytics workspace ID where this connection is defined.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.ActionGroup.logic_app_receivers">
+<code class="sig-name descname">logic_app_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.logic_app_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">logic_app_receiver</span></code> blocks as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">callbackUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The callback url where http request sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure resource ID of the logic app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -91,9 +224,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">sms_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.sms_receivers" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">sms_receiver</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The country code of the SMS receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The country code of the voice receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The phone number of the SMS receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The phone number of the voice receiver.</p></li>
 </ul>
 </dd></dl>
 
@@ -101,6 +234,17 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.monitoring.ActionGroup.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.ActionGroup.voice_receivers">
+<code class="sig-name descname">voice_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.voice_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">voice_receiver</span></code> blocks as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The country code of the voice receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The phone number of the voice receiver.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -116,7 +260,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_azure.monitoring.ActionGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">email_receivers=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">sms_receivers=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">webhook_receivers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arm_role_receivers=None</em>, <em class="sig-param">automation_runbook_receivers=None</em>, <em class="sig-param">azure_app_push_receivers=None</em>, <em class="sig-param">azure_function_receivers=None</em>, <em class="sig-param">email_receivers=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">itsm_receivers=None</em>, <em class="sig-param">logic_app_receivers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">sms_receivers=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">voice_receivers=None</em>, <em class="sig-param">webhook_receivers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ActionGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -125,27 +269,85 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arm_role_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">arm_role_receiver</span></code> blocks as defined below.</p></li>
+<li><p><strong>automation_runbook_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">automation_runbook_receiver</span></code> blocks as defined below.</p></li>
+<li><p><strong>azure_app_push_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">azure_app_push_receiver</span></code> blocks as defined below.</p></li>
+<li><p><strong>azure_function_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">azure_function_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>email_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">email_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>itsm_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">itsm_receiver</span></code> blocks as defined below.</p></li>
+<li><p><strong>logic_app_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">logic_app_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Action Group instance.</p></li>
 <li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The short name of the action group. This will be used in SMS messages.</p></li>
 <li><p><strong>sms_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">sms_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>voice_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">voice_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>webhook_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">webhook_receiver</span></code> blocks as defined below.</p></li>
 </ul>
 </dd>
 </dl>
-<p>The <strong>email_receivers</strong> object supports the following:</p>
+<p>The <strong>arm_role_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">roleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The arm role id.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
+<p>The <strong>automation_runbook_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automationAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The automation account ID which holds this runbook and authenticates to Azure resources.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isGlobalRunbook</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether this instance is global runbook.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runbook_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for this runbook.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI where webhooks should be sent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource id for webhook linked to this runbook.</p></li>
+</ul>
+<p>The <strong>azure_app_push_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
 </ul>
+<p>The <strong>azure_function_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">functionAppResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">functionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The function name in the function app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpTriggerUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The http trigger url where http request sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
+<p>The <strong>email_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
+<p>The <strong>itsm_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique connection identifier of the ITSM connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The region of the workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ticketConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Log Analytics workspace ID where this connection is defined.</p></li>
+</ul>
+<p>The <strong>logic_app_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">callbackUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The callback url where http request sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure resource ID of the logic app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
+</ul>
 <p>The <strong>sms_receivers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the SMS receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the voice receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the SMS receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the voice receiver.</p></li>
+</ul>
+<p>The <strong>voice_receivers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the voice receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the voice receiver.</p></li>
 </ul>
 <p>The <strong>webhook_receivers</strong> object supports the following:</p>
 <ul class="simple">
@@ -934,7 +1136,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.AwaitableGetActionGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">AwaitableGetActionGroupResult</code><span class="sig-paren">(</span><em class="sig-param">email_receivers=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">sms_receivers=None</em>, <em class="sig-param">webhook_receivers=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AwaitableGetActionGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">AwaitableGetActionGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arm_role_receivers=None</em>, <em class="sig-param">automation_runbook_receivers=None</em>, <em class="sig-param">azure_app_push_receivers=None</em>, <em class="sig-param">azure_function_receivers=None</em>, <em class="sig-param">email_receivers=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">itsm_receivers=None</em>, <em class="sig-param">logic_app_receivers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">sms_receivers=None</em>, <em class="sig-param">voice_receivers=None</em>, <em class="sig-param">webhook_receivers=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AwaitableGetActionGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1157,8 +1359,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.GetActionGroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">GetActionGroupResult</code><span class="sig-paren">(</span><em class="sig-param">email_receivers=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">sms_receivers=None</em>, <em class="sig-param">webhook_receivers=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">GetActionGroupResult</code><span class="sig-paren">(</span><em class="sig-param">arm_role_receivers=None</em>, <em class="sig-param">automation_runbook_receivers=None</em>, <em class="sig-param">azure_app_push_receivers=None</em>, <em class="sig-param">azure_function_receivers=None</em>, <em class="sig-param">email_receivers=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">itsm_receivers=None</em>, <em class="sig-param">logic_app_receivers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">sms_receivers=None</em>, <em class="sig-param">voice_receivers=None</em>, <em class="sig-param">webhook_receivers=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getActionGroup.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetActionGroupResult.arm_role_receivers">
+<code class="sig-name descname">arm_role_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.arm_role_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">arm_role_receiver</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetActionGroupResult.automation_runbook_receivers">
+<code class="sig-name descname">automation_runbook_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.automation_runbook_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">automation_runbook_receiver</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetActionGroupResult.azure_app_push_receivers">
+<code class="sig-name descname">azure_app_push_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.azure_app_push_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">azure_app_push_receiver</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetActionGroupResult.azure_function_receivers">
+<code class="sig-name descname">azure_function_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.azure_function_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">azure_function_receiver</span></code> blocks as defined below.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_azure.monitoring.GetActionGroupResult.email_receivers">
 <code class="sig-name descname">email_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.email_receivers" title="Permalink to this definition">¶</a></dt>
@@ -1169,6 +1395,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.GetActionGroupResult.enabled">
 <code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether this action group is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetActionGroupResult.itsm_receivers">
+<code class="sig-name descname">itsm_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.itsm_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">itsm_receiver</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetActionGroupResult.logic_app_receivers">
+<code class="sig-name descname">logic_app_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.logic_app_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">logic_app_receiver</span></code> blocks as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1187,6 +1425,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.GetActionGroupResult.sms_receivers">
 <code class="sig-name descname">sms_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.sms_receivers" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">sms_receiver</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetActionGroupResult.voice_receivers">
+<code class="sig-name descname">voice_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.voice_receivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">voice_receiver</span></code> blocks as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">

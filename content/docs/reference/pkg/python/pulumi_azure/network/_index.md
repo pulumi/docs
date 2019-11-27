@@ -1191,7 +1191,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.AwaitableGetFirewallResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetFirewallResult</code><span class="sig-paren">(</span><em class="sig-param">ip_configuration=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetFirewallResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetFirewallResult</code><span class="sig-paren">(</span><em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetFirewallResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1241,7 +1241,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.AwaitableGetSubnetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param">address_prefix=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">service_endpoints=None</em>, <em class="sig-param">virtual_network_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetSubnetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param">address_prefix=None</em>, <em class="sig-param">enforce_private_link_service_network_policies=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">service_endpoints=None</em>, <em class="sig-param">virtual_network_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetSubnetResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -2020,14 +2020,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.Firewall">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">Firewall</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_configuration=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Firewall" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">Firewall</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Firewall.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>ip_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as documented below.</p></li>
+<li><p><strong>ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as documented below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Firewall. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</p></li>
@@ -2036,7 +2036,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<p>The <strong>ip_configuration</strong> object supports the following:</p>
+<p>The <strong>ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">internalPublicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Firewall. Changing this forces a new resource to be created.</p></li>
@@ -2048,8 +2048,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/firewall.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/firewall.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
-<dt id="pulumi_azure.network.Firewall.ip_configuration">
-<code class="sig-name descname">ip_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Firewall.ip_configuration" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_azure.network.Firewall.ip_configurations">
+<code class="sig-name descname">ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Firewall.ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">internalPublicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -2092,7 +2092,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.network.Firewall.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_configuration=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Firewall.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Firewall.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Firewall resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2101,7 +2101,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>ip_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as documented below.</p></li>
+<li><p><strong>ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as documented below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Firewall. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</p></li>
@@ -2110,7 +2110,7 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<p>The <strong>ip_configuration</strong> object supports the following:</p>
+<p>The <strong>ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">internalPublicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Firewall. Changing this forces a new resource to be created.</p></li>
@@ -2694,11 +2694,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.GetFirewallResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetFirewallResult</code><span class="sig-paren">(</span><em class="sig-param">ip_configuration=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetFirewallResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetFirewallResult</code><span class="sig-paren">(</span><em class="sig-param">ip_configurations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetFirewallResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFirewall.</p>
 <dl class="attribute">
-<dt id="pulumi_azure.network.GetFirewallResult.ip_configuration">
-<code class="sig-name descname">ip_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetFirewallResult.ip_configuration" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_azure.network.GetFirewallResult.ip_configurations">
+<code class="sig-name descname">ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetFirewallResult.ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as defined below.</p>
 </dd></dl>
 
@@ -3156,12 +3156,18 @@ in which the connection is created.</p>
 
 <dl class="class">
 <dt id="pulumi_azure.network.GetSubnetResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param">address_prefix=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">service_endpoints=None</em>, <em class="sig-param">virtual_network_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetSubnetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param">address_prefix=None</em>, <em class="sig-param">enforce_private_link_service_network_policies=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">service_endpoints=None</em>, <em class="sig-param">virtual_network_name=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetSubnetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubnet.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetSubnetResult.address_prefix">
 <code class="sig-name descname">address_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetSubnetResult.address_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>The address prefix used for the subnet.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetSubnetResult.enforce_private_link_service_network_policies">
+<code class="sig-name descname">enforce_private_link_service_network_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetSubnetResult.enforce_private_link_service_network_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or Disable network policies on private link service in the subnet.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5909,7 +5915,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.Subnet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address_prefix=None</em>, <em class="sig-param">delegations=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">service_endpoints=None</em>, <em class="sig-param">virtual_network_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Subnet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address_prefix=None</em>, <em class="sig-param">delegations=None</em>, <em class="sig-param">enforce_private_link_service_network_policies=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">service_endpoints=None</em>, <em class="sig-param">virtual_network_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a subnet. Subnets represent network segments within the IP space defined by the virtual network.</p>
 <blockquote>
 <div><p><strong>NOTE on Virtual Networks and Subnet’s:</strong> This provider currently
@@ -5923,6 +5929,7 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address prefix to use for the subnet.</p></li>
 <li><p><strong>delegations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">delegation</span></code> blocks as defined below.</p></li>
+<li><p><strong>enforce_private_link_service_network_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or Disable network policies on the <code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">link</span> <span class="pre">service</span></code> in the subnet. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of IP Configurations with IPs within this subnet.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnet. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>network_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Security Group to associate with the subnet.</p></li>
@@ -5965,6 +5972,12 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 </ul>
 </li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.Subnet.enforce_private_link_service_network_policies">
+<code class="sig-name descname">enforce_private_link_service_network_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Subnet.enforce_private_link_service_network_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or Disable network policies on the <code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">link</span> <span class="pre">service</span></code> in the subnet. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6011,7 +6024,7 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 
 <dl class="method">
 <dt id="pulumi_azure.network.Subnet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address_prefix=None</em>, <em class="sig-param">delegations=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">service_endpoints=None</em>, <em class="sig-param">virtual_network_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Subnet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address_prefix=None</em>, <em class="sig-param">delegations=None</em>, <em class="sig-param">enforce_private_link_service_network_policies=None</em>, <em class="sig-param">ip_configurations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">service_endpoints=None</em>, <em class="sig-param">virtual_network_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Subnet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Subnet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -6022,6 +6035,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address prefix to use for the subnet.</p></li>
 <li><p><strong>delegations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">delegation</span></code> blocks as defined below.</p></li>
+<li><p><strong>enforce_private_link_service_network_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or Disable network policies on the <code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">link</span> <span class="pre">service</span></code> in the subnet. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of IP Configurations with IPs within this subnet.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnet. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>network_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Security Group to associate with the subnet.</p></li>

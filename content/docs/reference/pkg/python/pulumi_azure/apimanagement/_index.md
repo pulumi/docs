@@ -14,7 +14,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.apimanagement"></span><dl class="class">
 <dt id="pulumi_azure.apimanagement.Api">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Api</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_management_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">import_=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">revision=None</em>, <em class="sig-param">service_url=None</em>, <em class="sig-param">soap_pass_through=None</em>, <em class="sig-param">subscription_key_parameter_names=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Api" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">Api</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_management_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">import_=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">revision=None</em>, <em class="sig-param">service_url=None</em>, <em class="sig-param">soap_pass_through=None</em>, <em class="sig-param">subscription_key_parameter_names=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">version_set_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.Api" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API within an API Management Service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -36,7 +36,9 @@ anything, please consult the source <a class="reference external" href="https://
 :param pulumi.Input[str] revision: The Revision which used for this API.
 :param pulumi.Input[str] service_url: Absolute URL of the backend service implementing this API.
 :param pulumi.Input[bool] soap_pass_through: Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[dict] subscription_key_parameter_names: A <code class="docutils literal notranslate"><span class="pre">subscription_key_parameter_names</span></code> block as documented below.</p>
+:param pulumi.Input[dict] subscription_key_parameter_names: A <code class="docutils literal notranslate"><span class="pre">subscription_key_parameter_names</span></code> block as documented below.
+:param pulumi.Input[str] version: The Version number of this API, if this API is versioned.
+:param pulumi.Input[str] version_set_id: The ID of the Version Set which this API is associated with.</p>
 <p>The <strong>import_</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -1004,7 +1006,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.ApiVersionSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.apimanagement.</code><code class="sig-name descname">ApiVersionSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_management_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">version_header_name=None</em>, <em class="sig-param">version_query_name=None</em>, <em class="sig-param">versioning_scheme=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiVersionSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages an API Version Set within a API Management Service.</p>
+<dd><p>Manages an API Version Set within an API Management Service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
