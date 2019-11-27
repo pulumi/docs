@@ -26,3 +26,7 @@ If you're looking for some example Policy Packs, take a look at these:
 * [Azure](https://github.com/pulumi/examples/tree/master/policy-packs/azure)
 * [GCP](https://github.com/pulumi/examples/tree/master/policy-packs/gcp)
 * [Kubernetes](https://github.com/pulumi/examples/tree/master/policy-packs/kubernetes)
+
+## FAQs
+
+Get the answers to some [Frequently Asked Questions]({{< relref "./faq" >}}) about CrossGuard.

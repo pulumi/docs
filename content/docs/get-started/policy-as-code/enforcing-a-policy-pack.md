@@ -48,4 +48,4 @@ Once you’ve validated the behavior of your policies, an organization administr
 
 ## Next Steps
 
-Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs).
+Now that you have published your first Policy Pack, you now have all the tools needed to enforce compliance amongst your organization. For more example Policy Packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [CrossGuard guide]({{< relref "/docs/guides/crossguard" >}}).
