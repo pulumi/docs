@@ -44,56 +44,56 @@ meta_desc: "Explore members of the config module in the @pulumi/azure package."
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="auxiliaryTenantIds" data-link-title="auxiliaryTenantIds">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L9">
         let <strong>auxiliaryTenantIds</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> auxiliaryTenantIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;string[]&gt;(&#34;auxiliaryTenantIds&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="clientCertificatePassword" data-link-title="clientCertificatePassword">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L14">
         let <strong>clientCertificatePassword</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> clientCertificatePassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientCertificatePassword&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_CERTIFICATE_PASSWORD&#34;) || &#34;&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> clientCertificatePassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientCertificatePassword&#34;) || (utilities.getEnv(&#34;AZURE_CLIENT_CERTIFICATE_PASSWORD&#34;, &#34;ARM_CLIENT_CERTIFICATE_PASSWORD&#34;) || &#34;&#34;)</span>;</code></pre>
 
 The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client
 Certificate
 
 <h3 class="pdoc-module-header" id="clientCertificatePath" data-link-title="clientCertificatePath">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L19">
         let <strong>clientCertificatePath</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> clientCertificatePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientCertificatePath&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_CERTIFICATE_PATH&#34;) || &#34;&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> clientCertificatePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientCertificatePath&#34;) || (utilities.getEnv(&#34;AZURE_CLIENT_CERTIFICATE_PATH&#34;, &#34;ARM_CLIENT_CERTIFICATE_PATH&#34;) || &#34;&#34;)</span>;</code></pre>
 
 The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
 Principal using a Client Certificate.
 
 <h3 class="pdoc-module-header" id="clientId" data-link-title="clientId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L23">
         let <strong>clientId</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientId&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_ID&#34;) || &#34;&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientId&#34;) || (utilities.getEnv(&#34;AZURE_CLIENT_ID&#34;, &#34;ARM_CLIENT_ID&#34;) || &#34;&#34;)</span>;</code></pre>
 
 The Client ID which should be used.
 
 <h3 class="pdoc-module-header" id="clientSecret" data-link-title="clientSecret">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L27">
         let <strong>clientSecret</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientSecret&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_SECRET&#34;) || &#34;&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientSecret&#34;) || (utilities.getEnv(&#34;AZURE_CLIENT_SECRET&#34;, &#34;ARM_CLIENT_SECRET&#34;) || &#34;&#34;)</span>;</code></pre>
 
 The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
 
 <h3 class="pdoc-module-header" id="disableCorrelationRequestId" data-link-title="disableCorrelationRequestId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L31">
         let <strong>disableCorrelationRequestId</strong>
     </a>
 </h3>
@@ -103,7 +103,7 @@ The Client Secret which should be used. For use When authenticating as a Service
 This will disable the x-ms-correlation-request-id header.
 
 <h3 class="pdoc-module-header" id="disableTerraformPartnerId" data-link-title="disableTerraformPartnerId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L35">
         let <strong>disableTerraformPartnerId</strong>
     </a>
 </h3>
@@ -113,25 +113,25 @@ This will disable the x-ms-correlation-request-id header.
 This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
 
 <h3 class="pdoc-module-header" id="environment" data-link-title="environment">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L40">
         let <strong>environment</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> environment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;environment&#34;) || (utilities.getEnv(&#34;ARM_ENVIRONMENT&#34;) || &#34;public&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> environment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;environment&#34;) || (utilities.getEnv(&#34;AZURE_ENVIRONMENT&#34;, &#34;ARM_ENVIRONMENT&#34;) || &#34;public&#34;)</span>;</code></pre>
 
 The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
 
 <h3 class="pdoc-module-header" id="location" data-link-title="location">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L71">
         let <strong>location</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;location&#34;) || utilities.getEnv(&#34;ARM_LOCATION&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="msiEndpoint" data-link-title="msiEndpoint">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L45">
         let <strong>msiEndpoint</strong>
     </a>
 </h3>
@@ -142,7 +142,7 @@ The path to a custom endpoint for Managed Service Identity - in most circumstanc
 automatically.
 
 <h3 class="pdoc-module-header" id="partnerId" data-link-title="partnerId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L49">
         let <strong>partnerId</strong>
     </a>
 </h3>
@@ -152,7 +152,7 @@ automatically.
 A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
 
 <h3 class="pdoc-module-header" id="skipCredentialsValidation" data-link-title="skipCredentialsValidation">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L53">
         let <strong>skipCredentialsValidation</strong>
     </a>
 </h3>
@@ -162,7 +162,7 @@ A GUID/UUID that is registered with Microsoft to facilitate partner resource usa
 This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
 
 <h3 class="pdoc-module-header" id="skipProviderRegistration" data-link-title="skipProviderRegistration">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L58">
         let <strong>skipProviderRegistration</strong>
     </a>
 </h3>
@@ -173,7 +173,7 @@ Should the AzureRM Provider skip registering all of the Resource Providers that 
 registered?
 
 <h3 class="pdoc-module-header" id="subscriptionId" data-link-title="subscriptionId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L62">
         let <strong>subscriptionId</strong>
     </a>
 </h3>
@@ -183,17 +183,17 @@ registered?
 The Subscription ID which should be used.
 
 <h3 class="pdoc-module-header" id="tenantId" data-link-title="tenantId">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L66">
         let <strong>tenantId</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kd'>let</span> tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;tenantId&#34;) || (utilities.getEnv(&#34;ARM_TENANT_ID&#34;) || &#34;&#34;)</span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>let</span> tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;tenantId&#34;) || (utilities.getEnv(&#34;AZURE_TENANT_ID&#34;, &#34;ARM_TENANT_ID&#34;) || &#34;&#34;)</span>;</code></pre>
 
 The Tenant ID which should be used.
 
 <h3 class="pdoc-module-header" id="useMsi" data-link-title="useMsi">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/config/vars.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/config/vars.ts#L70">
         let <strong>useMsi</strong>
     </a>
 </h3>

@@ -32,7 +32,7 @@ meta_desc: "Explore members of the analysisservices module in the @pulumi/azure 
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Server" data-link-title="Server">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L40">
         Resource <strong>Server</strong>
     </a>
 </h3>
@@ -49,7 +49,6 @@ import * as azure from "@pulumi/azure";
 
 const rg = new azure.core.ResourceGroup("rg", {
     location: "northeurope",
-    name: "analysis-services-server-test",
 });
 const server = new azure.analysisservices.Server("server", {
     adminUsers: ["myuser@domain.tld"],
@@ -60,7 +59,6 @@ const server = new azure.analysisservices.Server("server", {
         rangeStart: "210.117.252.0",
     }],
     location: "northeurope",
-    name: "analysisservicesserver",
     resourceGroupName: rg.name,
     sku: "S0",
     tags: {
@@ -72,7 +70,7 @@ const server = new azure.analysisservices.Server("server", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/analysis_services_server.html.markdown.
 
 <h4 class="pdoc-member-header" id="Server-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -86,7 +84,7 @@ Create a Server resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Server-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -97,14 +95,14 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Server-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Server-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -115,7 +113,7 @@ Returns true if the given object is an instance of Server.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Server-adminUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L72">property <b>adminUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L70">property <b>adminUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adminUsers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -123,7 +121,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of email addresses of admin users.
 
 <h4 class="pdoc-member-header" id="Server-backupBlobContainerUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L76">property <b>backupBlobContainerUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L74">property <b>backupBlobContainerUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupBlobContainerUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -131,7 +129,7 @@ List of email addresses of admin users.
 URI and SAS token for a blob container to store backups.
 
 <h4 class="pdoc-member-header" id="Server-enablePowerBiService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L80">property <b>enablePowerBiService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L78">property <b>enablePowerBiService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enablePowerBiService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -139,7 +137,7 @@ URI and SAS token for a blob container to store backups.
 Indicates if the Power BI service is allowed to access or not.
 
 <h4 class="pdoc-member-header" id="Server-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -148,7 +146,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Server-ipv4FirewallRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L84">property <b>ipv4FirewallRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L82">property <b>ipv4FirewallRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv4FirewallRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerIpv4FirewallRule'>outputs.analysisservices.ServerIpv4FirewallRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -156,7 +154,7 @@ deployments and may be missing (undefined) during planning phases.
 One or more `ipv4FirewallRule` block(s) as defined below.
 
 <h4 class="pdoc-member-header" id="Server-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L88">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L86">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +162,7 @@ One or more `ipv4FirewallRule` block(s) as defined below.
 The Azure location where the Analysis Services Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +170,7 @@ The Azure location where the Analysis Services Server exists. Changing this forc
 Specifies the name of the firewall rule.
 
 <h4 class="pdoc-member-header" id="Server-querypoolConnectionMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L96">property <b>querypoolConnectionMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L94">property <b>querypoolConnectionMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>querypoolConnectionMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +178,7 @@ Specifies the name of the firewall rule.
 Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 
 <h4 class="pdoc-member-header" id="Server-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L100">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L98">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -188,7 +186,7 @@ Controls how the read-write server is used in the query pool. If this values is 
 The name of the Resource Group in which the Analysis Services Server should be exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-serverFullName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L104">property <b>serverFullName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L102">property <b>serverFullName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverFullName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -196,7 +194,7 @@ The name of the Resource Group in which the Analysis Services Server should be e
 The full name of the Analysis Services Server.
 
 <h4 class="pdoc-member-header" id="Server-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L108">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L106">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -204,12 +202,12 @@ The full name of the Analysis Services Server.
 SKU for the Analysis Services Server. Possible values are: `D1`, `B1`, `B2`, `S0`, `S1`, `S2`, `S4`, `S8` and `S9`
 
 <h4 class="pdoc-member-header" id="Server-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L109">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L107">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Server-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -221,7 +219,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ServerArgs" data-link-title="ServerArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L213">
         interface <strong>ServerArgs</strong>
     </a>
 </h3>
@@ -231,7 +229,7 @@ deployments.
 The set of arguments for constructing a Server resource.
 
 <h4 class="pdoc-member-header" id="ServerArgs-adminUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L219">property <b>adminUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L217">property <b>adminUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -239,7 +237,7 @@ The set of arguments for constructing a Server resource.
 List of email addresses of admin users.
 
 <h4 class="pdoc-member-header" id="ServerArgs-backupBlobContainerUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L223">property <b>backupBlobContainerUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L221">property <b>backupBlobContainerUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupBlobContainerUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -247,7 +245,7 @@ List of email addresses of admin users.
 URI and SAS token for a blob container to store backups.
 
 <h4 class="pdoc-member-header" id="ServerArgs-enablePowerBiService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L227">property <b>enablePowerBiService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L225">property <b>enablePowerBiService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePowerBiService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -255,7 +253,7 @@ URI and SAS token for a blob container to store backups.
 Indicates if the Power BI service is allowed to access or not.
 
 <h4 class="pdoc-member-header" id="ServerArgs-ipv4FirewallRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L231">property <b>ipv4FirewallRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L229">property <b>ipv4FirewallRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4FirewallRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIpv4FirewallRule'>inputs.analysisservices.ServerIpv4FirewallRule</a>&gt;[]&gt;;</code></pre>
@@ -263,7 +261,7 @@ Indicates if the Power BI service is allowed to access or not.
 One or more `ipv4FirewallRule` block(s) as defined below.
 
 <h4 class="pdoc-member-header" id="ServerArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L235">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L233">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -271,7 +269,7 @@ One or more `ipv4FirewallRule` block(s) as defined below.
 The Azure location where the Analysis Services Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L239">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L237">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -279,7 +277,7 @@ The Azure location where the Analysis Services Server exists. Changing this forc
 Specifies the name of the firewall rule.
 
 <h4 class="pdoc-member-header" id="ServerArgs-querypoolConnectionMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L243">property <b>querypoolConnectionMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L241">property <b>querypoolConnectionMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>querypoolConnectionMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -287,7 +285,7 @@ Specifies the name of the firewall rule.
 Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 
 <h4 class="pdoc-member-header" id="ServerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L247">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L245">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -295,7 +293,7 @@ Controls how the read-write server is used in the query pool. If this values is 
 The name of the Resource Group in which the Analysis Services Server should be exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L251">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L249">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -303,12 +301,12 @@ The name of the Resource Group in which the Analysis Services Server should be e
 SKU for the Analysis Services Server. Possible values are: `D1`, `B1`, `B2`, `S0`, `S1`, `S2`, `S4`, `S8` and `S9`
 
 <h4 class="pdoc-member-header" id="ServerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L252">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L250">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ServerState" data-link-title="ServerState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L166">
         interface <strong>ServerState</strong>
     </a>
 </h3>
@@ -318,7 +316,7 @@ SKU for the Analysis Services Server. Possible values are: `D1`, `B1`, `B2`, `S0
 Input properties used for looking up and filtering Server resources.
 
 <h4 class="pdoc-member-header" id="ServerState-adminUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L172">property <b>adminUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L170">property <b>adminUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -326,7 +324,7 @@ Input properties used for looking up and filtering Server resources.
 List of email addresses of admin users.
 
 <h4 class="pdoc-member-header" id="ServerState-backupBlobContainerUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L176">property <b>backupBlobContainerUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L174">property <b>backupBlobContainerUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupBlobContainerUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -334,7 +332,7 @@ List of email addresses of admin users.
 URI and SAS token for a blob container to store backups.
 
 <h4 class="pdoc-member-header" id="ServerState-enablePowerBiService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L180">property <b>enablePowerBiService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L178">property <b>enablePowerBiService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePowerBiService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -342,7 +340,7 @@ URI and SAS token for a blob container to store backups.
 Indicates if the Power BI service is allowed to access or not.
 
 <h4 class="pdoc-member-header" id="ServerState-ipv4FirewallRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L184">property <b>ipv4FirewallRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L182">property <b>ipv4FirewallRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4FirewallRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIpv4FirewallRule'>inputs.analysisservices.ServerIpv4FirewallRule</a>&gt;[]&gt;;</code></pre>
@@ -350,7 +348,7 @@ Indicates if the Power BI service is allowed to access or not.
 One or more `ipv4FirewallRule` block(s) as defined below.
 
 <h4 class="pdoc-member-header" id="ServerState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L188">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L186">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -358,7 +356,7 @@ One or more `ipv4FirewallRule` block(s) as defined below.
 The Azure location where the Analysis Services Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -366,7 +364,7 @@ The Azure location where the Analysis Services Server exists. Changing this forc
 Specifies the name of the firewall rule.
 
 <h4 class="pdoc-member-header" id="ServerState-querypoolConnectionMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L196">property <b>querypoolConnectionMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L194">property <b>querypoolConnectionMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>querypoolConnectionMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -374,7 +372,7 @@ Specifies the name of the firewall rule.
 Controls how the read-write server is used in the query pool. If this values is set to `All` then read-write servers are also used for queries. Otherwise with `ReadOnly` these servers do not participate in query operations.
 
 <h4 class="pdoc-member-header" id="ServerState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L200">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L198">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -382,7 +380,7 @@ Controls how the read-write server is used in the query pool. If this values is 
 The name of the Resource Group in which the Analysis Services Server should be exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-serverFullName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L204">property <b>serverFullName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L202">property <b>serverFullName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverFullName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -390,7 +388,7 @@ The name of the Resource Group in which the Analysis Services Server should be e
 The full name of the Analysis Services Server.
 
 <h4 class="pdoc-member-header" id="ServerState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L208">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L206">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -398,7 +396,7 @@ The full name of the Analysis Services Server.
 SKU for the Analysis Services Server. Possible values are: `D1`, `B1`, `B2`, `S0`, `S1`, `S2`, `S4`, `S8` and `S9`
 
 <h4 class="pdoc-member-header" id="ServerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/814aeefbe707f94356a8f21fc35e192ce8633607/sdk/nodejs/analysisservices/server.ts#L209">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/analysisservices/server.ts#L207">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
