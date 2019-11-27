@@ -2,13 +2,13 @@
 title: "Announcing Crossguard Preview"
 date: 2019-12-02
 draft: true
-meta_desc: "Today we are announcing Pulumi CrossGuard, a Policy as Code solution, is available all Team Pro and Enterprise customers to preview."
+meta_desc: "Today we are announcing Pulumi CrossGuard, a Policy as Code solution, is available to all Team Pro and Enterprise customers to preview."
 meta_image: meta.png
 authors: ["erin-krengel"]
 tags: ["crossguard", "policy-as-code", "New-Features", "Pulumi-News", "Features"]
 ---
 
-Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using the `pulumi-policy` library, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they are applied to your resources.
+Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using the `@pulumi/policy` library, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they are applied to your resources.
 
 <!--more-->
 
@@ -22,10 +22,10 @@ Using Pulumi, developers and operators are empowered to self-provision their inf
 
 The key features available during the CrossGuard preview are:
 
-* TypeScript [pulumi-policy SDK](https://github.com/pulumi/pulumi-policy) to express custom policies
-* [Run Policy Packs locally](https://www.pulumi.com/docs/get-started/policy-as-code/authoring-a-policy-pack/#testing-the-policy-pack-locally) using the `--policy-pack` flag
+* [Policy SDK](https://github.com/pulumi/pulumi-policy) to express custom policies using TypeScript or JavaScript
+* [Run Policy Packs locally]({{< relref "/docs/get-started/policy-as-code/authoring-a-policy-pack#testing-the-policy-pack-locally" >}}) using the `--policy-pack` flag
 * [AWSGuard library](https://github.com/pulumi/pulumi-awsguard) - codifies best practices for AWS
-* [Enforce Policy Packs](https://www.pulumi.com/docs/get-started/policy-as-code/enforcing-a-policy-pack/) across your organization or particular stacks in the Pulumi Console
+* [Enforce Policy Packs]({{< relref "/docs/get-started/policy-as-code/enforcing-a-policy-pack" >}}) across your organization or particular stacks in the Pulumi Console
 * View policy errors and Policy Packs for an update in the Pulumi Console
 
 ## Pulumi CrossGuard for Everyone
@@ -87,9 +87,9 @@ While this is a simple demonstration of what you can do with Policy as Code, the
 
 ## Try it Today
 
-Pulumi CrossGuard empowers everyone to build better, safer applications and infrastructure. Today, Pulumi CrossGuard is available to preview for all Team Pro and Enterprise organizations. Organization administrators can opt-in to the preview via the "Policies" tab in the Pulumi Console. To get started with CrossGuard today, here are some resources:
+Pulumi CrossGuard empowers everyone to build better, safer applications and infrastructure. Today, Pulumi CrossGuard is available to preview for all Team Pro and Enterprise organizations. Organization administrators can opt-in to the preview via the "Policies" tab in the [Pulumi Console](https://app.pulumi.com/). To get started with CrossGuard today, here are some resources:
 
-* If haven't played around with Pulumi yet, here is [Pulumi's Getting Started tutorial](https://www.pulumi.com/docs/get-started/).
-* [Policy as Code Getting Started tutorial](https://www.pulumi.com/docs/get-started/policy-as-code/)
+* If haven't played around with Pulumi yet, here is [Pulumi's Getting Started tutorial]({{< relref "/docs/get-started" >}}).
+* [Policy as Code Getting Started tutorial]({{< relref "/docs/get-started/policy-as-code" >}})
 
-We've initially released Policy as Code with TypeScript and plan to add `pulumi-policy` SDKs for the other languages we support. We would love to hear any feedback you have! You can submit feedback via our [Contact Us form](https://www.pulumi.com/contact/) or in our [community slack](https://slack.pulumi.com/).
+We've initially released the capability to create policies with TypeScript or JavaScript (that work with Pulumi programs written in any supported language) and plan to add policy SDKs for other supported languages. We would love to hear any feedback you have! You can submit feedback via our [Contact Us form]({{< relref "/contact" >}}) or in our [community slack](https://slack.pulumi.com/).
