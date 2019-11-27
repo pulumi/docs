@@ -233,6 +233,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>frontend_ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the Frontend IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">inbound_nat_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">load_balancer_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the frontend ip configuration.</p></li>
@@ -252,6 +253,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">frontend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or multiple <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as documented below.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The id of the Frontend IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">inbound_nat_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">load_balancer_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the frontend ip configuration.</p></li>
@@ -331,6 +333,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>frontend_ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the Frontend IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">inbound_nat_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">load_balancer_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the frontend ip configuration.</p></li>

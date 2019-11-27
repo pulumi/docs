@@ -316,7 +316,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appinsights.Insights">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">Insights</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">Insights</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sampling_percentage=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Insights component.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -329,6 +329,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the Application Insights component.</p></li>
+<li><p><strong>sampling_percentage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
@@ -375,6 +376,12 @@ create the Application Insights component.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.appinsights.Insights.sampling_percentage">
+<code class="sig-name descname">sampling_percentage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.Insights.sampling_percentage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.appinsights.Insights.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.Insights.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
@@ -382,7 +389,7 @@ create the Application Insights component.</p>
 
 <dl class="method">
 <dt id="pulumi_azure.appinsights.Insights.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">instrumentation_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">instrumentation_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sampling_percentage=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Insights resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -399,6 +406,7 @@ properties used to qualify the lookup.</p>
 new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the Application Insights component.</p></li>
+<li><p><strong>sampling_percentage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>

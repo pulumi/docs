@@ -1336,6 +1336,284 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">HostedTransitVirtualInterface</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address_family=None</em>, <em class="sig-param">amazon_address=None</em>, <em class="sig-param">bgp_asn=None</em>, <em class="sig-param">bgp_auth_key=None</em>, <em class="sig-param">connection_id=None</em>, <em class="sig-param">customer_address=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_account_id=None</em>, <em class="sig-param">vlan=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Direct Connect hosted transit virtual interface resource.
+This resource represents the allocator’s side of the hosted virtual interface.
+A hosted virtual interface is a virtual interface that is owned by another AWS account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</p></li>
+<li><p><strong>amazon_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.</p></li>
+<li><p><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p></li>
+<li><p><strong>bgp_auth_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication key for BGP configuration.</p></li>
+<li><p><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.</p></li>
+<li><p><strong>customer_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.</p></li>
+<li><p><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">8500</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the virtual interface.</p></li>
+<li><p><strong>owner_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account that will own the new virtual interface.</p></li>
+<li><p><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_transit_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_transit_virtual_interface.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.address_family">
+<code class="sig-name descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.address_family" title="Permalink to this definition">¶</a></dt>
+<dd><p>The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.amazon_address">
+<code class="sig-name descname">amazon_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.amazon_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.aws_device">
+<code class="sig-name descname">aws_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.aws_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Direct Connect endpoint on which the virtual interface terminates.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.bgp_asn">
+<code class="sig-name descname">bgp_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.bgp_asn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.bgp_auth_key">
+<code class="sig-name descname">bgp_auth_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.bgp_auth_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The authentication key for BGP configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.connection_id">
+<code class="sig-name descname">connection_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.connection_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.customer_address">
+<code class="sig-name descname">customer_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.customer_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.jumbo_frame_capable">
+<code class="sig-name descname">jumbo_frame_capable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.jumbo_frame_capable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether jumbo frames (8500 MTU) are supported.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.mtu">
+<code class="sig-name descname">mtu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.mtu" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">8500</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.owner_account_id">
+<code class="sig-name descname">owner_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.owner_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The AWS account that will own the new virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.vlan">
+<code class="sig-name descname">vlan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.vlan" title="Permalink to this definition">¶</a></dt>
+<dd><p>The VLAN ID.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address_family=None</em>, <em class="sig-param">amazon_address=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">aws_device=None</em>, <em class="sig-param">bgp_asn=None</em>, <em class="sig-param">bgp_auth_key=None</em>, <em class="sig-param">connection_id=None</em>, <em class="sig-param">customer_address=None</em>, <em class="sig-param">jumbo_frame_capable=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_account_id=None</em>, <em class="sig-param">vlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HostedTransitVirtualInterface resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</p></li>
+<li><p><strong>amazon_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the virtual interface.</p></li>
+<li><p><strong>aws_device</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Direct Connect endpoint on which the virtual interface terminates.</p></li>
+<li><p><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p></li>
+<li><p><strong>bgp_auth_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication key for BGP configuration.</p></li>
+<li><p><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.</p></li>
+<li><p><strong>customer_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.</p></li>
+<li><p><strong>jumbo_frame_capable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether jumbo frames (8500 MTU) are supported.</p></li>
+<li><p><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">8500</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the virtual interface.</p></li>
+<li><p><strong>owner_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account that will own the new virtual interface.</p></li>
+<li><p><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_transit_virtual_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_transit_virtual_interface.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterface.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterface.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">HostedTransitVirtualInterfaceAcceptor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dx_gateway_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_interface_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a HostedTransitVirtualInterfaceAcceptor resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dx_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect gateway to which to connect the virtual interface.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>virtual_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect virtual interface to accept.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_transit_virtual_interface_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_transit_virtual_interface_accepter.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.dx_gateway_id">
+<code class="sig-name descname">dx_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.dx_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Direct Connect gateway to which to connect the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.virtual_interface_id">
+<code class="sig-name descname">virtual_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.virtual_interface_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Direct Connect virtual interface to accept.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">dx_gateway_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_interface_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HostedTransitVirtualInterfaceAcceptor resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the virtual interface.</p></li>
+<li><p><strong>dx_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect gateway to which to connect the virtual interface.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>virtual_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect virtual interface to accept.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_transit_virtual_interface_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_hosted_transit_virtual_interface_accepter.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.HostedTransitVirtualInterfaceAcceptor.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.directconnect.LinkAggregationGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directconnect.</code><code class="sig-name descname">LinkAggregationGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">connections_bandwidth=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Direct Connect LAG. Connections can be added to the LAG via the <cite>``directconnect.Connection`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_connection.html">https://www.terraform.io/docs/providers/aws/r/dx_connection.html</a>&gt;`_ and <cite>``directconnect.ConnectionAssociation`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_connection_association.html">https://www.terraform.io/docs/providers/aws/r/dx_connection_association.html</a>&gt;`_ resources.</p>

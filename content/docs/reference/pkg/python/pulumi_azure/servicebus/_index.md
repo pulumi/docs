@@ -851,7 +851,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.servicebus.Subscription">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_delete_on_idle=None</em>, <em class="sig-param">dead_lettering_on_filter_evaluation_exceptions=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">default_message_ttl=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">forward_to=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">lock_duration=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Subscription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicebus.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_delete_on_idle=None</em>, <em class="sig-param">dead_lettering_on_filter_evaluation_exceptions=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">default_message_ttl=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">forward_dead_lettered_messages_to=None</em>, <em class="sig-param">forward_to=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">lock_duration=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a ServiceBus Subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -869,8 +869,8 @@ if no TTL value is set on the message itself. Provided in the TimeSpan
 format.</p></li>
 <li><p><strong>enable_batched_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the
 Subscription supports batched operations. Defaults to false.</p></li>
-<li><p><strong>forward_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward 
-messages to.</p></li>
+<li><p><strong>forward_dead_lettered_messages_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward Dead Letter messages to.</p></li>
+<li><p><strong>forward_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward messages to.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.</p></li>
 <li><p><strong>lock_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The lock duration for the subscription, maximum
@@ -925,10 +925,15 @@ Subscription supports batched operations. Defaults to false.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.servicebus.Subscription.forward_dead_lettered_messages_to">
+<code class="sig-name descname">forward_dead_lettered_messages_to</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.Subscription.forward_dead_lettered_messages_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of a Queue or Topic to automatically forward Dead Letter messages to.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.servicebus.Subscription.forward_to">
 <code class="sig-name descname">forward_to</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicebus.Subscription.forward_to" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of a Queue or Topic to automatically forward 
-messages to.</p>
+<dd><p>The name of a Queue or Topic to automatically forward messages to.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -989,7 +994,7 @@ this Subscription in. Changing this forces a new resource to be created.</p>
 
 <dl class="method">
 <dt id="pulumi_azure.servicebus.Subscription.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_delete_on_idle=None</em>, <em class="sig-param">dead_lettering_on_filter_evaluation_exceptions=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">default_message_ttl=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">forward_to=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">lock_duration=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">topic_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Subscription.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_delete_on_idle=None</em>, <em class="sig-param">dead_lettering_on_filter_evaluation_exceptions=None</em>, <em class="sig-param">dead_lettering_on_message_expiration=None</em>, <em class="sig-param">default_message_ttl=None</em>, <em class="sig-param">enable_batched_operations=None</em>, <em class="sig-param">forward_dead_lettered_messages_to=None</em>, <em class="sig-param">forward_to=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">lock_duration=None</em>, <em class="sig-param">max_delivery_count=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_name=None</em>, <em class="sig-param">requires_session=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">topic_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicebus.Subscription.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Subscription resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1009,8 +1014,8 @@ if no TTL value is set on the message itself. Provided in the TimeSpan
 format.</p></li>
 <li><p><strong>enable_batched_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the
 Subscription supports batched operations. Defaults to false.</p></li>
-<li><p><strong>forward_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward 
-messages to.</p></li>
+<li><p><strong>forward_dead_lettered_messages_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward Dead Letter messages to.</p></li>
+<li><p><strong>forward_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward messages to.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.</p></li>
 <li><p><strong>lock_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The lock duration for the subscription, maximum

@@ -60,12 +60,14 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="msi/">msi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mssql/">mssql</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mysql/">mysql</a></li>
+<li class="toctree-l1"><a class="reference internal" href="netapp/">netapp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="network/">network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notificationhub/">notificationhub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operationalinsights/">operationalinsights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="policy/">policy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postgresql/">postgresql</a></li>
 <li class="toctree-l1"><a class="reference internal" href="privatedns/">privatedns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="privatelink/">privatelink</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proximity/">proximity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recoveryservices/">recoveryservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="redis/">redis</a></li>

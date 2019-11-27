@@ -1758,6 +1758,160 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_azure.datafactory.TriggerSchedule">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.datafactory.</code><code class="sig-name descname">TriggerSchedule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">data_factory_name=None</em>, <em class="sig-param">end_time=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pipeline_name=None</em>, <em class="sig-param">pipeline_parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">start_time=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Trigger Schedule inside a Azure Data Factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of tags that can be used for describing the Data Factory Schedule Trigger.</p></li>
+<li><p><strong>data_factory_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Data Factory name in which to associate the Schedule Trigger with. Changing this forces a new resource.</p></li>
+<li><p><strong>end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the Schedule Trigger should end. The time will be represented in UTC.</p></li>
+<li><p><strong>frequency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The trigger freqency. Valid values include <code class="docutils literal notranslate"><span class="pre">Minute</span></code>, <code class="docutils literal notranslate"><span class="pre">Hour</span></code>, <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Week</span></code>, <code class="docutils literal notranslate"><span class="pre">Month</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Minute</span></code>.</p></li>
+<li><p><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval for how often the trigger occurs. This defaults to 1.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the name of the Data Factory Schedule Trigger. Changing this forces a new resource to be created. Must be globally unique. See the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
+</p></li>
+<li><p><strong>pipeline_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Data Factory Pipeline name that the trigger will act on.</p></li>
+<li><p><strong>pipeline_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The pipeline parameters that the the trigger will act upon.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource</p></li>
+<li><p><strong>start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the Schedule Trigger will start. This defaults to the current time. The time will be represented in UTC.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_trigger_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_trigger_schedule.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.annotations">
+<code class="sig-name descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of tags that can be used for describing the Data Factory Schedule Trigger.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.data_factory_name">
+<code class="sig-name descname">data_factory_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.data_factory_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Data Factory name in which to associate the Schedule Trigger with. Changing this forces a new resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.end_time">
+<code class="sig-name descname">end_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.end_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time the Schedule Trigger should end. The time will be represented in UTC.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.frequency">
+<code class="sig-name descname">frequency</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>The trigger freqency. Valid values include <code class="docutils literal notranslate"><span class="pre">Minute</span></code>, <code class="docutils literal notranslate"><span class="pre">Hour</span></code>, <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Week</span></code>, <code class="docutils literal notranslate"><span class="pre">Month</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Minute</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.interval">
+<code class="sig-name descname">interval</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>The interval for how often the trigger occurs. This defaults to 1.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Data Factory Schedule Trigger. Changing this forces a new resource to be created. Must be globally unique. See the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.pipeline_name">
+<code class="sig-name descname">pipeline_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.pipeline_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Data Factory Pipeline name that the trigger will act on.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.pipeline_parameters">
+<code class="sig-name descname">pipeline_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.pipeline_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pipeline parameters that the the trigger will act upon.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.start_time">
+<code class="sig-name descname">start_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.start_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time the Schedule Trigger will start. This defaults to the current time. The time will be represented in UTC.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">data_factory_name=None</em>, <em class="sig-param">end_time=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pipeline_name=None</em>, <em class="sig-param">pipeline_parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">start_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TriggerSchedule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of tags that can be used for describing the Data Factory Schedule Trigger.</p></li>
+<li><p><strong>data_factory_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Data Factory name in which to associate the Schedule Trigger with. Changing this forces a new resource.</p></li>
+<li><p><strong>end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the Schedule Trigger should end. The time will be represented in UTC.</p></li>
+<li><p><strong>frequency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The trigger freqency. Valid values include <code class="docutils literal notranslate"><span class="pre">Minute</span></code>, <code class="docutils literal notranslate"><span class="pre">Hour</span></code>, <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Week</span></code>, <code class="docutils literal notranslate"><span class="pre">Month</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Minute</span></code>.</p></li>
+<li><p><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval for how often the trigger occurs. This defaults to 1.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the name of the Data Factory Schedule Trigger. Changing this forces a new resource to be created. Must be globally unique. See the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
+</p></li>
+<li><p><strong>pipeline_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Data Factory Pipeline name that the trigger will act on.</p></li>
+<li><p><strong>pipeline_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The pipeline parameters that the the trigger will act upon.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource</p></li>
+<li><p><strong>start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the Schedule Trigger will start. This defaults to the current time. The time will be represented in UTC.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_trigger_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_trigger_schedule.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.datafactory.TriggerSchedule.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.TriggerSchedule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pulumi_azure.datafactory.get_factory">
 <code class="sig-prename descclassname">pulumi_azure.datafactory.</code><code class="sig-name descname">get_factory</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.get_factory" title="Permalink to this definition">¶</a></dt>
