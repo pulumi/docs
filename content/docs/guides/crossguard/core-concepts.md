@@ -98,6 +98,18 @@ const dynamodbTableAutoscalingRequired: StackValidationPolicy = {
         }
     },
 }
+
+// Utility method for returning all resources matching the provided type.
+// Pulumi-policy will soon provide similar utility methods. For the meantime, you can
+// use this utility method as an example for creating your own.
+function getResolvedResources<TResource extends Resource>(
+    typeFilter: (o: any) => o is TResource,
+    args: StackValidationArgs,
+): q.ResolvedResource<TResource>[] {
+    return args.resources
+        .map(r => (<unknown>{ ...r.props, __pulumiType: r.type } as q.ResolvedResource<TResource>))
+        .filter(typeFilter);
+}
 ```
 
 A `StackValidationPolicy` can also be used to make validations against a resource that must already be created to validate. For example, a policy that
