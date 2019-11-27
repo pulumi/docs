@@ -4,8 +4,12 @@ code {
     @apply bg-gray-100 rounded py-1 px-2 text-sm break-words;
 }
 
+pre, .code-max-h {
+    @apply rounded border border-gray-200 my-4;
+}
+
 pre {
-    @apply bg-gray-100 py-4 px-5 pr-8 rounded border border-gray-200 scrolling-auto overflow-x-auto my-4 leading-normal;
+    @apply bg-gray-100 py-4 px-5 pr-8 scrolling-auto overflow-x-auto leading-normal;
 
     .code-mode-dark & {
         @apply bg-gray-900 border-none shadow-md;
@@ -29,6 +33,26 @@ pre {
 
     code {
         @apply break-normal;
+    }
+
+    .code-max-h & {
+        @apply border-none my-0;
+    }
+}
+
+.code-max-h {
+    @apply relative;
+
+    > [class*="max-h-"] {
+        @apply overflow-y-auto;
+    }
+}
+
+:not(.no-copy) > .highlight {
+    @apply relative;
+
+    .code-max-h & {
+        @apply static;
     }
 }
 
