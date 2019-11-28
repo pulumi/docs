@@ -19,12 +19,6 @@ between different environments by merging or directly committing changes.
 
 Let's see how to get started -- it's easy!
 
-> **Note**: GitHub Actions is currently in public beta. Please [register for
-> access](https://github.com/features/actions) to start using the feature. Until your
-> GitHub organization has been approved for the beta, the **Actions** tab won't show in
-> your repos, and the Actions-related files described in this guide will not be recognized by
-> GitHub.
-
 # Pre-Requisites
 
 Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/) (if you
