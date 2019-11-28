@@ -5,7 +5,7 @@ linktitle: Frequently Asked Questions
 menu:
   userguides:
     parent: crossguard
-    identifier: crossguard-faq
+    weight: 4
 ---
 {{% crossguard-preview %}}
 

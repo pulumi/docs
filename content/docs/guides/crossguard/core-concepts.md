@@ -5,7 +5,7 @@ linktitle: Core Concepts
 menu:
   userguides:
     parent: crossguard
-    identifier: crossguard-core-concepts
+    weight: 1
 ---
 {{% crossguard-preview %}}
 

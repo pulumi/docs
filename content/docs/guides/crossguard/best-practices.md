@@ -5,7 +5,7 @@ linktitle: Best Practices
 menu:
   userguides:
     parent: crossguard
-    identifier: crossguard-best-practices
+    weight: 3
 ---
 {{% crossguard-preview %}}
 
