@@ -19,7 +19,7 @@ Here are several useful comparisons that will help you understand Pulumi's place
 
 * [Hashicorp Terraform]({{< relref "terraform.md" >}})
 * [Cloud Templates (AWS CloudFormation, Azure RM, etc.)]({{< relref "cloud_templates.md" >}})
-* [Cloud Template Transpilers]({{< relref "cloud_template_transpilers.md" >}})
+* [AWS CDK and Troposphere]({{< relref "cloud_template_transpilers.md" >}})
 * [Cloud SDKs (AWS Boto, etc.)]({{< relref "cloud_sdks.md" >}})
 * [Serverless Framework]({{< relref "serverless.md" >}})
 * [Kubernetes YAML and DSLs]({{< relref "k8s_yaml_dsls.md" >}})

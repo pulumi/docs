@@ -1,6 +1,6 @@
 ---
-title: Pulumi vs. Cloud Template Transpilers (AWS CDK, Troposphere)
-linktitle: Cloud Template Transpilers
+title: AWS CDK and Troposphere
+linktitle: AWS CDK and Troposphere
 menu:
   intro:
     parent: vs
@@ -19,7 +19,13 @@ a.k.a., [_source-to-source compiler_](https://en.wikipedia.org/wiki/Source-to-so
 into [AWS CloudFormation YAML/JSON]({{< relref "cloud_templates.md" >}}). The resulting markup file is then submitted
 to the closed source AWS CloudFormation servers to provision infrastructure on AWS in the usual ways.
 
-## Summary of Differences
+## Pulumi Supports Many Clouds
+
+AWS CDK and Troposphere support AWS only. Pulumi supports the entire capabilities of Azure, Google Cloud Platform,
+and cloud native technologies such as Kubernetes, _in addition_ to AWS. There are several other points outlined below,
+but these are the top-level key differences.
+
+## Summary of Major Differences
 
 The transpiler approach gives you some of the benefits of Pulumi, with the following caveats:
 
