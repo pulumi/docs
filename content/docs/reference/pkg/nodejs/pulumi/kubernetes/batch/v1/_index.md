@@ -21,7 +21,7 @@ meta_desc: "Explore members of the v1 module in the @pulumi/kubernetes package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Job" data-link-title="Job">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L28">
         Resource <strong>Job</strong>
     </a>
 </h3>
@@ -46,7 +46,7 @@ time out and mark the resource update as Failed. You can override the default ti
 by setting the 'customTimeouts' option on the resource.
 
 <h4 class="pdoc-member-header" id="Job-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -60,7 +60,7 @@ Create a batch.v1.Job resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Job-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L74">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L74">method <b>get</b></a>
 </h4>
 
 
@@ -74,14 +74,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="Job-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Job-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L85">method <b>isInstance</b></a>
 </h4>
 
 
@@ -92,7 +92,7 @@ Returns true if the given object is an instance of Job.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Job-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L35">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L35">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"batch/v1"</span>&gt;;</code></pre>
@@ -103,7 +103,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="Job-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -112,7 +112,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Job-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L43">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L43">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Job"</span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Job-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L49">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L49">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
@@ -132,7 +132,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="Job-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L55">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L55">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#JobSpec'>outputs.batch.v1.JobSpec</a>&gt;;</code></pre>
@@ -141,7 +141,7 @@ Specification of the desired behavior of a job. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Job-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L61">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L61">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#JobStatus'>outputs.batch.v1.JobStatus</a>&gt;;</code></pre>
@@ -150,7 +150,7 @@ Current status of a job. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="Job-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/Job.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/Job.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -159,7 +159,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="JobList" data-link-title="JobList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L13">
         Resource <strong>JobList</strong>
     </a>
 </h3>
@@ -169,7 +169,7 @@ deployments.
 JobList is a collection of jobs.
 
 <h4 class="pdoc-member-header" id="JobList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -183,7 +183,7 @@ Create a batch.v1.JobList resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="JobList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -197,14 +197,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="JobList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="JobList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -215,7 +215,7 @@ Returns true if the given object is an instance of JobList.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="JobList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"batch/v1"</span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="JobList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -235,7 +235,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="JobList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Job'>outputs.batch.v1.Job</a>[]&gt;;</code></pre>
@@ -243,7 +243,7 @@ deployments and may be missing (undefined) during planning phases.
 items is the list of Jobs.
 
 <h4 class="pdoc-member-header" id="JobList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"JobList"</span>&gt;;</code></pre>
@@ -254,7 +254,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="JobList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L39">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
@@ -263,7 +263,7 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="JobList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/batch/v1/JobList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/batch/v1/JobList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>

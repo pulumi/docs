@@ -24,7 +24,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_vault.identity.Entity">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">Entity</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.Entity" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">Entity</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">external_policies=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.Entity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Entity resource with the given unique name, props, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -32,6 +32,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True/false Is this entity currently disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><strong>external_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, this resource will ignore any policies return from Vault or specified in the resource. You can use <code class="docutils literal notranslate"><span class="pre">identity.EntityPolicies</span></code> to manage policies for this entity in a decoupled manner.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Map of additional metadata to associate with the user.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the identity entity to create.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to apply to the entity.</p></li>
@@ -45,6 +46,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_vault.identity.Entity.disabled">
 <code class="sig-name descname">disabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.Entity.disabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>True/false Is this entity currently disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.identity.Entity.external_policies">
+<code class="sig-name descname">external_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.Entity.external_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">false</span></code> by default. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, this resource will ignore any policies return from Vault or specified in the resource. You can use <code class="docutils literal notranslate"><span class="pre">identity.EntityPolicies</span></code> to manage policies for this entity in a decoupled manner.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -67,7 +74,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_vault.identity.Entity.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.Entity.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">external_policies=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.Entity.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Entity resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -77,6 +84,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – True/false Is this entity currently disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><strong>external_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, this resource will ignore any policies return from Vault or specified in the resource. You can use <code class="docutils literal notranslate"><span class="pre">identity.EntityPolicies</span></code> to manage policies for this entity in a decoupled manner.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Map of additional metadata to associate with the user.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the identity entity to create.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to apply to the entity.</p></li>
@@ -205,6 +213,109 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_vault.identity.EntityAlias.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.EntityAlias.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_vault.identity.EntityPolicies">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">EntityPolicies</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">exclusive=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages policies for an Identity Entity for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>entity_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Entity ID to assign policies to.</p></li>
+<li><p><strong>exclusive</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of policies to assign to the entity</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vault.identity.EntityPolicies.entity_id">
+<code class="sig-name descname">entity_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies.entity_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entity ID to assign policies to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.identity.EntityPolicies.entity_name">
+<code class="sig-name descname">entity_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies.entity_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the entity that are assigned the policies.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.identity.EntityPolicies.exclusive">
+<code class="sig-name descname">exclusive</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies.exclusive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.identity.EntityPolicies.policies">
+<code class="sig-name descname">policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies.policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of policies to assign to the entity</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vault.identity.EntityPolicies.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">entity_name=None</em>, <em class="sig-param">exclusive=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing EntityPolicies resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>entity_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Entity ID to assign policies to.</p></li>
+<li><p><strong>entity_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the entity that are assigned the policies.</p></li>
+<li><p><strong>exclusive</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of policies to assign to the entity</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vault.identity.EntityPolicies.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vault.identity.EntityPolicies.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -438,6 +549,7 @@ Vault, serialized in JSON format.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>external_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, this resource will ignore any policies return from Vault or specified in the resource. You can use <code class="docutils literal notranslate"><span class="pre">identity.GroupPolicies</span></code> to manage policies for this group in a decoupled manner.</p></li>
 <li><p><strong>member_entity_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Entity IDs to be assigned as group members. Not allowed on <code class="docutils literal notranslate"><span class="pre">external</span></code> groups.</p></li>
 <li><p><strong>member_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Group IDs to be assigned as group members.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Map of additional metadata to associate with the group.</p></li>
@@ -450,6 +562,12 @@ Vault, serialized in JSON format.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vault.identity.Group.external_policies">
+<code class="sig-name descname">external_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.Group.external_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">false</span></code> by default. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, this resource will ignore any policies return from Vault or specified in the resource. You can use <code class="docutils literal notranslate"><span class="pre">identity.GroupPolicies</span></code> to manage policies for this group in a decoupled manner.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_vault.identity.Group.member_entity_ids">
 <code class="sig-name descname">member_entity_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.Group.member_entity_ids" title="Permalink to this definition">¶</a></dt>
@@ -497,6 +615,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>external_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, this resource will ignore any policies return from Vault or specified in the resource. You can use <code class="docutils literal notranslate"><span class="pre">identity.GroupPolicies</span></code> to manage policies for this group in a decoupled manner.</p></li>
 <li><p><strong>member_entity_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Entity IDs to be assigned as group members. Not allowed on <code class="docutils literal notranslate"><span class="pre">external</span></code> groups.</p></li>
 <li><p><strong>member_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Group IDs to be assigned as group members.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Map of additional metadata to associate with the group.</p></li>
@@ -649,18 +768,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_vault.identity.GroupPolicies">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GroupPolicies</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">exclusive=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GroupPolicies" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a GroupPolicies resource with the given unique name, props, and options.</p>
+<dd><p>Manages policies for an Identity Group for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>exclusive</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Group ID to assign policies to.</p></li>
+<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of policies to assign to the group</p></li>
 </ul>
 </dd>
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vault.identity.GroupPolicies.exclusive">
+<code class="sig-name descname">exclusive</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GroupPolicies.exclusive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.identity.GroupPolicies.group_id">
+<code class="sig-name descname">group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GroupPolicies.group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group ID to assign policies to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.identity.GroupPolicies.group_name">
+<code class="sig-name descname">group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GroupPolicies.group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the group that are assigned the policies.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.identity.GroupPolicies.policies">
+<code class="sig-name descname">policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.identity.GroupPolicies.policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of policies to assign to the group</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_vault.identity.GroupPolicies.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">exclusive=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GroupPolicies.get" title="Permalink to this definition">¶</a></dt>
@@ -672,6 +818,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>exclusive</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Group ID to assign policies to.</p></li>
+<li><p><strong>group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the group that are assigned the policies.</p></li>
+<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of policies to assign to the group</p></li>
 </ul>
 </dd>
 </dl>
