@@ -1,6 +1,5 @@
 ---
-title: CrossGuard
-
+title: Policy as Code ("CrossGuard")
 menu:
     userguides:
         identifier: crossguard
@@ -16,7 +15,7 @@ Using CrossGuard, organization administrators can apply these rules to particula
 ## Getting Started
 
 To get started with Pulumi CrossGuard, [download and install Pulumi]({{< relref "/docs/get-started/install" >}}). Afterwards,
-try the [Getting Started tutorial]({{< relref "/docs/get-started/policy-as-code" >}}).
+try the [Getting Started tutorial]({{< relref "/docs/get-started/crossguard" >}}).
 
 ## Pulumi CrossGuard policies for AWS (AWSGuard)
 
