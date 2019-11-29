@@ -4,7 +4,7 @@ linktitle: Crosswalk for AWS
 menu:
   userguides:
     identifier: crosswalk-aws
-    weight: 5
+    weight: 2
 
 aliases: ["/docs/reference/crosswalk/aws/"]
 ---
