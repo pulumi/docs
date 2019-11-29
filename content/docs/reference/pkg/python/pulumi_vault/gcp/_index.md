@@ -147,8 +147,7 @@ issued using this role, provided as a number of seconds.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token’s TTL will be set to the
-value of this field. The maximum allowed lifetime of token issued using this
-role. Specified as a number of seconds.</p></li>
+value of this field. Specified in seconds.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of strings
 specifying the policies to be set on tokens issued using this role.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the GCP role</p></li>
@@ -166,6 +165,10 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <li><p><strong>token_num_uses</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
 if any, in number of seconds to set on the token.</p></li>
+<li><p><strong>token_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If set, indicates that the
+token generated using this role should never expire. The token should be renewed within the
+duration specified by this value. At each renewal, the token’s TTL will be set to the
+value of this field. Specified in seconds.</p></li>
 <li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.</p></li>
 <li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The incremental lifetime for generated tokens in number of seconds.
@@ -251,8 +254,7 @@ issued using this role, provided as a number of seconds.</p>
 <dd><p>If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token’s TTL will be set to the
-value of this field. The maximum allowed lifetime of token issued using this
-role. Specified as a number of seconds.</p>
+value of this field. Specified in seconds.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -305,6 +307,15 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <dd><p>The
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
 if any, in number of seconds to set on the token.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.gcp.AuthBackendRole.token_period">
+<code class="sig-name descname">token_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.gcp.AuthBackendRole.token_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set, indicates that the
+token generated using this role should never expire. The token should be renewed within the
+duration specified by this value. At each renewal, the token’s TTL will be set to the
+value of this field. Specified in seconds.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -369,8 +380,7 @@ issued using this role, provided as a number of seconds.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token’s TTL will be set to the
-value of this field. The maximum allowed lifetime of token issued using this
-role. Specified as a number of seconds.</p></li>
+value of this field. Specified in seconds.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of strings
 specifying the policies to be set on tokens issued using this role.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the GCP role</p></li>
@@ -390,6 +400,10 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
 if any, in number of seconds to set on the token.</p>
 </p></li>
+<li><p><strong>token_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If set, indicates that the
+token generated using this role should never expire. The token should be renewed within the
+duration specified by this value. At each renewal, the token’s TTL will be set to the
+value of this field. Specified in seconds.</p></li>
 <li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.</p></li>
 <li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The incremental lifetime for generated tokens in number of seconds.

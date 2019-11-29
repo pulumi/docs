@@ -27,7 +27,7 @@ information.</p>
 are running GitHub Enterprise or an API-compatible authentication server.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the description of the mount.
 This overrides the current stored value, if any.</p></li>
-<li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_max_ttl</span></code> instead) The maximum allowed lifetime of tokens
+<li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_max_ttl</span></code> instead if you are running Vault &gt;= 1.2) The maximum allowed lifetime of tokens
 issued using this role. This must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a>.</p></li>
 <li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization configured users must be part of.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path where the auth backend is mounted. Defaults to <code class="docutils literal notranslate"><span class="pre">auth/github</span></code>
@@ -46,6 +46,10 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <li><p><strong>token_num_uses</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (Optional) The
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
 if any, in number of seconds to set on the token.</p></li>
+<li><p><strong>token_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (Optional) If set, indicates that the
+token generated using this role should never expire. The token should be renewed within the
+duration specified by this value. At each renewal, the token’s TTL will be set to the
+value of this field. Specified in seconds.</p></li>
 <li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (Optional) List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.</p></li>
 <li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (Optional) The incremental lifetime for generated tokens in number of seconds.
@@ -55,7 +59,7 @@ Its current value will be referenced at renewal time.</p></li>
 <code class="docutils literal notranslate"><span class="pre">service</span></code> tokens). For token store roles, there are two additional possibilities:
 <code class="docutils literal notranslate"><span class="pre">default-service</span></code> and <code class="docutils literal notranslate"><span class="pre">default-batch</span></code> which specify the type to return unless the client
 requests a different type at generation time.</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> isntead) The TTL period of tokens issued
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> instead if you are running Vault &gt;= 1.2) The TTL period of tokens issued
 using this role. This must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a>.</p>
 </p></li>
 </ul>
@@ -102,7 +106,7 @@ This overrides the current stored value, if any.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.github.AuthBackend.max_ttl">
 <code class="sig-name descname">max_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.AuthBackend.max_ttl" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_max_ttl</span></code> instead) The maximum allowed lifetime of tokens
+<dd><p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_max_ttl</span></code> instead if you are running Vault &gt;= 1.2) The maximum allowed lifetime of tokens
 issued using this role. This must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a>.</p>
 </dd></dl>
 
@@ -159,6 +163,15 @@ if any, in number of seconds to set on the token.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vault.github.AuthBackend.token_period">
+<code class="sig-name descname">token_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.AuthBackend.token_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) If set, indicates that the
+token generated using this role should never expire. The token should be renewed within the
+duration specified by this value. At each renewal, the token’s TTL will be set to the
+value of this field. Specified in seconds.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vault.github.AuthBackend.token_policies">
 <code class="sig-name descname">token_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.AuthBackend.token_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Optional) List of policies to encode onto generated tokens. Depending
@@ -185,7 +198,7 @@ requests a different type at generation time.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.github.AuthBackend.ttl">
 <code class="sig-name descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.AuthBackend.ttl" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> isntead) The TTL period of tokens issued
+<dd><p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> instead if you are running Vault &gt;= 1.2) The TTL period of tokens issued
 using this role. This must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a>.</p>
 </dd></dl>
 
@@ -206,7 +219,7 @@ properties used to qualify the lookup.</p>
 are running GitHub Enterprise or an API-compatible authentication server.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the description of the mount.
 This overrides the current stored value, if any.</p></li>
-<li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_max_ttl</span></code> instead) The maximum allowed lifetime of tokens
+<li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_max_ttl</span></code> instead if you are running Vault &gt;= 1.2) The maximum allowed lifetime of tokens
 issued using this role. This must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a>.</p>
 </p></li>
 <li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization configured users must be part of.</p></li>
@@ -228,6 +241,10 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
 if any, in number of seconds to set on the token.</p>
 </p></li>
+<li><p><strong>token_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (Optional) If set, indicates that the
+token generated using this role should never expire. The token should be renewed within the
+duration specified by this value. At each renewal, the token’s TTL will be set to the
+value of this field. Specified in seconds.</p></li>
 <li><p><strong>token_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (Optional) List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.</p></li>
 <li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (Optional) The incremental lifetime for generated tokens in number of seconds.
@@ -237,7 +254,7 @@ Its current value will be referenced at renewal time.</p></li>
 <code class="docutils literal notranslate"><span class="pre">service</span></code> tokens). For token store roles, there are two additional possibilities:
 <code class="docutils literal notranslate"><span class="pre">default-service</span></code> and <code class="docutils literal notranslate"><span class="pre">default-batch</span></code> which specify the type to return unless the client
 requests a different type at generation time.</p></li>
-<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> isntead) The TTL period of tokens issued
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> instead if you are running Vault &gt;= 1.2) The TTL period of tokens issued
 using this role. This must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a>.</p>
 </p></li>
 </ul>

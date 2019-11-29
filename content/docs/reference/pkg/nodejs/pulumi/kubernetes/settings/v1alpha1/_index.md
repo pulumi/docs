@@ -21,7 +21,7 @@ meta_desc: "Explore members of the v1alpha1 module in the @pulumi/kubernetes pac
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="PodPreset" data-link-title="PodPreset">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L13">
         Resource <strong>PodPreset</strong>
     </a>
 </h3>
@@ -31,7 +31,7 @@ meta_desc: "Explore members of the v1alpha1 module in the @pulumi/kubernetes pac
 PodPreset is a policy resource that defines additional runtime requirements for a Pod.
 
 <h4 class="pdoc-member-header" id="PodPreset-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -45,7 +45,7 @@ Create a settings.v1alpha1.PodPreset resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PodPreset-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -59,14 +59,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="PodPreset-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PodPreset-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -77,7 +77,7 @@ Returns true if the given object is an instance of PodPreset.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PodPreset-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"settings.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -88,7 +88,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodPreset-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -97,7 +97,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PodPreset-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L28">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L28">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodPreset"</span>&gt;;</code></pre>
@@ -108,17 +108,17 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodPreset-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L31">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L31">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PodPreset-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L34">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L34">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodPresetSpec'>outputs.settings.v1alpha1.PodPresetSpec</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PodPreset-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPreset.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -127,7 +127,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PodPresetList" data-link-title="PodPresetList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L13">
         Resource <strong>PodPresetList</strong>
     </a>
 </h3>
@@ -137,7 +137,7 @@ deployments.
 PodPresetList is a list of PodPreset objects.
 
 <h4 class="pdoc-member-header" id="PodPresetList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -151,7 +151,7 @@ Create a settings.v1alpha1.PodPresetList resource with the given unique name, ar
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PodPresetList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -165,14 +165,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="PodPresetList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PodPresetList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -183,7 +183,7 @@ Returns true if the given object is an instance of PodPresetList.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PodPresetList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"settings.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodPresetList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -203,7 +203,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PodPresetList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodPreset'>outputs.settings.v1alpha1.PodPreset</a>[]&gt;;</code></pre>
@@ -211,7 +211,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="PodPresetList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodPresetList"</span>&gt;;</code></pre>
@@ -222,7 +222,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodPresetList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L39">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L39">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
@@ -231,7 +231,7 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PodPresetList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/9491de1ad11d34b675f8b7772dc168674edca49f/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/settings/v1alpha1/PodPresetList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>

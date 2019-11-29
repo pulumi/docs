@@ -25,6 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 connection.</p></li>
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the Vault mount to configure.</p></li>
 <li><p><strong>cassandra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for Cassandra connections.</p></li>
+<li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of sensitive data to pass to the endpoint. Useful for templated connection strings.</p></li>
 <li><p><strong>hana</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for SAP HanaDB connections.</p></li>
 <li><p><strong>mongodb</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for MongoDB connections.</p></li>
 <li><p><strong>mssql</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for MSSQL connections.</p></li>
@@ -205,6 +206,12 @@ part of the host.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tls</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to use TLS when connecting to Cassandra.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username to authenticate with.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.database.SecretBackendConnection.data">
+<code class="sig-name descname">data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendConnection.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of sensitive data to pass to the endpoint. Useful for templated connection strings.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -397,6 +404,7 @@ properties used to qualify the lookup.</p>
 connection.</p></li>
 <li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the Vault mount to configure.</p></li>
 <li><p><strong>cassandra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for Cassandra connections.</p></li>
+<li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of sensitive data to pass to the endpoint. Useful for templated connection strings.</p></li>
 <li><p><strong>hana</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for SAP HanaDB connections.</p></li>
 <li><p><strong>mongodb</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for MongoDB connections.</p></li>
 <li><p><strong>mssql</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A nested block containing configuration options for MSSQL connections.</p></li>
@@ -732,6 +740,128 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_vault.database.SecretBackendRole.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_vault.database.SecretBackendStaticRole">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.database.</code><code class="sig-name descname">SecretBackendStaticRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">db_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rotation_period=None</em>, <em class="sig-param">rotation_statements=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Database Secret Backend static role in Vault. Database secret backend
+static roles can be used to manage 1-to-1 mapping of a Vault Role to a user in a
+database for the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the Vault mount to configure.</p></li>
+<li><p><strong>db_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the database connection to use for the static role.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name to give the static role.</p></li>
+<li><p><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time Vault should wait before rotating the password, in seconds.</p></li>
+<li><p><strong>rotation_statements</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Database statements to execute to rotate the password for the configured database user.</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database username that this static role corresponds to.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_vault.database.SecretBackendStaticRole.backend">
+<code class="sig-name descname">backend</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole.backend" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique name of the Vault mount to configure.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.database.SecretBackendStaticRole.db_name">
+<code class="sig-name descname">db_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole.db_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique name of the database connection to use for the static role.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.database.SecretBackendStaticRole.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unique name to give the static role.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.database.SecretBackendStaticRole.rotation_period">
+<code class="sig-name descname">rotation_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole.rotation_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of time Vault should wait before rotating the password, in seconds.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.database.SecretBackendStaticRole.rotation_statements">
+<code class="sig-name descname">rotation_statements</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole.rotation_statements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Database statements to execute to rotate the password for the configured database user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_vault.database.SecretBackendStaticRole.username">
+<code class="sig-name descname">username</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole.username" title="Permalink to this definition">¶</a></dt>
+<dd><p>The database username that this static role corresponds to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vault.database.SecretBackendStaticRole.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">db_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rotation_period=None</em>, <em class="sig-param">rotation_statements=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SecretBackendStaticRole resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the Vault mount to configure.</p></li>
+<li><p><strong>db_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name of the database connection to use for the static role.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name to give the static role.</p></li>
+<li><p><strong>rotation_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time Vault should wait before rotating the password, in seconds.</p></li>
+<li><p><strong>rotation_statements</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Database statements to execute to rotate the password for the configured database user.</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database username that this static role corresponds to.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.html.markdown">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vault.database.SecretBackendStaticRole.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_vault.database.SecretBackendStaticRole.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.database.SecretBackendStaticRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
