@@ -19,7 +19,9 @@ carousel:
       description: modern applications.
       details:
         - title: Real programming languages.
-          description: Define infrastructure in JavaScript, TypeScript, Python, Go, or .NET Core.
+          description: >
+            Define infrastructure in JavaScript, TypeScript, Python, Go, or
+            any .NET language, including C#, F#, and VB.
         - title: Your favorite tools.
           description: Use familiar IDEs, test frameworks, and tools.
         - title: Share and reuse.
