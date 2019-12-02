@@ -32,7 +32,7 @@ meta_desc: "Explore members of the cloud9 module in the @pulumi/aws package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="EnvironmentEC2" data-link-title="EnvironmentEC2">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L23">
         Resource <strong>EnvironmentEC2</strong>
     </a>
 </h3>
@@ -55,7 +55,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloud9_environment_ec2.html.markdown.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -69,7 +69,7 @@ Create a EnvironmentEC2 resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -80,14 +80,14 @@ Get an existing EnvironmentEC2 resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -98,7 +98,7 @@ Returns true if the given object is an instance of EnvironmentEC2.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L53">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L53">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -106,7 +106,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the environment.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-automaticStopTimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L57">property <b>automaticStopTimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L57">property <b>automaticStopTimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automaticStopTimeMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -114,7 +114,7 @@ The ARN of the environment.
 The number of minutes until the running instance is shut down after the environment has last been used.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -122,7 +122,7 @@ The number of minutes until the running instance is shut down after the environm
 The description of the environment.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -131,7 +131,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L65">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L65">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -139,7 +139,7 @@ deployments and may be missing (undefined) during planning phases.
 The type of instance to connect to the environment, e.g. `t2.micro`.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -147,7 +147,7 @@ The type of instance to connect to the environment, e.g. `t2.micro`.
 The name of the environment.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-ownerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L73">property <b>ownerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L73">property <b>ownerArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ The name of the environment.
 The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L77">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L77">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -163,7 +163,7 @@ The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defa
 The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L81">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L81">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -171,7 +171,7 @@ The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with 
 The type of the environment (e.g. `ssh` or `ec2`)
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -183,7 +183,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EnvironmentEC2Args" data-link-title="EnvironmentEC2Args">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L169">
         interface <strong>EnvironmentEC2Args</strong>
     </a>
 </h3>
@@ -193,7 +193,7 @@ deployments.
 The set of arguments for constructing a EnvironmentEC2 resource.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2Args-automaticStopTimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L173">property <b>automaticStopTimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L173">property <b>automaticStopTimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticStopTimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ The set of arguments for constructing a EnvironmentEC2 resource.
 The number of minutes until the running instance is shut down after the environment has last been used.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2Args-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L177">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L177">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ The number of minutes until the running instance is shut down after the environm
 The description of the environment.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2Args-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L181">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L181">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ The description of the environment.
 The type of instance to connect to the environment, e.g. `t2.micro`.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L185">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ The type of instance to connect to the environment, e.g. `t2.micro`.
 The name of the environment.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2Args-ownerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L189">property <b>ownerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L189">property <b>ownerArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ The name of the environment.
 The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2Args-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L193">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L193">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defa
 The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 
 <h3 class="pdoc-module-header" id="EnvironmentEC2State" data-link-title="EnvironmentEC2State">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L131">
         interface <strong>EnvironmentEC2State</strong>
     </a>
 </h3>
@@ -251,7 +251,7 @@ The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with 
 Input properties used for looking up and filtering EnvironmentEC2 resources.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2State-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L135">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L135">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -259,7 +259,7 @@ Input properties used for looking up and filtering EnvironmentEC2 resources.
 The ARN of the environment.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2State-automaticStopTimeMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L139">property <b>automaticStopTimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L139">property <b>automaticStopTimeMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticStopTimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -267,7 +267,7 @@ The ARN of the environment.
 The number of minutes until the running instance is shut down after the environment has last been used.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2State-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L143">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L143">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -275,7 +275,7 @@ The number of minutes until the running instance is shut down after the environm
 The description of the environment.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2State-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L147">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L147">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -283,7 +283,7 @@ The description of the environment.
 The type of instance to connect to the environment, e.g. `t2.micro`.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L151">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -291,7 +291,7 @@ The type of instance to connect to the environment, e.g. `t2.micro`.
 The name of the environment.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2State-ownerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L155">property <b>ownerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L155">property <b>ownerArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -299,7 +299,7 @@ The name of the environment.
 The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2State-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L159">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L159">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -307,7 +307,7 @@ The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defa
 The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 
 <h4 class="pdoc-member-header" id="EnvironmentEC2State-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloud9/environmentEC2.ts#L163">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloud9/environmentEC2.ts#L163">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
