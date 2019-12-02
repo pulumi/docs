@@ -8,7 +8,7 @@ authors: ["erin-krengel"]
 tags: ["crossguard", "policy-as-code", "New-Features", "Pulumi-News", "Features"]
 ---
 
-Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using CrossGuard, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they are applied to your resources.
+Over the past few months, we have been hard at work on Pulumi CrossGuard, a Policy as Code solution. Using CrossGuard, you can express flexible business and security rules using code. CrossGuard enables organization administrators to enforce these policies across their organization or just on specific stacks. CrossGuard allows you to verify or enforce custom policies on changes before they are applied to your resources. CrossGuard is 100% open source and available to all users of Pulumi, including the Community Edition. Advanced organization-wide policy management features are available to Team Pro and Enterprise customers.
 
 <!--more-->
 
@@ -17,6 +17,8 @@ You can run policies against any Pulumi stack, independent of the stack's langua
 ## Why
 
 Using Pulumi, developers and operators are empowered to self-provision their infrastructure and move quickly. One of our core goals is to allow you to codify best practices and share them with your team. We often hear from organization leaders that they are concerned about enforcing security and compliance best-practices. CrossGuard provides a way to automatically enforce compliance, allowing teams to operate self-sufficiently while still ensuring organization-wide requirements are met.
+
+As an organization administrator, you may want to encourage use of smaller compute instances to optimize for cost. As a security engineer, you may want to ensure databases and other storage solutions are not publicly accessible. As a team lead, you may want to ensure your containers have reserved an appropriate amount of memory and CPU to meet your team's requirements. Whether you're an organization administrator, security engineer or team lead, CrossGuard provides you the capability to enforce best practice for cost, compliance, security, team practices, and much more.
 
 ## Key Features
 
