@@ -32,7 +32,7 @@ meta_desc: "Explore members of the cloudbuild module in the @pulumi/gcp package.
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Trigger" data-link-title="Trigger">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L12">
         Resource <strong>Trigger</strong>
     </a>
 </h3>
@@ -42,7 +42,7 @@ meta_desc: "Explore members of the cloudbuild module in the @pulumi/gcp package.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudbuild_trigger.html.markdown.
 
 <h4 class="pdoc-member-header" id="Trigger-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -56,7 +56,7 @@ Create a Trigger resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Trigger-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -67,14 +67,14 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Trigger-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Trigger-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -85,7 +85,7 @@ Returns true if the given object is an instance of Trigger.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Trigger-build">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L42">property <b>build</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L42">property <b>build</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>build: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuild'>outputs.cloudbuild.TriggerBuild</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -93,7 +93,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Contents of the build template. Either a filename or build template must be provided.
 
 <h4 class="pdoc-member-header" id="Trigger-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L46">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L46">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -101,7 +101,7 @@ Contents of the build template. Either a filename or build template must be prov
 Time when the trigger was created.
 
 <h4 class="pdoc-member-header" id="Trigger-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L50">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L50">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -109,7 +109,7 @@ Time when the trigger was created.
 Human-readable description of the trigger.
 
 <h4 class="pdoc-member-header" id="Trigger-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L54">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L54">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -117,7 +117,7 @@ Human-readable description of the trigger.
 Whether the trigger is disabled or not. If true, the trigger will never result in a build.
 
 <h4 class="pdoc-member-header" id="Trigger-filename">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L59">property <b>filename</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L59">property <b>filename</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filename: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -126,7 +126,7 @@ Path, from the source root, to a file whose contents is used for the template. E
 must be provided.
 
 <h4 class="pdoc-member-header" id="Trigger-github">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L63">property <b>github</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L63">property <b>github</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>github: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerGithub'>outputs.cloudbuild.TriggerGithub</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -134,7 +134,7 @@ must be provided.
 Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 
 <h4 class="pdoc-member-header" id="Trigger-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -143,7 +143,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Trigger-ignoredFiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L70">property <b>ignoredFiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L70">property <b>ignoredFiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ignoredFiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ not to trigger a build. If ignoredFiles is not empty, then we ignore any files t
 globs. If the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
 
 <h4 class="pdoc-member-header" id="Trigger-includedFiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L78">property <b>includedFiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L78">property <b>includedFiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>includedFiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ the ignoredFiles filter and includedFiles is not empty, then we make sure that a
 includedFiles glob. If not, then we do not trigger a build.
 
 <h4 class="pdoc-member-header" id="Trigger-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -174,7 +174,7 @@ includedFiles glob. If not, then we do not trigger a build.
 Name of the trigger. Must be unique within the project.
 
 <h4 class="pdoc-member-header" id="Trigger-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L87">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L87">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -183,7 +183,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Trigger-substitutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L91">property <b>substitutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L91">property <b>substitutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>substitutions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -191,7 +191,7 @@ If it is not provided, the provider project is used.
 Substitutions data for Build resource.
 
 <h4 class="pdoc-member-header" id="Trigger-triggerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L95">property <b>triggerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L95">property <b>triggerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>triggerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ Substitutions data for Build resource.
 The unique identifier for the trigger.
 
 <h4 class="pdoc-member-header" id="Trigger-triggerTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L101">property <b>triggerTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L101">property <b>triggerTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>triggerTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerTriggerTemplate'>outputs.cloudbuild.TriggerTriggerTemplate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ interpreted as regular expressions. Any branch or tag change that matches that r
 build. This field is required, and will be validated as such in 3.0.0.
 
 <h4 class="pdoc-member-header" id="Trigger-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -221,7 +221,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="TriggerArgs" data-link-title="TriggerArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L227">
         interface <strong>TriggerArgs</strong>
     </a>
 </h3>
@@ -231,7 +231,7 @@ deployments.
 The set of arguments for constructing a Trigger resource.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-build">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L231">property <b>build</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L231">property <b>build</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>build?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuild'>inputs.cloudbuild.TriggerBuild</a>&gt;;</code></pre>
@@ -239,7 +239,7 @@ The set of arguments for constructing a Trigger resource.
 Contents of the build template. Either a filename or build template must be provided.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L235">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L235">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -247,7 +247,7 @@ Contents of the build template. Either a filename or build template must be prov
 Human-readable description of the trigger.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L239">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L239">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -255,7 +255,7 @@ Human-readable description of the trigger.
 Whether the trigger is disabled or not. If true, the trigger will never result in a build.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-filename">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L244">property <b>filename</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L244">property <b>filename</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filename?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -264,7 +264,7 @@ Path, from the source root, to a file whose contents is used for the template. E
 must be provided.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-github">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L248">property <b>github</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L248">property <b>github</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>github?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerGithub'>inputs.cloudbuild.TriggerGithub</a>&gt;;</code></pre>
@@ -272,7 +272,7 @@ must be provided.
 Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-ignoredFiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L255">property <b>ignoredFiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L255">property <b>ignoredFiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoredFiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -283,7 +283,7 @@ not to trigger a build. If ignoredFiles is not empty, then we ignore any files t
 globs. If the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-includedFiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L263">property <b>includedFiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L263">property <b>includedFiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedFiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -295,7 +295,7 @@ the ignoredFiles filter and includedFiles is not empty, then we make sure that a
 includedFiles glob. If not, then we do not trigger a build.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L267">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L267">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -303,7 +303,7 @@ includedFiles glob. If not, then we do not trigger a build.
 Name of the trigger. Must be unique within the project.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L272">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L272">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -312,7 +312,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-substitutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L276">property <b>substitutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L276">property <b>substitutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>substitutions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -320,7 +320,7 @@ If it is not provided, the provider project is used.
 Substitutions data for Build resource.
 
 <h4 class="pdoc-member-header" id="TriggerArgs-triggerTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L282">property <b>triggerTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L282">property <b>triggerTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerTriggerTemplate'>inputs.cloudbuild.TriggerTriggerTemplate</a>&gt;;</code></pre>
@@ -330,7 +330,7 @@ interpreted as regular expressions. Any branch or tag change that matches that r
 build. This field is required, and will be validated as such in 3.0.0.
 
 <h3 class="pdoc-module-header" id="TriggerState" data-link-title="TriggerState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L158">
         interface <strong>TriggerState</strong>
     </a>
 </h3>
@@ -340,7 +340,7 @@ build. This field is required, and will be validated as such in 3.0.0.
 Input properties used for looking up and filtering Trigger resources.
 
 <h4 class="pdoc-member-header" id="TriggerState-build">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L162">property <b>build</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L162">property <b>build</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>build?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuild'>inputs.cloudbuild.TriggerBuild</a>&gt;;</code></pre>
@@ -348,7 +348,7 @@ Input properties used for looking up and filtering Trigger resources.
 Contents of the build template. Either a filename or build template must be provided.
 
 <h4 class="pdoc-member-header" id="TriggerState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L166">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L166">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -356,7 +356,7 @@ Contents of the build template. Either a filename or build template must be prov
 Time when the trigger was created.
 
 <h4 class="pdoc-member-header" id="TriggerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L170">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L170">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -364,7 +364,7 @@ Time when the trigger was created.
 Human-readable description of the trigger.
 
 <h4 class="pdoc-member-header" id="TriggerState-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L174">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L174">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -372,7 +372,7 @@ Human-readable description of the trigger.
 Whether the trigger is disabled or not. If true, the trigger will never result in a build.
 
 <h4 class="pdoc-member-header" id="TriggerState-filename">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L179">property <b>filename</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L179">property <b>filename</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filename?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ Path, from the source root, to a file whose contents is used for the template. E
 must be provided.
 
 <h4 class="pdoc-member-header" id="TriggerState-github">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L183">property <b>github</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L183">property <b>github</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>github?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerGithub'>inputs.cloudbuild.TriggerGithub</a>&gt;;</code></pre>
@@ -389,7 +389,7 @@ must be provided.
 Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 
 <h4 class="pdoc-member-header" id="TriggerState-ignoredFiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L190">property <b>ignoredFiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L190">property <b>ignoredFiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoredFiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -400,7 +400,7 @@ not to trigger a build. If ignoredFiles is not empty, then we ignore any files t
 globs. If the change has no files that are outside of the ignoredFiles globs, then we do not trigger a build.
 
 <h4 class="pdoc-member-header" id="TriggerState-includedFiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L198">property <b>includedFiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L198">property <b>includedFiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedFiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -412,7 +412,7 @@ the ignoredFiles filter and includedFiles is not empty, then we make sure that a
 includedFiles glob. If not, then we do not trigger a build.
 
 <h4 class="pdoc-member-header" id="TriggerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L202">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L202">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -420,7 +420,7 @@ includedFiles glob. If not, then we do not trigger a build.
 Name of the trigger. Must be unique within the project.
 
 <h4 class="pdoc-member-header" id="TriggerState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L207">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L207">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -429,7 +429,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="TriggerState-substitutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L211">property <b>substitutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L211">property <b>substitutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>substitutions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -437,7 +437,7 @@ If it is not provided, the provider project is used.
 Substitutions data for Build resource.
 
 <h4 class="pdoc-member-header" id="TriggerState-triggerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L215">property <b>triggerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L215">property <b>triggerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -445,7 +445,7 @@ Substitutions data for Build resource.
 The unique identifier for the trigger.
 
 <h4 class="pdoc-member-header" id="TriggerState-triggerTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudbuild/trigger.ts#L221">property <b>triggerTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudbuild/trigger.ts#L221">property <b>triggerTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerTriggerTemplate'>inputs.cloudbuild.TriggerTriggerTemplate</a>&gt;;</code></pre>

@@ -57,7 +57,7 @@ meta_desc: "Explore members of the cloudfunctions module in the @pulumi/gcp pack
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="CallbackFunction" data-link-title="CallbackFunction">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L108">
         Resource <strong>CallbackFunction</strong>
     </a>
 </h3>
@@ -78,21 +78,21 @@ https://cloud.google.com/functions/docs/writing/background#functions_background_
 for more details.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> CallbackFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="CallbackFunction-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L108">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L108">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CallbackFunction-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L108">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L108">method <b>isInstance</b></a>
 </h4>
 
 
@@ -103,14 +103,14 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L108">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L108">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CallbackFunction-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L114">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L114">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: storage.Bucket;</code></pre>
@@ -120,12 +120,12 @@ these files will be generated automatically from the JavaScript callback functio
 as well as the package.json file for your pulumi app.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-bucketObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L115">property <b>bucketObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L115">property <b>bucketObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucketObject: storage.BucketObject;</code></pre>
 <h4 class="pdoc-member-header" id="CallbackFunction-function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L118">property <b>function</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L118">property <b>function</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>function: cloudfunctions.Function;</code></pre>
@@ -133,7 +133,7 @@ as well as the package.json file for your pulumi app.
 Underlying raw resource for the Function that is created.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L108">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L108">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -142,7 +142,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Function" data-link-title="Function">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L90">
         Resource <strong>Function</strong>
     </a>
 </h3>
@@ -230,7 +230,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown.
 
 <h4 class="pdoc-member-header" id="Function-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L196"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L196"> <b>constructor</b></a>
 </h4>
 
 
@@ -244,7 +244,7 @@ Create a Function resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Function-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L99">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L99">method <b>get</b></a>
 </h4>
 
 
@@ -255,14 +255,14 @@ Get an existing Function resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Function-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L90">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L90">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Function-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L110">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L110">method <b>isInstance</b></a>
 </h4>
 
 
@@ -273,7 +273,7 @@ Returns true if the given object is an instance of Function.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Function-availableMemoryMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L120">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L120">property <b>availableMemoryMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availableMemoryMb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
 
 <h4 class="pdoc-member-header" id="Function-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L124">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L124">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ Memory (in MB), available to the function. Default value is 256MB. Allowed value
 Description of the function.
 
 <h4 class="pdoc-member-header" id="Function-entryPoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L128">property <b>entryPoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L128">property <b>entryPoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entryPoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -297,7 +297,7 @@ Description of the function.
 Name of the function that will be executed when the Google Cloud Function is triggered.
 
 <h4 class="pdoc-member-header" id="Function-environmentVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L132">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L132">property <b>environmentVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>environmentVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -305,7 +305,7 @@ Name of the function that will be executed when the Google Cloud Function is tri
 A set of key/value environment variable pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="Function-eventTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L136">property <b>eventTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L136">property <b>eventTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FunctionEventTrigger'>outputs.cloudfunctions.FunctionEventTrigger</a>&gt;;</code></pre>
@@ -313,7 +313,7 @@ A set of key/value environment variable pairs to assign to the function.
 A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `triggerHttp`.
 
 <h4 class="pdoc-member-header" id="Function-httpsTriggerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L140">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L140">property <b>httpsTriggerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpsTriggerUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -321,7 +321,7 @@ A source that fires events in response to a condition in another service. Struct
 URL which triggers function execution. Returned only if `triggerHttp` is used.
 
 <h4 class="pdoc-member-header" id="Function-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -330,7 +330,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Function-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L144">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L144">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -338,7 +338,7 @@ deployments and may be missing (undefined) during planning phases.
 A set of key/value label pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="Function-maxInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L148">property <b>maxInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L148">property <b>maxInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxInstances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -346,7 +346,7 @@ A set of key/value label pairs to assign to the function.
 The limit on the maximum number of function instances that may coexist at a given time.
 
 <h4 class="pdoc-member-header" id="Function-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -354,7 +354,7 @@ The limit on the maximum number of function instances that may coexist at a give
 A user-defined name of the function. Function names must be unique globally.
 
 <h4 class="pdoc-member-header" id="Function-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L156">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L156">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -362,7 +362,7 @@ A user-defined name of the function. Function names must be unique globally.
 Project of the function. If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Function-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L160">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L160">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -370,7 +370,7 @@ Project of the function. If it is not provided, the provider project is used.
 Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="Function-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L167">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L167">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ defaults to `"nodejs6"`. It's recommended that you override the default, as
 `"nodejs6"` is deprecated.
 
 <h4 class="pdoc-member-header" id="Function-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L171">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L171">property <b>serviceAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -389,7 +389,7 @@ defaults to `"nodejs6"`. It's recommended that you override the default, as
 If provided, the self-provided service account to run the function with.
 
 <h4 class="pdoc-member-header" id="Function-sourceArchiveBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L175">property <b>sourceArchiveBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L175">property <b>sourceArchiveBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceArchiveBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -397,7 +397,7 @@ If provided, the self-provided service account to run the function with.
 The GCS bucket containing the zip archive which contains the function.
 
 <h4 class="pdoc-member-header" id="Function-sourceArchiveObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L179">property <b>sourceArchiveObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L179">property <b>sourceArchiveObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceArchiveObject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ The GCS bucket containing the zip archive which contains the function.
 The source archive object (file) in archive bucket.
 
 <h4 class="pdoc-member-header" id="Function-sourceRepository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L184">property <b>sourceRepository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L184">property <b>sourceRepository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceRepository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FunctionSourceRepository'>outputs.cloudfunctions.FunctionSourceRepository</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -414,7 +414,7 @@ Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `sourceArchiveBucket` or `sourceArchiveObject`. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Function-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L188">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L188">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -422,7 +422,7 @@ Cannot be set alongside `sourceArchiveBucket` or `sourceArchiveObject`. Structur
 Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 
 <h4 class="pdoc-member-header" id="Function-triggerHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L192">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L192">property <b>triggerHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>triggerHttp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -430,7 +430,7 @@ Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be mo
 Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `httpsTriggerUrl`. Cannot be used with `triggerBucket` and `triggerTopic`.
 
 <h4 class="pdoc-member-header" id="Function-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L90">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L90">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -439,7 +439,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Function-vpcConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L196">property <b>vpcConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L196">property <b>vpcConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcConnector: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -447,7 +447,7 @@ deployments.
 The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*&#47;locations/*&#47;connectors/*`.
 
 <h3 class="pdoc-module-header" id="FunctionIamBinding" data-link-title="FunctionIamBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L12">
         Resource <strong>FunctionIamBinding</strong>
     </a>
 </h3>
@@ -457,7 +457,7 @@ The VPC Network Connector that this cloud function can connect to. It can be eit
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_binding.html.markdown.
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -471,7 +471,7 @@ Create a FunctionIamBinding resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -482,14 +482,14 @@ Get an existing FunctionIamBinding resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -500,7 +500,7 @@ Returns true if the given object is an instance of FunctionIamBinding.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-cloudFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L42">property <b>cloudFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L42">property <b>cloudFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -508,12 +508,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L43">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L43">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FunctionIamBindingCondition'>outputs.cloudfunctions.FunctionIamBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L47">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L47">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -521,7 +521,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -530,12 +530,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L48">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L48">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamBinding-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L53">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L53">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -544,7 +544,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L59">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L59">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -554,7 +554,7 @@ the value will be parsed from the identifier of the parent resource. If no regio
 region is specified, it is taken from the provider configuration.
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L65">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L65">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -564,7 +564,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="FunctionIamBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -573,7 +573,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FunctionIamMember" data-link-title="FunctionIamMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L12">
         Resource <strong>FunctionIamMember</strong>
     </a>
 </h3>
@@ -583,7 +583,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_member.html.markdown.
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -597,7 +597,7 @@ Create a FunctionIamMember resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -608,14 +608,14 @@ Get an existing FunctionIamMember resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -626,7 +626,7 @@ Returns true if the given object is an instance of FunctionIamMember.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-cloudFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L42">property <b>cloudFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L42">property <b>cloudFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,12 +634,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L43">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L43">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FunctionIamMemberCondition'>outputs.cloudfunctions.FunctionIamMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L47">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L47">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -647,7 +647,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -656,12 +656,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L48">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L48">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamMember-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L53">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L53">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -670,7 +670,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L59">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L59">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -680,7 +680,7 @@ the value will be parsed from the identifier of the parent resource. If no regio
 region is specified, it is taken from the provider configuration.
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L65">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L65">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +690,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="FunctionIamMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -699,7 +699,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FunctionIamPolicy" data-link-title="FunctionIamPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L12">
         Resource <strong>FunctionIamPolicy</strong>
     </a>
 </h3>
@@ -709,7 +709,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function_iam_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L62"> <b>constructor</b></a>
 </h4>
 
 
@@ -723,7 +723,7 @@ Create a FunctionIamPolicy resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -734,14 +734,14 @@ Get an existing FunctionIamPolicy resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -752,7 +752,7 @@ Returns true if the given object is an instance of FunctionIamPolicy.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-cloudFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L42">property <b>cloudFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L42">property <b>cloudFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -760,7 +760,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L46">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L46">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -768,7 +768,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -777,7 +777,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L51">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L51">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L56">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L56">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -795,7 +795,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L62">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L62">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -805,7 +805,7 @@ the value will be parsed from the identifier of the parent resource. If no regio
 region is specified, it is taken from the provider configuration.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -816,7 +816,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getFunction" data-link-title="getFunction">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L27">
         Data Source <strong>getFunction</strong>
     </a>
 </h3>
@@ -845,7 +845,7 @@ const myFunction = gcp.cloudfunctions.getFunction({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="Callback" data-link-title="Callback">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L69">
         type <strong>Callback</strong>
     </a>
 </h3>
@@ -878,7 +878,7 @@ asynchronous processes have completed first. If returning a Promise, Cloud Funct
 the Promise is settled before terminating.
 
 <h3 class="pdoc-module-header" id="CallbackFactory" data-link-title="CallbackFactory">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L77">
         type <strong>CallbackFactory</strong>
     </a>
 </h3>
@@ -891,7 +891,7 @@ state once that can then be used across all invocations of the Function (as long
 is using the same warm node instance).
 
 <h3 class="pdoc-module-header" id="CallbackFunctionArgs" data-link-title="CallbackFunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L274">
         interface <strong>CallbackFunctionArgs</strong>
     </a>
 </h3>
@@ -902,7 +902,7 @@ Arguments that control both how a user function is serialized and how the final 
 is created.  Can be used to override values if the defaults are not desirable.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-availableMemoryMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L283">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L283">property <b>availableMemoryMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableMemoryMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -910,7 +910,7 @@ is created.  Can be used to override values if the defaults are not desirable.
 Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L349">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L349">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: storage.Bucket;</code></pre>
@@ -920,7 +920,7 @@ to be placed in.  A fresh [storage.BucketObject] will be made there containing t
 code.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L330">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L330">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Function'>Function</a>;</code></pre>
@@ -929,7 +929,7 @@ The Javascript callback to use as the entrypoint for the GCP CloudFunction out o
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L342">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L342">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#Function'>Function</a>;</code></pre>
@@ -944,7 +944,7 @@ loaded. It can run whatever code it needs, and will end by returning the actual 
 Function will call into each time the Cloud Function is invoked.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L279">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L279">property <b>codePathOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</code></pre>
@@ -953,7 +953,7 @@ Options to control which paths/packages should be included or excluded in the zi
 the code for the GCP Function.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L287">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L287">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -961,7 +961,7 @@ the code for the GCP Function.
 Description of the function.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-environmentVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L291">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L291">property <b>environmentVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environmentVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -969,7 +969,7 @@ Description of the function.
 A set of key/value environment variable pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-eventTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L296">property <b>eventTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L296">property <b>eventTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -982,7 +982,7 @@ A source that fires events in response to a condition in another service. Struct
 documented below. Cannot be used with `trigger_http`.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-httpsTriggerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L300">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L300">property <b>httpsTriggerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsTriggerUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -990,7 +990,7 @@ documented below. Cannot be used with `trigger_http`.
 URL which triggers function execution. Returned only if `trigger_http` is used.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L304">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L304">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -998,7 +998,7 @@ URL which triggers function execution. Returned only if `trigger_http` is used.
 A set of key/value label pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L308">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L308">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1006,7 +1006,7 @@ A set of key/value label pairs to assign to the function.
 Project of the function. If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L312">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L312">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1014,7 +1014,7 @@ Project of the function. If it is not provided, the provider project is used.
 Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L354">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L354">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1022,7 +1022,7 @@ Region of function. Currently can be only "us-central1". If it is not provided, 
 The specific runtime for the function. If not specified, a default will be applied
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L316">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L316">property <b>serviceAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1030,7 +1030,7 @@ The specific runtime for the function. If not specified, a default will be appli
 If provided, the self-provided service account to run the function with.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L320">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L320">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1038,7 +1038,7 @@ If provided, the self-provided service account to run the function with.
 Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-triggerHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L324">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L324">property <b>triggerHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerHttp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1046,7 +1046,7 @@ Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be mo
 Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
 
 <h3 class="pdoc-module-header" id="Context" data-link-title="Context">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L28">
         interface <strong>Context</strong>
     </a>
 </h3>
@@ -1057,7 +1057,7 @@ Google Cloud Functions uses this parameter to provide details of your Function's
 more information, see https://cloud.google.com/functions/docs/writing/background#function_parameters
 
 <h4 class="pdoc-member-header" id="Context-eventId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L30">property <b>eventId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L30">property <b>eventId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1065,7 +1065,7 @@ more information, see https://cloud.google.com/functions/docs/writing/background
 A unique ID for the event. For example: "70172329041928".
 
 <h4 class="pdoc-member-header" id="Context-eventType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L36">property <b>eventType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L36">property <b>eventType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1073,7 +1073,7 @@ A unique ID for the event. For example: "70172329041928".
 The type of the event. For example: "google.pubsub.topic.publish".
 
 <h4 class="pdoc-member-header" id="Context-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L40">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L40">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resource: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</code></pre>
@@ -1082,7 +1082,7 @@ The resource that emitted the event. See derived contexts for more specific info
 about the shape of this property.
 
 <h4 class="pdoc-member-header" id="Context-timestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L33">property <b>timestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L33">property <b>timestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1090,7 +1090,7 @@ about the shape of this property.
 The date/time this event was created. For example: "2018-04-09T07:56:12.975Z".
 
 <h3 class="pdoc-module-header" id="FailurePolicy" data-link-title="FailurePolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L83">
         interface <strong>FailurePolicy</strong>
     </a>
 </h3>
@@ -1101,7 +1101,7 @@ Describes the policy in case of function's execution failure. If empty, then def
 failures (i.e. not retrying them).
 
 <h4 class="pdoc-member-header" id="FailurePolicy-retry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L91">property <b>retry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L91">property <b>retry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1113,7 +1113,7 @@ retried up to 7 days with an exponential backoff (capped at 10 seconds). Retried
 charged as any other execution.
 
 <h3 class="pdoc-module-header" id="FunctionArgs" data-link-title="FunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L351">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L351">
         interface <strong>FunctionArgs</strong>
     </a>
 </h3>
@@ -1123,7 +1123,7 @@ charged as any other execution.
 The set of arguments for constructing a Function resource.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-availableMemoryMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L355">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L355">property <b>availableMemoryMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableMemoryMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1131,7 +1131,7 @@ The set of arguments for constructing a Function resource.
 Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L359">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L359">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1139,7 +1139,7 @@ Memory (in MB), available to the function. Default value is 256MB. Allowed value
 Description of the function.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-entryPoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L363">property <b>entryPoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L363">property <b>entryPoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryPoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ Description of the function.
 Name of the function that will be executed when the Google Cloud Function is triggered.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-environmentVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L367">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L367">property <b>environmentVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environmentVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ Name of the function that will be executed when the Google Cloud Function is tri
 A set of key/value environment variable pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-eventTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L371">property <b>eventTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L371">property <b>eventTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FunctionEventTrigger'>inputs.cloudfunctions.FunctionEventTrigger</a>&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ A set of key/value environment variable pairs to assign to the function.
 A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `triggerHttp`.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-httpsTriggerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L375">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L375">property <b>httpsTriggerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsTriggerUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1171,7 +1171,7 @@ A source that fires events in response to a condition in another service. Struct
 URL which triggers function execution. Returned only if `triggerHttp` is used.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L379">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L379">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1179,7 +1179,7 @@ URL which triggers function execution. Returned only if `triggerHttp` is used.
 A set of key/value label pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-maxInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L383">property <b>maxInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L383">property <b>maxInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1187,7 +1187,7 @@ A set of key/value label pairs to assign to the function.
 The limit on the maximum number of function instances that may coexist at a given time.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L387">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L387">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1195,7 +1195,7 @@ The limit on the maximum number of function instances that may coexist at a give
 A user-defined name of the function. Function names must be unique globally.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L391">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L391">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1203,7 +1203,7 @@ A user-defined name of the function. Function names must be unique globally.
 Project of the function. If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L395">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L395">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1211,7 +1211,7 @@ Project of the function. If it is not provided, the provider project is used.
 Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L402">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L402">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1222,7 +1222,7 @@ defaults to `"nodejs6"`. It's recommended that you override the default, as
 `"nodejs6"` is deprecated.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L406">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L406">property <b>serviceAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1230,7 +1230,7 @@ defaults to `"nodejs6"`. It's recommended that you override the default, as
 If provided, the self-provided service account to run the function with.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-sourceArchiveBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L410">property <b>sourceArchiveBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L410">property <b>sourceArchiveBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceArchiveBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1238,7 +1238,7 @@ If provided, the self-provided service account to run the function with.
 The GCS bucket containing the zip archive which contains the function.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-sourceArchiveObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L414">property <b>sourceArchiveObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L414">property <b>sourceArchiveObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceArchiveObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1246,7 +1246,7 @@ The GCS bucket containing the zip archive which contains the function.
 The source archive object (file) in archive bucket.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-sourceRepository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L419">property <b>sourceRepository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L419">property <b>sourceRepository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRepository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FunctionSourceRepository'>inputs.cloudfunctions.FunctionSourceRepository</a>&gt;;</code></pre>
@@ -1255,7 +1255,7 @@ Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `sourceArchiveBucket` or `sourceArchiveObject`. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L423">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L423">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1263,7 +1263,7 @@ Cannot be set alongside `sourceArchiveBucket` or `sourceArchiveObject`. Structur
 Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-triggerHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L427">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L427">property <b>triggerHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerHttp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1271,7 +1271,7 @@ Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be mo
 Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `httpsTriggerUrl`. Cannot be used with `triggerBucket` and `triggerTopic`.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-vpcConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L431">property <b>vpcConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L431">property <b>vpcConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcConnector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1279,7 +1279,7 @@ Boolean variable. Any HTTP request (of a supported type) to the endpoint will tr
 The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*&#47;locations/*&#47;connectors/*`.
 
 <h3 class="pdoc-module-header" id="FunctionIamBindingArgs" data-link-title="FunctionIamBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L152">
         interface <strong>FunctionIamBindingArgs</strong>
     </a>
 </h3>
@@ -1289,7 +1289,7 @@ The VPC Network Connector that this cloud function can connect to. It can be eit
 The set of arguments for constructing a FunctionIamBinding resource.
 
 <h4 class="pdoc-member-header" id="FunctionIamBindingArgs-cloudFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L156">property <b>cloudFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L156">property <b>cloudFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1297,17 +1297,17 @@ The set of arguments for constructing a FunctionIamBinding resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="FunctionIamBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L157">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L157">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FunctionIamBindingCondition'>inputs.cloudfunctions.FunctionIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L158">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L158">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamBindingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L163">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L163">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1316,7 +1316,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionIamBindingArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L169">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L169">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1326,7 +1326,7 @@ the value will be parsed from the identifier of the parent resource. If no regio
 region is specified, it is taken from the provider configuration.
 
 <h4 class="pdoc-member-header" id="FunctionIamBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L175">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L175">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1336,7 +1336,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="FunctionIamBindingState" data-link-title="FunctionIamBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L119">
         interface <strong>FunctionIamBindingState</strong>
     </a>
 </h3>
@@ -1346,7 +1346,7 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering FunctionIamBinding resources.
 
 <h4 class="pdoc-member-header" id="FunctionIamBindingState-cloudFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L123">property <b>cloudFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L123">property <b>cloudFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudFunction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1354,12 +1354,12 @@ Input properties used for looking up and filtering FunctionIamBinding resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="FunctionIamBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L124">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L124">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FunctionIamBindingCondition'>inputs.cloudfunctions.FunctionIamBindingCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L128">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L128">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1367,12 +1367,12 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="FunctionIamBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L129">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L129">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamBindingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L134">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L134">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1381,7 +1381,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionIamBindingState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L140">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L140">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1391,7 +1391,7 @@ the value will be parsed from the identifier of the parent resource. If no regio
 region is specified, it is taken from the provider configuration.
 
 <h4 class="pdoc-member-header" id="FunctionIamBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L146">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamBinding.ts#L146">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1401,7 +1401,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="FunctionIamMemberArgs" data-link-title="FunctionIamMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L152">
         interface <strong>FunctionIamMemberArgs</strong>
     </a>
 </h3>
@@ -1411,7 +1411,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a FunctionIamMember resource.
 
 <h4 class="pdoc-member-header" id="FunctionIamMemberArgs-cloudFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L156">property <b>cloudFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L156">property <b>cloudFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1419,17 +1419,17 @@ The set of arguments for constructing a FunctionIamMember resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="FunctionIamMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L157">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L157">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FunctionIamMemberCondition'>inputs.cloudfunctions.FunctionIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L158">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L158">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamMemberArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L163">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L163">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1438,7 +1438,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionIamMemberArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L169">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L169">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1448,7 +1448,7 @@ the value will be parsed from the identifier of the parent resource. If no regio
 region is specified, it is taken from the provider configuration.
 
 <h4 class="pdoc-member-header" id="FunctionIamMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L175">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L175">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1458,7 +1458,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="FunctionIamMemberState" data-link-title="FunctionIamMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L119">
         interface <strong>FunctionIamMemberState</strong>
     </a>
 </h3>
@@ -1468,7 +1468,7 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering FunctionIamMember resources.
 
 <h4 class="pdoc-member-header" id="FunctionIamMemberState-cloudFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L123">property <b>cloudFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L123">property <b>cloudFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudFunction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1476,12 +1476,12 @@ Input properties used for looking up and filtering FunctionIamMember resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="FunctionIamMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L124">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L124">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FunctionIamMemberCondition'>inputs.cloudfunctions.FunctionIamMemberCondition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L128">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L128">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1489,12 +1489,12 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="FunctionIamMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L129">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L129">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionIamMemberState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L134">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L134">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1503,7 +1503,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionIamMemberState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L140">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L140">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1513,7 +1513,7 @@ the value will be parsed from the identifier of the parent resource. If no regio
 region is specified, it is taken from the provider configuration.
 
 <h4 class="pdoc-member-header" id="FunctionIamMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamMember.ts#L146">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamMember.ts#L146">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1523,7 +1523,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="FunctionIamPolicyArgs" data-link-title="FunctionIamPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L139">
         interface <strong>FunctionIamPolicyArgs</strong>
     </a>
 </h3>
@@ -1533,7 +1533,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a FunctionIamPolicy resource.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicyArgs-cloudFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L143">property <b>cloudFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L143">property <b>cloudFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1541,7 +1541,7 @@ The set of arguments for constructing a FunctionIamPolicy resource.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L148">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L148">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1550,7 +1550,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicyArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L153">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L153">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1559,7 +1559,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicyArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L159">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L159">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1569,7 +1569,7 @@ the value will be parsed from the identifier of the parent resource. If no regio
 region is specified, it is taken from the provider configuration.
 
 <h3 class="pdoc-module-header" id="FunctionIamPolicyState" data-link-title="FunctionIamPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L109">
         interface <strong>FunctionIamPolicyState</strong>
     </a>
 </h3>
@@ -1579,7 +1579,7 @@ region is specified, it is taken from the provider configuration.
 Input properties used for looking up and filtering FunctionIamPolicy resources.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicyState-cloudFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L113">property <b>cloudFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L113">property <b>cloudFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudFunction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1587,7 +1587,7 @@ Input properties used for looking up and filtering FunctionIamPolicy resources.
 Used to find the parent resource to bind the IAM policy to
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L117">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L117">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1595,7 +1595,7 @@ Used to find the parent resource to bind the IAM policy to
 (Computed) The etag of the IAM policy.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L122">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L122">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1604,7 +1604,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicyState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L127">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L127">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1613,7 +1613,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionIamPolicyState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L133">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/functionIamPolicy.ts#L133">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1623,7 +1623,7 @@ the value will be parsed from the identifier of the parent resource. If no regio
 region is specified, it is taken from the provider configuration.
 
 <h3 class="pdoc-module-header" id="FunctionState" data-link-title="FunctionState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L265">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L265">
         interface <strong>FunctionState</strong>
     </a>
 </h3>
@@ -1633,7 +1633,7 @@ region is specified, it is taken from the provider configuration.
 Input properties used for looking up and filtering Function resources.
 
 <h4 class="pdoc-member-header" id="FunctionState-availableMemoryMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L269">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L269">property <b>availableMemoryMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableMemoryMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1641,7 +1641,7 @@ Input properties used for looking up and filtering Function resources.
 Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
 
 <h4 class="pdoc-member-header" id="FunctionState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L273">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L273">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1649,7 +1649,7 @@ Memory (in MB), available to the function. Default value is 256MB. Allowed value
 Description of the function.
 
 <h4 class="pdoc-member-header" id="FunctionState-entryPoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L277">property <b>entryPoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L277">property <b>entryPoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryPoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1657,7 +1657,7 @@ Description of the function.
 Name of the function that will be executed when the Google Cloud Function is triggered.
 
 <h4 class="pdoc-member-header" id="FunctionState-environmentVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L281">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L281">property <b>environmentVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environmentVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1665,7 +1665,7 @@ Name of the function that will be executed when the Google Cloud Function is tri
 A set of key/value environment variable pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="FunctionState-eventTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L285">property <b>eventTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L285">property <b>eventTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTrigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FunctionEventTrigger'>inputs.cloudfunctions.FunctionEventTrigger</a>&gt;;</code></pre>
@@ -1673,7 +1673,7 @@ A set of key/value environment variable pairs to assign to the function.
 A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `triggerHttp`.
 
 <h4 class="pdoc-member-header" id="FunctionState-httpsTriggerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L289">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L289">property <b>httpsTriggerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsTriggerUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1681,7 +1681,7 @@ A source that fires events in response to a condition in another service. Struct
 URL which triggers function execution. Returned only if `triggerHttp` is used.
 
 <h4 class="pdoc-member-header" id="FunctionState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L293">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L293">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1689,7 +1689,7 @@ URL which triggers function execution. Returned only if `triggerHttp` is used.
 A set of key/value label pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="FunctionState-maxInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L297">property <b>maxInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L297">property <b>maxInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1697,7 +1697,7 @@ A set of key/value label pairs to assign to the function.
 The limit on the maximum number of function instances that may coexist at a given time.
 
 <h4 class="pdoc-member-header" id="FunctionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L301">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L301">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1705,7 +1705,7 @@ The limit on the maximum number of function instances that may coexist at a give
 A user-defined name of the function. Function names must be unique globally.
 
 <h4 class="pdoc-member-header" id="FunctionState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L305">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L305">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1713,7 +1713,7 @@ A user-defined name of the function. Function names must be unique globally.
 Project of the function. If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="FunctionState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L309">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L309">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1721,7 +1721,7 @@ Project of the function. If it is not provided, the provider project is used.
 Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="FunctionState-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L316">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L316">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1732,7 +1732,7 @@ defaults to `"nodejs6"`. It's recommended that you override the default, as
 `"nodejs6"` is deprecated.
 
 <h4 class="pdoc-member-header" id="FunctionState-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L320">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L320">property <b>serviceAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1740,7 +1740,7 @@ defaults to `"nodejs6"`. It's recommended that you override the default, as
 If provided, the self-provided service account to run the function with.
 
 <h4 class="pdoc-member-header" id="FunctionState-sourceArchiveBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L324">property <b>sourceArchiveBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L324">property <b>sourceArchiveBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceArchiveBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1748,7 +1748,7 @@ If provided, the self-provided service account to run the function with.
 The GCS bucket containing the zip archive which contains the function.
 
 <h4 class="pdoc-member-header" id="FunctionState-sourceArchiveObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L328">property <b>sourceArchiveObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L328">property <b>sourceArchiveObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceArchiveObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1756,7 +1756,7 @@ The GCS bucket containing the zip archive which contains the function.
 The source archive object (file) in archive bucket.
 
 <h4 class="pdoc-member-header" id="FunctionState-sourceRepository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L333">property <b>sourceRepository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L333">property <b>sourceRepository</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRepository?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FunctionSourceRepository'>inputs.cloudfunctions.FunctionSourceRepository</a>&gt;;</code></pre>
@@ -1765,7 +1765,7 @@ Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `sourceArchiveBucket` or `sourceArchiveObject`. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="FunctionState-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L337">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L337">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1773,7 +1773,7 @@ Cannot be set alongside `sourceArchiveBucket` or `sourceArchiveObject`. Structur
 Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 
 <h4 class="pdoc-member-header" id="FunctionState-triggerHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L341">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L341">property <b>triggerHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerHttp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1781,7 +1781,7 @@ Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be mo
 Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `httpsTriggerUrl`. Cannot be used with `triggerBucket` and `triggerTopic`.
 
 <h4 class="pdoc-member-header" id="FunctionState-vpcConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/function.ts#L345">property <b>vpcConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/function.ts#L345">property <b>vpcConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcConnector?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1789,7 +1789,7 @@ Boolean variable. Any HTTP request (of a supported type) to the endpoint will tr
 The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*&#47;locations/*&#47;connectors/*`.
 
 <h3 class="pdoc-module-header" id="GetFunctionArgs" data-link-title="GetFunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L47">
         interface <strong>GetFunctionArgs</strong>
     </a>
 </h3>
@@ -1799,7 +1799,7 @@ The VPC Network Connector that this cloud function can connect to. It can be eit
 A collection of arguments for invoking getFunction.
 
 <h4 class="pdoc-member-header" id="GetFunctionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1807,7 +1807,7 @@ A collection of arguments for invoking getFunction.
 The name of a Cloud Function.
 
 <h4 class="pdoc-member-header" id="GetFunctionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L56">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L56">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1816,7 +1816,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="GetFunctionArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L61">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L61">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1825,7 +1825,7 @@ The region in which the resource belongs. If it
 is not provided, the provider region is used.
 
 <h3 class="pdoc-module-header" id="GetFunctionResult" data-link-title="GetFunctionResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L67">
         interface <strong>GetFunctionResult</strong>
     </a>
 </h3>
@@ -1835,7 +1835,7 @@ is not provided, the provider region is used.
 A collection of values returned by getFunction.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-availableMemoryMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L71">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L71">property <b>availableMemoryMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableMemoryMb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1843,7 +1843,7 @@ A collection of values returned by getFunction.
 Available memory (in MB) to the function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L75">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L75">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1851,7 +1851,7 @@ Available memory (in MB) to the function.
 Description of the function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-entryPoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L79">property <b>entryPoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L79">property <b>entryPoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryPoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1859,12 +1859,12 @@ Description of the function.
 Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-environmentVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L80">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L80">property <b>environmentVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environmentVariables: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetFunctionResult-eventTriggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L84">property <b>eventTriggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L84">property <b>eventTriggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTriggers: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetFunctionEventTrigger'>outputs.cloudfunctions.GetFunctionEventTrigger</a>[];</code></pre>
@@ -1872,7 +1872,7 @@ Name of a JavaScript function that will be executed when the Google Cloud Functi
 A source that fires events in response to a condition in another service. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-httpsTriggerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L88">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L88">property <b>httpsTriggerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsTriggerUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1880,7 +1880,7 @@ A source that fires events in response to a condition in another service. Struct
 If function is triggered by HTTP, trigger URL is set here.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L131">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L131">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1888,7 +1888,7 @@ If function is triggered by HTTP, trigger URL is set here.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L92">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L92">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1896,12 +1896,12 @@ id is the provider-assigned unique ID for this managed resource.
 A map of labels applied to this function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-maxInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L93">property <b>maxInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L93">property <b>maxInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxInstances: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFunctionResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L97">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L97">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1909,17 +1909,17 @@ A map of labels applied to this function.
 The name of the Cloud Function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L98">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L98">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFunctionResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L99">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L99">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFunctionResult-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L103">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L103">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1927,7 +1927,7 @@ The name of the Cloud Function.
 The runtime in which the function is running.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L107">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L107">property <b>serviceAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountEmail: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1935,7 +1935,7 @@ The runtime in which the function is running.
 The service account email to be assumed by the cloud function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-sourceArchiveBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L111">property <b>sourceArchiveBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L111">property <b>sourceArchiveBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceArchiveBucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1943,7 +1943,7 @@ The service account email to be assumed by the cloud function.
 The GCS bucket containing the zip archive which contains the function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-sourceArchiveObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L115">property <b>sourceArchiveObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L115">property <b>sourceArchiveObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceArchiveObject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1951,12 +1951,12 @@ The GCS bucket containing the zip archive which contains the function.
 The source archive object (file) in archive bucket.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-sourceRepositories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L116">property <b>sourceRepositories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L116">property <b>sourceRepositories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRepositories: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetFunctionSourceRepository'>outputs.cloudfunctions.GetFunctionSourceRepository</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetFunctionResult-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L120">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L120">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1964,12 +1964,12 @@ The source archive object (file) in archive bucket.
 Function execution timeout (in seconds).
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-triggerBucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L121">property <b>triggerBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L121">property <b>triggerBucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerBucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFunctionResult-triggerHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L125">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L125">property <b>triggerHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerHttp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1977,17 +1977,17 @@ Function execution timeout (in seconds).
 If function is triggered by HTTP, this boolean is set.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-triggerTopic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L126">property <b>triggerTopic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L126">property <b>triggerTopic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerTopic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFunctionResult-vpcConnector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/getFunction.ts#L127">property <b>vpcConnector</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/getFunction.ts#L127">property <b>vpcConnector</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcConnector: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="HttpCallback" data-link-title="HttpCallback">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L366">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L366">
         type <strong>HttpCallback</strong>
     </a>
 </h3>
@@ -2003,14 +2003,14 @@ https://expressjs.com/en/api.html#req for more details.
 https://expressjs.com/en/api.html#res for more details.
 
 <h3 class="pdoc-module-header" id="HttpCallbackFactory" data-link-title="HttpCallbackFactory">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L367">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L367">
         type <strong>HttpCallbackFactory</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> HttpCallbackFactory = () => <a href='#HttpCallback'>HttpCallback</a>;</code></pre>
 <h3 class="pdoc-module-header" id="HttpCallbackFunction" data-link-title="HttpCallbackFunction">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L191">
         class <strong>HttpCallbackFunction</strong>
     </a>
 </h3>
@@ -2028,7 +2028,7 @@ functions can be invoked via a secure connection.
 See more information at: https://cloud.google.com/functions/docs/writing/http
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunction-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L195"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L195"> <b>constructor</b></a>
 </h4>
 
 
@@ -2038,14 +2038,14 @@ See more information at: https://cloud.google.com/functions/docs/writing/http
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> HttpCallbackFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#HttpCallbackFunctionArgs'>HttpCallbackFunctionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunction-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L191">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L191">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunction-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L191">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L191">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2056,14 +2056,14 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunction-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L191">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L191">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunction-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L114">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L114">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucket: storage.Bucket;</code></pre>
@@ -2073,12 +2073,12 @@ these files will be generated automatically from the JavaScript callback functio
 as well as the package.json file for your pulumi app.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunction-bucketObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L115">property <b>bucketObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L115">property <b>bucketObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bucketObject: storage.BucketObject;</code></pre>
 <h4 class="pdoc-member-header" id="HttpCallbackFunction-function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L118">property <b>function</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L118">property <b>function</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>function: cloudfunctions.Function;</code></pre>
@@ -2086,7 +2086,7 @@ as well as the package.json file for your pulumi app.
 Underlying raw resource for the Function that is created.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunction-httpsTriggerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L195">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L195">property <b>httpsTriggerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpsTriggerUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2094,7 +2094,7 @@ Underlying raw resource for the Function that is created.
 URL which triggers function execution.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunction-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L191">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L191">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2103,7 +2103,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="HttpCallbackFunctionArgs" data-link-title="HttpCallbackFunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L372">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L372">
         interface <strong>HttpCallbackFunctionArgs</strong>
     </a>
 </h3>
@@ -2113,7 +2113,7 @@ deployments.
 Specialized arguments to use when specifically creating an [HttpCallbackFunction].
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-availableMemoryMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L283">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L283">property <b>availableMemoryMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availableMemoryMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2121,7 +2121,7 @@ Specialized arguments to use when specifically creating an [HttpCallbackFunction
 Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L349">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L349">property <b>bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucket?: storage.Bucket;</code></pre>
@@ -2131,7 +2131,7 @@ to be placed in.  A fresh [storage.BucketObject] will be made there containing t
 code.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L377">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L377">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='#HttpCallback'>HttpCallback</a>;</code></pre>
@@ -2140,7 +2140,7 @@ The Javascript callback to use as the entrypoint for the GCP CloudFunction out o
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L389">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L389">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#HttpCallbackFactory'>HttpCallbackFactory</a>;</code></pre>
@@ -2155,7 +2155,7 @@ loaded. It can run whatever code it needs, and will end by returning the actual 
 Function will call into each time the Function is invoked.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L279">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L279">property <b>codePathOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</code></pre>
@@ -2164,7 +2164,7 @@ Options to control which paths/packages should be included or excluded in the zi
 the code for the GCP Function.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L287">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L287">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2172,7 +2172,7 @@ the code for the GCP Function.
 Description of the function.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-environmentVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L291">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L291">property <b>environmentVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environmentVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2180,12 +2180,12 @@ Description of the function.
 A set of key/value environment variable pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-eventTrigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L392">property <b>eventTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L392">property <b>eventTrigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTrigger?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-httpsTriggerUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L300">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L300">property <b>httpsTriggerUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsTriggerUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2193,7 +2193,7 @@ A set of key/value environment variable pairs to assign to the function.
 URL which triggers function execution. Returned only if `trigger_http` is used.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L304">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L304">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2201,7 +2201,7 @@ URL which triggers function execution. Returned only if `trigger_http` is used.
 A set of key/value label pairs to assign to the function.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L308">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L308">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2209,7 +2209,7 @@ A set of key/value label pairs to assign to the function.
 Project of the function. If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L312">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L312">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2217,7 +2217,7 @@ Project of the function. If it is not provided, the provider project is used.
 Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L354">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L354">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2225,7 +2225,7 @@ Region of function. Currently can be only "us-central1". If it is not provided, 
 The specific runtime for the function. If not specified, a default will be applied
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L316">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L316">property <b>serviceAccountEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2233,7 +2233,7 @@ The specific runtime for the function. If not specified, a default will be appli
 If provided, the self-provided service account to run the function with.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L320">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L320">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2241,7 +2241,7 @@ If provided, the self-provided service account to run the function with.
 Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 
 <h4 class="pdoc-member-header" id="HttpCallbackFunctionArgs-triggerHttp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/32e56f1f8e771fd76eb424c431286f7ddcb3ef34/sdk/nodejs/cloudfunctions/zMixins.ts#L391">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/d5c103b63474e73b7a0ea0639a6e162be70726ac/sdk/nodejs/cloudfunctions/zMixins.ts#L391">property <b>triggerHttp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggerHttp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
