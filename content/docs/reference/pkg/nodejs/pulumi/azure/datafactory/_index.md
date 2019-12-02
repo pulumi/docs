@@ -68,7 +68,7 @@ meta_desc: "Explore members of the datafactory module in the @pulumi/azure packa
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="DatasetMysql" data-link-title="DatasetMysql">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L39">
         Resource <strong>DatasetMysql</strong>
     </a>
 </h3>
@@ -105,7 +105,7 @@ const exampleDatasetMysql = new azure.datafactory.DatasetMysql("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_dataset_mysql.html.markdown.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -119,7 +119,7 @@ Create a DatasetMysql resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -130,14 +130,14 @@ Get an existing DatasetMysql resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatasetMysql-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -148,7 +148,7 @@ Returns true if the given object is an instance of DatasetMysql.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L69">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L69">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -156,7 +156,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A map of additional properties to associate with the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L73">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L73">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>annotations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ A map of additional properties to associate with the Data Factory Dataset MySQL.
 List of tags that can be used for describing the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L77">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L77">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ List of tags that can be used for describing the Data Factory Dataset MySQL.
 The Data Factory name in which to associate the Dataset with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L81">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ The Data Factory name in which to associate the Dataset with. Changing this forc
 The description for the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L85">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L85">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>folder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ The description for the Data Factory Dataset MySQL.
 The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -197,7 +197,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L89">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L89">property <b>linkedServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>linkedServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ deployments and may be missing (undefined) during planning phases.
 The Data Factory Linked Service name in which to associate the Dataset with.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ The Data Factory Linked Service name in which to associate the Dataset with.
 Specifies the name of the Data Factory Dataset MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L97">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L97">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ Specifies the name of the Data Factory Dataset MySQL. Changing this forces a new
 A map of parameters to associate with the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L101">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L101">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ A map of parameters to associate with the Data Factory Dataset MySQL.
 The name of the resource group in which to create the Data Factory Dataset MySQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="DatasetMysql-schemaColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L105">property <b>schemaColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L105">property <b>schemaColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schemaColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatasetMysqlSchemaColumn'>outputs.datafactory.DatasetMysqlSchemaColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ The name of the resource group in which to create the Data Factory Dataset MySQL
 A `schemaColumn` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L109">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L109">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ A `schemaColumn` block as defined below.
 The table name of the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysql-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -254,7 +254,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatasetPostgresql" data-link-title="DatasetPostgresql">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L39">
         Resource <strong>DatasetPostgresql</strong>
     </a>
 </h3>
@@ -291,7 +291,7 @@ const exampleDatasetPostgresql = new azure.datafactory.DatasetPostgresql("exampl
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_dataset_postgresql.html.markdown.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -305,7 +305,7 @@ Create a DatasetPostgresql resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -316,14 +316,14 @@ Get an existing DatasetPostgresql resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -334,7 +334,7 @@ Returns true if the given object is an instance of DatasetPostgresql.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L69">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L69">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -342,7 +342,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A map of additional properties to associate with the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L73">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L73">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>annotations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ A map of additional properties to associate with the Data Factory Dataset Postgr
 List of tags that can be used for describing the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L77">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L77">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -358,7 +358,7 @@ List of tags that can be used for describing the Data Factory Dataset PostgreSQL
 The Data Factory name in which to associate the Dataset with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L81">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -366,7 +366,7 @@ The Data Factory name in which to associate the Dataset with. Changing this forc
 The description for the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L85">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L85">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>folder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ The description for the Data Factory Dataset PostgreSQL.
 The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -383,7 +383,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L89">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L89">property <b>linkedServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>linkedServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ deployments and may be missing (undefined) during planning phases.
 The Data Factory Linked Service name in which to associate the Dataset with.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ The Data Factory Linked Service name in which to associate the Dataset with.
 Specifies the name of the Data Factory Dataset PostgreSQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L97">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L97">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ Specifies the name of the Data Factory Dataset PostgreSQL. Changing this forces 
 A map of parameters to associate with the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L101">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L101">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ A map of parameters to associate with the Data Factory Dataset PostgreSQL.
 The name of the resource group in which to create the Data Factory Dataset PostgreSQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-schemaColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L105">property <b>schemaColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L105">property <b>schemaColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schemaColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatasetPostgresqlSchemaColumn'>outputs.datafactory.DatasetPostgresqlSchemaColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -423,7 +423,7 @@ The name of the resource group in which to create the Data Factory Dataset Postg
 A `schemaColumn` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L109">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L109">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -431,7 +431,7 @@ A `schemaColumn` block as defined below.
 The table name of the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresql-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -440,7 +440,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatasetSqlServerTable" data-link-title="DatasetSqlServerTable">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L39">
         Resource <strong>DatasetSqlServerTable</strong>
     </a>
 </h3>
@@ -477,7 +477,7 @@ const exampleDatasetSqlServerTable = new azure.datafactory.DatasetSqlServerTable
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_dataset_sql_server_table.html.markdown.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -491,7 +491,7 @@ Create a DatasetSqlServerTable resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -502,14 +502,14 @@ Get an existing DatasetSqlServerTable resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -520,7 +520,7 @@ Returns true if the given object is an instance of DatasetSqlServerTable.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L69">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L69">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -528,7 +528,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A map of additional properties to associate with the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L73">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L73">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>annotations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -536,7 +536,7 @@ A map of additional properties to associate with the Data Factory Dataset SQL Se
 List of tags that can be used for describing the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L77">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L77">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -544,7 +544,7 @@ List of tags that can be used for describing the Data Factory Dataset SQL Server
 The Data Factory name in which to associate the Dataset with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L81">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -552,7 +552,7 @@ The Data Factory name in which to associate the Dataset with. Changing this forc
 The description for the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L85">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L85">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>folder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -560,7 +560,7 @@ The description for the Data Factory Dataset SQL Server Table.
 The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -569,7 +569,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L89">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L89">property <b>linkedServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>linkedServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -577,7 +577,7 @@ deployments and may be missing (undefined) during planning phases.
 The Data Factory Linked Service name in which to associate the Dataset with.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -585,7 +585,7 @@ The Data Factory Linked Service name in which to associate the Dataset with.
 Specifies the name of the Data Factory Dataset SQL Server Table. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L97">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L97">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -593,7 +593,7 @@ Specifies the name of the Data Factory Dataset SQL Server Table. Changing this f
 A map of parameters to associate with the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L101">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L101">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -601,7 +601,7 @@ A map of parameters to associate with the Data Factory Dataset SQL Server Table.
 The name of the resource group in which to create the Data Factory Dataset SQL Server Table. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-schemaColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L105">property <b>schemaColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L105">property <b>schemaColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schemaColumns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatasetSqlServerTableSchemaColumn'>outputs.datafactory.DatasetSqlServerTableSchemaColumn</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -609,7 +609,7 @@ The name of the resource group in which to create the Data Factory Dataset SQL S
 A `schemaColumn` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L109">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L109">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -617,7 +617,7 @@ A `schemaColumn` block as defined below.
 The table name of the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -626,7 +626,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Factory" data-link-title="Factory">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L29">
         Resource <strong>Factory</strong>
     </a>
 </h3>
@@ -653,7 +653,7 @@ const exampleFactory = new azure.datafactory.Factory("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory.html.markdown.
 
 <h4 class="pdoc-member-header" id="Factory-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -667,7 +667,7 @@ Create a Factory resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Factory-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -678,14 +678,14 @@ Get an existing Factory resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Factory-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Factory-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -696,7 +696,7 @@ Returns true if the given object is an instance of Factory.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Factory-githubConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L59">property <b>githubConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L59">property <b>githubConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>githubConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FactoryGithubConfiguration'>outputs.datafactory.FactoryGithubConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -704,7 +704,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `githubConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="Factory-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -713,7 +713,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Factory-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L63">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L63">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FactoryIdentity'>outputs.datafactory.FactoryIdentity</a>&gt;;</code></pre>
@@ -721,7 +721,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="Factory-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L67">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L67">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -729,7 +729,7 @@ An `identity` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Factory-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -737,7 +737,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Data Factory. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="Factory-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L75">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L75">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -745,7 +745,7 @@ Specifies the name of the Data Factory. Changing this forces a new resource to b
 The name of the resource group in which to create the Data Factory.
 
 <h4 class="pdoc-member-header" id="Factory-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L79">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L79">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -753,7 +753,7 @@ The name of the resource group in which to create the Data Factory.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Factory-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -762,7 +762,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Factory-vstsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L83">property <b>vstsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L83">property <b>vstsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vstsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FactoryVstsConfiguration'>outputs.datafactory.FactoryVstsConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ deployments.
 A `vstsConfiguration` block as defined below.
 
 <h3 class="pdoc-module-header" id="IntegrationRuntimeManaged" data-link-title="IntegrationRuntimeManaged">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L35">
         Resource <strong>IntegrationRuntimeManaged</strong>
     </a>
 </h3>
@@ -803,7 +803,7 @@ const exampleIntegrationRuntimeManaged = new azure.datafactory.IntegrationRuntim
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_integration_runtime_managed.html.markdown.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -817,7 +817,7 @@ Create a IntegrationRuntimeManaged resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -828,14 +828,14 @@ Get an existing IntegrationRuntimeManaged resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -846,7 +846,7 @@ Returns true if the given object is an instance of IntegrationRuntimeManaged.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-catalogInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L65">property <b>catalogInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L65">property <b>catalogInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>catalogInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#IntegrationRuntimeManagedCatalogInfo'>outputs.datafactory.IntegrationRuntimeManagedCatalogInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -854,7 +854,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `catalogInfo` block as defined below.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-customSetupScript">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L69">property <b>customSetupScript</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L69">property <b>customSetupScript</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customSetupScript: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#IntegrationRuntimeManagedCustomSetupScript'>outputs.datafactory.IntegrationRuntimeManagedCustomSetupScript</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -862,7 +862,7 @@ A `catalogInfo` block as defined below.
 A `customSetupScript` block as defined below.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L73">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L73">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -870,12 +870,12 @@ A `customSetupScript` block as defined below.
 Specifies the name of the Data Factory the Managed Integration Runtime belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L74">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L74">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-edition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L78">property <b>edition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L78">property <b>edition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>edition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -883,7 +883,7 @@ Specifies the name of the Data Factory the Managed Integration Runtime belongs t
 The Managed Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -892,7 +892,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L82">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L82">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -900,7 +900,7 @@ deployments and may be missing (undefined) during planning phases.
 The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L86">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L86">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -908,7 +908,7 @@ The type of the license that is used. Valid values are `LicenseIncluded` and `Ba
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-maxParallelExecutionsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L90">property <b>maxParallelExecutionsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L90">property <b>maxParallelExecutionsPerNode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxParallelExecutionsPerNode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -916,7 +916,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L94">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -924,7 +924,7 @@ Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
 Specifies the name of the Managed Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-nodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L98">property <b>nodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L98">property <b>nodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -932,7 +932,7 @@ Specifies the name of the Managed Integration Runtime. Changing this forces a ne
 The size of the nodes on which the Managed Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-numberOfNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L102">property <b>numberOfNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L102">property <b>numberOfNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numberOfNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -940,7 +940,7 @@ The size of the nodes on which the Managed Integration Runtime runs. Valid value
 Number of nodes for the Managed Integration Runtime. Max is `10`. Defaults to `1`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L106">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L106">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -948,7 +948,7 @@ Number of nodes for the Managed Integration Runtime. Max is `10`. Defaults to `1
 The name of the resource group in which to create the Managed Integration Runtime. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -957,7 +957,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManaged-vnetIntegration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L110">property <b>vnetIntegration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L110">property <b>vnetIntegration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vnetIntegration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#IntegrationRuntimeManagedVnetIntegration'>outputs.datafactory.IntegrationRuntimeManagedVnetIntegration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -965,7 +965,7 @@ deployments.
 A `vnetIntegration` block as defined below.
 
 <h3 class="pdoc-module-header" id="LinkedServiceDataLakeStorageGen2" data-link-title="LinkedServiceDataLakeStorageGen2">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L40">
         Resource <strong>LinkedServiceDataLakeStorageGen2</strong>
     </a>
 </h3>
@@ -1003,7 +1003,7 @@ const exampleLinkedServiceDataLakeStorageGen2 = new azure.datafactory.LinkedServ
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_linked_service_data_lake_storage_gen2.html.markdown.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -1017,7 +1017,7 @@ Create a LinkedServiceDataLakeStorageGen2 resource with the given unique name, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -1028,14 +1028,14 @@ Get an existing LinkedServiceDataLakeStorageGen2 resource's state with the given
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1046,7 +1046,7 @@ Returns true if the given object is an instance of LinkedServiceDataLakeStorageG
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L70">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L70">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1054,7 +1054,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A map of additional properties to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L74">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L74">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>annotations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1062,7 +1062,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L78">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L78">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1070,7 +1070,7 @@ List of tags that can be used for describing the Data Factory Linked Service MyS
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L82">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L82">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1078,7 +1078,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1087,7 +1087,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L86">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L86">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationRuntimeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1095,7 +1095,7 @@ deployments and may be missing (undefined) during planning phases.
 The integration runtime reference to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1103,7 +1103,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L94">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L94">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1111,7 +1111,7 @@ Specifies the name of the Data Factory Linked Service MySQL. Changing this force
 A map of parameters to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L98">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L98">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1119,7 +1119,7 @@ A map of parameters to associate with the Data Factory Linked Service MySQL.
 The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-servicePrincipalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L102">property <b>servicePrincipalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L102">property <b>servicePrincipalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicePrincipalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1127,7 +1127,7 @@ The name of the resource group in which to create the Data Factory Linked Servic
 The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-servicePrincipalKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L106">property <b>servicePrincipalKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L106">property <b>servicePrincipalKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicePrincipalKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ The service principal id in which to authenticate against the Azure Data Lake St
 The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L110">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L110">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1143,7 +1143,7 @@ The service principal key in which to authenticate against the Azure Data Lake S
 The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L114">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L114">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1151,7 +1151,7 @@ The tenant id or name in which to authenticate against the Azure Data Lake Stora
 The endpoint for the Azure Data Lake Storage Gen2 service.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1160,7 +1160,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LinkedServiceMysql" data-link-title="LinkedServiceMysql">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L36">
         Resource <strong>LinkedServiceMysql</strong>
     </a>
 </h3>
@@ -1194,7 +1194,7 @@ const exampleLinkedServiceMysql = new azure.datafactory.LinkedServiceMysql("exam
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_linked_service_mysql.html.markdown.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -1208,7 +1208,7 @@ Create a LinkedServiceMysql resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -1219,14 +1219,14 @@ Get an existing LinkedServiceMysql resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1237,7 +1237,7 @@ Returns true if the given object is an instance of LinkedServiceMysql.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L66">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L66">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1245,7 +1245,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A map of additional properties to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L70">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L70">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>annotations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1253,7 +1253,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-connectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L74">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L74">property <b>connectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1261,7 +1261,7 @@ List of tags that can be used for describing the Data Factory Linked Service MyS
 The connection string in which to authenticate with MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L78">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L78">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1269,7 +1269,7 @@ The connection string in which to authenticate with MySQL.
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L82">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L82">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1277,7 +1277,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1286,7 +1286,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L86">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L86">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationRuntimeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1294,7 +1294,7 @@ deployments and may be missing (undefined) during planning phases.
 The integration runtime reference to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1302,7 +1302,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L94">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L94">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1310,7 +1310,7 @@ Specifies the name of the Data Factory Linked Service MySQL. Changing this force
 A map of parameters to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L98">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L98">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1318,7 +1318,7 @@ A map of parameters to associate with the Data Factory Linked Service MySQL.
 The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysql-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1327,7 +1327,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LinkedServicePostgresql" data-link-title="LinkedServicePostgresql">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L36">
         Resource <strong>LinkedServicePostgresql</strong>
     </a>
 </h3>
@@ -1361,7 +1361,7 @@ const exampleLinkedServicePostgresql = new azure.datafactory.LinkedServicePostgr
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_linked_service_postgresql.html.markdown.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -1375,7 +1375,7 @@ Create a LinkedServicePostgresql resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -1386,14 +1386,14 @@ Get an existing LinkedServicePostgresql resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1404,7 +1404,7 @@ Returns true if the given object is an instance of LinkedServicePostgresql.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L66">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L66">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1412,7 +1412,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A map of additional properties to associate with the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L70">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L70">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>annotations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1420,7 +1420,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-connectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L74">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L74">property <b>connectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1428,7 +1428,7 @@ List of tags that can be used for describing the Data Factory Linked Service Pos
 The connection string in which to authenticate with PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L78">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L78">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1436,7 +1436,7 @@ The connection string in which to authenticate with PostgreSQL.
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L82">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L82">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1444,7 +1444,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1453,7 +1453,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L86">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L86">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationRuntimeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1461,7 +1461,7 @@ deployments and may be missing (undefined) during planning phases.
 The integration runtime reference to associate with the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1469,7 +1469,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service PostgreSQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L94">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L94">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1477,7 +1477,7 @@ Specifies the name of the Data Factory Linked Service PostgreSQL. Changing this 
 A map of parameters to associate with the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L98">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L98">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1485,7 +1485,7 @@ A map of parameters to associate with the Data Factory Linked Service PostgreSQL
 The name of the resource group in which to create the Data Factory Linked Service PostgreSQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresql-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1494,7 +1494,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LinkedServiceSqlServer" data-link-title="LinkedServiceSqlServer">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L36">
         Resource <strong>LinkedServiceSqlServer</strong>
     </a>
 </h3>
@@ -1528,7 +1528,7 @@ const exampleLinkedServiceSqlServer = new azure.datafactory.LinkedServiceSqlServ
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_linked_service_sql_server.html.markdown.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L98"> <b>constructor</b></a>
 </h4>
 
 
@@ -1542,7 +1542,7 @@ Create a LinkedServiceSqlServer resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -1553,14 +1553,14 @@ Get an existing LinkedServiceSqlServer resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1571,7 +1571,7 @@ Returns true if the given object is an instance of LinkedServiceSqlServer.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L66">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L66">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1579,7 +1579,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A map of additional properties to associate with the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L70">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L70">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>annotations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1587,7 +1587,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-connectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L74">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L74">property <b>connectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1595,7 +1595,7 @@ List of tags that can be used for describing the Data Factory Linked Service SQL
 The connection string in which to authenticate with the SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L78">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L78">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1603,7 +1603,7 @@ The connection string in which to authenticate with the SQL Server.
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L82">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L82">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1611,7 +1611,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1620,7 +1620,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L86">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L86">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationRuntimeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1628,7 +1628,7 @@ deployments and may be missing (undefined) during planning phases.
 The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1636,7 +1636,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service SQL Server. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L94">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L94">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1644,7 +1644,7 @@ Specifies the name of the Data Factory Linked Service SQL Server. Changing this 
 A map of parameters to associate with the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L98">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L98">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1652,7 +1652,7 @@ A map of parameters to associate with the Data Factory Linked Service SQL Server
 The name of the resource group in which to create the Data Factory Linked Service SQL Server. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1661,7 +1661,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Pipeline" data-link-title="Pipeline">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L33">
         Resource <strong>Pipeline</strong>
     </a>
 </h3>
@@ -1692,7 +1692,7 @@ const examplePipeline = new azure.datafactory.Pipeline("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_pipeline.html.markdown.
 
 <h4 class="pdoc-member-header" id="Pipeline-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -1706,7 +1706,7 @@ Create a Pipeline resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Pipeline-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -1717,14 +1717,14 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Pipeline-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Pipeline-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1735,7 +1735,7 @@ Returns true if the given object is an instance of Pipeline.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Pipeline-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L63">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L63">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>annotations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1743,7 +1743,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of tags that can be used for describing the Data Factory Pipeline.
 
 <h4 class="pdoc-member-header" id="Pipeline-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L67">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L67">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1751,7 +1751,7 @@ List of tags that can be used for describing the Data Factory Pipeline.
 The Data Factory name in which to associate the Pipeline with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="Pipeline-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L71">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L71">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1759,7 +1759,7 @@ The Data Factory name in which to associate the Pipeline with. Changing this for
 The description for the Data Factory Pipeline.
 
 <h4 class="pdoc-member-header" id="Pipeline-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1768,7 +1768,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Pipeline-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1776,7 +1776,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Data Factory Pipeline. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="Pipeline-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L79">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L79">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1784,7 +1784,7 @@ Specifies the name of the Data Factory Pipeline. Changing this forces a new reso
 A map of parameters to associate with the Data Factory Pipeline.
 
 <h4 class="pdoc-member-header" id="Pipeline-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L83">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L83">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1792,7 +1792,7 @@ A map of parameters to associate with the Data Factory Pipeline.
 The name of the resource group in which to create the Data Factory Pipeline. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="Pipeline-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1801,7 +1801,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Pipeline-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L87">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L87">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1809,7 +1809,7 @@ deployments.
 A map of variables to associate with the Data Factory Pipeline.
 
 <h3 class="pdoc-module-header" id="TriggerSchedule" data-link-title="TriggerSchedule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L40">
         Resource <strong>TriggerSchedule</strong>
     </a>
 </h3>
@@ -1847,7 +1847,7 @@ const testTriggerSchedule = new azure.datafactory.TriggerSchedule("test", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/data_factory_trigger_schedule.html.markdown.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -1861,7 +1861,7 @@ Create a TriggerSchedule resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -1872,14 +1872,14 @@ Get an existing TriggerSchedule resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1890,7 +1890,7 @@ Returns true if the given object is an instance of TriggerSchedule.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L70">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L70">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>annotations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1898,7 +1898,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of tags that can be used for describing the Data Factory Schedule Trigger.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L74">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L74">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1906,7 +1906,7 @@ List of tags that can be used for describing the Data Factory Schedule Trigger.
 The Data Factory name in which to associate the Schedule Trigger with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L78">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L78">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1914,7 +1914,7 @@ The Data Factory name in which to associate the Schedule Trigger with. Changing 
 The time the Schedule Trigger should end. The time will be represented in UTC.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L82">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L82">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1922,7 +1922,7 @@ The time the Schedule Trigger should end. The time will be represented in UTC.
 The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1931,7 +1931,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L86">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L86">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>interval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1939,7 +1939,7 @@ deployments and may be missing (undefined) during planning phases.
 The interval for how often the trigger occurs. This defaults to 1.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1947,7 +1947,7 @@ The interval for how often the trigger occurs. This defaults to 1.
 Specifies the name of the Data Factory Schedule Trigger. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-pipelineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L94">property <b>pipelineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L94">property <b>pipelineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pipelineName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1955,7 +1955,7 @@ Specifies the name of the Data Factory Schedule Trigger. Changing this forces a 
 The Data Factory Pipeline name that the trigger will act on.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-pipelineParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L98">property <b>pipelineParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L98">property <b>pipelineParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pipelineParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1963,7 +1963,7 @@ The Data Factory Pipeline name that the trigger will act on.
 The pipeline parameters that the the trigger will act upon.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L102">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L102">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1971,7 +1971,7 @@ The pipeline parameters that the the trigger will act upon.
 The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L106">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L106">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1979,7 +1979,7 @@ The name of the resource group in which to create the Data Factory Schedule Trig
 The time the Schedule Trigger will start. This defaults to the current time. The time will be represented in UTC.
 
 <h4 class="pdoc-member-header" id="TriggerSchedule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1990,7 +1990,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getFactory" data-link-title="getFactory">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L28">
         Data Source <strong>getFactory</strong>
     </a>
 </h3>
@@ -2020,7 +2020,7 @@ export const dataFactoryId = azurerm_data_factory_example.id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DatasetMysqlArgs" data-link-title="DatasetMysqlArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L221">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L221">
         interface <strong>DatasetMysqlArgs</strong>
     </a>
 </h3>
@@ -2030,7 +2030,7 @@ export const dataFactoryId = azurerm_data_factory_example.id;
 The set of arguments for constructing a DatasetMysql resource.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L225">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L225">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2038,7 +2038,7 @@ The set of arguments for constructing a DatasetMysql resource.
 A map of additional properties to associate with the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L229">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L229">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2046,7 +2046,7 @@ A map of additional properties to associate with the Data Factory Dataset MySQL.
 List of tags that can be used for describing the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L233">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L233">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2054,7 +2054,7 @@ List of tags that can be used for describing the Data Factory Dataset MySQL.
 The Data Factory name in which to associate the Dataset with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L237">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L237">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2062,7 +2062,7 @@ The Data Factory name in which to associate the Dataset with. Changing this forc
 The description for the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L241">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L241">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2070,7 +2070,7 @@ The description for the Data Factory Dataset MySQL.
 The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L245">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L245">property <b>linkedServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkedServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2078,7 +2078,7 @@ The folder that this Dataset is in. If not specified, the Dataset will appear at
 The Data Factory Linked Service name in which to associate the Dataset with.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L249">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L249">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2086,7 +2086,7 @@ The Data Factory Linked Service name in which to associate the Dataset with.
 Specifies the name of the Data Factory Dataset MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L253">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L253">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2094,7 +2094,7 @@ Specifies the name of the Data Factory Dataset MySQL. Changing this forces a new
 A map of parameters to associate with the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L257">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L257">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2102,7 +2102,7 @@ A map of parameters to associate with the Data Factory Dataset MySQL.
 The name of the resource group in which to create the Data Factory Dataset MySQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-schemaColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L261">property <b>schemaColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L261">property <b>schemaColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetMysqlSchemaColumn'>inputs.datafactory.DatasetMysqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
@@ -2110,7 +2110,7 @@ The name of the resource group in which to create the Data Factory Dataset MySQL
 A `schemaColumn` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlArgs-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L265">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L265">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2118,7 +2118,7 @@ A `schemaColumn` block as defined below.
 The table name of the Data Factory Dataset MySQL.
 
 <h3 class="pdoc-module-header" id="DatasetMysqlState" data-link-title="DatasetMysqlState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L171">
         interface <strong>DatasetMysqlState</strong>
     </a>
 </h3>
@@ -2128,7 +2128,7 @@ The table name of the Data Factory Dataset MySQL.
 Input properties used for looking up and filtering DatasetMysql resources.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L175">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L175">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2136,7 +2136,7 @@ Input properties used for looking up and filtering DatasetMysql resources.
 A map of additional properties to associate with the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L179">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L179">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2144,7 +2144,7 @@ A map of additional properties to associate with the Data Factory Dataset MySQL.
 List of tags that can be used for describing the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L183">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L183">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2152,7 +2152,7 @@ List of tags that can be used for describing the Data Factory Dataset MySQL.
 The Data Factory name in which to associate the Dataset with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L187">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L187">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2160,7 +2160,7 @@ The Data Factory name in which to associate the Dataset with. Changing this forc
 The description for the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L191">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L191">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2168,7 +2168,7 @@ The description for the Data Factory Dataset MySQL.
 The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L195">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L195">property <b>linkedServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkedServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2176,7 +2176,7 @@ The folder that this Dataset is in. If not specified, the Dataset will appear at
 The Data Factory Linked Service name in which to associate the Dataset with.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L199">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L199">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2184,7 +2184,7 @@ The Data Factory Linked Service name in which to associate the Dataset with.
 Specifies the name of the Data Factory Dataset MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L203">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L203">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2192,7 +2192,7 @@ Specifies the name of the Data Factory Dataset MySQL. Changing this forces a new
 A map of parameters to associate with the Data Factory Dataset MySQL.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L207">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L207">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2200,7 +2200,7 @@ A map of parameters to associate with the Data Factory Dataset MySQL.
 The name of the resource group in which to create the Data Factory Dataset MySQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-schemaColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L211">property <b>schemaColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L211">property <b>schemaColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetMysqlSchemaColumn'>inputs.datafactory.DatasetMysqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
@@ -2208,7 +2208,7 @@ The name of the resource group in which to create the Data Factory Dataset MySQL
 A `schemaColumn` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatasetMysqlState-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetMysql.ts#L215">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetMysql.ts#L215">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2216,7 +2216,7 @@ A `schemaColumn` block as defined below.
 The table name of the Data Factory Dataset MySQL.
 
 <h3 class="pdoc-module-header" id="DatasetPostgresqlArgs" data-link-title="DatasetPostgresqlArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L221">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L221">
         interface <strong>DatasetPostgresqlArgs</strong>
     </a>
 </h3>
@@ -2226,7 +2226,7 @@ The table name of the Data Factory Dataset MySQL.
 The set of arguments for constructing a DatasetPostgresql resource.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L225">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L225">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2234,7 +2234,7 @@ The set of arguments for constructing a DatasetPostgresql resource.
 A map of additional properties to associate with the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L229">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L229">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2242,7 +2242,7 @@ A map of additional properties to associate with the Data Factory Dataset Postgr
 List of tags that can be used for describing the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L233">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L233">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2250,7 +2250,7 @@ List of tags that can be used for describing the Data Factory Dataset PostgreSQL
 The Data Factory name in which to associate the Dataset with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L237">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L237">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2258,7 +2258,7 @@ The Data Factory name in which to associate the Dataset with. Changing this forc
 The description for the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L241">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L241">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2266,7 +2266,7 @@ The description for the Data Factory Dataset PostgreSQL.
 The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L245">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L245">property <b>linkedServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkedServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2274,7 +2274,7 @@ The folder that this Dataset is in. If not specified, the Dataset will appear at
 The Data Factory Linked Service name in which to associate the Dataset with.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L249">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L249">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2282,7 +2282,7 @@ The Data Factory Linked Service name in which to associate the Dataset with.
 Specifies the name of the Data Factory Dataset PostgreSQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L253">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L253">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2290,7 +2290,7 @@ Specifies the name of the Data Factory Dataset PostgreSQL. Changing this forces 
 A map of parameters to associate with the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L257">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L257">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2298,7 +2298,7 @@ A map of parameters to associate with the Data Factory Dataset PostgreSQL.
 The name of the resource group in which to create the Data Factory Dataset PostgreSQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-schemaColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L261">property <b>schemaColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L261">property <b>schemaColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetPostgresqlSchemaColumn'>inputs.datafactory.DatasetPostgresqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
@@ -2306,7 +2306,7 @@ The name of the resource group in which to create the Data Factory Dataset Postg
 A `schemaColumn` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlArgs-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L265">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L265">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2314,7 +2314,7 @@ A `schemaColumn` block as defined below.
 The table name of the Data Factory Dataset PostgreSQL.
 
 <h3 class="pdoc-module-header" id="DatasetPostgresqlState" data-link-title="DatasetPostgresqlState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L171">
         interface <strong>DatasetPostgresqlState</strong>
     </a>
 </h3>
@@ -2324,7 +2324,7 @@ The table name of the Data Factory Dataset PostgreSQL.
 Input properties used for looking up and filtering DatasetPostgresql resources.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L175">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L175">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2332,7 +2332,7 @@ Input properties used for looking up and filtering DatasetPostgresql resources.
 A map of additional properties to associate with the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L179">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L179">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2340,7 +2340,7 @@ A map of additional properties to associate with the Data Factory Dataset Postgr
 List of tags that can be used for describing the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L183">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L183">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2348,7 +2348,7 @@ List of tags that can be used for describing the Data Factory Dataset PostgreSQL
 The Data Factory name in which to associate the Dataset with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L187">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L187">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2356,7 +2356,7 @@ The Data Factory name in which to associate the Dataset with. Changing this forc
 The description for the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L191">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L191">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2364,7 +2364,7 @@ The description for the Data Factory Dataset PostgreSQL.
 The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L195">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L195">property <b>linkedServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkedServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2372,7 +2372,7 @@ The folder that this Dataset is in. If not specified, the Dataset will appear at
 The Data Factory Linked Service name in which to associate the Dataset with.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L199">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L199">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2380,7 +2380,7 @@ The Data Factory Linked Service name in which to associate the Dataset with.
 Specifies the name of the Data Factory Dataset PostgreSQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L203">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L203">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2388,7 +2388,7 @@ Specifies the name of the Data Factory Dataset PostgreSQL. Changing this forces 
 A map of parameters to associate with the Data Factory Dataset PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L207">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L207">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2396,7 +2396,7 @@ A map of parameters to associate with the Data Factory Dataset PostgreSQL.
 The name of the resource group in which to create the Data Factory Dataset PostgreSQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-schemaColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L211">property <b>schemaColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L211">property <b>schemaColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetPostgresqlSchemaColumn'>inputs.datafactory.DatasetPostgresqlSchemaColumn</a>&gt;[]&gt;;</code></pre>
@@ -2404,7 +2404,7 @@ The name of the resource group in which to create the Data Factory Dataset Postg
 A `schemaColumn` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatasetPostgresqlState-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetPostgresql.ts#L215">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetPostgresql.ts#L215">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2412,7 +2412,7 @@ A `schemaColumn` block as defined below.
 The table name of the Data Factory Dataset PostgreSQL.
 
 <h3 class="pdoc-module-header" id="DatasetSqlServerTableArgs" data-link-title="DatasetSqlServerTableArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L221">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L221">
         interface <strong>DatasetSqlServerTableArgs</strong>
     </a>
 </h3>
@@ -2422,7 +2422,7 @@ The table name of the Data Factory Dataset PostgreSQL.
 The set of arguments for constructing a DatasetSqlServerTable resource.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L225">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L225">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2430,7 +2430,7 @@ The set of arguments for constructing a DatasetSqlServerTable resource.
 A map of additional properties to associate with the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L229">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L229">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2438,7 +2438,7 @@ A map of additional properties to associate with the Data Factory Dataset SQL Se
 List of tags that can be used for describing the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L233">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L233">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2446,7 +2446,7 @@ List of tags that can be used for describing the Data Factory Dataset SQL Server
 The Data Factory name in which to associate the Dataset with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L237">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L237">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2454,7 +2454,7 @@ The Data Factory name in which to associate the Dataset with. Changing this forc
 The description for the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L241">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L241">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2462,7 +2462,7 @@ The description for the Data Factory Dataset SQL Server Table.
 The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L245">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L245">property <b>linkedServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkedServiceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2470,7 +2470,7 @@ The folder that this Dataset is in. If not specified, the Dataset will appear at
 The Data Factory Linked Service name in which to associate the Dataset with.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L249">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L249">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2478,7 +2478,7 @@ The Data Factory Linked Service name in which to associate the Dataset with.
 Specifies the name of the Data Factory Dataset SQL Server Table. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L253">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L253">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2486,7 +2486,7 @@ Specifies the name of the Data Factory Dataset SQL Server Table. Changing this f
 A map of parameters to associate with the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L257">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L257">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2494,7 +2494,7 @@ A map of parameters to associate with the Data Factory Dataset SQL Server Table.
 The name of the resource group in which to create the Data Factory Dataset SQL Server Table. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-schemaColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L261">property <b>schemaColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L261">property <b>schemaColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetSqlServerTableSchemaColumn'>inputs.datafactory.DatasetSqlServerTableSchemaColumn</a>&gt;[]&gt;;</code></pre>
@@ -2502,7 +2502,7 @@ The name of the resource group in which to create the Data Factory Dataset SQL S
 A `schemaColumn` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableArgs-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L265">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L265">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2510,7 +2510,7 @@ A `schemaColumn` block as defined below.
 The table name of the Data Factory Dataset SQL Server Table.
 
 <h3 class="pdoc-module-header" id="DatasetSqlServerTableState" data-link-title="DatasetSqlServerTableState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L171">
         interface <strong>DatasetSqlServerTableState</strong>
     </a>
 </h3>
@@ -2520,7 +2520,7 @@ The table name of the Data Factory Dataset SQL Server Table.
 Input properties used for looking up and filtering DatasetSqlServerTable resources.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L175">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L175">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2528,7 +2528,7 @@ Input properties used for looking up and filtering DatasetSqlServerTable resourc
 A map of additional properties to associate with the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L179">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L179">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2536,7 +2536,7 @@ A map of additional properties to associate with the Data Factory Dataset SQL Se
 List of tags that can be used for describing the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L183">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L183">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2544,7 +2544,7 @@ List of tags that can be used for describing the Data Factory Dataset SQL Server
 The Data Factory name in which to associate the Dataset with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L187">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L187">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2552,7 +2552,7 @@ The Data Factory name in which to associate the Dataset with. Changing this forc
 The description for the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L191">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L191">property <b>folder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>folder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2560,7 +2560,7 @@ The description for the Data Factory Dataset SQL Server Table.
 The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L195">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L195">property <b>linkedServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkedServiceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2568,7 +2568,7 @@ The folder that this Dataset is in. If not specified, the Dataset will appear at
 The Data Factory Linked Service name in which to associate the Dataset with.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L199">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L199">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2576,7 +2576,7 @@ The Data Factory Linked Service name in which to associate the Dataset with.
 Specifies the name of the Data Factory Dataset SQL Server Table. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L203">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L203">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2584,7 +2584,7 @@ Specifies the name of the Data Factory Dataset SQL Server Table. Changing this f
 A map of parameters to associate with the Data Factory Dataset SQL Server Table.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L207">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L207">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2592,7 +2592,7 @@ A map of parameters to associate with the Data Factory Dataset SQL Server Table.
 The name of the resource group in which to create the Data Factory Dataset SQL Server Table. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-schemaColumns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L211">property <b>schemaColumns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L211">property <b>schemaColumns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schemaColumns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatasetSqlServerTableSchemaColumn'>inputs.datafactory.DatasetSqlServerTableSchemaColumn</a>&gt;[]&gt;;</code></pre>
@@ -2600,7 +2600,7 @@ The name of the resource group in which to create the Data Factory Dataset SQL S
 A `schemaColumn` block as defined below.
 
 <h4 class="pdoc-member-header" id="DatasetSqlServerTableState-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L215">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L215">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2608,7 +2608,7 @@ A `schemaColumn` block as defined below.
 The table name of the Data Factory Dataset SQL Server Table.
 
 <h3 class="pdoc-module-header" id="FactoryArgs" data-link-title="FactoryArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L165">
         interface <strong>FactoryArgs</strong>
     </a>
 </h3>
@@ -2618,7 +2618,7 @@ The table name of the Data Factory Dataset SQL Server Table.
 The set of arguments for constructing a Factory resource.
 
 <h4 class="pdoc-member-header" id="FactoryArgs-githubConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L169">property <b>githubConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L169">property <b>githubConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>githubConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryGithubConfiguration'>inputs.datafactory.FactoryGithubConfiguration</a>&gt;;</code></pre>
@@ -2626,7 +2626,7 @@ The set of arguments for constructing a Factory resource.
 A `githubConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="FactoryArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L173">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L173">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryIdentity'>inputs.datafactory.FactoryIdentity</a>&gt;;</code></pre>
@@ -2634,7 +2634,7 @@ A `githubConfiguration` block as defined below.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="FactoryArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L177">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L177">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2642,7 +2642,7 @@ An `identity` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FactoryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L181">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2650,7 +2650,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Data Factory. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="FactoryArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L185">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L185">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2658,7 +2658,7 @@ Specifies the name of the Data Factory. Changing this forces a new resource to b
 The name of the resource group in which to create the Data Factory.
 
 <h4 class="pdoc-member-header" id="FactoryArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L189">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L189">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2666,7 +2666,7 @@ The name of the resource group in which to create the Data Factory.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="FactoryArgs-vstsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L193">property <b>vstsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L193">property <b>vstsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vstsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryVstsConfiguration'>inputs.datafactory.FactoryVstsConfiguration</a>&gt;;</code></pre>
@@ -2674,7 +2674,7 @@ A mapping of tags to assign to the resource.
 A `vstsConfiguration` block as defined below.
 
 <h3 class="pdoc-module-header" id="FactoryState" data-link-title="FactoryState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L131">
         interface <strong>FactoryState</strong>
     </a>
 </h3>
@@ -2684,7 +2684,7 @@ A `vstsConfiguration` block as defined below.
 Input properties used for looking up and filtering Factory resources.
 
 <h4 class="pdoc-member-header" id="FactoryState-githubConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L135">property <b>githubConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L135">property <b>githubConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>githubConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryGithubConfiguration'>inputs.datafactory.FactoryGithubConfiguration</a>&gt;;</code></pre>
@@ -2692,7 +2692,7 @@ Input properties used for looking up and filtering Factory resources.
 A `githubConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="FactoryState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L139">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L139">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryIdentity'>inputs.datafactory.FactoryIdentity</a>&gt;;</code></pre>
@@ -2700,7 +2700,7 @@ A `githubConfiguration` block as defined below.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="FactoryState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L143">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L143">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2708,7 +2708,7 @@ An `identity` block as defined below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FactoryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2716,7 +2716,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Data Factory. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="FactoryState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L151">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L151">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2724,7 +2724,7 @@ Specifies the name of the Data Factory. Changing this forces a new resource to b
 The name of the resource group in which to create the Data Factory.
 
 <h4 class="pdoc-member-header" id="FactoryState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L155">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L155">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2732,7 +2732,7 @@ The name of the resource group in which to create the Data Factory.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="FactoryState-vstsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/factory.ts#L159">property <b>vstsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/factory.ts#L159">property <b>vstsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vstsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FactoryVstsConfiguration'>inputs.datafactory.FactoryVstsConfiguration</a>&gt;;</code></pre>
@@ -2740,7 +2740,7 @@ A mapping of tags to assign to the resource.
 A `vstsConfiguration` block as defined below.
 
 <h3 class="pdoc-module-header" id="GetFactoryArgs" data-link-title="GetFactoryArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L47">
         interface <strong>GetFactoryArgs</strong>
     </a>
 </h3>
@@ -2750,7 +2750,7 @@ A `vstsConfiguration` block as defined below.
 A collection of arguments for invoking getFactory.
 
 <h4 class="pdoc-member-header" id="GetFactoryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L51">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2758,7 +2758,7 @@ A collection of arguments for invoking getFactory.
 Specifies the name of the Data Factory to retrieve information about.
 
 <h4 class="pdoc-member-header" id="GetFactoryArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L55">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L55">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2766,7 +2766,7 @@ Specifies the name of the Data Factory to retrieve information about.
 The name of the resource group where the Data Factory exists.
 
 <h3 class="pdoc-module-header" id="GetFactoryResult" data-link-title="GetFactoryResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L61">
         interface <strong>GetFactoryResult</strong>
     </a>
 </h3>
@@ -2776,7 +2776,7 @@ The name of the resource group where the Data Factory exists.
 A collection of values returned by getFactory.
 
 <h4 class="pdoc-member-header" id="GetFactoryResult-githubConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L65">property <b>githubConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L65">property <b>githubConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>githubConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryGithubConfiguration'>outputs.datafactory.GetFactoryGithubConfiguration</a>[];</code></pre>
@@ -2784,7 +2784,7 @@ A collection of values returned by getFactory.
 A `githubConfiguration` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetFactoryResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L88">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2792,7 +2792,7 @@ A `githubConfiguration` block as defined below.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetFactoryResult-identities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L69">property <b>identities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L69">property <b>identities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryIdentity'>outputs.datafactory.GetFactoryIdentity</a>[];</code></pre>
@@ -2800,7 +2800,7 @@ id is the provider-assigned unique ID for this managed resource.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetFactoryResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L73">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L73">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2808,17 +2808,17 @@ An `identity` block as defined below.
 The Azure location where the resource exists.
 
 <h4 class="pdoc-member-header" id="GetFactoryResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFactoryResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L75">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L75">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFactoryResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L80">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2827,7 +2827,7 @@ A mapping of tags assigned to the resource.
 ---
 
 <h4 class="pdoc-member-header" id="GetFactoryResult-vstsConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/getFactory.ts#L84">property <b>vstsConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/getFactory.ts#L84">property <b>vstsConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vstsConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryVstsConfiguration'>outputs.datafactory.GetFactoryVstsConfiguration</a>[];</code></pre>
@@ -2835,7 +2835,7 @@ A mapping of tags assigned to the resource.
 A `vstsConfiguration` block as defined below.
 
 <h3 class="pdoc-module-header" id="IntegrationRuntimeManagedArgs" data-link-title="IntegrationRuntimeManagedArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L231">
         interface <strong>IntegrationRuntimeManagedArgs</strong>
     </a>
 </h3>
@@ -2845,7 +2845,7 @@ A `vstsConfiguration` block as defined below.
 The set of arguments for constructing a IntegrationRuntimeManaged resource.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-catalogInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L235">property <b>catalogInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L235">property <b>catalogInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCatalogInfo'>inputs.datafactory.IntegrationRuntimeManagedCatalogInfo</a>&gt;;</code></pre>
@@ -2853,7 +2853,7 @@ The set of arguments for constructing a IntegrationRuntimeManaged resource.
 A `catalogInfo` block as defined below.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-customSetupScript">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L239">property <b>customSetupScript</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L239">property <b>customSetupScript</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customSetupScript?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCustomSetupScript'>inputs.datafactory.IntegrationRuntimeManagedCustomSetupScript</a>&gt;;</code></pre>
@@ -2861,7 +2861,7 @@ A `catalogInfo` block as defined below.
 A `customSetupScript` block as defined below.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L243">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L243">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2869,12 +2869,12 @@ A `customSetupScript` block as defined below.
 Specifies the name of the Data Factory the Managed Integration Runtime belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L244">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L244">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-edition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L248">property <b>edition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L248">property <b>edition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>edition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2882,7 +2882,7 @@ Specifies the name of the Data Factory the Managed Integration Runtime belongs t
 The Managed Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L252">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L252">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2890,7 +2890,7 @@ The Managed Integration Runtime edition. Valid values are `Standard` and `Enterp
 The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L256">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L256">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2898,7 +2898,7 @@ The type of the license that is used. Valid values are `LicenseIncluded` and `Ba
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-maxParallelExecutionsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L260">property <b>maxParallelExecutionsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L260">property <b>maxParallelExecutionsPerNode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxParallelExecutionsPerNode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2906,7 +2906,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L264">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L264">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2914,7 +2914,7 @@ Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
 Specifies the name of the Managed Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-nodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L268">property <b>nodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L268">property <b>nodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2922,7 +2922,7 @@ Specifies the name of the Managed Integration Runtime. Changing this forces a ne
 The size of the nodes on which the Managed Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-numberOfNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L272">property <b>numberOfNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L272">property <b>numberOfNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numberOfNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2930,7 +2930,7 @@ The size of the nodes on which the Managed Integration Runtime runs. Valid value
 Number of nodes for the Managed Integration Runtime. Max is `10`. Defaults to `1`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L276">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L276">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2938,7 +2938,7 @@ Number of nodes for the Managed Integration Runtime. Max is `10`. Defaults to `1
 The name of the resource group in which to create the Managed Integration Runtime. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedArgs-vnetIntegration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L280">property <b>vnetIntegration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L280">property <b>vnetIntegration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vnetIntegration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedVnetIntegration'>inputs.datafactory.IntegrationRuntimeManagedVnetIntegration</a>&gt;;</code></pre>
@@ -2946,7 +2946,7 @@ The name of the resource group in which to create the Managed Integration Runtim
 A `vnetIntegration` block as defined below.
 
 <h3 class="pdoc-module-header" id="IntegrationRuntimeManagedState" data-link-title="IntegrationRuntimeManagedState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L176">
         interface <strong>IntegrationRuntimeManagedState</strong>
     </a>
 </h3>
@@ -2956,7 +2956,7 @@ A `vnetIntegration` block as defined below.
 Input properties used for looking up and filtering IntegrationRuntimeManaged resources.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-catalogInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L180">property <b>catalogInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L180">property <b>catalogInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>catalogInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCatalogInfo'>inputs.datafactory.IntegrationRuntimeManagedCatalogInfo</a>&gt;;</code></pre>
@@ -2964,7 +2964,7 @@ Input properties used for looking up and filtering IntegrationRuntimeManaged res
 A `catalogInfo` block as defined below.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-customSetupScript">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L184">property <b>customSetupScript</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L184">property <b>customSetupScript</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customSetupScript?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedCustomSetupScript'>inputs.datafactory.IntegrationRuntimeManagedCustomSetupScript</a>&gt;;</code></pre>
@@ -2972,7 +2972,7 @@ A `catalogInfo` block as defined below.
 A `customSetupScript` block as defined below.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L188">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L188">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2980,12 +2980,12 @@ A `customSetupScript` block as defined below.
 Specifies the name of the Data Factory the Managed Integration Runtime belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L189">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L189">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-edition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L193">property <b>edition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L193">property <b>edition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>edition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2993,7 +2993,7 @@ Specifies the name of the Data Factory the Managed Integration Runtime belongs t
 The Managed Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L197">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L197">property <b>licenseType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3001,7 +3001,7 @@ The Managed Integration Runtime edition. Valid values are `Standard` and `Enterp
 The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L201">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L201">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3009,7 +3009,7 @@ The type of the license that is used. Valid values are `LicenseIncluded` and `Ba
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-maxParallelExecutionsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L205">property <b>maxParallelExecutionsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L205">property <b>maxParallelExecutionsPerNode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxParallelExecutionsPerNode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3017,7 +3017,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L209">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L209">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3025,7 +3025,7 @@ Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
 Specifies the name of the Managed Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-nodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L213">property <b>nodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L213">property <b>nodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3033,7 +3033,7 @@ Specifies the name of the Managed Integration Runtime. Changing this forces a ne
 The size of the nodes on which the Managed Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-numberOfNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L217">property <b>numberOfNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L217">property <b>numberOfNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numberOfNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3041,7 +3041,7 @@ The size of the nodes on which the Managed Integration Runtime runs. Valid value
 Number of nodes for the Managed Integration Runtime. Max is `10`. Defaults to `1`.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L221">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L221">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3049,7 +3049,7 @@ Number of nodes for the Managed Integration Runtime. Max is `10`. Defaults to `1
 The name of the resource group in which to create the Managed Integration Runtime. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="IntegrationRuntimeManagedState-vnetIntegration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L225">property <b>vnetIntegration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/integrationRuntimeManaged.ts#L225">property <b>vnetIntegration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vnetIntegration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#IntegrationRuntimeManagedVnetIntegration'>inputs.datafactory.IntegrationRuntimeManagedVnetIntegration</a>&gt;;</code></pre>
@@ -3057,7 +3057,7 @@ The name of the resource group in which to create the Managed Integration Runtim
 A `vnetIntegration` block as defined below.
 
 <h3 class="pdoc-module-header" id="LinkedServiceDataLakeStorageGen2Args" data-link-title="LinkedServiceDataLakeStorageGen2Args">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L241">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L241">
         interface <strong>LinkedServiceDataLakeStorageGen2Args</strong>
     </a>
 </h3>
@@ -3067,7 +3067,7 @@ A `vnetIntegration` block as defined below.
 The set of arguments for constructing a LinkedServiceDataLakeStorageGen2 resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L245">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L245">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3075,7 +3075,7 @@ The set of arguments for constructing a LinkedServiceDataLakeStorageGen2 resourc
 A map of additional properties to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L249">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L249">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3083,7 +3083,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L253">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L253">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3091,7 +3091,7 @@ List of tags that can be used for describing the Data Factory Linked Service MyS
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L257">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L257">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3099,7 +3099,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L261">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L261">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationRuntimeName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3107,7 +3107,7 @@ The description for the Data Factory Linked Service MySQL.
 The integration runtime reference to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L265">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L265">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3115,7 +3115,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L269">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L269">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3123,7 +3123,7 @@ Specifies the name of the Data Factory Linked Service MySQL. Changing this force
 A map of parameters to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L273">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L273">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3131,7 +3131,7 @@ A map of parameters to associate with the Data Factory Linked Service MySQL.
 The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-servicePrincipalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L277">property <b>servicePrincipalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L277">property <b>servicePrincipalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicePrincipalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3139,7 +3139,7 @@ The name of the resource group in which to create the Data Factory Linked Servic
 The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-servicePrincipalKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L281">property <b>servicePrincipalKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L281">property <b>servicePrincipalKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicePrincipalKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3147,7 +3147,7 @@ The service principal id in which to authenticate against the Azure Data Lake St
 The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L285">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L285">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3155,7 +3155,7 @@ The service principal key in which to authenticate against the Azure Data Lake S
 The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L289">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L289">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3163,7 +3163,7 @@ The tenant id or name in which to authenticate against the Azure Data Lake Stora
 The endpoint for the Azure Data Lake Storage Gen2 service.
 
 <h3 class="pdoc-module-header" id="LinkedServiceDataLakeStorageGen2State" data-link-title="LinkedServiceDataLakeStorageGen2State">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L187">
         interface <strong>LinkedServiceDataLakeStorageGen2State</strong>
     </a>
 </h3>
@@ -3173,7 +3173,7 @@ The endpoint for the Azure Data Lake Storage Gen2 service.
 Input properties used for looking up and filtering LinkedServiceDataLakeStorageGen2 resources.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L191">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L191">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3181,7 +3181,7 @@ Input properties used for looking up and filtering LinkedServiceDataLakeStorageG
 A map of additional properties to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L195">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L195">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3189,7 +3189,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L199">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L199">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3197,7 +3197,7 @@ List of tags that can be used for describing the Data Factory Linked Service MyS
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L203">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L203">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3205,7 +3205,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L207">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L207">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationRuntimeName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3213,7 +3213,7 @@ The description for the Data Factory Linked Service MySQL.
 The integration runtime reference to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L211">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L211">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3221,7 +3221,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L215">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L215">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3229,7 +3229,7 @@ Specifies the name of the Data Factory Linked Service MySQL. Changing this force
 A map of parameters to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L219">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L219">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3237,7 +3237,7 @@ A map of parameters to associate with the Data Factory Linked Service MySQL.
 The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-servicePrincipalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L223">property <b>servicePrincipalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L223">property <b>servicePrincipalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicePrincipalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3245,7 +3245,7 @@ The name of the resource group in which to create the Data Factory Linked Servic
 The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-servicePrincipalKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L227">property <b>servicePrincipalKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L227">property <b>servicePrincipalKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicePrincipalKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3253,7 +3253,7 @@ The service principal id in which to authenticate against the Azure Data Lake St
 The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-tenant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L231">property <b>tenant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L231">property <b>tenant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3261,7 +3261,7 @@ The service principal key in which to authenticate against the Azure Data Lake S
 The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 
 <h4 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L235">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L235">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3269,7 +3269,7 @@ The tenant id or name in which to authenticate against the Azure Data Lake Stora
 The endpoint for the Azure Data Lake Storage Gen2 service.
 
 <h3 class="pdoc-module-header" id="LinkedServiceMysqlArgs" data-link-title="LinkedServiceMysqlArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L198">
         interface <strong>LinkedServiceMysqlArgs</strong>
     </a>
 </h3>
@@ -3279,7 +3279,7 @@ The endpoint for the Azure Data Lake Storage Gen2 service.
 The set of arguments for constructing a LinkedServiceMysql resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlArgs-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L202">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L202">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3287,7 +3287,7 @@ The set of arguments for constructing a LinkedServiceMysql resource.
 A map of additional properties to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlArgs-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L206">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L206">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3295,7 +3295,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlArgs-connectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L210">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L210">property <b>connectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3303,7 +3303,7 @@ List of tags that can be used for describing the Data Factory Linked Service MyS
 The connection string in which to authenticate with MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlArgs-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L214">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L214">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3311,7 +3311,7 @@ The connection string in which to authenticate with MySQL.
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L218">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L218">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3319,7 +3319,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlArgs-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L222">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L222">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationRuntimeName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3327,7 +3327,7 @@ The description for the Data Factory Linked Service MySQL.
 The integration runtime reference to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L226">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L226">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3335,7 +3335,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L230">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L230">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3343,7 +3343,7 @@ Specifies the name of the Data Factory Linked Service MySQL. Changing this force
 A map of parameters to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L234">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L234">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3351,7 +3351,7 @@ A map of parameters to associate with the Data Factory Linked Service MySQL.
 The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
 
 <h3 class="pdoc-module-header" id="LinkedServiceMysqlState" data-link-title="LinkedServiceMysqlState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L156">
         interface <strong>LinkedServiceMysqlState</strong>
     </a>
 </h3>
@@ -3361,7 +3361,7 @@ The name of the resource group in which to create the Data Factory Linked Servic
 Input properties used for looking up and filtering LinkedServiceMysql resources.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlState-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L160">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L160">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3369,7 +3369,7 @@ Input properties used for looking up and filtering LinkedServiceMysql resources.
 A map of additional properties to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlState-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L164">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L164">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3377,7 +3377,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlState-connectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L168">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L168">property <b>connectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3385,7 +3385,7 @@ List of tags that can be used for describing the Data Factory Linked Service MyS
 The connection string in which to authenticate with MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlState-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L172">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L172">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3393,7 +3393,7 @@ The connection string in which to authenticate with MySQL.
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L176">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L176">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3401,7 +3401,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlState-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L180">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L180">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationRuntimeName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3409,7 +3409,7 @@ The description for the Data Factory Linked Service MySQL.
 The integration runtime reference to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3417,7 +3417,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L188">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L188">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3425,7 +3425,7 @@ Specifies the name of the Data Factory Linked Service MySQL. Changing this force
 A map of parameters to associate with the Data Factory Linked Service MySQL.
 
 <h4 class="pdoc-member-header" id="LinkedServiceMysqlState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceMysql.ts#L192">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceMysql.ts#L192">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3433,7 +3433,7 @@ A map of parameters to associate with the Data Factory Linked Service MySQL.
 The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource
 
 <h3 class="pdoc-module-header" id="LinkedServicePostgresqlArgs" data-link-title="LinkedServicePostgresqlArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L198">
         interface <strong>LinkedServicePostgresqlArgs</strong>
     </a>
 </h3>
@@ -3443,7 +3443,7 @@ The name of the resource group in which to create the Data Factory Linked Servic
 The set of arguments for constructing a LinkedServicePostgresql resource.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlArgs-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L202">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L202">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3451,7 +3451,7 @@ The set of arguments for constructing a LinkedServicePostgresql resource.
 A map of additional properties to associate with the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlArgs-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L206">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L206">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3459,7 +3459,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlArgs-connectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L210">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L210">property <b>connectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3467,7 +3467,7 @@ List of tags that can be used for describing the Data Factory Linked Service Pos
 The connection string in which to authenticate with PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlArgs-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L214">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L214">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3475,7 +3475,7 @@ The connection string in which to authenticate with PostgreSQL.
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L218">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L218">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3483,7 +3483,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlArgs-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L222">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L222">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationRuntimeName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3491,7 +3491,7 @@ The description for the Data Factory Linked Service PostgreSQL.
 The integration runtime reference to associate with the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L226">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L226">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3499,7 +3499,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service PostgreSQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L230">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L230">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3507,7 +3507,7 @@ Specifies the name of the Data Factory Linked Service PostgreSQL. Changing this 
 A map of parameters to associate with the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L234">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L234">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3515,7 +3515,7 @@ A map of parameters to associate with the Data Factory Linked Service PostgreSQL
 The name of the resource group in which to create the Data Factory Linked Service PostgreSQL. Changing this forces a new resource
 
 <h3 class="pdoc-module-header" id="LinkedServicePostgresqlState" data-link-title="LinkedServicePostgresqlState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L156">
         interface <strong>LinkedServicePostgresqlState</strong>
     </a>
 </h3>
@@ -3525,7 +3525,7 @@ The name of the resource group in which to create the Data Factory Linked Servic
 Input properties used for looking up and filtering LinkedServicePostgresql resources.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlState-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L160">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L160">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3533,7 +3533,7 @@ Input properties used for looking up and filtering LinkedServicePostgresql resou
 A map of additional properties to associate with the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlState-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L164">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L164">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3541,7 +3541,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlState-connectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L168">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L168">property <b>connectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3549,7 +3549,7 @@ List of tags that can be used for describing the Data Factory Linked Service Pos
 The connection string in which to authenticate with PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlState-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L172">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L172">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3557,7 +3557,7 @@ The connection string in which to authenticate with PostgreSQL.
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L176">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L176">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3565,7 +3565,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlState-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L180">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L180">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationRuntimeName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3573,7 +3573,7 @@ The description for the Data Factory Linked Service PostgreSQL.
 The integration runtime reference to associate with the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3581,7 +3581,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service PostgreSQL. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L188">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L188">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3589,7 +3589,7 @@ Specifies the name of the Data Factory Linked Service PostgreSQL. Changing this 
 A map of parameters to associate with the Data Factory Linked Service PostgreSQL.
 
 <h4 class="pdoc-member-header" id="LinkedServicePostgresqlState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L192">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L192">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3597,7 +3597,7 @@ A map of parameters to associate with the Data Factory Linked Service PostgreSQL
 The name of the resource group in which to create the Data Factory Linked Service PostgreSQL. Changing this forces a new resource
 
 <h3 class="pdoc-module-header" id="LinkedServiceSqlServerArgs" data-link-title="LinkedServiceSqlServerArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L198">
         interface <strong>LinkedServiceSqlServerArgs</strong>
     </a>
 </h3>
@@ -3607,7 +3607,7 @@ The name of the resource group in which to create the Data Factory Linked Servic
 The set of arguments for constructing a LinkedServiceSqlServer resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerArgs-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L202">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L202">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3615,7 +3615,7 @@ The set of arguments for constructing a LinkedServiceSqlServer resource.
 A map of additional properties to associate with the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerArgs-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L206">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L206">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3623,7 +3623,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerArgs-connectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L210">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L210">property <b>connectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3631,7 +3631,7 @@ List of tags that can be used for describing the Data Factory Linked Service SQL
 The connection string in which to authenticate with the SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerArgs-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L214">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L214">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3639,7 +3639,7 @@ The connection string in which to authenticate with the SQL Server.
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L218">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L218">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3647,7 +3647,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerArgs-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L222">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L222">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationRuntimeName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3655,7 +3655,7 @@ The description for the Data Factory Linked Service SQL Server.
 The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L226">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L226">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3663,7 +3663,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service SQL Server. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L230">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L230">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3671,7 +3671,7 @@ Specifies the name of the Data Factory Linked Service SQL Server. Changing this 
 A map of parameters to associate with the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L234">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L234">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3679,7 +3679,7 @@ A map of parameters to associate with the Data Factory Linked Service SQL Server
 The name of the resource group in which to create the Data Factory Linked Service SQL Server. Changing this forces a new resource
 
 <h3 class="pdoc-module-header" id="LinkedServiceSqlServerState" data-link-title="LinkedServiceSqlServerState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L156">
         interface <strong>LinkedServiceSqlServerState</strong>
     </a>
 </h3>
@@ -3689,7 +3689,7 @@ The name of the resource group in which to create the Data Factory Linked Servic
 Input properties used for looking up and filtering LinkedServiceSqlServer resources.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerState-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L160">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L160">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3697,7 +3697,7 @@ Input properties used for looking up and filtering LinkedServiceSqlServer resour
 A map of additional properties to associate with the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerState-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L164">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L164">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3705,7 +3705,7 @@ A map of additional properties to associate with the Data Factory Linked Service
 List of tags that can be used for describing the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerState-connectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L168">property <b>connectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L168">property <b>connectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3713,7 +3713,7 @@ List of tags that can be used for describing the Data Factory Linked Service SQL
 The connection string in which to authenticate with the SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerState-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L172">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L172">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3721,7 +3721,7 @@ The connection string in which to authenticate with the SQL Server.
 The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L176">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L176">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3729,7 +3729,7 @@ The Data Factory name in which to associate the Linked Service with. Changing th
 The description for the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerState-integrationRuntimeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L180">property <b>integrationRuntimeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L180">property <b>integrationRuntimeName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationRuntimeName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3737,7 +3737,7 @@ The description for the Data Factory Linked Service SQL Server.
 The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L184">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3745,7 +3745,7 @@ The integration runtime reference to associate with the Data Factory Linked Serv
 Specifies the name of the Data Factory Linked Service SQL Server. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L188">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L188">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3753,7 +3753,7 @@ Specifies the name of the Data Factory Linked Service SQL Server. Changing this 
 A map of parameters to associate with the Data Factory Linked Service SQL Server.
 
 <h4 class="pdoc-member-header" id="LinkedServiceSqlServerState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L192">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L192">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3761,7 +3761,7 @@ A map of parameters to associate with the Data Factory Linked Service SQL Server
 The name of the resource group in which to create the Data Factory Linked Service SQL Server. Changing this forces a new resource
 
 <h3 class="pdoc-module-header" id="PipelineArgs" data-link-title="PipelineArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L172">
         interface <strong>PipelineArgs</strong>
     </a>
 </h3>
@@ -3771,7 +3771,7 @@ The name of the resource group in which to create the Data Factory Linked Servic
 The set of arguments for constructing a Pipeline resource.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L176">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L176">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3779,7 +3779,7 @@ The set of arguments for constructing a Pipeline resource.
 List of tags that can be used for describing the Data Factory Pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L180">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L180">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3787,7 +3787,7 @@ List of tags that can be used for describing the Data Factory Pipeline.
 The Data Factory name in which to associate the Pipeline with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3795,7 +3795,7 @@ The Data Factory name in which to associate the Pipeline with. Changing this for
 The description for the Data Factory Pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3803,7 +3803,7 @@ The description for the Data Factory Pipeline.
 Specifies the name of the Data Factory Pipeline. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L192">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L192">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3811,7 +3811,7 @@ Specifies the name of the Data Factory Pipeline. Changing this forces a new reso
 A map of parameters to associate with the Data Factory Pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L196">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L196">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3819,7 +3819,7 @@ A map of parameters to associate with the Data Factory Pipeline.
 The name of the resource group in which to create the Data Factory Pipeline. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="PipelineArgs-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L200">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L200">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3827,7 +3827,7 @@ The name of the resource group in which to create the Data Factory Pipeline. Cha
 A map of variables to associate with the Data Factory Pipeline.
 
 <h3 class="pdoc-module-header" id="PipelineState" data-link-title="PipelineState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L138">
         interface <strong>PipelineState</strong>
     </a>
 </h3>
@@ -3837,7 +3837,7 @@ A map of variables to associate with the Data Factory Pipeline.
 Input properties used for looking up and filtering Pipeline resources.
 
 <h4 class="pdoc-member-header" id="PipelineState-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L142">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L142">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3845,7 +3845,7 @@ Input properties used for looking up and filtering Pipeline resources.
 List of tags that can be used for describing the Data Factory Pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineState-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L146">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L146">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3853,7 +3853,7 @@ List of tags that can be used for describing the Data Factory Pipeline.
 The Data Factory name in which to associate the Pipeline with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="PipelineState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L150">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L150">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3861,7 +3861,7 @@ The Data Factory name in which to associate the Pipeline with. Changing this for
 The description for the Data Factory Pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L154">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3869,7 +3869,7 @@ The description for the Data Factory Pipeline.
 Specifies the name of the Data Factory Pipeline. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="PipelineState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L158">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L158">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3877,7 +3877,7 @@ Specifies the name of the Data Factory Pipeline. Changing this forces a new reso
 A map of parameters to associate with the Data Factory Pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L162">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L162">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3885,7 +3885,7 @@ A map of parameters to associate with the Data Factory Pipeline.
 The name of the resource group in which to create the Data Factory Pipeline. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="PipelineState-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/pipeline.ts#L166">property <b>variables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/pipeline.ts#L166">property <b>variables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3893,7 +3893,7 @@ The name of the resource group in which to create the Data Factory Pipeline. Cha
 A map of variables to associate with the Data Factory Pipeline.
 
 <h3 class="pdoc-module-header" id="TriggerScheduleArgs" data-link-title="TriggerScheduleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L212">
         interface <strong>TriggerScheduleArgs</strong>
     </a>
 </h3>
@@ -3903,7 +3903,7 @@ A map of variables to associate with the Data Factory Pipeline.
 The set of arguments for constructing a TriggerSchedule resource.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleArgs-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L216">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L216">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3911,7 +3911,7 @@ The set of arguments for constructing a TriggerSchedule resource.
 List of tags that can be used for describing the Data Factory Schedule Trigger.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleArgs-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L220">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L220">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3919,7 +3919,7 @@ List of tags that can be used for describing the Data Factory Schedule Trigger.
 The Data Factory name in which to associate the Schedule Trigger with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleArgs-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L224">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L224">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3927,7 +3927,7 @@ The Data Factory name in which to associate the Schedule Trigger with. Changing 
 The time the Schedule Trigger should end. The time will be represented in UTC.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleArgs-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L228">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L228">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3935,7 +3935,7 @@ The time the Schedule Trigger should end. The time will be represented in UTC.
 The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleArgs-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L232">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L232">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3943,7 +3943,7 @@ The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Mon
 The interval for how often the trigger occurs. This defaults to 1.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L236">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L236">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3951,7 +3951,7 @@ The interval for how often the trigger occurs. This defaults to 1.
 Specifies the name of the Data Factory Schedule Trigger. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleArgs-pipelineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L240">property <b>pipelineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L240">property <b>pipelineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pipelineName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3959,7 +3959,7 @@ Specifies the name of the Data Factory Schedule Trigger. Changing this forces a 
 The Data Factory Pipeline name that the trigger will act on.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleArgs-pipelineParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L244">property <b>pipelineParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L244">property <b>pipelineParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pipelineParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3967,7 +3967,7 @@ The Data Factory Pipeline name that the trigger will act on.
 The pipeline parameters that the the trigger will act upon.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L248">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L248">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3975,7 +3975,7 @@ The pipeline parameters that the the trigger will act upon.
 The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="TriggerScheduleArgs-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L252">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L252">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3983,7 +3983,7 @@ The name of the resource group in which to create the Data Factory Schedule Trig
 The time the Schedule Trigger will start. This defaults to the current time. The time will be represented in UTC.
 
 <h3 class="pdoc-module-header" id="TriggerScheduleState" data-link-title="TriggerScheduleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L166">
         interface <strong>TriggerScheduleState</strong>
     </a>
 </h3>
@@ -3993,7 +3993,7 @@ The time the Schedule Trigger will start. This defaults to the current time. The
 Input properties used for looking up and filtering TriggerSchedule resources.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleState-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L170">property <b>annotations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L170">property <b>annotations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>annotations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4001,7 +4001,7 @@ Input properties used for looking up and filtering TriggerSchedule resources.
 List of tags that can be used for describing the Data Factory Schedule Trigger.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleState-dataFactoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L174">property <b>dataFactoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L174">property <b>dataFactoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFactoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4009,7 +4009,7 @@ List of tags that can be used for describing the Data Factory Schedule Trigger.
 The Data Factory name in which to associate the Schedule Trigger with. Changing this forces a new resource.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleState-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L178">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L178">property <b>endTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4017,7 +4017,7 @@ The Data Factory name in which to associate the Schedule Trigger with. Changing 
 The time the Schedule Trigger should end. The time will be represented in UTC.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleState-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L182">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L182">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4025,7 +4025,7 @@ The time the Schedule Trigger should end. The time will be represented in UTC.
 The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Month`. Defaults to `Minute`.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleState-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L186">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L186">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4033,7 +4033,7 @@ The trigger freqency. Valid values include `Minute`, `Hour`, `Day`, `Week`, `Mon
 The interval for how often the trigger occurs. This defaults to 1.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L190">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4041,7 +4041,7 @@ The interval for how often the trigger occurs. This defaults to 1.
 Specifies the name of the Data Factory Schedule Trigger. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleState-pipelineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L194">property <b>pipelineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L194">property <b>pipelineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pipelineName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4049,7 +4049,7 @@ Specifies the name of the Data Factory Schedule Trigger. Changing this forces a 
 The Data Factory Pipeline name that the trigger will act on.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleState-pipelineParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L198">property <b>pipelineParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L198">property <b>pipelineParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pipelineParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4057,7 +4057,7 @@ The Data Factory Pipeline name that the trigger will act on.
 The pipeline parameters that the the trigger will act upon.
 
 <h4 class="pdoc-member-header" id="TriggerScheduleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L202">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L202">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4065,7 +4065,7 @@ The pipeline parameters that the the trigger will act upon.
 The name of the resource group in which to create the Data Factory Schedule Trigger. Changing this forces a new resource
 
 <h4 class="pdoc-member-header" id="TriggerScheduleState-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/datafactory/triggerSchedule.ts#L206">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/datafactory/triggerSchedule.ts#L206">property <b>startTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

@@ -35,7 +35,7 @@ meta_desc: "Explore members of the relay module in the @pulumi/azure package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="HybridConnection" data-link-title="HybridConnection">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L10">
         Resource <strong>HybridConnection</strong>
     </a>
 </h3>
@@ -45,7 +45,7 @@ meta_desc: "Explore members of the relay module in the @pulumi/azure package."
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/relay_hybrid_connection.html.markdown.
 
 <h4 class="pdoc-member-header" id="HybridConnection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L56"> <b>constructor</b></a>
 </h4>
 
 
@@ -59,7 +59,7 @@ Create a HybridConnection resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HybridConnection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -70,14 +70,14 @@ Get an existing HybridConnection resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HybridConnection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HybridConnection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -88,7 +88,7 @@ Returns true if the given object is an instance of HybridConnection.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HybridConnection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -97,7 +97,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HybridConnection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L40">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -105,7 +105,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Azure Relay Hybrid Connection. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnection-relayNamespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L44">property <b>relayNamespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L44">property <b>relayNamespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relayNamespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -113,7 +113,7 @@ Specifies the name of the Azure Relay Hybrid Connection. Changing this forces a 
 The name of the Azure Relay in which to create the Azure Relay Hybrid Connection. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnection-requiresClientAuthorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L48">property <b>requiresClientAuthorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L48">property <b>requiresClientAuthorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requiresClientAuthorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -121,7 +121,7 @@ The name of the Azure Relay in which to create the Azure Relay Hybrid Connection
 Specify if client authorization is needed for this hybrid connection. True by default. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnection-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L52">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L52">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -129,7 +129,7 @@ Specify if client authorization is needed for this hybrid connection. True by de
 The name of the resource group in which to create the Azure Relay Hybrid Connection. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -138,7 +138,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="HybridConnection-userMetadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L56">property <b>userMetadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L56">property <b>userMetadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userMetadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ deployments.
 The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
 
 <h3 class="pdoc-module-header" id="Namespace" data-link-title="Namespace">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L33">
         Resource <strong>Namespace</strong>
     </a>
 </h3>
@@ -177,7 +177,7 @@ const exampleNamespace = new azure.relay.Namespace("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/relay_namespace.html.markdown.
 
 <h4 class="pdoc-member-header" id="Namespace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -191,7 +191,7 @@ Create a Namespace resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Namespace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -202,14 +202,14 @@ Get an existing Namespace resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Namespace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Namespace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -220,7 +220,7 @@ Returns true if the given object is an instance of Namespace.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Namespace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -229,7 +229,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Namespace-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L63">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L63">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the Azure Relay Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Namespace-metricId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L67">property <b>metricId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L67">property <b>metricId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ Specifies the supported Azure location where the Azure Relay Namespace exists. C
 The Identifier for Azure Insights metrics.
 
 <h4 class="pdoc-member-header" id="Namespace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ The Identifier for Azure Insights metrics.
 Specifies the name of the Azure Relay Namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Namespace-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L75">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L75">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ Specifies the name of the Azure Relay Namespace. Changing this forces a new reso
 The primary connection string for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="Namespace-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L79">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L79">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ The primary connection string for the authorization rule `RootManageSharedAccess
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="Namespace-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L83">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L83">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ The primary access key for the authorization rule `RootManageSharedAccessKey`.
 The name of the resource group in which to create the Azure Relay Namespace.
 
 <h4 class="pdoc-member-header" id="Namespace-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L87">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L87">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -285,7 +285,7 @@ The name of the resource group in which to create the Azure Relay Namespace.
 The secondary connection string for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="Namespace-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L91">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L91">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ The secondary connection string for the authorization rule `RootManageSharedAcce
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="Namespace-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L95">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L95">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NamespaceSku'>outputs.relay.NamespaceSku</a>&gt;;</code></pre>
@@ -301,7 +301,7 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 ) A `sku` block as described below.
 
 <h4 class="pdoc-member-header" id="Namespace-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L99">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L99">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -309,7 +309,7 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 The name of the SKU to use. At this time the only supported value is `Standard`.
 
 <h4 class="pdoc-member-header" id="Namespace-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L103">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L103">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -317,7 +317,7 @@ The name of the SKU to use. At this time the only supported value is `Standard`.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Namespace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -329,7 +329,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="HybridConnectionArgs" data-link-title="HybridConnectionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L129">
         interface <strong>HybridConnectionArgs</strong>
     </a>
 </h3>
@@ -339,7 +339,7 @@ deployments.
 The set of arguments for constructing a HybridConnection resource.
 
 <h4 class="pdoc-member-header" id="HybridConnectionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L133">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -347,7 +347,7 @@ The set of arguments for constructing a HybridConnection resource.
 Specifies the name of the Azure Relay Hybrid Connection. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnectionArgs-relayNamespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L137">property <b>relayNamespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L137">property <b>relayNamespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relayNamespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -355,7 +355,7 @@ Specifies the name of the Azure Relay Hybrid Connection. Changing this forces a 
 The name of the Azure Relay in which to create the Azure Relay Hybrid Connection. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnectionArgs-requiresClientAuthorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L141">property <b>requiresClientAuthorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L141">property <b>requiresClientAuthorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresClientAuthorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -363,7 +363,7 @@ The name of the Azure Relay in which to create the Azure Relay Hybrid Connection
 Specify if client authorization is needed for this hybrid connection. True by default. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnectionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L145">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L145">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ Specify if client authorization is needed for this hybrid connection. True by de
 The name of the resource group in which to create the Azure Relay Hybrid Connection. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnectionArgs-userMetadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L149">property <b>userMetadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L149">property <b>userMetadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ The name of the resource group in which to create the Azure Relay Hybrid Connect
 The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
 
 <h3 class="pdoc-module-header" id="HybridConnectionState" data-link-title="HybridConnectionState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L103">
         interface <strong>HybridConnectionState</strong>
     </a>
 </h3>
@@ -389,7 +389,7 @@ The usermetadata is a placeholder to store user-defined string data for the hybr
 Input properties used for looking up and filtering HybridConnection resources.
 
 <h4 class="pdoc-member-header" id="HybridConnectionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L107">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L107">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -397,7 +397,7 @@ Input properties used for looking up and filtering HybridConnection resources.
 Specifies the name of the Azure Relay Hybrid Connection. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnectionState-relayNamespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L111">property <b>relayNamespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L111">property <b>relayNamespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relayNamespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ Specifies the name of the Azure Relay Hybrid Connection. Changing this forces a 
 The name of the Azure Relay in which to create the Azure Relay Hybrid Connection. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnectionState-requiresClientAuthorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L115">property <b>requiresClientAuthorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L115">property <b>requiresClientAuthorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresClientAuthorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -413,7 +413,7 @@ The name of the Azure Relay in which to create the Azure Relay Hybrid Connection
 Specify if client authorization is needed for this hybrid connection. True by default. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnectionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L119">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L119">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ Specify if client authorization is needed for this hybrid connection. True by de
 The name of the resource group in which to create the Azure Relay Hybrid Connection. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="HybridConnectionState-userMetadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/hybridConnection.ts#L123">property <b>userMetadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/hybridConnection.ts#L123">property <b>userMetadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -429,7 +429,7 @@ The name of the resource group in which to create the Azure Relay Hybrid Connect
 The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
 
 <h3 class="pdoc-module-header" id="NamespaceArgs" data-link-title="NamespaceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L209">
         interface <strong>NamespaceArgs</strong>
     </a>
 </h3>
@@ -439,7 +439,7 @@ The usermetadata is a placeholder to store user-defined string data for the hybr
 The set of arguments for constructing a Namespace resource.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L213">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L213">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -447,7 +447,7 @@ The set of arguments for constructing a Namespace resource.
 Specifies the supported Azure location where the Azure Relay Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L217">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -455,7 +455,7 @@ Specifies the supported Azure location where the Azure Relay Namespace exists. C
 Specifies the name of the Azure Relay Namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L221">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L221">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -463,7 +463,7 @@ Specifies the name of the Azure Relay Namespace. Changing this forces a new reso
 The name of the resource group in which to create the Azure Relay Namespace.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L225">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L225">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>inputs.relay.NamespaceSku</a>&gt;;</code></pre>
@@ -471,7 +471,7 @@ The name of the resource group in which to create the Azure Relay Namespace.
 ) A `sku` block as described below.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L229">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L229">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ The name of the resource group in which to create the Azure Relay Namespace.
 The name of the SKU to use. At this time the only supported value is `Standard`.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L233">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L233">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -487,7 +487,7 @@ The name of the SKU to use. At this time the only supported value is `Standard`.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="NamespaceState" data-link-title="NamespaceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L159">
         interface <strong>NamespaceState</strong>
     </a>
 </h3>
@@ -497,7 +497,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Namespace resources.
 
 <h4 class="pdoc-member-header" id="NamespaceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L163">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L163">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -505,7 +505,7 @@ Input properties used for looking up and filtering Namespace resources.
 Specifies the supported Azure location where the Azure Relay Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceState-metricId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L167">property <b>metricId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L167">property <b>metricId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -513,7 +513,7 @@ Specifies the supported Azure location where the Azure Relay Namespace exists. C
 The Identifier for Azure Insights metrics.
 
 <h4 class="pdoc-member-header" id="NamespaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L171">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L171">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -521,7 +521,7 @@ The Identifier for Azure Insights metrics.
 Specifies the name of the Azure Relay Namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceState-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L175">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L175">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -529,7 +529,7 @@ Specifies the name of the Azure Relay Namespace. Changing this forces a new reso
 The primary connection string for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="NamespaceState-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L179">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L179">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -537,7 +537,7 @@ The primary connection string for the authorization rule `RootManageSharedAccess
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="NamespaceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L183">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L183">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -545,7 +545,7 @@ The primary access key for the authorization rule `RootManageSharedAccessKey`.
 The name of the resource group in which to create the Azure Relay Namespace.
 
 <h4 class="pdoc-member-header" id="NamespaceState-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L187">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L187">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -553,7 +553,7 @@ The name of the resource group in which to create the Azure Relay Namespace.
 The secondary connection string for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="NamespaceState-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L191">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L191">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -561,7 +561,7 @@ The secondary connection string for the authorization rule `RootManageSharedAcce
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="NamespaceState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L195">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L195">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>inputs.relay.NamespaceSku</a>&gt;;</code></pre>
@@ -569,7 +569,7 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 ) A `sku` block as described below.
 
 <h4 class="pdoc-member-header" id="NamespaceState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L199">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L199">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -577,7 +577,7 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 The name of the SKU to use. At this time the only supported value is `Standard`.
 
 <h4 class="pdoc-member-header" id="NamespaceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/854e7ccaffffaa9fc31a9b881c6493f49ffd5e9d/sdk/nodejs/relay/namespace.ts#L203">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fab45d783693789898a6419694b84b34055ce837/sdk/nodejs/relay/namespace.ts#L203">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
