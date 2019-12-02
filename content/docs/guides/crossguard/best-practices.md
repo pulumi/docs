@@ -1,11 +1,11 @@
 ---
 title: Best Practices for Writing Policy Packs
 linktitle: Best Practices
+weight: 3
 
 menu:
   userguides:
     parent: crossguard
-    identifier: crossguard-best-practices
 ---
 {{% crossguard-preview %}}
 

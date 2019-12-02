@@ -8,7 +8,7 @@ menu:
 ---
 {{% crossguard-preview %}}
 
-Pulumi CrossGuards a product that provides gated deployments via Policy as Code.
+Pulumi CrossGuard is a product that provides gated deployments via Policy as Code.
 
 Often organizations want to empower developers to manage their infrastructure yet are concerned about giving them full access. CrossGuard allows administrators to provide autonomy to their developers while ensuring compliance to defined organization policies.
 

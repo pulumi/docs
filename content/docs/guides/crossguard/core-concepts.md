@@ -1,11 +1,11 @@
 ---
 title: Core Concepts
 linktitle: Core Concepts
+weight: 1
 
 menu:
   userguides:
     parent: crossguard
-    identifier: crossguard-core-concepts
 ---
 {{% crossguard-preview %}}
 

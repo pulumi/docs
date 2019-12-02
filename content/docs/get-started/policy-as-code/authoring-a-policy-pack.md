@@ -5,14 +5,18 @@ weight: 1
 menu:
   getstarted:
     parent: pac
-    identifier: pac-authoring-a-policy-pack
 ---
 {{% crossguard-preview %}}
 
-1. Verify your version of the Pulumi CLI
+1. Install prerequisites.
+
+   - [Install Pulumi]({{< relref "/docs/get-started/install" >}})
+   - [Install Node.js version 8 or later](https://nodejs.org/en/download/)
+
+1. Verify your version of Pulumi.
 
     ```sh
-    $ pulumi version # should be v1.5.2 or later
+    $ pulumi version # should be v1.6.1 or later
     ```
 
 1. Create a directory for your new Policy Pack, and change into it.
@@ -21,19 +25,52 @@ menu:
     $ mkdir policypack && cd policypack
     ```
 
-1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_DEBUG_COMMANDS=true` as an environment variable or simply pre-append it to your commands as shown.
+1. Run the `pulumi policy new` command. Since Policy as Code is a beta feature, you will need to set `PULUMI_EXPERIMENTAL=true` as an environment variable or simply pre-append it to your commands as shown.
 
-    ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi policy new aws-typescript
-    Created Policy Pack!
-    Installing dependencies...
-    ...
-    Finished installing dependencies
+    {{< oschoose >}}
 
-    Your new Policy Pack is ready to go! ✨
+    <div class="os-prologue-macos"></div>
+    <div class="mt-4">
+{{% md %}}
+On macOS, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to your commands as shown.
 
-    Once you're done editing your Policy Pack, run `pulumi policy publish [org-name]` to publish the pack.
-    ```
+```sh
+$ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
+```
+{{% /md %}}
+    </div>
+
+    <div class="os-prologue-linux"></div>
+    <div class="mt-4">
+{{% md %}}
+On Linux, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to your commands as shown.
+
+```sh
+$ PULUMI_EXPERIMENTAL=true pulumi policy new aws-typescript
+```
+{{% /md %}}
+    </div>
+
+    <div class="os-prologue-windows"></div>
+    <div class="mt-4">
+{{% md %}}
+On Windows, you must first set the environment variable before running the command.
+
+**Windows cmd.exe**
+
+```bat
+set PULUMI_EXPERIMENTAL=true
+pulumi policy new aws-typescript
+```
+
+**Windows PowerShell**
+
+```powershell
+$env:PULUMI_EXPERIMENTAL = 'true'
+pulumi policy new aws-typescript
+```
+{{% /md %}}
+    </div>
 
 1. Tweak the Policy Pack in the `index.ts` file as desired. The existing policy in the template (which is annotated below) mandates that an AWS S3 bucket not have public read or write permissions enabled. Each Policy must have a unique name, an enforcement level, and a validation function. Here we use `validateTypedResource` that allows us to validate S3 Bucket resources.
 
@@ -79,14 +116,48 @@ Policy Packs can be tested on a user’s local workstation to facilitate rapid d
 
     In the Pulumi project's directory run:
 
-    ```sh
-    $ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack <path-to-policy-pack-directory>
-    ```
+    {{< oschoose >}}
+
+    <div class="os-prologue-macos"></div>
+    <div class="mt-4">
+{{% md %}}
+```sh
+$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
+```
+{{% /md %}}
+    </div>
+
+    <div class="os-prologue-linux"></div>
+    <div class="mt-4">
+{{% md %}}
+```sh
+$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
+```
+{{% /md %}}
+    </div>
+
+    <div class="os-prologue-windows"></div>
+    <div class="mt-4">
+{{% md %}}
+**Windows cmd.exe**
+
+```bat
+set PULUMI_EXPERIMENTAL=true
+pulumi preview --policy-pack <path-to-policy-pack-directory>
+```
+
+**Windows PowerShell**
+
+```powershell
+$env:PULUMI_EXPERIMENTAL = 'true'
+pulumi preview --policy-pack <path-to-policy-pack-directory>
+```
+{{% /md %}}
+    </div>
 
     If the stack is in compliance, we expect the output to simply tell us which Policy Packs were run.
 
     {{< highlight sh >}}
-$ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack policy-pack-typescript
 Previewing update (dev):
 
      Type                 Name          Plan
@@ -95,9 +166,6 @@ Previewing update (dev):
 
 Resources:
     + 2 to create
-
-Permalink:
-...
 {{< /highlight >}}
 
 1. We can then edit the stack code to specify the ACL to be public-read.
@@ -111,7 +179,6 @@ Permalink:
 1. We then run the `pulumi preview` command again and this time get an error message indicating we failed the preview because of a policy violation.
 
     {{< highlight sh >}}
-$ PULUMI_DEBUG_COMMANDS=true pulumi preview --policy-pack ~/policy-pack-typescript
 Previewing update (dev):
 
      Type                 Name          Plan       Info
@@ -125,9 +192,6 @@ Diagnostics:
   aws:s3:Bucket (my-bucket):
     mandatory: [s3-no-public-read] Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.
     You cannot set public-read or public-read-write on an S3 bucket. Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html
-
-Permalink:
-...
 {{< /highlight >}}
 
 Now that your Policy Pack is ready to go, let's enforce the pack across your organization.
