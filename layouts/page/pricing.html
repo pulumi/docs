@@ -199,31 +199,37 @@
                 <span class="pricing-item-value">Custom (<a class="link" href="#contact">Contact Us</a>)</span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">Organizations</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/accounts-and-organizations/organizations" }}" class="link">Organizations</a></span>
                 <span class="pricing-item-value">1 included</span>
                 <span class="pricing-item-value">1 included</span>
                 <span class="pricing-item-value">Unlimited</span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">Infrastructure as Code</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/collaboration/project-and-stack-management" }}" class="link">Project Stacks</a></span>
+                <span class="pricing-item-value">Up to 20</span>
+                <span class="pricing-item-value">Unlimited</span>
+                <span class="pricing-item-value">Unlimited</span>
+            </div>
+            <div class="pricing-item">
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro" }}" class="link">Infrastructure as Code</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">Any Cloud</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/cloud-providers" }}" class="link">Any Cloud</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">Any Language</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/languages" }}" class="link">Any Language</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">Self-Hosting</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/guides/self-hosted" }}" class="link">Self-Hosting</a> <span class="badge badge-preview">PREVIEW</span></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value">Available</span>
@@ -234,32 +240,32 @@
             </div>
 
             <div class="pricing-item">
-                <span class="pricing-item-label">Unlimited Deployments</span>
+                <span class="pricing-item-label">Deployments</span>
+                <span class="pricing-item-value">Unlimited</span>
+                <span class="pricing-item-value">Unlimited</span>
+                <span class="pricing-item-value">Unlimited</span>
+            </div>
+            <div class="pricing-item">
+                <span class="pricing-item-label">Deployment History</span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">Pulumi Console</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console" }}" class="link">Pulumi Console</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">Audit History</span>
-                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
-                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
-                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
-            </div>
-            <div class="pricing-item">
-                <span class="pricing-item-label">CI/CD Integrations</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/guides/continuous-delivery" }}" class="link">CI/CD Integrations</a></span>
                 <span class="pricing-item-value">
                     AWS Code Services, Azure DevOps, Codeship, CircleCI,
-                    GitHub, GitLab, Google Cloud Build, Jenkins, Travis
+                    GitHub, GitLab, Google Cloud Build, Jenkins, Travis, more
                 </span>
                 <span class="pricing-item-value">
                     AWS Code Services, Azure DevOps, Codeship, CircleCI,
-                    GitHub, GitLab, Google Cloud Build, Jenkins, Travis
+                    GitHub, GitLab, Google Cloud Build, Jenkins, Travis, more
                 </span>
                 <span class="pricing-item-value">Custom</span>
             </div>
@@ -276,21 +282,32 @@
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">APIs and Webhooks</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/extensions/webhooks" }}" class="link">APIs and Webhooks</a></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
+                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
+                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
+            </div>
+
+            <div class="pricing-item-heading">
+                Policy ("CrossGuard") <span class="badge badge-preview">PREVIEW</span>
+            </div>
+
+            <div class="pricing-item">
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/guides/crossguard" }}" class="link">Policy as Code</a></span>
+                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
                 <span class="pricing-item-label">Gated Deployments</span>
-                <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
-                <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
-                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
+                <span class="pricing-item-value">Local Enforcement</span>
+                <span class="pricing-item-value">Server-Side Enforcement</span>
+                <span class="pricing-item-value">Server-Side Enforcement</span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">Advanced Policy Engine</span>
+                <span class="pricing-item-label">Organization-wide Policies</span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
-                <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
+                <span class="pricing-item-value">Available</span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
 
@@ -299,7 +316,14 @@
             </div>
 
             <div class="pricing-item">
-                <span class="pricing-item-label">Identity Providers</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/concepts/config" }}" class="link">Secrets and Encryption</a></span>
+                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
+                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
+                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
+            </div>
+
+            <div class="pricing-item">
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/accounts-and-organizations/accounts" }}" class="link">Identity Providers</a></span>
                 <span class="pricing-item-value">
                     <ul class="inline-flex flex-wrap items-center list-none p-0 justify-center">
                         <li class="mx-2">
@@ -353,13 +377,7 @@
                 </span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">Secrets and Encryption</span>
-                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
-                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
-                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
-            </div>
-            <div class="pricing-item">
-                <span class="pricing-item-label">Team Management</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/collaboration/teams" }}" class="link">Team Management</a></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
@@ -371,16 +389,21 @@
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">Role Based Access Control</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/intro/console/collaboration/organization-roles" }}" class="link">Role Based Access Control</a></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
             </div>
             <div class="pricing-item">
-                <span class="pricing-item-label">SAML/SSO</span>
+                <span class="pricing-item-label"><a href="{{ relref . "/docs/guides/saml" }}" class="link">SAML/SSO</a></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
-                <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
+                <span class="pricing-item-value">
+                    <a href="{{ relref . "/docs/guides/saml/aad" }}" class="link">Azure Active Directory</a>,
+                    <a href="{{ relref . "/docs/guides/saml/gsuite" }}" class="link">G Suite</a>,
+                    <a href="{{ relref . "/docs/guides/saml/okta" }}" class="link">Okta</a>,
+                    <a href="{{ relref . "/docs/guides/saml/sso" }}" class="link">any SAML SSO 2.0 identity provider</a>
+                </span>
             </div>
 
             <div class="pricing-item-heading">
@@ -388,7 +411,7 @@
             </div>
 
             <div class="pricing-item">
-                <span class="pricing-item-label">Community Slack</span>
+                <span class="pricing-item-label"><a href="https://slack.pulumi.com" class="link">Community Slack</a></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>
                 <span class="pricing-item-value"><i class="fas fa-check-square text-green-500"></i></span>

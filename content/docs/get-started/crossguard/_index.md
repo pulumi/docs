@@ -1,11 +1,13 @@
 ---
 title: Get Started with Policy as Code
-linktitle: Policy as Code
+linktitle: Policy as Code ("CrossGuard")
 menu:
   getstarted:
     identifier: pac
     weight: 3
+aliases: ["/docs/get-started/policy-as-code/"]
 ---
+
 {{% crossguard-preview %}}
 
 Pulumi CrossGuard is a product that provides gated deployments via Policy as Code.

@@ -5,6 +5,7 @@ weight: 1
 menu:
   getstarted:
     parent: pac
+aliases: ["/docs/get-started/policy-as-code/authoring-a-policy-pack/"]
 ---
 {{% crossguard-preview %}}
 
