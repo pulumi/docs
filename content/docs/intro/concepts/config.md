@@ -210,6 +210,90 @@ For more advanced details of interacting with configuration and secrets, refer t
 
 On `pulumi up`, secret values are decrypted and made available in plaintext at runtime. These may be read through any of the standard `pulumi.Config` getters shown above. While it is possible to read a secret using the ordinary non-secret getters, this is almost certainly not what you want. Use the secret variants of the configuration APIs instead, since this ensures that all transitive uses of that secret are themselves also marked as secrets.
 
+## Structured Configuration
+
+Structured configuration is also supported and can be set using `pulumi config set` and the `--path` flag. When `--path` is used, it indicates the config key contains a path of where to store the value in an object.
+
+For example:
+
+```bash
+$ pulumi config set --path data.active true
+$ pulumi config set --path data.nums[0] 1
+$ pulumi config set --path data.nums[1] 2
+$ pulumi config set --path data.nums[2] 3
+```
+
+The structure of `data` is persisted in the stack's `Pulumi.<stack-name>.yaml` file as:
+
+```
+config:
+  proj:data:
+    active: true
+    nums:
+    - 1
+    - 2
+    - 3
+```
+
+For structured config, `true` and `false` values are persisted as boolean values, and values convertible to integers are persisted as integers.
+
+The `data` config can be accessed in your Pulumi program using:
+
+{{< langchoose csharp >}}
+
+```javascript
+let config = new pulumi.Config();
+let data = config.requireObject("data");
+console.log(`Active: ${data.active}`);
+```
+
+```typescript
+interface Data {
+    active: boolean;
+    nums: number[];
+}
+
+let config = new pulumi.Config();
+let data = config.requireObject<Data>("data");
+console.log(`Active: ${data.active}`);
+```
+
+```python
+config = pulumi.Config()
+data = config.require_object("data")
+print(f"Active: ${data.active}")
+```
+
+```go
+type Data struct {
+	Active bool
+	Nums   []int
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		var d Data
+		cfg := config.New(ctx, "")
+		cfg.RequireObject("data", &d)
+		fmt.Printf("Active: %v\n", d.Active)
+		return nil
+	})
+}
+```
+
+```csharp
+var config = new Pulumi.Config();
+var data = config.RequireObject<JsonElement>("data");
+Console.WriteLine($"Active: {data.GetProperty("active")}");
+```
+
+Secrets within structured config are also supported. Consider a list of endpoints, each having a `url` and `token` property. The `token` value could be stored as a secret:
+
+```bash
+$ pulumi config set --path endpoints[0].url https://example.com
+$ pulumi config set --path --secret endpoints[0].token accesstokenvalue
+```
+
 ## Configuring Secrets Encryption
 
 The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State]({{< relref "state.md" >}}).

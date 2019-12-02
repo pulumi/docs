@@ -648,7 +648,7 @@ Any change to the URN of a resource will cause the old and new resources to be t
 
 Resources constructed as children of a [component](#components) should make sure that their names will be unique across multiple instances of the component.  In general, the name of the component instance itself (the `name` parameter passed in to the component constructor) shoud be used as part of the name of the child resources.
 
-#### Resource get (#resource-get)
+#### Resource get {#resource-get}
 
 A `get` method is available on any resource, which reads in the current value of an existing resource.  The shape it returns corresponds to the type of the resource.
 
@@ -1318,9 +1318,18 @@ Console.WriteLine($"Hello, {name}!");
 
 Configuration values can be retrieved using [config.get] or [config.require].  Using `get` will return `undefined` if the configuration value was not provided, and `require` will raise an exception with a helpful error message to prevent the deployment from continuing.
 
-Configuration values are always stored as strings, but can be parsed as richly typed values.  For example, [config.getNumber] will convert the string value to a number and return a `Number` value instead of a string.  It will raise an exception if the value cannot be parsed as a number.
+Configuration values are stored as strings, but can be parsed as richly typed values.  For example, [config.getNumber] will convert the string value to a number and return a `Number` value instead of a string.  It will raise an exception if the value cannot be parsed as a number.
 
-For richer structured data, the [config.getObject] method can be used to parse JSON values.  For example, following `pulumi config set data '{"active": true, "nums": [1,2,3]}'`, a program can read the `data` config into a rich object with:
+For richer structured data, the [config.getObject] method can be used to parse JSON values which can be set on the command line with `pulumi config set` and the `--path` flag. For example:
+
+```bash
+$ pulumi config set --path data.active true
+$ pulumi config set --path data.nums[0] 1
+$ pulumi config set --path data.nums[1] 2
+$ pulumi config set --path data.nums[2] 3
+```
+
+A program can read the `data` config into a rich object with:
 
 {{< langchoose csharp >}}
 
@@ -1348,9 +1357,20 @@ print(f"Active: ${data.active}")
 ```
 
 ```go
-// JSON parsing helpers for config are currently not built-in for Go.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+type Data struct {
+	Active bool
+	Nums   []int
+}
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		var d Data
+		cfg := config.New(ctx, "")
+		cfg.RequireObject("data", &d)
+		fmt.Printf("Active: %v\n", d.Active)
+		return nil
+	})
+}
 ```
 
 ```csharp
@@ -1360,6 +1380,8 @@ Console.WriteLine($"Active: {data.GetProperty("active")}");
 ```
 
 The `Config` object also provides functions to get the value from configuration and mark it as a secret. See [config.getSecret] or [config.requireSecret]. Unlike [config.get] and [config.require], these methods return an `Output<T>` which holds the underlying value and ensures that it is encrypted when it is being persisted.
+
+For more information on config, see [Configuration and Secrets]({{< relref "/docs/intro/concepts/config" >}}).
 
 ## Components {#components}
 
@@ -2347,10 +2369,12 @@ However, you may have a scenario in which the actual value, such as an array of 
 [pulumi.output]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#output" >}}
 [pulumi.all]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#all" >}}
 
-[config.get]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#method-get" >}}
-[config.require]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#method-require" >}}
-[config.getNumber]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#method-getnumber" >}}
-[config.getObject]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#method-getobject" >}}
+[config.get]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-get" >}}
+[config.require]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-require" >}}
+[config.getNumber]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getNumber" >}}
+[config.getObject]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getObject" >}}
+[config.getSecret]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-getSecret" >}}
+[config.requireSecret]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config-requireSecret" >}}
 
-[registerOutputs]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#method-registeroutputs" >}}
+[registerOutputs]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource-registerOutputs" >}}
 <!-- END LINKS -->
