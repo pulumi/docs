@@ -11,9 +11,9 @@ menu:
 
 ## Overview
 
-AWSGuard codifies best practices for AWS. This is a configurable library that you can use to enforce these best practices for your own Pulumi stacks or organization.
+[AWSGuard](https://github.com/pulumi/pulumi-policy-aws) codifies best practices for AWS. It is an [open source](https://github.com/pulumi/pulumi-policy-aws) library that you can configure and use to enforce these best practices for your own Pulumi stacks or organization.
 
-For more information on Pulumi's Policy as Code solution, visit our [docs](https://www.pulumi.com/docs/get-started/policy-as-code/).
+For more information on Pulumi's Policy as Code solution, visit our [docs]({{< relref "/docs/get-started/policy-as-code" >}}).
 
 ## Trying AWSGuard
 
@@ -32,7 +32,7 @@ pulumi version # should be v1.6.1 or later
 
 ### Authoring a Policy Pack that uses AWSGuard policies
 
-To use AWSGuard policies, you must create a Policy Pack that references the `@pulumi/awsguard` npm package and in the implementation of the Policy Pack, create a new instance of the `AwsGuard` class.
+To use AWSGuard policies, you must create a Policy Pack that references the `@pulumi/awsguard` npm package and creates a new instance of the `AwsGuard` class.
 
 1. Create a directory for your new Policy Pack, and change into it.
 
