@@ -34,7 +34,7 @@ meta_desc: "Explore members of the serverless module in the @pulumi/aws package.
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Function" data-link-title="Function">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L94">
         Resource <strong>Function</strong>
     </a>
 </h3>
@@ -49,7 +49,7 @@ Function is a higher-level API for creating and managing AWS Lambda Function res
 implemented by a Pulumi lambda expression and with a set of attached policies.
 
 <h4 class="pdoc-member-header" id="Function-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -58,14 +58,14 @@ implemented by a Pulumi lambda expression and with a set of attached policies.
 * `func` Deprecated.  Pass the function as [options.func] or [options.factoryFunc] instead.
 
 <h4 class="pdoc-member-header" id="Function-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L94">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L94">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Function-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L94">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L94">method <b>isInstance</b></a>
 </h4>
 
 
@@ -76,29 +76,29 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Function-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L94">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L94">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Function-lambda">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L96">property <b>lambda</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L96">property <b>lambda</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lambda: lambda.Function;</code></pre>
 <h4 class="pdoc-member-header" id="Function-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L95">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L95">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>options: <a href='#FunctionOptions'>FunctionOptions</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Function-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L97">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L97">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='#Role'>Role</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Function-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L94">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L94">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -110,7 +110,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="Context" data-link-title="Context">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L23">
         type <strong>Context</strong>
     </a>
 </h3>
@@ -121,7 +121,7 @@ Use [aws.lambda.Context] instead.
 </div>
 <pre class="highlight"><code><span class='kd'>type</span> Context = lambda.Context;</code></pre>
 <h3 class="pdoc-module-header" id="FunctionOptions" data-link-title="FunctionOptions">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L51">
         type <strong>FunctionOptions</strong>
     </a>
 </h3>
@@ -144,7 +144,7 @@ property level.  For example, [role] is an actual iam.Role instance, and not an 
 like [runtime] are now optional.  And some properties (like [code]) are entirely disallowed.
 
 <h3 class="pdoc-module-header" id="Handler" data-link-title="Handler">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L31">
         type <strong>Handler</strong>
     </a>
 </h3>
@@ -159,7 +159,7 @@ Use [aws.lambda.Callback] instead.
 Lambda is invoked.
 
 <h3 class="pdoc-module-header" id="HandlerFactory" data-link-title="HandlerFactory">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/serverless/function.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/serverless/function.ts#L41">
         type <strong>HandlerFactory</strong>
     </a>
 </h3>

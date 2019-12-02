@@ -47,7 +47,7 @@ meta_desc: "Explore members of the cloudformation module in the @pulumi/aws pack
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Stack" data-link-title="Stack">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L46">
         Resource <strong>Stack</strong>
     </a>
 </h3>
@@ -93,7 +93,7 @@ const network = new aws.cloudformation.Stack("network", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack.html.markdown.
 
 <h4 class="pdoc-member-header" id="Stack-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L133"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L133"> <b>constructor</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Create a Stack resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Stack-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -118,14 +118,14 @@ Get an existing Stack resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Stack-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Stack-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -136,7 +136,7 @@ Returns true if the given object is an instance of Stack.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Stack-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L77">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L77">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
 
 <h4 class="pdoc-member-header" id="Stack-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L82">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L82">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableRollback: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `onFailure`.
 
 <h4 class="pdoc-member-header" id="Stack-iamRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L86">property <b>iamRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L86">property <b>iamRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ Conflicts with `onFailure`.
 The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
 
 <h4 class="pdoc-member-header" id="Stack-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -171,7 +171,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Stack-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -179,7 +179,7 @@ deployments and may be missing (undefined) during planning phases.
 Stack name.
 
 <h4 class="pdoc-member-header" id="Stack-notificationArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L94">property <b>notificationArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L94">property <b>notificationArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -187,7 +187,7 @@ Stack name.
 A list of SNS topic ARNs to publish stack related events.
 
 <h4 class="pdoc-member-header" id="Stack-onFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L99">property <b>onFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L99">property <b>onFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>onFailure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disableRollback`.
 
 <h4 class="pdoc-member-header" id="Stack-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L103">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L103">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -204,7 +204,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disableRollback`.
 A map of outputs from the stack.
 
 <h4 class="pdoc-member-header" id="Stack-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L107">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L107">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -212,7 +212,7 @@ A map of outputs from the stack.
 A map of Parameter structures that specify input parameters for the stack.
 
 <h4 class="pdoc-member-header" id="Stack-policyBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L112">property <b>policyBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L112">property <b>policyBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ Structure containing the stack policy body.
 Conflicts w/ `policyUrl`.
 
 <h4 class="pdoc-member-header" id="Stack-policyUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L117">property <b>policyUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L117">property <b>policyUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -230,7 +230,7 @@ Location of a file containing the stack policy.
 Conflicts w/ `policyBody`.
 
 <h4 class="pdoc-member-header" id="Stack-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L121">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L121">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -238,7 +238,7 @@ Conflicts w/ `policyBody`.
 A list of tags to associate with this stack.
 
 <h4 class="pdoc-member-header" id="Stack-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L125">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L125">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -246,7 +246,7 @@ A list of tags to associate with this stack.
 Structure containing the template body (max size: 51,200 bytes).
 
 <h4 class="pdoc-member-header" id="Stack-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L129">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L129">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -254,7 +254,7 @@ Structure containing the template body (max size: 51,200 bytes).
 Location of a file containing the template body (max size: 460,800 bytes).
 
 <h4 class="pdoc-member-header" id="Stack-timeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L133">property <b>timeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L133">property <b>timeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeoutInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -262,7 +262,7 @@ Location of a file containing the template body (max size: 460,800 bytes).
 The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
 
 <h4 class="pdoc-member-header" id="Stack-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -271,7 +271,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StackSet" data-link-title="StackSet">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L75">
         Resource <strong>StackSet</strong>
     </a>
 </h3>
@@ -346,7 +346,7 @@ const aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy = new
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack_set.html.markdown.
 
 <h4 class="pdoc-member-header" id="StackSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L145"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L145"> <b>constructor</b></a>
 </h4>
 
 
@@ -360,7 +360,7 @@ Create a StackSet resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StackSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L84">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L84">method <b>get</b></a>
 </h4>
 
 
@@ -371,14 +371,14 @@ Get an existing StackSet resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StackSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L75">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L75">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StackSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L95">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L95">method <b>isInstance</b></a>
 </h4>
 
 
@@ -389,7 +389,7 @@ Returns true if the given object is an instance of StackSet.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StackSet-administrationRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L105">property <b>administrationRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L105">property <b>administrationRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>administrationRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -397,7 +397,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Number (ARN) of the IAM Role in the administrator account.
 
 <h4 class="pdoc-member-header" id="StackSet-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L109">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L109">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ Amazon Resource Number (ARN) of the IAM Role in the administrator account.
 Amazon Resource Name (ARN) of the Stack Set.
 
 <h4 class="pdoc-member-header" id="StackSet-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L113">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L113">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -413,7 +413,7 @@ Amazon Resource Name (ARN) of the Stack Set.
 A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_AUTO_EXPAND`.
 
 <h4 class="pdoc-member-header" id="StackSet-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L117">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L117">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, 
 Description of the Stack Set.
 
 <h4 class="pdoc-member-header" id="StackSet-executionRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L121">property <b>executionRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L121">property <b>executionRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>executionRoleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -429,7 +429,7 @@ Description of the Stack Set.
 Name of the IAM Role in all target accounts for Stack Set operations. Defaults to `AWSCloudFormationStackSetExecutionRole`.
 
 <h4 class="pdoc-member-header" id="StackSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -438,7 +438,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StackSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L125">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L125">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -446,7 +446,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the Stack Set. The name must be unique in the region where you create your Stack Set. The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start with an alphabetic character and cannot be longer than 128 characters.
 
 <h4 class="pdoc-member-header" id="StackSet-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L129">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L129">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ Name of the Stack Set. The name must be unique in the region where you create yo
 Key-value map of input parameters for the Stack Set template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignoreChanges` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignoreChanges` argument.
 
 <h4 class="pdoc-member-header" id="StackSet-stackSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L133">property <b>stackSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L133">property <b>stackSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackSetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -462,7 +462,7 @@ Key-value map of input parameters for the Stack Set template. All template param
 Unique identifier of the Stack Set.
 
 <h4 class="pdoc-member-header" id="StackSet-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L137">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L137">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ Unique identifier of the Stack Set.
 Key-value map of tags to associate with this Stack Set and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified.
 
 <h4 class="pdoc-member-header" id="StackSet-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L141">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L141">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -478,7 +478,7 @@ Key-value map of tags to associate with this Stack Set and the Stacks created fr
 String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with `templateUrl`.
 
 <h4 class="pdoc-member-header" id="StackSet-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L145">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L145">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -486,7 +486,7 @@ String containing the CloudFormation template body. Maximum size: 51,200 bytes. 
 String containing the location of a file containing the CloudFormation template body. The URL must point to a template that is located in an Amazon S3 bucket. Maximum location file size: 460,800 bytes. Conflicts with `templateBody`.
 
 <h4 class="pdoc-member-header" id="StackSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L75">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L75">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -495,7 +495,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StackSetInstance" data-link-title="StackSetInstance">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L67">
         Resource <strong>StackSetInstance</strong>
     </a>
 </h3>
@@ -562,7 +562,7 @@ const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = n
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack_set_instance.html.markdown.
 
 <h4 class="pdoc-member-header" id="StackSetInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -576,7 +576,7 @@ Create a StackSetInstance resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StackSetInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L76">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L76">method <b>get</b></a>
 </h4>
 
 
@@ -587,14 +587,14 @@ Get an existing StackSetInstance resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StackSetInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L67">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L67">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StackSetInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L87">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L87">method <b>isInstance</b></a>
 </h4>
 
 
@@ -605,7 +605,7 @@ Returns true if the given object is an instance of StackSetInstance.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StackSetInstance-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L97">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L97">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -613,7 +613,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Target AWS Account ID to create a Stack based on the Stack Set. Defaults to current account.
 
 <h4 class="pdoc-member-header" id="StackSetInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -622,7 +622,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StackSetInstance-parameterOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L101">property <b>parameterOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L101">property <b>parameterOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameterOverrides: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -630,7 +630,7 @@ deployments and may be missing (undefined) during planning phases.
 Key-value map of input parameters to override from the Stack Set for this Instance.
 
 <h4 class="pdoc-member-header" id="StackSetInstance-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L105">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L105">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -638,7 +638,7 @@ Key-value map of input parameters to override from the Stack Set for this Instan
 Target AWS Region to create a Stack based on the Stack Set. Defaults to current region.
 
 <h4 class="pdoc-member-header" id="StackSetInstance-retainStack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L109">property <b>retainStack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L109">property <b>retainStack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retainStack: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -646,7 +646,7 @@ Target AWS Region to create a Stack based on the Stack Set. Defaults to current 
 During resource destroy, remove Instance from Stack Set while keeping the Stack and its associated resources. Must be enabled in the state _before_ destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new Stack Set. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="StackSetInstance-stackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L113">property <b>stackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L113">property <b>stackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -654,7 +654,7 @@ During resource destroy, remove Instance from Stack Set while keeping the Stack 
 Stack identifier
 
 <h4 class="pdoc-member-header" id="StackSetInstance-stackSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L117">property <b>stackSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L117">property <b>stackSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -662,7 +662,7 @@ Stack identifier
 Name of the Stack Set.
 
 <h4 class="pdoc-member-header" id="StackSetInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L67">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L67">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -673,7 +673,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getExport" data-link-title="getExport">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getExport.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getExport.ts#L31">
         Data Source <strong>getExport</strong>
     </a>
 </h3>
@@ -706,7 +706,7 @@ const web = new aws.ec2.Instance("web", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudformation_export.html.markdown.
 
 <h3 class="pdoc-module-header" id="getStack" data-link-title="getStack">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L32">
         Data Source <strong>getStack</strong>
     </a>
 </h3>
@@ -742,7 +742,7 @@ const web = new aws.ec2.Instance("web", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetExportArgs" data-link-title="GetExportArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getExport.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getExport.ts#L49">
         interface <strong>GetExportArgs</strong>
     </a>
 </h3>
@@ -752,7 +752,7 @@ const web = new aws.ec2.Instance("web", {
 A collection of arguments for invoking getExport.
 
 <h4 class="pdoc-member-header" id="GetExportArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getExport.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getExport.ts#L53">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -760,7 +760,7 @@ A collection of arguments for invoking getExport.
 The name of the export as it appears in the console or from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
 
 <h3 class="pdoc-module-header" id="GetExportResult" data-link-title="GetExportResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getExport.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getExport.ts#L59">
         interface <strong>GetExportResult</strong>
     </a>
 </h3>
@@ -770,7 +770,7 @@ The name of the export as it appears in the console or from [list-exports](http:
 A collection of values returned by getExport.
 
 <h4 class="pdoc-member-header" id="GetExportResult-exportingStackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getExport.ts#L63">property <b>exportingStackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getExport.ts#L63">property <b>exportingStackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exportingStackId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -778,7 +778,7 @@ A collection of values returned by getExport.
 The exportingStackId (AWS ARNs) equivalent `ExportingStackId` from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
 
 <h4 class="pdoc-member-header" id="GetExportResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getExport.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getExport.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -786,12 +786,12 @@ The exportingStackId (AWS ARNs) equivalent `ExportingStackId` from [list-exports
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetExportResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getExport.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getExport.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetExportResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getExport.ts#L68">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getExport.ts#L68">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -799,7 +799,7 @@ id is the provider-assigned unique ID for this managed resource.
 The value from Cloudformation export identified by the export name found from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
 
 <h3 class="pdoc-module-header" id="GetStackArgs" data-link-title="GetStackArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L51">
         interface <strong>GetStackArgs</strong>
     </a>
 </h3>
@@ -809,7 +809,7 @@ The value from Cloudformation export identified by the export name found from [l
 A collection of arguments for invoking getStack.
 
 <h4 class="pdoc-member-header" id="GetStackArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -817,12 +817,12 @@ A collection of arguments for invoking getStack.
 The name of the stack
 
 <h4 class="pdoc-member-header" id="GetStackArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L56">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L56">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetStackResult" data-link-title="GetStackResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L62">
         interface <strong>GetStackResult</strong>
     </a>
 </h3>
@@ -832,7 +832,7 @@ The name of the stack
 A collection of values returned by getStack.
 
 <h4 class="pdoc-member-header" id="GetStackResult-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L66">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L66">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capabilities: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -840,7 +840,7 @@ A collection of values returned by getStack.
 A list of capabilities
 
 <h4 class="pdoc-member-header" id="GetStackResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -848,7 +848,7 @@ A list of capabilities
 Description of the stack
 
 <h4 class="pdoc-member-header" id="GetStackResult-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L74">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L74">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRollback: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -856,7 +856,7 @@ Description of the stack
 Whether the rollback of the stack is disabled when stack creation fails
 
 <h4 class="pdoc-member-header" id="GetStackResult-iamRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L78">property <b>iamRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L78">property <b>iamRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -864,7 +864,7 @@ Whether the rollback of the stack is disabled when stack creation fails
 The ARN of the IAM role used to create the stack.
 
 <h4 class="pdoc-member-header" id="GetStackResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L107">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L107">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -872,12 +872,12 @@ The ARN of the IAM role used to create the stack.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetStackResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStackResult-notificationArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L83">property <b>notificationArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L83">property <b>notificationArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationArns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -885,7 +885,7 @@ id is the provider-assigned unique ID for this managed resource.
 A list of SNS topic ARNs to publish stack related events
 
 <h4 class="pdoc-member-header" id="GetStackResult-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L87">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L87">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -893,7 +893,7 @@ A list of SNS topic ARNs to publish stack related events
 A map of outputs from the stack.
 
 <h4 class="pdoc-member-header" id="GetStackResult-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L91">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L91">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -901,7 +901,7 @@ A map of outputs from the stack.
 A map of parameters that specify input parameters for the stack.
 
 <h4 class="pdoc-member-header" id="GetStackResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L95">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -909,7 +909,7 @@ A map of parameters that specify input parameters for the stack.
 A map of tags associated with this stack.
 
 <h4 class="pdoc-member-header" id="GetStackResult-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L99">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L99">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -917,7 +917,7 @@ A map of tags associated with this stack.
 Structure containing the template body.
 
 <h4 class="pdoc-member-header" id="GetStackResult-timeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/getStack.ts#L103">property <b>timeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/getStack.ts#L103">property <b>timeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutInMinutes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -925,7 +925,7 @@ Structure containing the template body.
 The amount of time that can pass before the stack status becomes `CREATE_FAILED`
 
 <h3 class="pdoc-module-header" id="StackArgs" data-link-title="StackArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L259">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L259">
         interface <strong>StackArgs</strong>
     </a>
 </h3>
@@ -935,7 +935,7 @@ The amount of time that can pass before the stack status becomes `CREATE_FAILED`
 The set of arguments for constructing a Stack resource.
 
 <h4 class="pdoc-member-header" id="StackArgs-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L264">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L264">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -944,7 +944,7 @@ A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
 
 <h4 class="pdoc-member-header" id="StackArgs-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L269">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L269">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRollback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -953,7 +953,7 @@ Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `onFailure`.
 
 <h4 class="pdoc-member-header" id="StackArgs-iamRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L273">property <b>iamRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L273">property <b>iamRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -961,7 +961,7 @@ Conflicts with `onFailure`.
 The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
 
 <h4 class="pdoc-member-header" id="StackArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L277">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L277">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -969,7 +969,7 @@ The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If y
 Stack name.
 
 <h4 class="pdoc-member-header" id="StackArgs-notificationArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L281">property <b>notificationArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L281">property <b>notificationArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -977,7 +977,7 @@ Stack name.
 A list of SNS topic ARNs to publish stack related events.
 
 <h4 class="pdoc-member-header" id="StackArgs-onFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L286">property <b>onFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L286">property <b>onFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -986,7 +986,7 @@ Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disableRollback`.
 
 <h4 class="pdoc-member-header" id="StackArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L290">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L290">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -994,7 +994,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disableRollback`.
 A map of Parameter structures that specify input parameters for the stack.
 
 <h4 class="pdoc-member-header" id="StackArgs-policyBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L295">property <b>policyBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L295">property <b>policyBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1003,7 +1003,7 @@ Structure containing the stack policy body.
 Conflicts w/ `policyUrl`.
 
 <h4 class="pdoc-member-header" id="StackArgs-policyUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L300">property <b>policyUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L300">property <b>policyUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1012,7 +1012,7 @@ Location of a file containing the stack policy.
 Conflicts w/ `policyBody`.
 
 <h4 class="pdoc-member-header" id="StackArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L304">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L304">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1020,7 +1020,7 @@ Conflicts w/ `policyBody`.
 A list of tags to associate with this stack.
 
 <h4 class="pdoc-member-header" id="StackArgs-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L308">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L308">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1028,7 +1028,7 @@ A list of tags to associate with this stack.
 Structure containing the template body (max size: 51,200 bytes).
 
 <h4 class="pdoc-member-header" id="StackArgs-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L312">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L312">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1036,7 +1036,7 @@ Structure containing the template body (max size: 51,200 bytes).
 Location of a file containing the template body (max size: 460,800 bytes).
 
 <h4 class="pdoc-member-header" id="StackArgs-timeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L316">property <b>timeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L316">property <b>timeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1044,7 +1044,7 @@ Location of a file containing the template body (max size: 460,800 bytes).
 The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
 
 <h3 class="pdoc-module-header" id="StackSetArgs" data-link-title="StackSetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L251">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L251">
         interface <strong>StackSetArgs</strong>
     </a>
 </h3>
@@ -1054,7 +1054,7 @@ The amount of time that can pass before the stack status becomes `CREATE_FAILED`
 The set of arguments for constructing a StackSet resource.
 
 <h4 class="pdoc-member-header" id="StackSetArgs-administrationRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L255">property <b>administrationRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L255">property <b>administrationRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administrationRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1062,7 +1062,7 @@ The set of arguments for constructing a StackSet resource.
 Amazon Resource Number (ARN) of the IAM Role in the administrator account.
 
 <h4 class="pdoc-member-header" id="StackSetArgs-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L259">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L259">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1070,7 +1070,7 @@ Amazon Resource Number (ARN) of the IAM Role in the administrator account.
 A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_AUTO_EXPAND`.
 
 <h4 class="pdoc-member-header" id="StackSetArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L263">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L263">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1078,7 +1078,7 @@ A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, 
 Description of the Stack Set.
 
 <h4 class="pdoc-member-header" id="StackSetArgs-executionRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L267">property <b>executionRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L267">property <b>executionRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1086,7 +1086,7 @@ Description of the Stack Set.
 Name of the IAM Role in all target accounts for Stack Set operations. Defaults to `AWSCloudFormationStackSetExecutionRole`.
 
 <h4 class="pdoc-member-header" id="StackSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L271">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L271">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1094,7 +1094,7 @@ Name of the IAM Role in all target accounts for Stack Set operations. Defaults t
 Name of the Stack Set. The name must be unique in the region where you create your Stack Set. The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start with an alphabetic character and cannot be longer than 128 characters.
 
 <h4 class="pdoc-member-header" id="StackSetArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L275">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L275">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1102,7 +1102,7 @@ Name of the Stack Set. The name must be unique in the region where you create yo
 Key-value map of input parameters for the Stack Set template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignoreChanges` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignoreChanges` argument.
 
 <h4 class="pdoc-member-header" id="StackSetArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L279">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L279">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1110,7 +1110,7 @@ Key-value map of input parameters for the Stack Set template. All template param
 Key-value map of tags to associate with this Stack Set and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified.
 
 <h4 class="pdoc-member-header" id="StackSetArgs-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L283">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L283">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1118,7 +1118,7 @@ Key-value map of tags to associate with this Stack Set and the Stacks created fr
 String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with `templateUrl`.
 
 <h4 class="pdoc-member-header" id="StackSetArgs-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L287">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L287">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1126,7 +1126,7 @@ String containing the CloudFormation template body. Maximum size: 51,200 bytes. 
 String containing the location of a file containing the CloudFormation template body. The URL must point to a template that is located in an Amazon S3 bucket. Maximum location file size: 460,800 bytes. Conflicts with `templateBody`.
 
 <h3 class="pdoc-module-header" id="StackSetInstanceArgs" data-link-title="StackSetInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L193">
         interface <strong>StackSetInstanceArgs</strong>
     </a>
 </h3>
@@ -1136,7 +1136,7 @@ String containing the location of a file containing the CloudFormation template 
 The set of arguments for constructing a StackSetInstance resource.
 
 <h4 class="pdoc-member-header" id="StackSetInstanceArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L197">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L197">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1144,7 +1144,7 @@ The set of arguments for constructing a StackSetInstance resource.
 Target AWS Account ID to create a Stack based on the Stack Set. Defaults to current account.
 
 <h4 class="pdoc-member-header" id="StackSetInstanceArgs-parameterOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L201">property <b>parameterOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L201">property <b>parameterOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1152,7 +1152,7 @@ Target AWS Account ID to create a Stack based on the Stack Set. Defaults to curr
 Key-value map of input parameters to override from the Stack Set for this Instance.
 
 <h4 class="pdoc-member-header" id="StackSetInstanceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L205">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L205">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1160,7 +1160,7 @@ Key-value map of input parameters to override from the Stack Set for this Instan
 Target AWS Region to create a Stack based on the Stack Set. Defaults to current region.
 
 <h4 class="pdoc-member-header" id="StackSetInstanceArgs-retainStack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L209">property <b>retainStack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L209">property <b>retainStack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retainStack?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1168,7 +1168,7 @@ Target AWS Region to create a Stack based on the Stack Set. Defaults to current 
 During resource destroy, remove Instance from Stack Set while keeping the Stack and its associated resources. Must be enabled in the state _before_ destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new Stack Set. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="StackSetInstanceArgs-stackSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L213">property <b>stackSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L213">property <b>stackSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1176,7 +1176,7 @@ During resource destroy, remove Instance from Stack Set while keeping the Stack 
 Name of the Stack Set.
 
 <h3 class="pdoc-module-header" id="StackSetInstanceState" data-link-title="StackSetInstanceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L163">
         interface <strong>StackSetInstanceState</strong>
     </a>
 </h3>
@@ -1186,7 +1186,7 @@ Name of the Stack Set.
 Input properties used for looking up and filtering StackSetInstance resources.
 
 <h4 class="pdoc-member-header" id="StackSetInstanceState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L167">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L167">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1194,7 +1194,7 @@ Input properties used for looking up and filtering StackSetInstance resources.
 Target AWS Account ID to create a Stack based on the Stack Set. Defaults to current account.
 
 <h4 class="pdoc-member-header" id="StackSetInstanceState-parameterOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L171">property <b>parameterOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L171">property <b>parameterOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameterOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1202,7 +1202,7 @@ Target AWS Account ID to create a Stack based on the Stack Set. Defaults to curr
 Key-value map of input parameters to override from the Stack Set for this Instance.
 
 <h4 class="pdoc-member-header" id="StackSetInstanceState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L175">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L175">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1210,7 +1210,7 @@ Key-value map of input parameters to override from the Stack Set for this Instan
 Target AWS Region to create a Stack based on the Stack Set. Defaults to current region.
 
 <h4 class="pdoc-member-header" id="StackSetInstanceState-retainStack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L179">property <b>retainStack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L179">property <b>retainStack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retainStack?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1218,7 +1218,7 @@ Target AWS Region to create a Stack based on the Stack Set. Defaults to current 
 During resource destroy, remove Instance from Stack Set while keeping the Stack and its associated resources. Must be enabled in the state _before_ destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new Stack Set. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="StackSetInstanceState-stackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L183">property <b>stackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L183">property <b>stackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1226,7 +1226,7 @@ During resource destroy, remove Instance from Stack Set while keeping the Stack 
 Stack identifier
 
 <h4 class="pdoc-member-header" id="StackSetInstanceState-stackSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSetInstance.ts#L187">property <b>stackSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSetInstance.ts#L187">property <b>stackSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackSetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1234,7 +1234,7 @@ Stack identifier
 Name of the Stack Set.
 
 <h3 class="pdoc-module-header" id="StackSetState" data-link-title="StackSetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L201">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L201">
         interface <strong>StackSetState</strong>
     </a>
 </h3>
@@ -1244,7 +1244,7 @@ Name of the Stack Set.
 Input properties used for looking up and filtering StackSet resources.
 
 <h4 class="pdoc-member-header" id="StackSetState-administrationRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L205">property <b>administrationRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L205">property <b>administrationRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administrationRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1252,7 +1252,7 @@ Input properties used for looking up and filtering StackSet resources.
 Amazon Resource Number (ARN) of the IAM Role in the administrator account.
 
 <h4 class="pdoc-member-header" id="StackSetState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L209">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L209">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1260,7 +1260,7 @@ Amazon Resource Number (ARN) of the IAM Role in the administrator account.
 Amazon Resource Name (ARN) of the Stack Set.
 
 <h4 class="pdoc-member-header" id="StackSetState-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L213">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L213">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1268,7 +1268,7 @@ Amazon Resource Name (ARN) of the Stack Set.
 A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_AUTO_EXPAND`.
 
 <h4 class="pdoc-member-header" id="StackSetState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L217">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L217">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1276,7 +1276,7 @@ A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, 
 Description of the Stack Set.
 
 <h4 class="pdoc-member-header" id="StackSetState-executionRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L221">property <b>executionRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L221">property <b>executionRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1284,7 +1284,7 @@ Description of the Stack Set.
 Name of the IAM Role in all target accounts for Stack Set operations. Defaults to `AWSCloudFormationStackSetExecutionRole`.
 
 <h4 class="pdoc-member-header" id="StackSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L225">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L225">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1292,7 +1292,7 @@ Name of the IAM Role in all target accounts for Stack Set operations. Defaults t
 Name of the Stack Set. The name must be unique in the region where you create your Stack Set. The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start with an alphabetic character and cannot be longer than 128 characters.
 
 <h4 class="pdoc-member-header" id="StackSetState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L229">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L229">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1300,7 +1300,7 @@ Name of the Stack Set. The name must be unique in the region where you create yo
 Key-value map of input parameters for the Stack Set template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignoreChanges` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignoreChanges` argument.
 
 <h4 class="pdoc-member-header" id="StackSetState-stackSetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L233">property <b>stackSetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L233">property <b>stackSetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackSetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1308,7 +1308,7 @@ Key-value map of input parameters for the Stack Set template. All template param
 Unique identifier of the Stack Set.
 
 <h4 class="pdoc-member-header" id="StackSetState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L237">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L237">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1316,7 +1316,7 @@ Unique identifier of the Stack Set.
 Key-value map of tags to associate with this Stack Set and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified.
 
 <h4 class="pdoc-member-header" id="StackSetState-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L241">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L241">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1324,7 +1324,7 @@ Key-value map of tags to associate with this Stack Set and the Stacks created fr
 String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with `templateUrl`.
 
 <h4 class="pdoc-member-header" id="StackSetState-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stackSet.ts#L245">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stackSet.ts#L245">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1332,7 +1332,7 @@ String containing the CloudFormation template body. Maximum size: 51,200 bytes. 
 String containing the location of a file containing the CloudFormation template body. The URL must point to a template that is located in an Amazon S3 bucket. Maximum location file size: 460,800 bytes. Conflicts with `templateBody`.
 
 <h3 class="pdoc-module-header" id="StackState" data-link-title="StackState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L192">
         interface <strong>StackState</strong>
     </a>
 </h3>
@@ -1342,7 +1342,7 @@ String containing the location of a file containing the CloudFormation template 
 Input properties used for looking up and filtering Stack resources.
 
 <h4 class="pdoc-member-header" id="StackState-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L197">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L197">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1351,7 +1351,7 @@ A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
 
 <h4 class="pdoc-member-header" id="StackState-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L202">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L202">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRollback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1360,7 +1360,7 @@ Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `onFailure`.
 
 <h4 class="pdoc-member-header" id="StackState-iamRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L206">property <b>iamRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L206">property <b>iamRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1368,7 +1368,7 @@ Conflicts with `onFailure`.
 The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
 
 <h4 class="pdoc-member-header" id="StackState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L210">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1376,7 +1376,7 @@ The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If y
 Stack name.
 
 <h4 class="pdoc-member-header" id="StackState-notificationArns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L214">property <b>notificationArns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L214">property <b>notificationArns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1384,7 +1384,7 @@ Stack name.
 A list of SNS topic ARNs to publish stack related events.
 
 <h4 class="pdoc-member-header" id="StackState-onFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L219">property <b>onFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L219">property <b>onFailure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1393,7 +1393,7 @@ Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disableRollback`.
 
 <h4 class="pdoc-member-header" id="StackState-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L223">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L223">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1401,7 +1401,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disableRollback`.
 A map of outputs from the stack.
 
 <h4 class="pdoc-member-header" id="StackState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L227">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L227">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1409,7 +1409,7 @@ A map of outputs from the stack.
 A map of Parameter structures that specify input parameters for the stack.
 
 <h4 class="pdoc-member-header" id="StackState-policyBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L232">property <b>policyBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L232">property <b>policyBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1418,7 +1418,7 @@ Structure containing the stack policy body.
 Conflicts w/ `policyUrl`.
 
 <h4 class="pdoc-member-header" id="StackState-policyUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L237">property <b>policyUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L237">property <b>policyUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1427,7 +1427,7 @@ Location of a file containing the stack policy.
 Conflicts w/ `policyBody`.
 
 <h4 class="pdoc-member-header" id="StackState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L241">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L241">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1435,7 +1435,7 @@ Conflicts w/ `policyBody`.
 A list of tags to associate with this stack.
 
 <h4 class="pdoc-member-header" id="StackState-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L245">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L245">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1443,7 +1443,7 @@ A list of tags to associate with this stack.
 Structure containing the template body (max size: 51,200 bytes).
 
 <h4 class="pdoc-member-header" id="StackState-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L249">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L249">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1451,7 +1451,7 @@ Structure containing the template body (max size: 51,200 bytes).
 Location of a file containing the template body (max size: 460,800 bytes).
 
 <h4 class="pdoc-member-header" id="StackState-timeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/dfe0c3f2287eaa46c21a2078010bf41998e91feb/sdk/nodejs/cloudformation/stack.ts#L253">property <b>timeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/cloudformation/stack.ts#L253">property <b>timeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
