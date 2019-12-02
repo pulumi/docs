@@ -1,11 +1,11 @@
 ---
 title: Frequently Asked Questions
 linktitle: Frequently Asked Questions
+weight: 4
 
 menu:
   userguides:
     parent: crossguard
-    weight: 4
 ---
 {{% crossguard-preview %}}
 

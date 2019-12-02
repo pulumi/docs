@@ -1,11 +1,11 @@
 ---
 title: Pulumi CrossGuard policies for AWS (AWSGuard)
 linktitle: AWSGuard
+weight: 2
 
 menu:
   userguides:
     parent: crossguard
-    weight: 2
 ---
 {{% crossguard-preview %}}
 
