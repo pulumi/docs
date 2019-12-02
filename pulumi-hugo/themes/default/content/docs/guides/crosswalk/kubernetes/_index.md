@@ -4,7 +4,7 @@ linktitle: Crosswalk for Kubernetes
 menu:
   userguides:
     identifier: crosswalk-kubernetes
-    weight: 6
+    weight: 3
 aliases: ["/docs/guides/k8s-the-prod-way/app", "/docs/guides/k8s-the-prod-way/architecture"]
 ---
 
