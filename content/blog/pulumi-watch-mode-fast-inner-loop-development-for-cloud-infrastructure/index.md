@@ -1,19 +1,19 @@
 ---
-title: "Pulumi Watch Mode - Fast Inner Loop Development for Cloud Infrastructure"
+title: "Pulumi Watch Mode: Fast Inner Loop Development for Cloud Infrastructure"
 authors: ["luke-hoban"]
-tags: ["serverless","kubernetes","Logging","New Features","applications"]
+tags: ["serverless","kubernetes","logging","new-features","applications"]
 date: "2019-12-02"
 meta_desc: "Pulumi Watch provides a mode for developing cloud infrastructure that speeds up the rate of iteration and allows cloud developers to focus on their code and infrastructure, instead of on the mechanics of their deployments, across modern cloud platforms including serverless, Kubernetes and more."
-meta_image: "unnamed.png"
+meta_image: "watch.png"
 ---
 
 A big part of our vision with Pulumi is to bring application developers and infrastructure teams closer together in the cloud.  That includes both providing infrastructure teams with better software engineering tools, as well as providing developers with easier access to cloud infrastructure.  We are often inspired by looking at great software engineering experiences in other development stacks and applying them to the cloud infrastructure space.  Whether it be general-purpose languages and rich IDEs, testing and package management, or components and rich APIs, at Pulumi, we’ve repeatedly applied successful development tools and practices to the challenges of building and scaling modern cloud infrastructure.
 
 As we look across other areas of successful application development, one of the most  critical drivers of creativity and productivity is the **speed of iteration**.  When developers can make a change and see or experience the results nearly instantaneously, they can explore solutions quicker, can take more creative risks (and thus learn more), and can ultimately iterate more quickly toward their desired result.  From fast build times as a driving force in the design of the Go language, to the DevTools in Chrome, to Edit-and-Continue in Visual Studio, to the `watch` modes on tools like TypeScript, this idea of enabling quick or near-instantaneous feedback as code changes are made is a driving force behind many of the most successful developer experiences across a wide variety of software development environments.
 
-## Introducing `pulumi watch` 
+## Introducing Pulumi Watch
 
-In Pulumi 1.5, we released a preview of a new `pulumi watch` command.  This command provides a mode for developing cloud infrastructure that speeds up the rate of iteration and allows cloud developers to focus on their code and infrastructure, instead of on the mechanics of their deployments.  With `pulumi watch`, cloud infrastructure feels like it’s truly at your fingertips.
+In [Pulumi 1.5](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#150-2019-11-06), we released a preview of a new `pulumi watch` command.  This command provides a mode for developing cloud infrastructure that speeds up the rate of iteration and allows cloud developers to focus on their code and infrastructure, instead of on the mechanics of their deployments.  With `pulumi watch`, cloud infrastructure feels like it’s truly at your fingertips.
 
 {{< youtube "dCp2Nfa2S2Q?rel=0" >}}
 
@@ -25,7 +25,7 @@ Not all cloud resources can be deployed or updated in seconds - but many of the 
 
 ## Kubernetes Infrastructure + Applications
 
-For Kubernetes, `pulumi watch` allows us to deploy changes to our cluster automatically as we author our Kubernetes resources.  Change the number of `replicas` for our `Deployment` and hit save and the new pods scale-out.  Add a `Service` to expose the deployment and public endpoint is available immediately.  This pairs beautifully with the recently released Pulumi Kubernetes Extensions (`kubernetesx`) library, which allows you to build Kubernetes applications with just a few lines of code - avoiding a lot of the boilerplate that slows down typical Kubernetes development when working with YAML.  We can see this combination in action in the video below:
+For Kubernetes, `pulumi watch` allows us to deploy changes to our cluster automatically as we author our Kubernetes resources.  Change the number of `replicas` for our `Deployment` and hit save and the new pods scale-out.  Add a `Service` to expose the deployment and public endpoint is available immediately.  This pairs beautifully with the recently released [Pulumi Kubernetes Extensions (`kx`)]({{< relref "/blog/introducing-kx" >}}) library, which allows you to build Kubernetes applications with just a few lines of code - avoiding a lot of the boilerplate that slows down typical Kubernetes development when working with YAML.  We can see this combination in action in the video below:
 
 {{< youtube "X96EMLi8uJY?rel=0" >}}
 
@@ -47,4 +47,4 @@ When using `pulumi watch`, working with cloud infrastructure *feels* so differen
 
 The `pulumi watch` command is available in preview now when the `PULUMI_EXPERIMENTAL` environment variable is set to `true`.  We are just getting started - and see many more opportunities to tighten the iteration cycle further, to support more logging capabilities, to integrate more deeply with `query`, and to be applied to more modern infrastructure scenarios.  
 
-Give it a try today and drop us a note about where you’d like to see this go for [Pulumi 2.0]({{< relref "/blog/pulumi-2-0-roadmap" >}})!
+[Give it a try]({{< relref "/docs/get-started" >}}) today and [drop us a note](https://github.com/pulumi/pulumi/issues/3448) about where you’d like to see this go for [Pulumi 2.0]({{< relref "/blog/pulumi-2-0-roadmap" >}})!
