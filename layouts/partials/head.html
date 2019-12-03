@@ -61,6 +61,8 @@
 
     {{ if .IsHome }}
         <title>{{ .Site.Title }}</title>
+    {{ else if .Params.title_tag }}
+        <title>{{ .Params.title_tag }} | Pulumi</title>
     {{ else if .Title }}
         <title>{{ .Title }} | Pulumi</title>
     {{ else if not (or .Params.redirect_to .Params.private) }}
