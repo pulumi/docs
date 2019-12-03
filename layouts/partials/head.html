@@ -62,7 +62,7 @@
     {{ if .IsHome }}
         <title>{{ .Site.Title }}</title>
     {{ else if .Title }}
-        <title>{{ .Title }}</title>
+        <title>{{ .Title }} | Pulumi</title>
     {{ else if not (or .Params.redirect_to .Params.private) }}
         <!--
             TODO[pulumi/docs#1127]: can't enable this until Python docs are fixed.
