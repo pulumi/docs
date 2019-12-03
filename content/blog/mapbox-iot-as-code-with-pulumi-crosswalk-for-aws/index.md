@@ -2,7 +2,7 @@
 title: "Mapbox IOT-as-code with Pulumi Crosswalk for AWS"
 date: "2019-06-12"
 meta_desc: "In this blog, we'll show snippets of the JavaScript code that embraces the power of Pulumi to program AWS service APIs to create the Mapbox solution."
-meta_image: "aws-architecture-iot.png"
+meta_image: "aws-architecture-iot.jpg"
 authors: ["chris-toomey"]
 tags: ["JavaScript","Serverless","AWS","Infrastructure","Customer"]
 ---
@@ -47,13 +47,13 @@ traffic-aware ETA calculations, and high-prevision elevation. This data,
 exposed by the API is backed by a high performance database (DynamoDB)
 to enable visualization in realtime on the map client.
 
-![AWS-architecture-iot](./aws-architecture-iot.png)
+![AWS-architecture-iot](./aws-architecture-iot.jpg)
 
 The fun part -- Pulumi Service console helps you map your cloud
 architecture shown above as a connected set of DAG resources so you need
 not remember what you deployed as your cloud environments scale:
 
-![Pulumi Console](./pulumi-saas-console-iot.png)
+![Pulumi Console](./pulumi-saas-console-iot.jpg)
 
 Lets now work through the solution flow with some sample snippets of
 code. To get access to the complete piece of code, please connect with
@@ -243,7 +243,7 @@ Now we have data coming and going from our Solution, we just have to
 hook it up to a Mapbox map. This is actually quite simple now that
 Pulumi has built us a REST API.
 
-![map-client](./map-client.png)
+![map-client](./map-client.jpg)
 
 Following this
 [example](https://docs.mapbox.com/mapbox-gl-js/example/live-geojson/),
