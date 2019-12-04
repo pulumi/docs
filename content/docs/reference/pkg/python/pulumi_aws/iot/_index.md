@@ -672,6 +672,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>deprecated</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the thing type is deprecated. If true, no new things could be associated with this type.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the thing type.</p></li>
+<li><p><strong>properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – , Configuration block that can contain the following properties of the thing type:</p></li>
 </ul>
 </dd>
 </dl>
@@ -701,6 +702,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The name of the thing type.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.iot.ThingType.properties">
+<code class="sig-name descname">properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.ThingType.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>, Configuration block that can contain the following properties of the thing type:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the thing type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchableAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of searchable thing attribute names.</p></li>
+</ul>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.iot.ThingType.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">deprecated=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.ThingType.get" title="Permalink to this definition">¶</a></dt>
@@ -715,6 +726,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the created AWS IoT Thing Type.</p></li>
 <li><p><strong>deprecated</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the thing type is deprecated. If true, no new things could be associated with this type.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the thing type.</p></li>
+<li><p><strong>properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – , Configuration block that can contain the following properties of the thing type:</p></li>
 </ul>
 </dd>
 </dl>
