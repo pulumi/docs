@@ -41,7 +41,7 @@ meta_desc: "Explore members of the servicediscovery module in the @pulumi/aws pa
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="HttpNamespace" data-link-title="HttpNamespace">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L21">
         Resource <strong>HttpNamespace</strong>
     </a>
 </h3>
@@ -62,7 +62,7 @@ const example = new aws.servicediscovery.HttpNamespace("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_http_namespace.html.markdown.
 
 <h4 class="pdoc-member-header" id="HttpNamespace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L59"> <b>constructor</b></a>
 </h4>
 
 
@@ -76,7 +76,7 @@ Create a HttpNamespace resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HttpNamespace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -87,14 +87,14 @@ Get an existing HttpNamespace resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HttpNamespace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HttpNamespace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -105,7 +105,7 @@ Returns true if the given object is an instance of HttpNamespace.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HttpNamespace-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L51">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L51">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -113,7 +113,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN that Amazon Route 53 assigns to the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="HttpNamespace-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L55">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L55">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -121,7 +121,7 @@ The ARN that Amazon Route 53 assigns to the namespace when you create it.
 The description that you specify for the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="HttpNamespace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -130,7 +130,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HttpNamespace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -138,7 +138,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the http namespace.
 
 <h4 class="pdoc-member-header" id="HttpNamespace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -147,7 +147,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PrivateDnsNamespace" data-link-title="PrivateDnsNamespace">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L27">
         Resource <strong>PrivateDnsNamespace</strong>
     </a>
 </h3>
@@ -174,7 +174,7 @@ const examplePrivateDnsNamespace = new aws.servicediscovery.PrivateDnsNamespace(
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_private_dns_namespace.html.markdown.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -188,7 +188,7 @@ Create a PrivateDnsNamespace resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -199,14 +199,14 @@ Get an existing PrivateDnsNamespace resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -217,7 +217,7 @@ Returns true if the given object is an instance of PrivateDnsNamespace.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L57">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN that Amazon Route 53 assigns to the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ The ARN that Amazon Route 53 assigns to the namespace when you create it.
 The description that you specify for the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-hostedZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L65">property <b>hostedZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L65">property <b>hostedZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostedZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ The description that you specify for the namespace when you create it.
 The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -250,7 +250,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the namespace.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -267,7 +267,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespace-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L73">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L73">property <b>vpc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -275,7 +275,7 @@ deployments.
 The ID of VPC that you want to associate the namespace with.
 
 <h3 class="pdoc-module-header" id="PublicDnsNamespace" data-link-title="PublicDnsNamespace">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L23">
         Resource <strong>PublicDnsNamespace</strong>
     </a>
 </h3>
@@ -298,7 +298,7 @@ const example = new aws.servicediscovery.PublicDnsNamespace("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_public_dns_namespace.html.markdown.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -312,7 +312,7 @@ Create a PublicDnsNamespace resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -323,14 +323,14 @@ Get an existing PublicDnsNamespace resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -341,7 +341,7 @@ Returns true if the given object is an instance of PublicDnsNamespace.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespace-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L53">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L53">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -349,7 +349,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN that Amazon Route 53 assigns to the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespace-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L57">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L57">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -357,7 +357,7 @@ The ARN that Amazon Route 53 assigns to the namespace when you create it.
 The description that you specify for the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespace-hostedZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L61">property <b>hostedZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L61">property <b>hostedZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostedZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ The description that you specify for the namespace when you create it.
 The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -374,7 +374,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -382,7 +382,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the namespace.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -391,7 +391,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L67">
         Resource <strong>Service</strong>
     </a>
 </h3>
@@ -456,7 +456,7 @@ const exampleService = new aws.servicediscovery.Service("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_service.html.markdown.
 
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L121"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L121"> <b>constructor</b></a>
 </h4>
 
 
@@ -470,7 +470,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L76">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L76">method <b>get</b></a>
 </h4>
 
 
@@ -481,14 +481,14 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L67">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L67">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L87">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L87">method <b>isInstance</b></a>
 </h4>
 
 
@@ -499,7 +499,7 @@ Returns true if the given object is an instance of Service.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L97">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L97">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -507,7 +507,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the service.
 
 <h4 class="pdoc-member-header" id="Service-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L101">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L101">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -515,7 +515,7 @@ The ARN of the service.
 The description of the service.
 
 <h4 class="pdoc-member-header" id="Service-dnsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L105">property <b>dnsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L105">property <b>dnsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceDnsConfig'>outputs.servicediscovery.ServiceDnsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -523,7 +523,7 @@ The description of the service.
 A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 
 <h4 class="pdoc-member-header" id="Service-healthCheckConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L109">property <b>healthCheckConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L109">property <b>healthCheckConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceHealthCheckConfig'>outputs.servicediscovery.ServiceHealthCheckConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -531,7 +531,7 @@ A complex type that contains information about the resource record sets that you
 A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
 
 <h4 class="pdoc-member-header" id="Service-healthCheckCustomConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L113">property <b>healthCheckCustomConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L113">property <b>healthCheckCustomConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckCustomConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceHealthCheckCustomConfig'>outputs.servicediscovery.ServiceHealthCheckCustomConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -539,7 +539,7 @@ A complex type that contains settings for an optional health check. Only for Pub
 A complex type that contains settings for ECS managed health checks.
 
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -548,7 +548,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -556,7 +556,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the service.
 
 <h4 class="pdoc-member-header" id="Service-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L121">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L121">property <b>namespaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -564,7 +564,7 @@ The name of the service.
 The ID of the namespace to use for DNS configuration.
 
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L67">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L67">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -576,7 +576,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="HttpNamespaceArgs" data-link-title="HttpNamespaceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L114">
         interface <strong>HttpNamespaceArgs</strong>
     </a>
 </h3>
@@ -586,7 +586,7 @@ deployments.
 The set of arguments for constructing a HttpNamespace resource.
 
 <h4 class="pdoc-member-header" id="HttpNamespaceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L118">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -594,7 +594,7 @@ The set of arguments for constructing a HttpNamespace resource.
 The description that you specify for the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="HttpNamespaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -602,7 +602,7 @@ The description that you specify for the namespace when you create it.
 The name of the http namespace.
 
 <h3 class="pdoc-module-header" id="HttpNamespaceState" data-link-title="HttpNamespaceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L96">
         interface <strong>HttpNamespaceState</strong>
     </a>
 </h3>
@@ -612,7 +612,7 @@ The name of the http namespace.
 Input properties used for looking up and filtering HttpNamespace resources.
 
 <h4 class="pdoc-member-header" id="HttpNamespaceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L100">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L100">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -620,7 +620,7 @@ Input properties used for looking up and filtering HttpNamespace resources.
 The ARN that Amazon Route 53 assigns to the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="HttpNamespaceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L104">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L104">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -628,7 +628,7 @@ The ARN that Amazon Route 53 assigns to the namespace when you create it.
 The description that you specify for the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="HttpNamespaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/httpNamespace.ts#L108">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/httpNamespace.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +636,7 @@ The description that you specify for the namespace when you create it.
 The name of the http namespace.
 
 <h3 class="pdoc-module-header" id="PrivateDnsNamespaceArgs" data-link-title="PrivateDnsNamespaceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L143">
         interface <strong>PrivateDnsNamespaceArgs</strong>
     </a>
 </h3>
@@ -646,7 +646,7 @@ The name of the http namespace.
 The set of arguments for constructing a PrivateDnsNamespace resource.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespaceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L147">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L147">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -654,7 +654,7 @@ The set of arguments for constructing a PrivateDnsNamespace resource.
 The description that you specify for the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L151">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -662,7 +662,7 @@ The description that you specify for the namespace when you create it.
 The name of the namespace.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespaceArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L155">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L155">property <b>vpc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -670,7 +670,7 @@ The name of the namespace.
 The ID of VPC that you want to associate the namespace with.
 
 <h3 class="pdoc-module-header" id="PrivateDnsNamespaceState" data-link-title="PrivateDnsNamespaceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L117">
         interface <strong>PrivateDnsNamespaceState</strong>
     </a>
 </h3>
@@ -680,7 +680,7 @@ The ID of VPC that you want to associate the namespace with.
 Input properties used for looking up and filtering PrivateDnsNamespace resources.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespaceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L121">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L121">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -688,7 +688,7 @@ Input properties used for looking up and filtering PrivateDnsNamespace resources
 The ARN that Amazon Route 53 assigns to the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespaceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L125">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L125">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -696,7 +696,7 @@ The ARN that Amazon Route 53 assigns to the namespace when you create it.
 The description that you specify for the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespaceState-hostedZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L129">property <b>hostedZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L129">property <b>hostedZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -704,7 +704,7 @@ The description that you specify for the namespace when you create it.
 The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L133">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -712,7 +712,7 @@ The ID for the hosted zone that Amazon Route 53 creates when you create a namesp
 The name of the namespace.
 
 <h4 class="pdoc-member-header" id="PrivateDnsNamespaceState-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L137">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/privateDnsNamespace.ts#L137">property <b>vpc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpc?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -720,7 +720,7 @@ The name of the namespace.
 The ID of VPC that you want to associate the namespace with.
 
 <h3 class="pdoc-module-header" id="PublicDnsNamespaceArgs" data-link-title="PublicDnsNamespaceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L126">
         interface <strong>PublicDnsNamespaceArgs</strong>
     </a>
 </h3>
@@ -730,7 +730,7 @@ The ID of VPC that you want to associate the namespace with.
 The set of arguments for constructing a PublicDnsNamespace resource.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespaceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L130">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L130">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -738,7 +738,7 @@ The set of arguments for constructing a PublicDnsNamespace resource.
 The description that you specify for the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L134">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -746,7 +746,7 @@ The description that you specify for the namespace when you create it.
 The name of the namespace.
 
 <h3 class="pdoc-module-header" id="PublicDnsNamespaceState" data-link-title="PublicDnsNamespaceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L104">
         interface <strong>PublicDnsNamespaceState</strong>
     </a>
 </h3>
@@ -756,7 +756,7 @@ The name of the namespace.
 Input properties used for looking up and filtering PublicDnsNamespace resources.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespaceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L108">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L108">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -764,7 +764,7 @@ Input properties used for looking up and filtering PublicDnsNamespace resources.
 The ARN that Amazon Route 53 assigns to the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespaceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L112">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L112">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -772,7 +772,7 @@ The ARN that Amazon Route 53 assigns to the namespace when you create it.
 The description that you specify for the namespace when you create it.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespaceState-hostedZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L116">property <b>hostedZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L116">property <b>hostedZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -780,7 +780,7 @@ The description that you specify for the namespace when you create it.
 The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
 
 <h4 class="pdoc-member-header" id="PublicDnsNamespaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/publicDnsNamespace.ts#L120">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -788,7 +788,7 @@ The ID for the hosted zone that Amazon Route 53 creates when you create a namesp
 The name of the namespace.
 
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L200">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L200">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
@@ -798,7 +798,7 @@ The name of the namespace.
 The set of arguments for constructing a Service resource.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L204">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L204">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -806,7 +806,7 @@ The set of arguments for constructing a Service resource.
 The description of the service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-dnsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L208">property <b>dnsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L208">property <b>dnsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDnsConfig'>inputs.servicediscovery.ServiceDnsConfig</a>&gt;;</code></pre>
@@ -814,7 +814,7 @@ The description of the service.
 A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-healthCheckConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L212">property <b>healthCheckConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L212">property <b>healthCheckConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckConfig'>inputs.servicediscovery.ServiceHealthCheckConfig</a>&gt;;</code></pre>
@@ -822,7 +822,7 @@ A complex type that contains information about the resource record sets that you
 A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-healthCheckCustomConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L216">property <b>healthCheckCustomConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L216">property <b>healthCheckCustomConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckCustomConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckCustomConfig'>inputs.servicediscovery.ServiceHealthCheckCustomConfig</a>&gt;;</code></pre>
@@ -830,7 +830,7 @@ A complex type that contains settings for an optional health check. Only for Pub
 A complex type that contains settings for ECS managed health checks.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L220">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L220">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -838,7 +838,7 @@ A complex type that contains settings for ECS managed health checks.
 The name of the service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L224">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L224">property <b>namespaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -846,7 +846,7 @@ The name of the service.
 The ID of the namespace to use for DNS configuration.
 
 <h3 class="pdoc-module-header" id="ServiceState" data-link-title="ServiceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L166">
         interface <strong>ServiceState</strong>
     </a>
 </h3>
@@ -856,7 +856,7 @@ The ID of the namespace to use for DNS configuration.
 Input properties used for looking up and filtering Service resources.
 
 <h4 class="pdoc-member-header" id="ServiceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L170">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L170">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -864,7 +864,7 @@ Input properties used for looking up and filtering Service resources.
 The ARN of the service.
 
 <h4 class="pdoc-member-header" id="ServiceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L174">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L174">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -872,7 +872,7 @@ The ARN of the service.
 The description of the service.
 
 <h4 class="pdoc-member-header" id="ServiceState-dnsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L178">property <b>dnsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L178">property <b>dnsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDnsConfig'>inputs.servicediscovery.ServiceDnsConfig</a>&gt;;</code></pre>
@@ -880,7 +880,7 @@ The description of the service.
 A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
 
 <h4 class="pdoc-member-header" id="ServiceState-healthCheckConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L182">property <b>healthCheckConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L182">property <b>healthCheckConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckConfig'>inputs.servicediscovery.ServiceHealthCheckConfig</a>&gt;;</code></pre>
@@ -888,7 +888,7 @@ A complex type that contains information about the resource record sets that you
 A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
 
 <h4 class="pdoc-member-header" id="ServiceState-healthCheckCustomConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L186">property <b>healthCheckCustomConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L186">property <b>healthCheckCustomConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckCustomConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckCustomConfig'>inputs.servicediscovery.ServiceHealthCheckCustomConfig</a>&gt;;</code></pre>
@@ -896,7 +896,7 @@ A complex type that contains settings for an optional health check. Only for Pub
 A complex type that contains settings for ECS managed health checks.
 
 <h4 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L190">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -904,7 +904,7 @@ A complex type that contains settings for ECS managed health checks.
 The name of the service.
 
 <h4 class="pdoc-member-header" id="ServiceState-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/servicediscovery/service.ts#L194">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/servicediscovery/service.ts#L194">property <b>namespaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

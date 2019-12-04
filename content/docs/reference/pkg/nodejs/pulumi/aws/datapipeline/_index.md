@@ -32,7 +32,7 @@ meta_desc: "Explore members of the datapipeline module in the @pulumi/aws packag
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Pipeline" data-link-title="Pipeline">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L21">
         Resource <strong>Pipeline</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ const defaultPipeline = new aws.datapipeline.Pipeline("default", {});
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datapipeline_pipeline.html.markdown.
 
 <h4 class="pdoc-member-header" id="Pipeline-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L59"> <b>constructor</b></a>
 </h4>
 
 
@@ -67,7 +67,7 @@ Create a Pipeline resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Pipeline-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -78,14 +78,14 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Pipeline-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Pipeline-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -96,7 +96,7 @@ Returns true if the given object is an instance of Pipeline.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Pipeline-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L51">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L51">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -104,7 +104,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of Pipeline.
 
 <h4 class="pdoc-member-header" id="Pipeline-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -113,7 +113,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Pipeline-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L55">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L55">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -121,7 +121,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of Pipeline.
 
 <h4 class="pdoc-member-header" id="Pipeline-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L59">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L59">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -129,7 +129,7 @@ The name of Pipeline.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Pipeline-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -141,7 +141,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="PipelineArgs" data-link-title="PipelineArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L114">
         interface <strong>PipelineArgs</strong>
     </a>
 </h3>
@@ -151,7 +151,7 @@ deployments.
 The set of arguments for constructing a Pipeline resource.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L118">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +159,7 @@ The set of arguments for constructing a Pipeline resource.
 The description of Pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -167,7 +167,7 @@ The description of Pipeline.
 The name of Pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L126">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L126">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -175,7 +175,7 @@ The name of Pipeline.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="PipelineState" data-link-title="PipelineState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L96">
         interface <strong>PipelineState</strong>
     </a>
 </h3>
@@ -185,7 +185,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Pipeline resources.
 
 <h4 class="pdoc-member-header" id="PipelineState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L100">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L100">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ Input properties used for looking up and filtering Pipeline resources.
 The description of Pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ The description of Pipeline.
 The name of Pipeline.
 
 <h4 class="pdoc-member-header" id="PipelineState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/datapipeline/pipeline.ts#L108">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/d10e445799fff2664ea743052464719b2970877d/sdk/nodejs/datapipeline/pipeline.ts#L108">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>

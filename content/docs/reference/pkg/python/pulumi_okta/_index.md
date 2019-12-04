@@ -23,6 +23,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="inline/">inline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="network/">network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="policy/">policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profile/">profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="template/">template</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trustedorigin/">trustedorigin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user/">user</a></li>

@@ -153,6 +153,117 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_okta.app.BasicAuth">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">BasicAuth</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_url=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.BasicAuth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Bsaic Auth Application.</p>
+<p>This resource allows you to create and configure a Basic Auth Application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auth_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the authenticating site for this app.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application’s display name.</p></li>
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the sign-in page for this app.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>users</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.auth_url">
+<code class="sig-name descname">auth_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.auth_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL of the authenticating site for this app.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.label">
+<code class="sig-name descname">label</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Application’s display name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.app.BasicAuth.url">
+<code class="sig-name descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.BasicAuth.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL of the sign-in page for this app.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_okta.app.BasicAuth.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_url=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sign_on_mode=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.BasicAuth.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing BasicAuth resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auth_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the authenticating site for this app.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application’s display name.</p></li>
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the sign-in page for this app.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>users</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_basic_auth.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_okta.app.BasicAuth.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.BasicAuth.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_okta.app.BasicAuth.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.BasicAuth.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_okta.app.Bookmark">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">Bookmark</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_submit_toolbar=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">hide_ios=None</em>, <em class="sig-param">hide_web=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">request_integration=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.Bookmark" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Bookmark Application.</p>
@@ -562,6 +673,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">GroupAssignment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">profile=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.GroupAssignment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assigns a group to an application.</p>
 <p>This resource allows you to create an App Group assignment.</p>
+<p><strong>When using this resource, make sure to add the following ``lifefycle`` argument to the application resource you are assigning to:</strong></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -569,6 +681,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the application to assign a group to.</p></li>
 <li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the group to assign the app to.</p></li>
+<li><p><strong>profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON document containing <a class="reference external" href="https://developer.okta.com/docs/reference/api/apps/#profile-object">application profile</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -587,6 +700,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The ID of the group to assign the app to.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_okta.app.GroupAssignment.profile">
+<code class="sig-name descname">profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.app.GroupAssignment.profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>JSON document containing <a class="reference external" href="https://developer.okta.com/docs/reference/api/apps/#profile-object">application profile</a></p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_okta.app.GroupAssignment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">profile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.GroupAssignment.get" title="Permalink to this definition">¶</a></dt>
@@ -600,6 +719,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the application to assign a group to.</p></li>
 <li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the group to assign the app to.</p></li>
+<li><p><strong>profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>JSON document containing <a class="reference external" href="https://developer.okta.com/docs/reference/api/apps/#profile-object">application profile</a></p>
+</p></li>
 </ul>
 </dd>
 </dl>
@@ -2249,6 +2370,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.app.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">profile=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.app.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Application User.</p>
 <p>This resource allows you to create and configure an Application User.</p>
+<p><strong>When using this resource, make sure to add the following ``lifefycle`` argument to the application resource you are assigning to:</strong></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
