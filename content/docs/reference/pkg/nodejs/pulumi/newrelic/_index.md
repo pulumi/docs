@@ -87,7 +87,7 @@ import * as newrelic from "@pulumi/newrelic";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AlertChannel" data-link-title="AlertChannel">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L25">
         Resource <strong>AlertChannel</strong>
     </a>
 </h3>
@@ -112,7 +112,7 @@ const foo = new newrelic.AlertChannel("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="AlertChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -126,7 +126,7 @@ Create a AlertChannel resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlertChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -137,14 +137,14 @@ Get an existing AlertChannel resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlertChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlertChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -155,7 +155,7 @@ Returns true if the given object is an instance of AlertChannel.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlertChannel-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L55">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L55">property <b>configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -163,7 +163,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A map of key / value pairs with channel type specific values.
 
 <h4 class="pdoc-member-header" id="AlertChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -172,7 +172,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlertChannel-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the channel.
 
 <h4 class="pdoc-member-header" id="AlertChannel-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L63">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L63">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ The name of the channel.
 The type of channel.  One of: `campfire`, `email`, `hipchat`, `opsgenie`, `pagerduty`, `slack`, `victorops`, or `webhook`.
 
 <h4 class="pdoc-member-header" id="AlertChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -197,7 +197,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AlertCondition" data-link-title="AlertCondition">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L49">
         Resource <strong>AlertCondition</strong>
     </a>
 </h3>
@@ -244,7 +244,7 @@ The `term` mapping supports the following arguments:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_condition.html.markdown.
 
 <h4 class="pdoc-member-header" id="AlertCondition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L124"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L124"> <b>constructor</b></a>
 </h4>
 
 
@@ -258,7 +258,7 @@ Create a AlertCondition resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlertCondition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -269,14 +269,14 @@ Get an existing AlertCondition resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlertCondition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlertCondition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -287,7 +287,7 @@ Returns true if the given object is an instance of AlertCondition.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlertCondition-conditionScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L79">property <b>conditionScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L79">property <b>conditionScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>conditionScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -295,12 +295,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 `application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 
 <h4 class="pdoc-member-header" id="AlertCondition-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L80">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L80">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertCondition-entities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L84">property <b>entities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L84">property <b>entities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>entities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[]&gt;;</code></pre>
@@ -308,7 +308,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The instance IDS associated with this condition.
 
 <h4 class="pdoc-member-header" id="AlertCondition-gcMetric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L88">property <b>gcMetric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L88">property <b>gcMetric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gcMetric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ The instance IDS associated with this condition.
 A valid Garbage Collection metric e.g. `GC/G1 Young Generation`. This is required if you are using `apmJvmMetric` with `gcCpuTime` condition type.
 
 <h4 class="pdoc-member-header" id="AlertCondition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -325,7 +325,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlertCondition-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L92">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L92">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ deployments and may be missing (undefined) during planning phases.
 The metric field accepts parameters based on the `type` set.
 
 <h4 class="pdoc-member-header" id="AlertCondition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L96">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ The metric field accepts parameters based on the `type` set.
 The title of the condition. Must be between 1 and 64 characters, inclusive.
 
 <h4 class="pdoc-member-header" id="AlertCondition-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L100">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L100">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -349,7 +349,7 @@ The title of the condition. Must be between 1 and 64 characters, inclusive.
 The ID of the policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="AlertCondition-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L104">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L104">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runbookUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -357,7 +357,7 @@ The ID of the policy where this condition should be used.
 Runbook URL to display in notifications.
 
 <h4 class="pdoc-member-header" id="AlertCondition-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L108">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L108">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#AlertConditionTerm'>outputs.AlertConditionTerm</a>[]&gt;;</code></pre>
@@ -365,7 +365,7 @@ Runbook URL to display in notifications.
 A list of terms for this condition. See Terms below for details.
 
 <h4 class="pdoc-member-header" id="AlertCondition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L112">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L112">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -373,7 +373,7 @@ A list of terms for this condition. See Terms below for details.
 The type of condition. One of: `apmAppMetric`, `apmJvmMetric`, `apmKtMetric`, `serversMetric`, `browserMetric`, `mobileMetric`
 
 <h4 class="pdoc-member-header" id="AlertCondition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -382,7 +382,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AlertCondition-userDefinedMetric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L116">property <b>userDefinedMetric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L116">property <b>userDefinedMetric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userDefinedMetric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -390,7 +390,7 @@ deployments.
 A custom metric to be evaluated.
 
 <h4 class="pdoc-member-header" id="AlertCondition-userDefinedValueFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L120">property <b>userDefinedValueFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L120">property <b>userDefinedValueFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userDefinedValueFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -398,7 +398,7 @@ A custom metric to be evaluated.
 One of: `average`, `min`, `max`, `total`, or `sampleSize`.
 
 <h4 class="pdoc-member-header" id="AlertCondition-violationCloseTimer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L124">property <b>violationCloseTimer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L124">property <b>violationCloseTimer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>violationCloseTimer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -406,7 +406,7 @@ One of: `average`, `min`, `max`, `total`, or `sampleSize`.
 Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 
 <h3 class="pdoc-module-header" id="AlertPolicy" data-link-title="AlertPolicy">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L21">
         Resource <strong>AlertPolicy</strong>
     </a>
 </h3>
@@ -425,7 +425,7 @@ const foo = new newrelic.AlertPolicy("foo", {});
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_policy.html.markdown.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -439,7 +439,7 @@ Create a AlertPolicy resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -450,14 +450,14 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlertPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -468,7 +468,7 @@ Returns true if the given object is an instance of AlertPolicy.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L51">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L51">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The time the policy was created.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -485,7 +485,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-incidentPreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L55">property <b>incidentPreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L55">property <b>incidentPreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>incidentPreference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ deployments and may be missing (undefined) during planning phases.
 The rollup strategy for the policy.  Options include: `PER_POLICY`, `PER_CONDITION`, or `PER_CONDITION_AND_TARGET`.  The default is `PER_POLICY`.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ The rollup strategy for the policy.  Options include: `PER_POLICY`, `PER_CONDITI
 The name of the policy.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L63">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L63">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -509,7 +509,7 @@ The name of the policy.
 The time the policy was last updated.
 
 <h4 class="pdoc-member-header" id="AlertPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -518,7 +518,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AlertPolicyChannel" data-link-title="AlertPolicyChannel">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L32">
         Resource <strong>AlertPolicyChannel</strong>
     </a>
 </h3>
@@ -548,7 +548,7 @@ const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_policy_channel.html.markdown.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -562,7 +562,7 @@ Create a AlertPolicyChannel resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -573,14 +573,14 @@ Get an existing AlertPolicyChannel resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -591,7 +591,7 @@ Returns true if the given object is an instance of AlertPolicyChannel.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannel-channelId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L62">property <b>channelId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L62">property <b>channelId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>channelId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the channel.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -608,7 +608,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannel-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L66">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L66">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the policy.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -625,7 +625,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Dashboard" data-link-title="Dashboard">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L12">
         Resource <strong>Dashboard</strong>
     </a>
 </h3>
@@ -635,7 +635,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/dashboard.html.markdown.
 
 <h4 class="pdoc-member-header" id="Dashboard-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L63"> <b>constructor</b></a>
 </h4>
 
 
@@ -649,7 +649,7 @@ Create a Dashboard resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Dashboard-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -660,14 +660,14 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Dashboard-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Dashboard-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -678,12 +678,12 @@ Returns true if the given object is an instance of Dashboard.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L39">property <b>dashboardUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L39">property <b>dashboardUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashboardUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Dashboard-editable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L43">property <b>editable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L43">property <b>editable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>editable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -691,7 +691,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Determines who can edit the dashboard in an account. Valid values are `all`,  `editableByAll`, `editableByOwner`, or `readOnly`.  Defaults to `editableByAll`.
 
 <h4 class="pdoc-member-header" id="Dashboard-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L47">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L47">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#DashboardFilter'>outputs.DashboardFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -699,7 +699,7 @@ Determines who can edit the dashboard in an account. Valid values are `all`,  `e
 A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
 
 <h4 class="pdoc-member-header" id="Dashboard-icon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L51">property <b>icon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L51">property <b>icon</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>icon: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -707,7 +707,7 @@ A nested block that describes a dashboard filter.  Exactly one nested `filter` b
 The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
 
 <h4 class="pdoc-member-header" id="Dashboard-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -716,7 +716,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Dashboard-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L55">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L55">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ deployments and may be missing (undefined) during planning phases.
 The title of the dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -733,7 +733,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Dashboard-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L59">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L59">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>visibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -741,7 +741,7 @@ deployments.
 Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
 
 <h4 class="pdoc-member-header" id="Dashboard-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L63">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L63">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>widgets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#DashboardWidget'>outputs.DashboardWidget</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -749,7 +749,7 @@ Determines who can see the dashboard in an account. Valid values are `all` or `o
 A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
 
 <h3 class="pdoc-module-header" id="InfraAlertCondition" data-link-title="InfraAlertCondition">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L42">
         Resource <strong>InfraAlertCondition</strong>
     </a>
 </h3>
@@ -789,7 +789,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/infra_alert_condition.html.markdown.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L119"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L122"> <b>constructor</b></a>
 </h4>
 
 
@@ -803,7 +803,7 @@ Create a InfraAlertCondition resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -814,14 +814,14 @@ Get an existing InfraAlertCondition resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -832,7 +832,7 @@ Returns true if the given object is an instance of InfraAlertCondition.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-comparison">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L72">property <b>comparison</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L72">property <b>comparison</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comparison: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -840,12 +840,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The operator used to evaluate the threshold value; "above", "below", "equal".
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L73">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L73">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InfraAlertCondition-critical">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L77">property <b>critical</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L77">property <b>critical</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>critical: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#InfraAlertConditionCritical'>outputs.InfraAlertConditionCritical</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -853,7 +853,7 @@ The operator used to evaluate the threshold value; "above", "below", "equal".
 Identifies the critical threshold parameters for triggering an alert notification. See Thresholds below for details.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L81">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L81">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -861,7 +861,7 @@ Identifies the critical threshold parameters for triggering an alert notificatio
 Set whether to enable the alert condition. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-event">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L85">property <b>event</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L85">property <b>event</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>event: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -869,7 +869,7 @@ Set whether to enable the alert condition. Defaults to `true`.
 The metric event; for example, system metrics, process metrics, storage metrics, or network metrics.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -878,7 +878,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-integrationProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L89">property <b>integrationProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L89">property <b>integrationProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -886,7 +886,7 @@ deployments and may be missing (undefined) during planning phases.
 For alerts on integrations, use this instead of `event`.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -894,7 +894,7 @@ For alerts on integrations, use this instead of `event`.
 The Infrastructure alert condition's name.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L97">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L97">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -902,7 +902,7 @@ The Infrastructure alert condition's name.
 The ID of the alert policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-processWhere">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L101">property <b>processWhere</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L101">property <b>processWhere</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>processWhere: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -910,12 +910,15 @@ The ID of the alert policy where this condition should be used.
 Any filters applied to processes; for example: `"commandName = 'java'"`.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L102">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L105">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runbookUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Runbook URL to display in notifications.
+
 <h4 class="pdoc-member-header" id="InfraAlertCondition-select">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L106">property <b>select</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L109">property <b>select</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>select: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -923,7 +926,7 @@ Any filters applied to processes; for example: `"commandName = 'java'"`.
 The attribute name to identify the type of metric condition; for example, "network", "process", "system", or "storage".
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L110">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L113">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -931,12 +934,12 @@ The attribute name to identify the type of metric condition; for example, "netwo
 The type of Infrastructure alert condition: "infraProcessRunning", "infraMetric", or "infraHostNotReporting".
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L111">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L114">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InfraAlertCondition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -945,7 +948,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-warning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L115">property <b>warning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L118">property <b>warning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>warning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#InfraAlertConditionWarning'>outputs.InfraAlertConditionWarning</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -953,7 +956,7 @@ deployments.
 Identifies the warning threshold parameters. See Thresholds below for details.
 
 <h4 class="pdoc-member-header" id="InfraAlertCondition-where">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L119">property <b>where</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L122">property <b>where</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>where: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -961,7 +964,7 @@ Identifies the warning threshold parameters. See Thresholds below for details.
 Infrastructure host filter for the alert condition.
 
 <h3 class="pdoc-module-header" id="NrqlAlertCondition" data-link-title="NrqlAlertCondition">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L56">
         Resource <strong>NrqlAlertCondition</strong>
     </a>
 </h3>
@@ -990,6 +993,7 @@ const fooNrqlAlertCondition = new newrelic.NrqlAlertCondition("foo", {
         threshold: 1,
         timeFunction: "all",
     }],
+    type: "static",
     valueFunction: "singleValue",
 });
 ```
@@ -1014,7 +1018,7 @@ The `nrql` attribute supports the following arguments:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/nrql_alert_condition.html.markdown.
 
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -1028,7 +1032,7 @@ Create a NrqlAlertCondition resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L65">method <b>get</b></a>
 </h4>
 
 
@@ -1039,14 +1043,14 @@ Get an existing NrqlAlertCondition resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L76">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1057,17 +1061,17 @@ Returns true if the given object is an instance of NrqlAlertCondition.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L82">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L83">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-expectedGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L83">property <b>expectedGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L84">property <b>expectedGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expectedGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1076,42 +1080,42 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-ignoreOverlap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L84">property <b>ignoreOverlap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L85">property <b>ignoreOverlap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ignoreOverlap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-nrql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L86">property <b>nrql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L87">property <b>nrql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nrql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#NrqlAlertConditionNrql'>outputs.NrqlAlertConditionNrql</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L87">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L88">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L88">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L89">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runbookUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L89">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L90">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#NrqlAlertConditionTerm'>outputs.NrqlAlertConditionTerm</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L90">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L91">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1120,12 +1124,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="NrqlAlertCondition-valueFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L91">property <b>valueFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L92">property <b>valueFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L17">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -1140,7 +1144,7 @@ construction to achieve fine-grained programmatic control over provider settings
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/index.html.markdown.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L30"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L30"> <b>constructor</b></a>
 </h4>
 
 
@@ -1154,14 +1158,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L25">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L25">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1172,14 +1176,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L17">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L17">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1188,7 +1192,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1199,7 +1203,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getAlertChannel" data-link-title="getAlertChannel">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertChannel.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertChannel.ts#L30">
         Data Source <strong>getAlertChannel</strong>
     </a>
 </h3>
@@ -1229,7 +1233,7 @@ const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/alert_channel.html.markdown.
 
 <h3 class="pdoc-module-header" id="getAlertPolicy" data-link-title="getAlertPolicy">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertPolicy.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertPolicy.ts#L32">
         Data Source <strong>getAlertPolicy</strong>
     </a>
 </h3>
@@ -1261,7 +1265,7 @@ const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/alert_policy.html.markdown.
 
 <h3 class="pdoc-module-header" id="getApplication" data-link-title="getApplication">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getApplication.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getApplication.ts#L40">
         Data Source <strong>getApplication</strong>
     </a>
 </h3>
@@ -1301,7 +1305,7 @@ const fooAlertCondition = new newrelic.AlertCondition("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/application.html.markdown.
 
 <h3 class="pdoc-module-header" id="getKeyTransaction" data-link-title="getKeyTransaction">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getKeyTransaction.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getKeyTransaction.ts#L40">
         Data Source <strong>getKeyTransaction</strong>
     </a>
 </h3>
@@ -1343,7 +1347,7 @@ const fooAlertCondition = new newrelic.AlertCondition("foo", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AlertChannelArgs" data-link-title="AlertChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L124">
         interface <strong>AlertChannelArgs</strong>
     </a>
 </h3>
@@ -1353,7 +1357,7 @@ const fooAlertCondition = new newrelic.AlertCondition("foo", {
 The set of arguments for constructing a AlertChannel resource.
 
 <h4 class="pdoc-member-header" id="AlertChannelArgs-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L128">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L128">property <b>configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1361,7 +1365,7 @@ The set of arguments for constructing a AlertChannel resource.
 A map of key / value pairs with channel type specific values.
 
 <h4 class="pdoc-member-header" id="AlertChannelArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1369,7 +1373,7 @@ A map of key / value pairs with channel type specific values.
 The name of the channel.
 
 <h4 class="pdoc-member-header" id="AlertChannelArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L136">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L136">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1377,7 +1381,7 @@ The name of the channel.
 The type of channel.  One of: `campfire`, `email`, `hipchat`, `opsgenie`, `pagerduty`, `slack`, `victorops`, or `webhook`.
 
 <h3 class="pdoc-module-header" id="AlertChannelState" data-link-title="AlertChannelState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L106">
         interface <strong>AlertChannelState</strong>
     </a>
 </h3>
@@ -1387,7 +1391,7 @@ The type of channel.  One of: `campfire`, `email`, `hipchat`, `opsgenie`, `pager
 Input properties used for looking up and filtering AlertChannel resources.
 
 <h4 class="pdoc-member-header" id="AlertChannelState-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L110">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L110">property <b>configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1395,7 +1399,7 @@ Input properties used for looking up and filtering AlertChannel resources.
 A map of key / value pairs with channel type specific values.
 
 <h4 class="pdoc-member-header" id="AlertChannelState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L114">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1403,7 +1407,7 @@ A map of key / value pairs with channel type specific values.
 The name of the channel.
 
 <h4 class="pdoc-member-header" id="AlertChannelState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertChannel.ts#L118">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertChannel.ts#L118">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1411,7 +1415,7 @@ The name of the channel.
 The type of channel.  One of: `campfire`, `email`, `hipchat`, `opsgenie`, `pagerduty`, `slack`, `victorops`, or `webhook`.
 
 <h3 class="pdoc-module-header" id="AlertConditionArgs" data-link-title="AlertConditionArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L251">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L251">
         interface <strong>AlertConditionArgs</strong>
     </a>
 </h3>
@@ -1421,7 +1425,7 @@ The type of channel.  One of: `campfire`, `email`, `hipchat`, `opsgenie`, `pager
 The set of arguments for constructing a AlertCondition resource.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-conditionScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L255">property <b>conditionScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L255">property <b>conditionScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditionScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1429,12 +1433,12 @@ The set of arguments for constructing a AlertCondition resource.
 `application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L256">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L256">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertConditionArgs-entities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L260">property <b>entities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L260">property <b>entities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -1442,7 +1446,7 @@ The set of arguments for constructing a AlertCondition resource.
 The instance IDS associated with this condition.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-gcMetric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L264">property <b>gcMetric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L264">property <b>gcMetric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcMetric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1450,7 +1454,7 @@ The instance IDS associated with this condition.
 A valid Garbage Collection metric e.g. `GC/G1 Young Generation`. This is required if you are using `apmJvmMetric` with `gcCpuTime` condition type.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L268">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L268">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metric: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1458,7 +1462,7 @@ A valid Garbage Collection metric e.g. `GC/G1 Young Generation`. This is require
 The metric field accepts parameters based on the `type` set.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L272">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L272">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1466,7 +1470,7 @@ The metric field accepts parameters based on the `type` set.
 The title of the condition. Must be between 1 and 64 characters, inclusive.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L276">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L276">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1474,7 +1478,7 @@ The title of the condition. Must be between 1 and 64 characters, inclusive.
 The ID of the policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L280">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L280">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1482,7 +1486,7 @@ The ID of the policy where this condition should be used.
 Runbook URL to display in notifications.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L284">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L284">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#AlertConditionTerm'>inputs.AlertConditionTerm</a>&gt;[]&gt;;</code></pre>
@@ -1490,7 +1494,7 @@ Runbook URL to display in notifications.
 A list of terms for this condition. See Terms below for details.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L288">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L288">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1498,7 +1502,7 @@ A list of terms for this condition. See Terms below for details.
 The type of condition. One of: `apmAppMetric`, `apmJvmMetric`, `apmKtMetric`, `serversMetric`, `browserMetric`, `mobileMetric`
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-userDefinedMetric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L292">property <b>userDefinedMetric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L292">property <b>userDefinedMetric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userDefinedMetric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1506,7 +1510,7 @@ The type of condition. One of: `apmAppMetric`, `apmJvmMetric`, `apmKtMetric`, `s
 A custom metric to be evaluated.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-userDefinedValueFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L296">property <b>userDefinedValueFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L296">property <b>userDefinedValueFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userDefinedValueFunction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1514,7 +1518,7 @@ A custom metric to be evaluated.
 One of: `average`, `min`, `max`, `total`, or `sampleSize`.
 
 <h4 class="pdoc-member-header" id="AlertConditionArgs-violationCloseTimer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L300">property <b>violationCloseTimer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L300">property <b>violationCloseTimer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>violationCloseTimer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1522,7 +1526,7 @@ One of: `average`, `min`, `max`, `total`, or `sampleSize`.
 Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 
 <h3 class="pdoc-module-header" id="AlertConditionState" data-link-title="AlertConditionState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L196">
         interface <strong>AlertConditionState</strong>
     </a>
 </h3>
@@ -1532,7 +1536,7 @@ Automatically close instance-based violations, including JVM health metric viola
 Input properties used for looking up and filtering AlertCondition resources.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-conditionScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L200">property <b>conditionScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L200">property <b>conditionScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>conditionScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1540,12 +1544,12 @@ Input properties used for looking up and filtering AlertCondition resources.
 `application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 
 <h4 class="pdoc-member-header" id="AlertConditionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L201">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L201">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AlertConditionState-entities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L205">property <b>entities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L205">property <b>entities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -1553,7 +1557,7 @@ Input properties used for looking up and filtering AlertCondition resources.
 The instance IDS associated with this condition.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-gcMetric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L209">property <b>gcMetric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L209">property <b>gcMetric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gcMetric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1561,7 +1565,7 @@ The instance IDS associated with this condition.
 A valid Garbage Collection metric e.g. `GC/G1 Young Generation`. This is required if you are using `apmJvmMetric` with `gcCpuTime` condition type.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L213">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L213">property <b>metric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1569,7 +1573,7 @@ A valid Garbage Collection metric e.g. `GC/G1 Young Generation`. This is require
 The metric field accepts parameters based on the `type` set.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L217">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1577,7 +1581,7 @@ The metric field accepts parameters based on the `type` set.
 The title of the condition. Must be between 1 and 64 characters, inclusive.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L221">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L221">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1585,7 +1589,7 @@ The title of the condition. Must be between 1 and 64 characters, inclusive.
 The ID of the policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L225">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L225">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1593,7 +1597,7 @@ The ID of the policy where this condition should be used.
 Runbook URL to display in notifications.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L229">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L229">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#AlertConditionTerm'>inputs.AlertConditionTerm</a>&gt;[]&gt;;</code></pre>
@@ -1601,7 +1605,7 @@ Runbook URL to display in notifications.
 A list of terms for this condition. See Terms below for details.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L233">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L233">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1609,7 +1613,7 @@ A list of terms for this condition. See Terms below for details.
 The type of condition. One of: `apmAppMetric`, `apmJvmMetric`, `apmKtMetric`, `serversMetric`, `browserMetric`, `mobileMetric`
 
 <h4 class="pdoc-member-header" id="AlertConditionState-userDefinedMetric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L237">property <b>userDefinedMetric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L237">property <b>userDefinedMetric</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userDefinedMetric?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1617,7 +1621,7 @@ The type of condition. One of: `apmAppMetric`, `apmJvmMetric`, `apmKtMetric`, `s
 A custom metric to be evaluated.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-userDefinedValueFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L241">property <b>userDefinedValueFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L241">property <b>userDefinedValueFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userDefinedValueFunction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1625,7 +1629,7 @@ A custom metric to be evaluated.
 One of: `average`, `min`, `max`, `total`, or `sampleSize`.
 
 <h4 class="pdoc-member-header" id="AlertConditionState-violationCloseTimer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertCondition.ts#L245">property <b>violationCloseTimer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertCondition.ts#L245">property <b>violationCloseTimer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>violationCloseTimer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1633,7 +1637,7 @@ One of: `average`, `min`, `max`, `total`, or `sampleSize`.
 Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 
 <h3 class="pdoc-module-header" id="AlertPolicyArgs" data-link-title="AlertPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L124">
         interface <strong>AlertPolicyArgs</strong>
     </a>
 </h3>
@@ -1643,7 +1647,7 @@ Automatically close instance-based violations, including JVM health metric viola
 The set of arguments for constructing a AlertPolicy resource.
 
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-incidentPreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L128">property <b>incidentPreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L128">property <b>incidentPreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>incidentPreference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1651,7 +1655,7 @@ The set of arguments for constructing a AlertPolicy resource.
 The rollup strategy for the policy.  Options include: `PER_POLICY`, `PER_CONDITION`, or `PER_CONDITION_AND_TARGET`.  The default is `PER_POLICY`.
 
 <h4 class="pdoc-member-header" id="AlertPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1659,7 +1663,7 @@ The rollup strategy for the policy.  Options include: `PER_POLICY`, `PER_CONDITI
 The name of the policy.
 
 <h3 class="pdoc-module-header" id="AlertPolicyChannelArgs" data-link-title="AlertPolicyChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L121">
         interface <strong>AlertPolicyChannelArgs</strong>
     </a>
 </h3>
@@ -1669,7 +1673,7 @@ The name of the policy.
 The set of arguments for constructing a AlertPolicyChannel resource.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannelArgs-channelId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L125">property <b>channelId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L125">property <b>channelId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>channelId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1677,7 +1681,7 @@ The set of arguments for constructing a AlertPolicyChannel resource.
 The ID of the channel.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannelArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L129">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L129">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1685,7 +1689,7 @@ The ID of the channel.
 The ID of the policy.
 
 <h3 class="pdoc-module-header" id="AlertPolicyChannelState" data-link-title="AlertPolicyChannelState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L107">
         interface <strong>AlertPolicyChannelState</strong>
     </a>
 </h3>
@@ -1695,7 +1699,7 @@ The ID of the policy.
 Input properties used for looking up and filtering AlertPolicyChannel resources.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannelState-channelId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L111">property <b>channelId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L111">property <b>channelId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>channelId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1703,7 +1707,7 @@ Input properties used for looking up and filtering AlertPolicyChannel resources.
 The ID of the channel.
 
 <h4 class="pdoc-member-header" id="AlertPolicyChannelState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicyChannel.ts#L115">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicyChannel.ts#L115">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1711,7 +1715,7 @@ The ID of the channel.
 The ID of the policy.
 
 <h3 class="pdoc-module-header" id="AlertPolicyState" data-link-title="AlertPolicyState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L102">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L102">
         interface <strong>AlertPolicyState</strong>
     </a>
 </h3>
@@ -1721,7 +1725,7 @@ The ID of the policy.
 Input properties used for looking up and filtering AlertPolicy resources.
 
 <h4 class="pdoc-member-header" id="AlertPolicyState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L106">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L106">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1729,7 +1733,7 @@ Input properties used for looking up and filtering AlertPolicy resources.
 The time the policy was created.
 
 <h4 class="pdoc-member-header" id="AlertPolicyState-incidentPreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L110">property <b>incidentPreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L110">property <b>incidentPreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>incidentPreference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1737,7 +1741,7 @@ The time the policy was created.
 The rollup strategy for the policy.  Options include: `PER_POLICY`, `PER_CONDITION`, or `PER_CONDITION_AND_TARGET`.  The default is `PER_POLICY`.
 
 <h4 class="pdoc-member-header" id="AlertPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L114">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1745,7 +1749,7 @@ The rollup strategy for the policy.  Options include: `PER_POLICY`, `PER_CONDITI
 The name of the policy.
 
 <h4 class="pdoc-member-header" id="AlertPolicyState-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/alertPolicy.ts#L118">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/alertPolicy.ts#L118">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1757,7 @@ The name of the policy.
 The time the policy was last updated.
 
 <h3 class="pdoc-module-header" id="DashboardArgs" data-link-title="DashboardArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L142">
         interface <strong>DashboardArgs</strong>
     </a>
 </h3>
@@ -1763,7 +1767,7 @@ The time the policy was last updated.
 The set of arguments for constructing a Dashboard resource.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-editable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L146">property <b>editable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L146">property <b>editable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>editable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1771,7 +1775,7 @@ The set of arguments for constructing a Dashboard resource.
 Determines who can edit the dashboard in an account. Valid values are `all`,  `editableByAll`, `editableByOwner`, or `readOnly`.  Defaults to `editableByAll`.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L150">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L150">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardFilter'>inputs.DashboardFilter</a>&gt;;</code></pre>
@@ -1779,7 +1783,7 @@ Determines who can edit the dashboard in an account. Valid values are `all`,  `e
 A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-icon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L154">property <b>icon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L154">property <b>icon</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>icon?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1787,7 +1791,7 @@ A nested block that describes a dashboard filter.  Exactly one nested `filter` b
 The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L158">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L158">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1795,7 +1799,7 @@ The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, 
 The title of the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L162">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L162">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1803,7 +1807,7 @@ The title of the dashboard.
 Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L166">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L166">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardWidget'>inputs.DashboardWidget</a>&gt;[]&gt;;</code></pre>
@@ -1811,7 +1815,7 @@ Determines who can see the dashboard in an account. Valid values are `all` or `o
 A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
 
 <h3 class="pdoc-module-header" id="DashboardState" data-link-title="DashboardState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L111">
         interface <strong>DashboardState</strong>
     </a>
 </h3>
@@ -1821,12 +1825,12 @@ A nested block that describes a visualization.  Up to 300 `widget` blocks are al
 Input properties used for looking up and filtering Dashboard resources.
 
 <h4 class="pdoc-member-header" id="DashboardState-dashboardUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L112">property <b>dashboardUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L112">property <b>dashboardUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DashboardState-editable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L116">property <b>editable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L116">property <b>editable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>editable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1834,7 +1838,7 @@ Input properties used for looking up and filtering Dashboard resources.
 Determines who can edit the dashboard in an account. Valid values are `all`,  `editableByAll`, `editableByOwner`, or `readOnly`.  Defaults to `editableByAll`.
 
 <h4 class="pdoc-member-header" id="DashboardState-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L120">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L120">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardFilter'>inputs.DashboardFilter</a>&gt;;</code></pre>
@@ -1842,7 +1846,7 @@ Determines who can edit the dashboard in an account. Valid values are `all`,  `e
 A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
 
 <h4 class="pdoc-member-header" id="DashboardState-icon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L124">property <b>icon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L124">property <b>icon</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>icon?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1850,7 +1854,7 @@ A nested block that describes a dashboard filter.  Exactly one nested `filter` b
 The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
 
 <h4 class="pdoc-member-header" id="DashboardState-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L128">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L128">property <b>title</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1858,7 +1862,7 @@ The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, 
 The title of the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L132">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L132">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1866,7 +1870,7 @@ The title of the dashboard.
 Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
 
 <h4 class="pdoc-member-header" id="DashboardState-widgets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/dashboard.ts#L136">property <b>widgets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/dashboard.ts#L136">property <b>widgets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>widgets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#DashboardWidget'>inputs.DashboardWidget</a>&gt;[]&gt;;</code></pre>
@@ -1874,7 +1878,7 @@ Determines who can see the dashboard in an account. Valid values are `all` or `o
 A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.
 
 <h3 class="pdoc-module-header" id="GetAlertChannelArgs" data-link-title="GetAlertChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertChannel.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertChannel.ts#L48">
         interface <strong>GetAlertChannelArgs</strong>
     </a>
 </h3>
@@ -1884,7 +1888,7 @@ A nested block that describes a visualization.  Up to 300 `widget` blocks are al
 A collection of arguments for invoking getAlertChannel.
 
 <h4 class="pdoc-member-header" id="GetAlertChannelArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertChannel.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertChannel.ts#L52">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1892,7 +1896,7 @@ A collection of arguments for invoking getAlertChannel.
 The name of the alert channel in New Relic.
 
 <h3 class="pdoc-module-header" id="GetAlertChannelResult" data-link-title="GetAlertChannelResult">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertChannel.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertChannel.ts#L58">
         interface <strong>GetAlertChannelResult</strong>
     </a>
 </h3>
@@ -1902,7 +1906,7 @@ The name of the alert channel in New Relic.
 A collection of values returned by getAlertChannel.
 
 <h4 class="pdoc-member-header" id="GetAlertChannelResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertChannel.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertChannel.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1910,12 +1914,12 @@ A collection of values returned by getAlertChannel.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAlertChannelResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertChannel.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertChannel.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlertChannelResult-policyIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertChannel.ts#L63">property <b>policyIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertChannel.ts#L63">property <b>policyIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -1923,7 +1927,7 @@ id is the provider-assigned unique ID for this managed resource.
 A list of policy IDs associated with the alert channel.
 
 <h4 class="pdoc-member-header" id="GetAlertChannelResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertChannel.ts#L67">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertChannel.ts#L67">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1931,7 +1935,7 @@ A list of policy IDs associated with the alert channel.
 Alert channel type, either: `campfire`, `email`, `hipchat`, `opsgenie`, `pagerduty`, `slack`, `victorops`, or `webhook`..
 
 <h3 class="pdoc-module-header" id="GetAlertPolicyArgs" data-link-title="GetAlertPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertPolicy.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertPolicy.ts#L51">
         interface <strong>GetAlertPolicyArgs</strong>
     </a>
 </h3>
@@ -1941,12 +1945,12 @@ Alert channel type, either: `campfire`, `email`, `hipchat`, `opsgenie`, `pagerdu
 A collection of arguments for invoking getAlertPolicy.
 
 <h4 class="pdoc-member-header" id="GetAlertPolicyArgs-incidentPreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertPolicy.ts#L52">property <b>incidentPreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertPolicy.ts#L52">property <b>incidentPreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>incidentPreference?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlertPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertPolicy.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertPolicy.ts#L56">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1954,7 +1958,7 @@ A collection of arguments for invoking getAlertPolicy.
 The name of the alert policy in New Relic.
 
 <h3 class="pdoc-module-header" id="GetAlertPolicyResult" data-link-title="GetAlertPolicyResult">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertPolicy.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertPolicy.ts#L62">
         interface <strong>GetAlertPolicyResult</strong>
     </a>
 </h3>
@@ -1964,7 +1968,7 @@ The name of the alert policy in New Relic.
 A collection of values returned by getAlertPolicy.
 
 <h4 class="pdoc-member-header" id="GetAlertPolicyResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertPolicy.ts#L66">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertPolicy.ts#L66">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1972,7 +1976,7 @@ A collection of values returned by getAlertPolicy.
 The time the policy was created.
 
 <h4 class="pdoc-member-header" id="GetAlertPolicyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertPolicy.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertPolicy.ts#L79">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1980,7 +1984,7 @@ The time the policy was created.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAlertPolicyResult-incidentPreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertPolicy.ts#L70">property <b>incidentPreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertPolicy.ts#L70">property <b>incidentPreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>incidentPreference?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1988,12 +1992,12 @@ id is the provider-assigned unique ID for this managed resource.
 The rollup strategy for the policy. Options include: PER_POLICY, PER_CONDITION, or PER_CONDITION_AND_TARGET. The default is PER_POLICY.
 
 <h4 class="pdoc-member-header" id="GetAlertPolicyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertPolicy.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertPolicy.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlertPolicyResult-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getAlertPolicy.ts#L75">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getAlertPolicy.ts#L75">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2001,7 +2005,7 @@ The rollup strategy for the policy. Options include: PER_POLICY, PER_CONDITION, 
 The time the policy was last updated.
 
 <h3 class="pdoc-module-header" id="GetApplicationArgs" data-link-title="GetApplicationArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getApplication.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getApplication.ts#L58">
         interface <strong>GetApplicationArgs</strong>
     </a>
 </h3>
@@ -2011,7 +2015,7 @@ The time the policy was last updated.
 A collection of arguments for invoking getApplication.
 
 <h4 class="pdoc-member-header" id="GetApplicationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getApplication.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getApplication.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2019,7 +2023,7 @@ A collection of arguments for invoking getApplication.
 The name of the application in New Relic.
 
 <h3 class="pdoc-module-header" id="GetApplicationResult" data-link-title="GetApplicationResult">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getApplication.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getApplication.ts#L68">
         interface <strong>GetApplicationResult</strong>
     </a>
 </h3>
@@ -2029,7 +2033,7 @@ The name of the application in New Relic.
 A collection of values returned by getApplication.
 
 <h4 class="pdoc-member-header" id="GetApplicationResult-hostIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getApplication.ts#L72">property <b>hostIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getApplication.ts#L72">property <b>hostIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -2037,7 +2041,7 @@ A collection of values returned by getApplication.
 A list of host IDs associated with the application.
 
 <h4 class="pdoc-member-header" id="GetApplicationResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getApplication.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getApplication.ts#L81">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2045,7 +2049,7 @@ A list of host IDs associated with the application.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetApplicationResult-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getApplication.ts#L76">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getApplication.ts#L76">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
@@ -2053,12 +2057,12 @@ id is the provider-assigned unique ID for this managed resource.
 A list of instance IDs associated with the application.
 
 <h4 class="pdoc-member-header" id="GetApplicationResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getApplication.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getApplication.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -2067,7 +2071,7 @@ A list of instance IDs associated with the application.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -2076,7 +2080,7 @@ A list of instance IDs associated with the application.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -2085,7 +2089,7 @@ A list of instance IDs associated with the application.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetKeyTransactionArgs" data-link-title="GetKeyTransactionArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getKeyTransaction.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getKeyTransaction.ts#L58">
         interface <strong>GetKeyTransactionArgs</strong>
     </a>
 </h3>
@@ -2095,7 +2099,7 @@ A list of instance IDs associated with the application.
 A collection of arguments for invoking getKeyTransaction.
 
 <h4 class="pdoc-member-header" id="GetKeyTransactionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getKeyTransaction.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getKeyTransaction.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2103,7 +2107,7 @@ A collection of arguments for invoking getKeyTransaction.
 The name of the application in New Relic.
 
 <h3 class="pdoc-module-header" id="GetKeyTransactionResult" data-link-title="GetKeyTransactionResult">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getKeyTransaction.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getKeyTransaction.ts#L68">
         interface <strong>GetKeyTransactionResult</strong>
     </a>
 </h3>
@@ -2113,7 +2117,7 @@ The name of the application in New Relic.
 A collection of values returned by getKeyTransaction.
 
 <h4 class="pdoc-member-header" id="GetKeyTransactionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getKeyTransaction.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getKeyTransaction.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2121,12 +2125,12 @@ A collection of values returned by getKeyTransaction.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKeyTransactionResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/getKeyTransaction.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/getKeyTransaction.ts#L69">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -2135,7 +2139,7 @@ id is the provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="InfraAlertConditionArgs" data-link-title="InfraAlertConditionArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L249">
         interface <strong>InfraAlertConditionArgs</strong>
     </a>
 </h3>
@@ -2145,7 +2149,7 @@ id is the provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a InfraAlertCondition resource.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-comparison">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L247">property <b>comparison</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L253">property <b>comparison</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comparison?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2153,7 +2157,7 @@ The set of arguments for constructing a InfraAlertCondition resource.
 The operator used to evaluate the threshold value; "above", "below", "equal".
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-critical">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L251">property <b>critical</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L257">property <b>critical</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>critical?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionCritical'>inputs.InfraAlertConditionCritical</a>&gt;;</code></pre>
@@ -2161,7 +2165,7 @@ The operator used to evaluate the threshold value; "above", "below", "equal".
 Identifies the critical threshold parameters for triggering an alert notification. See Thresholds below for details.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L255">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L261">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2169,7 +2173,7 @@ Identifies the critical threshold parameters for triggering an alert notificatio
 Set whether to enable the alert condition. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-event">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L259">property <b>event</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L265">property <b>event</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>event?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2177,7 +2181,7 @@ Set whether to enable the alert condition. Defaults to `true`.
 The metric event; for example, system metrics, process metrics, storage metrics, or network metrics.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-integrationProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L263">property <b>integrationProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L269">property <b>integrationProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2185,7 +2189,7 @@ The metric event; for example, system metrics, process metrics, storage metrics,
 For alerts on integrations, use this instead of `event`.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L267">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L273">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2193,7 +2197,7 @@ For alerts on integrations, use this instead of `event`.
 The Infrastructure alert condition's name.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L271">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L277">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2201,7 +2205,7 @@ The Infrastructure alert condition's name.
 The ID of the alert policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-processWhere">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L275">property <b>processWhere</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L281">property <b>processWhere</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>processWhere?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2209,12 +2213,15 @@ The ID of the alert policy where this condition should be used.
 Any filters applied to processes; for example: `"commandName = 'java'"`.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L276">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L285">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Runbook URL to display in notifications.
+
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-select">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L280">property <b>select</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L289">property <b>select</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>select?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2222,7 +2229,7 @@ Any filters applied to processes; for example: `"commandName = 'java'"`.
 The attribute name to identify the type of metric condition; for example, "network", "process", "system", or "storage".
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L284">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L293">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2230,7 +2237,7 @@ The attribute name to identify the type of metric condition; for example, "netwo
 The type of Infrastructure alert condition: "infraProcessRunning", "infraMetric", or "infraHostNotReporting".
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-warning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L288">property <b>warning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L297">property <b>warning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>warning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionWarning'>inputs.InfraAlertConditionWarning</a>&gt;;</code></pre>
@@ -2238,7 +2245,7 @@ The type of Infrastructure alert condition: "infraProcessRunning", "infraMetric"
 Identifies the warning threshold parameters. See Thresholds below for details.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionArgs-where">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L292">property <b>where</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L301">property <b>where</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>where?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2246,7 +2253,7 @@ Identifies the warning threshold parameters. See Thresholds below for details.
 Infrastructure host filter for the alert condition.
 
 <h3 class="pdoc-module-header" id="InfraAlertConditionState" data-link-title="InfraAlertConditionState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L189">
         interface <strong>InfraAlertConditionState</strong>
     </a>
 </h3>
@@ -2256,7 +2263,7 @@ Infrastructure host filter for the alert condition.
 Input properties used for looking up and filtering InfraAlertCondition resources.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-comparison">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L190">property <b>comparison</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L193">property <b>comparison</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comparison?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2264,12 +2271,12 @@ Input properties used for looking up and filtering InfraAlertCondition resources
 The operator used to evaluate the threshold value; "above", "below", "equal".
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L191">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L194">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-critical">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L195">property <b>critical</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L198">property <b>critical</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>critical?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionCritical'>inputs.InfraAlertConditionCritical</a>&gt;;</code></pre>
@@ -2277,7 +2284,7 @@ The operator used to evaluate the threshold value; "above", "below", "equal".
 Identifies the critical threshold parameters for triggering an alert notification. See Thresholds below for details.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L199">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L202">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2285,7 +2292,7 @@ Identifies the critical threshold parameters for triggering an alert notificatio
 Set whether to enable the alert condition. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-event">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L203">property <b>event</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L206">property <b>event</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>event?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2293,7 +2300,7 @@ Set whether to enable the alert condition. Defaults to `true`.
 The metric event; for example, system metrics, process metrics, storage metrics, or network metrics.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-integrationProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L207">property <b>integrationProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L210">property <b>integrationProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationProvider?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2301,7 +2308,7 @@ The metric event; for example, system metrics, process metrics, storage metrics,
 For alerts on integrations, use this instead of `event`.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L211">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L214">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2309,7 +2316,7 @@ For alerts on integrations, use this instead of `event`.
 The Infrastructure alert condition's name.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L215">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L218">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2317,7 +2324,7 @@ The Infrastructure alert condition's name.
 The ID of the alert policy where this condition should be used.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-processWhere">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L219">property <b>processWhere</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L222">property <b>processWhere</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>processWhere?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2325,12 +2332,15 @@ The ID of the alert policy where this condition should be used.
 Any filters applied to processes; for example: `"commandName = 'java'"`.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L220">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L226">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Runbook URL to display in notifications.
+
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-select">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L224">property <b>select</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L230">property <b>select</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>select?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2338,7 +2348,7 @@ Any filters applied to processes; for example: `"commandName = 'java'"`.
 The attribute name to identify the type of metric condition; for example, "network", "process", "system", or "storage".
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L228">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L234">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2346,12 +2356,12 @@ The attribute name to identify the type of metric condition; for example, "netwo
 The type of Infrastructure alert condition: "infraProcessRunning", "infraMetric", or "infraHostNotReporting".
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L229">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L235">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-warning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L233">property <b>warning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L239">property <b>warning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>warning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#InfraAlertConditionWarning'>inputs.InfraAlertConditionWarning</a>&gt;;</code></pre>
@@ -2359,7 +2369,7 @@ The type of Infrastructure alert condition: "infraProcessRunning", "infraMetric"
 Identifies the warning threshold parameters. See Thresholds below for details.
 
 <h4 class="pdoc-member-header" id="InfraAlertConditionState-where">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/infraAlertCondition.ts#L237">property <b>where</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/infraAlertCondition.ts#L243">property <b>where</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>where?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2367,7 +2377,7 @@ Identifies the warning threshold parameters. See Thresholds below for details.
 Infrastructure host filter for the alert condition.
 
 <h3 class="pdoc-module-header" id="NrqlAlertConditionArgs" data-link-title="NrqlAlertConditionArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L168">
         interface <strong>NrqlAlertConditionArgs</strong>
     </a>
 </h3>
@@ -2377,57 +2387,57 @@ Infrastructure host filter for the alert condition.
 The set of arguments for constructing a NrqlAlertCondition resource.
 
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L168">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L169">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-expectedGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L169">property <b>expectedGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L170">property <b>expectedGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expectedGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-ignoreOverlap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L170">property <b>ignoreOverlap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L171">property <b>ignoreOverlap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreOverlap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L171">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-nrql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L172">property <b>nrql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L173">property <b>nrql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nrql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionNrql'>inputs.NrqlAlertConditionNrql</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L173">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L174">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L174">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L175">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L175">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L176">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionTerm'>inputs.NrqlAlertConditionTerm</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L176">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L177">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionArgs-valueFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L177">property <b>valueFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L178">property <b>valueFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueFunction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="NrqlAlertConditionState" data-link-title="NrqlAlertConditionState">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L152">
         interface <strong>NrqlAlertConditionState</strong>
     </a>
 </h3>
@@ -2437,57 +2447,57 @@ The set of arguments for constructing a NrqlAlertCondition resource.
 Input properties used for looking up and filtering NrqlAlertCondition resources.
 
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L152">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L153">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-expectedGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L153">property <b>expectedGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L154">property <b>expectedGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expectedGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-ignoreOverlap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L154">property <b>ignoreOverlap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L155">property <b>ignoreOverlap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreOverlap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-nrql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L156">property <b>nrql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L157">property <b>nrql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nrql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionNrql'>inputs.NrqlAlertConditionNrql</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-policyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L157">property <b>policyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L158">property <b>policyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-runbookUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L158">property <b>runbookUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L159">property <b>runbookUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-terms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L159">property <b>terms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L160">property <b>terms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionTerm'>inputs.NrqlAlertConditionTerm</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L160">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L161">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NrqlAlertConditionState-valueFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/nrqlAlertCondition.ts#L161">property <b>valueFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/nrqlAlertCondition.ts#L162">property <b>valueFunction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueFunction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L63">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -2497,27 +2507,27 @@ Input properties used for looking up and filtering NrqlAlertCondition resources.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L64">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L64">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-apiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L65">property <b>apiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L65">property <b>apiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-cacertFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L66">property <b>cacertFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L66">property <b>cacertFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacertFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-infraApiUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L67">property <b>infraApiUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L67">property <b>infraApiUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infraApiUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-insecureSkipVerify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/4be2b6c3bacad15fdd098ba9cfc140923a841351/sdk/nodejs/provider.ts#L68">property <b>insecureSkipVerify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/60f7b2774eb188d75ca55b5aabab91e54bee0981/sdk/nodejs/provider.ts#L68">property <b>insecureSkipVerify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureSkipVerify?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
