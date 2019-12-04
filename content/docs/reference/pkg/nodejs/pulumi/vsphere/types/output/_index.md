@@ -35,31 +35,31 @@ meta_desc: "Explore members of the output module in the @pulumi/vsphere package.
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="DistributedPortGroupVlanRange" data-link-title="DistributedPortGroupVlanRange">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L7">
         interface <strong>DistributedPortGroupVlanRange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DistributedPortGroupVlanRange</span></code></pre>
 <h4 class="pdoc-member-header" id="DistributedPortGroupVlanRange-maxVlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L8">property <b>maxVlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L8">property <b>maxVlan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxVlan: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="DistributedPortGroupVlanRange-minVlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L9">property <b>minVlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L9">property <b>minVlan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minVlan: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="DistributedVirtualSwitchHost" data-link-title="DistributedVirtualSwitchHost">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L12">
         interface <strong>DistributedVirtualSwitchHost</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DistributedVirtualSwitchHost</span></code></pre>
 <h4 class="pdoc-member-header" id="DistributedVirtualSwitchHost-devices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L17">property <b>devices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L17">property <b>devices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>devices: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -68,7 +68,7 @@ The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
 
 <h4 class="pdoc-member-header" id="DistributedVirtualSwitchHost-hostSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L22">property <b>hostSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L22">property <b>hostSystemId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostSystemId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -77,31 +77,31 @@ The host system ID of the host to add to the
 DVS.
 
 <h3 class="pdoc-module-header" id="DistributedVirtualSwitchVlanRange" data-link-title="DistributedVirtualSwitchVlanRange">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L25">
         interface <strong>DistributedVirtualSwitchVlanRange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DistributedVirtualSwitchVlanRange</span></code></pre>
 <h4 class="pdoc-member-header" id="DistributedVirtualSwitchVlanRange-maxVlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L26">property <b>maxVlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L26">property <b>maxVlan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxVlan: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="DistributedVirtualSwitchVlanRange-minVlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L27">property <b>minVlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L27">property <b>minVlan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minVlan: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetVirtualMachineDisk" data-link-title="GetVirtualMachineDisk">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L30">
         interface <strong>GetVirtualMachineDisk</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetVirtualMachineDisk</span></code></pre>
 <h4 class="pdoc-member-header" id="GetVirtualMachineDisk-eagerlyScrub">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L34">property <b>eagerlyScrub</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L34">property <b>eagerlyScrub</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eagerlyScrub: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -109,7 +109,7 @@ DVS.
 Set to `true` if the disk has been eager zeroed.
 
 <h4 class="pdoc-member-header" id="GetVirtualMachineDisk-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L38">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L38">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -117,7 +117,7 @@ Set to `true` if the disk has been eager zeroed.
 The size of the disk, in GIB.
 
 <h4 class="pdoc-member-header" id="GetVirtualMachineDisk-thinProvisioned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L42">property <b>thinProvisioned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L42">property <b>thinProvisioned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thinProvisioned: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -125,14 +125,14 @@ The size of the disk, in GIB.
 Set to `true` if the disk has been thin provisioned.
 
 <h3 class="pdoc-module-header" id="HostPortGroupPorts" data-link-title="HostPortGroupPorts">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L45">
         interface <strong>HostPortGroupPorts</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>HostPortGroupPorts</span></code></pre>
 <h4 class="pdoc-member-header" id="HostPortGroupPorts-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L49">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L49">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -140,24 +140,24 @@ Set to `true` if the disk has been thin provisioned.
 The key for this port group as returned from the vSphere API.
 
 <h4 class="pdoc-member-header" id="HostPortGroupPorts-macAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L50">property <b>macAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L50">property <b>macAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>macAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="HostPortGroupPorts-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L51">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L51">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualMachineCdrom" data-link-title="VirtualMachineCdrom">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L54">
         interface <strong>VirtualMachineCdrom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualMachineCdrom</span></code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCdrom-clientDevice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L59">property <b>clientDevice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L59">property <b>clientDevice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientDevice?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -166,7 +166,7 @@ Indicates whether the device should be backed by
 remote client device. Conflicts with `datastoreId` and `path`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineCdrom-datastoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L64">property <b>datastoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L64">property <b>datastoreId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datastoreId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -175,7 +175,7 @@ The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `clientDevice`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineCdrom-deviceAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L68">property <b>deviceAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L68">property <b>deviceAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -183,7 +183,7 @@ Requried for using a datastore ISO. Conflicts with `clientDevice`.
 <elided>
 
 <h4 class="pdoc-member-header" id="VirtualMachineCdrom-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L72">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L72">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -191,7 +191,7 @@ Requried for using a datastore ISO. Conflicts with `clientDevice`.
 The ID of the device within the virtual machine.
 
 <h4 class="pdoc-member-header" id="VirtualMachineCdrom-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L77">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L77">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -200,66 +200,66 @@ The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `clientDevice`.
 
 <h3 class="pdoc-module-header" id="VirtualMachineClone" data-link-title="VirtualMachineClone">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L80">
         interface <strong>VirtualMachineClone</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualMachineClone</span></code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineClone-customize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L81">property <b>customize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L81">property <b>customize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customize?: <a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCloneCustomize'>outputs.VirtualMachineCloneCustomize</a>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineClone-linkedClone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L82">property <b>linkedClone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L82">property <b>linkedClone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linkedClone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineClone-templateUuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L83">property <b>templateUuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L83">property <b>templateUuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUuid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineClone-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L84">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L84">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualMachineCloneCustomize" data-link-title="VirtualMachineCloneCustomize">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L87">
         interface <strong>VirtualMachineCloneCustomize</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualMachineCloneCustomize</span></code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-dnsServerLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L88">property <b>dnsServerLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L88">property <b>dnsServerLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsServerLists?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-dnsSuffixLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L89">property <b>dnsSuffixLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L89">property <b>dnsSuffixLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSuffixLists?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-ipv4Gateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L90">property <b>ipv4Gateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L90">property <b>ipv4Gateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4Gateway?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-ipv6Gateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L91">property <b>ipv6Gateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L91">property <b>ipv6Gateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6Gateway?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-linuxOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L92">property <b>linuxOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L92">property <b>linuxOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linuxOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCloneCustomizeLinuxOptions'>outputs.VirtualMachineCloneCustomizeLinuxOptions</a>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-networkInterfaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L98">property <b>networkInterfaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L98">property <b>networkInterfaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkInterfaces?: <a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCloneCustomizeNetworkInterface'>outputs.VirtualMachineCloneCustomizeNetworkInterface</a>[];</code></pre>
@@ -269,165 +269,165 @@ virtual machine. See network interface options
 below.
 
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L99">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L99">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-windowsOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L100">property <b>windowsOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L100">property <b>windowsOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowsOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCloneCustomizeWindowsOptions'>outputs.VirtualMachineCloneCustomizeWindowsOptions</a>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomize-windowsSysprepText">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L101">property <b>windowsSysprepText</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L101">property <b>windowsSysprepText</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowsSysprepText?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualMachineCloneCustomizeLinuxOptions" data-link-title="VirtualMachineCloneCustomizeLinuxOptions">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L104">
         interface <strong>VirtualMachineCloneCustomizeLinuxOptions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualMachineCloneCustomizeLinuxOptions</span></code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeLinuxOptions-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L105">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L105">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeLinuxOptions-hostName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L106">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L106">property <b>hostName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeLinuxOptions-hwClockUtc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L107">property <b>hwClockUtc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L107">property <b>hwClockUtc</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hwClockUtc?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeLinuxOptions-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L108">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L108">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualMachineCloneCustomizeNetworkInterface" data-link-title="VirtualMachineCloneCustomizeNetworkInterface">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L111">
         interface <strong>VirtualMachineCloneCustomizeNetworkInterface</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualMachineCloneCustomizeNetworkInterface</span></code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeNetworkInterface-dnsDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L112">property <b>dnsDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L112">property <b>dnsDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeNetworkInterface-dnsServerLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L113">property <b>dnsServerLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L113">property <b>dnsServerLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsServerLists?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeNetworkInterface-ipv4Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L114">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L114">property <b>ipv4Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4Address?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeNetworkInterface-ipv4Netmask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L115">property <b>ipv4Netmask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L115">property <b>ipv4Netmask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4Netmask?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeNetworkInterface-ipv6Address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L116">property <b>ipv6Address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L116">property <b>ipv6Address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6Address?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeNetworkInterface-ipv6Netmask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L117">property <b>ipv6Netmask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L117">property <b>ipv6Netmask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6Netmask?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualMachineCloneCustomizeWindowsOptions" data-link-title="VirtualMachineCloneCustomizeWindowsOptions">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L120">
         interface <strong>VirtualMachineCloneCustomizeWindowsOptions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualMachineCloneCustomizeWindowsOptions</span></code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-adminPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L121">property <b>adminPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L121">property <b>adminPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminPassword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-autoLogon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L122">property <b>autoLogon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L122">property <b>autoLogon</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoLogon?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-autoLogonCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L123">property <b>autoLogonCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L123">property <b>autoLogonCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoLogonCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-computerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L124">property <b>computerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L124">property <b>computerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>computerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-domainAdminPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L125">property <b>domainAdminPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L125">property <b>domainAdminPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainAdminPassword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-domainAdminUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L126">property <b>domainAdminUser</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L126">property <b>domainAdminUser</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainAdminUser?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-fullName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L127">property <b>fullName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L127">property <b>fullName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-joinDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L128">property <b>joinDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L128">property <b>joinDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>joinDomain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-organizationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L129">property <b>organizationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L129">property <b>organizationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organizationName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-productKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L130">property <b>productKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L130">property <b>productKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-runOnceCommandLists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L131">property <b>runOnceCommandLists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L131">property <b>runOnceCommandLists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runOnceCommandLists?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-timeZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L132">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L132">property <b>timeZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineCloneCustomizeWindowsOptions-workgroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L133">property <b>workgroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L133">property <b>workgroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workgroup?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VirtualMachineDisk" data-link-title="VirtualMachineDisk">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L136">
         interface <strong>VirtualMachineDisk</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualMachineDisk</span></code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-attach">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L142">property <b>attach</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L142">property <b>attach</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attach?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -437,7 +437,7 @@ Implies and conflicts with `keepOnRemove`. If set, you cannot set `size`,
 `eagerlyScrub`, or `thinProvisioned`. Must set `path` if used.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-datastoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L147">property <b>datastoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L147">property <b>datastoreId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datastoreId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -446,7 +446,7 @@ The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `clientDevice`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-deviceAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L151">property <b>deviceAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L151">property <b>deviceAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -454,7 +454,7 @@ Requried for using a datastore ISO. Conflicts with `clientDevice`.
 <elided>
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-diskMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L159">property <b>diskMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L159">property <b>diskMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -466,7 +466,7 @@ Default: `persistent`. For an explanation of options, click
 [here][vmware-docs-disk-mode].
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-diskSharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L164">property <b>diskSharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L164">property <b>diskSharing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSharing?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -475,7 +475,7 @@ The sharing mode of this virtual disk. Can be one
 of `sharingMultiWriter` or `sharingNone`. Default: `sharingNone`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-eagerlyScrub">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L171">property <b>eagerlyScrub</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L171">property <b>eagerlyScrub</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eagerlyScrub?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -486,7 +486,7 @@ Cannot be set to `true` when `thinProvisioned` is `true`.  See the section
 on picking a disk type.  Default: `false`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-ioLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L176">property <b>ioLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L176">property <b>ioLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ioLimit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -495,7 +495,7 @@ The upper limit of IOPS that this disk can use. The
 default is no limit.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-ioReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L181">property <b>ioReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L181">property <b>ioReservation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ioReservation?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -504,7 +504,7 @@ The I/O reservation (guarantee) that this disk
 has, in IOPS.  The default is no reservation.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-ioShareCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L186">property <b>ioShareCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L186">property <b>ioShareCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ioShareCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -513,7 +513,7 @@ The share count for this disk when the share
 level is `custom`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-ioShareLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L191">property <b>ioShareLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L191">property <b>ioShareLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ioShareLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -522,7 +522,7 @@ The share allocation level for this disk. Can
 be one of `low`, `normal`, `high`, or `custom`. Default: `normal`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-keepOnRemove">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L196">property <b>keepOnRemove</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L196">property <b>keepOnRemove</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keepOnRemove?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -531,7 +531,7 @@ Keep this disk when removing the device or
 destroying the virtual machine. Default: `false`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L200">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L200">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -539,7 +539,7 @@ destroying the virtual machine. Default: `false`.
 The ID of the device within the virtual machine.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L204">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L204">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -547,7 +547,7 @@ The ID of the device within the virtual machine.
 A label for the disk. Forces a new disk if changed.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L209">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L209">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -556,7 +556,7 @@ An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L214">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L214">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -565,7 +565,7 @@ The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `clientDevice`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L218">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L218">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -573,7 +573,7 @@ ISO. Conflicts with `clientDevice`.
 The size of the disk, in GB.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-thinProvisioned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L225">property <b>thinProvisioned</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L225">property <b>thinProvisioned</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thinProvisioned?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -584,7 +584,7 @@ to `true` when `eagerlyScrub` is `true`. See the section on picking a disk
 type. Default: `true`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-unitNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L233">property <b>unitNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L233">property <b>unitNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unitNumber?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -596,7 +596,7 @@ for this setting is the value of
 for which one disk must be set to. Duplicate unit numbers are not allowed.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-uuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L238">property <b>uuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L238">property <b>uuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uuid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -605,7 +605,7 @@ The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 
 <h4 class="pdoc-member-header" id="VirtualMachineDisk-writeThrough">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L244">property <b>writeThrough</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L244">property <b>writeThrough</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeThrough?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -615,14 +615,14 @@ directly to the filesystem immediately instead of being buffered. Default:
 `false`.
 
 <h3 class="pdoc-module-header" id="VirtualMachineNetworkInterface" data-link-title="VirtualMachineNetworkInterface">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L247">
         interface <strong>VirtualMachineNetworkInterface</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualMachineNetworkInterface</span></code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineNetworkInterface-adapterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L252">property <b>adapterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L252">property <b>adapterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adapterType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -631,7 +631,7 @@ The network interface type. Can be one of
 `e1000`, `e1000e`, or `vmxnet3`. Default: `vmxnet3`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineNetworkInterface-bandwidthLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L257">property <b>bandwidthLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L257">property <b>bandwidthLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthLimit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -640,7 +640,7 @@ The upper bandwidth limit of this network
 interface, in Mbits/sec. The default is no limit.
 
 <h4 class="pdoc-member-header" id="VirtualMachineNetworkInterface-bandwidthReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L262">property <b>bandwidthReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L262">property <b>bandwidthReservation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthReservation?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -649,7 +649,7 @@ The bandwidth reservation of this
 network interface, in Mbits/sec. The default is no reservation.
 
 <h4 class="pdoc-member-header" id="VirtualMachineNetworkInterface-bandwidthShareCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L267">property <b>bandwidthShareCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L267">property <b>bandwidthShareCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthShareCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -658,7 +658,7 @@ The share count for this network
 interface when the share level is `custom`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineNetworkInterface-bandwidthShareLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L273">property <b>bandwidthShareLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L273">property <b>bandwidthShareLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthShareLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -668,7 +668,7 @@ this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
 `normal`.
 
 <h4 class="pdoc-member-header" id="VirtualMachineNetworkInterface-deviceAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L277">property <b>deviceAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L277">property <b>deviceAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -676,7 +676,7 @@ this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
 <elided>
 
 <h4 class="pdoc-member-header" id="VirtualMachineNetworkInterface-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L281">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L281">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -684,7 +684,7 @@ this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
 The ID of the device within the virtual machine.
 
 <h4 class="pdoc-member-header" id="VirtualMachineNetworkInterface-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L287">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L287">property <b>macAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>macAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -694,7 +694,7 @@ only be manually set if `useStaticMac` is true, otherwise this is a
 computed value that gives the current MAC address of this interface.
 
 <h4 class="pdoc-member-header" id="VirtualMachineNetworkInterface-networkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L292">property <b>networkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L292">property <b>networkId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -703,7 +703,7 @@ The [managed object reference
 ID][docs-about-morefs] of the network to connect this interface to.
 
 <h4 class="pdoc-member-header" id="VirtualMachineNetworkInterface-useStaticMac">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L298">property <b>useStaticMac</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L298">property <b>useStaticMac</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useStaticMac?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -713,14 +713,14 @@ a static MAC address and set accordingly. Setting this to `true` requires
 `macAddress` to be set. Default: `false`.
 
 <h3 class="pdoc-module-header" id="VirtualMachineVapp" data-link-title="VirtualMachineVapp">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L301">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L301">
         interface <strong>VirtualMachineVapp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VirtualMachineVapp</span></code></pre>
 <h4 class="pdoc-member-header" id="VirtualMachineVapp-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/bb1c035103fa3e21b7e1a77112980db2d7d5abcc/sdk/nodejs/types/output.ts#L302">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/edc8d2d8f8f5a91eea3c8e7ea5fb8d5cc74e6d34/sdk/nodejs/types/output.ts#L302">property <b>properties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>properties?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
