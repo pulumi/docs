@@ -953,7 +953,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AwaitableGetRouteTableResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param">associations=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetRouteTableResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">AwaitableGetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param">associations=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AwaitableGetRouteTableResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -3890,8 +3890,14 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetRouteTableResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param">associations=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">GetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param">associations=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouteTable.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetRouteTableResult.gateway_id">
+<code class="sig-name descname">gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult.gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteTableResult.owner_id">
 <code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult.owner_id" title="Permalink to this definition">¶</a></dt>
@@ -3907,7 +3913,7 @@ Interfaces below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteTableResult.subnet_id">
 <code class="sig-name descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult.subnet_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Subnet ID.</p>
+<dd><p>The Subnet ID. Only set when associated with a Subnet.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5645,7 +5651,7 @@ Name</a>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of the launch template.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -5877,7 +5883,7 @@ below for details.</p>
 <dd><p>Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Description of the launch template.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
@@ -6069,7 +6075,7 @@ Name</a>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of the launch template.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
@@ -7802,21 +7808,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.RouteTableAssociation">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">RouteTableAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to create an association between a subnet and routing table.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">RouteTableAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource to create an association between a route table and a subnet or a route table and an
+internet gateway or virtual private gateway.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The gateway ID to create an association. Conflicts with <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>.</p></li>
 <li><p><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the routing table to associate with.</p></li>
-<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet ID to create an association.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet ID to create an association. Conflicts with <code class="docutils literal notranslate"><span class="pre">gateway_id</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.RouteTableAssociation.gateway_id">
+<code class="sig-name descname">gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation.gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The gateway ID to create an association. Conflicts with <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.RouteTableAssociation.route_table_id">
 <code class="sig-name descname">route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation.route_table_id" title="Permalink to this definition">¶</a></dt>
@@ -7826,12 +7840,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.RouteTableAssociation.subnet_id">
 <code class="sig-name descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation.subnet_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The subnet ID to create an association.</p>
+<dd><p>The subnet ID to create an association. Conflicts with <code class="docutils literal notranslate"><span class="pre">gateway_id</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.ec2.RouteTableAssociation.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RouteTableAssociation resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7840,8 +7854,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The gateway ID to create an association. Conflicts with <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>.</p></li>
 <li><p><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the routing table to associate with.</p></li>
-<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet ID to create an association.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet ID to create an association. Conflicts with <code class="docutils literal notranslate"><span class="pre">gateway_id</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -12650,7 +12665,7 @@ connection associated with a CIDR value.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_route_table">
-<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_route_table</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_table" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_route_table</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_table" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ec2.RouteTable</span></code> provides details about a specific Route Table.</p>
 <p>This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
@@ -12659,8 +12674,9 @@ the Route Table.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>gateway_id</strong> (<em>str</em>) – The id of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).</p></li>
 <li><p><strong>route_table_id</strong> (<em>str</em>) – The id of the specific Route Table to retrieve.</p></li>
-<li><p><strong>subnet_id</strong> (<em>str</em>) – The id of a Subnet which is connected to the Route Table (not be exported if not given in parameter).</p></li>
+<li><p><strong>subnet_id</strong> (<em>str</em>) – The id of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).</p></li>
 <li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
 a pair on the desired Route Table.</p></li>
 <li><p><strong>vpc_id</strong> (<em>str</em>) – The id of the VPC that the desired Route Table belongs to.</p></li>

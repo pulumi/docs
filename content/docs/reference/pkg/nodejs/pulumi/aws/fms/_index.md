@@ -32,7 +32,7 @@ meta_desc: "Explore members of the fms module in the @pulumi/aws package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AdminAccount" data-link-title="AdminAccount">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L21">
         Resource <strong>AdminAccount</strong>
     </a>
 </h3>
@@ -53,7 +53,7 @@ const example = new aws.fms.AdminAccount("example", {});
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fms_admin_account.html.markdown.
 
 <h4 class="pdoc-member-header" id="AdminAccount-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L51"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L51"> <b>constructor</b></a>
 </h4>
 
 
@@ -67,7 +67,7 @@ Create a AdminAccount resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AdminAccount-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -78,14 +78,14 @@ Get an existing AdminAccount resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AdminAccount-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AdminAccount-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -96,7 +96,7 @@ Returns true if the given object is an instance of AdminAccount.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AdminAccount-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L51">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L51">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -104,7 +104,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The AWS account ID to associate with AWS Firewall Manager as the AWS Firewall Manager administrator account. This can be an AWS Organizations master account or a member account. Defaults to the current account. Must be configured to perform drift detection.
 
 <h4 class="pdoc-member-header" id="AdminAccount-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -113,7 +113,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AdminAccount-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -125,7 +125,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AdminAccountArgs" data-link-title="AdminAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L94">
         interface <strong>AdminAccountArgs</strong>
     </a>
 </h3>
@@ -135,7 +135,7 @@ deployments.
 The set of arguments for constructing a AdminAccount resource.
 
 <h4 class="pdoc-member-header" id="AdminAccountArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L98">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L98">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ The set of arguments for constructing a AdminAccount resource.
 The AWS account ID to associate with AWS Firewall Manager as the AWS Firewall Manager administrator account. This can be an AWS Organizations master account or a member account. Defaults to the current account. Must be configured to perform drift detection.
 
 <h3 class="pdoc-module-header" id="AdminAccountState" data-link-title="AdminAccountState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L84">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L84">
         interface <strong>AdminAccountState</strong>
     </a>
 </h3>
@@ -153,7 +153,7 @@ The AWS account ID to associate with AWS Firewall Manager as the AWS Firewall Ma
 Input properties used for looking up and filtering AdminAccount resources.
 
 <h4 class="pdoc-member-header" id="AdminAccountState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/fms/adminAccount.ts#L88">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/fms/adminAccount.ts#L88">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
