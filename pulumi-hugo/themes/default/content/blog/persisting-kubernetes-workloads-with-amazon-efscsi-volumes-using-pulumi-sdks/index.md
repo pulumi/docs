@@ -1,5 +1,6 @@
 ---
 title: "Persisting Kubernetes workloads with Amazon EFS CSI volumes using Pulumi open source SDKs"
+title_tag: "Persisting Kubernetes workloads with Amazon EFS CSI volumes"
 date: "2019-07-15"
 authors: ["nishi-davidson"]
 tags: ["AWS", "EKS", "Kubernetes"]

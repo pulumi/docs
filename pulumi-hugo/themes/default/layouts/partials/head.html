@@ -61,8 +61,10 @@
 
     {{ if .IsHome }}
         <title>{{ .Site.Title }}</title>
+    {{ else if .Params.title_tag }}
+        <title>{{ .Params.title_tag }} | Pulumi</title>
     {{ else if .Title }}
-        <title>{{ .Title }}</title>
+        <title>{{ .Title }} | Pulumi</title>
     {{ else if not (or .Params.redirect_to .Params.private) }}
         <!--
             TODO[pulumi/docs#1127]: can't enable this until Python docs are fixed.
@@ -110,7 +112,7 @@
 
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->
     {{ if and (not .IsHome) (.Section) (in "docs blog authors tags" .Section) }}
-        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script async defer src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
                 anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");

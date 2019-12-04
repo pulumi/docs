@@ -1,5 +1,6 @@
 ---
 title: "Architect AWS Application Infrastructure with Pulumi Stack References"
+title_tag: "Architect AWS Application Infrastructure with Stack References"
 date: "2019-10-17"
 meta_desc: "How to architect your AWS infrastructure to optimize team collaboration with Pulumi Stack References"
 meta_image: "application-architecture.png"
@@ -14,7 +15,7 @@ infrastructure in AWS:
 * AWS ALB as the entry point to the Fargate Service
 * AWS RDS Instance that is stored in a separate network from the Application and does not service traffic directly from the internet
 
-To do this, we are going to split the infrastructure into two AWS VPCs. One VPC will be used for the application based resources 
+To do this, we are going to split the infrastructure into two AWS VPCs. One VPC will be used for the application based resources
 (e.g Fargate Service, ALB) and the other VPC will be for the database resources. The VPCs will be peered to allow communication
 between them so that the application can communicate with the database securely.
 
@@ -24,7 +25,7 @@ between them so that the application can communicate with the database securely.
 
 When we think of infrastructure, we tend to think of layers. A layer is a logical set of components / resources that can be
 grouped together. In our case, we can think of the networking as a layer upon which our database and application can be built.
-For the purposes of this post, an infrastructure layer will be represented as a project in Pulumi. So let's break our application 
+For the purposes of this post, an infrastructure layer will be represented as a project in Pulumi. So let's break our application
 into separate Pulumi projects:
 
 ```bash
@@ -34,9 +35,9 @@ $ tree -d -L 1
 ├── database
 └── networking
 ```
-    
-This means all of the work required for the networking components can be in the network project. We can use 
-[Stack References](https://www.pulumi.com/docs/intro/concepts/organizing-stacks-projects/#inter-stack-dependencies) in Pulumi 
+
+This means all of the work required for the networking components can be in the network project. We can use
+[Stack References](https://www.pulumi.com/docs/intro/concepts/organizing-stacks-projects/#inter-stack-dependencies) in Pulumi
 to expose any required information from the networking layer, to the database and application layers.
 
 Let's create the networking project.
@@ -47,10 +48,10 @@ Let's create the networking project.
 $ cd networking && pulumi new aws-typescript
 $ pulumi config set aws:region us-east-2
 ```
-    
-This gives us the shell of our project we need to create our resources.  In thinking of how we build our networking resources, 
-we will create two copies of each resource due to separate VPCs for application and database. Of course, we can use a loop to do 
-this, but the more elegant way would be to create a class that we could pass parameters into to make life easy. We want an 
+
+This gives us the shell of our project we need to create our resources.  In thinking of how we build our networking resources,
+we will create two copies of each resource due to separate VPCs for application and database. Of course, we can use a loop to do
+this, but the more elegant way would be to create a class that we could pass parameters into to make life easy. We want an
 API as follows:
 
 ```typescript
@@ -67,10 +68,10 @@ const myVpc = new Vpc("my-vpc", {
     enableFlowLogs,
 });
 ```
-    
+
 We can see the power of Pulumi when we build our infrastructure with TypeScript. We create a TypeScript
-class that [extends](https://www.typescriptlang.org/docs/handbook/classes.html) Pulumi ComponentResource. ComponentResource 
-is a resource that aggregates one or more other child resources into a higher level abstraction. The component resource 
+class that [extends](https://www.typescriptlang.org/docs/handbook/classes.html) Pulumi ComponentResource. ComponentResource
+is a resource that aggregates one or more other child resources into a higher level abstraction. The component resource
 itself is a resource, but does not require custom create, read, update and delete operations for provisioning.
 
 The outline of the class will look as follows:
@@ -80,7 +81,7 @@ export class Vpc extends ComponentResource {
     // ...
 }
 ```
-    
+
 We want to pass a name and some custom parameters to the class, so we create an interface for the parameters:
 
 ```typescript
@@ -88,7 +89,7 @@ export interface VpcArgs {
     // ...
 }
 ```
-    
+
 We update our class with a constructor that allows us to create a new instance of the VPC class:
 
 ```typescript
@@ -96,11 +97,11 @@ export class Vpc extends ComponentResource {
    constructor(name: string, args: VpcArgs, opts?: ComponentResourceOptions) {
        super("vpc", name, {}, opts);
 
-       // ... resources here ...      
+       // ... resources here ...
     }
 }
 ```
-    
+
 After we implement all of the resources needed for our VPC, our Pulumi application looks like the following:
 
 ```typescript
@@ -132,7 +133,7 @@ async function main() {
 
 module.exports = main();
 ```
-    
+
 This application will create two instances of the VPC class containing all of the resources needed for a VPC. This
 reusable `VPC` class` is a more efficient way of building out infrastructure than to simply loop over the resources. We can
 take advantage of relating the resources to the correct parent to build out graph.
@@ -145,7 +146,7 @@ public configurePeering(args: PeerToArgs) {
     // ...
 }
 ```
-    
+
 This gives us the ability to peer the VPCs:
 
 ```typescript
@@ -156,15 +157,15 @@ appVpc.configurePeering({
 });
 ```
 
-After creating a similar member function for the peering security group, we instruct Pulumi to create the resources 
+After creating a similar member function for the peering security group, we instruct Pulumi to create the resources
 by running the command `pulumi up`. This displays a preview of changes first and the list of AWS resources it will create:
 
 ```bash
 $ pulumi up
 ```
-    
+
 After being prompted and selecting "yes", your deployment will begin. After completion, you will see:
-    
+
 ```bash
 ...
  +      │  ├─ aws:ec2:VpcEndpoint                  data-vpc-s3-endpoint                created
@@ -197,16 +198,16 @@ Resources:
 
 Duration: 3m8s
 ```
-    
+
 ### Building our Database Project
-   
+
 ```bash
 $ cd database && pulumi new aws-typescript
 $ pulumi config set aws:region us-east-2
 ```
 
 Our database project follows the same principals as the networking project - it has a RDS class that extends the
-Pulumi ComponentResource.  
+Pulumi ComponentResource.
 
 ```typescript
 export interface RdsArgs {
@@ -229,15 +230,15 @@ pulumi config set database-layer:dbName initialDb
 pulumi config set database-layer:dbPassword MyDBPassword1234! --secret
 ```
 
-The database project needs to access the details of the resources creating in the networking layer. To do this, we 
-use a Pulumi StackReference. We pass the correct stack name that the database project needs to talk to, 
-so we can pass that as a configuration option. A stack reference in Pulumi will follow the structure `org/project/stack`. 
+The database project needs to access the details of the resources creating in the networking layer. To do this, we
+use a Pulumi StackReference. We pass the correct stack name that the database project needs to talk to,
+so we can pass that as a configuration option. A stack reference in Pulumi will follow the structure `org/project/stack`.
 In our case it will be `stack72/networking-layer/dev` and we can pass that as a configuration option to the database project:
 
 ```bash
 $ pulumi config set networkingStack stack72/networking-layer/dev
 ```
-    
+
 Inside our database project, we can access any of the exported values from the networking project. The first thing we need
 access to is the database private subnet Ids. To access those subnetIds, we would do the following:
 
@@ -247,9 +248,9 @@ import {Config, StackReference} from "@pulumi/pulumi";
 const config = new Config();
 const networkingStack = new StackReference(config.require("networkingStack"))
 
-const subnetIds = networkingStack.getOutput("dataVpcPrivateSubnetIds") 
+const subnetIds = networkingStack.getOutput("dataVpcPrivateSubnetIds")
 ```
-    
+
 **Please Note:** We need to pass the exact name of the output as specified in the networking stack!
 
 Our database project looks like this:
@@ -278,14 +279,14 @@ const rds = new RdsInstance("db-instance", {
     securityGroupIds: [networkingStack.getOutput("peeredSecurityGroupId")],
 });
 ```
-    
-We can then instruct Pulumi to create our resources with a `pulumi up` command, as before. This will show you a preview 
+
+We can then instruct Pulumi to create our resources with a `pulumi up` command, as before. This will show you a preview
 of changes first and the list of AWS resources it will create:
-                                                                                           
+
 ```bash
 $ pulumi up
 ```
-   
+
 After being prompted and selecting "yes", your deployment will begin. After completion, you will see:
 
 ```bash
@@ -313,38 +314,38 @@ Resources:
 
 Duration: 7m49s
 ```
-    
+
 ### Building the Application Project
 
 ```bash
 $ cd application && pulumi new aws-typescript
 $ pulumi config set aws:region us-east-2
 ```
-    
+
 It will come as no surprise to you that we will build our application project in the same manner as that of networking and
-database. So we will have an `Application` class that extends Pulumi ComponentResource. 
+database. So we will have an `Application` class that extends Pulumi ComponentResource.
 
 ```typescript
 export interface ApplicationArgs {
     // ....
-}    
+}
 export class Application extends ComponentResource {
     constructor(name: string, args: ApplicationArgs, opts?: ComponentResourceOptions) {
         super("application", name, {}, opts);
 
         // ... resources here ...
-    }    
+    }
 }
 ```
-    
-The application project differs from the database project in that it needs stack references to the networking *and* database 
+
+The application project differs from the database project in that it needs stack references to the networking *and* database
 projects. Let's specify those via configuration as we did in the database project:
- 
+
 ```bash
 $ pulumi config set networkingStack stack72/networking-layer/dev
 $ pulumi config set databaseStack stack72/database-layer/dev
 ```
-    
+
 We can then access details like, database endpoint, database user, application Vpc Id within our application project:
 
 ```typescript
@@ -379,25 +380,25 @@ const app = new Application("app", {
 
 export const albAddress = app.albAddress();
 ```
-    
-Notice that we are taking advantage of the [Pulumi AWS Extensions](https://github.com/pulumi/pulumi-awsx). 
-Pulumi AWSX is a set of component wrappers around many AWS operations. In our case, we are taking advantage of being able 
-to create an AWS ECS container image from a known path to a [dockerfile](https://docs.docker.com/engine/reference/builder/). 
-This is a concise API that removes us from the need to run `docker build` as a separate process. It will happen as part of 
-our Pulumi application. 
 
-We can, again, instruct Pulumi to create our resources for us by issuing the `pulumi up` command. In the interactive output, 
-you will see how Pulumi interacts with docker and also see how it reads both of the stack references we told it to read 
+Notice that we are taking advantage of the [Pulumi AWS Extensions](https://github.com/pulumi/pulumi-awsx).
+Pulumi AWSX is a set of component wrappers around many AWS operations. In our case, we are taking advantage of being able
+to create an AWS ECS container image from a known path to a [dockerfile](https://docs.docker.com/engine/reference/builder/).
+This is a concise API that removes us from the need to run `docker build` as a separate process. It will happen as part of
+our Pulumi application.
+
+We can, again, instruct Pulumi to create our resources for us by issuing the `pulumi up` command. In the interactive output,
+you will see how Pulumi interacts with docker and also see how it reads both of the stack references we told it to read
 information from. It will also show you a preview of the changes and the list of AWS resources it will create:
-                                                                                                 
+
 ```bash
 $ pulumi up
 ```
-    
+
 ### Testing our application
 
-The application in this repository has a number of endpoints that we can use to test that the AWS ECS Fargate service is 
-working as expected. We can test them either from a browser or from the command line. We can access the service using the 
+The application in this repository has a number of endpoints that we can use to test that the AWS ECS Fargate service is
+working as expected. We can test them either from a browser or from the command line. We can access the service using the
 address of the AWS ALB that was created to serve traffic to the application. Let's test the endpoints from the CLI:
 
 ```bash
@@ -420,7 +421,7 @@ $ curl $(pulumi stack output albAddress)/postgres
   ]
 }
 ```
-    
+
 ```bash
 $ curl $(pulumi stack output albAddress)/internet
 I CAN connect to google.com%
@@ -430,7 +431,7 @@ I CAN connect to google.com%
 $ curl $(pulumi stack output albAddress)/public-ip
 <p>my external IP is: 52.24.188.63 (source: jsonip.com) </p>%
 ```
-    
+
 Our application is up and running and we can connect to it!
 
 ## Cleaning up
@@ -440,16 +441,16 @@ To cleanup the resources we created, we need to go into each project directory a
 ```bash
 $ pulumi destroy --yes && pulumi stack rm
 ```
-    
+
 Once the resources have been deleted, then we can follow the interactive prompt to delete the stack.
 
 ## Wrapping Up
 
 In this post, we have discussed how we would break our infrastructure into logically grouped projects and how we share
-information between these projects. You can find a runable version of this infrastructure in our 
-[examples](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) repository. 
+information between these projects. You can find a runable version of this infrastructure in our
+[examples](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) repository.
 
-This demonstrates the suggested way of architecting Pulumi applications both for operability and collaboration. 
+This demonstrates the suggested way of architecting Pulumi applications both for operability and collaboration.
 
-You can try this code today get started with Pulumi today at [https://www.pulumi.com](https://www.pulumi.com) and 
+You can try this code today get started with Pulumi today at [https://www.pulumi.com](https://www.pulumi.com) and
 following the [Getting Started](https://www.pulumi.com/docs/get-started/aws/) for managing AWS resources with Pulumi.
