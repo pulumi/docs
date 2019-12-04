@@ -32,7 +32,7 @@ meta_desc: "Explore members of the gcp module in the @pulumi/datadog package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Integration" data-link-title="Integration">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L32">
         Resource <strong>Integration</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesomeGcpProj
 > This content is derived from https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_gcp.html.markdown.
 
 <h4 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -78,7 +78,7 @@ Create a Integration resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -89,14 +89,14 @@ Get an existing Integration resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Returns true if the given object is an instance of Integration.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Integration-clientEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L62">property <b>clientEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L62">property <b>clientEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -115,7 +115,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Your email found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="Integration-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L66">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L66">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ Your email found in your JSON service account key.
 Your ID found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="Integration-hostFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L70">property <b>hostFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L70">property <b>hostFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -131,7 +131,7 @@ Your ID found in your JSON service account key.
 Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog.
 
 <h4 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -140,7 +140,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Integration-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L74">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L74">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -148,7 +148,7 @@ deployments and may be missing (undefined) during planning phases.
 Your private key name found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="Integration-privateKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L78">property <b>privateKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L78">property <b>privateKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -156,7 +156,7 @@ Your private key name found in your JSON service account key.
 Your private key ID found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="Integration-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L82">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L82">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ Your private key ID found in your JSON service account key.
 Your Google Cloud project ID found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -176,7 +176,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="IntegrationArgs" data-link-title="IntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L170">
         interface <strong>IntegrationArgs</strong>
     </a>
 </h3>
@@ -186,7 +186,7 @@ deployments.
 The set of arguments for constructing a Integration resource.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-clientEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L174">property <b>clientEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L174">property <b>clientEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ The set of arguments for constructing a Integration resource.
 Your email found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L178">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L178">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -202,7 +202,7 @@ Your email found in your JSON service account key.
 Your ID found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-hostFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L182">property <b>hostFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L182">property <b>hostFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -210,7 +210,7 @@ Your ID found in your JSON service account key.
 Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L186">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L186">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -218,7 +218,7 @@ Limit the GCE instances that are pulled into Datadog by using tags. Only hosts t
 Your private key name found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-privateKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L190">property <b>privateKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L190">property <b>privateKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ Your private key name found in your JSON service account key.
 Your private key ID found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L194">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L194">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ Your private key ID found in your JSON service account key.
 Your Google Cloud project ID found in your JSON service account key.
 
 <h3 class="pdoc-module-header" id="IntegrationState" data-link-title="IntegrationState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L140">
         interface <strong>IntegrationState</strong>
     </a>
 </h3>
@@ -244,7 +244,7 @@ Your Google Cloud project ID found in your JSON service account key.
 Input properties used for looking up and filtering Integration resources.
 
 <h4 class="pdoc-member-header" id="IntegrationState-clientEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L144">property <b>clientEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L144">property <b>clientEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -252,7 +252,7 @@ Input properties used for looking up and filtering Integration resources.
 Your email found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="IntegrationState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L148">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L148">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -260,7 +260,7 @@ Your email found in your JSON service account key.
 Your ID found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="IntegrationState-hostFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L152">property <b>hostFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L152">property <b>hostFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -268,7 +268,7 @@ Your ID found in your JSON service account key.
 Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog.
 
 <h4 class="pdoc-member-header" id="IntegrationState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L156">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L156">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -276,7 +276,7 @@ Limit the GCE instances that are pulled into Datadog by using tags. Only hosts t
 Your private key name found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="IntegrationState-privateKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L160">property <b>privateKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L160">property <b>privateKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -284,7 +284,7 @@ Your private key name found in your JSON service account key.
 Your private key ID found in your JSON service account key.
 
 <h4 class="pdoc-member-header" id="IntegrationState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/5662c362141cd910d0a8378f5d715a7493f3cee2/sdk/nodejs/gcp/integration.ts#L164">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/9793a4744e5adeec4e5984b9fe55556f2f2cd3c4/sdk/nodejs/gcp/integration.ts#L164">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
