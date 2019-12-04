@@ -13,6 +13,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-okta/issues">terraform-providers/terraform-provider-okta repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_okta.user"></span><dl class="class">
+<dt id="pulumi_okta.user.AwaitableGetUserProfileMappingSourceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">AwaitableGetUserProfileMappingSourceResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.AwaitableGetUserProfileMappingSourceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_okta.user.AwaitableGetUserResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">admin_roles=None</em>, <em class="sig-param">city=None</em>, <em class="sig-param">cost_center=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">custom_profile_attributes=None</em>, <em class="sig-param">department=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">division=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">employee_number=None</em>, <em class="sig-param">first_name=None</em>, <em class="sig-param">group_memberships=None</em>, <em class="sig-param">honorific_prefix=None</em>, <em class="sig-param">honorific_suffix=None</em>, <em class="sig-param">last_name=None</em>, <em class="sig-param">locale=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">manager=None</em>, <em class="sig-param">manager_id=None</em>, <em class="sig-param">middle_name=None</em>, <em class="sig-param">mobile_phone=None</em>, <em class="sig-param">nick_name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">postal_address=None</em>, <em class="sig-param">preferred_language=None</em>, <em class="sig-param">primary_phone=None</em>, <em class="sig-param">profile_url=None</em>, <em class="sig-param">searches=None</em>, <em class="sig-param">second_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">street_address=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">user_type=None</em>, <em class="sig-param">zip_code=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -139,6 +144,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_okta.user.GetUserProfileMappingSourceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">GetUserProfileMappingSourceResult</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.GetUserProfileMappingSourceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getUserProfileMappingSource.</p>
+<dl class="attribute">
+<dt id="pulumi_okta.user.GetUserProfileMappingSourceResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.user.GetUserProfileMappingSourceResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of source.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.user.GetUserProfileMappingSourceResult.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.user.GetUserProfileMappingSourceResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of source.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.user.GetUserProfileMappingSourceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.user.GetUserProfileMappingSourceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -614,7 +643,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_okta.user.User">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_roles=None</em>, <em class="sig-param">city=None</em>, <em class="sig-param">cost_center=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">custom_profile_attributes=None</em>, <em class="sig-param">department=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">division=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">employee_number=None</em>, <em class="sig-param">first_name=None</em>, <em class="sig-param">group_memberships=None</em>, <em class="sig-param">honorific_prefix=None</em>, <em class="sig-param">honorific_suffix=None</em>, <em class="sig-param">last_name=None</em>, <em class="sig-param">locale=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">manager=None</em>, <em class="sig-param">manager_id=None</em>, <em class="sig-param">middle_name=None</em>, <em class="sig-param">mobile_phone=None</em>, <em class="sig-param">nick_name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">postal_address=None</em>, <em class="sig-param">preferred_language=None</em>, <em class="sig-param">primary_phone=None</em>, <em class="sig-param">profile_url=None</em>, <em class="sig-param">second_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">street_address=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">user_type=None</em>, <em class="sig-param">zip_code=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_roles=None</em>, <em class="sig-param">city=None</em>, <em class="sig-param">cost_center=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">custom_profile_attributes=None</em>, <em class="sig-param">department=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">division=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">employee_number=None</em>, <em class="sig-param">first_name=None</em>, <em class="sig-param">group_memberships=None</em>, <em class="sig-param">honorific_prefix=None</em>, <em class="sig-param">honorific_suffix=None</em>, <em class="sig-param">last_name=None</em>, <em class="sig-param">locale=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">manager=None</em>, <em class="sig-param">manager_id=None</em>, <em class="sig-param">middle_name=None</em>, <em class="sig-param">mobile_phone=None</em>, <em class="sig-param">nick_name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">postal_address=None</em>, <em class="sig-param">preferred_language=None</em>, <em class="sig-param">primary_phone=None</em>, <em class="sig-param">profile_url=None</em>, <em class="sig-param">recovery_answer=None</em>, <em class="sig-param">recovery_question=None</em>, <em class="sig-param">second_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">street_address=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">user_type=None</em>, <em class="sig-param">zip_code=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Okta User.</p>
 <p>This resource allows you to create and configure an Okta User.</p>
 <dl class="field-list simple">
@@ -645,10 +674,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>mobile_phone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>nick_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User password.</p></li>
 <li><p><strong>postal_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>preferred_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>primary_phone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>profile_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
+<li><p><strong>recovery_answer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User password recovery answer.</p></li>
+<li><p><strong>recovery_question</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User password recovery question.</p></li>
 <li><p><strong>second_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
@@ -802,6 +834,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_okta.user.User.password">
+<code class="sig-name descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.user.User.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>User password.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_okta.user.User.postal_address">
 <code class="sig-name descname">postal_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.user.User.postal_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>User profile property.</p>
@@ -823,6 +861,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.user.User.profile_url">
 <code class="sig-name descname">profile_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.user.User.profile_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>User profile property.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.user.User.recovery_answer">
+<code class="sig-name descname">recovery_answer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.user.User.recovery_answer" title="Permalink to this definition">¶</a></dt>
+<dd><p>User password recovery answer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_okta.user.User.recovery_question">
+<code class="sig-name descname">recovery_question</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_okta.user.User.recovery_question" title="Permalink to this definition">¶</a></dt>
+<dd><p>User password recovery question.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -875,7 +925,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_okta.user.User.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_roles=None</em>, <em class="sig-param">city=None</em>, <em class="sig-param">cost_center=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">custom_profile_attributes=None</em>, <em class="sig-param">department=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">division=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">employee_number=None</em>, <em class="sig-param">first_name=None</em>, <em class="sig-param">group_memberships=None</em>, <em class="sig-param">honorific_prefix=None</em>, <em class="sig-param">honorific_suffix=None</em>, <em class="sig-param">last_name=None</em>, <em class="sig-param">locale=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">manager=None</em>, <em class="sig-param">manager_id=None</em>, <em class="sig-param">middle_name=None</em>, <em class="sig-param">mobile_phone=None</em>, <em class="sig-param">nick_name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">postal_address=None</em>, <em class="sig-param">preferred_language=None</em>, <em class="sig-param">primary_phone=None</em>, <em class="sig-param">profile_url=None</em>, <em class="sig-param">raw_status=None</em>, <em class="sig-param">second_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">street_address=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">user_type=None</em>, <em class="sig-param">zip_code=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.User.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_roles=None</em>, <em class="sig-param">city=None</em>, <em class="sig-param">cost_center=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">custom_profile_attributes=None</em>, <em class="sig-param">department=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">division=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">employee_number=None</em>, <em class="sig-param">first_name=None</em>, <em class="sig-param">group_memberships=None</em>, <em class="sig-param">honorific_prefix=None</em>, <em class="sig-param">honorific_suffix=None</em>, <em class="sig-param">last_name=None</em>, <em class="sig-param">locale=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">manager=None</em>, <em class="sig-param">manager_id=None</em>, <em class="sig-param">middle_name=None</em>, <em class="sig-param">mobile_phone=None</em>, <em class="sig-param">nick_name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">postal_address=None</em>, <em class="sig-param">preferred_language=None</em>, <em class="sig-param">primary_phone=None</em>, <em class="sig-param">profile_url=None</em>, <em class="sig-param">raw_status=None</em>, <em class="sig-param">recovery_answer=None</em>, <em class="sig-param">recovery_question=None</em>, <em class="sig-param">second_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">street_address=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">user_type=None</em>, <em class="sig-param">zip_code=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.User.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing User resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -907,10 +957,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>mobile_phone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>nick_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>organization</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User password.</p></li>
 <li><p><strong>postal_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>preferred_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>primary_phone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>profile_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
+<li><p><strong>recovery_answer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User password recovery answer.</p></li>
+<li><p><strong>recovery_question</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User password recovery question.</p></li>
 <li><p><strong>second_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User profile property.</p></li>
@@ -982,6 +1035,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/user.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/user.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_okta.user.get_user_profile_mapping_source">
+<code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">get_user_profile_mapping_source</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.get_user_profile_mapping_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to retrieve the base user Profile Mapping source or target from Okta.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/user_profile_mapping_source.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/user_profile_mapping_source.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
