@@ -44,7 +44,7 @@ meta_desc: "Explore members of the vpnaas module in the @pulumi/openstack packag
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="EndpointGroup" data-link-title="EndpointGroup">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L27">
         Resource <strong>EndpointGroup</strong>
     </a>
 </h3>
@@ -71,7 +71,7 @@ const group1 = new openstack.vpnaas.EndpointGroup("group1", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_endpoint_group_v2.html.markdown.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -85,7 +85,7 @@ Create a EndpointGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -96,14 +96,14 @@ Get an existing EndpointGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EndpointGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -114,7 +114,7 @@ Returns true if the given object is an instance of EndpointGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L58">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L58">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ The human-readable description for the group.
 Changing this updates the description of the existing group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L63">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L63">property <b>endpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -132,7 +132,7 @@ List of endpoints of the same type, for the endpoint group. The values will depe
 Changing this creates a new group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -141,7 +141,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ The name of the group. Changing this updates the name of
 the existing group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L75">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L75">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ A Networking client is needed to create an endpoint group. If omitted, the
 group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L80">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L80">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L85">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L85">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -179,7 +179,7 @@ The type of the endpoints in the group. A valid value is subnet, cidr, network, 
 Changing this creates a new group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -188,7 +188,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L89">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L89">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ deployments.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="IkePolicy" data-link-title="IkePolicy">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L23">
         Resource <strong>IkePolicy</strong>
     </a>
 </h3>
@@ -217,7 +217,7 @@ const policy1 = new openstack.vpnaas.IkePolicy("policy1", {});
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ike_policy_v2.html.markdown.
 
 <h4 class="pdoc-member-header" id="IkePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L108"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L108"> <b>constructor</b></a>
 </h4>
 
 
@@ -231,7 +231,7 @@ Create a IkePolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IkePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -242,14 +242,14 @@ Get an existing IkePolicy resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IkePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IkePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -260,7 +260,7 @@ Returns true if the given object is an instance of IkePolicy.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IkePolicy-authAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L54">property <b>authAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L54">property <b>authAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L59">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L59">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicy-encryptionAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L64">property <b>encryptionAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L64">property <b>encryptionAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptionAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -287,7 +287,7 @@ The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -296,7 +296,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IkePolicy-ikeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L69">property <b>ikeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L69">property <b>ikeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ikeVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -305,7 +305,7 @@ The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicy-lifetimes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L77">property <b>lifetimes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L77">property <b>lifetimes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lifetimes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#IkePolicyLifetime'>outputs.vpnaas.IkePolicyLifetime</a>[]&gt;;</code></pre>
@@ -317,7 +317,7 @@ Default is seconds.
 Default is 3600.
 
 <h4 class="pdoc-member-header" id="IkePolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -326,7 +326,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicy-pfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L87">property <b>pfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L87">property <b>pfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pfs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -335,7 +335,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicy-phase1NegotiationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L92">property <b>phase1NegotiationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L92">property <b>phase1NegotiationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>phase1NegotiationMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -344,7 +344,7 @@ The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicy-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L99">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L99">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -355,7 +355,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h4 class="pdoc-member-header" id="IkePolicy-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L104">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L104">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -364,7 +364,7 @@ The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
 
 <h4 class="pdoc-member-header" id="IkePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -373,7 +373,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="IkePolicy-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L108">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L108">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ deployments.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="IpSecPolicy" data-link-title="IpSecPolicy">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L23">
         Resource <strong>IpSecPolicy</strong>
     </a>
 </h3>
@@ -402,7 +402,7 @@ const policy1 = new openstack.vpnaas.IpSecPolicy("policy1", {});
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_ipsec_policy_v2.html.markdown.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L108"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L108"> <b>constructor</b></a>
 </h4>
 
 
@@ -416,7 +416,7 @@ Create a IpSecPolicy resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -427,14 +427,14 @@ Get an existing IpSecPolicy resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -445,7 +445,7 @@ Returns true if the given object is an instance of IpSecPolicy.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-authAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L54">property <b>authAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L54">property <b>authAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L59">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L59">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -463,7 +463,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-encapsulationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L64">property <b>encapsulationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L64">property <b>encapsulationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encapsulationMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -472,7 +472,7 @@ The encapsulation mode. Valid values are tunnel and transport. Default is tunnel
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-encryptionAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L69">property <b>encryptionAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L69">property <b>encryptionAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptionAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -481,7 +481,7 @@ The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -490,7 +490,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-lifetimes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L77">property <b>lifetimes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L77">property <b>lifetimes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lifetimes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#IpSecPolicyLifetime'>outputs.vpnaas.IpSecPolicyLifetime</a>[]&gt;;</code></pre>
@@ -502,7 +502,7 @@ Default is seconds.
 Default is 3600.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -511,7 +511,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-pfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L87">property <b>pfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L87">property <b>pfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pfs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -520,7 +520,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L94">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L94">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -531,7 +531,7 @@ A Networking client is needed to create an IPSec policy. If omitted, the
 policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L99">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L99">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-transformProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L104">property <b>transformProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L104">property <b>transformProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transformProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -549,7 +549,7 @@ The transform protocol. Valid values are ESP, AH and AH-ESP.
 Changing this updates the existing policy. Default is ESP.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -558,7 +558,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="IpSecPolicy-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L108">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L108">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ deployments.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L26">
         Resource <strong>Service</strong>
     </a>
 </h3>
@@ -590,7 +590,7 @@ const service1 = new openstack.vpnaas.Service("service1", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_service_v2.html.markdown.
 
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -604,7 +604,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -615,14 +615,14 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -633,7 +633,7 @@ Returns true if the given object is an instance of Service.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L57">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L57">property <b>adminStateUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -642,7 +642,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
 
 <h4 class="pdoc-member-header" id="Service-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L62">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -651,7 +651,7 @@ The human-readable description for the service.
 Changing this updates the description of the existing service.
 
 <h4 class="pdoc-member-header" id="Service-externalV4Ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L66">property <b>externalV4Ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L66">property <b>externalV4Ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalV4Ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -659,7 +659,7 @@ Changing this updates the description of the existing service.
 The read-only external (public) IPv4 address that is used for the VPN service.
 
 <h4 class="pdoc-member-header" id="Service-externalV6Ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L70">property <b>externalV6Ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L70">property <b>externalV6Ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalV6Ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -667,7 +667,7 @@ The read-only external (public) IPv4 address that is used for the VPN service.
 The read-only external (public) IPv6 address that is used for the VPN service.
 
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -676,7 +676,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -685,7 +685,7 @@ The name of the service. Changing this updates the name of
 the existing service.
 
 <h4 class="pdoc-member-header" id="Service-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L82">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L82">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -696,7 +696,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h4 class="pdoc-member-header" id="Service-routerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L86">property <b>routerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L86">property <b>routerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -704,7 +704,7 @@ service.
 The ID of the router. Changing this creates a new service.
 
 <h4 class="pdoc-member-header" id="Service-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L90">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L90">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -712,7 +712,7 @@ The ID of the router. Changing this creates a new service.
 Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
 
 <h4 class="pdoc-member-header" id="Service-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L94">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L94">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -720,7 +720,7 @@ Indicates whether IPsec VPN service is currently operational. Values are ACTIVE,
 SubnetID is the ID of the subnet. Default is null.
 
 <h4 class="pdoc-member-header" id="Service-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L99">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L99">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -729,7 +729,7 @@ The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
 
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -738,7 +738,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Service-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L103">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L103">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -746,7 +746,7 @@ deployments.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="SiteConnection" data-link-title="SiteConnection">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L31">
         Resource <strong>SiteConnection</strong>
     </a>
 </h3>
@@ -775,7 +775,7 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn1", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_site_connection_v2.html.markdown.
 
 <h4 class="pdoc-member-header" id="SiteConnection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L153"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L153"> <b>constructor</b></a>
 </h4>
 
 
@@ -789,7 +789,7 @@ Create a SiteConnection resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SiteConnection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -800,14 +800,14 @@ Get an existing SiteConnection resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SiteConnection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SiteConnection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -818,7 +818,7 @@ Returns true if the given object is an instance of SiteConnection.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SiteConnection-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L62">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L62">property <b>adminStateUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -827,7 +827,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnection-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L67">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L67">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -836,7 +836,7 @@ The human-readable description for the connection.
 Changing this updates the description of the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnection-dpds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L74">property <b>dpds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L74">property <b>dpds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dpds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SiteConnectionDpd'>outputs.vpnaas.SiteConnectionDpd</a>[]&gt;;</code></pre>
@@ -847,7 +847,7 @@ A valid value is clear, hold, restart, disabled, or restart-by-peer.
 Default value is hold.
 
 <h4 class="pdoc-member-header" id="SiteConnection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -856,7 +856,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SiteConnection-ikepolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L78">property <b>ikepolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L78">property <b>ikepolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ikepolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -864,7 +864,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the IKE policy. Changing this creates a new connection.
 
 <h4 class="pdoc-member-header" id="SiteConnection-initiator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L82">property <b>initiator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L82">property <b>initiator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>initiator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -872,7 +872,7 @@ The ID of the IKE policy. Changing this creates a new connection.
 A valid value is response-only or bi-directional. Default is bi-directional.
 
 <h4 class="pdoc-member-header" id="SiteConnection-ipsecpolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L86">property <b>ipsecpolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L86">property <b>ipsecpolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipsecpolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -880,7 +880,7 @@ A valid value is response-only or bi-directional. Default is bi-directional.
 The ID of the IPsec policy. Changing this creates a new connection.
 
 <h4 class="pdoc-member-header" id="SiteConnection-localEpGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L93">property <b>localEpGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L93">property <b>localEpGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>localEpGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -891,7 +891,7 @@ in backward- compatible mode where peerCidrs is provided with a subnetId for the
 Changing this updates the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnection-localId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L99">property <b>localId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L99">property <b>localId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>localId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -901,7 +901,7 @@ Most often, local ID would be domain name, email address, etc.
 If this is not configured then the external IP address will be used as the ID.
 
 <h4 class="pdoc-member-header" id="SiteConnection-mtu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L104">property <b>mtu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L104">property <b>mtu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mtu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -910,7 +910,7 @@ The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
 
 <h4 class="pdoc-member-header" id="SiteConnection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L109">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -919,7 +919,7 @@ The name of the connection. Changing this updates the name of
 the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnection-peerAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L113">property <b>peerAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L113">property <b>peerAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>peerAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -927,7 +927,7 @@ the existing connection.
 The peer gateway public IPv4 or IPv6 address or FQDN.
 
 <h4 class="pdoc-member-header" id="SiteConnection-peerCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L117">property <b>peerCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L117">property <b>peerCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>peerCidrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ The peer gateway public IPv4 or IPv6 address or FQDN.
 Unique list of valid peer private CIDRs in the form < netAddress > / < prefix > .
 
 <h4 class="pdoc-member-header" id="SiteConnection-peerEpGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L123">property <b>peerEpGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L123">property <b>peerEpGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>peerEpGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -945,7 +945,7 @@ You must specify this parameter with the localEpGroupId parameter unless in back
 where peerCidrs is provided with a subnetId for the VPN service.
 
 <h4 class="pdoc-member-header" id="SiteConnection-peerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L129">property <b>peerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L129">property <b>peerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>peerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -955,7 +955,7 @@ Typically, this value matches the peerAddress value.
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="SiteConnection-psk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L133">property <b>psk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L133">property <b>psk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>psk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -963,7 +963,7 @@ Changing this updates the existing policy.
 The pre-shared key. A valid value is any string.
 
 <h4 class="pdoc-member-header" id="SiteConnection-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L140">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L140">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -974,7 +974,7 @@ A Networking client is needed to create an IPSec site connection. If omitted, th
 site connection.
 
 <h4 class="pdoc-member-header" id="SiteConnection-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L145">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L145">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -983,7 +983,7 @@ The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
 
 <h4 class="pdoc-member-header" id="SiteConnection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -992,7 +992,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SiteConnection-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L149">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L149">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1000,7 +1000,7 @@ deployments.
 Map of additional options.
 
 <h4 class="pdoc-member-header" id="SiteConnection-vpnserviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L153">property <b>vpnserviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L153">property <b>vpnserviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpnserviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1011,7 +1011,7 @@ The ID of the VPN service. Changing this creates a new connection.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EndpointGroupArgs" data-link-title="EndpointGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L176">
         interface <strong>EndpointGroupArgs</strong>
     </a>
 </h3>
@@ -1021,7 +1021,7 @@ The ID of the VPN service. Changing this creates a new connection.
 The set of arguments for constructing a EndpointGroup resource.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L181">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L181">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1030,7 +1030,7 @@ The human-readable description for the group.
 Changing this updates the description of the existing group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L186">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L186">property <b>endpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1039,7 +1039,7 @@ List of endpoints of the same type, for the endpoint group. The values will depe
 Changing this creates a new group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L191">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L191">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ The name of the group. Changing this updates the name of
 the existing group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L198">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L198">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1059,7 +1059,7 @@ A Networking client is needed to create an endpoint group. If omitted, the
 group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L203">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L203">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1068,7 +1068,7 @@ The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L208">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L208">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1077,7 +1077,7 @@ The type of the endpoints in the group. A valid value is subnet, cidr, network, 
 Changing this creates a new group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L212">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L212">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1085,7 +1085,7 @@ Changing this creates a new group.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="EndpointGroupState" data-link-title="EndpointGroupState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L134">
         interface <strong>EndpointGroupState</strong>
     </a>
 </h3>
@@ -1095,7 +1095,7 @@ Map of additional options.
 Input properties used for looking up and filtering EndpointGroup resources.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L139">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L139">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1104,7 +1104,7 @@ The human-readable description for the group.
 Changing this updates the description of the existing group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L144">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L144">property <b>endpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1113,7 +1113,7 @@ List of endpoints of the same type, for the endpoint group. The values will depe
 Changing this creates a new group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L149">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1122,7 +1122,7 @@ The name of the group. Changing this updates the name of
 the existing group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L156">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L156">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ A Networking client is needed to create an endpoint group. If omitted, the
 group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L161">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L161">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1142,7 +1142,7 @@ The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L166">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L166">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1151,7 +1151,7 @@ The type of the endpoints in the group. A valid value is subnet, cidr, network, 
 Changing this creates a new group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/endpointGroup.ts#L170">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/endpointGroup.ts#L170">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1159,7 +1159,7 @@ Changing this creates a new group.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="IkePolicyArgs" data-link-title="IkePolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L226">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L226">
         interface <strong>IkePolicyArgs</strong>
     </a>
 </h3>
@@ -1169,7 +1169,7 @@ Map of additional options.
 The set of arguments for constructing a IkePolicy resource.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-authAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L231">property <b>authAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L231">property <b>authAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1178,7 +1178,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L236">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L236">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1187,7 +1187,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-encryptionAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L241">property <b>encryptionAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L241">property <b>encryptionAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1196,7 +1196,7 @@ The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-ikeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L246">property <b>ikeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L246">property <b>ikeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ikeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1205,7 +1205,7 @@ The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-lifetimes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L254">property <b>lifetimes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L254">property <b>lifetimes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IkePolicyLifetime'>inputs.vpnaas.IkePolicyLifetime</a>&gt;[]&gt;;</code></pre>
@@ -1217,7 +1217,7 @@ Default is seconds.
 Default is 3600.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L259">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L259">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1226,7 +1226,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-pfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L264">property <b>pfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L264">property <b>pfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1235,7 +1235,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-phase1NegotiationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L269">property <b>phase1NegotiationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L269">property <b>phase1NegotiationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>phase1NegotiationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1244,7 +1244,7 @@ The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L276">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L276">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1255,7 +1255,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L281">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L281">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1264,7 +1264,7 @@ The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyArgs-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L285">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L285">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1272,7 +1272,7 @@ create a service for another policy. Changing this creates a new policy.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="IkePolicyState" data-link-title="IkePolicyState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L161">
         interface <strong>IkePolicyState</strong>
     </a>
 </h3>
@@ -1282,7 +1282,7 @@ Map of additional options.
 Input properties used for looking up and filtering IkePolicy resources.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-authAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L166">property <b>authAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L166">property <b>authAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1291,7 +1291,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L171">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L171">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1300,7 +1300,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-encryptionAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L176">property <b>encryptionAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L176">property <b>encryptionAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1309,7 +1309,7 @@ The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-ikeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L181">property <b>ikeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L181">property <b>ikeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ikeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1318,7 +1318,7 @@ The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-lifetimes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L189">property <b>lifetimes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L189">property <b>lifetimes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IkePolicyLifetime'>inputs.vpnaas.IkePolicyLifetime</a>&gt;[]&gt;;</code></pre>
@@ -1330,7 +1330,7 @@ Default is seconds.
 Default is 3600.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1339,7 +1339,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-pfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L199">property <b>pfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L199">property <b>pfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1348,7 +1348,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-phase1NegotiationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L204">property <b>phase1NegotiationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L204">property <b>phase1NegotiationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>phase1NegotiationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1357,7 +1357,7 @@ The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L211">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L211">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1368,7 +1368,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L216">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L216">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1377,7 +1377,7 @@ The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
 
 <h4 class="pdoc-member-header" id="IkePolicyState-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ikePolicy.ts#L220">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ikePolicy.ts#L220">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1385,7 +1385,7 @@ create a service for another policy. Changing this creates a new policy.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="IpSecPolicyArgs" data-link-title="IpSecPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L226">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L226">
         interface <strong>IpSecPolicyArgs</strong>
     </a>
 </h3>
@@ -1395,7 +1395,7 @@ Map of additional options.
 The set of arguments for constructing a IpSecPolicy resource.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-authAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L231">property <b>authAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L231">property <b>authAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1404,7 +1404,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L236">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L236">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1413,7 +1413,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-encapsulationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L241">property <b>encapsulationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L241">property <b>encapsulationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encapsulationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1422,7 +1422,7 @@ The encapsulation mode. Valid values are tunnel and transport. Default is tunnel
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-encryptionAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L246">property <b>encryptionAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L246">property <b>encryptionAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1431,7 +1431,7 @@ The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-lifetimes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L254">property <b>lifetimes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L254">property <b>lifetimes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IpSecPolicyLifetime'>inputs.vpnaas.IpSecPolicyLifetime</a>&gt;[]&gt;;</code></pre>
@@ -1443,7 +1443,7 @@ Default is seconds.
 Default is 3600.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L259">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L259">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1452,7 +1452,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-pfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L264">property <b>pfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L264">property <b>pfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1461,7 +1461,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L271">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L271">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1472,7 +1472,7 @@ A Networking client is needed to create an IPSec policy. If omitted, the
 policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L276">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L276">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1481,7 +1481,7 @@ The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-transformProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L281">property <b>transformProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L281">property <b>transformProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1490,7 +1490,7 @@ The transform protocol. Valid values are ESP, AH and AH-ESP.
 Changing this updates the existing policy. Default is ESP.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyArgs-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L285">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L285">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1498,7 +1498,7 @@ Changing this updates the existing policy. Default is ESP.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="IpSecPolicyState" data-link-title="IpSecPolicyState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L161">
         interface <strong>IpSecPolicyState</strong>
     </a>
 </h3>
@@ -1508,7 +1508,7 @@ Map of additional options.
 Input properties used for looking up and filtering IpSecPolicy resources.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-authAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L166">property <b>authAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L166">property <b>authAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1517,7 +1517,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L171">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L171">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1526,7 +1526,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-encapsulationMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L176">property <b>encapsulationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L176">property <b>encapsulationMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encapsulationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1535,7 +1535,7 @@ The encapsulation mode. Valid values are tunnel and transport. Default is tunnel
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-encryptionAlgorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L181">property <b>encryptionAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L181">property <b>encryptionAlgorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1544,7 +1544,7 @@ The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-lifetimes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L189">property <b>lifetimes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L189">property <b>lifetimes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifetimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#IpSecPolicyLifetime'>inputs.vpnaas.IpSecPolicyLifetime</a>&gt;[]&gt;;</code></pre>
@@ -1556,7 +1556,7 @@ Default is seconds.
 Default is 3600.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1565,7 +1565,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-pfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L199">property <b>pfs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L199">property <b>pfs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pfs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1574,7 +1574,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L206">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L206">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1585,7 +1585,7 @@ A Networking client is needed to create an IPSec policy. If omitted, the
 policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L211">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L211">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1594,7 +1594,7 @@ The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-transformProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L216">property <b>transformProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L216">property <b>transformProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transformProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1603,7 +1603,7 @@ The transform protocol. Valid values are ESP, AH and AH-ESP.
 Changing this updates the existing policy. Default is ESP.
 
 <h4 class="pdoc-member-header" id="IpSecPolicyState-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/ipSecPolicy.ts#L220">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/ipSecPolicy.ts#L220">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1611,7 +1611,7 @@ Changing this updates the existing policy. Default is ESP.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L216">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L216">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
@@ -1621,7 +1621,7 @@ Map of additional options.
 The set of arguments for constructing a Service resource.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L221">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L221">property <b>adminStateUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1630,7 +1630,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L226">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L226">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1639,7 +1639,7 @@ The human-readable description for the service.
 Changing this updates the description of the existing service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L231">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L231">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1648,7 +1648,7 @@ The name of the service. Changing this updates the name of
 the existing service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L238">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L238">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1659,7 +1659,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-routerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L242">property <b>routerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L242">property <b>routerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1667,7 +1667,7 @@ service.
 The ID of the router. Changing this creates a new service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L246">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L246">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1675,7 +1675,7 @@ The ID of the router. Changing this creates a new service.
 SubnetID is the ID of the subnet. Default is null.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L251">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L251">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1684,7 +1684,7 @@ The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L255">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L255">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1692,7 +1692,7 @@ create a service for another project. Changing this creates a new service.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="ServiceState" data-link-title="ServiceState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L159">
         interface <strong>ServiceState</strong>
     </a>
 </h3>
@@ -1702,7 +1702,7 @@ Map of additional options.
 Input properties used for looking up and filtering Service resources.
 
 <h4 class="pdoc-member-header" id="ServiceState-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L164">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L164">property <b>adminStateUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1711,7 +1711,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
 
 <h4 class="pdoc-member-header" id="ServiceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L169">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L169">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1720,7 +1720,7 @@ The human-readable description for the service.
 Changing this updates the description of the existing service.
 
 <h4 class="pdoc-member-header" id="ServiceState-externalV4Ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L173">property <b>externalV4Ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L173">property <b>externalV4Ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalV4Ip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1728,7 +1728,7 @@ Changing this updates the description of the existing service.
 The read-only external (public) IPv4 address that is used for the VPN service.
 
 <h4 class="pdoc-member-header" id="ServiceState-externalV6Ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L177">property <b>externalV6Ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L177">property <b>externalV6Ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalV6Ip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1736,7 +1736,7 @@ The read-only external (public) IPv4 address that is used for the VPN service.
 The read-only external (public) IPv6 address that is used for the VPN service.
 
 <h4 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1745,7 +1745,7 @@ The name of the service. Changing this updates the name of
 the existing service.
 
 <h4 class="pdoc-member-header" id="ServiceState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L189">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L189">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1756,7 +1756,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h4 class="pdoc-member-header" id="ServiceState-routerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L193">property <b>routerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L193">property <b>routerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1764,7 +1764,7 @@ service.
 The ID of the router. Changing this creates a new service.
 
 <h4 class="pdoc-member-header" id="ServiceState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L197">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L197">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1772,7 +1772,7 @@ The ID of the router. Changing this creates a new service.
 Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
 
 <h4 class="pdoc-member-header" id="ServiceState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L201">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L201">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1780,7 +1780,7 @@ Indicates whether IPsec VPN service is currently operational. Values are ACTIVE,
 SubnetID is the ID of the subnet. Default is null.
 
 <h4 class="pdoc-member-header" id="ServiceState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L206">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L206">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1789,7 +1789,7 @@ The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
 
 <h4 class="pdoc-member-header" id="ServiceState-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/service.ts#L210">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/service.ts#L210">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1797,7 +1797,7 @@ create a service for another project. Changing this creates a new service.
 Map of additional options.
 
 <h3 class="pdoc-module-header" id="SiteConnectionArgs" data-link-title="SiteConnectionArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L342">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L342">
         interface <strong>SiteConnectionArgs</strong>
     </a>
 </h3>
@@ -1807,7 +1807,7 @@ Map of additional options.
 The set of arguments for constructing a SiteConnection resource.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L347">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L347">property <b>adminStateUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1816,7 +1816,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L352">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L352">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1825,7 +1825,7 @@ The human-readable description for the connection.
 Changing this updates the description of the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-dpds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L359">property <b>dpds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L359">property <b>dpds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dpds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SiteConnectionDpd'>inputs.vpnaas.SiteConnectionDpd</a>&gt;[]&gt;;</code></pre>
@@ -1836,7 +1836,7 @@ A valid value is clear, hold, restart, disabled, or restart-by-peer.
 Default value is hold.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-ikepolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L363">property <b>ikepolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L363">property <b>ikepolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ikepolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1844,7 +1844,7 @@ Default value is hold.
 The ID of the IKE policy. Changing this creates a new connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-initiator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L367">property <b>initiator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L367">property <b>initiator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initiator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1852,7 +1852,7 @@ The ID of the IKE policy. Changing this creates a new connection.
 A valid value is response-only or bi-directional. Default is bi-directional.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-ipsecpolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L371">property <b>ipsecpolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L371">property <b>ipsecpolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipsecpolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1860,7 +1860,7 @@ A valid value is response-only or bi-directional. Default is bi-directional.
 The ID of the IPsec policy. Changing this creates a new connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-localEpGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L378">property <b>localEpGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L378">property <b>localEpGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localEpGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1871,7 +1871,7 @@ in backward- compatible mode where peerCidrs is provided with a subnetId for the
 Changing this updates the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-localId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L384">property <b>localId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L384">property <b>localId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1881,7 +1881,7 @@ Most often, local ID would be domain name, email address, etc.
 If this is not configured then the external IP address will be used as the ID.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-mtu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L389">property <b>mtu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L389">property <b>mtu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1890,7 +1890,7 @@ The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L394">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L394">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1899,7 +1899,7 @@ The name of the connection. Changing this updates the name of
 the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-peerAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L398">property <b>peerAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L398">property <b>peerAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1907,7 +1907,7 @@ the existing connection.
 The peer gateway public IPv4 or IPv6 address or FQDN.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-peerCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L402">property <b>peerCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L402">property <b>peerCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1915,7 +1915,7 @@ The peer gateway public IPv4 or IPv6 address or FQDN.
 Unique list of valid peer private CIDRs in the form < netAddress > / < prefix > .
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-peerEpGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L408">property <b>peerEpGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L408">property <b>peerEpGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerEpGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1925,7 +1925,7 @@ You must specify this parameter with the localEpGroupId parameter unless in back
 where peerCidrs is provided with a subnetId for the VPN service.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-peerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L414">property <b>peerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L414">property <b>peerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1935,7 +1935,7 @@ Typically, this value matches the peerAddress value.
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-psk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L418">property <b>psk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L418">property <b>psk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>psk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1943,7 +1943,7 @@ Changing this updates the existing policy.
 The pre-shared key. A valid value is any string.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L425">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L425">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1954,7 +1954,7 @@ A Networking client is needed to create an IPSec site connection. If omitted, th
 site connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L430">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L430">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1963,7 +1963,7 @@ The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L434">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L434">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1971,7 +1971,7 @@ create a connection for another project. Changing this creates a new connection.
 Map of additional options.
 
 <h4 class="pdoc-member-header" id="SiteConnectionArgs-vpnserviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L438">property <b>vpnserviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L438">property <b>vpnserviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpnserviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1979,7 +1979,7 @@ Map of additional options.
 The ID of the VPN service. Changing this creates a new connection.
 
 <h3 class="pdoc-module-header" id="SiteConnectionState" data-link-title="SiteConnectionState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L240">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L240">
         interface <strong>SiteConnectionState</strong>
     </a>
 </h3>
@@ -1989,7 +1989,7 @@ The ID of the VPN service. Changing this creates a new connection.
 Input properties used for looking up and filtering SiteConnection resources.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-adminStateUp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L245">property <b>adminStateUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L245">property <b>adminStateUp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1998,7 +1998,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L250">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L250">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2007,7 +2007,7 @@ The human-readable description for the connection.
 Changing this updates the description of the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-dpds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L257">property <b>dpds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L257">property <b>dpds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dpds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SiteConnectionDpd'>inputs.vpnaas.SiteConnectionDpd</a>&gt;[]&gt;;</code></pre>
@@ -2018,7 +2018,7 @@ A valid value is clear, hold, restart, disabled, or restart-by-peer.
 Default value is hold.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-ikepolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L261">property <b>ikepolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L261">property <b>ikepolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ikepolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2026,7 +2026,7 @@ Default value is hold.
 The ID of the IKE policy. Changing this creates a new connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-initiator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L265">property <b>initiator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L265">property <b>initiator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initiator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2034,7 +2034,7 @@ The ID of the IKE policy. Changing this creates a new connection.
 A valid value is response-only or bi-directional. Default is bi-directional.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-ipsecpolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L269">property <b>ipsecpolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L269">property <b>ipsecpolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipsecpolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2042,7 +2042,7 @@ A valid value is response-only or bi-directional. Default is bi-directional.
 The ID of the IPsec policy. Changing this creates a new connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-localEpGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L276">property <b>localEpGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L276">property <b>localEpGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localEpGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2053,7 +2053,7 @@ in backward- compatible mode where peerCidrs is provided with a subnetId for the
 Changing this updates the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-localId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L282">property <b>localId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L282">property <b>localId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2063,7 +2063,7 @@ Most often, local ID would be domain name, email address, etc.
 If this is not configured then the external IP address will be used as the ID.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-mtu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L287">property <b>mtu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L287">property <b>mtu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2072,7 +2072,7 @@ The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L292">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L292">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2081,7 +2081,7 @@ The name of the connection. Changing this updates the name of
 the existing connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-peerAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L296">property <b>peerAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L296">property <b>peerAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2089,7 +2089,7 @@ the existing connection.
 The peer gateway public IPv4 or IPv6 address or FQDN.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-peerCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L300">property <b>peerCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L300">property <b>peerCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2097,7 +2097,7 @@ The peer gateway public IPv4 or IPv6 address or FQDN.
 Unique list of valid peer private CIDRs in the form < netAddress > / < prefix > .
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-peerEpGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L306">property <b>peerEpGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L306">property <b>peerEpGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerEpGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2107,7 +2107,7 @@ You must specify this parameter with the localEpGroupId parameter unless in back
 where peerCidrs is provided with a subnetId for the VPN service.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-peerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L312">property <b>peerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L312">property <b>peerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2117,7 +2117,7 @@ Typically, this value matches the peerAddress value.
 Changing this updates the existing policy.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-psk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L316">property <b>psk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L316">property <b>psk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>psk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2125,7 +2125,7 @@ Changing this updates the existing policy.
 The pre-shared key. A valid value is any string.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L323">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L323">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2136,7 +2136,7 @@ A Networking client is needed to create an IPSec site connection. If omitted, th
 site connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L328">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L328">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2145,7 +2145,7 @@ The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-valueSpecs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L332">property <b>valueSpecs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L332">property <b>valueSpecs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2153,7 +2153,7 @@ create a connection for another project. Changing this creates a new connection.
 Map of additional options.
 
 <h4 class="pdoc-member-header" id="SiteConnectionState-vpnserviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/32adc84e27af2e02d698654065bdf927fce1bb79/sdk/nodejs/vpnaas/siteConnection.ts#L336">property <b>vpnserviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a4f29d6b519c72a3a0487ce0e47dbd135c37903e/sdk/nodejs/vpnaas/siteConnection.ts#L336">property <b>vpnserviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpnserviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
