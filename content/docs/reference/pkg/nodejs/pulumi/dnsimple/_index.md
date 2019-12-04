@@ -71,112 +71,112 @@ import * as dnsimple from "@pulumi/dnsimple";
 
 <h2 id="RecordTypes" data-link-title="RecordTypes">namespace <strong>RecordTypes</strong></h2>
 <h3 class="pdoc-module-header" id="A" data-link-title="A">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L2">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L2">
         const <strong>A</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> A: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;A&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="AAAA" data-link-title="AAAA">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L3">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L3">
         const <strong>AAAA</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> AAAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;AAAA&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ALIAS" data-link-title="ALIAS">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L4">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L4">
         const <strong>ALIAS</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> ALIAS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;ALIAS&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CAA" data-link-title="CAA">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L5">
         const <strong>CAA</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> CAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CAA&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="CNAME" data-link-title="CNAME">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L6">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L6">
         const <strong>CNAME</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> CNAME: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CNAME&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="HINFO" data-link-title="HINFO">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L7">
         const <strong>HINFO</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> HINFO: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;HINFO&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="MX" data-link-title="MX">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L8">
         const <strong>MX</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> MX: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;MX&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NAPTR" data-link-title="NAPTR">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L9">
         const <strong>NAPTR</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> NAPTR: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NAPTR&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NS" data-link-title="NS">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L10">
         const <strong>NS</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> NS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NS&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="POOL" data-link-title="POOL">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L11">
         const <strong>POOL</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> POOL: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;POOL&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="PTR" data-link-title="PTR">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L12">
         const <strong>PTR</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> PTR: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;PTR&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SPF" data-link-title="SPF">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L13">
         const <strong>SPF</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SPF: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SPF&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SRV" data-link-title="SRV">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L14">
         const <strong>SRV</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SRV: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SRV&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SSHFP" data-link-title="SSHFP">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L15">
         const <strong>SSHFP</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> SSHFP: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SSHFP&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="TXT" data-link-title="TXT">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L16">
         const <strong>TXT</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>const</span> TXT: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;TXT&#34;</span>;</code></pre>
 <h3 class="pdoc-module-header" id="URL" data-link-title="URL">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L17">
         const <strong>URL</strong>
     </a>
 </h3>
@@ -185,7 +185,7 @@ import * as dnsimple from "@pulumi/dnsimple";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L15">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -200,7 +200,7 @@ construction to achieve fine-grained programmatic control over provider settings
 > This content is derived from https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/index.html.markdown.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L28"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L28"> <b>constructor</b></a>
 </h4>
 
 
@@ -214,14 +214,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L15">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L15">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L23">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L23">method <b>isInstance</b></a>
 </h4>
 
 
@@ -232,14 +232,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L15">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L15">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L15">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L15">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -248,7 +248,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L15">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L15">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -257,7 +257,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Record" data-link-title="Record">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L12">
         Resource <strong>Record</strong>
     </a>
 </h3>
@@ -267,7 +267,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/r/record.html.markdown.
 
 <h4 class="pdoc-member-header" id="Record-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -281,7 +281,7 @@ Create a Record resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Record-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -292,14 +292,14 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Record-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Record-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -310,7 +310,7 @@ Returns true if the given object is an instance of Record.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Record-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L42">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L42">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -318,7 +318,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The domain to add the record to
 
 <h4 class="pdoc-member-header" id="Record-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L46">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L46">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -326,7 +326,7 @@ The domain to add the record to
 The domain ID of the record
 
 <h4 class="pdoc-member-header" id="Record-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L50">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L50">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -334,7 +334,7 @@ The domain ID of the record
 The FQDN of the record
 
 <h4 class="pdoc-member-header" id="Record-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -343,7 +343,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Record-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -351,7 +351,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the record
 
 <h4 class="pdoc-member-header" id="Record-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L58">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L58">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ The name of the record
 The priority of the record - only useful for some record types
 
 <h4 class="pdoc-member-header" id="Record-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L62">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L62">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -367,7 +367,7 @@ The priority of the record - only useful for some record types
 The TTL of the record
 
 <h4 class="pdoc-member-header" id="Record-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L66">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L66">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</code></pre>
@@ -375,7 +375,7 @@ The TTL of the record
 The type of the record
 
 <h4 class="pdoc-member-header" id="Record-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -384,7 +384,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Record-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L70">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L70">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ The value of the record
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -404,7 +404,7 @@ The value of the record
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -413,7 +413,7 @@ The value of the record
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -422,7 +422,7 @@ The value of the record
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -431,7 +431,7 @@ The value of the record
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L59">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -441,7 +441,7 @@ The value of the record
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L63">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L63">property <b>account</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>account?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -449,7 +449,7 @@ The set of arguments for constructing a Provider resource.
 The account for API operations.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L67">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L67">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -457,7 +457,7 @@ The account for API operations.
 The DNSimple account email address.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/provider.ts#L71">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/provider.ts#L71">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -465,7 +465,7 @@ The DNSimple account email address.
 The API v2 token for API operations.
 
 <h3 class="pdoc-module-header" id="RecordArgs" data-link-title="RecordArgs">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L167">
         interface <strong>RecordArgs</strong>
     </a>
 </h3>
@@ -475,7 +475,7 @@ The API v2 token for API operations.
 The set of arguments for constructing a Record resource.
 
 <h4 class="pdoc-member-header" id="RecordArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L171">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L171">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -483,7 +483,7 @@ The set of arguments for constructing a Record resource.
 The domain to add the record to
 
 <h4 class="pdoc-member-header" id="RecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -491,7 +491,7 @@ The domain to add the record to
 The name of the record
 
 <h4 class="pdoc-member-header" id="RecordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L179">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L179">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -499,7 +499,7 @@ The name of the record
 The priority of the record - only useful for some record types
 
 <h4 class="pdoc-member-header" id="RecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L183">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L183">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -507,7 +507,7 @@ The priority of the record - only useful for some record types
 The TTL of the record
 
 <h4 class="pdoc-member-header" id="RecordArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L187">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L187">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</code></pre>
@@ -515,7 +515,7 @@ The TTL of the record
 The type of the record
 
 <h4 class="pdoc-member-header" id="RecordArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L191">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L191">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -523,7 +523,7 @@ The type of the record
 The value of the record
 
 <h3 class="pdoc-module-header" id="RecordState" data-link-title="RecordState">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L129">
         interface <strong>RecordState</strong>
     </a>
 </h3>
@@ -533,7 +533,7 @@ The value of the record
 Input properties used for looking up and filtering Record resources.
 
 <h4 class="pdoc-member-header" id="RecordState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L133">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L133">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ Input properties used for looking up and filtering Record resources.
 The domain to add the record to
 
 <h4 class="pdoc-member-header" id="RecordState-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L137">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L137">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -549,7 +549,7 @@ The domain to add the record to
 The domain ID of the record
 
 <h4 class="pdoc-member-header" id="RecordState-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L141">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L141">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -557,7 +557,7 @@ The domain ID of the record
 The FQDN of the record
 
 <h4 class="pdoc-member-header" id="RecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L145">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -565,7 +565,7 @@ The FQDN of the record
 The name of the record
 
 <h4 class="pdoc-member-header" id="RecordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L149">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L149">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -573,7 +573,7 @@ The name of the record
 The priority of the record - only useful for some record types
 
 <h4 class="pdoc-member-header" id="RecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L153">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L153">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -581,7 +581,7 @@ The priority of the record - only useful for some record types
 The TTL of the record
 
 <h4 class="pdoc-member-header" id="RecordState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L157">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L157">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</code></pre>
@@ -589,7 +589,7 @@ The TTL of the record
 The type of the record
 
 <h4 class="pdoc-member-header" id="RecordState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/record.ts#L161">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/record.ts#L161">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -597,7 +597,7 @@ The type of the record
 The value of the record
 
 <h3 class="pdoc-module-header" id="RecordType" data-link-title="RecordType">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/recordType.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/recordType.ts#L20">
         type <strong>RecordType</strong>
     </a>
 </h3>
