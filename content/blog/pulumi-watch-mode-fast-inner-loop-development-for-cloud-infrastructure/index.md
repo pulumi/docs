@@ -29,22 +29,24 @@ For Kubernetes, `pulumi watch` allows us to deploy changes to our cluster automa
 
 {{< youtube "X96EMLi8uJY?rel=0" >}}
 
-Both of the previous videos also highlight another interesting element of modern cloud infrastructure development.  In both the S3 example and the Kubernetes example, the Pulumi program deployed not just the infrastructure, but also the application code and assets.  By authoring and delivering both infrastructure and application code together, we remove another aspect of the silos that separate developers from infrastructure, and in doing so, unlock even faster iteration.  This is a pattern that Pulumi enables in a wide variety of unique ways, from Lambdas as lambdas, to build-and-push of Docker images, to deploying assets for static sites.  
+Both of the previous videos also highlight another interesting element of modern cloud infrastructure development.  In both the S3 example and the Kubernetes example, the Pulumi program deployed not just the infrastructure, but also the application code and assets.  By authoring and delivering both infrastructure and application code together, we remove another aspect of the silos that separate developers from infrastructure, and in doing so, unlock even faster iteration.  This is a pattern that Pulumi enables in a wide variety of unique ways, from Lambdas as lambdas, to build-and-push of Docker images, to deploying assets for static sites.
 
 ## From Zero to Cloud Application in 90 Seconds
 
-We can bring these ideas together, and show another example of what’s possible with `watch` mode using a serverless application example.  As with so many things these days,  a tweet inspired this example:
+We can bring these ideas together, and show another example of what’s possible with `watch` mode using a serverless application example.  As with so many things these days, a tweet inspired this example:
 
-{{< tweet 1184295790438580224 >}}
+> I want a website that does one thing: displays the number of times it's been viewed. What is the shortest number of steps you can think of to get it running in the cloud?
+>
+> — Slava Akhmechet ([@spakhm)](https://twitter.com/spakhm)
 
-Indeed, such simple tasks are often surprisingly complex and cumbersome with today’s infrastructure tools.  But with `pulumi watch` and the Pulumi Cloud Framework, we can go from nothing to having this application deployed in AWS (or Azure!) in under 90 seconds. 
+Indeed, such simple tasks are often surprisingly complex and cumbersome with today’s infrastructure tools.  But with `pulumi watch` and the Pulumi Cloud Framework, we can go from nothing to having this application deployed in AWS (or Azure!) in under 90 seconds.
 
 {{< youtube "FuYwsXLqnTk?rel=0" >}}
 
 # Conclusion
 
-When using `pulumi watch`, working with cloud infrastructure *feels* so different - it feels malleable, it feels accessible, and it feels like it’s right at your fingertips.  By building on the same robust incremental deployment infrastructure as the rest of Pulumi, you get the same access to any cloud, and to a variety of languages and all the other benefits of Pulumi’s modern infrastructure as code tooling.  Pulumi watch triggers a deploy on any save - including both of files in the Pulumi program itself, as well as other assets that the Pulumi program may reference like application source code or static assets.  Pulumi watch also displays [runtime logs]({{< relref "/blog/unified-logs-with-pulumi-logs" >}}) for supported platforms (Lambda, ECS, and Cloudwatch currently, more coming soon), and can be paired with another new feature, [Pulumi Query]({{< relref "/blog/query-kubernetes" >}}), to get customized status about the runtime environment during rapid iteration. 
+When using `pulumi watch`, working with cloud infrastructure *feels* so different - it feels malleable, it feels accessible, and it feels like it’s right at your fingertips.  By building on the same robust incremental deployment infrastructure as the rest of Pulumi, you get the same access to any cloud, and to a variety of languages and all the other benefits of Pulumi’s modern infrastructure as code tooling.  Pulumi watch triggers a deploy on any save - including both of files in the Pulumi program itself, as well as other assets that the Pulumi program may reference like application source code or static assets.  Pulumi watch also displays [runtime logs]({{< relref "/blog/unified-logs-with-pulumi-logs" >}}) for supported platforms (Lambda, ECS, and Cloudwatch currently, more coming soon), and can be paired with another new feature, [Pulumi Query]({{< relref "/blog/query-kubernetes" >}}), to get customized status about the runtime environment during rapid iteration.
 
-The `pulumi watch` command is available in preview now when the `PULUMI_EXPERIMENTAL` environment variable is set to `true`.  We are just getting started - and see many more opportunities to tighten the iteration cycle further, to support more logging capabilities, to integrate more deeply with `query`, and to be applied to more modern infrastructure scenarios.  
+The `pulumi watch` command is available in preview now when the `PULUMI_EXPERIMENTAL` environment variable is set to `true`.  We are just getting started - and see many more opportunities to tighten the iteration cycle further, to support more logging capabilities, to integrate more deeply with `query`, and to be applied to more modern infrastructure scenarios.
 
 [Give it a try]({{< relref "/docs/get-started" >}}) today and [drop us a note](https://github.com/pulumi/pulumi/issues/3448) about where you’d like to see this go for [Pulumi 2.0]({{< relref "/blog/pulumi-2-0-roadmap" >}})!
