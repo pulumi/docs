@@ -20,9 +20,11 @@
     </div>
 
     <!--
-        Minify and fingerprint script. Generated file will contain content
-        hash in filename, so no need to add query param to cache bust.
+        Minify and fingerprint script. Generated file will contain content hash in
+        filename, so no need to add query param to cache bust. Also note that because this
+        script references functions defined in the main bundle, we defer loading it until
+        that script's been evaluated.
     -->
     {{ $js := resources.Get "js/search.js" | resources.Minify | resources.Fingerprint }}
-    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 {{ end }}
