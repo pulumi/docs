@@ -1266,6 +1266,102 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_aws.lambda_.ProvisionedConcurrencyConfig">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">ProvisionedConcurrencyConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">provisioned_concurrent_executions=None</em>, <em class="sig-param">qualifier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.ProvisionedConcurrencyConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Lambda Provisioned Concurrency Configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>function_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or Amazon Resource Name (ARN) of the Lambda Function.</p></li>
+<li><p><strong>provisioned_concurrent_executions</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of capacity to allocate. Must be greater than or equal to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>qualifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Lambda Function version or Lambda Alias name.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_provisioned_concurrency_config.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_provisioned_concurrency_config.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.ProvisionedConcurrencyConfig.function_name">
+<code class="sig-name descname">function_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.ProvisionedConcurrencyConfig.function_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name or Amazon Resource Name (ARN) of the Lambda Function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.ProvisionedConcurrencyConfig.provisioned_concurrent_executions">
+<code class="sig-name descname">provisioned_concurrent_executions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.ProvisionedConcurrencyConfig.provisioned_concurrent_executions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amount of capacity to allocate. Must be greater than or equal to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.ProvisionedConcurrencyConfig.qualifier">
+<code class="sig-name descname">qualifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.ProvisionedConcurrencyConfig.qualifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lambda Function version or Lambda Alias name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.lambda_.ProvisionedConcurrencyConfig.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">provisioned_concurrent_executions=None</em>, <em class="sig-param">qualifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.ProvisionedConcurrencyConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProvisionedConcurrencyConfig resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>function_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or Amazon Resource Name (ARN) of the Lambda Function.</p></li>
+<li><p><strong>provisioned_concurrent_executions</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of capacity to allocate. Must be greater than or equal to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>qualifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Lambda Function version or Lambda Alias name.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_provisioned_concurrency_config.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_provisioned_concurrency_config.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.lambda_.ProvisionedConcurrencyConfig.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.ProvisionedConcurrencyConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.lambda_.ProvisionedConcurrencyConfig.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.ProvisionedConcurrencyConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pulumi_aws.lambda_.get_function">
 <code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">get_function</code><span class="sig-paren">(</span><em class="sig-param">function_name=None</em>, <em class="sig-param">qualifier=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.get_function" title="Permalink to this definition">¶</a></dt>

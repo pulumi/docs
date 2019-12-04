@@ -22,7 +22,8 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either a base-64 encoded PGP public key, or a
-keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.</p></li>
+keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>, for use
+in the <code class="docutils literal notranslate"><span class="pre">encrypted_secret</span></code> output attribute.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access key status to apply. Defaults to <code class="docutils literal notranslate"><span class="pre">Active</span></code>.
 Valid values are <code class="docutils literal notranslate"><span class="pre">Active</span></code> and <code class="docutils literal notranslate"><span class="pre">Inactive</span></code>.</p></li>
 <li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM user to associate with this access key.</p></li>
@@ -35,7 +36,7 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">Ac
 <dl class="attribute">
 <dt id="pulumi_aws.iam.AccessKey.encrypted_secret">
 <code class="sig-name descname">encrypted_secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.encrypted_secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>The encrypted secret, base64 encoded.</p>
+<dd><p>The encrypted secret, base64 encoded, if <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> was specified.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The encrypted secret may be decrypted using the command line,
 for example: <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">|</span> <span class="pre">base64</span> <span class="pre">--decode</span> <span class="pre">|</span> <span class="pre">keybase</span> <span class="pre">pgp</span> <span class="pre">decrypt</span></code>.</p>
@@ -53,15 +54,18 @@ the secret</p>
 <dt id="pulumi_aws.iam.AccessKey.pgp_key">
 <code class="sig-name descname">pgp_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.pgp_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Either a base-64 encoded PGP public key, or a
-keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.</p>
+keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>, for use
+in the <code class="docutils literal notranslate"><span class="pre">encrypted_secret</span></code> output attribute.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.AccessKey.secret">
 <code class="sig-name descname">secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>The secret access key. Note that this will be written
-to the state file. Please supply a <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> instead, which will prevent the
-secret from being stored in plain text</p>
+to the state file. If you use this, please protect your backend state file
+judiciously. Alternatively, you may supply a <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> instead, which will
+prevent the secret from being stored in plaintext, at the cost of preventing
+the use of the secret key in automation.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -96,7 +100,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>encrypted_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encrypted secret, base64 encoded.</p></li>
+<li><p><strong>encrypted_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encrypted secret, base64 encoded, if <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> was specified.</p></li>
 </ul>
 </dd>
 </dl>
@@ -110,10 +114,13 @@ for example: `... | base64 --decode | keybase pgp decrypt`.
 <li><p><strong>key_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint of the PGP key used to encrypt
 the secret</p></li>
 <li><p><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either a base-64 encoded PGP public key, or a
-keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.</p></li>
+keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>, for use
+in the <code class="docutils literal notranslate"><span class="pre">encrypted_secret</span></code> output attribute.</p></li>
 <li><p><strong>secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret access key. Note that this will be written
-to the state file. Please supply a <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> instead, which will prevent the
-secret from being stored in plain text</p></li>
+to the state file. If you use this, please protect your backend state file
+judiciously. Alternatively, you may supply a <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> instead, which will
+prevent the secret from being stored in plaintext, at the cost of preventing
+the use of the secret key in automation.</p></li>
 <li><p><strong>ses_smtp_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The secret access key converted into an SES SMTP
 password by applying <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert">AWS’s documented conversion
 algorithm</a>.</p>
