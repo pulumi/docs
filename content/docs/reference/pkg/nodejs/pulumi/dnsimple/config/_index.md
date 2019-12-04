@@ -31,7 +31,7 @@ meta_desc: "Explore members of the config module in the @pulumi/dnsimple package
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="account" data-link-title="account">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/config/vars.ts#L12">
         let <strong>account</strong>
     </a>
 </h3>
@@ -41,7 +41,7 @@ meta_desc: "Explore members of the config module in the @pulumi/dnsimple package
 The account for API operations.
 
 <h3 class="pdoc-module-header" id="email" data-link-title="email">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/config/vars.ts#L16">
         let <strong>email</strong>
     </a>
 </h3>
@@ -51,7 +51,7 @@ The account for API operations.
 The DNSimple account email address.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/3a88668b184c4cbc4a3063a13d6d2a11f11eb637/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/af05605c9ffa062d492c95626894c1cee7fddb6e/sdk/nodejs/config/vars.ts#L20">
         let <strong>token</strong>
     </a>
 </h3>
