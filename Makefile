@@ -55,34 +55,22 @@ validate:
 travis_push::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),staging)
-	HUGO_ENVIRONMENT=staging $(MAKE) build
-	$(MAKE) validate
-	./scripts/run-pulumi.sh update staging
-else ifeq ($(TRAVIS_BRANCH),master)
+ifeq ($(TRAVIS_BRANCH),master)
 	HUGO_ENVIRONMENT=production $(MAKE) build
-	$(MAKE) validate
 	./scripts/run-pulumi.sh update production
 else
 	$(MAKE) build
-	$(MAKE) validate
 endif
 
 .PHONY: travis_pull_request
 travis_pull_request::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),staging)
-	HUGO_ENVIRONMENT=staging $(MAKE) build
-	$(MAKE) validate
-	./scripts/run-pulumi.sh preview staging
-else ifeq ($(TRAVIS_BRANCH),master)
+ifeq ($(TRAVIS_BRANCH),master)
 	HUGO_ENVIRONMENT=production $(MAKE) build
-	$(MAKE) validate
 	./scripts/run-pulumi.sh preview production
 else
 	$(MAKE) build
-	$(MAKE) validate
 endif
 
 .PHONY: travis_cron
