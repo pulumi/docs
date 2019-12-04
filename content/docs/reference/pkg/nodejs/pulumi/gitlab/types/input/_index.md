@@ -22,14 +22,14 @@ meta_desc: "Explore members of the input module in the @pulumi/gitlab package."
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ProjectSharedWithGroup" data-link-title="ProjectSharedWithGroup">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/b82b1299032b1a5be8fecac958a42440ab386f46/sdk/nodejs/types/input.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/bf159531ff548f1caca12ba74603d1bc496f8f0e/sdk/nodejs/types/input.ts#L7">
         interface <strong>ProjectSharedWithGroup</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProjectSharedWithGroup</span></code></pre>
 <h4 class="pdoc-member-header" id="ProjectSharedWithGroup-groupAccessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/b82b1299032b1a5be8fecac958a42440ab386f46/sdk/nodejs/types/input.ts#L12">property <b>groupAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/bf159531ff548f1caca12ba74603d1bc496f8f0e/sdk/nodejs/types/input.ts#L12">property <b>groupAccessLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupAccessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -38,7 +38,7 @@ Group's sharing permissions. See [group members permission][groupMembersPermissi
 Valid values are `guest`, `reporter`, `developer`, `master`.
 
 <h4 class="pdoc-member-header" id="ProjectSharedWithGroup-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/b82b1299032b1a5be8fecac958a42440ab386f46/sdk/nodejs/types/input.ts#L16">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/bf159531ff548f1caca12ba74603d1bc496f8f0e/sdk/nodejs/types/input.ts#L16">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -46,7 +46,7 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 Group id of the group you want to share the project with.
 
 <h4 class="pdoc-member-header" id="ProjectSharedWithGroup-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/b82b1299032b1a5be8fecac958a42440ab386f46/sdk/nodejs/types/input.ts#L20">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/bf159531ff548f1caca12ba74603d1bc496f8f0e/sdk/nodejs/types/input.ts#L20">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
