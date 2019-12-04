@@ -21,6 +21,7 @@ meta_desc: "Explore members of the config module in the @pulumi/linode package."
 
 <h3>APIs</h3>
 <ul class="api">
+    <li><a href="#apiVersion"><span class="symbol api"></span>apiVersion</a></li>
     <li><a href="#token"><span class="symbol api"></span>token</a></li>
     <li><a href="#uaPrefix"><span class="symbol api"></span>uaPrefix</a></li>
     <li><a href="#url"><span class="symbol api"></span>url</a></li>
@@ -30,8 +31,18 @@ meta_desc: "Explore members of the config module in the @pulumi/linode package."
 
 
 <h2 id="apis">APIs</h2>
+<h3 class="pdoc-module-header" id="apiVersion" data-link-title="apiVersion">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/config/vars.ts#L12">
+        let <strong>apiVersion</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kd'>let</span> apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiVersion&#34;)</span>;</code></pre>
+
+An HTTP User-Agent Prefix to prepend in API requests.
+
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/aef133b3f024dbc1f8ac4b1018d29d83581cf09c/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/config/vars.ts#L16">
         let <strong>token</strong>
     </a>
 </h3>
@@ -41,7 +52,7 @@ meta_desc: "Explore members of the config module in the @pulumi/linode package."
 The token that allows you access to your Linode account
 
 <h3 class="pdoc-module-header" id="uaPrefix" data-link-title="uaPrefix">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/aef133b3f024dbc1f8ac4b1018d29d83581cf09c/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/config/vars.ts#L20">
         let <strong>uaPrefix</strong>
     </a>
 </h3>
@@ -51,7 +62,7 @@ The token that allows you access to your Linode account
 An HTTP User-Agent Prefix to prepend in API requests.
 
 <h3 class="pdoc-module-header" id="url" data-link-title="url">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/aef133b3f024dbc1f8ac4b1018d29d83581cf09c/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/44366ff3a92093fe7d76a1403fafb46096d3fb42/sdk/nodejs/config/vars.ts#L24">
         let <strong>url</strong>
     </a>
 </h3>
