@@ -8,27 +8,27 @@ date: "2019-12-04"
 meta_image: "pulumi-eks-fargate.png"
 ---
 
-AWS announced two new features just this week aimed at simplifying cluster management in their managed Kubernetes offering, Elastic Kubernetes Service (EKS): Managed Node Groups and Fargate support. We are now happy to announce that we've integrated support for both of these, including easy-to-use APIs in Pulumi Crosswalk, to the base EKS support customers have been using to run clusters in production since the service became generally available over a year ago. The result is a great spectrum of options for managing your cluster's compute &mdash; offering ease-of-use, in addition to full control and flexibility, based on your needs.
+AWS announced two new features just this week to simplify your Elastic Kubernetes Service (EKS) clusters: Managed Node Groups and Fargate support. We're happy to announce that we've integrated support for both, including easy-to-use APIs in Pulumi Crosswalk, augmenting the base EKS support available since the service became generally available over a year ago. The result is a great spectrum of options for managing your cluster's compute &mdash; offering ease-of-use, in addition to full control and flexibility, based on your needs.
 
-## EKS and Your Options
+## Managing EKS Workers
 
-As of these new announcements, you have three primary options for powering your Kubernetes clusters:
+You now have three primary options for powering your EKS clusters:
 
-* **Fargate**: Let AWS Fargate manage and scale your pods automatically and dynamically as needed
-* **Managed Node Groups**: Let EKS manage and scale node pools based on declarative capacity specifications
-* **EC2**: Manage EKS clusters by hand, using explicit node groups, EC2 instances, and Auto Scaling Groups (ASG)
+* **Fargate**: Let AWS Fargate manage and scale nodes automatically and dynamically as needed
+* **Managed Node Groups**: Let EKS manage and scale nodes based on declarative capacity specifications
+* **EC2**: Manage EKS clusters by hand using explicit node groups, EC2 instances, and Auto Scaling Groups
 
-These options control how your cluster's worker nodes are provisioned, managed, and scale. These worker nodes are what physically run the compute and host the storage used by your Kubernetes pods. The spectrum of options available provide a range of flexibility, from least control to most control for these worker nodes.
+These options control how your cluster's worker nodes are provisioned, managed, and scaled. These worker nodes are what physically run the compute and host the storage used by your Kubernetes pods, and impact the cost and ability for your cluster to meet workload demands. The spectrum of options available provides a range of flexibility, from least control to most control, over these worker nodes.
 
-As Abby put it:
+We liked how Abby Fuller at AWS explained this succinctly on Twitter:
 
 {{< tweet 1202020186234048512 >}}
 
-Let's now see how each of these work. To fully appreciate the simplifications afforded by the easier options, we will go in the reverse order &mdash; from most control and most difficult, to the least control and easiest, option.
+Let's now see how each of these work. To fully appreciate the new features, we will go in the reverse order &mdash; from most control and most difficult, to the least control and easiest, option.
 
 ## Provisioning EKS Clusters
 
-Running a Kubernetes cluster isn't easy, but Amazon EKS makes the task of doing so much simpler. It offers out-of-the-box integrations with essential AWS sevices like IAM, EBS, Route53, and CloudWatch.
+Running a Kubernetes cluster isn't easy, but Amazon EKS makes the task of doing so much simpler. It offers out-of-the-box integrations with essential AWS sevices like IAM, EBS, Route53, and CloudWatch, so that your EKS clusters fit with your existing AWS security, storage, and monitoring practices.
 
 It is great to have all of the building blocks at your fingertips, and the `@pulumi/aws` package [exposes all of the raw capabilities of EKS to you](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#Cluster). We also created the `@pulumi/eks` package to simplify common tasks, however, including provisioning the Kubernetes data plane, configuring VPC/CNI and subnet networking, and managing node groups &mdash; this is what we'll use in our examples.
 
@@ -208,13 +208,13 @@ const nodeGroup = cluster.createNodeGroup("my-cluster-ng", {
 export const kubeconfig = cluster.kubeconfig;
 ```
 
-There is even more you can do here, including digging deep into the individual EC2 instances and Auto Scaling Groups (ASGs) powering the node group. Needing to manage workers at this level, and connect them to the right IAM and networking services, can be tedious and difficult to get right. That's where the new AWS features come into play.
+There is even more you can do here, including digging deep into the individual EC2 instances and Auto Scaling Groups powering the node group. Needing to manage workers at this level, and connect them to the right IAM and networking services, can be tedious and difficult to get right. That's where the new AWS features come into play.
 
 ## Automatically Managed Node Groups
 
 The new EKS feature [Managed Node Groups](https://aws.amazon.com/blogs/containers/eks-managed-node-groups/) simplifies the task of managing explicit pools of worker nodes, at the cost of some amount of control. The `@pulumi/eks` package already had many of these conveniences built-in but this is now an official feature of the AWS platform.
 
-Managed Node Groups will automatically scale the EC2 instances powering your cluster using an Auto Scaling Group (ASG) managed by EKS. This ASG also runs the latest Amazon EKS-optimized Amazon Linux 2 AMI. This is great on one hand &mdash; because updates will be applied automatically for you &mdash; but if you want control over this you will want to manage your own node groups. Finally, security groups, IAM roles, and connecting them together is handled for you.
+Managed Node Groups will automatically scale the EC2 instances powering your cluster using an Auto Scaling Group managed by EKS. This ASG also runs the latest Amazon EKS-optimized Amazon Linux 2 AMI. This is great on one hand &mdash; because updates will be applied automatically for you &mdash; but if you want control over this you will want to manage your own node groups. Finally, security groups, IAM roles, and connecting them together is handled for you.
 
 To opt-in to using Managed Node Groups, the raw [`aws.eks.NodeGroup` building block](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#NodeGroup) is available. However, we've added the `eks.Cluster.createManagedNodeGroup` function to make it easier, and to integrate with cluster provisioning.
 
@@ -351,6 +351,6 @@ In this article, we've seen the full range of EKS cluster management options:
 * Managed Node Groups, enabling more control, while still leveraging EKS to auto-scale
 * EC2, for full control over your cluster's compute pools and nodes
 
-Pulumi is excited to be able to offer support for this full range of options just a day after the features were announced at AWS re:Invent this week, including to enlightening `eks.Cluster` itself for ease-of-use.
+We're excited to offer support for this full range of options just a day after the features were announced at AWS re:Invent this week, including to enlightening `eks.Cluster` itself for ease-of-use.
 
-To get started with Pulumi and try out these features, check out our [Getting Started guide](https://www.pulumi.com/docs/get-started/).
+To get started with Pulumi and try out EKS, check out our [Getting Started guide](https://www.pulumi.com/docs/get-started/).
