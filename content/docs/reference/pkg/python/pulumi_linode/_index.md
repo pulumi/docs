@@ -38,6 +38,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_linode.AwaitableGetObjectStorageClusterResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">AwaitableGetObjectStorageClusterResult</code><span class="sig-paren">(</span><em class="sig-param">domain=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">static_site_domain=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetObjectStorageClusterResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_linode.AwaitableGetProfileResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">AwaitableGetProfileResult</code><span class="sig-paren">(</span><em class="sig-param">authorized_keys=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">email_notifications=None</em>, <em class="sig-param">ip_whitelist_enabled=None</em>, <em class="sig-param">lish_auth_method=None</em>, <em class="sig-param">referrals=None</em>, <em class="sig-param">restricted=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">two_factor_auth=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.AwaitableGetProfileResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -453,6 +458,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.GetObjectStorageClusterResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">GetObjectStorageClusterResult</code><span class="sig-paren">(</span><em class="sig-param">domain=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">static_site_domain=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.GetObjectStorageClusterResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getObjectStorageCluster.</p>
 </dd></dl>
 
 <dl class="class">
@@ -1453,8 +1464,181 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_linode.ObjectStorageBucket">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">ObjectStorageBucket</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageBucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Linode Object Storage Bucket resource. This can be used to create, modify, and delete Linodes Object Storage Buckets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster of the Linode Object Storage Bucket.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The label of the Linode Object Storage Bucket.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_bucket.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_linode.ObjectStorageBucket.cluster">
+<code class="sig-name descname">cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.ObjectStorageBucket.cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cluster of the Linode Object Storage Bucket.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_linode.ObjectStorageBucket.label">
+<code class="sig-name descname">label</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.ObjectStorageBucket.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>The label of the Linode Object Storage Bucket.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_linode.ObjectStorageBucket.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageBucket.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ObjectStorageBucket resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster of the Linode Object Storage Bucket.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The label of the Linode Object Storage Bucket.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_bucket.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_linode.ObjectStorageBucket.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageBucket.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_linode.ObjectStorageBucket.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageBucket.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_linode.ObjectStorageKey">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">ObjectStorageKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Linode Object Storage Key resource. This can be used to create, modify, and delete Linodes Object Storage Keys.</p>
+<p>This resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> - This keypair’s access key. This is not secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> - This keypair’s secret key.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The label given to this key. For display purposes only.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_key.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_key.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_linode.ObjectStorageKey.label">
+<code class="sig-name descname">label</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_linode.ObjectStorageKey.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>The label given to this key. For display purposes only.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_linode.ObjectStorageKey.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_key=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">secret_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageKey.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ObjectStorageKey resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The label given to this key. For display purposes only.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_key.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_key.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_linode.ObjectStorageKey.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageKey.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_linode.ObjectStorageKey.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageKey.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_linode.Provider">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">ua_prefix=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">ua_prefix=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the linode package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -2196,6 +2380,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/networking_ip.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/networking_ip.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_linode.get_object_storage_cluster">
+<code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_object_storage_cluster</code><span class="sig-paren">(</span><em class="sig-param">domain=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">static_site_domain=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_object_storage_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides information about a Linode Object Storage Cluster</p>
+<p>The Linode Object Storage Cluster resource exports the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> - The base URL for this cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> - This cluster’s status.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> - The region this cluster is located in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static_site_domain</span></code> - The base URL for this cluster used when hosting static sites.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The unique ID of this cluster.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/object_storage_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/object_storage_cluster.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
