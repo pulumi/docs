@@ -75,7 +75,7 @@ meta_desc: "Explore members of the ecs module in the @pulumi/aws package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L30">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -103,7 +103,7 @@ The `setting` configuration block supports the following:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown.
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -117,7 +117,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -128,14 +128,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -146,7 +146,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L60">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L60">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) that identifies the cluster
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -163,7 +163,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -171,7 +171,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 
 <h4 class="pdoc-member-header" id="Cluster-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L68">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L68">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterSetting'>outputs.ecs.ClusterSetting</a>[]&gt;;</code></pre>
@@ -179,7 +179,7 @@ The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L72">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L72">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -187,7 +187,7 @@ Configuration block(s) with cluster settings. For example, this can be used to e
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -196,7 +196,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L106">
         Resource <strong>Service</strong>
     </a>
 </h3>
@@ -300,7 +300,7 @@ For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonEC
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown.
 
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L217"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L217"> <b>constructor</b></a>
 </h4>
 
 
@@ -314,7 +314,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L115">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L115">method <b>get</b></a>
 </h4>
 
 
@@ -325,14 +325,14 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L106">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L106">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L126">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L126">method <b>isInstance</b></a>
 </h4>
 
 
@@ -343,7 +343,7 @@ Returns true if the given object is an instance of Service.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L136">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L136">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -351,7 +351,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 ARN of an ECS cluster
 
 <h4 class="pdoc-member-header" id="Service-deploymentController">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L140">property <b>deploymentController</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L140">property <b>deploymentController</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentController: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceDeploymentController'>outputs.ecs.ServiceDeploymentController</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ ARN of an ECS cluster
 Configuration block containing deployment controller configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="Service-deploymentMaximumPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L144">property <b>deploymentMaximumPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L144">property <b>deploymentMaximumPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentMaximumPercent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -367,7 +367,7 @@ Configuration block containing deployment controller configuration. Defined belo
 The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 
 <h4 class="pdoc-member-header" id="Service-deploymentMinimumHealthyPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L148">property <b>deploymentMinimumHealthyPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L148">property <b>deploymentMinimumHealthyPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentMinimumHealthyPercent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -375,7 +375,7 @@ The upper limit (as a percentage of the service's desiredCount) of the number of
 The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
 
 <h4 class="pdoc-member-header" id="Service-desiredCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L152">property <b>desiredCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L152">property <b>desiredCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>desiredCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -383,7 +383,7 @@ The lower limit (as a percentage of the service's desiredCount) of the number of
 The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
 
 <h4 class="pdoc-member-header" id="Service-enableEcsManagedTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L156">property <b>enableEcsManagedTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L156">property <b>enableEcsManagedTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableEcsManagedTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ The number of instances of the task definition to place and keep running. Defaul
 Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 
 <h4 class="pdoc-member-header" id="Service-healthCheckGracePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L160">property <b>healthCheckGracePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L160">property <b>healthCheckGracePeriodSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckGracePeriodSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ Specifies whether to enable Amazon ECS managed tags for the tasks within the ser
 Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
 
 <h4 class="pdoc-member-header" id="Service-iamRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L164">property <b>iamRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L164">property <b>iamRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ Seconds to ignore failing load balancer health checks on newly instantiated task
 ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
 
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L106">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L106">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -416,7 +416,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-launchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L168">property <b>launchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L168">property <b>launchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>launchType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -424,7 +424,7 @@ deployments and may be missing (undefined) during planning phases.
 The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
 
 <h4 class="pdoc-member-header" id="Service-loadBalancers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L172">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L172">property <b>loadBalancers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loadBalancers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceLoadBalancer'>outputs.ecs.ServiceLoadBalancer</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -432,7 +432,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
 A load balancer block. Load balancers documented below.
 
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L176">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -440,7 +440,7 @@ A load balancer block. Load balancers documented below.
 The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 
 <h4 class="pdoc-member-header" id="Service-networkConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L180">property <b>networkConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L180">property <b>networkConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceNetworkConfiguration'>outputs.ecs.ServiceNetworkConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
 
 <h4 class="pdoc-member-header" id="Service-orderedPlacementStrategies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L184">property <b>orderedPlacementStrategies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L184">property <b>orderedPlacementStrategies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>orderedPlacementStrategies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceOrderedPlacementStrategy'>outputs.ecs.ServiceOrderedPlacementStrategy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -456,7 +456,7 @@ The network configuration for the service. This parameter is required for task d
 Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of `orderedPlacementStrategy` blocks is `5`. Defined below.
 
 <h4 class="pdoc-member-header" id="Service-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L189">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L189">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>placementConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServicePlacementConstraint'>outputs.ecs.ServicePlacementConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -465,7 +465,7 @@ rules that are taken into consideration during task placement. Maximum number of
 `placementConstraints` is `10`. Defined below.
 
 <h4 class="pdoc-member-header" id="Service-platformVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L193">property <b>platformVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L193">property <b>platformVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>platformVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -473,7 +473,7 @@ rules that are taken into consideration during task placement. Maximum number of
 The platform version on which to run your service. Only applicable for `launchType` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 
 <h4 class="pdoc-member-header" id="Service-propagateTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L197">property <b>propagateTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L197">property <b>propagateTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>propagateTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -481,7 +481,7 @@ The platform version on which to run your service. Only applicable for `launchTy
 Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
 
 <h4 class="pdoc-member-header" id="Service-schedulingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L201">property <b>schedulingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L201">property <b>schedulingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schedulingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -489,7 +489,7 @@ Specifies whether to propagate the tags from the task definition or the service 
 The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Fargate tasks do not support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html).
 
 <h4 class="pdoc-member-header" id="Service-serviceRegistries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L205">property <b>serviceRegistries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L205">property <b>serviceRegistries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRegistries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceServiceRegistries'>outputs.ecs.ServiceServiceRegistries</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -497,7 +497,7 @@ The scheduling strategy to use for the service. The valid values are `REPLICA` a
 The service discovery registries for the service. The maximum number of `serviceRegistries` blocks is `1`.
 
 <h4 class="pdoc-member-header" id="Service-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L209">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L209">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -505,7 +505,7 @@ The service discovery registries for the service. The maximum number of `service
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="Service-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L213">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L213">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskDefinition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -513,7 +513,7 @@ Key-value mapping of resource tags
 The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service.
 
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L106">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L106">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -522,7 +522,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Service-waitForSteadyState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L217">property <b>waitForSteadyState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L217">property <b>waitForSteadyState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>waitForSteadyState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -530,7 +530,7 @@ deployments.
 If `true`, this provider will wait for the service to reach a steady state (like [`aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`.
 
 <h3 class="pdoc-module-header" id="TaskDefinition" data-link-title="TaskDefinition">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L40">
         Resource <strong>TaskDefinition</strong>
     </a>
 </h3>
@@ -568,7 +568,7 @@ const service = new aws.ecs.TaskDefinition("service", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L135"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L135"> <b>constructor</b></a>
 </h4>
 
 
@@ -582,7 +582,7 @@ Create a TaskDefinition resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -593,14 +593,14 @@ Get an existing TaskDefinition resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TaskDefinition-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -611,7 +611,7 @@ Returns true if the given object is an instance of TaskDefinition.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L70">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L70">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -619,7 +619,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Full ARN of the Task Definition (including both `family` and `revision`).
 
 <h4 class="pdoc-member-header" id="TaskDefinition-containerDefinitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L79">property <b>containerDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L79">property <b>containerDefinitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerDefinitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +632,7 @@ definition document. For a detailed description of what parameters are available
 official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 
 <h4 class="pdoc-member-header" id="TaskDefinition-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L83">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L83">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cpu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -640,7 +640,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 The number of cpu units used by the task. If the `requiresCompatibilities` is `FARGATE` this field is required.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-executionRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L87">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L87">property <b>executionRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>executionRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ The number of cpu units used by the task. If the `requiresCompatibilities` is `F
 The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L91">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L91">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -656,7 +656,7 @@ The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS co
 A unique name for your task definition.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -665,7 +665,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-ipcMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L95">property <b>ipcMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L95">property <b>ipcMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipcMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ deployments and may be missing (undefined) during planning phases.
 The IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L99">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L99">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ The IPC resource namespace to be used for the containers in the task The valid v
 The amount (in MiB) of memory used by the task. If the `requiresCompatibilities` is `FARGATE` this field is required.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L103">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L103">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -689,7 +689,7 @@ The amount (in MiB) of memory used by the task. If the `requiresCompatibilities`
 The Docker networking mode to use for the containers in the task. The valid values are `none`, `bridge`, `awsvpc`, and `host`.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-pidMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L107">property <b>pidMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L107">property <b>pidMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pidMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -697,7 +697,7 @@ The Docker networking mode to use for the containers in the task. The valid valu
 The process namespace to use for the containers in the task. The valid values are `host` and `task`.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L111">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L111">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>placementConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskDefinitionPlacementConstraint'>outputs.ecs.TaskDefinitionPlacementConstraint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -705,7 +705,7 @@ The process namespace to use for the containers in the task. The valid values ar
 A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placementConstraints` is `10`.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-proxyConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L115">property <b>proxyConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L115">property <b>proxyConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>proxyConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskDefinitionProxyConfiguration'>outputs.ecs.TaskDefinitionProxyConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -713,7 +713,7 @@ A set of placement constraints rules that are taken into consideration during ta
 The proxy configuration details for the App Mesh proxy.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-requiresCompatibilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L119">property <b>requiresCompatibilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L119">property <b>requiresCompatibilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requiresCompatibilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -721,7 +721,7 @@ The proxy configuration details for the App Mesh proxy.
 A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L123">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L123">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revision: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -729,7 +729,7 @@ A set of launch types required by the task. The valid values are `EC2` and `FARG
 The revision of the task in a particular family.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L127">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L127">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -737,7 +737,7 @@ The revision of the task in a particular family.
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="TaskDefinition-taskRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L131">property <b>taskRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L131">property <b>taskRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -745,7 +745,7 @@ Key-value mapping of resource tags
 The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -754,7 +754,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="TaskDefinition-volumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L135">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L135">property <b>volumes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TaskDefinitionVolume'>outputs.ecs.TaskDefinitionVolume</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -764,7 +764,7 @@ A set of volume blocks that containers in your task may use.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getCluster" data-link-title="getCluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L26">
         Data Source <strong>getCluster</strong>
     </a>
 </h3>
@@ -790,7 +790,7 @@ const ecsMongo = aws.ecs.getCluster({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown.
 
 <h3 class="pdoc-module-header" id="getContainerDefinition" data-link-title="getContainerDefinition">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L27">
         Data Source <strong>getContainerDefinition</strong>
     </a>
 </h3>
@@ -817,7 +817,7 @@ const ecsMongo = aws_ecs_task_definition_mongo.id.apply(id => aws.ecs.getContain
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown.
 
 <h3 class="pdoc-module-header" id="getService" data-link-title="getService">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L27">
         Data Source <strong>getService</strong>
     </a>
 </h3>
@@ -844,7 +844,7 @@ const example = aws_ecs_cluster_example.arn.apply(arn => aws.ecs.getService({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown.
 
 <h3 class="pdoc-module-header" id="getTaskDefinition" data-link-title="getTaskDefinition">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L15">
         Data Source <strong>getTaskDefinition</strong>
     </a>
 </h3>
@@ -861,7 +861,7 @@ a specific AWS ECS task definition.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L133">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -871,7 +871,7 @@ a specific AWS ECS task definition.
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L137">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L137">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -879,7 +879,7 @@ The set of arguments for constructing a Cluster resource.
 The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 
 <h4 class="pdoc-member-header" id="ClusterArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L141">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L141">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterSetting'>inputs.ecs.ClusterSetting</a>&gt;[]&gt;;</code></pre>
@@ -887,7 +887,7 @@ The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L145">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L145">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -895,7 +895,7 @@ Configuration block(s) with cluster settings. For example, this can be used to e
 Key-value mapping of resource tags
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L111">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -905,7 +905,7 @@ Key-value mapping of resource tags
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L115">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L115">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -913,7 +913,7 @@ Input properties used for looking up and filtering Cluster resources.
 The Amazon Resource Name (ARN) that identifies the cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L119">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L119">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -921,7 +921,7 @@ The Amazon Resource Name (ARN) that identifies the cluster
 The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 
 <h4 class="pdoc-member-header" id="ClusterState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L123">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L123">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterSetting'>inputs.ecs.ClusterSetting</a>&gt;[]&gt;;</code></pre>
@@ -929,7 +929,7 @@ The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/cluster.ts#L127">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/cluster.ts#L127">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -937,260 +937,260 @@ Configuration block(s) with cluster settings. For example, this can be used to e
 Key-value mapping of resource tags
 
 <h3 class="pdoc-module-header" id="ContainerDefinition" data-link-title="ContainerDefinition">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L19">
         interface <strong>ContainerDefinition</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerDefinition</span></code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L20">property <b>command</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L20">property <b>command</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>command?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L21">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L21">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpu?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-dependsOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L22">property <b>dependsOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L22">property <b>dependsOn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dependsOn?: <a href='#ContainerDependency'>ContainerDependency</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-disableNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L23">property <b>disableNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L23">property <b>disableNetworking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableNetworking?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-dnsSearchDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L24">property <b>dnsSearchDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L24">property <b>dnsSearchDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSearchDomains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L25">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L25">property <b>dnsServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsServers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-dockerLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L26">property <b>dockerLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L26">property <b>dockerLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerLabels?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-dockerSecurityOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L27">property <b>dockerSecurityOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L27">property <b>dockerSecurityOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerSecurityOptions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-entryPoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L28">property <b>entryPoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L28">property <b>entryPoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>entryPoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L29">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L29">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='#KeyValuePair'>KeyValuePair</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-essential">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L30">property <b>essential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L30">property <b>essential</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>essential?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-extraHosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L31">property <b>extraHosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L31">property <b>extraHosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraHosts?: <a href='#HostEntry'>HostEntry</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-firelensConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L32">property <b>firelensConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L32">property <b>firelensConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firelensConfiguration?: <a href='#FirelensConfiguration'>FirelensConfiguration</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L33">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L33">property <b>healthCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='#HealthCheck'>HealthCheck</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L34">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L34">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L35">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L35">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-interactive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L36">property <b>interactive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L36">property <b>interactive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interactive?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-links">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L37">property <b>links</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L37">property <b>links</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>links?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-linuxParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L38">property <b>linuxParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L38">property <b>linuxParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linuxParameters?: <a href='#LinuxParameters'>LinuxParameters</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-logConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L39">property <b>logConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L39">property <b>logConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logConfiguration?: <a href='#LogConfiguration'>LogConfiguration</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L40">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L40">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-memoryReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L41">property <b>memoryReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L41">property <b>memoryReservation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryReservation?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-mountPoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L42">property <b>mountPoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L42">property <b>mountPoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountPoints?: <a href='#MountPoint'>MountPoint</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-portMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L44">property <b>portMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L44">property <b>portMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portMappings?: <a href='#PortMapping'>PortMapping</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-privileged">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L45">property <b>privileged</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L45">property <b>privileged</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privileged?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-pseudoTerminal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L46">property <b>pseudoTerminal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L46">property <b>pseudoTerminal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pseudoTerminal?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-readonlyRootFilesystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L47">property <b>readonlyRootFilesystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L47">property <b>readonlyRootFilesystem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readonlyRootFilesystem?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-repositoryCredentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L48">property <b>repositoryCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L48">property <b>repositoryCredentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryCredentials?: <a href='#RepositoryCredentials'>RepositoryCredentials</a>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-resourceRequirements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L49">property <b>resourceRequirements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L49">property <b>resourceRequirements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceRequirements?: <a href='#ResourceRequirements'>ResourceRequirements</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-secrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L50">property <b>secrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L50">property <b>secrets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secrets?: <a href='#Secret'>Secret</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-startTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L51">property <b>startTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L51">property <b>startTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-stopTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L52">property <b>stopTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L52">property <b>stopTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stopTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-systemControls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L53">property <b>systemControls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L53">property <b>systemControls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemControls?: <a href='#SystemControl'>SystemControl</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-ulimits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L54">property <b>ulimits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L54">property <b>ulimits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ulimits?: <a href='#Ulimit'>Ulimit</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L55">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L55">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-volumesFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L56">property <b>volumesFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L56">property <b>volumesFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumesFrom?: <a href='#VolumeFrom'>VolumeFrom</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDefinition-workingDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L57">property <b>workingDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L57">property <b>workingDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workingDirectory?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ContainerDependency" data-link-title="ContainerDependency">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L61">
         interface <strong>ContainerDependency</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerDependency</span></code></pre>
 <h4 class="pdoc-member-header" id="ContainerDependency-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L63">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L63">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerDependency-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L62">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L62">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="Device" data-link-title="Device">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L156">
         interface <strong>Device</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Device</span></code></pre>
 <h4 class="pdoc-member-header" id="Device-containerPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L157">property <b>containerPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L157">property <b>containerPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerPath?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Device-hostPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L158">property <b>hostPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L158">property <b>hostPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Device-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L159">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L159">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="FirelensConfiguration" data-link-title="FirelensConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L73">
         interface <strong>FirelensConfiguration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>FirelensConfiguration</span></code></pre>
 <h4 class="pdoc-member-header" id="FirelensConfiguration-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L74">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L74">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="FirelensConfiguration-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L75">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L75">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClusterArgs" data-link-title="GetClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L44">
         interface <strong>GetClusterArgs</strong>
     </a>
 </h3>
@@ -1200,7 +1200,7 @@ Key-value mapping of resource tags
 A collection of arguments for invoking getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L48">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L48">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1208,7 +1208,7 @@ A collection of arguments for invoking getCluster.
 The name of the ECS Cluster
 
 <h3 class="pdoc-module-header" id="GetClusterResult" data-link-title="GetClusterResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L54">
         interface <strong>GetClusterResult</strong>
     </a>
 </h3>
@@ -1218,7 +1218,7 @@ The name of the ECS Cluster
 A collection of values returned by getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L58">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1226,12 +1226,12 @@ A collection of values returned by getCluster.
 The ARN of the ECS Cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L59">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L59">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1239,7 +1239,7 @@ The ARN of the ECS Cluster
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-pendingTasksCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L63">property <b>pendingTasksCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L63">property <b>pendingTasksCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pendingTasksCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1247,7 +1247,7 @@ id is the provider-assigned unique ID for this managed resource.
 The number of pending tasks for the ECS Cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-registeredContainerInstancesCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L67">property <b>registeredContainerInstancesCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L67">property <b>registeredContainerInstancesCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registeredContainerInstancesCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1255,7 +1255,7 @@ The number of pending tasks for the ECS Cluster
 The number of registered container instances for the ECS Cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-runningTasksCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L71">property <b>runningTasksCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L71">property <b>runningTasksCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runningTasksCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1263,7 +1263,7 @@ The number of registered container instances for the ECS Cluster
 The number of running tasks for the ECS Cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L75">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L75">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterSetting'>outputs.ecs.GetClusterSetting</a>[];</code></pre>
@@ -1271,7 +1271,7 @@ The number of running tasks for the ECS Cluster
 The settings associated with the ECS Cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getCluster.ts#L79">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getCluster.ts#L79">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1279,7 +1279,7 @@ The settings associated with the ECS Cluster.
 The status of the ECS Cluster
 
 <h3 class="pdoc-module-header" id="GetContainerDefinitionArgs" data-link-title="GetContainerDefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L46">
         interface <strong>GetContainerDefinitionArgs</strong>
     </a>
 </h3>
@@ -1289,7 +1289,7 @@ The status of the ECS Cluster
 A collection of arguments for invoking getContainerDefinition.
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionArgs-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L50">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L50">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1297,7 +1297,7 @@ A collection of arguments for invoking getContainerDefinition.
 The name of the container definition
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionArgs-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L54">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L54">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1305,7 +1305,7 @@ The name of the container definition
 The ARN of the task definition which contains the container
 
 <h3 class="pdoc-module-header" id="GetContainerDefinitionResult" data-link-title="GetContainerDefinitionResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L60">
         interface <strong>GetContainerDefinitionResult</strong>
     </a>
 </h3>
@@ -1315,12 +1315,12 @@ The ARN of the task definition which contains the container
 A collection of values returned by getContainerDefinition.
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L61">property <b>containerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L61">property <b>containerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L65">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L65">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpu: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1328,7 +1328,7 @@ A collection of values returned by getContainerDefinition.
 The CPU limit for this container definition
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-disableNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L69">property <b>disableNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L69">property <b>disableNetworking</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableNetworking: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1336,7 +1336,7 @@ The CPU limit for this container definition
 Indicator if networking is disabled
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-dockerLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L73">property <b>dockerLabels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L73">property <b>dockerLabels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dockerLabels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1344,7 +1344,7 @@ Indicator if networking is disabled
 Set docker labels
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L77">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L77">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1352,7 +1352,7 @@ Set docker labels
 The environment in use
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L98">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L98">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1360,7 +1360,7 @@ The environment in use
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L81">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L81">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1368,7 +1368,7 @@ id is the provider-assigned unique ID for this managed resource.
 The docker image in use, including the digest
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-imageDigest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L85">property <b>imageDigest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L85">property <b>imageDigest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageDigest: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1376,7 +1376,7 @@ The docker image in use, including the digest
 The digest of the docker image in use
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L89">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L89">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1384,7 +1384,7 @@ The digest of the docker image in use
 The memory limit for this container definition
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-memoryReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L93">property <b>memoryReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L93">property <b>memoryReservation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryReservation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1392,12 +1392,12 @@ The memory limit for this container definition
 The soft limit (in MiB) of memory to reserve for the container. When system memory is under contention, Docker attempts to keep the container memory to this soft limit
 
 <h4 class="pdoc-member-header" id="GetContainerDefinitionResult-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getContainerDefinition.ts#L94">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getContainerDefinition.ts#L94">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L46">
         interface <strong>GetServiceArgs</strong>
     </a>
 </h3>
@@ -1407,7 +1407,7 @@ The soft limit (in MiB) of memory to reserve for the container. When system memo
 A collection of arguments for invoking getService.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-clusterArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L50">property <b>clusterArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L50">property <b>clusterArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1415,7 +1415,7 @@ A collection of arguments for invoking getService.
 The arn of the ECS Cluster
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L54">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L54">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1423,7 +1423,7 @@ The arn of the ECS Cluster
 The name of the ECS Service
 
 <h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L60">
         interface <strong>GetServiceResult</strong>
     </a>
 </h3>
@@ -1433,7 +1433,7 @@ The name of the ECS Service
 A collection of values returned by getService.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L64">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L64">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1441,12 +1441,12 @@ A collection of values returned by getService.
 The ARN of the ECS Service
 
 <h4 class="pdoc-member-header" id="GetServiceResult-clusterArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L65">property <b>clusterArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L65">property <b>clusterArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-desiredCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L69">property <b>desiredCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L69">property <b>desiredCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1454,7 +1454,7 @@ The ARN of the ECS Service
 The number of tasks for the ECS Service
 
 <h4 class="pdoc-member-header" id="GetServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1462,7 +1462,7 @@ The number of tasks for the ECS Service
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-launchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L73">property <b>launchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L73">property <b>launchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1470,7 +1470,7 @@ id is the provider-assigned unique ID for this managed resource.
 The launch type for the ECS Service
 
 <h4 class="pdoc-member-header" id="GetServiceResult-schedulingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L77">property <b>schedulingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L77">property <b>schedulingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedulingStrategy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1478,12 +1478,12 @@ The launch type for the ECS Service
 The scheduling strategy for the ECS Service
 
 <h4 class="pdoc-member-header" id="GetServiceResult-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L78">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L78">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getService.ts#L82">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getService.ts#L82">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1491,7 +1491,7 @@ The scheduling strategy for the ECS Service
 The family for the latest ACTIVE revision
 
 <h3 class="pdoc-module-header" id="GetTaskDefinitionArgs" data-link-title="GetTaskDefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L33">
         interface <strong>GetTaskDefinitionArgs</strong>
     </a>
 </h3>
@@ -1501,7 +1501,7 @@ The family for the latest ACTIVE revision
 A collection of arguments for invoking getTaskDefinition.
 
 <h4 class="pdoc-member-header" id="GetTaskDefinitionArgs-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L37">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L37">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1509,7 +1509,7 @@ A collection of arguments for invoking getTaskDefinition.
 The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, the ARN of the task definition to access to.
 
 <h3 class="pdoc-module-header" id="GetTaskDefinitionResult" data-link-title="GetTaskDefinitionResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L43">
         interface <strong>GetTaskDefinitionResult</strong>
     </a>
 </h3>
@@ -1519,7 +1519,7 @@ The family for the latest ACTIVE revision, family and revision (family:revision)
 A collection of values returned by getTaskDefinition.
 
 <h4 class="pdoc-member-header" id="GetTaskDefinitionResult-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L47">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L47">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1527,7 +1527,7 @@ A collection of values returned by getTaskDefinition.
 The family of this task definition
 
 <h4 class="pdoc-member-header" id="GetTaskDefinitionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1535,7 +1535,7 @@ The family of this task definition
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTaskDefinitionResult-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L51">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L51">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1543,7 +1543,7 @@ id is the provider-assigned unique ID for this managed resource.
 The Docker networking mode to use for the containers in this task.
 
 <h4 class="pdoc-member-header" id="GetTaskDefinitionResult-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L55">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L55">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revision: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1551,7 +1551,7 @@ The Docker networking mode to use for the containers in this task.
 The revision of this task definition
 
 <h4 class="pdoc-member-header" id="GetTaskDefinitionResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L59">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L59">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1559,12 +1559,12 @@ The revision of this task definition
 The status of this task definition
 
 <h4 class="pdoc-member-header" id="GetTaskDefinitionResult-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L60">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L60">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTaskDefinitionResult-taskRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/getTaskDefinition.ts#L64">property <b>taskRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/getTaskDefinition.ts#L64">property <b>taskRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskRoleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1572,7 +1572,7 @@ The status of this task definition
 The ARN of the IAM role that containers in this task can assume
 
 <h3 class="pdoc-module-header" id="HealthCheck" data-link-title="HealthCheck">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L85">
         interface <strong>HealthCheck</strong>
     </a>
 </h3>
@@ -1586,7 +1586,7 @@ HEALTHCHECK parameter of docker run.
 https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html
 
 <h4 class="pdoc-member-header" id="HealthCheck-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L96">property <b>command</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L96">property <b>command</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>command?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1601,7 +1601,7 @@ An exit code of 0 indicates success, and non-zero exit code indicates failure. F
 information, see HealthCheck in the Create a container section of the Docker Remote API.
 
 <h4 class="pdoc-member-header" id="HealthCheck-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L102">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L102">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1610,7 +1610,7 @@ The time period in seconds between each health check execution. You may specify 
 300 seconds. The default value is 30 seconds.
 
 <h4 class="pdoc-member-header" id="HealthCheck-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L108">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L108">property <b>retries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retries?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1619,7 +1619,7 @@ The number of times to retry a failed health check before the container is consi
 unhealthy. You may specify between 1 and 10 retries. The default value is 3.
 
 <h4 class="pdoc-member-header" id="HealthCheck-startPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L119">property <b>startPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L119">property <b>startPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startPeriod?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1633,7 +1633,7 @@ If a health check succeeds within the startPeriod, then the container is conside
 and any subsequent failures count toward the maximum number of retries.
 
 <h4 class="pdoc-member-header" id="HealthCheck-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L125">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L125">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1642,174 +1642,174 @@ The time period in seconds to wait for a health check to succeed before it is co
 failure. You may specify between 2 and 60 seconds. The default value is 5.
 
 <h3 class="pdoc-module-header" id="HostEntry" data-link-title="HostEntry">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L129">
         interface <strong>HostEntry</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>HostEntry</span></code></pre>
 <h4 class="pdoc-member-header" id="HostEntry-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L130">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L130">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="HostEntry-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L131">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L131">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="KernelCapabilities" data-link-title="KernelCapabilities">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L142">
         interface <strong>KernelCapabilities</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KernelCapabilities</span></code></pre>
 <h4 class="pdoc-member-header" id="KernelCapabilities-add">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L143">property <b>add</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L143">property <b>add</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>add?: <a href='#KernelCapability'>KernelCapability</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="KernelCapabilities-drop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L144">property <b>drop</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L144">property <b>drop</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>drop?: <a href='#KernelCapability'>KernelCapability</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="KernelCapability" data-link-title="KernelCapability">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L148">
         type <strong>KernelCapability</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> KernelCapability = <span class='s2'>"ALL"</span> | <span class='s2'>"AUDIT_CONTROL"</span> | <span class='s2'>"AUDIT_WRITE"</span> | <span class='s2'>"BLOCK_SUSPEND"</span> | <span class='s2'>"CHOWN"</span> | <span class='s2'>"DAC_OVERRIDE"</span> | <span class='s2'>"DAC_READ_SEARCH"</span> | <span class='s2'>"FOWNER"</span> | <span class='s2'>"FSETID"</span> | <span class='s2'>"IPC_LOCK"</span> | <span class='s2'>"IPC_OWNER"</span> | <span class='s2'>"KILL"</span> | <span class='s2'>"LEASE"</span> | <span class='s2'>"LINUX_IMMUTABLE"</span> | <span class='s2'>"MAC_ADMIN"</span> | <span class='s2'>"MAC_OVERRIDE"</span> | <span class='s2'>"MKNOD"</span> | <span class='s2'>"NET_ADMIN"</span> | <span class='s2'>"NET_BIND_SERVICE"</span> | <span class='s2'>"NET_BROADCAST"</span> | <span class='s2'>"NET_RAW"</span> | <span class='s2'>"SETFCAP"</span> | <span class='s2'>"SETGID"</span> | <span class='s2'>"SETPCAP"</span> | <span class='s2'>"SETUID"</span> | <span class='s2'>"SYS_ADMIN"</span> | <span class='s2'>"SYS_BOOT"</span> | <span class='s2'>"SYS_CHROOT"</span> | <span class='s2'>"SYS_MODULE"</span> | <span class='s2'>"SYS_NICE"</span> | <span class='s2'>"SYS_PACCT"</span> | <span class='s2'>"SYS_PTRACE"</span> | <span class='s2'>"SYS_RAWIO"</span> | <span class='s2'>"SYS_RESOURCE"</span> | <span class='s2'>"SYS_TIME"</span> | <span class='s2'>"SYS_TTY_CONFIG"</span> | <span class='s2'>"SYSLOG"</span> | <span class='s2'>"WAKE_ALARM"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="KeyValuePair" data-link-title="KeyValuePair">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L67">
         interface <strong>KeyValuePair</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KeyValuePair</span></code></pre>
 <h4 class="pdoc-member-header" id="KeyValuePair-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="KeyValuePair-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L69">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L69">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="LinuxParameters" data-link-title="LinuxParameters">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L135">
         interface <strong>LinuxParameters</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LinuxParameters</span></code></pre>
 <h4 class="pdoc-member-header" id="LinuxParameters-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L136">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L136">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='#KernelCapabilities'>KernelCapabilities</a>;</code></pre>
 <h4 class="pdoc-member-header" id="LinuxParameters-devices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L137">property <b>devices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L137">property <b>devices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>devices?: <a href='#Device'>Device</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="LinuxParameters-initProcessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L138">property <b>initProcessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L138">property <b>initProcessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initProcessEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="LogConfiguration" data-link-title="LogConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L163">
         interface <strong>LogConfiguration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LogConfiguration</span></code></pre>
 <h4 class="pdoc-member-header" id="LogConfiguration-logDriver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L164">property <b>logDriver</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L164">property <b>logDriver</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logDriver: <a href='#LogDriver'>LogDriver</a>;</code></pre>
 <h4 class="pdoc-member-header" id="LogConfiguration-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L165">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L165">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="LogDriver" data-link-title="LogDriver">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L169">
         type <strong>LogDriver</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> LogDriver = <span class='s2'>"json-file"</span> | <span class='s2'>"syslog"</span> | <span class='s2'>"journald"</span> | <span class='s2'>"gelf"</span> | <span class='s2'>"fluentd"</span> | <span class='s2'>"awslogs"</span> | <span class='s2'>"splunk"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="MountPoint" data-link-title="MountPoint">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L172">
         interface <strong>MountPoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MountPoint</span></code></pre>
 <h4 class="pdoc-member-header" id="MountPoint-containerPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L173">property <b>containerPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L173">property <b>containerPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerPath?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="MountPoint-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L174">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L174">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="MountPoint-sourceVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L175">property <b>sourceVolume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L175">property <b>sourceVolume</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceVolume?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="PortMapping" data-link-title="PortMapping">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L179">
         interface <strong>PortMapping</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PortMapping</span></code></pre>
 <h4 class="pdoc-member-header" id="PortMapping-containerPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L180">property <b>containerPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L180">property <b>containerPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerPort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="PortMapping-hostPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L181">property <b>hostPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L181">property <b>hostPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostPort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="PortMapping-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L182">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L182">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='#Protocol'>Protocol</a>;</code></pre>
 <h3 class="pdoc-module-header" id="Protocol" data-link-title="Protocol">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L186">
         type <strong>Protocol</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> Protocol = <span class='s2'>"tcp"</span> | <span class='s2'>"udp"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="RepositoryCredentials" data-link-title="RepositoryCredentials">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L206">
         interface <strong>RepositoryCredentials</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RepositoryCredentials</span></code></pre>
 <h4 class="pdoc-member-header" id="RepositoryCredentials-credentialsParameter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L207">property <b>credentialsParameter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L207">property <b>credentialsParameter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsParameter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ResourceRequirements" data-link-title="ResourceRequirements">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L218">
         interface <strong>ResourceRequirements</strong>
     </a>
 </h3>
@@ -1824,7 +1824,7 @@ Elastic Container Service Developer Guide.
 See https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html.
 
 <h4 class="pdoc-member-header" id="ResourceRequirements-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L222">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L222">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1832,7 +1832,7 @@ See https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequir
 The type of resource to assign to a container. The only supported value is GPU.
 
 <h4 class="pdoc-member-header" id="ResourceRequirements-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L228">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L228">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1842,7 +1842,7 @@ The number of GPUs reserved for all containers in a task should not exceed the n
 available GPUs on the container instance the task is launched on.
 
 <h3 class="pdoc-module-header" id="Secret" data-link-title="Secret">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L247">
         interface <strong>Secret</strong>
     </a>
 </h3>
@@ -1865,7 +1865,7 @@ in the Amazon Elastic Container Service Developer Guide.
 See https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Secret.html.
 
 <h4 class="pdoc-member-header" id="Secret-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1873,7 +1873,7 @@ See https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Secret.html.
 The name of the secret.
 
 <h4 class="pdoc-member-header" id="Secret-valueFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L262">property <b>valueFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L262">property <b>valueFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueFrom: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1887,7 +1887,7 @@ task you are launching, then you can use either the full ARN or name of the para
 parameter exists in a different Region, then the full ARN must be specified.
 
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L384">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L384">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
@@ -1897,7 +1897,7 @@ parameter exists in a different Region, then the full ARN must be specified.
 The set of arguments for constructing a Service resource.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L388">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L388">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1905,7 +1905,7 @@ The set of arguments for constructing a Service resource.
 ARN of an ECS cluster
 
 <h4 class="pdoc-member-header" id="ServiceArgs-deploymentController">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L392">property <b>deploymentController</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L392">property <b>deploymentController</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentController?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDeploymentController'>inputs.ecs.ServiceDeploymentController</a>&gt;;</code></pre>
@@ -1913,7 +1913,7 @@ ARN of an ECS cluster
 Configuration block containing deployment controller configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-deploymentMaximumPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L396">property <b>deploymentMaximumPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L396">property <b>deploymentMaximumPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMaximumPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1921,7 +1921,7 @@ Configuration block containing deployment controller configuration. Defined belo
 The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-deploymentMinimumHealthyPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L400">property <b>deploymentMinimumHealthyPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L400">property <b>deploymentMinimumHealthyPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMinimumHealthyPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1929,7 +1929,7 @@ The upper limit (as a percentage of the service's desiredCount) of the number of
 The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-desiredCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L404">property <b>desiredCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L404">property <b>desiredCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1937,7 +1937,7 @@ The lower limit (as a percentage of the service's desiredCount) of the number of
 The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-enableEcsManagedTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L408">property <b>enableEcsManagedTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L408">property <b>enableEcsManagedTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableEcsManagedTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1945,7 +1945,7 @@ The number of instances of the task definition to place and keep running. Defaul
 Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-healthCheckGracePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L412">property <b>healthCheckGracePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L412">property <b>healthCheckGracePeriodSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckGracePeriodSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1953,7 +1953,7 @@ Specifies whether to enable Amazon ECS managed tags for the tasks within the ser
 Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-iamRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L416">property <b>iamRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L416">property <b>iamRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1961,7 +1961,7 @@ Seconds to ignore failing load balancer health checks on newly instantiated task
 ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-launchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L420">property <b>launchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L420">property <b>launchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1969,7 +1969,7 @@ ARN of the IAM role that allows Amazon ECS to make calls to your load balancer o
 The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-loadBalancers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L424">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L424">property <b>loadBalancers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceLoadBalancer'>inputs.ecs.ServiceLoadBalancer</a>&gt;[]&gt;;</code></pre>
@@ -1977,7 +1977,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
 A load balancer block. Load balancers documented below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L428">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L428">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1985,7 +1985,7 @@ A load balancer block. Load balancers documented below.
 The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 
 <h4 class="pdoc-member-header" id="ServiceArgs-networkConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L432">property <b>networkConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L432">property <b>networkConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceNetworkConfiguration'>inputs.ecs.ServiceNetworkConfiguration</a>&gt;;</code></pre>
@@ -1993,7 +1993,7 @@ The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-orderedPlacementStrategies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L436">property <b>orderedPlacementStrategies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L436">property <b>orderedPlacementStrategies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderedPlacementStrategies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceOrderedPlacementStrategy'>inputs.ecs.ServiceOrderedPlacementStrategy</a>&gt;[]&gt;;</code></pre>
@@ -2001,7 +2001,7 @@ The network configuration for the service. This parameter is required for task d
 Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of `orderedPlacementStrategy` blocks is `5`. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L441">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L441">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServicePlacementConstraint'>inputs.ecs.ServicePlacementConstraint</a>&gt;[]&gt;;</code></pre>
@@ -2010,7 +2010,7 @@ rules that are taken into consideration during task placement. Maximum number of
 `placementConstraints` is `10`. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-platformVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L445">property <b>platformVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L445">property <b>platformVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2018,7 +2018,7 @@ rules that are taken into consideration during task placement. Maximum number of
 The platform version on which to run your service. Only applicable for `launchType` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 
 <h4 class="pdoc-member-header" id="ServiceArgs-propagateTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L449">property <b>propagateTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L449">property <b>propagateTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>propagateTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2026,7 +2026,7 @@ The platform version on which to run your service. Only applicable for `launchTy
 Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-schedulingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L453">property <b>schedulingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L453">property <b>schedulingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedulingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2034,7 +2034,7 @@ Specifies whether to propagate the tags from the task definition or the service 
 The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Fargate tasks do not support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html).
 
 <h4 class="pdoc-member-header" id="ServiceArgs-serviceRegistries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L457">property <b>serviceRegistries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L457">property <b>serviceRegistries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRegistries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceServiceRegistries'>inputs.ecs.ServiceServiceRegistries</a>&gt;;</code></pre>
@@ -2042,7 +2042,7 @@ The scheduling strategy to use for the service. The valid values are `REPLICA` a
 The service discovery registries for the service. The maximum number of `serviceRegistries` blocks is `1`.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L461">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L461">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2050,7 +2050,7 @@ The service discovery registries for the service. The maximum number of `service
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="ServiceArgs-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L465">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L465">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2058,7 +2058,7 @@ Key-value mapping of resource tags
 The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-waitForSteadyState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L469">property <b>waitForSteadyState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L469">property <b>waitForSteadyState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitForSteadyState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2066,7 +2066,7 @@ The family and revision (`family:revision`) or full ARN of the task definition t
 If `true`, this provider will wait for the service to reach a steady state (like [`aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`.
 
 <h3 class="pdoc-module-header" id="ServiceState" data-link-title="ServiceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L293">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L293">
         interface <strong>ServiceState</strong>
     </a>
 </h3>
@@ -2076,7 +2076,7 @@ If `true`, this provider will wait for the service to reach a steady state (like
 Input properties used for looking up and filtering Service resources.
 
 <h4 class="pdoc-member-header" id="ServiceState-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L297">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L297">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2084,7 +2084,7 @@ Input properties used for looking up and filtering Service resources.
 ARN of an ECS cluster
 
 <h4 class="pdoc-member-header" id="ServiceState-deploymentController">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L301">property <b>deploymentController</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L301">property <b>deploymentController</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentController?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDeploymentController'>inputs.ecs.ServiceDeploymentController</a>&gt;;</code></pre>
@@ -2092,7 +2092,7 @@ ARN of an ECS cluster
 Configuration block containing deployment controller configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-deploymentMaximumPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L305">property <b>deploymentMaximumPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L305">property <b>deploymentMaximumPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMaximumPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2100,7 +2100,7 @@ Configuration block containing deployment controller configuration. Defined belo
 The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 
 <h4 class="pdoc-member-header" id="ServiceState-deploymentMinimumHealthyPercent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L309">property <b>deploymentMinimumHealthyPercent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L309">property <b>deploymentMinimumHealthyPercent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMinimumHealthyPercent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2108,7 +2108,7 @@ The upper limit (as a percentage of the service's desiredCount) of the number of
 The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
 
 <h4 class="pdoc-member-header" id="ServiceState-desiredCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L313">property <b>desiredCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L313">property <b>desiredCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2116,7 +2116,7 @@ The lower limit (as a percentage of the service's desiredCount) of the number of
 The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
 
 <h4 class="pdoc-member-header" id="ServiceState-enableEcsManagedTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L317">property <b>enableEcsManagedTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L317">property <b>enableEcsManagedTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableEcsManagedTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2124,7 +2124,7 @@ The number of instances of the task definition to place and keep running. Defaul
 Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
 
 <h4 class="pdoc-member-header" id="ServiceState-healthCheckGracePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L321">property <b>healthCheckGracePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L321">property <b>healthCheckGracePeriodSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckGracePeriodSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2132,7 +2132,7 @@ Specifies whether to enable Amazon ECS managed tags for the tasks within the ser
 Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
 
 <h4 class="pdoc-member-header" id="ServiceState-iamRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L325">property <b>iamRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L325">property <b>iamRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2140,7 +2140,7 @@ Seconds to ignore failing load balancer health checks on newly instantiated task
 ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
 
 <h4 class="pdoc-member-header" id="ServiceState-launchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L329">property <b>launchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L329">property <b>launchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2148,7 +2148,7 @@ ARN of the IAM role that allows Amazon ECS to make calls to your load balancer o
 The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
 
 <h4 class="pdoc-member-header" id="ServiceState-loadBalancers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L333">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L333">property <b>loadBalancers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceLoadBalancer'>inputs.ecs.ServiceLoadBalancer</a>&gt;[]&gt;;</code></pre>
@@ -2156,7 +2156,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
 A load balancer block. Load balancers documented below.
 
 <h4 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L337">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L337">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2164,7 +2164,7 @@ A load balancer block. Load balancers documented below.
 The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 
 <h4 class="pdoc-member-header" id="ServiceState-networkConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L341">property <b>networkConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L341">property <b>networkConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceNetworkConfiguration'>inputs.ecs.ServiceNetworkConfiguration</a>&gt;;</code></pre>
@@ -2172,7 +2172,7 @@ The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
 
 <h4 class="pdoc-member-header" id="ServiceState-orderedPlacementStrategies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L345">property <b>orderedPlacementStrategies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L345">property <b>orderedPlacementStrategies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderedPlacementStrategies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceOrderedPlacementStrategy'>inputs.ecs.ServiceOrderedPlacementStrategy</a>&gt;[]&gt;;</code></pre>
@@ -2180,7 +2180,7 @@ The network configuration for the service. This parameter is required for task d
 Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of `orderedPlacementStrategy` blocks is `5`. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L350">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L350">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServicePlacementConstraint'>inputs.ecs.ServicePlacementConstraint</a>&gt;[]&gt;;</code></pre>
@@ -2189,7 +2189,7 @@ rules that are taken into consideration during task placement. Maximum number of
 `placementConstraints` is `10`. Defined below.
 
 <h4 class="pdoc-member-header" id="ServiceState-platformVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L354">property <b>platformVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L354">property <b>platformVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platformVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2197,7 +2197,7 @@ rules that are taken into consideration during task placement. Maximum number of
 The platform version on which to run your service. Only applicable for `launchType` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 
 <h4 class="pdoc-member-header" id="ServiceState-propagateTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L358">property <b>propagateTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L358">property <b>propagateTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>propagateTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2205,7 +2205,7 @@ The platform version on which to run your service. Only applicable for `launchTy
 Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
 
 <h4 class="pdoc-member-header" id="ServiceState-schedulingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L362">property <b>schedulingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L362">property <b>schedulingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schedulingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2213,7 +2213,7 @@ Specifies whether to propagate the tags from the task definition or the service 
 The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Fargate tasks do not support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html).
 
 <h4 class="pdoc-member-header" id="ServiceState-serviceRegistries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L366">property <b>serviceRegistries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L366">property <b>serviceRegistries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRegistries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceServiceRegistries'>inputs.ecs.ServiceServiceRegistries</a>&gt;;</code></pre>
@@ -2221,7 +2221,7 @@ The scheduling strategy to use for the service. The valid values are `REPLICA` a
 The service discovery registries for the service. The maximum number of `serviceRegistries` blocks is `1`.
 
 <h4 class="pdoc-member-header" id="ServiceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L370">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L370">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2229,7 +2229,7 @@ The service discovery registries for the service. The maximum number of `service
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="ServiceState-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L374">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L374">property <b>taskDefinition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskDefinition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2237,7 +2237,7 @@ Key-value mapping of resource tags
 The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service.
 
 <h4 class="pdoc-member-header" id="ServiceState-waitForSteadyState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/service.ts#L378">property <b>waitForSteadyState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/service.ts#L378">property <b>waitForSteadyState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitForSteadyState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2245,7 +2245,7 @@ The family and revision (`family:revision`) or full ARN of the task definition t
 If `true`, this provider will wait for the service to reach a steady state (like [`aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`.
 
 <h3 class="pdoc-module-header" id="SystemControl" data-link-title="SystemControl">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L284">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L284">
         interface <strong>SystemControl</strong>
     </a>
 </h3>
@@ -2271,7 +2271,7 @@ following reasons:
 See https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_SystemControl.html.
 
 <h4 class="pdoc-member-header" id="SystemControl-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L288">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L288">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2279,7 +2279,7 @@ See https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_SystemControl.
 The namespaced kernel parameter for which to set a value.
 
 <h4 class="pdoc-member-header" id="SystemControl-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L293">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L293">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2287,7 +2287,7 @@ The namespaced kernel parameter for which to set a value.
 The value for the namespaced kernel parameter specified in namespace.
 
 <h3 class="pdoc-module-header" id="TaskDefinitionArgs" data-link-title="TaskDefinitionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L279">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L279">
         interface <strong>TaskDefinitionArgs</strong>
     </a>
 </h3>
@@ -2297,7 +2297,7 @@ The value for the namespaced kernel parameter specified in namespace.
 The set of arguments for constructing a TaskDefinition resource.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-containerDefinitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L288">property <b>containerDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L288">property <b>containerDefinitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerDefinitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2310,7 +2310,7 @@ definition document. For a detailed description of what parameters are available
 official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L292">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L292">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2318,7 +2318,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 The number of cpu units used by the task. If the `requiresCompatibilities` is `FARGATE` this field is required.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-executionRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L296">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L296">property <b>executionRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2326,7 +2326,7 @@ The number of cpu units used by the task. If the `requiresCompatibilities` is `F
 The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L300">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L300">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2334,7 +2334,7 @@ The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS co
 A unique name for your task definition.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-ipcMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L304">property <b>ipcMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L304">property <b>ipcMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipcMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2342,7 +2342,7 @@ A unique name for your task definition.
 The IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L308">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L308">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2350,7 +2350,7 @@ The IPC resource namespace to be used for the containers in the task The valid v
 The amount (in MiB) of memory used by the task. If the `requiresCompatibilities` is `FARGATE` this field is required.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L312">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L312">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2358,7 +2358,7 @@ The amount (in MiB) of memory used by the task. If the `requiresCompatibilities`
 The Docker networking mode to use for the containers in the task. The valid values are `none`, `bridge`, `awsvpc`, and `host`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-pidMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L316">property <b>pidMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L316">property <b>pidMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pidMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2366,7 +2366,7 @@ The Docker networking mode to use for the containers in the task. The valid valu
 The process namespace to use for the containers in the task. The valid values are `host` and `task`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L320">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L320">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionPlacementConstraint'>inputs.ecs.TaskDefinitionPlacementConstraint</a>&gt;[]&gt;;</code></pre>
@@ -2374,7 +2374,7 @@ The process namespace to use for the containers in the task. The valid values ar
 A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placementConstraints` is `10`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-proxyConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L324">property <b>proxyConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L324">property <b>proxyConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionProxyConfiguration'>inputs.ecs.TaskDefinitionProxyConfiguration</a>&gt;;</code></pre>
@@ -2382,7 +2382,7 @@ A set of placement constraints rules that are taken into consideration during ta
 The proxy configuration details for the App Mesh proxy.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-requiresCompatibilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L328">property <b>requiresCompatibilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L328">property <b>requiresCompatibilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresCompatibilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2390,7 +2390,7 @@ The proxy configuration details for the App Mesh proxy.
 A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L332">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L332">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2398,7 +2398,7 @@ A set of launch types required by the task. The valid values are `EC2` and `FARG
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-taskRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L336">property <b>taskRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L336">property <b>taskRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2406,7 +2406,7 @@ Key-value mapping of resource tags
 The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionArgs-volumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L340">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L340">property <b>volumes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionVolume'>inputs.ecs.TaskDefinitionVolume</a>&gt;[]&gt;;</code></pre>
@@ -2414,7 +2414,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
 A set of volume blocks that containers in your task may use.
 
 <h3 class="pdoc-module-header" id="TaskDefinitionState" data-link-title="TaskDefinitionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L204">
         interface <strong>TaskDefinitionState</strong>
     </a>
 </h3>
@@ -2424,7 +2424,7 @@ A set of volume blocks that containers in your task may use.
 Input properties used for looking up and filtering TaskDefinition resources.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L208">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L208">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2432,7 +2432,7 @@ Input properties used for looking up and filtering TaskDefinition resources.
 Full ARN of the Task Definition (including both `family` and `revision`).
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-containerDefinitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L217">property <b>containerDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L217">property <b>containerDefinitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerDefinitions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2445,7 +2445,7 @@ definition document. For a detailed description of what parameters are available
 official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-cpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L221">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L221">property <b>cpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2453,7 +2453,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 The number of cpu units used by the task. If the `requiresCompatibilities` is `FARGATE` this field is required.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-executionRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L225">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L225">property <b>executionRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2461,7 +2461,7 @@ The number of cpu units used by the task. If the `requiresCompatibilities` is `F
 The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L229">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L229">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2469,7 +2469,7 @@ The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS co
 A unique name for your task definition.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-ipcMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L233">property <b>ipcMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L233">property <b>ipcMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipcMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2477,7 +2477,7 @@ A unique name for your task definition.
 The IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L237">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L237">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2485,7 +2485,7 @@ The IPC resource namespace to be used for the containers in the task The valid v
 The amount (in MiB) of memory used by the task. If the `requiresCompatibilities` is `FARGATE` this field is required.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L241">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L241">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2493,7 +2493,7 @@ The amount (in MiB) of memory used by the task. If the `requiresCompatibilities`
 The Docker networking mode to use for the containers in the task. The valid values are `none`, `bridge`, `awsvpc`, and `host`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-pidMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L245">property <b>pidMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L245">property <b>pidMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pidMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2501,7 +2501,7 @@ The Docker networking mode to use for the containers in the task. The valid valu
 The process namespace to use for the containers in the task. The valid values are `host` and `task`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-placementConstraints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L249">property <b>placementConstraints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L249">property <b>placementConstraints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>placementConstraints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionPlacementConstraint'>inputs.ecs.TaskDefinitionPlacementConstraint</a>&gt;[]&gt;;</code></pre>
@@ -2509,7 +2509,7 @@ The process namespace to use for the containers in the task. The valid values ar
 A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placementConstraints` is `10`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-proxyConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L253">property <b>proxyConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L253">property <b>proxyConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionProxyConfiguration'>inputs.ecs.TaskDefinitionProxyConfiguration</a>&gt;;</code></pre>
@@ -2517,7 +2517,7 @@ A set of placement constraints rules that are taken into consideration during ta
 The proxy configuration details for the App Mesh proxy.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-requiresCompatibilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L257">property <b>requiresCompatibilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L257">property <b>requiresCompatibilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresCompatibilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2525,7 +2525,7 @@ The proxy configuration details for the App Mesh proxy.
 A set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L261">property <b>revision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L261">property <b>revision</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revision?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2533,7 +2533,7 @@ A set of launch types required by the task. The valid values are `EC2` and `FARG
 The revision of the task in a particular family.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L265">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L265">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2541,7 +2541,7 @@ The revision of the task in a particular family.
 Key-value mapping of resource tags
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-taskRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L269">property <b>taskRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L269">property <b>taskRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2549,7 +2549,7 @@ Key-value mapping of resource tags
 The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
 
 <h4 class="pdoc-member-header" id="TaskDefinitionState-volumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/taskDefinition.ts#L273">property <b>volumes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/taskDefinition.ts#L273">property <b>volumes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TaskDefinitionVolume'>inputs.ecs.TaskDefinitionVolume</a>&gt;[]&gt;;</code></pre>
@@ -2557,48 +2557,48 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
 A set of volume blocks that containers in your task may use.
 
 <h3 class="pdoc-module-header" id="Ulimit" data-link-title="Ulimit">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L189">
         interface <strong>Ulimit</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>Ulimit</span></code></pre>
 <h4 class="pdoc-member-header" id="Ulimit-hardLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L191">property <b>hardLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L191">property <b>hardLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hardLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Ulimit-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L190">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='#UlimitName'>UlimitName</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Ulimit-softLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L192">property <b>softLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L192">property <b>softLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>softLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="UlimitName" data-link-title="UlimitName">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L196">
         type <strong>UlimitName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> UlimitName = <span class='s2'>"core"</span> | <span class='s2'>"cpu"</span> | <span class='s2'>"data"</span> | <span class='s2'>"fsize"</span> | <span class='s2'>"locks"</span> | <span class='s2'>"memlock"</span> | <span class='s2'>"msgqueue"</span> | <span class='s2'>"nice"</span> | <span class='s2'>"nofile"</span> | <span class='s2'>"nproc"</span> | <span class='s2'>"rss"</span> | <span class='s2'>"rtprio"</span> | <span class='s2'>"rttime"</span> | <span class='s2'>"sigpending"</span> | <span class='s2'>"stack"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="VolumeFrom" data-link-title="VolumeFrom">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L200">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L200">
         interface <strong>VolumeFrom</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VolumeFrom</span></code></pre>
 <h4 class="pdoc-member-header" id="VolumeFrom-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L202">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L202">property <b>readOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="VolumeFrom-sourceContainer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/ecs/container.ts#L201">property <b>sourceContainer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/ecs/container.ts#L201">property <b>sourceContainer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceContainer?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

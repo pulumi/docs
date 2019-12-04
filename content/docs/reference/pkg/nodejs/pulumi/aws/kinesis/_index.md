@@ -49,7 +49,7 @@ meta_desc: "Explore members of the kinesis module in the @pulumi/aws package."
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AnalyticsApplication" data-link-title="AnalyticsApplication">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L57">
         Resource <strong>AnalyticsApplication</strong>
     </a>
 </h3>
@@ -102,7 +102,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_analytics_application.html.markdown.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L137"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L137"> <b>constructor</b></a>
 </h4>
 
 
@@ -116,7 +116,7 @@ Create a AnalyticsApplication resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -127,14 +127,14 @@ Get an existing AnalyticsApplication resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L57">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -145,7 +145,7 @@ Returns true if the given object is an instance of AnalyticsApplication.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L87">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L87">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -153,7 +153,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the Kinesis Analytics Appliation.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-cloudwatchLoggingOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L92">property <b>cloudwatchLoggingOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L92">property <b>cloudwatchLoggingOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudwatchLoggingOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationCloudwatchLoggingOptions'>outputs.kinesis.AnalyticsApplicationCloudwatchLoggingOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L96">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L96">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>code: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ See CloudWatch Logging Options below for more details.
 SQL Code to transform input data, and generate output.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-createTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L100">property <b>createTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L100">property <b>createTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ SQL Code to transform input data, and generate output.
 The Timestamp when the application version was created.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L104">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L104">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ The Timestamp when the application version was created.
 Description of the application.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -195,7 +195,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L108">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L108">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputs'>outputs.kinesis.AnalyticsApplicationInputs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ deployments and may be missing (undefined) during planning phases.
 Input configuration of the application. See Inputs below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-lastUpdateTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L112">property <b>lastUpdateTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L112">property <b>lastUpdateTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastUpdateTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -211,7 +211,7 @@ Input configuration of the application. See Inputs below for more details.
 The Timestamp when the application was last updated.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -219,7 +219,7 @@ The Timestamp when the application was last updated.
 Name of the Kinesis Analytics Application.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L120">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L120">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutput'>outputs.kinesis.AnalyticsApplicationOutput</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -227,7 +227,7 @@ Name of the Kinesis Analytics Application.
 Output destination configuration of the application. See Outputs below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-referenceDataSources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L125">property <b>referenceDataSources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L125">property <b>referenceDataSources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>referenceDataSources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSources'>outputs.kinesis.AnalyticsApplicationReferenceDataSources</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -236,7 +236,7 @@ An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L129">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L129">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -244,7 +244,7 @@ See Reference Data Sources below for more details.
 The Status of the application.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L133">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L133">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -252,7 +252,7 @@ The Status of the application.
 Key-value mapping of tags for the Kinesis Analytics Application.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L57">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -261,7 +261,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplication-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L137">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L137">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ deployments.
 The Version of the application.
 
 <h3 class="pdoc-module-header" id="FirehoseDeliveryStream" data-link-title="FirehoseDeliveryStream">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L222">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L222">
         Resource <strong>FirehoseDeliveryStream</strong>
     </a>
 </h3>
@@ -489,7 +489,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_firehose_delivery_stream.html.markdown.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L296"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L296"> <b>constructor</b></a>
 </h4>
 
 
@@ -503,7 +503,7 @@ Create a FirehoseDeliveryStream resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L231">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L231">method <b>get</b></a>
 </h4>
 
 
@@ -514,14 +514,14 @@ Get an existing FirehoseDeliveryStream resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L222">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L222">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L242">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L242">method <b>isInstance</b></a>
 </h4>
 
 
@@ -532,7 +532,7 @@ Returns true if the given object is an instance of FirehoseDeliveryStream.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L252">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L252">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) specifying the Stream
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L256">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L256">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -548,17 +548,17 @@ The Amazon Resource Name (ARN) specifying the Stream
 This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extendedS3` instead), `extendedS3`, `redshift`, `elasticsearch`, and `splunk`.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-destinationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L257">property <b>destinationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L257">property <b>destinationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-elasticsearchConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L258">property <b>elasticsearchConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L258">property <b>elasticsearchConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>elasticsearchConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamElasticsearchConfiguration'>outputs.kinesis.FirehoseDeliveryStreamElasticsearchConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-extendedS3Configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L262">property <b>extendedS3Configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L262">property <b>extendedS3Configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extendedS3Configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamExtendedS3Configuration'>outputs.kinesis.FirehoseDeliveryStreamExtendedS3Configuration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ This is the destination to where the data is delivered. The only options are `s3
 Enhanced configuration options for the s3 destination. More details are given below.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L222">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L222">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -575,7 +575,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-kinesisSourceConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L266">property <b>kinesisSourceConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L266">property <b>kinesisSourceConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kinesisSourceConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamKinesisSourceConfiguration'>outputs.kinesis.FirehoseDeliveryStreamKinesisSourceConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -583,7 +583,7 @@ deployments and may be missing (undefined) during planning phases.
 Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L271">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L271">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -592,7 +592,7 @@ A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-redshiftConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L277">property <b>redshiftConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L277">property <b>redshiftConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>redshiftConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamRedshiftConfiguration'>outputs.kinesis.FirehoseDeliveryStreamRedshiftConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -602,7 +602,7 @@ Using `redshiftConfiguration` requires the user to also specify a
 `s3Configuration` block. More details are given below.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-s3Configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L282">property <b>s3Configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L282">property <b>s3Configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamS3Configuration'>outputs.kinesis.FirehoseDeliveryStreamS3Configuration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -611,7 +611,7 @@ Required for non-S3 destinations. For S3 destination, use `extendedS3Configurati
 is redshift). More details are given below.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L287">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L287">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverSideEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamServerSideEncryption'>outputs.kinesis.FirehoseDeliveryStreamServerSideEncryption</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -620,12 +620,12 @@ Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-splunkConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L288">property <b>splunkConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L288">property <b>splunkConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>splunkConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirehoseDeliveryStreamSplunkConfiguration'>outputs.kinesis.FirehoseDeliveryStreamSplunkConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L292">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L292">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -633,7 +633,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L222">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L222">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -642,7 +642,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStream-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L296">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L296">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -650,7 +650,7 @@ deployments.
 Specifies the table version for the output data schema. Defaults to `LATEST`.
 
 <h3 class="pdoc-module-header" id="Stream" data-link-title="Stream">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L36">
         Resource <strong>Stream</strong>
     </a>
 </h3>
@@ -684,7 +684,7 @@ const testStream = new aws.kinesis.Stream("testStream", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_stream.html.markdown.
 
 <h4 class="pdoc-member-header" id="Stream-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -698,7 +698,7 @@ Create a Stream resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Stream-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -709,14 +709,14 @@ Get an existing Stream resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Stream-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Stream-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -727,7 +727,7 @@ Returns true if the given object is an instance of Stream.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Stream-onEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L129">method <b>onEvent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L129">method <b>onEvent</b></a>
 </h4>
 
 
@@ -738,7 +738,7 @@ Creates a new subscription to events fired from this Stream to the handler provi
 with options to control the behavior of the subscription.
 
 <h4 class="pdoc-member-header" id="Stream-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L66">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L66">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -746,7 +746,7 @@ with options to control the behavior of the subscription.
 The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
 
 <h4 class="pdoc-member-header" id="Stream-encryptionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L70">property <b>encryptionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L70">property <b>encryptionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptionType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -754,7 +754,7 @@ The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
 The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
 
 <h4 class="pdoc-member-header" id="Stream-enforceConsumerDeletion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L74">property <b>enforceConsumerDeletion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L74">property <b>enforceConsumerDeletion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enforceConsumerDeletion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ The encryption type to use. The only acceptable values are `NONE` or `KMS`. The 
 A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
 
 <h4 class="pdoc-member-header" id="Stream-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -771,7 +771,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Stream-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L78">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L78">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -779,7 +779,7 @@ deployments and may be missing (undefined) during planning phases.
 The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
 
 <h4 class="pdoc-member-header" id="Stream-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -787,7 +787,7 @@ The GUID for the customer-managed KMS key to use for encryption. You can also us
 A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
 
 <h4 class="pdoc-member-header" id="Stream-retentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L86">property <b>retentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L86">property <b>retentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -795,7 +795,7 @@ A name to identify the stream. This is unique to the AWS account and region the 
 Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 168 hours. Minimum value is 24. Default is 24.
 
 <h4 class="pdoc-member-header" id="Stream-shardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L91">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L91">property <b>shardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shardCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -804,7 +804,7 @@ The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.
 
 <h4 class="pdoc-member-header" id="Stream-shardLevelMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L95">property <b>shardLevelMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L95">property <b>shardLevelMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shardLevelMetrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
 
 <h4 class="pdoc-member-header" id="Stream-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L99">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L99">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -820,7 +820,7 @@ A list of shard-level CloudWatch metrics which can be enabled for the stream. Se
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Stream-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -831,7 +831,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getStream" data-link-title="getStream">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L28">
         Data Source <strong>getStream</strong>
     </a>
 </h3>
@@ -861,7 +861,7 @@ const stream = aws.kinesis.getStream({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AnalyticsApplicationArgs" data-link-title="AnalyticsApplicationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L254">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L254">
         interface <strong>AnalyticsApplicationArgs</strong>
     </a>
 </h3>
@@ -871,7 +871,7 @@ const stream = aws.kinesis.getStream({
 The set of arguments for constructing a AnalyticsApplication resource.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationArgs-cloudwatchLoggingOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L259">property <b>cloudwatchLoggingOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L259">property <b>cloudwatchLoggingOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationCloudwatchLoggingOptions'>inputs.kinesis.AnalyticsApplicationCloudwatchLoggingOptions</a>&gt;;</code></pre>
@@ -880,7 +880,7 @@ The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationArgs-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L263">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L263">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -888,7 +888,7 @@ See CloudWatch Logging Options below for more details.
 SQL Code to transform input data, and generate output.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L267">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L267">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -896,7 +896,7 @@ SQL Code to transform input data, and generate output.
 Description of the application.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L271">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L271">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputs'>inputs.kinesis.AnalyticsApplicationInputs</a>&gt;;</code></pre>
@@ -904,7 +904,7 @@ Description of the application.
 Input configuration of the application. See Inputs below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L275">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L275">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -912,7 +912,7 @@ Input configuration of the application. See Inputs below for more details.
 Name of the Kinesis Analytics Application.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationArgs-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L279">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L279">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutput'>inputs.kinesis.AnalyticsApplicationOutput</a>&gt;[]&gt;;</code></pre>
@@ -920,7 +920,7 @@ Name of the Kinesis Analytics Application.
 Output destination configuration of the application. See Outputs below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationArgs-referenceDataSources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L284">property <b>referenceDataSources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L284">property <b>referenceDataSources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>referenceDataSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSources'>inputs.kinesis.AnalyticsApplicationReferenceDataSources</a>&gt;;</code></pre>
@@ -929,7 +929,7 @@ An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L288">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L288">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -937,7 +937,7 @@ See Reference Data Sources below for more details.
 Key-value mapping of tags for the Kinesis Analytics Application.
 
 <h3 class="pdoc-module-header" id="AnalyticsApplicationState" data-link-title="AnalyticsApplicationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L194">
         interface <strong>AnalyticsApplicationState</strong>
     </a>
 </h3>
@@ -947,7 +947,7 @@ Key-value mapping of tags for the Kinesis Analytics Application.
 Input properties used for looking up and filtering AnalyticsApplication resources.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L198">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L198">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ARN'>ARN</a>&gt;;</code></pre>
@@ -955,7 +955,7 @@ Input properties used for looking up and filtering AnalyticsApplication resource
 The ARN of the Kinesis Analytics Appliation.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-cloudwatchLoggingOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L203">property <b>cloudwatchLoggingOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L203">property <b>cloudwatchLoggingOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudwatchLoggingOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationCloudwatchLoggingOptions'>inputs.kinesis.AnalyticsApplicationCloudwatchLoggingOptions</a>&gt;;</code></pre>
@@ -964,7 +964,7 @@ The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L207">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L207">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -972,7 +972,7 @@ See CloudWatch Logging Options below for more details.
 SQL Code to transform input data, and generate output.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-createTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L211">property <b>createTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L211">property <b>createTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTimestamp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -980,7 +980,7 @@ SQL Code to transform input data, and generate output.
 The Timestamp when the application version was created.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L215">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L215">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -988,7 +988,7 @@ The Timestamp when the application version was created.
 Description of the application.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L219">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L219">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputs'>inputs.kinesis.AnalyticsApplicationInputs</a>&gt;;</code></pre>
@@ -996,7 +996,7 @@ Description of the application.
 Input configuration of the application. See Inputs below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-lastUpdateTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L223">property <b>lastUpdateTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L223">property <b>lastUpdateTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastUpdateTimestamp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1004,7 +1004,7 @@ Input configuration of the application. See Inputs below for more details.
 The Timestamp when the application was last updated.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L227">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L227">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1012,7 +1012,7 @@ The Timestamp when the application was last updated.
 Name of the Kinesis Analytics Application.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L231">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L231">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutput'>inputs.kinesis.AnalyticsApplicationOutput</a>&gt;[]&gt;;</code></pre>
@@ -1020,7 +1020,7 @@ Name of the Kinesis Analytics Application.
 Output destination configuration of the application. See Outputs below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-referenceDataSources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L236">property <b>referenceDataSources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L236">property <b>referenceDataSources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>referenceDataSources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSources'>inputs.kinesis.AnalyticsApplicationReferenceDataSources</a>&gt;;</code></pre>
@@ -1029,7 +1029,7 @@ An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L240">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L240">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1037,7 +1037,7 @@ See Reference Data Sources below for more details.
 The Status of the application.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L244">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L244">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1045,7 +1045,7 @@ The Status of the application.
 Key-value mapping of tags for the Kinesis Analytics Application.
 
 <h4 class="pdoc-member-header" id="AnalyticsApplicationState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/analyticsApplication.ts#L248">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/analyticsApplication.ts#L248">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1053,7 +1053,7 @@ Key-value mapping of tags for the Kinesis Analytics Application.
 The Version of the application.
 
 <h3 class="pdoc-module-header" id="FirehoseDeliveryStreamArgs" data-link-title="FirehoseDeliveryStreamArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L410">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L410">
         interface <strong>FirehoseDeliveryStreamArgs</strong>
     </a>
 </h3>
@@ -1063,7 +1063,7 @@ The Version of the application.
 The set of arguments for constructing a FirehoseDeliveryStream resource.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L414">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L414">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1071,7 +1071,7 @@ The set of arguments for constructing a FirehoseDeliveryStream resource.
 The Amazon Resource Name (ARN) specifying the Stream
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L418">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L418">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1079,17 +1079,17 @@ The Amazon Resource Name (ARN) specifying the Stream
 This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extendedS3` instead), `extendedS3`, `redshift`, `elasticsearch`, and `splunk`.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-destinationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L419">property <b>destinationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L419">property <b>destinationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-elasticsearchConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L420">property <b>elasticsearchConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L420">property <b>elasticsearchConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamElasticsearchConfiguration'>inputs.kinesis.FirehoseDeliveryStreamElasticsearchConfiguration</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-extendedS3Configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L424">property <b>extendedS3Configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L424">property <b>extendedS3Configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedS3Configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamExtendedS3Configuration'>inputs.kinesis.FirehoseDeliveryStreamExtendedS3Configuration</a>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ This is the destination to where the data is delivered. The only options are `s3
 Enhanced configuration options for the s3 destination. More details are given below.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-kinesisSourceConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L428">property <b>kinesisSourceConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L428">property <b>kinesisSourceConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kinesisSourceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamKinesisSourceConfiguration'>inputs.kinesis.FirehoseDeliveryStreamKinesisSourceConfiguration</a>&gt;;</code></pre>
@@ -1105,7 +1105,7 @@ Enhanced configuration options for the s3 destination. More details are given be
 Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L433">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L433">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1114,7 +1114,7 @@ A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-redshiftConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L439">property <b>redshiftConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L439">property <b>redshiftConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redshiftConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamRedshiftConfiguration'>inputs.kinesis.FirehoseDeliveryStreamRedshiftConfiguration</a>&gt;;</code></pre>
@@ -1124,7 +1124,7 @@ Using `redshiftConfiguration` requires the user to also specify a
 `s3Configuration` block. More details are given below.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-s3Configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L444">property <b>s3Configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L444">property <b>s3Configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamS3Configuration'>inputs.kinesis.FirehoseDeliveryStreamS3Configuration</a>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ Required for non-S3 destinations. For S3 destination, use `extendedS3Configurati
 is redshift). More details are given below.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L449">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L449">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamServerSideEncryption'>inputs.kinesis.FirehoseDeliveryStreamServerSideEncryption</a>&gt;;</code></pre>
@@ -1142,12 +1142,12 @@ Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-splunkConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L450">property <b>splunkConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L450">property <b>splunkConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>splunkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamSplunkConfiguration'>inputs.kinesis.FirehoseDeliveryStreamSplunkConfiguration</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L454">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L454">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamArgs-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L458">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L458">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ A mapping of tags to assign to the resource.
 Specifies the table version for the output data schema. Defaults to `LATEST`.
 
 <h3 class="pdoc-module-header" id="FirehoseDeliveryStreamState" data-link-title="FirehoseDeliveryStreamState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L356">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L356">
         interface <strong>FirehoseDeliveryStreamState</strong>
     </a>
 </h3>
@@ -1173,7 +1173,7 @@ Specifies the table version for the output data schema. Defaults to `LATEST`.
 Input properties used for looking up and filtering FirehoseDeliveryStream resources.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L360">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L360">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1181,7 +1181,7 @@ Input properties used for looking up and filtering FirehoseDeliveryStream resour
 The Amazon Resource Name (ARN) specifying the Stream
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L364">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L364">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1189,17 +1189,17 @@ The Amazon Resource Name (ARN) specifying the Stream
 This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extendedS3` instead), `extendedS3`, `redshift`, `elasticsearch`, and `splunk`.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-destinationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L365">property <b>destinationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L365">property <b>destinationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-elasticsearchConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L366">property <b>elasticsearchConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L366">property <b>elasticsearchConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamElasticsearchConfiguration'>inputs.kinesis.FirehoseDeliveryStreamElasticsearchConfiguration</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-extendedS3Configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L370">property <b>extendedS3Configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L370">property <b>extendedS3Configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedS3Configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamExtendedS3Configuration'>inputs.kinesis.FirehoseDeliveryStreamExtendedS3Configuration</a>&gt;;</code></pre>
@@ -1207,7 +1207,7 @@ This is the destination to where the data is delivered. The only options are `s3
 Enhanced configuration options for the s3 destination. More details are given below.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-kinesisSourceConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L374">property <b>kinesisSourceConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L374">property <b>kinesisSourceConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kinesisSourceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamKinesisSourceConfiguration'>inputs.kinesis.FirehoseDeliveryStreamKinesisSourceConfiguration</a>&gt;;</code></pre>
@@ -1215,7 +1215,7 @@ Enhanced configuration options for the s3 destination. More details are given be
 Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L379">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L379">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1224,7 +1224,7 @@ A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-redshiftConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L385">property <b>redshiftConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L385">property <b>redshiftConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>redshiftConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamRedshiftConfiguration'>inputs.kinesis.FirehoseDeliveryStreamRedshiftConfiguration</a>&gt;;</code></pre>
@@ -1234,7 +1234,7 @@ Using `redshiftConfiguration` requires the user to also specify a
 `s3Configuration` block. More details are given below.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-s3Configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L390">property <b>s3Configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L390">property <b>s3Configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamS3Configuration'>inputs.kinesis.FirehoseDeliveryStreamS3Configuration</a>&gt;;</code></pre>
@@ -1243,7 +1243,7 @@ Required for non-S3 destinations. For S3 destination, use `extendedS3Configurati
 is redshift). More details are given below.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-serverSideEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L395">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L395">property <b>serverSideEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamServerSideEncryption'>inputs.kinesis.FirehoseDeliveryStreamServerSideEncryption</a>&gt;;</code></pre>
@@ -1252,12 +1252,12 @@ Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-splunkConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L396">property <b>splunkConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L396">property <b>splunkConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>splunkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirehoseDeliveryStreamSplunkConfiguration'>inputs.kinesis.FirehoseDeliveryStreamSplunkConfiguration</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L400">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L400">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1265,7 +1265,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="FirehoseDeliveryStreamState-versionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L404">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L404">property <b>versionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1273,7 +1273,7 @@ A mapping of tags to assign to the resource.
 Specifies the table version for the output data schema. Defaults to `LATEST`.
 
 <h3 class="pdoc-module-header" id="GetStreamArgs" data-link-title="GetStreamArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L46">
         interface <strong>GetStreamArgs</strong>
     </a>
 </h3>
@@ -1283,7 +1283,7 @@ Specifies the table version for the output data schema. Defaults to `LATEST`.
 A collection of arguments for invoking getStream.
 
 <h4 class="pdoc-member-header" id="GetStreamArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1291,7 +1291,7 @@ A collection of arguments for invoking getStream.
 The name of the Kinesis Stream.
 
 <h3 class="pdoc-module-header" id="GetStreamResult" data-link-title="GetStreamResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L56">
         interface <strong>GetStreamResult</strong>
     </a>
 </h3>
@@ -1301,7 +1301,7 @@ The name of the Kinesis Stream.
 A collection of values returned by getStream.
 
 <h4 class="pdoc-member-header" id="GetStreamResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L60">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L60">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1309,7 +1309,7 @@ A collection of values returned by getStream.
 The Amazon Resource Name (ARN) of the Kinesis Stream (same as id).
 
 <h4 class="pdoc-member-header" id="GetStreamResult-closedShards">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L64">property <b>closedShards</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L64">property <b>closedShards</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>closedShards: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1317,7 +1317,7 @@ The Amazon Resource Name (ARN) of the Kinesis Stream (same as id).
 The list of shard ids in the CLOSED state. See [Shard State][2] for more.
 
 <h4 class="pdoc-member-header" id="GetStreamResult-creationTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L68">property <b>creationTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L68">property <b>creationTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1325,7 +1325,7 @@ The list of shard ids in the CLOSED state. See [Shard State][2] for more.
 The approximate UNIX timestamp that the stream was created.
 
 <h4 class="pdoc-member-header" id="GetStreamResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L96">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1333,7 +1333,7 @@ The approximate UNIX timestamp that the stream was created.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetStreamResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1341,7 +1341,7 @@ id is the provider-assigned unique ID for this managed resource.
 The name of the Kinesis Stream.
 
 <h4 class="pdoc-member-header" id="GetStreamResult-openShards">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L76">property <b>openShards</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L76">property <b>openShards</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>openShards: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1349,7 +1349,7 @@ The name of the Kinesis Stream.
 The list of shard ids in the OPEN state. See [Shard State][2] for more.
 
 <h4 class="pdoc-member-header" id="GetStreamResult-retentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L80">property <b>retentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L80">property <b>retentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1357,7 +1357,7 @@ The list of shard ids in the OPEN state. See [Shard State][2] for more.
 Length of time (in hours) data records are accessible after they are added to the stream.
 
 <h4 class="pdoc-member-header" id="GetStreamResult-shardLevelMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L84">property <b>shardLevelMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L84">property <b>shardLevelMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardLevelMetrics: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1365,7 +1365,7 @@ Length of time (in hours) data records are accessible after they are added to th
 A list of shard-level CloudWatch metrics which are enabled for the stream. See [Monitoring with CloudWatch][3] for more.
 
 <h4 class="pdoc-member-header" id="GetStreamResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L88">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L88">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1373,7 +1373,7 @@ A list of shard-level CloudWatch metrics which are enabled for the stream. See [
 The current status of the stream. The stream status is one of CREATING, DELETING, ACTIVE, or UPDATING.
 
 <h4 class="pdoc-member-header" id="GetStreamResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/getStream.ts#L92">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/getStream.ts#L92">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1381,7 +1381,7 @@ The current status of the stream. The stream status is one of CREATING, DELETING
 A mapping of tags to assigned to the stream.
 
 <h3 class="pdoc-module-header" id="StreamArgs" data-link-title="StreamArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L194">
         interface <strong>StreamArgs</strong>
     </a>
 </h3>
@@ -1391,7 +1391,7 @@ A mapping of tags to assigned to the stream.
 The set of arguments for constructing a Stream resource.
 
 <h4 class="pdoc-member-header" id="StreamArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L198">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L198">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1399,7 +1399,7 @@ The set of arguments for constructing a Stream resource.
 The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
 
 <h4 class="pdoc-member-header" id="StreamArgs-encryptionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L202">property <b>encryptionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L202">property <b>encryptionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1407,7 +1407,7 @@ The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
 The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
 
 <h4 class="pdoc-member-header" id="StreamArgs-enforceConsumerDeletion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L206">property <b>enforceConsumerDeletion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L206">property <b>enforceConsumerDeletion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enforceConsumerDeletion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1415,7 +1415,7 @@ The encryption type to use. The only acceptable values are `NONE` or `KMS`. The 
 A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
 
 <h4 class="pdoc-member-header" id="StreamArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L210">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L210">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1423,7 +1423,7 @@ A boolean that indicates all registered consumers should be deregistered from th
 The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
 
 <h4 class="pdoc-member-header" id="StreamArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L214">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L214">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1431,7 +1431,7 @@ The GUID for the customer-managed KMS key to use for encryption. You can also us
 A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
 
 <h4 class="pdoc-member-header" id="StreamArgs-retentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L218">property <b>retentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L218">property <b>retentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1439,7 +1439,7 @@ A name to identify the stream. This is unique to the AWS account and region the 
 Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 168 hours. Minimum value is 24. Default is 24.
 
 <h4 class="pdoc-member-header" id="StreamArgs-shardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L223">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L223">property <b>shardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1448,7 +1448,7 @@ The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.
 
 <h4 class="pdoc-member-header" id="StreamArgs-shardLevelMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L227">property <b>shardLevelMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L227">property <b>shardLevelMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardLevelMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1456,7 +1456,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
 
 <h4 class="pdoc-member-header" id="StreamArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L231">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L231">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1464,68 +1464,68 @@ A list of shard-level CloudWatch metrics which can be enabled for the stream. Se
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="StreamEvent" data-link-title="StreamEvent">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L46">
         interface <strong>StreamEvent</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>StreamEvent</span></code></pre>
 <h4 class="pdoc-member-header" id="StreamEvent-Records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L47">property <b>Records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L47">property <b>Records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>Records: <a href='#StreamEventRecord'>StreamEventRecord</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="StreamEventHandler" data-link-title="StreamEventHandler">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L66">
         type <strong>StreamEventHandler</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> StreamEventHandler = lambda.EventHandler&lt;<a href='#StreamEvent'>StreamEvent</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="StreamEventRecord" data-link-title="StreamEventRecord">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L50">
         interface <strong>StreamEventRecord</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>StreamEventRecord</span></code></pre>
 <h4 class="pdoc-member-header" id="StreamEventRecord-awsRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L63">property <b>awsRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L63">property <b>awsRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsRegion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventRecord-eventID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L58">property <b>eventID</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L58">property <b>eventID</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventRecord-eventName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L61">property <b>eventName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L61">property <b>eventName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventName: <span class='s2'>"aws:kinesis:record"</span>;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventRecord-eventSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L57">property <b>eventSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L57">property <b>eventSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventSource: <span class='s2'>"aws:kinesis"</span>;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventRecord-eventSourceARN">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L62">property <b>eventSourceARN</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L62">property <b>eventSourceARN</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventSourceARN: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventRecord-eventVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L60">property <b>eventVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L60">property <b>eventVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventRecord-invokeIdentityArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L59">property <b>invokeIdentityArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L59">property <b>invokeIdentityArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invokeIdentityArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventRecord-kinesis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L51">property <b>kinesis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L51">property <b>kinesis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kinesis: {
@@ -1535,28 +1535,28 @@ A mapping of tags to assign to the resource.
     sequenceNumber: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</code></pre>
 <h3 class="pdoc-module-header" id="StreamEventSubscription" data-link-title="StreamEventSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L68">
         class <strong>StreamEventSubscription</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>StreamEventSubscription</span> <span class='kr'>extends</span> <a href='#EventSubscription'>EventSubscription</a></code></pre>
 <h4 class="pdoc-member-header" id="StreamEventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> StreamEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, stream: stream.Stream, handler: <a href='#StreamEventHandler'>StreamEventHandler</a>, args: <a href='#StreamEventSubscriptionArgs'>StreamEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="StreamEventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L68">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L68">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StreamEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1567,34 +1567,34 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StreamEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L68">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L68">method <b>registerOutputs</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StreamEventSubscription-eventSourceMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L70">property <b>eventSourceMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L70">property <b>eventSourceMapping</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventSourceMapping: lambda.EventSourceMapping;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventSubscription-func">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>func: LambdaFunction;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventSubscription-permission">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permission: permission.Permission;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventSubscription-stream">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L69">property <b>stream</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L69">property <b>stream</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stream: stream.Stream;</code></pre>
 <h4 class="pdoc-member-header" id="StreamEventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L68">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L68">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1603,14 +1603,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StreamEventSubscriptionArgs" data-link-title="StreamEventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L22">
         interface <strong>StreamEventSubscriptionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>StreamEventSubscriptionArgs</span></code></pre>
 <h4 class="pdoc-member-header" id="StreamEventSubscriptionArgs-batchSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L27">property <b>batchSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L27">property <b>batchSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1619,7 +1619,7 @@ The largest number of records that Lambda will retrieve from your event source a
 invocation. Defaults to `100` for Kinesis.
 
 <h4 class="pdoc-member-header" id="StreamEventSubscriptionArgs-startingPosition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L34">property <b>startingPosition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L34">property <b>startingPosition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startingPosition: <span class='s2'>"TRIM_HORIZON"</span> | <span class='s2'>"LATEST"</span> | <span class='s2'>"AT_TIMESTAMP"</span>;</code></pre>
@@ -1629,7 +1629,7 @@ The position in the stream where AWS Lambda should start reading. Must be one of
 [startingPositionTimestamp] must be provided as well.
 
 <h4 class="pdoc-member-header" id="StreamEventSubscriptionArgs-startingPositionTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/kinesisMixins.ts#L43">property <b>startingPositionTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/kinesisMixins.ts#L43">property <b>startingPositionTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startingPositionTimestamp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1641,7 +1641,7 @@ If the timestamp is older than the current trim horizon, the oldest available re
 chosen.
 
 <h3 class="pdoc-module-header" id="StreamState" data-link-title="StreamState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L151">
         interface <strong>StreamState</strong>
     </a>
 </h3>
@@ -1651,7 +1651,7 @@ chosen.
 Input properties used for looking up and filtering Stream resources.
 
 <h4 class="pdoc-member-header" id="StreamState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L155">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L155">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1659,7 +1659,7 @@ Input properties used for looking up and filtering Stream resources.
 The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
 
 <h4 class="pdoc-member-header" id="StreamState-encryptionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L159">property <b>encryptionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L159">property <b>encryptionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1667,7 +1667,7 @@ The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
 The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
 
 <h4 class="pdoc-member-header" id="StreamState-enforceConsumerDeletion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L163">property <b>enforceConsumerDeletion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L163">property <b>enforceConsumerDeletion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enforceConsumerDeletion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1675,7 +1675,7 @@ The encryption type to use. The only acceptable values are `NONE` or `KMS`. The 
 A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
 
 <h4 class="pdoc-member-header" id="StreamState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L167">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L167">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1683,7 +1683,7 @@ A boolean that indicates all registered consumers should be deregistered from th
 The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
 
 <h4 class="pdoc-member-header" id="StreamState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L171">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L171">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1691,7 +1691,7 @@ The GUID for the customer-managed KMS key to use for encryption. You can also us
 A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
 
 <h4 class="pdoc-member-header" id="StreamState-retentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L175">property <b>retentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L175">property <b>retentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1699,7 +1699,7 @@ A name to identify the stream. This is unique to the AWS account and region the 
 Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 168 hours. Minimum value is 24. Default is 24.
 
 <h4 class="pdoc-member-header" id="StreamState-shardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L180">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L180">property <b>shardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1708,7 +1708,7 @@ The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.
 
 <h4 class="pdoc-member-header" id="StreamState-shardLevelMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L184">property <b>shardLevelMetrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L184">property <b>shardLevelMetrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardLevelMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1716,7 +1716,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
 A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
 
 <h4 class="pdoc-member-header" id="StreamState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/2c429aa39ec387c97d1157b8088e6b50c55841ee/sdk/nodejs/kinesis/stream.ts#L188">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/7e649d425d2e2830c2f868b880d647bf6568f087/sdk/nodejs/kinesis/stream.ts#L188">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
