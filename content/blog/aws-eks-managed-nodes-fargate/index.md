@@ -20,7 +20,7 @@ You now have three primary options for powering your EKS clusters:
 
 These options control how your cluster's worker nodes are provisioned, managed, and scaled. These worker nodes are what physically run the compute and host the storage used by your Kubernetes pods, and impact the cost and ability for your cluster to meet workload demands. The spectrum of options available provides a range of flexibility, from least control to most control, over these worker nodes.
 
-We liked how Abby Fuller at AWS explained this succinctly on Twitter:
+We liked how [Abby Fuller](https://twitter.com/abbyfuller) at AWS explained this succinctly on Twitter:
 
 {{< tweet 1202020186234048512 >}}
 
@@ -278,7 +278,11 @@ Using EKS Managed Node Groups is a great step forward to simplifying how we run 
 
 AWS Fargate technology is essentially "serverless compute for containers." Instead of thinking at the level of nodes, we can let Fargate handle provisioning, scaling, and scheduling of our cluster's worker nodes. This means we can just operate at the level of Kubernetes pods abstractions and let AWS do all of the other hard work for us!
 
-The key building block that enables this support is something called a [Fargate profile](/docs/reference/pkg/nodejs/pulumi/aws/eks/#FargateProfile). Like `eks.NodeGroup`s above, one of these can be allocated explicitly:
+Not only is it simpler, but as [Clare Liguori](https://twitter.com/clare_liguori) explained at re:Invent, Fargate can react very quickly to load changes:
+
+![EC2 vs Fargate EKS Scaling](./clare-fargate.jpeg)
+
+Let's see how to use it. The key building block that enables this support is something called a [Fargate profile](/docs/reference/pkg/nodejs/pulumi/aws/eks/#FargateProfile). Like `eks.NodeGroup`s above, one of these can be allocated explicitly:
 
 ```typescript
 import * as aws from "@pulumi/aws";
