@@ -8,19 +8,19 @@ date: "2019-12-05"
 meta_image: "pulumi-eks-fargate.png"
 ---
 
-AWS announced two new features just this week to simplify your Elastic Kubernetes Service (EKS) clusters: Managed Node Groups and Fargate support. We're happy to announce that we've integrated support for both, including easy-to-use APIs in Pulumi Crosswalk, augmenting the base EKS support available since the service became generally available over a year ago. The result is a great spectrum of options for managing your cluster's compute &mdash; offering ease-of-use, in addition to full control and flexibility, based on your needs.
+At AWS re:Invent this week, Amazon highlighed two new features that simplify scaling your Elastic Kubernetes Service (EKS) clusters: Managed Node Groups and Fargate. We're happy to announce that we've integrated support for both, making our existing EKS support even easier to use than before. The result is a great spectrum of options for managing your cluster's compute &mdash; offering productivity, flexibility, and control, based on your needs.
 
 ## Managing EKS Workers
 
 You now have three primary options for powering your EKS clusters:
 
-* **Fargate**: Let AWS Fargate manage and scale nodes automatically and dynamically as needed
+* **Fargate**: Let [AWS Fargate](https://aws.amazon.com/fargate/) intelligently manage and scale nodes automatically
 * **Managed Node Groups**: Let EKS manage and scale nodes based on declarative specifications
 * **EC2**: Manage nodes by hand using explicit groups, EC2 instances, and Auto Scaling Groups
 
-These options control how your cluster's worker nodes are provisioned, managed, and scaled. These worker nodes are what physically run the compute and host the storage used by your Kubernetes pods, and impact the cost and ability for your cluster to meet workload demands. The spectrum of options available provides a range of flexibility, from least control to most control, over these worker nodes.
+Each option controls how your cluster's worker nodes are provisioned, managed, and scaled. Worker nodes are what physically run the compute and host the storage used by your Kubernetes pods, and impact the cost and your cluster's ability to meet workload demands. The spectrum of options available provides a range of flexibility, from least control to most control, respectively, over the configuration and provisioning of these worker nodes.
 
-We liked how [Abby Fuller](https://twitter.com/abbyfuller) at AWS explained this succinctly on Twitter:
+[Abby Fuller](https://twitter.com/abbyfuller) from AWS explained these options visually and succinctly on Twitter:
 
 {{< tweet 1202020186234048512 >}}
 
@@ -28,9 +28,9 @@ Let's now see how each of these work. To fully appreciate the new features, we w
 
 ## Provisioning EKS Clusters
 
-Running a Kubernetes cluster isn't easy, but Amazon EKS makes the task of doing so much simpler. It offers out-of-the-box integrations with essential AWS sevices like IAM, EBS, Route53, and CloudWatch, so that your EKS clusters fit with your existing AWS security, storage, and monitoring practices.
+Running a Kubernetes cluster isn't easy, but EKS makes the task of doing so much simpler. It offers out-of-the-box integrations with essential AWS sevices like IAM, EBS, Route53, and CloudWatch, so that your EKS clusters fit with your existing AWS security, storage, and monitoring practices.
 
-It is great to have all of the building blocks at your fingertips, and the `@pulumi/aws` package [exposes all of the raw capabilities of EKS to you](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#Cluster). We also created the `@pulumi/eks` package to simplify common tasks, however, including provisioning the Kubernetes data plane, configuring VPC/CNI and subnet networking, and managing node groups &mdash; this is what we'll use in our examples.
+It's great to have all of the building blocks at your fingertips, and the `@pulumi/aws` package [exposes these raw capabilities of EKS to you](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#Cluster). [We also created an EKS package](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/) to simplify common tasks, however, including creating the Kubernetes data plane, configuring VPC/CNI and subnet networking, and managing node groups. This package has been enlightened with the new features, and is what we'll use in our examples.
 
 Provisioning a new EKS cluster today is already as simple as a dozen lines of code:
 
@@ -51,7 +51,6 @@ const cluster = new eks.Cluster("my-cluster", {
     minSize: 3,
     maxSize: 7,
     storageClasses: "gp2",
-    deployDashboard: false,
 });
 
 // Export the cluster's kubeconfig.
@@ -150,13 +149,23 @@ Resources:
 Duration: 12m12s
 ```
 
+As soon as this cluster is up and running, we can interact with it with `kubectl`, or deploy with Pulumi:
+
+```bash
+$ pulumi stack output kubeconfig > kubeconfig.yml
+$ KUBECONFIG=kubeconfig.yml kubectl get nodes
+NAME                                             STATUS   ROLES    AGE   VERSION
+aws-ip-10-0-164-133.us-east-2.compute.internal   Ready    <none>   4m    v1.14.8-eks
+aws-ip-10-0-233-6.us-east-2.compute.internal     Ready    <none>   4m    v1.14.8-eks
+```
+
 ## Manually Managing EC2 Node Groups
 
-A fully functioning production cluster typically requires many other considerations. For those, we've put together [a set of playbooks as part of Pulumi Crosswalk for Kubernetes](/docs/guides/crosswalk/kubernetes) that walk through how to go to production with EKS specifically, in addition to other managed Kubernetes offerings.
+A fully functioning production cluster usually requires many other considerations. For those, we've put together [a set of playbooks as part of Pulumi Crosswalk for Kubernetes](/docs/guides/crosswalk/kubernetes) that walk through how to go to production with EKS specifically, in addition to other managed Kubernetes offerings.
 
-Notice, for instance, that we didn't need to even provision any worker nodes. This is thanks to the `eks.Cluster` abstraction creating a default node pool for us, which has an auto-scaling policy that attempts to maintain the `desiredCapacity` while remaining within the bounds of `minSize` and `maxSize`. Sometimes you need more explicit control over the worker nodes, however, for reasons such as having more control over capacity, specializing the kind of compute or storage your workload needs, and so on. This ultimately devolves into managing EC2 instances by hand, which [the `eks.NodeGroup` class supports](https://www.pulumi.com/docs/guides/crosswalk/kubernetes/worker-nodes/).
+Notice, for instance, that we didn't need to even provision any worker nodes. This is thanks to the `eks.Cluster` abstraction creating a default node pool for us, which has an auto-scaling policy that attempts to maintain the `desiredCapacity` while remaining within the bounds of `minSize` and `maxSize`. Often you need more explicit control over the worker nodes, however, for reasons such precise capacity, specializing compute or storage for different workload needs, and so on. This ultimately devolves into managing EC2 instances by hand, which [the `eks.NodeGroup` class supports](https://www.pulumi.com/docs/guides/crosswalk/kubernetes/worker-nodes/).
 
-For example, this code creates a new EKS cluster, disabling the default node group &mdash; using `skipDefaultNodeGroup: true`, since we will create our own &mdash; and creates a single node group with an IAM role, desired instance type, scaling parameters, labels, and so on:
+For example, this code creates a new EKS cluster, disabling the default node group &mdash; using `skipDefaultNodeGroup: true`, since we will create our own &mdash; and creates a single node group with more specific configuration settings: IAM role, desired instance type, scaling parameters, labels, and so on:
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -190,7 +199,6 @@ const cluster = new eks.Cluster("my-cluster", {
     vpcId: vpc.vpcId,
     publicSubnetIds: vpc.publicSubnetIds,
     privateSubnetIds: vpc.privateSubnetIds,
-    deployDashboard: false,
     instanceRoles: [ role ],
 });
 
@@ -216,7 +224,7 @@ The new EKS feature [Managed Node Groups](https://aws.amazon.com/blogs/container
 
 Managed Node Groups will automatically scale the EC2 instances powering your cluster using an Auto Scaling Group managed by EKS. This ASG also runs the latest Amazon EKS-optimized Amazon Linux 2 AMI. This is great on one hand &mdash; because updates will be applied automatically for you &mdash; but if you want control over this you will want to manage your own node groups. Finally, security groups, IAM roles, and connecting them together is handled for you.
 
-To opt-in to using Managed Node Groups, the raw [`aws.eks.NodeGroup` building block](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#NodeGroup) is available. However, we've added the `eks.Cluster.createManagedNodeGroup` function to make it easier, and to integrate with cluster provisioning.
+To opt-in to using Managed Node Groups, the raw [`aws.eks.NodeGroup` building block](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#NodeGroup) is available. However, we've enlightened the EKS package with the `eks.Cluster.createManagedNodeGroup` function to make it easier and to integrate with cluster provisioning.
 
 The following example creates an EKS cluster with a single Managed Node Group. It looks similar to our explicitly managed node group earlier, but a bit simpler because we can lean on EKS to configure and scale it:
 
@@ -251,7 +259,6 @@ const cluster = new eks.Cluster("my-cluster", {
     vpcId: vpc.vpcId,
     publicSubnetIds: vpc.publicSubnetIds,
     privateSubnetIds: vpc.privateSubnetIds,
-    deployDashboard: false,
     instanceRoles: [ role ],
 });
 
@@ -270,61 +277,23 @@ export const kubeconfig = cluster.kubeconfig;
 
 This can be provisioned with a single `pulumi up`, just like before, but instead of the automatically created default node group, our cluster will use a Managed Node Group instead.
 
-For a full list of properties you can configure, please refer to the [`createManagedNodeGroup` API docs](/docs/reference/pkg/nodejs/pulumi/eks/#createNodeGroup). Note that there are fewer options available than manually managed node groups, such as inability to supply kubelet arguments. We give up some control for the added simplicity. For complete information about EKS Managed Node Groups, [see AWS's own product documentation](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
+Note that it's possible to mix node groups. So, if you need precise control over some groups, but not others, feel free to call `createNodeGroup` and `createManagedNodeGroup` interspersed with one another. The EKS package knows what to do.
+
+For a full list of properties you can configure on your Managed Node Groups, please refer to the [`createManagedNodeGroup` API docs](/docs/reference/pkg/nodejs/pulumi/eks/#createNodeGroup). There are fewer options available than manually managed node groups, such as inability to supply kubelet arguments, for instance. We are giving up some control in exchange for simplicity. For complete information about EKS Managed Node Groups, [see AWS's own product documentation](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
 
 ## Let Fargate Manage It All
 
-Using EKS Managed Node Groups is a great step forward to simplifying how we run our Kubernetes workloads. It still means, however, that we need to declare our compute requirements and think at the level of worker nodes. That's where [AWS Fargate support for EKS](https://aws.amazon.com/blogs/aws/amazon-eks-on-aws-fargate-now-generally-available/) offers another step function in simplifying our task of managing clusters.
+Using EKS Managed Node Groups is a great step forward to simplifying how we run our Kubernetes workloads. It still means, however, that we need to declare our compute requirements and think at the level of worker nodes. That's where [AWS Fargate support for EKS](https://aws.amazon.com/blogs/aws/amazon-eks-on-aws-fargate-now-generally-available/) offers a huge step function in simplifying our task of managing and scaling our EKS clusters.
 
 AWS Fargate technology is essentially "serverless compute for containers." Instead of thinking at the level of nodes, we can let Fargate handle provisioning, scaling, and scheduling of our cluster's worker nodes. This means we can just operate at the level of Kubernetes pods abstractions and let AWS do all of the other hard work for us!
 
-Not only is it simpler, but as [Clare Liguori](https://twitter.com/clare_liguori) explained at re:Invent, Fargate can react very quickly to load changes:
+Not only is it simpler, but as [Clare Liguori](https://twitter.com/clare_liguori) explained at re:Invent, Fargate can react very quickly to load changes. Amazon has put a ton of great effort into projects like [AWS Nitro](https://aws.amazon.com/ec2/nitro/) and [Firecracker](https://firecracker-microvm.github.io/), ultimately leading to lightning fast startup times and impressive auto-scaling capabilities. Fargate for EKS taps into all of this goodness:
 
 ![EC2 vs Fargate EKS Scaling](./clare-fargate.jpeg)
 
-Let's see how to use it. The key building block that enables this support is something called a [Fargate profile](/docs/reference/pkg/nodejs/pulumi/aws/eks/#FargateProfile). Like `eks.NodeGroup`s above, one of these can be allocated explicitly:
+Now let's see how to use it. The key building block that enables Fargate support is something called a [Fargate profile](/docs/reference/pkg/nodejs/pulumi/aws/eks/#FargateProfile). Like `eks.NodeGroup`s above, one of these can be allocated explicitly, if you prefer to program at the level of the raw underlying building blocks.
 
-```typescript
-import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
-import * as eks from "@pulumi/eks";
-
-// Create a VPC for our cluster.
-const vpc = new awsx.ec2.Vpc("my-vpc");
-
-// IAM roles for the node group.
-const role = new aws.iam.Role("my-cluster-ng-role", {
-    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({
-        Service: "eks-fargate-pods.amazonaws.com",
-    }),
-});
-new aws.iam.RolePolicyAttachment(`my-cluster-ng-role-policy-${counter++}`,
-    { policyArn, role: "arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy" },
-);
-
-// Create the EKS cluster itself, disabling the default node group.
-const cluster = new eks.Cluster("my-cluster", {
-    skipDefaultNodeGroup: true,
-    deployDashboard: false,
-    vpcId: vpc.id,
-    privateSubnetIds: vpc.privateSubnetIds,
-    instanceRoles: [ role ],
-});
-
-// Enable Fargate on this cluster.
-const fargateProfile = new aws.eks.FargateProfile("my-cluster-fp", {
-    clusterName: cluster.eksCluster.name,
-    podExecutionRoleArn: role.arn,
-    selectors: [{
-        namespace: "example",
-    }],
-});
-
-// Export the cluster's kubeconfig.
-export const kubeconfig = cluster.kubeconfig;
-```
-
-The EKS package, however, has also been enlightened to make allocating a Fargate-powered EKS cluster as simple as saying `fargate: true`. All we need to do is change our original cluster definition to the following:
+The EKS package, however, has  been enlightened to make allocating a Fargate-powered EKS cluster as simple as saying `fargate: true`. All we need to do is change our original cluster definition to the following:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -338,14 +307,25 @@ const cluster = new eks.Cluster("my-cluster", {
     fargate: true,
     vpcId: vpc.id,
     privateSubnetIds: vpc.privateSubnetIds,
-    deployDashboard: false,
 });
 
 // Export the cluster's kubeconfig.
 export const kubeconfig = cluster.kubeconfig;
 ```
 
-If we provision this with `pulumi up`, we've got a fully functioning Elastic Kubernetes cluster &mdash; with all of the hard work around managing and scaling the worker nodes left to AWS Fargate, letting us focus on our workload!
+If we provision this with `pulumi up`, we've got a fully functioning EKS cluster running on Fargate:
+
+```bash
+$ pulumi up
+...
+$ pulumi stack output kubeconfig > kubeconfig.yml
+$ KUBECONFIG=kubeconfig.yml kubectl get nodes
+NAME                                                STATUS   ROLES    AGE   VERSION
+fargate-ip-10-0-174-4.us-east-2.compute.internal    Ready    <none>   3m    v1.14.8-eks
+fargate-ip-10-0-266-133.us-east-2.compute.internal  Ready    <none>   2m    v1.14.8-eks
+```
+
+All of the hard work around managing and scaling our cluster is left to AWS Fargate, letting us focus on our workload!
 
 ## In Conclusion
 
@@ -355,6 +335,8 @@ In this article, we've seen the full range of EKS cluster management options:
 * Managed Node Groups, enabling more control, while still leveraging EKS to auto-scale
 * EC2, for full control over your cluster's compute pools and nodes
 
-We're excited to offer support for this full range of options just a day after the features were announced at AWS re:Invent this week, including to enlightening `eks.Cluster` itself for ease-of-use.
+We're excited to offer support for this full range of options the same week of AWS re:Invent, including not just the building block support, but the simpler interface provided by [our open source EKS package](https://github.com/pulumi/pulumi-eks).
 
-To get started with Pulumi and try out EKS, check out our [Getting Started guide](https://www.pulumi.com/docs/get-started/).
+To get started with Pulumi and kick the tires with EKS today, check out our [Getting Started guide](/docs/get-started/). There are both [AWS](/docs/get-started/aws) and [Kubernetes](/docs/get-started/kubernetes) versions available.
+
+Happy Fargating!
