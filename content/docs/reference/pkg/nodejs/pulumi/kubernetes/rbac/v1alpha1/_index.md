@@ -27,7 +27,7 @@ meta_desc: "Explore members of the v1alpha1 module in the @pulumi/kubernetes pac
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ClusterRole" data-link-title="ClusterRole">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L14">
         Resource <strong>ClusterRole</strong>
     </a>
 </h3>
@@ -38,7 +38,7 @@ ClusterRole is a cluster level, logical grouping of PolicyRules that can be refe
 unit by a RoleBinding or ClusterRoleBinding.
 
 <h4 class="pdoc-member-header" id="ClusterRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -52,7 +52,7 @@ Create a rbac.v1alpha1.ClusterRole resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -66,14 +66,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="ClusterRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Returns true if the given object is an instance of ClusterRole.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterRole-aggregationRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L20">property <b>aggregationRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L20">property <b>aggregationRule</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aggregationRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AggregationRule'>outputs.rbac.v1alpha1.AggregationRule</a>&gt;;</code></pre>
@@ -94,7 +94,7 @@ ClusterRole. If AggregationRule is set, then the Rules are controller managed an
 changes to Rules will be stomped by the controller.
 
 <h4 class="pdoc-member-header" id="ClusterRole-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L28">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L28">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -105,7 +105,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ClusterRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -114,7 +114,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterRole-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L36">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L36">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ClusterRole"</span>&gt;;</code></pre>
@@ -125,7 +125,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ClusterRole-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L41">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L41">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
@@ -133,7 +133,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard object's metadata.
 
 <h4 class="pdoc-member-header" id="ClusterRole-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L46">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L46">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PolicyRule'>outputs.rbac.v1alpha1.PolicyRule</a>[]&gt;;</code></pre>
@@ -141,7 +141,7 @@ Standard object's metadata.
 Rules holds all the PolicyRules for this ClusterRole
 
 <h4 class="pdoc-member-header" id="ClusterRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -150,7 +150,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClusterRoleBinding" data-link-title="ClusterRoleBinding">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L14">
         Resource <strong>ClusterRoleBinding</strong>
     </a>
 </h3>
@@ -161,7 +161,7 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
 ClusterRole in the global namespace, and adds who information via Subject.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -175,7 +175,7 @@ Create a rbac.v1alpha1.ClusterRoleBinding resource with the given unique name, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -189,14 +189,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -207,7 +207,7 @@ Returns true if the given object is an instance of ClusterRoleBinding.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L21">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L21">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -218,7 +218,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -227,7 +227,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L29">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L29">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ClusterRoleBinding"</span>&gt;;</code></pre>
@@ -238,7 +238,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L34">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L34">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
@@ -246,7 +246,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard object's metadata.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-roleRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L40">property <b>roleRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L40">property <b>roleRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleRef: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RoleRef'>outputs.rbac.v1alpha1.RoleRef</a>&gt;;</code></pre>
@@ -255,7 +255,7 @@ RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef
 resolved, the Authorizer must return an error.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-subjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L45">property <b>subjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L45">property <b>subjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Subject'>outputs.rbac.v1alpha1.Subject</a>[]&gt;;</code></pre>
@@ -263,7 +263,7 @@ resolved, the Authorizer must return an error.
 Subjects holds references to the objects the role applies to.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -272,7 +272,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClusterRoleBindingList" data-link-title="ClusterRoleBindingList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L13">
         Resource <strong>ClusterRoleBindingList</strong>
     </a>
 </h3>
@@ -282,7 +282,7 @@ deployments.
 ClusterRoleBindingList is a collection of ClusterRoleBindings
 
 <h4 class="pdoc-member-header" id="ClusterRoleBindingList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -296,7 +296,7 @@ Create a rbac.v1alpha1.ClusterRoleBindingList resource with the given unique nam
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBindingList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -310,14 +310,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBindingList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterRoleBindingList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -328,7 +328,7 @@ Returns true if the given object is an instance of ClusterRoleBindingList.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBindingList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -339,7 +339,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ClusterRoleBindingList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -348,7 +348,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBindingList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ClusterRoleBinding'>outputs.rbac.v1alpha1.ClusterRoleBinding</a>[]&gt;;</code></pre>
@@ -356,7 +356,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is a list of ClusterRoleBindings
 
 <h4 class="pdoc-member-header" id="ClusterRoleBindingList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ClusterRoleBindingList"</span>&gt;;</code></pre>
@@ -367,7 +367,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ClusterRoleBindingList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L38">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
@@ -375,7 +375,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard object's metadata.
 
 <h4 class="pdoc-member-header" id="ClusterRoleBindingList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -384,7 +384,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClusterRoleList" data-link-title="ClusterRoleList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L13">
         Resource <strong>ClusterRoleList</strong>
     </a>
 </h3>
@@ -394,7 +394,7 @@ deployments.
 ClusterRoleList is a collection of ClusterRoles
 
 <h4 class="pdoc-member-header" id="ClusterRoleList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -408,7 +408,7 @@ Create a rbac.v1alpha1.ClusterRoleList resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterRoleList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -422,14 +422,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="ClusterRoleList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterRoleList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -440,7 +440,7 @@ Returns true if the given object is an instance of ClusterRoleList.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterRoleList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -451,7 +451,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="ClusterRoleList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -460,7 +460,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterRoleList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ClusterRole'>outputs.rbac.v1alpha1.ClusterRole</a>[]&gt;;</code></pre>
@@ -468,7 +468,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is a list of ClusterRoles
 
 <h4 class="pdoc-member-header" id="ClusterRoleList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ClusterRoleList"</span>&gt;;</code></pre>
@@ -479,7 +479,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="ClusterRoleList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L38">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
@@ -487,7 +487,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard object's metadata.
 
 <h4 class="pdoc-member-header" id="ClusterRoleList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -496,7 +496,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Role" data-link-title="Role">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L14">
         Resource <strong>Role</strong>
     </a>
 </h3>
@@ -507,7 +507,7 @@ Role is a namespaced, logical grouping of PolicyRules that can be referenced as 
 RoleBinding.
 
 <h4 class="pdoc-member-header" id="Role-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -521,7 +521,7 @@ Create a rbac.v1alpha1.Role resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Role-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -535,14 +535,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="Role-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Role-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -553,7 +553,7 @@ Returns true if the given object is an instance of Role.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Role-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L21">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L21">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -564,7 +564,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="Role-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -573,7 +573,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Role-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L29">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L29">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Role"</span>&gt;;</code></pre>
@@ -584,7 +584,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Role-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L34">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L34">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
@@ -592,7 +592,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard object's metadata.
 
 <h4 class="pdoc-member-header" id="Role-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L39">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L39">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PolicyRule'>outputs.rbac.v1alpha1.PolicyRule</a>[]&gt;;</code></pre>
@@ -600,7 +600,7 @@ Standard object's metadata.
 Rules holds all the PolicyRules for this Role
 
 <h4 class="pdoc-member-header" id="Role-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/Role.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/Role.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -609,7 +609,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RoleBinding" data-link-title="RoleBinding">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L16">
         Resource <strong>RoleBinding</strong>
     </a>
 </h3>
@@ -622,7 +622,7 @@ namespace information by which namespace it exists in.  RoleBindings in a given 
 only have effect in that namespace.
 
 <h4 class="pdoc-member-header" id="RoleBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L77"> <b>constructor</b></a>
 </h4>
 
 
@@ -636,7 +636,7 @@ Create a rbac.v1alpha1.RoleBinding resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RoleBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L60">method <b>get</b></a>
 </h4>
 
 
@@ -650,14 +650,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="RoleBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RoleBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L71">method <b>isInstance</b></a>
 </h4>
 
 
@@ -668,7 +668,7 @@ Returns true if the given object is an instance of RoleBinding.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RoleBinding-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L23">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L23">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -679,7 +679,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="RoleBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -688,7 +688,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RoleBinding-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L31">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L31">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"RoleBinding"</span>&gt;;</code></pre>
@@ -699,7 +699,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="RoleBinding-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L36">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L36">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</code></pre>
@@ -707,7 +707,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard object's metadata.
 
 <h4 class="pdoc-member-header" id="RoleBinding-roleRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L42">property <b>roleRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L42">property <b>roleRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleRef: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RoleRef'>outputs.rbac.v1alpha1.RoleRef</a>&gt;;</code></pre>
@@ -716,7 +716,7 @@ RoleRef can reference a Role in the current namespace or a ClusterRole in the gl
 namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.
 
 <h4 class="pdoc-member-header" id="RoleBinding-subjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L47">property <b>subjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L47">property <b>subjects</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Subject'>outputs.rbac.v1alpha1.Subject</a>[]&gt;;</code></pre>
@@ -724,7 +724,7 @@ namespace. If the RoleRef cannot be resolved, the Authorizer must return an erro
 Subjects holds references to the objects the role applies to.
 
 <h4 class="pdoc-member-header" id="RoleBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -733,7 +733,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RoleBindingList" data-link-title="RoleBindingList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L13">
         Resource <strong>RoleBindingList</strong>
     </a>
 </h3>
@@ -743,7 +743,7 @@ deployments.
 RoleBindingList is a collection of RoleBindings
 
 <h4 class="pdoc-member-header" id="RoleBindingList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -757,7 +757,7 @@ Create a rbac.v1alpha1.RoleBindingList resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RoleBindingList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -771,14 +771,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="RoleBindingList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RoleBindingList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -789,7 +789,7 @@ Returns true if the given object is an instance of RoleBindingList.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RoleBindingList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -800,7 +800,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="RoleBindingList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -809,7 +809,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RoleBindingList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RoleBinding'>outputs.rbac.v1alpha1.RoleBinding</a>[]&gt;;</code></pre>
@@ -817,7 +817,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is a list of RoleBindings
 
 <h4 class="pdoc-member-header" id="RoleBindingList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"RoleBindingList"</span>&gt;;</code></pre>
@@ -828,7 +828,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="RoleBindingList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L38">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
@@ -836,7 +836,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard object's metadata.
 
 <h4 class="pdoc-member-header" id="RoleBindingList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -845,7 +845,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RoleList" data-link-title="RoleList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L13">
         Resource <strong>RoleList</strong>
     </a>
 </h3>
@@ -855,7 +855,7 @@ deployments.
 RoleList is a collection of Roles
 
 <h4 class="pdoc-member-header" id="RoleList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -869,7 +869,7 @@ Create a rbac.v1alpha1.RoleList resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RoleList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -883,14 +883,14 @@ Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 <h4 class="pdoc-member-header" id="RoleList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RoleList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -901,7 +901,7 @@ Returns true if the given object is an instance of RoleList.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RoleList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L20">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"rbac.authorization.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -912,7 +912,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="RoleList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -921,7 +921,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RoleList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L25">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L25">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Role'>outputs.rbac.v1alpha1.Role</a>[]&gt;;</code></pre>
@@ -929,7 +929,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is a list of Roles
 
 <h4 class="pdoc-member-header" id="RoleList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L33">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"RoleList"</span>&gt;;</code></pre>
@@ -940,7 +940,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="RoleList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L38">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L38">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</code></pre>
@@ -948,7 +948,7 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 Standard object's metadata.
 
 <h4 class="pdoc-member-header" id="RoleList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7b0dd966c913f5886c3dd32a4bf3392f8c1a9ff5/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/01cb28090594ca422296aeb244896619f1555f61/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
