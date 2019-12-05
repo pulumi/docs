@@ -1355,6 +1355,10 @@ func (e *emitter) createTypeLabel(t *typeDocType, indent int) string {
 	case typeDocTypeOperatorType:
 		targetStr := e.createTypeLabel(t.Target, indent)
 		return fmt.Sprintf("%s %s", t.Operator, targetStr)
+	case typeDocPredicateType:
+		// TODO: handle predicate case. ignore for now so that this doesn't fail.
+		log.Println("ignoring predicate case" + t.Type)
+		return ""
 	default:
 		log.Fatalf("unrecognized type node type: %v\n", t.Type)
 		return ""
@@ -1475,6 +1479,7 @@ const (
 	typeDocArrayType         typeDocTypeType = "array"
 	typeDocIntrinsicType     typeDocTypeType = "intrinsic"
 	typeDocIntersectionType  typeDocTypeType = "intersection"
+	typeDocPredicateType     typeDocTypeType = "predicate"
 	typeDocParameterType     typeDocTypeType = "typeParameter"
 	typeDocReferenceType     typeDocTypeType = "reference"
 	typeDocReflectionType    typeDocTypeType = "reflection"

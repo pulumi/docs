@@ -23,6 +23,7 @@ TOOLS_REPOS=(
     "pulumi-gitlab"
     "pulumi-kafka"
     "pulumi-kubernetes"
+    "pulumi-kubernetesx"
     "pulumi-linode"
     "pulumi-mysql"
     "pulumi-newrelic"

@@ -52,6 +52,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
     * [**Azure Active Directory** (`@pulumi/azuread`)]({{< relref "nodejs/pulumi/azuread" >}})
 * [**Google Cloud** (`@pulumi/gcp`)]({{< relref "nodejs/pulumi/gcp" >}})
 * [**Kubernetes** (`@pulumi/kubernetes`)]({{< relref "nodejs/pulumi/kubernetes" >}})
+    * [**Kubernetes Extensions** (`@pulumi/kubernetesx`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/kubernetesx" >}}) - simpler interface for working with Kubernetes
 
 * [**Cloudflare** (`@pulumi/cloudflare`)]({{< relref "nodejs/pulumi/cloudflare" >}})
 * [**HashiCorp Consul** (`@pulumi/consul`)]({{< relref "nodejs/pulumi/consul" >}})
