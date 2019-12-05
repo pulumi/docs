@@ -15,8 +15,8 @@ AWS announced two new features just this week to simplify your Elastic Kubernete
 You now have three primary options for powering your EKS clusters:
 
 * **Fargate**: Let AWS Fargate manage and scale nodes automatically and dynamically as needed
-* **Managed Node Groups**: Let EKS manage and scale nodes based on declarative capacity specifications
-* **EC2**: Manage EKS clusters by hand using explicit node groups, EC2 instances, and Auto Scaling Groups
+* **Managed Node Groups**: Let EKS manage and scale nodes based on declarative specifications
+* **EC2**: Manage nodes by hand using explicit groups, EC2 instances, and Auto Scaling Groups
 
 These options control how your cluster's worker nodes are provisioned, managed, and scaled. These worker nodes are what physically run the compute and host the storage used by your Kubernetes pods, and impact the cost and ability for your cluster to meet workload demands. The spectrum of options available provides a range of flexibility, from least control to most control, over these worker nodes.
 
