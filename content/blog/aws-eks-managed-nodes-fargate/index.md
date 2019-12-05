@@ -3,7 +3,7 @@ title: "How to Scale Your Amazon EKS Cluster: EC2, Managed Node Groups, and Farg
 authors: ["joe-duffy"]
 tags: ["Pulumi-News", "AWS", "Kubernetes", "EKS"]
 meta_desc: "."
-date: "2019-12-04"
+date: "2019-12-05"
 
 meta_image: "pulumi-eks-fargate.png"
 ---
