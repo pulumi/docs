@@ -325,7 +325,7 @@ def create_markdown_file(input: CreateMarkdownInput):
         # First, write some empty front-matter at the beginning of the file.
         f.write("---\n")
         f.write(f"title: {input.title}\n")
-        f.write(f"title_tag: {input.title_tag}\n")
+        f.write(f"title_tag: {input.title_tag} | Python SDK\n")
         f.write(f"linktitle: {input.linktitle}\n")
         f.write(f"notitle: true\n")
         f.write("---\n\n")
