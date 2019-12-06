@@ -164,6 +164,12 @@
       "terraform_provider_name": "signalfx"
     },
     {
+      "name": "Pulumi RabbitMQ",
+      "package_name": "pulumi_rabbitmq",
+      "pulumi_provider_name": "rabbitmq",
+      "terraform_provider_name": "rabbitmq"
+    },
+    {
       "name": "Pulumi TLS",
       "package_name": "pulumi_tls",
       "pulumi_provider_name": "tls",
