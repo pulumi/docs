@@ -24,7 +24,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_docker.Container">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">cpu_set=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">destroy_grace_seconds=None</em>, <em class="sig-param">devices=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">dns_opts=None</em>, <em class="sig-param">dns_searches=None</em>, <em class="sig-param">domainname=None</em>, <em class="sig-param">entrypoints=None</em>, <em class="sig-param">envs=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">links=None</em>, <em class="sig-param">log_driver=None</em>, <em class="sig-param">log_opts=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">max_retry_count=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_swap=None</em>, <em class="sig-param">mounts=None</em>, <em class="sig-param">must_run=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_aliases=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">networks_advanced=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">publish_all_ports=None</em>, <em class="sig-param">restart=None</em>, <em class="sig-param">rm=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">sysctls=None</em>, <em class="sig-param">tmpfs=None</em>, <em class="sig-param">ulimits=None</em>, <em class="sig-param">uploads=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">userns_mode=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">cpu_set=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">destroy_grace_seconds=None</em>, <em class="sig-param">devices=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">dns_opts=None</em>, <em class="sig-param">dns_searches=None</em>, <em class="sig-param">domainname=None</em>, <em class="sig-param">entrypoints=None</em>, <em class="sig-param">envs=None</em>, <em class="sig-param">group_adds=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">links=None</em>, <em class="sig-param">log_driver=None</em>, <em class="sig-param">log_opts=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">max_retry_count=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_swap=None</em>, <em class="sig-param">mounts=None</em>, <em class="sig-param">must_run=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_aliases=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">networks_advanced=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">publish_all_ports=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">restart=None</em>, <em class="sig-param">rm=None</em>, <em class="sig-param">shm_size=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">sysctls=None</em>, <em class="sig-param">tmpfs=None</em>, <em class="sig-param">ulimits=None</em>, <em class="sig-param">uploads=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">userns_mode=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">working_dir=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the lifecycle of a Docker container.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -50,12 +50,14 @@ container to run as an executable. For example, to run <code class="docutils lit
 when starting a container, set the entrypoint to be
 <code class="docutils literal notranslate"><span class="pre">[&quot;/usr/bin/myprogram&quot;]</span></code>.</p></li>
 <li><p><strong>envs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Environment variables to set.</p></li>
+<li><p><strong>group_adds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Add additional groups to run as.</p></li>
 <li><p><strong>healthcheck</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See Healthcheck below for details.</p></li>
 <li><p><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Hostname to add.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Hostname of the container.</p></li>
 <li><p><strong>image</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the image to back this container.
 The easiest way to get this value is to use the <code class="docutils literal notranslate"><span class="pre">.RemoteImage</span></code> resource
 as is shown in the example above.</p></li>
+<li><p><strong>ipc_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IPC sharing mode for the container. Possible values are: <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">shareable</span></code>, <code class="docutils literal notranslate"><span class="pre">container:&lt;name|id&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Adding labels.</p></li>
 <li><p><strong>links</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of links for link based
 connectivity between containers that are running on the same host.</p></li>
@@ -66,6 +68,15 @@ the logging driver.</p></li>
 <li><p><strong>logs</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Save the container logs (<code class="docutils literal notranslate"><span class="pre">attach</span></code> must be enabled).</p></li>
 <li><p><strong>max_retry_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum amount of times to an attempt
 a restart when <code class="docutils literal notranslate"><span class="pre">restart</span></code> is set to “on-failure”</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `working_dir`- (Optional, string) The working directory for commands to run in
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>memory</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The memory limit for the container in MBs.</p></li>
 <li><p><strong>mounts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – See Mounts below for details.</p></li>
 <li><p><strong>network_aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Network aliases of the container for user-defined networks only. <em>Deprecated:</em> use <code class="docutils literal notranslate"><span class="pre">networks_advanced</span></code> instead.</p></li>
@@ -77,8 +88,11 @@ container is. <em>Deprecated:</em> use <code class="docutils literal notranslate
 <li><p><strong>ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – See Ports below for details.</p></li>
 <li><p><strong>privileged</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Run container in privileged mode.</p></li>
 <li><p><strong>publish_all_ports</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Publish all ports of the container.</p></li>
+<li><p><strong>read_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, this volume will be readonly.
+Defaults to false.</p></li>
 <li><p><strong>restart</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The restart policy for the container. Must be
 one of “no”, “on-failure”, “always”, “unless-stopped”.</p></li>
+<li><p><strong>shm_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of <code class="docutils literal notranslate"><span class="pre">/dev/shm</span></code> in MBs.</p></li>
 <li><p><strong>start</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, then the Docker container will be
 started after creation. If false, then the container is only created.</p></li>
 <li><p><strong>sysctls</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of kernel parameters (sysctls) to set in the container.</p></li>
@@ -129,7 +143,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">rwm</sp
 <li><p><code class="docutils literal notranslate"><span class="pre">propagation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A propagation mode with the value.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, this volume will be readonly.
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, this volume will be readonly.
 Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mount source (e.g., a volume name, a host path)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The container path.</p></li>
@@ -172,7 +186,8 @@ defaults to <code class="docutils literal notranslate"><span class="pre">tcp</sp
 </ul>
 <p>The <strong>uploads</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A content of a file to upload.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentBase64</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">executable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, the file will be uploaded with user
 executable permission.
 Defaults to false.</p></li>
@@ -186,7 +201,7 @@ device will be binded.</p></li>
 coming from.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path on the host where the device
 is located.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, this volume will be readonly.
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, this volume will be readonly.
 Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the docker volume which
 should be mounted.</p></li>
@@ -317,6 +332,12 @@ NetworkSettings.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_docker.Container.group_adds">
+<code class="sig-name descname">group_adds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.group_adds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add additional groups to run as.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_docker.Container.healthcheck">
 <code class="sig-name descname">healthcheck</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.healthcheck" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Healthcheck below for details.</p>
@@ -367,6 +388,12 @@ NetworkSettings.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_docker.Container.ipc_mode">
+<code class="sig-name descname">ipc_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.ipc_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>IPC sharing mode for the container. Possible values are: <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">shareable</span></code>, <code class="docutils literal notranslate"><span class="pre">container:&lt;name|id&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_docker.Container.labels">
 <code class="sig-name descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adding labels.</p>
@@ -404,6 +431,9 @@ the logging driver.</p>
 <code class="sig-name descname">max_retry_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.max_retry_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum amount of times to an attempt
 a restart when <code class="docutils literal notranslate"><span class="pre">restart</span></code> is set to “on-failure”</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">working_dir</span></code>- (Optional, string) The working directory for commands to run in</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -422,7 +452,7 @@ a restart when <code class="docutils literal notranslate"><span class="pre">rest
 <li><p><code class="docutils literal notranslate"><span class="pre">propagation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A propagation mode with the value.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, this volume will be readonly.
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, this volume will be readonly.
 Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The mount source (e.g., a volume name, a host path)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The container path.</p></li>
@@ -522,10 +552,23 @@ defaults to <code class="docutils literal notranslate"><span class="pre">tcp</sp
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_docker.Container.read_only">
+<code class="sig-name descname">read_only</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.read_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, this volume will be readonly.
+Defaults to false.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_docker.Container.restart">
 <code class="sig-name descname">restart</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.restart" title="Permalink to this definition">¶</a></dt>
 <dd><p>The restart policy for the container. Must be
 one of “no”, “on-failure”, “always”, “unless-stopped”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_docker.Container.shm_size">
+<code class="sig-name descname">shm_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.shm_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of <code class="docutils literal notranslate"><span class="pre">/dev/shm</span></code> in MBs.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -564,7 +607,8 @@ details.</p>
 <code class="sig-name descname">uploads</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_docker.Container.uploads" title="Permalink to this definition">¶</a></dt>
 <dd><p>See File Upload below for details.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A content of a file to upload.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentBase64</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">executable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, the file will be uploaded with user
 executable permission.
 Defaults to false.</p></li>
@@ -597,7 +641,7 @@ device will be binded.</p></li>
 coming from.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path on the host where the device
 is located.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, this volume will be readonly.
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, this volume will be readonly.
 Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the docker volume which
 should be mounted.</p></li>
@@ -606,7 +650,7 @@ should be mounted.</p></li>
 
 <dl class="method">
 <dt id="pulumi_docker.Container.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach=None</em>, <em class="sig-param">bridge=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">container_logs=None</em>, <em class="sig-param">cpu_set=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">destroy_grace_seconds=None</em>, <em class="sig-param">devices=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">dns_opts=None</em>, <em class="sig-param">dns_searches=None</em>, <em class="sig-param">domainname=None</em>, <em class="sig-param">entrypoints=None</em>, <em class="sig-param">envs=None</em>, <em class="sig-param">exit_code=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">ip_prefix_length=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">links=None</em>, <em class="sig-param">log_driver=None</em>, <em class="sig-param">log_opts=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">max_retry_count=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_swap=None</em>, <em class="sig-param">mounts=None</em>, <em class="sig-param">must_run=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_aliases=None</em>, <em class="sig-param">network_datas=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">networks_advanced=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">publish_all_ports=None</em>, <em class="sig-param">restart=None</em>, <em class="sig-param">rm=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">sysctls=None</em>, <em class="sig-param">tmpfs=None</em>, <em class="sig-param">ulimits=None</em>, <em class="sig-param">uploads=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">userns_mode=None</em>, <em class="sig-param">volumes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach=None</em>, <em class="sig-param">bridge=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">container_logs=None</em>, <em class="sig-param">cpu_set=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">destroy_grace_seconds=None</em>, <em class="sig-param">devices=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">dns_opts=None</em>, <em class="sig-param">dns_searches=None</em>, <em class="sig-param">domainname=None</em>, <em class="sig-param">entrypoints=None</em>, <em class="sig-param">envs=None</em>, <em class="sig-param">exit_code=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">group_adds=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">ip_prefix_length=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">links=None</em>, <em class="sig-param">log_driver=None</em>, <em class="sig-param">log_opts=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">max_retry_count=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_swap=None</em>, <em class="sig-param">mounts=None</em>, <em class="sig-param">must_run=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_aliases=None</em>, <em class="sig-param">network_datas=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">networks_advanced=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">publish_all_ports=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">restart=None</em>, <em class="sig-param">rm=None</em>, <em class="sig-param">shm_size=None</em>, <em class="sig-param">start=None</em>, <em class="sig-param">sysctls=None</em>, <em class="sig-param">tmpfs=None</em>, <em class="sig-param">ulimits=None</em>, <em class="sig-param">uploads=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">userns_mode=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">working_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Container.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Container resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -639,6 +683,7 @@ when starting a container, set the entrypoint to be
 <li><p><strong>exit_code</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The exit code of the container if its execution is done (<code class="docutils literal notranslate"><span class="pre">must_run</span></code> must be disabled).</p></li>
 <li><p><strong>gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">network_data</span></code> instead. The network gateway of the container as read from its
 NetworkSettings.</p></li>
+<li><p><strong>group_adds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Add additional groups to run as.</p></li>
 <li><p><strong>healthcheck</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See Healthcheck below for details.</p></li>
 <li><p><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Hostname to add.</p></li>
 <li><p><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Hostname of the container.</p></li>
@@ -648,6 +693,7 @@ as is shown in the example above.</p></li>
 <li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">network_data</span></code> instead. The IP address of the container’s first network it.</p></li>
 <li><p><strong>ip_prefix_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">network_data</span></code> instead. The IP prefix length of the container as read from its
 NetworkSettings.</p></li>
+<li><p><strong>ipc_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IPC sharing mode for the container. Possible values are: <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">shareable</span></code>, <code class="docutils literal notranslate"><span class="pre">container:&lt;name|id&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Adding labels.</p></li>
 <li><p><strong>links</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of links for link based
 connectivity between containers that are running on the same host.</p></li>
@@ -658,6 +704,15 @@ the logging driver.</p></li>
 <li><p><strong>logs</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Save the container logs (<code class="docutils literal notranslate"><span class="pre">attach</span></code> must be enabled).</p></li>
 <li><p><strong>max_retry_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum amount of times to an attempt
 a restart when <code class="docutils literal notranslate"><span class="pre">restart</span></code> is set to “on-failure”</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `working_dir`- (Optional, string) The working directory for commands to run in
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>memory</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The memory limit for the container in MBs.</p></li>
 <li><p><strong>mounts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – See Mounts below for details.</p></li>
 <li><p><strong>network_aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Network aliases of the container for user-defined networks only. <em>Deprecated:</em> use <code class="docutils literal notranslate"><span class="pre">networks_advanced</span></code> instead.</p></li>
@@ -671,8 +726,11 @@ container is. <em>Deprecated:</em> use <code class="docutils literal notranslate
 <li><p><strong>ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – See Ports below for details.</p></li>
 <li><p><strong>privileged</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Run container in privileged mode.</p></li>
 <li><p><strong>publish_all_ports</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Publish all ports of the container.</p></li>
+<li><p><strong>read_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, this volume will be readonly.
+Defaults to false.</p></li>
 <li><p><strong>restart</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The restart policy for the container. Must be
 one of “no”, “on-failure”, “always”, “unless-stopped”.</p></li>
+<li><p><strong>shm_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of <code class="docutils literal notranslate"><span class="pre">/dev/shm</span></code> in MBs.</p></li>
 <li><p><strong>start</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, then the Docker container will be
 started after creation. If false, then the container is only created.</p></li>
 <li><p><strong>sysctls</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of kernel parameters (sysctls) to set in the container.</p></li>
@@ -723,7 +781,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">rwm</sp
 <li><p><code class="docutils literal notranslate"><span class="pre">propagation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A propagation mode with the value.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, this volume will be readonly.
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, this volume will be readonly.
 Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mount source (e.g., a volume name, a host path)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The container path.</p></li>
@@ -775,7 +833,8 @@ defaults to <code class="docutils literal notranslate"><span class="pre">tcp</sp
 </ul>
 <p>The <strong>uploads</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A content of a file to upload.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentBase64</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">executable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, the file will be uploaded with user
 executable permission.
 Defaults to false.</p></li>
@@ -789,7 +848,7 @@ device will be binded.</p></li>
 coming from.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path on the host where the device
 is located.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, this volume will be readonly.
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, this volume will be readonly.
 Defaults to false.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volumeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the docker volume which
 should be mounted.</p></li>
@@ -1496,7 +1555,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">propagation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tmpfsOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
@@ -1535,7 +1594,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secrets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Represents the final filename in the filesystem. The specific target file that the config data is written within the docker container, e.g. <code class="docutils literal notranslate"><span class="pre">/root/config/config.json</span></code></p></li>
@@ -1743,7 +1802,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">propagation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tmpfsOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
@@ -1782,7 +1841,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secrets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Represents the final filename in the filesystem. The specific target file that the config data is written within the docker container, e.g. <code class="docutils literal notranslate"><span class="pre">/root/config/config.json</span></code></p></li>
@@ -1982,7 +2041,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">propagation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tmpfsOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
@@ -2021,7 +2080,7 @@ properties used to qualify the lookup.</p>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secrets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">fileName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Represents the final filename in the filesystem. The specific target file that the config data is written within the docker container, e.g. <code class="docutils literal notranslate"><span class="pre">/root/config/config.json</span></code></p></li>
