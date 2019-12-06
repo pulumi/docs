@@ -389,6 +389,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 	// First a title and some additional package header info, for the root module.
 	var title string
+	var titleTag string
 	var linktitle string
 	var pkg string
 	var pkgvar string
@@ -396,12 +397,14 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 	if root {
 		title = fmt.Sprintf("Package %s", e.pkg)
+		titleTag = fmt.Sprintf("Package %s", e.pkg)
 		linktitle = e.pkg
 		pkg = e.pkg
 		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
 		readme = filepath.Join(e.srcdir, "README.md")
 	} else {
 		title = fmt.Sprintf("Module %s", name)
+		titleTag = fmt.Sprintf("%s | Package %s", title, e.pkg)
 		readme = filepath.Join(e.srcdir, name, "README.md")
 		linktitle = name
 		if slix := strings.IndexRune(linktitle, '/'); slix != -1 {
@@ -507,6 +510,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	// To generate the code, simply render the source Mustache template, using the right set of arguments.
 	if err = indexTemplate.FRender(f, map[string]interface{}{
 		"Title":                     title,
+		"TitleTag":                  titleTag,
 		"LinkTitle":                 linktitle,
 		"MetaDescription":           metaDescription,
 		"RepoURL":                   e.repoURL,
