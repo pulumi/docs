@@ -1454,8 +1454,12 @@ func (e *moduleEmitter) createTypeLabel(t *typeDocType, indent int) string {
 					if child.Type != nil {
 						childType = e.createTypeLabel(child.Type, indent)
 					}
+					name := child.Name
+					if child.Flags.IsOptional {
+						name += "?"
+					}
 					label += fmt.Sprintf("%s%s: %s;\n",
-						strings.Repeat(" ", indent*4), child.Name, childType)
+						strings.Repeat(" ", indent*4), name, childType)
 				}
 			}
 			indent--
