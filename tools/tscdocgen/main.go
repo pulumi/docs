@@ -1505,9 +1505,12 @@ func (e *moduleEmitter) createTypeLabel(t *typeDocType, indent int) string {
 		targetStr := e.createTypeLabel(t.Target, indent)
 		return fmt.Sprintf("%s %s", t.Operator, targetStr)
 	case typeDocPredicateType:
-		// TODO: handle predicate case. ignore for now so that this doesn't fail.
-		log.Println("ignoring predicate case" + t.Type)
-		return ""
+		if t.TargetType != nil && t.TargetType.Type == typeDocReferenceType {
+			targetStr := e.createTypeLabel(t.TargetType, indent)
+			return fmt.Sprintf("%s is %s", t.Name, targetStr)
+		}
+		// Otherwise, fall back to returning boolean.
+		return e.createTypeLabel(&typeDocType{Type: typeDocIntrinsicType, Name: "boolean"}, indent)
 	default:
 		log.Fatalf("unrecognized type node type: %v\n", t.Type)
 		return ""
@@ -1621,6 +1624,8 @@ type typeDocType struct {
 	Operator string `json:"operator,omitempty"`
 	// Target is the target of the type operator, if this is a type operator reference
 	Target *typeDocType `json:"target,omitempty"`
+	// TargetType is the target type of a predicate, if this is a predicate.
+	TargetType *typeDocType `json:"targetType,omitempty"`
 }
 
 type typeDocTypeType string
